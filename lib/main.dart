@@ -121,11 +121,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 */
-
-
 import 'package:flutter/material.dart';
 import 'package:masra/screens/onboarding_screen.dart';
-import 'screens/profile_screen.dart';
+import 'package:masra/theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -139,14 +137,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Masra',
-      theme: ThemeData(
-        useMaterial3: true,
-        fontFamily: 'Arial',
-      ),
-            //home:ProfileScreen(),
-      home:OnboardingScreen(),
 
-     // home:ProfileScreen(),
+      // Masra theme
+      theme: AppTheme.lightTheme,
+
+      // First screen
+      home: const OnboardingScreen(),
     );
   }
 }

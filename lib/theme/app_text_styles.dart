@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
 class AppTextStyles {
@@ -24,4 +24,5 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
     color: AppColors.white,
   );
-}
+}*/
+

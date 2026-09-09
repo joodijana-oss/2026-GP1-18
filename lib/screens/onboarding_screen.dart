@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'signup_screen.dart';
+import '../theme/app_colors.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
-
-  static const Color navy = Color(0xFF06365A);
 
   void goToSignUp(BuildContext context) {
     Navigator.push(
@@ -20,6 +19,7 @@ class OnboardingScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: AppColors.background,
       body: Stack(
         children: [
           // ==========================
@@ -37,7 +37,7 @@ class OnboardingScreen extends StatelessWidget {
           // ==========================
           Positioned.fill(
             child: Container(
-              color: Colors.white.withValues(alpha: 0.02),
+              color: AppColors.white.withValues(alpha: 0.02),
             ),
           ),
 
@@ -66,7 +66,7 @@ class OnboardingScreen extends StatelessWidget {
                     'G U I D E   •   D E V E L O P   •   A C H I E V E',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Color(0xFF60788C),
+                      color: AppColors.secondaryText,
                       fontSize: 11,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 2.2,
@@ -84,8 +84,8 @@ class OnboardingScreen extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () => goToSignUp(context),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: navy,
-                        foregroundColor: Colors.white,
+                        backgroundColor: AppColors.navy,
+                        foregroundColor: AppColors.white,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40),
