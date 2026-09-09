@@ -8,7 +8,8 @@ class SignupScreen extends StatefulWidget {
   State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _SignupScreenState extends State<SignupScreen> {
+class _SignupScreenState extends State<SignupScreen>
+    with SingleTickerProviderStateMixin {
   final _formKey = GlobalKey<FormState>();
 
   final nameController = TextEditingController();
@@ -19,12 +20,44 @@ class _SignupScreenState extends State<SignupScreen> {
   bool hidePassword = true;
   bool hideConfirmPassword = true;
 
+  late AnimationController _backgroundController;
+  late Animation<double> _backgroundAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _backgroundController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 5),
+    )..repeat(reverse: true);
+
+
+
+
+
+
+
+
+
+
+
+
+    _backgroundAnimation = CurvedAnimation(
+      parent: _backgroundController,
+      curve: Curves.easeInOut,
+    );
+  }
+
   @override
   void dispose() {
+    _backgroundController.dispose();
+
     nameController.dispose();
     emailController.dispose();
     passwordController.dispose();
     confirmPasswordController.dispose();
+
     super.dispose();
   }
 
@@ -63,58 +96,99 @@ class _SignupScreenState extends State<SignupScreen> {
           ),
 
           // =====================================================
-          // DECORATIVE GLOW - TOP RIGHT
+          // ANIMATED BACKGROUND CIRCLES
           // =====================================================
-          Positioned(
-            top: -70,
-            right: -50,
-            child: Container(
-              width: 210,
-              height: 210,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.lightTeal.withValues(alpha: 0.18),
-              ),
-            ),
-          ),
+          SizedBox(
+            height: 315,
+            width: double.infinity,
+            child: ClipRect(
+              child: AnimatedBuilder(
+                animation: _backgroundAnimation,
+                builder: (context, child) {
+                  final value = _backgroundAnimation.value;
 
-          // =====================================================
-          // DECORATIVE GOLD CIRCLE
-          // =====================================================
-          Positioned(
-            top: 115,
-            right: 38,
-            child: Container(
-              width: 18,
-              height: 18,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.gold,
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.gold.withValues(alpha: 0.4),
-                    blurRadius: 15,
-                  ),
-                ],
-              ),
-            ),
-          ),
+                  return Stack(
+                    children: [
+                      // ---------------------------------------------
+                      // LARGE LEFT RING
+                      // ---------------------------------------------
+                      Positioned(
+                        top: 35 + (value * 22),
+                        left: -70 + (value * 14),
+                        child: Container(
+                          width: 175,
+                          height: 175,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: AppColors.lightTeal.withValues(
+                                alpha: 0.12,
+                              ),
+                              width: 28,
+                            ),
+                          ),
+                        ),
+                      ),
 
-          // =====================================================
-          // DECORATIVE TRANSPARENT CIRCLE
-          // =====================================================
-          Positioned(
-            top: 80,
-            left: -55,
-            child: Container(
-              width: 150,
-              height: 150,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: AppColors.white.withValues(alpha: 0.10),
-                  width: 24,
-                ),
+                      // ---------------------------------------------
+                      // TOP RIGHT SOFT CIRCLE
+                      // ---------------------------------------------
+                      Positioned(
+                        top: -95 + (value * 18),
+                        right: -60 - (value * 14),
+                        child: Container(
+                          width: 225,
+                          height: 225,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: AppColors.lightTeal.withValues(
+                              alpha: 0.10,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      // ---------------------------------------------
+                      // BOTTOM RIGHT RING
+                      // ---------------------------------------------
+                      Positioned(
+                        top: 190 - (value * 20),
+                        right: -80 + (value * 12),
+                        child: Container(
+                          width: 160,
+                          height: 160,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: AppColors.lightTeal.withValues(
+                                alpha: 0.10,
+                              ),
+                              width: 22,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      // ---------------------------------------------
+                      // SMALL FLOATING CIRCLE
+                      // ---------------------------------------------
+                      Positioned(
+                        top: 115 + (value * 18),
+                        left: 135 - (value * 20),
+                        child: Container(
+                          width: 42,
+                          height: 42,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: AppColors.lightTeal.withValues(
+                              alpha: 0.07,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
               ),
             ),
           ),
@@ -143,12 +217,14 @@ class _SignupScreenState extends State<SignupScreen> {
                             width: 43,
                             height: 43,
                             decoration: BoxDecoration(
-                              color:
-                                  AppColors.white.withValues(alpha: 0.13),
+                              color: AppColors.white.withValues(
+                                alpha: 0.13,
+                              ),
                               borderRadius: BorderRadius.circular(14),
                               border: Border.all(
-                                color:
-                                    AppColors.white.withValues(alpha: 0.20),
+                                color: AppColors.white.withValues(
+                                  alpha: 0.20,
+                                ),
                               ),
                             ),
                             child: IconButton(
@@ -164,49 +240,21 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                         ),
 
-                        const SizedBox(height: 18),
-
-                        // ---------------------------------------------
-                        // MASRA LOGO
-                        // ---------------------------------------------
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 22,
-                            vertical: 10,
-                          ),
-                          decoration: BoxDecoration(
-                            color: AppColors.white.withValues(alpha: 0.96),
-                            borderRadius: BorderRadius.circular(22),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: 0.10),
-                                blurRadius: 18,
-                                offset: const Offset(0, 8),
-                              ),
-                            ],
-                          ),
-                          child: Image.asset(
-                            'lib/assets/images/Logoo.png',
-                            width: 155,
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-
-                        const SizedBox(height: 15),
+                        const SizedBox(height: 95),
 
                         // ---------------------------------------------
                         // SUBTITLE
                         // ---------------------------------------------
-                        const Text(
+                        /*const Text(
                           'Your journey starts here.',
                           style: TextStyle(
                             color: AppColors.white,
                             fontSize: 15,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             letterSpacing: 0.2,
                           ),
                         ),
-
+*/
                         const SizedBox(height: 28),
                       ],
                     ),
@@ -412,8 +460,9 @@ class _SignupScreenState extends State<SignupScreen> {
                               ),
                               boxShadow: [
                                 BoxShadow(
-                                  color:
-                                      AppColors.teal.withValues(alpha: 0.24),
+                                  color: AppColors.teal.withValues(
+                                    alpha: 0.24,
+                                  ),
                                   blurRadius: 18,
                                   offset: const Offset(0, 8),
                                 ),
