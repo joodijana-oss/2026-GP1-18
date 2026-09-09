@@ -1,40 +1,18 @@
 import 'package:flutter/material.dart';
+import 'signup_screen.dart';
 
-class OnboardingScreen extends StatefulWidget {
+class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
 
-  @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
-}
-
-class _OnboardingScreenState extends State<OnboardingScreen> {
-  int currentPage = 0;
-
   static const Color navy = Color(0xFF06365A);
-  static const Color teal = Color(0xFF0B91A6);
-  static const Color lightDot = Color(0xFFD7E1E5);
 
-  void goToLogin() {
-    // لاحقًا اربطيها بصفحة الـ Login
-    // مثال:
-    // Navigator.pushReplacement(
-    //   context,
-    //   MaterialPageRoute(builder: (_) => const LoginScreen()),
-    // );
-  }
-
-  void goToNextPage() {
-    // حاليًا هذا أول تصميم فقط.
-    // لما نسوي باقي صفحات الـ onboarding
-    // نخلي الزر ينتقل للصفحة التالية.
-
-    if (currentPage < 2) {
-      setState(() {
-        currentPage++;
-      });
-    } else {
-      goToLogin();
-    }
+  void goToSignUp(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const SignupScreen(),
+      ),
+    );
   }
 
   @override
@@ -54,7 +32,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ),
 
-          // طبقة خفيفة جدًا لتحسين وضوح العناصر
+          // ==========================
+          // VERY LIGHT OVERLAY
+          // ==========================
           Positioned.fill(
             child: Container(
               color: Colors.white.withValues(alpha: 0.02),
@@ -66,37 +46,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Column(
                 children: [
-                  // ==========================
-                  // SKIP
-                  // ==========================
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: TextButton(
-                      onPressed: goToLogin,
-                      style: TextButton.styleFrom(
-                        foregroundColor: navy,
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 6,
-                          vertical: 8,
-                        ),
-                      ),
-                      child: const Text(
-                        'Skip',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  SizedBox(height: size.height * 0.16),
+                  SizedBox(height: size.height * 0.20),
 
                   // ==========================
-                  // YOUR LOGO GOES HERE
+                  // MASRA LOGO
                   // ==========================
                   Image.asset(
-                     'lib/assets/images/Logoo.png',
+                    'lib/assets/images/Logoo.png',
                     width: size.width * 0.62,
                     fit: BoxFit.contain,
                   ),
@@ -126,7 +82,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     width: double.infinity,
                     height: 62,
                     child: ElevatedButton(
-                      onPressed: goToNextPage,
+                      onPressed: () => goToSignUp(context),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: navy,
                         foregroundColor: Colors.white,
@@ -138,8 +94,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           horizontal: 28,
                         ),
                       ),
-                      child: Row(
-                        children: const [
+                      child: const Row(
+                        children: [
                           Expanded(
                             child: Text(
                               "Let's Get Started",
@@ -150,43 +106,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               ),
                             ),
                           ),
-
                           Icon(
                             Icons.arrow_forward_rounded,
                             size: 28,
                           ),
                         ],
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(height: 28),
-
-                  // ==========================
-                  // PAGE INDICATORS
-                  // ==========================
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: List.generate(
-                      3,
-                      (index) => GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            currentPage = index;
-                          });
-                        },
-                        child: AnimatedContainer(
-                          duration: const Duration(milliseconds: 250),
-                          margin: const EdgeInsets.symmetric(horizontal: 5),
-                          width: 12,
-                          height: 12,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: currentPage == index
-                                ? teal
-                                : lightDot,
-                          ),
-                        ),
                       ),
                     ),
                   ),
