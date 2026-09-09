@@ -1,0 +1,621 @@
+import 'package:flutter/material.dart';
+import '../theme/app_colors.dart';
+
+class ForgotPasswordScreen extends StatefulWidget {
+  const ForgotPasswordScreen({super.key});
+
+  @override
+  State<ForgotPasswordScreen> createState() =>
+      _ForgotPasswordScreenState();
+}
+
+class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
+    with SingleTickerProviderStateMixin {
+  final _formKey = GlobalKey<FormState>();
+
+  final emailController = TextEditingController();
+
+  late AnimationController _backgroundController;
+  late Animation<double> _backgroundAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _backgroundController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 5),
+    )..repeat(reverse: true);
+
+    _backgroundAnimation = CurvedAnimation(
+      parent: _backgroundController,
+      curve: Curves.easeInOut,
+    );
+  }
+
+  @override
+  void dispose() {
+    _backgroundController.dispose();
+    emailController.dispose();
+    super.dispose();
+  }
+void sendResetLink() {
+  if (_formKey.currentState!.validate()) {
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: AppColors.softBackground,
+        elevation: 8,
+        margin: const EdgeInsets.fromLTRB(20, 0, 20, 22),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 14,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18),
+        ),
+        duration: const Duration(seconds: 3),
+        content: Row(
+          children: [
+            Container(
+              width: 38,
+              height: 38,
+              decoration: BoxDecoration(
+                color: const Color(0xFFE4F6EF),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: const Icon(
+                Icons.check_rounded,
+                color: Color(0xFF23966F),
+                size: 22,
+              ),
+            ),
+
+            const SizedBox(width: 13),
+
+            const Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'Reset link sent!',
+                    style: TextStyle(
+                      color: AppColors.navy,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  SizedBox(height: 2),
+                  Text(
+                    'Check your email for the reset link.',
+                    style: TextStyle(
+                      color: AppColors.secondaryText,
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(width: 5),
+
+            const Icon(
+              Icons.close_rounded,
+              color: AppColors.secondaryText,
+              size: 19,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      body: Stack(
+        children: [
+          // =========================
+          // TOP GRADIENT
+          // =========================
+          Container(
+            height: 315,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  AppColors.secondaryNavy,
+                  AppColors.navy,
+                  AppColors.teal,
+                ],
+              ),
+            ),
+          ),
+
+          // =========================
+          // ANIMATED CIRCLES
+          // =========================
+          SizedBox(
+            height: 315,
+            width: double.infinity,
+            child: ClipRect(
+              child: AnimatedBuilder(
+                animation: _backgroundAnimation,
+                builder: (context, child) {
+                  final value = _backgroundAnimation.value;
+
+                  return Stack(
+                    children: [
+                      Positioned(
+                        top: 35 + (value * 22),
+                        left: -70 + (value * 14),
+                        child: Container(
+                          width: 175,
+                          height: 175,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: AppColors.lightTeal.withValues(
+                                alpha: 0.12,
+                              ),
+                              width: 28,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      Positioned(
+                        top: -95 + (value * 18),
+                        right: -60 - (value * 14),
+                        child: Container(
+                          width: 225,
+                          height: 225,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: AppColors.lightTeal.withValues(
+                              alpha: 0.10,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      Positioned(
+                        top: 190 - (value * 20),
+                        right: -80 + (value * 12),
+                        child: Container(
+                          width: 160,
+                          height: 160,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: AppColors.lightTeal.withValues(
+                                alpha: 0.10,
+                              ),
+                              width: 22,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      Positioned(
+                        top: 115 + (value * 18),
+                        left: 135 - (value * 20),
+                        child: Container(
+                          width: 42,
+                          height: 42,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: AppColors.lightTeal.withValues(
+                              alpha: 0.07,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+          ),
+
+          // =========================
+          // PAGE CONTENT
+          // =========================
+          SafeArea(
+            child: SingleChildScrollView(
+              
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 22,
+                    ),
+                    child: Column(
+                      children: [
+                        // =========================
+                        // BACK BUTTON
+                        // =========================
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Container(
+                            width: 43,
+                            height: 43,
+                            decoration: BoxDecoration(
+                              color: AppColors.white.withValues(
+                                alpha: 0.13,
+                              ),
+                              borderRadius: BorderRadius.circular(14),
+                              border: Border.all(
+                                color: AppColors.white.withValues(
+                                  alpha: 0.20,
+                                ),
+                              ),
+                            ),
+                            child: IconButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              icon: const Icon(
+                                Icons.arrow_back_rounded,
+                                color: AppColors.white,
+                                size: 22,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(height: 95),
+
+
+                        const SizedBox(height: 28),
+                      ],
+                    ),
+                  ),
+
+                  // =========================
+                  // BOTTOM SHEET
+                  // =========================
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.fromLTRB(
+                      24,
+                      30,
+                      24,
+                      35,
+                    ),
+                    decoration: const BoxDecoration(
+                      color: AppColors.background,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(38),
+                        topRight: Radius.circular(38),
+                      ),
+                    ),
+                    child: Form(
+                      key: _formKey,
+                      child: Column(
+                        crossAxisAlignment:
+                            CrossAxisAlignment.start,
+                        children: [
+                          // TEAL ACCENT
+                          Container(
+                            width: 42,
+                            height: 5,
+                            decoration: BoxDecoration(
+                              color: AppColors.teal,
+                              borderRadius:
+                                  BorderRadius.circular(20),
+                            ),
+                          ),
+
+                          const SizedBox(height: 16),
+
+                          const Text(
+                            'Forgot Password?',
+                            style: TextStyle(
+                              color: AppColors.navy,
+                              fontSize: 29,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: -0.7,
+                            ),
+                          ),
+
+                          const SizedBox(height: 7),
+
+                          const Text(
+                            'Enter the email address associated with your account and we’ll send you a link to reset your password.',
+                            style: TextStyle(
+                              color: AppColors.secondaryText,
+                              fontSize: 14,
+                              height: 1.45,
+                            ),
+                          ),
+
+                          const SizedBox(height: 28),
+
+                          // =========================
+                          // EMAIL FIELD
+                          // =========================
+                          _buildField(
+                            controller: emailController,
+                            label: 'Email Address',
+                            hint: 'name@example.com',
+                            icon: Icons.mail_outline_rounded,
+                            keyboardType:
+                                TextInputType.emailAddress,
+                            validator: (value) {
+                              if (value == null ||
+                                  value.trim().isEmpty) {
+                                return 'Please enter your email';
+                              }
+
+                              final email = value.trim();
+
+                              final emailRegex = RegExp(
+                                r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$',
+                              );
+
+                              if (!emailRegex
+                                  .hasMatch(email)) {
+                                return 'Please enter a valid email address';
+                              }
+
+                              return null;
+                            },
+                          ),
+
+                          const SizedBox(height: 28),
+
+                          // =========================
+                          // SEND BUTTON
+                          // =========================
+                          Container(
+                            width: double.infinity,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.circular(20),
+                              gradient:
+                                  const LinearGradient(
+                                colors: [
+                                  AppColors.navy,
+                                  AppColors.secondaryNavy,
+                                  AppColors.teal,
+                                ],
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: AppColors.teal
+                                      .withValues(
+                                    alpha: 0.24,
+                                  ),
+                                  blurRadius: 18,
+                                  offset:
+                                      const Offset(0, 8),
+                                ),
+                              ],
+                            ),
+                            child: ElevatedButton(
+                              onPressed: sendResetLink,
+                              style:
+                                  ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    Colors.transparent,
+                                shadowColor:
+                                    Colors.transparent,
+                                foregroundColor:
+                                    AppColors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.circular(
+                                    20,
+                                  ),
+                                ),
+                              ),
+                              child: const Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Send Reset Link',
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight:
+                                          FontWeight.w700,
+                                    ),
+                                  ),
+                                  SizedBox(width: 10),
+                                  Icon(
+                                    Icons
+                                        .arrow_forward_rounded,
+                                    size: 22,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+
+                          const SizedBox(height: 26),
+
+                          // =========================
+                          // BACK TO LOGIN
+                          // =========================
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Container(
+                                  height: 1,
+                                  color:
+                                      AppColors.lightGray,
+                                ),
+                              ),
+                              const Padding(
+                                padding:
+                                    EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                ),
+                                child: Text(
+                                  'Remember your password?',
+                                  style: TextStyle(
+                                    color: AppColors
+                                        .secondaryText,
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: Container(
+                                  height: 1,
+                                  color:
+                                      AppColors.lightGray,
+                                ),
+                              ),
+                            ],
+                          ),
+
+                          const SizedBox(height: 20),
+
+                          SizedBox(
+                            width: double.infinity,
+                            height: 55,
+                            child: OutlinedButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              style:
+                                  OutlinedButton.styleFrom(
+                                foregroundColor:
+                                    AppColors.navy,
+                                side: BorderSide(
+                                  color: AppColors.navy
+                                      .withValues(
+                                    alpha: 0.20,
+                                  ),
+                                ),
+                                shape:
+                                    RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.circular(
+                                    18,
+                                  ),
+                                ),
+                              ),
+                              child: const Text(
+                                'Back to Log In',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight:
+                                      FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          const SizedBox(height: 10),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildField({
+    required TextEditingController controller,
+    required String label,
+    required String hint,
+    required IconData icon,
+    TextInputType keyboardType = TextInputType.text,
+    String? Function(String?)? validator,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: const TextStyle(
+            color: AppColors.navy,
+            fontSize: 13,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+
+        const SizedBox(height: 8),
+
+        TextFormField(
+          controller: controller,
+          keyboardType: keyboardType,
+          validator: validator,
+          style: const TextStyle(
+            color: AppColors.navy,
+            fontSize: 14.5,
+            fontWeight: FontWeight.w500,
+          ),
+          decoration: InputDecoration(
+            hintText: hint,
+            hintStyle: const TextStyle(
+              color: AppColors.secondaryText,
+              fontSize: 14,
+            ),
+            prefixIcon: Container(
+              margin: const EdgeInsets.all(9),
+              width: 38,
+              height: 38,
+              decoration: BoxDecoration(
+                color:
+                    AppColors.teal.withValues(alpha: 0.09),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Icon(
+                icon,
+                color: AppColors.teal,
+                size: 20,
+              ),
+            ),
+            filled: true,
+            fillColor: AppColors.softBackground,
+            contentPadding: const EdgeInsets.symmetric(
+              vertical: 18,
+              horizontal: 15,
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(17),
+              borderSide: const BorderSide(
+                color: AppColors.lightGray,
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(17),
+              borderSide: const BorderSide(
+                color: AppColors.teal,
+                width: 1.5,
+              ),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(17),
+              borderSide: const BorderSide(
+                color: Colors.redAccent,
+              ),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(17),
+              borderSide: const BorderSide(
+                color: Colors.redAccent,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}

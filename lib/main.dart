@@ -141,6 +141,11 @@ class MyApp extends StatelessWidget {
       // Masra theme
       theme: AppTheme.lightTheme,
 
+      // يمنع التمطيط عند أعلى وأسفل السكرول
+      scrollBehavior: const MaterialScrollBehavior().copyWith(
+        physics: const ClampingScrollPhysics(),
+      ),
+
       // First screen
       home: const OnboardingScreen(),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
+import 'login_screen.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -60,16 +61,86 @@ class _SignupScreenState extends State<SignupScreen>
 
     super.dispose();
   }
+void createAccount() {
+  if (_formKey.currentState!.validate()) {
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
 
-  void createAccount() {
-    if (_formKey.currentState!.validate()) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Account information is valid'),
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: AppColors.softBackground,
+        elevation: 8,
+        margin: const EdgeInsets.fromLTRB(20, 0, 20, 22),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 14,
         ),
-      );
-    }
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18),
+        ),
+        duration: const Duration(seconds: 3),
+
+        content: Row(
+          children: [
+            Container(
+              width: 38,
+              height: 38,
+              decoration: BoxDecoration(
+                color: const Color(0xFFE4F6EF),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: const Icon(
+                Icons.check_rounded,
+                color: Color(0xFF23966F),
+                size: 22,
+              ),
+            ),
+
+            const SizedBox(width: 13),
+
+            const Expanded(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Account created successfully!',
+                    style: TextStyle(
+                      color: AppColors.navy,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  SizedBox(height: 2),
+                  Text(
+                    'Welcome to Masra.',
+                    style: TextStyle(
+                      color: AppColors.secondaryText,
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(width: 5),
+
+            IconButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).hideCurrentSnackBar();
+              },
+              icon: const Icon(
+                Icons.close_rounded,
+                color: AppColors.secondaryText,
+                size: 19,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
+}
 
   @override
   Widget build(BuildContext context) {
@@ -198,7 +269,7 @@ class _SignupScreenState extends State<SignupScreen>
           // =====================================================
           SafeArea(
             child: SingleChildScrollView(
-              physics: const BouncingScrollPhysics(),
+    
               child: Column(
                 children: [
                   // =================================================
@@ -352,16 +423,22 @@ class _SignupScreenState extends State<SignupScreen>
                             icon: Icons.mail_outline_rounded,
                             keyboardType: TextInputType.emailAddress,
                             validator: (value) {
-                              if (value == null || value.trim().isEmpty) {
-                                return 'Please enter your email';
-                              }
+  if (value == null || value.trim().isEmpty) {
+    return 'Please enter your email';
+  }
 
-                              if (!value.contains('@')) {
-                                return 'Enter a valid email';
-                              }
+  final email = value.trim();
 
-                              return null;
-                            },
+  final emailRegex = RegExp(
+    r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$',
+  );
+
+  if (!emailRegex.hasMatch(email)) {
+    return 'Please enter a valid email address';
+  }
+
+  return null;
+},
                           ),
 
                           const SizedBox(height: 17),
@@ -390,16 +467,32 @@ class _SignupScreenState extends State<SignupScreen>
                               ),
                             ),
                             validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter a password';
-                              }
+  if (value == null || value.isEmpty) {
+    return 'Please enter a password';
+  }
 
-                              if (value.length < 8) {
-                                return 'Password must be at least 8 characters';
-                              }
+  if (value.length < 8) {
+    return 'Password must be at least 8 characters';
+  }
 
-                              return null;
-                            },
+  if (!RegExp(r'[A-Z]').hasMatch(value)) {
+    return 'Password must contain an uppercase letter';
+  }
+
+  if (!RegExp(r'[a-z]').hasMatch(value)) {
+    return 'Password must contain a lowercase letter';
+  }
+
+  if (!RegExp(r'[0-9]').hasMatch(value)) {
+    return 'Password must contain a number';
+  }
+
+  if (!RegExp(r'[!@#$%^&*(),.?":{}|<>_\-+=]').hasMatch(value)) {
+    return 'Password must contain a special character';
+  }
+
+  return null;
+},
                           ),
 
                           const SizedBox(height: 17),
@@ -542,8 +635,13 @@ class _SignupScreenState extends State<SignupScreen>
                             height: 55,
                             child: OutlinedButton(
                               onPressed: () {
-                                // لاحقاً نربطه بصفحة Login
-                              },
+   Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => const LoginScreen(),
+    ),
+  );
+},
                               style: OutlinedButton.styleFrom(
                                 foregroundColor: AppColors.navy,
                                 side: BorderSide(
