@@ -7,6 +7,5 @@ class AppTheme {
     colorScheme: ColorScheme.fromSeed(
       seedColor: AppColors.navy,
     ),
-    fontFamily: 'Arial',
   );
 }

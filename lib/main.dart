@@ -124,7 +124,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 import 'package:flutter/material.dart';
-import 'screens/onboarding_screen.dart';
+import 'package:masra/screens/onboarding_screen.dart';
+import 'screens/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -135,9 +136,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnboardingScreen(),
+      title: 'Masra',
+      theme: ThemeData(
+        useMaterial3: true,
+        fontFamily: 'Arial',
+      ),
+            //home:ProfileScreen(),
+      home:OnboardingScreen(),
+
+     // home:ProfileScreen(),
     );
   }
 }
