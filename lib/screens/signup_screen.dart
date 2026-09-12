@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import 'login_screen.dart';
+import 'home_screen.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -78,7 +79,7 @@ void createAccount() {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(18),
         ),
-        duration: const Duration(seconds: 3),
+        duration: const Duration(seconds: 1),
 
         content: Row(
           children: [
@@ -139,9 +140,23 @@ void createAccount() {
         ),
       ),
     );
+
+    Future.delayed(
+      const Duration(milliseconds: 700),
+      () {
+        if (!mounted) return;
+
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const HomeScreen(),
+          ),
+          (route) => false,
+        );
+      },
+    );
   }
 }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

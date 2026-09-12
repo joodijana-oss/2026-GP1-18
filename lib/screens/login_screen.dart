@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import 'forgot_password_screen.dart';
-
+import 'home_screen.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -60,65 +60,30 @@ void login() {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(18),
         ),
-        duration: const Duration(seconds: 3),
-        content: Row(
-          children: [
-            Container(
-              width: 38,
-              height: 38,
-              decoration: BoxDecoration(
-                color: const Color(0xFFE4F6EF),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: const Icon(
-                Icons.check_rounded,
-                color: Color(0xFF23966F),
-                size: 22,
-              ),
-            ),
-
-            const SizedBox(width: 13),
-
-            const Expanded(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Logged in successfully!',
-                    style: TextStyle(
-                      color: AppColors.navy,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  SizedBox(height: 2),
-                  Text(
-                    'Welcome back to Masra.',
-                    style: TextStyle(
-                      color: AppColors.secondaryText,
-                      fontSize: 12,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(width: 5),
-
-            IconButton(
-              onPressed: () {
-                ScaffoldMessenger.of(context).hideCurrentSnackBar();
-              },
-              icon: const Icon(
-                Icons.close_rounded,
-                color: AppColors.secondaryText,
-                size: 19,
-              ),
-            ),
-          ],
+        duration: const Duration(seconds: 1),
+        content: const Text(
+          'Logged in successfully!',
+          style: TextStyle(
+            color: AppColors.navy,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
+    );
+
+    Future.delayed(
+      const Duration(milliseconds: 700),
+      () {
+        if (!mounted) return;
+
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const HomeScreen(),
+          ),
+          (route) => false,
+        );
+      },
     );
   }
 }
