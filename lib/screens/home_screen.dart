@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
+
 import 'profile_screen.dart';
+import 'explore_screen.dart';
+import '../features/community/community_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -241,14 +244,13 @@ class _HomeScreenState extends State<HomeScreen>
 
               GestureDetector(
                 onTap: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const ProfileScreen(),
-      ),
-    );
-  },
-  
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ProfileScreen(),
+                    ),
+                  );
+                },
                 child: Container(
                   width: 46,
                   height: 46,
@@ -379,225 +381,225 @@ class _HomeScreenState extends State<HomeScreen>
   // ============================================================
 
   Widget _buildCareerReadinessCard() {
-  return AnimatedBuilder(
-    animation: _backgroundController,
-    builder: (context, child) {
-      final value = _backgroundController.value;
+    return AnimatedBuilder(
+      animation: _backgroundController,
+      builder: (context, child) {
+        final value = _backgroundController.value;
 
-      return Container(
-        width: double.infinity,
-        clipBehavior: Clip.antiAlias,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(28),
-          gradient: const LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              AppColors.navy,
-              AppColors.secondaryNavy,
-              AppColors.teal,
+        return Container(
+          width: double.infinity,
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(28),
+            gradient: const LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                AppColors.navy,
+                AppColors.secondaryNavy,
+                AppColors.teal,
+              ],
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.navy.withValues(alpha: 0.17),
+                blurRadius: 24,
+                offset: const Offset(0, 10),
+              ),
             ],
           ),
-          boxShadow: [
-            BoxShadow(
-              color: AppColors.navy.withValues(alpha: 0.17),
-              blurRadius: 24,
-              offset: const Offset(0, 10),
-            ),
-          ],
-        ),
-        child: Stack(
-          children: [
-            Positioned(
-              right: -45 + (value * 10),
-              top: -65 + (value * 12),
-              child: Container(
-                width: 155,
-                height: 155,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppColors.lightTeal.withValues(
-                    alpha: 0.09,
-                  ),
-                ),
-              ),
-            ),
-
-            Positioned(
-              left: -50,
-              bottom: -70 + (value * 8),
-              child: Container(
-                width: 135,
-                height: 135,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(
+          child: Stack(
+            children: [
+              Positioned(
+                right: -45 + (value * 10),
+                top: -65 + (value * 12),
+                child: Container(
+                  width: 155,
+                  height: 155,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
                     color: AppColors.lightTeal.withValues(
-                      alpha: 0.07,
+                      alpha: 0.09,
                     ),
-                    width: 20,
                   ),
                 ),
               ),
-            ),
 
-            Padding(
-              padding: const EdgeInsets.all(22),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Top row
-                  Row(
-                    children: [
-                      Container(
-                        width: 48,
-                        height: 48,
-                        decoration: BoxDecoration(
-                          color: AppColors.white.withValues(
-                            alpha: 0.12,
-                          ),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: const Icon(
-                          Icons.route_rounded,
-                          color: AppColors.white,
-                          size: 27,
-                        ),
+              Positioned(
+                left: -50,
+                bottom: -70 + (value * 8),
+                child: Container(
+                  width: 135,
+                  height: 135,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: AppColors.lightTeal.withValues(
+                        alpha: 0.07,
                       ),
-
-                      const SizedBox(width: 14),
-
-                      const Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Your Next Step',
-                              style: TextStyle(
-                                color: AppColors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w800,
-                              ),
-                            ),
-                            SizedBox(height: 3),
-                            Text(
-                              'Keep moving forward in your career journey',
-                              style: TextStyle(
-                                color: Color(0xFFC7D6DF),
-                                fontSize: 12,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 11,
-                          vertical: 6,
-                        ),
-                        decoration: BoxDecoration(
-                          color: AppColors.gold.withValues(
-                            alpha: 0.18,
-                          ),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: const Text(
-                          'Develop',
-                          style: TextStyle(
-                            color: AppColors.gold,
-                            fontSize: 11,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-
-                  const SizedBox(height: 24),
-
-                  // Main next step
-                  const Text(
-                    'Build your skills',
-                    style: TextStyle(
-                      color: AppColors.white,
-                      fontSize: 24,
-                      fontWeight: FontWeight.w800,
-                      letterSpacing: -0.5,
+                      width: 20,
                     ),
                   ),
-
-                  const SizedBox(height: 8),
-
-                  Text(
-                    'Based on your skill gaps, continue developing the skills needed for your career path.',
-                    style: TextStyle(
-                      color: AppColors.white.withValues(
-                        alpha: 0.76,
-                      ),
-                      fontSize: 12.5,
-                      height: 1.45,
-                    ),
-                  ),
-
-                  const SizedBox(height: 21),
-
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: InkWell(
-                      onTap: () {
-                        // TODO:
-                        // لاحقاً نربطه بالصفحة المناسبة للـ next step
-                        // مثل Skill Gap / Learning Roadmap
-                      },
-                      borderRadius: BorderRadius.circular(16),
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 11,
-                        ),
-                        decoration: BoxDecoration(
-                          color: AppColors.white.withValues(
-                            alpha: 0.11,
-                          ),
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(
-                            color: AppColors.white.withValues(
-                              alpha: 0.14,
-                            ),
-                          ),
-                        ),
-                        child: const Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              'Continue',
-                              style: TextStyle(
-                                color: AppColors.white,
-                                fontSize: 12.5,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            SizedBox(width: 7),
-                            Icon(
-                              Icons.arrow_forward_rounded,
-                              color: AppColors.white,
-                              size: 18,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
-          ],
-        ),
-      );
-    },
-  );
-}
+
+              Padding(
+                padding: const EdgeInsets.all(22),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Top row
+                    Row(
+                      children: [
+                        Container(
+                          width: 48,
+                          height: 48,
+                          decoration: BoxDecoration(
+                            color: AppColors.white.withValues(
+                              alpha: 0.12,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: const Icon(
+                            Icons.route_rounded,
+                            color: AppColors.white,
+                            size: 27,
+                          ),
+                        ),
+
+                        const SizedBox(width: 14),
+
+                        const Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Your Next Step',
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                              SizedBox(height: 3),
+                              Text(
+                                'Keep moving forward in your career journey',
+                                style: TextStyle(
+                                  color: Color(0xFFC7D6DF),
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 11,
+                            vertical: 6,
+                          ),
+                          decoration: BoxDecoration(
+                            color: AppColors.gold.withValues(
+                              alpha: 0.18,
+                            ),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: const Text(
+                            'Develop',
+                            style: TextStyle(
+                              color: AppColors.gold,
+                              fontSize: 11,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    const SizedBox(height: 24),
+
+                    // Main next step
+                    const Text(
+                      'Build your skills',
+                      style: TextStyle(
+                        color: AppColors.white,
+                        fontSize: 24,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: -0.5,
+                      ),
+                    ),
+
+                    const SizedBox(height: 8),
+
+                    Text(
+                      'Based on your skill gaps, continue developing the skills needed for your career path.',
+                      style: TextStyle(
+                        color: AppColors.white.withValues(
+                          alpha: 0.76,
+                        ),
+                        fontSize: 12.5,
+                        height: 1.45,
+                      ),
+                    ),
+
+                    const SizedBox(height: 21),
+
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: InkWell(
+                        onTap: () {
+                          // TODO:
+                          // لاحقاً نربطه بالصفحة المناسبة للـ next step
+                          // مثل Skill Gap / Learning Roadmap
+                        },
+                        borderRadius: BorderRadius.circular(16),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 11,
+                          ),
+                          decoration: BoxDecoration(
+                            color: AppColors.white.withValues(
+                              alpha: 0.11,
+                            ),
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(
+                              color: AppColors.white.withValues(
+                                alpha: 0.14,
+                              ),
+                            ),
+                          ),
+                          child: const Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(
+                                'Continue',
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: 12.5,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              SizedBox(width: 7),
+                              Icon(
+                                Icons.arrow_forward_rounded,
+                                color: AppColors.white,
+                                size: 18,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
 
   // ============================================================
   // CAREER JOURNEY
@@ -1418,41 +1420,71 @@ class _HomeScreenState extends State<HomeScreen>
           height: 72,
           child: Row(
             children: [
+              // ==================================================
+              // HOME
+              // ==================================================
+
               _navItem(
                 icon: Icons.home_rounded,
                 label: 'Home',
                 selected: true,
                 onTap: () {},
               ),
+
+              // ==================================================
+              // EXPLORE
+              // ==================================================
+
               _navItem(
                 icon: Icons.explore_outlined,
                 label: 'Explore',
                 selected: false,
                 onTap: () {
-                  // TODO
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ExploreScreen(),
+                    ),
+                  );
                 },
               ),
+
+              // ==================================================
+              // COMMUNITY
+              // ==================================================
+
               _navItem(
                 icon: Icons.groups_2_outlined,
                 label: 'Community',
                 selected: false,
                 onTap: () {
-                  // TODO
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          const CommunityScreen(),
+                    ),
+                  );
                 },
               ),
+
+              // ==================================================
+              // PROFILE
+              // ==================================================
+
               _navItem(
-  icon: Icons.person_outline_rounded,
-  label: 'Profile',
-  selected: false,
-  onTap: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const ProfileScreen(),
-      ),
-    );
-  },
-),
+                icon: Icons.person_outline_rounded,
+                label: 'Profile',
+                selected: false,
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ProfileScreen(),
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),
@@ -1652,13 +1684,12 @@ class JourneyNode extends StatelessWidget {
               height: 1.25,
             ),
           ),
-
-          
         ],
       ),
     );
   }
 }
+
 // ============================================================
 // CUSTOM JOURNEY PATH
 // ============================================================
