@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'home_screen.dart';
 import 'profile_screen.dart';
 import '../features/community/community_screen.dart';
+import '../theme/app_colors.dart';
+
 
 // Feature screens
 import '../features/career_analysis/career_analysis_screen.dart';
@@ -36,7 +38,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
   static const Color teal = Color(0xFF2D8C99);
   static const Color lightTeal = Color(0xFFEAF4F5);
   static const Color gold = Color(0xFFC69225);
-  static const Color background = Color(0xFFF7F9FA);
+static const Color background = AppColors.background;
   static const Color greyText = Color(0xFF71808F);
 
   // ------------------------------------------------------------
@@ -201,74 +203,55 @@ class _ExploreScreenState extends State<ExploreScreen> {
       // --------------------------------------------------------
 
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: background,
         elevation: 0,
         automaticallyImplyLeading: false,
         toolbarHeight: 118,
 
         title: Padding(
-          padding: const EdgeInsets.only(
-            top: 10,
-            left: 4,
-            right: 4,
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
-                      'Explore',
-                      style: TextStyle(
-                        color: navy,
-                        fontSize: 32,
-                        fontWeight: FontWeight.w800,
-                        height: 1.1,
-                      ),
-                    ),
-
-                    SizedBox(height: 7),
-
-                    Text(
-                      'All career development tools',
-                      style: TextStyle(
-                        color: greyText,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              // ------------------------------------------------
-              // Masra Logo
-              // ------------------------------------------------
-
-              // Logo
-SizedBox(
-  width: 108,
-  height: 48,
-  child: Image.asset(
-    'lib/assets/images/Logoo.png',
-    fit: BoxFit.contain,
-    errorBuilder: (context, error, stackTrace) {
-      return const Text(
-        'Masra',
-        style: TextStyle(
-          color: navy,
-          fontSize: 27,
-          fontWeight: FontWeight.w800,
+  padding: const EdgeInsets.only(
+    top: 4,
+    left: 4,
+    right: 4,
+  ),
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      SizedBox(
+        width: 108,
+        height: 42,
+        child: Image.asset(
+          'lib/assets/images/Logoo.png',
+          fit: BoxFit.contain,
+          alignment: Alignment.centerLeft,
         ),
-      );
-    },
+      ),
+
+      const SizedBox(height: 20),
+
+      Text(
+        'Explore',
+        style: TextStyle(
+          color: AppColors.navy,
+          fontSize: 32,
+          fontWeight: FontWeight.w800,
+          height: 1.1,
+        ),
+      ),
+
+      const SizedBox(height: 5),
+
+      Text(
+        'All career development tools',
+        style: TextStyle(
+          color: AppColors.secondaryText,
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
+    ],
   ),
 ),
-            ],
-          ),
-        ),
       ),
 
       // --------------------------------------------------------
@@ -279,7 +262,7 @@ SizedBox(
         children: [
           // Search bar
           Container(
-            color: Colors.white,
+            color: background,
             padding: const EdgeInsets.fromLTRB(
               20,
               10,
@@ -289,7 +272,7 @@ SizedBox(
             child: Container(
               height: 58,
               decoration: BoxDecoration(
-                color: background,
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(18),
                 border: Border.all(
                   color: const Color(0xFFE8EDF0),
@@ -645,57 +628,78 @@ SizedBox(
   }
 
   Widget _buildNavItem({
-    required int index,
-    required IconData icon,
-    required IconData activeIcon,
-    required String label,
-  }) {
-    final bool isSelected = _currentIndex == index;
+  required int index,
+  required IconData icon,
+  required IconData activeIcon,
+  required String label,
+}) {
+  final bool isSelected = _currentIndex == index;
 
-    return Expanded(
-      child: InkWell(
-        onTap: () => _onBottomNavTap(index),
-        child: SizedBox(
-          height: 76,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Gold indicator
-              AnimatedContainer(
-                duration: const Duration(milliseconds: 200),
-                width: isSelected ? 5 : 0,
-                height: isSelected ? 5 : 0,
-                margin: const EdgeInsets.only(bottom: 3),
-                decoration: BoxDecoration(
-                  color: gold,
-                  borderRadius: BorderRadius.circular(10),
+  return Expanded(
+    child: InkWell(
+      onTap: () => _onBottomNavTap(index),
+      child: SizedBox(
+        height: 76,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 250),
+                  curve: Curves.easeOut,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 13,
+                    vertical: 5,
+                  ),
+                  decoration: BoxDecoration(
+                    color: isSelected
+                        ? lightTeal.withValues(alpha: 0.58)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Icon(
+                    isSelected ? activeIcon : icon,
+                    size: 24,
+                    color: isSelected ? teal : greyText,
+                  ),
                 ),
-              ),
 
-              Icon(
-                isSelected ? activeIcon : icon,
-                size: 27,
+                if (isSelected)
+                  Positioned(
+                    top: -4,
+                    right: 2,
+                    child: Container(
+                      width: 6,
+                      height: 6,
+                      decoration: const BoxDecoration(
+                        color: gold,
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+
+            const SizedBox(height: 3),
+
+            Text(
+              label,
+              style: TextStyle(
                 color: isSelected ? teal : greyText,
+                fontSize: 11,
+                fontWeight: isSelected
+                    ? FontWeight.w700
+                    : FontWeight.w500,
               ),
-
-              const SizedBox(height: 4),
-
-              Text(
-                label,
-                style: TextStyle(
-                  color: isSelected ? teal : greyText,
-                  fontSize: 13,
-                  fontWeight: isSelected
-                      ? FontWeight.w600
-                      : FontWeight.w500,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 }
 
 // ================================================================

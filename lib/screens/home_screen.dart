@@ -232,16 +232,7 @@ class _HomeScreenState extends State<HomeScreen>
 
               const Spacer(),
 
-              _topIconButton(
-                icon: Icons.notifications_none_rounded,
-                showDot: true,
-                onTap: () {
-                  // TODO: Notifications page
-                },
-              ),
-
-              const SizedBox(width: 10),
-
+             
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -1504,29 +1495,48 @@ class _HomeScreenState extends State<HomeScreen>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AnimatedContainer(
-              duration: const Duration(milliseconds: 250),
-              curve: Curves.easeOut,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 13,
-                vertical: 5,
-              ),
-              decoration: BoxDecoration(
-                color: selected
-                    ? AppColors.lightTeal.withValues(
-                        alpha: 0.58,
-                      )
-                    : Colors.transparent,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Icon(
-                icon,
-                size: 24,
-                color: selected
-                    ? AppColors.teal
-                    : AppColors.secondaryText,
-              ),
-            ),
+            Stack(
+  clipBehavior: Clip.none,
+  children: [
+    AnimatedContainer(
+      duration: const Duration(milliseconds: 250),
+      curve: Curves.easeOut,
+      padding: const EdgeInsets.symmetric(
+        horizontal: 13,
+        vertical: 5,
+      ),
+      decoration: BoxDecoration(
+        color: selected
+            ? AppColors.lightTeal.withValues(
+                alpha: 0.58,
+              )
+            : Colors.transparent,
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Icon(
+        icon,
+        size: 24,
+        color: selected
+            ? AppColors.teal
+            : AppColors.secondaryText,
+      ),
+    ),
+
+    if (selected)
+      Positioned(
+        top: -4,
+        right: 2,
+        child: Container(
+          width: 6,
+          height: 6,
+          decoration: const BoxDecoration(
+            color: AppColors.gold,
+            shape: BoxShape.circle,
+          ),
+        ),
+      ),
+  ],
+),
 
             const SizedBox(height: 3),
 
