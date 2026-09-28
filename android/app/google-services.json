@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "641364559253",
+    "project_id": "masra-184b3",
+    "storage_bucket": "masra-184b3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641364559253:android:93b107b726454a709ba29c",
+        "android_client_info": {
+          "package_name": "com.example.masra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMNLa_xC6hH5z3abuig3MgL6pw31wd8Bo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

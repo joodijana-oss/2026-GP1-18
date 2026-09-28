@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../features/community/community_screen.dart';
 import '../theme/app_colors.dart';
+import 'home_screen.dart';
 import 'explore_screen.dart';
 import 'profile_setup_screen.dart';
 import 'settings_screen.dart';
@@ -2171,9 +2172,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  void _goHome() {
-    Navigator.pop(context);
-  }
+ void _goHome() {
+  Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(
+      builder: (_) => const HomeScreen(),
+    ),
+  );
+}
 
   // ============================================================
   // ACTIONS
