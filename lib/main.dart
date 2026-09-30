@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:masra/screens/onboarding_screen.dart';
+import 'package:masra/screens/splash_screen.dart';
 import 'package:masra/theme/app_theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       scrollBehavior: const MasraScrollBehavior(),
 
       // First screen
-      home: const OnboardingScreen(),
+      home: const SplashScreen(),
     );
   }
 }
