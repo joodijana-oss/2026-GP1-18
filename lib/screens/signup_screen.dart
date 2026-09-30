@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import 'login_screen.dart';
-import 'home_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:masra/services/user_service.dart';
+import 'profile_setup_screen.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -21,6 +23,7 @@ class _SignupScreenState extends State<SignupScreen>
 
   bool hidePassword = true;
   bool hideConfirmPassword = true;
+  bool _loading = false;
 
   late AnimationController _backgroundController;
   late Animation<double> _backgroundAnimation;
@@ -62,101 +65,118 @@ class _SignupScreenState extends State<SignupScreen>
 
     super.dispose();
   }
-void createAccount() {
-  if (_formKey.currentState!.validate()) {
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+Future<void> createAccount() async {
+  if (!_formKey.currentState!.validate()) return;
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        behavior: SnackBarBehavior.floating,
-        backgroundColor: AppColors.softBackground,
-        elevation: 8,
-        margin: const EdgeInsets.fromLTRB(20, 0, 20, 22),
-        padding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 14,
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(18),
-        ),
-        duration: const Duration(seconds: 1),
+  setState(() => _loading = true);
 
-        content: Row(
-          children: [
-            Container(
-              width: 38,
-              height: 38,
-              decoration: BoxDecoration(
-                color: const Color(0xFFE4F6EF),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: const Icon(
-                Icons.check_rounded,
-                color: Color(0xFF23966F),
-                size: 22,
-              ),
-            ),
+  final name = nameController.text.trim();
+  final email = emailController.text.trim();
 
-            const SizedBox(width: 13),
-
-            const Expanded(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Account created successfully!',
-                    style: TextStyle(
-                      color: AppColors.navy,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  SizedBox(height: 2),
-                  Text(
-                    'Welcome to Masra.',
-                    style: TextStyle(
-                      color: AppColors.secondaryText,
-                      fontSize: 12,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(width: 5),
-
-            IconButton(
-              onPressed: () {
-                ScaffoldMessenger.of(context).hideCurrentSnackBar();
-              },
-              icon: const Icon(
-                Icons.close_rounded,
-                color: AppColors.secondaryText,
-                size: 19,
-              ),
-            ),
-          ],
-        ),
-      ),
+  try {
+    // 1) إنشاء الحساب في Authentication
+    await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: email,
+      password: passwordController.text,
     );
 
-    Future.delayed(
-      const Duration(milliseconds: 700),
-      () {
-        if (!mounted) return;
+    // 2) إنشاء وثيقة اليوزر في Firestore
+    try {
+      await UserService().createUser(fullName: name, email: email);
+    } catch (_) {
+      // لو فشلت الوثيقة، نحذف الحساب عشان يقدر يسجل من جديد
+      try {
+        await FirebaseAuth.instance.currentUser?.delete();
+      } catch (_) {}
+      _showMessage('Something went wrong. Please try again.', isError: true);
+      return;
+    }
 
-        Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const HomeScreen(),
-          ),
-          (route) => false,
-        );
-      },
+    _showMessage('Account created successfully!', subtitle: 'Welcome to Masra.');
+
+    await Future.delayed(const Duration(milliseconds: 700));
+    if (!mounted) return;
+
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => const ProfileSetupScreen()),
+      (route) => false,
     );
+  } on FirebaseAuthException catch (e) {
+    final message = switch (e.code) {
+      'email-already-in-use' => 'An account with this email already exists.',
+      'network-request-failed' => 'No internet connection. Please try again.',
+      _ => 'Something went wrong. Please try again.',
+    };
+    _showMessage(message, isError: true);
+  } finally {
+    if (mounted) setState(() => _loading = false);
   }
 }
+
+void _showMessage(String title, {String? subtitle, bool isError = false}) {
+  if (!mounted) return;
+  ScaffoldMessenger.of(context).hideCurrentSnackBar();
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(
+      behavior: SnackBarBehavior.floating,
+      backgroundColor: AppColors.softBackground,
+      elevation: 8,
+      margin: const EdgeInsets.fromLTRB(20, 0, 20, 22),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+      duration: Duration(seconds: isError ? 3 : 1),
+      content: Row(
+        children: [
+          Container(
+            width: 38,
+            height: 38,
+            decoration: BoxDecoration(
+              color: isError ? const Color(0xFFFDECEC) : const Color(0xFFE4F6EF),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Icon(
+              isError ? Icons.error_outline_rounded : Icons.check_rounded,
+              color: isError ? const Color(0xFFD64545) : const Color(0xFF23966F),
+              size: 22,
+            ),
+          ),
+          const SizedBox(width: 13),
+          Expanded(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    color: AppColors.navy,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                if (subtitle != null) ...[
+                  const SizedBox(height: 2),
+                  Text(
+                    subtitle,
+                    style: const TextStyle(color: AppColors.secondaryText, fontSize: 12),
+                  ),
+                ],
+              ],
+            ),
+          ),
+          const SizedBox(width: 5),
+          IconButton(
+            onPressed: () => ScaffoldMessenger.of(context).hideCurrentSnackBar(),
+            icon: const Icon(Icons.close_rounded, color: AppColors.secondaryText, size: 19),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -577,33 +597,43 @@ void createAccount() {
                               ],
                             ),
                             child: ElevatedButton(
-                              onPressed: createAccount,
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.transparent,
-                                shadowColor: Colors.transparent,
-                                foregroundColor: AppColors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                              ),
-                              child: const Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Create Account',
-                                    style: TextStyle(
-                                      fontSize: 17,
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                  ),
-                                  SizedBox(width: 10),
-                                  Icon(
-                                    Icons.arrow_forward_rounded,
-                                    size: 22,
-                                  ),
-                                ],
-                              ),
-                            ),
+  onPressed: _loading ? null : createAccount,
+  style: ElevatedButton.styleFrom(
+    backgroundColor: Colors.transparent,
+    disabledBackgroundColor: Colors.transparent,
+    shadowColor: Colors.transparent,
+    foregroundColor: AppColors.white,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(20),
+    ),
+  ),
+  child: _loading
+      ? const SizedBox(
+          width: 24,
+          height: 24,
+          child: CircularProgressIndicator(
+            strokeWidth: 2.5,
+            color: AppColors.white,
+          ),
+        )
+      : const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Create Account',
+              style: TextStyle(
+                fontSize: 17,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            SizedBox(width: 10),
+            Icon(
+              Icons.arrow_forward_rounded,
+              size: 22,
+            ),
+          ],
+        ),
+),
                           ),
 
                           const SizedBox(height: 25),
