@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:masra/services/user_service.dart';
 import '../theme/app_colors.dart';
 import 'forgot_password_screen.dart';
 import 'home_screen.dart';
+import 'profile_setup_screen.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -17,6 +21,7 @@ class _LoginScreenState extends State<LoginScreen>
   final passwordController = TextEditingController();
 
   bool hidePassword = true;
+  bool _loading = false;
 
   late AnimationController _backgroundController;
   late Animation<double> _backgroundAnimation;
@@ -43,50 +48,144 @@ class _LoginScreenState extends State<LoginScreen>
     passwordController.dispose();
     super.dispose();
   }
-void login() {
-  if (_formKey.currentState!.validate()) {
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
 
+  // ===============================================================
+  // LOGIN
+  // ===============================================================
+  Future<void> login() async {
+    if (!_formKey.currentState!.validate()) return;
+
+    setState(() => _loading = true);
+
+    try {
+      final cred = await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text.trim(),
+        password: passwordController.text,
+      );
+
+      // 1) رفض حساب الأدمن: يدخل من الداشبورد بس
+      final token = await cred.user!.getIdTokenResult();
+      if (token.claims?['admin'] == true) {
+        await FirebaseAuth.instance.signOut();
+        _showMessage(
+          'This account can only be used on the admin dashboard.',
+          isError: true,
+        );
+        return;
+      }
+
+      // 2) هل البروفايل مكتمل؟
+      final data = await UserService().getUser();
+      final completed = data?['profileCompleted'] == true;
+
+      _showMessage('Logged in successfully!');
+
+      await Future.delayed(const Duration(milliseconds: 700));
+      if (!mounted) return;
+
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              completed ? const HomeScreen() : const ProfileSetupScreen(),
+        ),
+        (route) => false,
+      );
+    } on FirebaseAuthException catch (e) {
+      final message = switch (e.code) {
+        'invalid-credential' || 'wrong-password' || 'user-not-found' =>
+          'Incorrect email address or password.',
+        'network-request-failed' =>
+          'No internet connection. Please try again.',
+        'too-many-requests' => 'Too many attempts. Please try again later.',
+        _ => 'Something went wrong. Please try again.',
+      };
+      _showMessage(message, isError: true);
+    } catch (_) {
+      // لو فشلت قراءة البيانات، نطلعه عشان ما يعلق نص مسجل
+      await FirebaseAuth.instance.signOut();
+      _showMessage('Something went wrong. Please try again.', isError: true);
+    } finally {
+      if (mounted) setState(() => _loading = false);
+    }
+  }
+
+  // ===============================================================
+  // SNACKBAR MESSAGE (success / error)
+  // ===============================================================
+  void _showMessage(String title, {String? subtitle, bool isError = false}) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         behavior: SnackBarBehavior.floating,
         backgroundColor: AppColors.softBackground,
         elevation: 8,
         margin: const EdgeInsets.fromLTRB(20, 0, 20, 22),
-        padding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 14,
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(18),
-        ),
-        duration: const Duration(seconds: 1),
-        content: const Text(
-          'Logged in successfully!',
-          style: TextStyle(
-            color: AppColors.navy,
-            fontWeight: FontWeight.w700,
-          ),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+        duration: Duration(seconds: isError ? 3 : 1),
+        content: Row(
+          children: [
+            Container(
+              width: 38,
+              height: 38,
+              decoration: BoxDecoration(
+                color: isError
+                    ? const Color(0xFFFDECEC)
+                    : const Color(0xFFE4F6EF),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Icon(
+                isError ? Icons.error_outline_rounded : Icons.check_rounded,
+                color: isError
+                    ? const Color(0xFFD64545)
+                    : const Color(0xFF23966F),
+                size: 22,
+              ),
+            ),
+            const SizedBox(width: 13),
+            Expanded(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      color: AppColors.navy,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  if (subtitle != null) ...[
+                    const SizedBox(height: 2),
+                    Text(
+                      subtitle,
+                      style: const TextStyle(
+                        color: AppColors.secondaryText,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+            const SizedBox(width: 5),
+            IconButton(
+              onPressed: () =>
+                  ScaffoldMessenger.of(context).hideCurrentSnackBar(),
+              icon: const Icon(
+                Icons.close_rounded,
+                color: AppColors.secondaryText,
+                size: 19,
+              ),
+            ),
+          ],
         ),
       ),
     );
-
-    Future.delayed(
-      const Duration(milliseconds: 700),
-      () {
-        if (!mounted) return;
-
-        Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const HomeScreen(),
-          ),
-          (route) => false,
-        );
-      },
-    );
   }
-}
 
   @override
   Widget build(BuildContext context) {
@@ -143,7 +242,6 @@ void login() {
                           ),
                         ),
                       ),
-
                       Positioned(
                         top: -95 + (value * 18),
                         right: -60 - (value * 14),
@@ -158,7 +256,6 @@ void login() {
                           ),
                         ),
                       ),
-
                       Positioned(
                         top: 190 - (value * 20),
                         right: -80 + (value * 12),
@@ -176,7 +273,6 @@ void login() {
                           ),
                         ),
                       ),
-
                       Positioned(
                         top: 115 + (value * 18),
                         left: 135 - (value * 20),
@@ -203,7 +299,6 @@ void login() {
           // =====================================================
           SafeArea(
             child: SingleChildScrollView(
-              
               child: Column(
                 children: [
                   // =================================================
@@ -241,9 +336,7 @@ void login() {
                             ),
                           ),
                         ),
-
                         const SizedBox(height: 95),
-
                         const SizedBox(height: 28),
                       ],
                     ),
@@ -254,12 +347,7 @@ void login() {
                   // =================================================
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.fromLTRB(
-                      24,
-                      30,
-                      24,
-                      28,
-                    ),
+                    padding: const EdgeInsets.fromLTRB(24, 30, 24, 28),
                     decoration: const BoxDecoration(
                       color: AppColors.background,
                       borderRadius: BorderRadius.only(
@@ -316,22 +404,22 @@ void login() {
                             icon: Icons.mail_outline_rounded,
                             keyboardType: TextInputType.emailAddress,
                             validator: (value) {
-  if (value == null || value.trim().isEmpty) {
-    return 'Please enter your email';
-  }
+                              if (value == null || value.trim().isEmpty) {
+                                return 'Please enter your email';
+                              }
 
-  final email = value.trim();
+                              final email = value.trim();
 
-  final emailRegex = RegExp(
-    r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$',
-  );
+                              final emailRegex = RegExp(
+                                r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$',
+                              );
 
-  if (!emailRegex.hasMatch(email)) {
-    return 'Please enter a valid email address';
-  }
+                              if (!emailRegex.hasMatch(email)) {
+                                return 'Please enter a valid email address';
+                              }
 
-  return null;
-},
+                              return null;
+                            },
                           ),
 
                           const SizedBox(height: 17),
@@ -377,13 +465,14 @@ void login() {
                             alignment: Alignment.centerRight,
                             child: TextButton(
                               onPressed: () {
-  Navigator.push(
-    context,
-    MaterialPageRoute(
-      builder: (context) => const ForgotPasswordScreen(),
-    ),
-  );
-},
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ForgotPasswordScreen(),
+                                  ),
+                                );
+                              },
                               child: const Text(
                                 'Forgot Password?',
                                 style: TextStyle(
@@ -423,32 +512,43 @@ void login() {
                               ],
                             ),
                             child: ElevatedButton(
-                              onPressed: login,
+                              onPressed: _loading ? null : login,
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.transparent,
+                                disabledBackgroundColor: Colors.transparent,
                                 shadowColor: Colors.transparent,
                                 foregroundColor: AppColors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                               ),
-                              child: const Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Log In',
-                                    style: TextStyle(
-                                      fontSize: 17,
-                                      fontWeight: FontWeight.w700,
+                              child: _loading
+                                  ? const SizedBox(
+                                      width: 24,
+                                      height: 24,
+                                      child: CircularProgressIndicator(
+                                        strokeWidth: 2.5,
+                                        color: AppColors.white,
+                                      ),
+                                    )
+                                  : const Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          'Log In',
+                                          style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                        SizedBox(width: 10),
+                                        Icon(
+                                          Icons.arrow_forward_rounded,
+                                          size: 22,
+                                        ),
+                                      ],
                                     ),
-                                  ),
-                                  SizedBox(width: 10),
-                                  Icon(
-                                    Icons.arrow_forward_rounded,
-                                    size: 22,
-                                  ),
-                                ],
-                              ),
                             ),
                           ),
 
@@ -466,9 +566,7 @@ void login() {
                                 ),
                               ),
                               const Padding(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 12,
-                                ),
+                                padding: EdgeInsets.symmetric(horizontal: 12),
                                 child: Text(
                                   "Don't have an account?",
                                   style: TextStyle(
@@ -557,9 +655,7 @@ void login() {
             fontWeight: FontWeight.w700,
           ),
         ),
-
         const SizedBox(height: 8),
-
         TextFormField(
           controller: controller,
           obscureText: obscureText,
@@ -572,12 +668,10 @@ void login() {
           ),
           decoration: InputDecoration(
             hintText: hint,
-
             hintStyle: const TextStyle(
               color: AppColors.secondaryText,
               fontSize: 14,
             ),
-
             prefixIcon: Container(
               margin: const EdgeInsets.all(9),
               width: 38,
@@ -592,24 +686,19 @@ void login() {
                 size: 20,
               ),
             ),
-
             suffixIcon: suffixIcon,
-
             filled: true,
             fillColor: AppColors.softBackground,
-
             contentPadding: const EdgeInsets.symmetric(
               vertical: 18,
               horizontal: 15,
             ),
-
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(17),
               borderSide: const BorderSide(
                 color: AppColors.lightGray,
               ),
             ),
-
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(17),
               borderSide: const BorderSide(
@@ -617,14 +706,12 @@ void login() {
                 width: 1.5,
               ),
             ),
-
             errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(17),
               borderSide: const BorderSide(
                 color: Colors.redAccent,
               ),
             ),
-
             focusedErrorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(17),
               borderSide: const BorderSide(
