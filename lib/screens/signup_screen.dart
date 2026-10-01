@@ -42,12 +42,6 @@ class _SignupScreenState extends State<SignupScreen>
 
 
 
-
-
-
-
-
-
     _backgroundAnimation = CurvedAnimation(
       parent: _backgroundController,
       curve: Curves.easeInOut,

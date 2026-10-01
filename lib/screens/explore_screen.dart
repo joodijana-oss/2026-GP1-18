@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 // Main screens
@@ -5,7 +6,6 @@ import 'home_screen.dart';
 import 'profile_screen.dart';
 import '../features/community/community_screen.dart';
 import '../theme/app_colors.dart';
-
 
 // Feature screens
 import '../features/career_analysis/career_analysis_screen.dart';
@@ -38,7 +38,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
   static const Color teal = Color(0xFF2D8C99);
   static const Color lightTeal = Color(0xFFEAF4F5);
   static const Color gold = Color(0xFFC69225);
-static const Color background = AppColors.background;
+  static const Color background = AppColors.background;
   static const Color greyText = Color(0xFF71808F);
 
   // ------------------------------------------------------------
@@ -53,7 +53,6 @@ static const Color background = AppColors.background;
       icon: Icons.psychology_outlined,
       page: const CareerAnalysisScreen(),
     ),
-
     ExploreFeature(
       title: 'Career Path Comparator',
       description: 'Compare two career paths',
@@ -61,7 +60,6 @@ static const Color background = AppColors.background;
       icon: Icons.alt_route_rounded,
       page: const CareerComparatorScreen(),
     ),
-
     ExploreFeature(
       title: 'Personalized Learning Roadmap',
       description: 'Your guided skill journey',
@@ -69,7 +67,6 @@ static const Color background = AppColors.background;
       icon: Icons.account_tree_outlined,
       page: const LearningRoadmapScreen(),
     ),
-
     ExploreFeature(
       title: 'Professional Certification Recommender',
       description: 'Find the right certifications',
@@ -77,7 +74,6 @@ static const Color background = AppColors.background;
       icon: Icons.workspace_premium_outlined,
       page: const CertificationsScreen(),
     ),
-
     ExploreFeature(
       title: 'Opportunity Radar',
       description: 'Discover development opportunities',
@@ -85,7 +81,6 @@ static const Color background = AppColors.background;
       icon: Icons.track_changes_rounded,
       page: const OpportunitiesScreen(),
     ),
-
     ExploreFeature(
       title: 'Smart Project Discovery',
       description: 'GitHub projects matched to you',
@@ -93,7 +88,6 @@ static const Color background = AppColors.background;
       icon: Icons.code_rounded,
       page: const ProjectDiscoveryScreen(),
     ),
-
     ExploreFeature(
       title: 'CV Improvement Assistant',
       description: 'Optimize your CV with AI',
@@ -101,7 +95,6 @@ static const Color background = AppColors.background;
       icon: Icons.edit_document,
       page: const CVImprovementScreen(),
     ),
-
     ExploreFeature(
       title: 'Job Match',
       description: 'Compare your profile to a job',
@@ -109,7 +102,6 @@ static const Color background = AppColors.background;
       icon: Icons.business_center_outlined,
       page: const JobMatchScreen(),
     ),
-
     ExploreFeature(
       title: 'AI Mock Interview Simulator',
       description: 'Practice with AI interviews',
@@ -117,7 +109,6 @@ static const Color background = AppColors.background;
       icon: Icons.chat_bubble_outline_rounded,
       page: const MockInterviewScreen(),
     ),
-
     ExploreFeature(
       title: 'Job Demand Heatmap',
       description: 'Explore demand across Saudi Arabia',
@@ -209,49 +200,49 @@ static const Color background = AppColors.background;
         toolbarHeight: 118,
 
         title: Padding(
-  padding: const EdgeInsets.only(
-    top: 4,
-    left: 4,
-    right: 4,
-  ),
-  child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      SizedBox(
-        width: 108,
-        height: 42,
-        child: Image.asset(
-          'lib/assets/images/Logoo.png',
-          fit: BoxFit.contain,
-          alignment: Alignment.centerLeft,
+          padding: const EdgeInsets.only(
+            top: 4,
+            left: 4,
+            right: 4,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 108,
+                height: 42,
+                child: Image.asset(
+                  'lib/assets/images/Logoo.png',
+                  fit: BoxFit.contain,
+                  alignment: Alignment.centerLeft,
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+              Text(
+                'Explore',
+                style: TextStyle(
+                  color: AppColors.navy,
+                  fontSize: 32,
+                  fontWeight: FontWeight.w800,
+                  height: 1.1,
+                ),
+              ),
+
+              const SizedBox(height: 5),
+
+              Text(
+                'All career development tools',
+                style: TextStyle(
+                  color: AppColors.secondaryText,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
-
-      const SizedBox(height: 20),
-
-      Text(
-        'Explore',
-        style: TextStyle(
-          color: AppColors.navy,
-          fontSize: 32,
-          fontWeight: FontWeight.w800,
-          height: 1.1,
-        ),
-      ),
-
-      const SizedBox(height: 5),
-
-      Text(
-        'All career development tools',
-        style: TextStyle(
-          color: AppColors.secondaryText,
-          fontSize: 16,
-          fontWeight: FontWeight.w500,
-        ),
-      ),
-    ],
-  ),
-),
       ),
 
       // --------------------------------------------------------
@@ -261,6 +252,7 @@ static const Color background = AppColors.background;
       body: Column(
         children: [
           // Search bar
+
           Container(
             color: background,
             padding: const EdgeInsets.fromLTRB(
@@ -309,6 +301,7 @@ static const Color background = AppColors.background;
           ),
 
           // Features
+
           Expanded(
             child: filtered.isEmpty
                 ? _buildEmptyState()
@@ -452,6 +445,7 @@ static const Color background = AppColors.background;
           child: Row(
             children: [
               // Icon
+
               Container(
                 width: 64,
                 height: 64,
@@ -469,6 +463,7 @@ static const Color background = AppColors.background;
               const SizedBox(width: 17),
 
               // Text
+
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -506,6 +501,7 @@ static const Color background = AppColors.background;
               const SizedBox(width: 8),
 
               // Arrow
+
               const Icon(
                 Icons.arrow_forward_ios_rounded,
                 color: gold,
@@ -570,54 +566,54 @@ static const Color background = AppColors.background;
     );
   }
 
-  // ------------------------------------------------------------
-  // Bottom Navigation Bar
-  // ------------------------------------------------------------
+  // ============================================================
+  // BOTTOM NAVIGATION
+  // ============================================================
 
   Widget _buildBottomNavigationBar() {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.softBackground,
+        border: Border(
+          top: BorderSide(
+            color: AppColors.lightGray.withValues(alpha: 0.8),
+          ),
+        ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.06),
+            color: AppColors.navy.withValues(alpha: 0.055),
             blurRadius: 18,
-            offset: const Offset(0, -4),
+            offset: const Offset(0, -5),
           ),
         ],
       ),
       child: SafeArea(
         top: false,
         child: SizedBox(
-          height: 76,
+          height: 72,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               _buildNavItem(
                 index: 0,
-                icon: Icons.home_outlined,
-                activeIcon: Icons.home_rounded,
+                icon: Icons.home_rounded,
                 label: 'Home',
               ),
 
               _buildNavItem(
                 index: 1,
-                icon: Icons.explore_outlined,
-                activeIcon: Icons.explore_rounded,
+                icon: Icons.explore_rounded,
                 label: 'Explore',
               ),
 
               _buildNavItem(
                 index: 2,
-                icon: Icons.people_outline_rounded,
-                activeIcon: Icons.people_rounded,
+                icon: Icons.groups_2_outlined,
                 label: 'Community',
               ),
 
               _buildNavItem(
                 index: 3,
                 icon: Icons.person_outline_rounded,
-                activeIcon: Icons.person_rounded,
                 label: 'Profile',
               ),
             ],
@@ -628,18 +624,15 @@ static const Color background = AppColors.background;
   }
 
   Widget _buildNavItem({
-  required int index,
-  required IconData icon,
-  required IconData activeIcon,
-  required String label,
-}) {
-  final bool isSelected = _currentIndex == index;
+    required int index,
+    required IconData icon,
+    required String label,
+  }) {
+    final bool selected = _currentIndex == index;
 
-  return Expanded(
-    child: InkWell(
-      onTap: () => _onBottomNavTap(index),
-      child: SizedBox(
-        height: 76,
+    return Expanded(
+      child: InkWell(
+        onTap: () => _onBottomNavTap(index),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -654,19 +647,23 @@ static const Color background = AppColors.background;
                     vertical: 5,
                   ),
                   decoration: BoxDecoration(
-                    color: isSelected
-                        ? lightTeal.withValues(alpha: 0.58)
+                    color: selected
+                        ? AppColors.lightTeal.withValues(
+                            alpha: 0.58,
+                          )
                         : Colors.transparent,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Icon(
-                    isSelected ? activeIcon : icon,
+                    icon,
                     size: 24,
-                    color: isSelected ? teal : greyText,
+                    color: selected
+                        ? AppColors.teal
+                        : AppColors.secondaryText,
                   ),
                 ),
 
-                if (isSelected)
+                if (selected)
                   Positioned(
                     top: -4,
                     right: 2,
@@ -674,7 +671,7 @@ static const Color background = AppColors.background;
                       width: 6,
                       height: 6,
                       decoration: const BoxDecoration(
-                        color: gold,
+                        color: AppColors.gold,
                         shape: BoxShape.circle,
                       ),
                     ),
@@ -687,9 +684,11 @@ static const Color background = AppColors.background;
             Text(
               label,
               style: TextStyle(
-                color: isSelected ? teal : greyText,
+                color: selected
+                    ? AppColors.teal
+                    : AppColors.secondaryText,
                 fontSize: 11,
-                fontWeight: isSelected
+                fontWeight: selected
                     ? FontWeight.w700
                     : FontWeight.w500,
               ),
@@ -697,9 +696,8 @@ static const Color background = AppColors.background;
           ],
         ),
       ),
-    ),
-  );
-}
+    );
+  }
 }
 
 // ================================================================
