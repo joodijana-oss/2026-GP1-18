@@ -20,11 +20,13 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initState() {
-    super.initState();
-    _decideStartScreen();
-  }
+void initState() {
+  super.initState();
 
+  WidgetsBinding.instance.addPostFrameCallback((_) {
+    _decideStartScreen();
+  });
+}
   Future<void> _decideStartScreen() async {
     // الافتراضي: مستخدم مو مسجل يروح للـ Onboarding
     Widget next = const OnboardingScreen();
