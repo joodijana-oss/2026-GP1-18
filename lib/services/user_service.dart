@@ -16,6 +16,10 @@ class UserService {
   DocumentReference<Map<String, dynamic>> get _userDoc =>
       _db.collection('users').doc(_uid);
 
+  // نص الـ CV: users/{uid}/private/cv (صاحبه بس يقراه)
+  DocumentReference<Map<String, dynamic>> get _cvDoc =>
+      _userDoc.collection('private').doc('cv');
+
   // 1) تُستدعى مباشرة بعد Sign Up
   Future<void> createUser({
     required String fullName,
@@ -30,7 +34,7 @@ class UserService {
     });
   }
 
-  // 2) تُستدعى من شاشة Profile Setup
+  // 2) تُستدعى من شاشة Profile Setup (بعد saveCv)
   Future<void> saveProfile({
     required String university,
     required String degree,
@@ -65,5 +69,36 @@ class UserService {
       ...data,
       'updatedAt': FieldValue.serverTimestamp(),
     });
+  }
+
+  // 5) حفظ أو استبدال الـ CV المحفوظ (Profile Setup و Replace CV)
+  // [text] يجي من CvService.extractText
+  // العمليتين مع بعض: إذا فشلت وحدة ما يتغير شي ويبقى الـ CV القديم
+  Future<void> saveCv({
+    required String fileName,
+    required String text,
+  }) async {
+    final batch = _db.batch();
+
+    batch.update(_userDoc, {
+      'cv': {
+        'fileName': fileName,
+        'uploadedAt': FieldValue.serverTimestamp(),
+      },
+      'updatedAt': FieldValue.serverTimestamp(),
+    });
+
+    batch.set(_cvDoc, {
+      'text': text,
+      'updatedAt': FieldValue.serverTimestamp(),
+    });
+
+    await batch.commit();
+  }
+
+  // 6) نص الـ CV المحفوظ (للتحليل و CV Improvement)
+  Future<String?> getCvText() async {
+    final snapshot = await _cvDoc.get();
+    return snapshot.data()?['text'] as String?;
   }
 }

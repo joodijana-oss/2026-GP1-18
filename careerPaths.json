@@ -1,0 +1,556 @@
+[
+ {
+  "id": "software_engineer",
+  "name": "Software Engineer",
+  "skills": [
+   {
+    "name": "Programming Fundamentals",
+    "priority": 1
+   },
+   {
+    "name": "Object-Oriented Programming",
+    "priority": 1
+   },
+   {
+    "name": "Data Structures and Algorithms",
+    "priority": 1
+   },
+   {
+    "name": "Git",
+    "priority": 1
+   },
+   {
+    "name": "Databases and SQL",
+    "priority": 2
+   },
+   {
+    "name": "Software Testing",
+    "priority": 2
+   },
+   {
+    "name": "Software Design Patterns",
+    "priority": 3
+   },
+   {
+    "name": "System Design",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "web_developer",
+  "name": "Web Developer",
+  "skills": [
+   {
+    "name": "HTML and CSS",
+    "priority": 1
+   },
+   {
+    "name": "JavaScript",
+    "priority": 1
+   },
+   {
+    "name": "Git",
+    "priority": 1
+   },
+   {
+    "name": "Frontend Frameworks",
+    "priority": 2
+   },
+   {
+    "name": "Backend Development",
+    "priority": 2
+   },
+   {
+    "name": "Databases and SQL",
+    "priority": 2
+   },
+   {
+    "name": "APIs",
+    "priority": 2
+   },
+   {
+    "name": "Web Security",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "mobile_developer",
+  "name": "Mobile Developer",
+  "skills": [
+   {
+    "name": "Programming Fundamentals",
+    "priority": 1
+   },
+   {
+    "name": "Mobile App Development",
+    "priority": 1
+   },
+   {
+    "name": "Flutter",
+    "priority": 1
+   },
+   {
+    "name": "Git",
+    "priority": 1
+   },
+   {
+    "name": "APIs",
+    "priority": 2
+   },
+   {
+    "name": "Databases and SQL",
+    "priority": 2
+   },
+   {
+    "name": "UI Design",
+    "priority": 2
+   },
+   {
+    "name": "App Publishing",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "data_analyst",
+  "name": "Data Analyst",
+  "skills": [
+   {
+    "name": "Excel",
+    "priority": 1
+   },
+   {
+    "name": "Databases and SQL",
+    "priority": 1
+   },
+   {
+    "name": "Data Analysis",
+    "priority": 1
+   },
+   {
+    "name": "Mathematics and Statistics",
+    "priority": 1
+   },
+   {
+    "name": "Data Visualization",
+    "priority": 2
+   },
+   {
+    "name": "Power BI",
+    "priority": 2
+   },
+   {
+    "name": "Python",
+    "priority": 2
+   },
+   {
+    "name": "Business Analysis",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "data_scientist",
+  "name": "Data Scientist",
+  "skills": [
+   {
+    "name": "Python",
+    "priority": 1
+   },
+   {
+    "name": "Mathematics and Statistics",
+    "priority": 1
+   },
+   {
+    "name": "Data Analysis",
+    "priority": 1
+   },
+   {
+    "name": "Machine Learning",
+    "priority": 2
+   },
+   {
+    "name": "Databases and SQL",
+    "priority": 2
+   },
+   {
+    "name": "Data Visualization",
+    "priority": 2
+   },
+   {
+    "name": "Big Data",
+    "priority": 3
+   },
+   {
+    "name": "Deep Learning",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "ai_ml_engineer",
+  "name": "AI / Machine Learning Engineer",
+  "skills": [
+   {
+    "name": "Python",
+    "priority": 1
+   },
+   {
+    "name": "Mathematics and Statistics",
+    "priority": 1
+   },
+   {
+    "name": "Machine Learning",
+    "priority": 1
+   },
+   {
+    "name": "Deep Learning",
+    "priority": 2
+   },
+   {
+    "name": "Natural Language Processing",
+    "priority": 2
+   },
+   {
+    "name": "Data Analysis",
+    "priority": 2
+   },
+   {
+    "name": "Generative AI",
+    "priority": 3
+   },
+   {
+    "name": "MLOps",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "cybersecurity_analyst",
+  "name": "Cybersecurity Analyst",
+  "skills": [
+   {
+    "name": "Networking Fundamentals",
+    "priority": 1
+   },
+   {
+    "name": "Linux",
+    "priority": 1
+   },
+   {
+    "name": "Information Security",
+    "priority": 1
+   },
+   {
+    "name": "Network Security",
+    "priority": 2
+   },
+   {
+    "name": "Security Operations",
+    "priority": 2
+   },
+   {
+    "name": "Ethical Hacking",
+    "priority": 2
+   },
+   {
+    "name": "Cloud Security",
+    "priority": 3
+   },
+   {
+    "name": "Incident Response",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "cloud_devops_engineer",
+  "name": "Cloud / DevOps Engineer",
+  "skills": [
+   {
+    "name": "Linux",
+    "priority": 1
+   },
+   {
+    "name": "Networking Fundamentals",
+    "priority": 1
+   },
+   {
+    "name": "Cloud Computing",
+    "priority": 1
+   },
+   {
+    "name": "Containers",
+    "priority": 2
+   },
+   {
+    "name": "DevOps",
+    "priority": 2
+   },
+   {
+    "name": "Cloud Security",
+    "priority": 2
+   },
+   {
+    "name": "Infrastructure as Code",
+    "priority": 3
+   },
+   {
+    "name": "Scripting",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "network_engineer",
+  "name": "Network Engineer",
+  "skills": [
+   {
+    "name": "Networking Fundamentals",
+    "priority": 1
+   },
+   {
+    "name": "Routing and Switching",
+    "priority": 1
+   },
+   {
+    "name": "Linux",
+    "priority": 2
+   },
+   {
+    "name": "Network Security",
+    "priority": 2
+   },
+   {
+    "name": "Wireless Networks",
+    "priority": 2
+   },
+   {
+    "name": "Cloud Computing",
+    "priority": 3
+   },
+   {
+    "name": "Network Automation",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "systems_administrator",
+  "name": "Systems Administrator",
+  "skills": [
+   {
+    "name": "Linux",
+    "priority": 1
+   },
+   {
+    "name": "Windows Server",
+    "priority": 1
+   },
+   {
+    "name": "Networking Fundamentals",
+    "priority": 1
+   },
+   {
+    "name": "Scripting",
+    "priority": 2
+   },
+   {
+    "name": "Virtualization",
+    "priority": 2
+   },
+   {
+    "name": "Information Security",
+    "priority": 2
+   },
+   {
+    "name": "Backup and Recovery",
+    "priority": 3
+   },
+   {
+    "name": "Cloud Computing",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "database_administrator",
+  "name": "Database Administrator",
+  "skills": [
+   {
+    "name": "Databases and SQL",
+    "priority": 1
+   },
+   {
+    "name": "Database Design",
+    "priority": 1
+   },
+   {
+    "name": "Linux",
+    "priority": 2
+   },
+   {
+    "name": "Backup and Recovery",
+    "priority": 2
+   },
+   {
+    "name": "Database Security",
+    "priority": 2
+   },
+   {
+    "name": "Performance Tuning",
+    "priority": 3
+   },
+   {
+    "name": "Cloud Computing",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "ui_ux_designer",
+  "name": "UI/UX Designer",
+  "skills": [
+   {
+    "name": "UI Design",
+    "priority": 1
+   },
+   {
+    "name": "UX Research",
+    "priority": 1
+   },
+   {
+    "name": "Figma",
+    "priority": 1
+   },
+   {
+    "name": "Prototyping",
+    "priority": 2
+   },
+   {
+    "name": "Design Thinking",
+    "priority": 2
+   },
+   {
+    "name": "Accessibility",
+    "priority": 3
+   },
+   {
+    "name": "HTML and CSS",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "business_analyst",
+  "name": "Business Analyst",
+  "skills": [
+   {
+    "name": "Business Analysis",
+    "priority": 1
+   },
+   {
+    "name": "Requirements Gathering",
+    "priority": 1
+   },
+   {
+    "name": "Excel",
+    "priority": 1
+   },
+   {
+    "name": "Databases and SQL",
+    "priority": 2
+   },
+   {
+    "name": "Data Visualization",
+    "priority": 2
+   },
+   {
+    "name": "Process Modeling",
+    "priority": 2
+   },
+   {
+    "name": "Power BI",
+    "priority": 3
+   },
+   {
+    "name": "Agile",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "it_project_manager",
+  "name": "IT Project Manager",
+  "skills": [
+   {
+    "name": "Software Development Lifecycle",
+    "priority": 1
+   },
+   {
+    "name": "IT Project Management",
+    "priority": 1
+   },
+   {
+    "name": "Agile",
+    "priority": 1
+   },
+   {
+    "name": "Risk Management",
+    "priority": 2
+   },
+   {
+    "name": "Business Analysis",
+    "priority": 2
+   },
+   {
+    "name": "Stakeholder Management",
+    "priority": 2
+   },
+   {
+    "name": "Microsoft Office",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "it_consultant",
+  "name": "IT Consultant",
+  "skills": [
+   {
+    "name": "Computer Fundamentals",
+    "priority": 1
+   },
+   {
+    "name": "Networking Fundamentals",
+    "priority": 1
+   },
+   {
+    "name": "Business Analysis",
+    "priority": 1
+   },
+   {
+    "name": "Cloud Computing",
+    "priority": 2
+   },
+   {
+    "name": "Information Security",
+    "priority": 2
+   },
+   {
+    "name": "IT Project Management",
+    "priority": 2
+   },
+   {
+    "name": "Digital Transformation",
+    "priority": 2
+   },
+   {
+    "name": "Requirements Gathering",
+    "priority": 3
+   }
+  ]
+ }
+]
