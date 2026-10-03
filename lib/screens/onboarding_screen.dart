@@ -76,45 +76,59 @@ class OnboardingScreen extends StatelessWidget {
                   const Spacer(),
 
                   // ==========================
-                  // GET STARTED BUTTON
-                  // ==========================
-                  SizedBox(
-                    width: double.infinity,
-                    height: 62,
-                    child: ElevatedButton(
-                      onPressed: () => goToSignUp(context),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.navy,
-                        foregroundColor: AppColors.white,
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40),
-                        ),
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 28,
-                        ),
-                      ),
-                      child: const Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              "Let's Get Started",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 19,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                          Icon(
-                            Icons.arrow_forward_rounded,
-                            size: 28,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-
+// GET STARTED BUTTON
+// ==========================
+Container(
+  width: double.infinity,
+  height: 60,
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(20),
+    gradient: const LinearGradient(
+      colors: [
+        AppColors.navy,
+        AppColors.secondaryNavy,
+        AppColors.teal,
+      ],
+    ),
+    boxShadow: [
+      BoxShadow(
+        color: AppColors.teal.withValues(
+          alpha: 0.24,
+        ),
+        blurRadius: 18,
+        offset: const Offset(0, 8),
+      ),
+    ],
+  ),
+  child: ElevatedButton(
+    onPressed: () => goToSignUp(context),
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.transparent,
+      shadowColor: Colors.transparent,
+      foregroundColor: AppColors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
+    ),
+    child: const Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Let's Get Started",
+          style: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        SizedBox(width: 10),
+        Icon(
+          Icons.arrow_forward_rounded,
+          size: 22,
+        ),
+      ],
+    ),
+  ),
+),
                   const SizedBox(height: 34),
                 ],
               ),

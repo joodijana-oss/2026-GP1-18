@@ -308,38 +308,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                     padding: const EdgeInsets.symmetric(horizontal: 22),
                     child: Column(
                       children: [
-                        // ---------------------------------------------
-                        // BACK BUTTON
-                        // ---------------------------------------------
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Container(
-                            width: 43,
-                            height: 43,
-                            decoration: BoxDecoration(
-                              color: AppColors.white.withValues(
-                                alpha: 0.13,
-                              ),
-                              borderRadius: BorderRadius.circular(14),
-                              border: Border.all(
-                                color: AppColors.white.withValues(
-                                  alpha: 0.20,
-                                ),
-                              ),
-                            ),
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              icon: const Icon(
-                                Icons.arrow_back_rounded,
-                                color: AppColors.white,
-                                size: 22,
-                              ),
-                            ),
-                          ),
-                        ),
-
+                        
                         const SizedBox(height: 95),
 
                         // ---------------------------------------------
