@@ -101,4 +101,11 @@ class UserService {
     final snapshot = await _cvDoc.get();
     return snapshot.data()?['text'] as String?;
   }
+
+  // 7) آخر نتيجة AI Career Analysis (null إذا ما سوى تحليل للحين)
+  Future<Map<String, dynamic>?> getLatestAnalysis() async {
+    final snapshot =
+        await _userDoc.collection('analysis').doc('latest').get();
+    return snapshot.data();
+  }
 }
