@@ -433,7 +433,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                             icon: Icons.person_outline_rounded,
                             validator: (value) {
                               if (value == null || value.trim().isEmpty) {
-                                return 'Please enter your name';
+                                return 'Full name is required.';
                               }
 
                               return null;
@@ -453,7 +453,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                             keyboardType: TextInputType.emailAddress,
                             validator: (value) {
   if (value == null || value.trim().isEmpty) {
-    return 'Please enter your email';
+    return 'Email address is required.';
   }
 
   final email = value.trim();
@@ -463,7 +463,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
   );
 
   if (!emailRegex.hasMatch(email)) {
-    return 'Please enter a valid email address';
+    return 'Enter a valid email address.';
   }
 
   return null;
@@ -497,27 +497,34 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                             ),
                             validator: (value) {
   if (value == null || value.isEmpty) {
-    return 'Please enter a password';
+    return 'Password is required.';
   }
 
   if (value.length < 8) {
-    return 'Password must be at least 8 characters';
+    return 'Password must contain at least 8 characters.';
   }
 
+  // نجمع كل الشروط الناقصة ونعرضها مع بعض، كل شرط في سطر
+  final missing = <String>[];
+
   if (!RegExp(r'[A-Z]').hasMatch(value)) {
-    return 'Password must contain an uppercase letter';
+    missing.add('an uppercase letter');
   }
 
   if (!RegExp(r'[a-z]').hasMatch(value)) {
-    return 'Password must contain a lowercase letter';
+    missing.add('a lowercase letter');
   }
 
   if (!RegExp(r'[0-9]').hasMatch(value)) {
-    return 'Password must contain a number';
+    missing.add('a number');
   }
 
   if (!RegExp(r'[!@#$%^&*(),.?":{}|<>_\-+=]').hasMatch(value)) {
-    return 'Password must contain a special character';
+    missing.add('a special character');
+  }
+
+  if (missing.isNotEmpty) {
+    return 'Password must contain:\n${missing.map((rule) => '• $rule').join('\n')}';
   }
 
   return null;
@@ -552,11 +559,11 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                             ),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Please confirm your password';
+                                return 'Please confirm your password.';
                               }
 
                               if (value != passwordController.text) {
-                                return 'Passwords do not match';
+                                return 'Passwords do not match.';
                               }
 
                               return null;
@@ -755,6 +762,8 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
           ),
           decoration: InputDecoration(
             hintText: hint,
+            // يسمح لرسالة شروط كلمة المرور تنعرض على أكثر من سطر
+            errorMaxLines: 6,
             hintStyle: const TextStyle(
               color: AppColors.secondaryText,
               fontSize: 14,

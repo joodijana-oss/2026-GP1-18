@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import '../features/community/community_screen.dart';
 import '../theme/app_colors.dart';
 import 'home_screen.dart';
 import 'explore_screen.dart';
+import 'onboarding_screen.dart';
 import 'profile_setup_screen.dart';
 import 'settings_screen.dart';
 
@@ -26,6 +28,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   final String careerGoal = 'AI Specialist';
 
   final int profileCompletion = 86;
+
+  // نفس لون الخطأ المستخدم في رسائل شاشة تسجيل الدخول
+  static const Color _logoutRed = Color(0xFFD64545);
 
   final List<SkillItem> skills = const [
     SkillItem(
@@ -169,6 +174,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: _buildCareerPreferences(),
+              ),
+
+              const SizedBox(height: 32),
+
+              // ==================================================
+              // LOG OUT
+              // ==================================================
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: _profileAction(
+                  icon: Icons.logout_rounded,
+                  title: 'Log Out',
+                  accent: _logoutRed,
+                  onTap: _confirmLogout,
+                ),
               ),
             ],
           ),
@@ -2302,6 +2323,160 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ],
         );
       },
+    );
+  }
+
+  // ============================================================
+  // LOG OUT
+  // ============================================================
+
+  Future<void> _confirmLogout() async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) {
+        return AlertDialog(
+          backgroundColor: AppColors.softBackground,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(24),
+          ),
+          title: const Text(
+            'Log Out',
+            style: TextStyle(
+              color: AppColors.navy,
+              fontSize: 19,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+          content: const Text(
+            'Are you sure you want to log out?',
+            style: TextStyle(
+              color: AppColors.secondaryText,
+              fontSize: 13,
+              height: 1.45,
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(dialogContext, false),
+              child: const Text(
+                'Cancel',
+                style: TextStyle(
+                  color: AppColors.secondaryText,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            TextButton(
+              onPressed: () => Navigator.pop(dialogContext, true),
+              child: const Text(
+                'Confirm',
+                style: TextStyle(
+                  color: _logoutRed,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+
+    // Cancel أو الضغط خارج النافذة: تبقى الجلسة ويبقى المستخدم في البروفايل
+    if (confirmed != true) return;
+
+    try {
+      await FirebaseAuth.instance.signOut();
+    } catch (_) {
+      _showMessage(
+        'Log out failed',
+        subtitle: 'Please try again.',
+        isError: true,
+      );
+      return;
+    }
+
+    if (!mounted) return;
+
+    // نمسح كل الشاشات عشان زر الرجوع ما يرجّع المستخدم داخل التطبيق
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (_) => const OnboardingScreen()),
+      (route) => false,
+    );
+  }
+
+  // نفس تصميم رسائل شاشة تسجيل الدخول
+  void _showMessage(String title, {String? subtitle, bool isError = false}) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: AppColors.softBackground,
+        elevation: 8,
+        margin: const EdgeInsets.fromLTRB(20, 0, 20, 22),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+        duration: Duration(seconds: isError ? 3 : 1),
+        content: Row(
+          children: [
+            Container(
+              width: 38,
+              height: 38,
+              decoration: BoxDecoration(
+                color: isError
+                    ? const Color(0xFFFDECEC)
+                    : const Color(0xFFE4F6EF),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Icon(
+                isError ? Icons.error_outline_rounded : Icons.check_rounded,
+                color: isError
+                    ? const Color(0xFFD64545)
+                    : const Color(0xFF23966F),
+                size: 22,
+              ),
+            ),
+            const SizedBox(width: 13),
+            Expanded(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      color: AppColors.navy,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  if (subtitle != null) ...[
+                    const SizedBox(height: 2),
+                    Text(
+                      subtitle,
+                      style: const TextStyle(
+                        color: AppColors.secondaryText,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+            const SizedBox(width: 5),
+            IconButton(
+              onPressed: () =>
+                  ScaffoldMessenger.of(context).hideCurrentSnackBar(),
+              icon: const Icon(
+                Icons.close_rounded,
+                color: AppColors.secondaryText,
+                size: 19,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
