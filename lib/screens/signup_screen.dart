@@ -4,6 +4,7 @@ import 'login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:masra/services/user_service.dart';
 import 'profile_setup_screen.dart';
+import '../utils/password_validator.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -464,40 +465,8 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                                 size: 21,
                               ),
                             ),
-                            validator: (value) {
-  if (value == null || value.isEmpty) {
-    return 'Password is required.';
-  }
-
-  if (value.length < 8) {
-    return 'Password must contain at least 8 characters.';
-  }
-
-  // نجمع كل الشروط الناقصة ونعرضها مع بعض، كل شرط في سطر
-  final missing = <String>[];
-
-  if (!RegExp(r'[A-Z]').hasMatch(value)) {
-    missing.add('an uppercase letter');
-  }
-
-  if (!RegExp(r'[a-z]').hasMatch(value)) {
-    missing.add('a lowercase letter');
-  }
-
-  if (!RegExp(r'[0-9]').hasMatch(value)) {
-    missing.add('a number');
-  }
-
-  if (!RegExp(r'[!@#$%^&*(),.?":{}|<>_\-+=]').hasMatch(value)) {
-    missing.add('a special character');
-  }
-
-  if (missing.isNotEmpty) {
-    return 'Password must contain:\n${missing.map((rule) => '• $rule').join('\n')}';
-  }
-
-  return null;
-},
+                            validator: (value) =>
+                                PasswordValidator.validate(value),
                           ),
 
                           const SizedBox(height: 17),
@@ -732,7 +701,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
           decoration: InputDecoration(
             hintText: hint,
             // يسمح لرسالة شروط كلمة المرور تنعرض على أكثر من سطر
-            errorMaxLines: 6,
+            errorMaxLines: 8,
             hintStyle: const TextStyle(
               color: AppColors.secondaryText,
               fontSize: 14,

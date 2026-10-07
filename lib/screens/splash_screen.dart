@@ -55,10 +55,17 @@ void initState() {
 
     if (!mounted) return;
 
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (context) => next),
-    );
+    final newRoute = MaterialPageRoute(builder: (context) => next);
+    final splashRoute = ModalRoute.of(context);
+
+    // If a screen was opened on top of Splash (e.g. Reset Password from an
+    // email link), replace only the Splash route underneath it.
+    if (splashRoute != null && !splashRoute.isCurrent) {
+      Navigator.replace(context, oldRoute: splashRoute, newRoute: newRoute);
+      return;
+    }
+
+    Navigator.pushReplacement(context, newRoute);
   }
 
   @override

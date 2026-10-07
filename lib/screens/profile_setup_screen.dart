@@ -4,6 +4,8 @@ import 'package:file_picker/file_picker.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 
+import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 import '../services/user_service.dart';
@@ -52,7 +54,8 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen>
 
   String? selectedMajor;
 
-  String? selectedGraduationYear;
+  // Month + year only (day is always 1)
+  DateTime? selectedGraduationDate;
 
   // =========================================================
 
@@ -470,7 +473,7 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen>
 
         selectedExperienceLevel == null ||
 
-        selectedGraduationYear == null) {
+        selectedGraduationDate == null) {
 
       showMessage(
 
@@ -530,7 +533,9 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen>
 
     }
 
-    final graduationYear = int.parse(selectedGraduationYear!);
+    final graduationYear = selectedGraduationDate!.year;
+
+    final graduationMonth = selectedGraduationDate!.month;
 
     setState(() {
 
@@ -556,6 +561,13 @@ await UserService().saveCv(
       // 2. SAVE ACADEMIC AND CAREER INFORMATION
 
       // ---------------------------------------------
+
+      // saveProfile() has no graduationMonth parameter,
+      // so it is saved with updateUser() first.
+
+      await UserService().updateUser({
+        'graduationMonth': graduationMonth,
+      });
 
       await UserService().saveProfile(
 
@@ -1771,6 +1783,20 @@ SizedBox(
 
                     value;
 
+                // Clear the date if it's outside the new status range
+
+                final range = graduationDateRange(value);
+
+                final date = selectedGraduationDate;
+
+                if (date != null &&
+                    range != null &&
+                    !isDateInRange(date, range)) {
+
+                  selectedGraduationDate = null;
+
+                }
+
               });
 
             },
@@ -1779,45 +1805,9 @@ SizedBox(
 
           const SizedBox(height: 20),
 
-          // GRADUATION YEAR
+          // GRADUATION DATE (MONTH + YEAR)
 
-          buildDropdown(
-
-            label: 'Graduation Year',
-
-            hint: 'Select your graduation year',
-
-            icon: Icons.calendar_month_outlined,
-
-            value: selectedGraduationYear,
-
-            items: ProfileOptions.graduationYears
-
-                .map(
-
-                  (year) => DropdownMenuItem<String>(
-
-                    value: year,
-
-                    child: Text(year),
-
-                  ),
-
-                )
-
-                .toList(),
-
-            onChanged: (value) {
-
-              setState(() {
-
-                selectedGraduationYear = value;
-
-              });
-
-            },
-
-          ),
+          buildGraduationDateField(),
 
           const SizedBox(height: 20),
 
@@ -2399,6 +2389,258 @@ SizedBox(
 
     );
 
+  }
+
+  // =========================================================
+
+  // GRADUATION DATE HELPERS
+
+  // =========================================================
+
+  static const List<String> _monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  DateTime get _currentMonth {
+    final now = DateTime.now();
+    return DateTime(now.year, now.month);
+  }
+
+  // Allowed range for the given status (null if no status selected yet)
+  // Student: current month -> 6 years ahead
+  // Graduate / Fresh Graduate: January 2000 -> current month
+  DateTimeRange? graduationDateRange(String? status) {
+    if (status == null) return null;
+
+    final current = _currentMonth;
+
+    if (status == 'Student') {
+      return DateTimeRange(
+        start: current,
+        end: DateTime(current.year + 6, current.month),
+      );
+    }
+
+    return DateTimeRange(
+      start: DateTime(2000, 1),
+      end: current,
+    );
+  }
+
+  bool isDateInRange(DateTime date, DateTimeRange range) {
+    return !date.isBefore(range.start) && !date.isAfter(range.end);
+  }
+
+  // e.g. "June 2027"
+  String formatGraduationDate(DateTime date) {
+    return '${_monthNames[date.month - 1]} ${date.year}';
+  }
+
+  // =========================================================
+
+  // GRADUATION DATE PICKER (BOTTOM SHEET)
+
+  // =========================================================
+
+  Future<void> pickGraduationDate(FormFieldState<DateTime> field) async {
+    final range = graduationDateRange(selectedGraduationStatus);
+
+    if (range == null) {
+      showMessage(
+        'Please select your graduation status first.',
+        isError: true,
+      );
+      return;
+    }
+
+    FocusScope.of(context).unfocus();
+
+    final current = selectedGraduationDate;
+
+    // Value shown in the sheet; only applied when Done is pressed
+    var tempDate = current != null && isDateInRange(current, range)
+        ? current
+        : _currentMonth;
+
+    final picked = await showModalBottomSheet<DateTime>(
+      context: context,
+      backgroundColor: AppColors.background,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(24),
+        ),
+      ),
+      builder: (sheetContext) {
+        return SafeArea(
+          top: false,
+          child: SizedBox(
+            height: 300,
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                  child: Row(
+                    children: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(sheetContext),
+                        child: const Text(
+                          'Cancel',
+                          style: TextStyle(
+                            color: AppColors.secondaryText,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                      const Spacer(),
+                      TextButton(
+                        onPressed: () =>
+                            Navigator.pop(sheetContext, tempDate),
+                        child: const Text(
+                          'Done',
+                          style: TextStyle(
+                            color: AppColors.teal,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Divider(
+                  height: 1,
+                  color: AppColors.lightGray,
+                ),
+                Expanded(
+                  child: CupertinoDatePicker(
+                    mode: CupertinoDatePickerMode.monthYear,
+                    initialDateTime: tempDate,
+                    minimumDate: range.start,
+                    maximumDate: range.end,
+                    minimumYear: range.start.year,
+                    maximumYear: range.end.year,
+                    onDateTimeChanged: (date) {
+                      tempDate = DateTime(date.year, date.month);
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+
+    if (picked == null || !mounted) return;
+
+    setState(() {
+      selectedGraduationDate = picked;
+    });
+
+    field.didChange(picked);
+
+    // Clear the "required" error if it was showing
+    if (field.hasError) field.validate();
+  }
+
+  // =========================================================
+
+  // GRADUATION DATE FIELD
+
+  // =========================================================
+
+  Widget buildGraduationDateField() {
+    final date = selectedGraduationDate;
+
+    final border = OutlineInputBorder(
+      borderRadius: BorderRadius.circular(15),
+      borderSide: const BorderSide(
+        color: AppColors.lightGray,
+      ),
+    );
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Graduation Date',
+          style: TextStyle(
+            color: AppColors.navy,
+            fontSize: 14,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        const SizedBox(height: 9),
+        FormField<DateTime>(
+          validator: (_) {
+            if (selectedGraduationDate == null) {
+              return 'This field is required.';
+            }
+            return null;
+          },
+          builder: (field) {
+            return GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTap: () => pickGraduationDate(field),
+              child: InputDecorator(
+                isEmpty: date == null,
+                decoration: InputDecoration(
+                  hintText: 'Select your graduation month and year',
+                  hintStyle: const TextStyle(
+                    color: AppColors.mediumGray,
+                    fontSize: 13,
+                  ),
+                  errorText: field.errorText,
+                  prefixIcon: const Icon(
+                    Icons.calendar_month_outlined,
+                    color: AppColors.secondaryText,
+                    size: 21,
+                  ),
+                  suffixIcon: const Icon(
+                    Icons.keyboard_arrow_down_rounded,
+                    color: AppColors.secondaryText,
+                  ),
+                  filled: true,
+                  fillColor: AppColors.softBackground,
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 17,
+                    vertical: 18,
+                  ),
+                  border: border,
+                  enabledBorder: border,
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: const BorderSide(
+                      color: AppColors.teal,
+                      width: 1.5,
+                    ),
+                  ),
+                ),
+                child: Text(
+                  date == null ? '' : formatGraduationDate(date),
+                  style: const TextStyle(
+                    color: AppColors.navy,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+      ],
+    );
   }
 
   // =========================================================

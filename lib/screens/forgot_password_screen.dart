@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 
@@ -14,6 +15,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
   final _formKey = GlobalKey<FormState>();
 
   final emailController = TextEditingController();
+
+  bool _loading = false;
 
   late AnimationController _backgroundController;
   late Animation<double> _backgroundAnimation;
@@ -39,80 +42,100 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
     emailController.dispose();
     super.dispose();
   }
-void sendResetLink() {
-  if (_formKey.currentState!.validate()) {
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+  // ===============================================================
+  // SEND RESET LINK
+  // ===============================================================
+  // Same message whether or not the email has an account,
+  // so the page never reveals which emails are registered.
+  static const _neutralSuccessMessage =
+      'If an account exists for this email, a password reset link has been sent.';
 
+  Future<void> sendResetLink() async {
+    if (_loading) return;
+    FocusScope.of(context).unfocus();
+    if (!_formKey.currentState!.validate()) return;
+
+    setState(() => _loading = true);
+
+    try {
+      await FirebaseAuth.instance.sendPasswordResetEmail(
+        email: emailController.text.trim(),
+      );
+      _showMessage(_neutralSuccessMessage);
+    } on FirebaseAuthException catch (e) {
+      // user-not-found only happens when Email Enumeration Protection
+      // is off; still show the neutral message.
+      if (e.code == 'user-not-found') {
+        _showMessage(_neutralSuccessMessage);
+        return;
+      }
+
+      final message = switch (e.code) {
+        'invalid-email' => 'Enter a valid email address.',
+        'network-request-failed' =>
+          'No internet connection. Please try again.',
+        'too-many-requests' => 'Too many attempts. Please try again later.',
+        _ => 'Something went wrong. Please try again.',
+      };
+      _showMessage(message, isError: true);
+    } catch (_) {
+      _showMessage('Something went wrong. Please try again.', isError: true);
+    } finally {
+      if (mounted) setState(() => _loading = false);
+    }
+  }
+
+  // ===============================================================
+  // SNACKBAR MESSAGE (success / error) - same style as Log In
+  // ===============================================================
+  void _showMessage(String title, {bool isError = false}) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         behavior: SnackBarBehavior.floating,
         backgroundColor: AppColors.softBackground,
         elevation: 8,
         margin: const EdgeInsets.fromLTRB(20, 0, 20, 22),
-        padding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 14,
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(18),
-        ),
-        duration: const Duration(seconds: 3),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+        duration: Duration(seconds: isError ? 3 : 5),
         content: Row(
           children: [
             Container(
               width: 38,
               height: 38,
               decoration: BoxDecoration(
-                color: const Color(0xFFE4F6EF),
+                color: isError
+                    ? const Color(0xFFFDECEC)
+                    : const Color(0xFFE4F6EF),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: const Icon(
-                Icons.check_rounded,
-                color: Color(0xFF23966F),
+              child: Icon(
+                isError ? Icons.error_outline_rounded : Icons.check_rounded,
+                color: isError
+                    ? const Color(0xFFD64545)
+                    : const Color(0xFF23966F),
                 size: 22,
               ),
             ),
-
             const SizedBox(width: 13),
-
-            const Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    'Reset link sent!',
-                    style: TextStyle(
-                      color: AppColors.navy,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  SizedBox(height: 2),
-                  Text(
-                    'Check your email for the reset link.',
-                    style: TextStyle(
-                      color: AppColors.secondaryText,
-                      fontSize: 12,
-                    ),
-                  ),
-                ],
+            Expanded(
+              child: Text(
+                title,
+                style: const TextStyle(
+                  color: AppColors.navy,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700,
+                  height: 1.4,
+                ),
               ),
-            ),
-
-            const SizedBox(width: 5),
-
-            const Icon(
-              Icons.close_rounded,
-              color: AppColors.secondaryText,
-              size: 19,
             ),
           ],
         ),
       ),
     );
   }
-}
 
   @override
   Widget build(BuildContext context) {
@@ -351,7 +374,7 @@ void sendResetLink() {
                             validator: (value) {
                               if (value == null ||
                                   value.trim().isEmpty) {
-                                return 'Please enter your email';
+                                return 'Email address is required.';
                               }
 
                               final email = value.trim();
@@ -362,7 +385,7 @@ void sendResetLink() {
 
                               if (!emailRegex
                                   .hasMatch(email)) {
-                                return 'Please enter a valid email address';
+                                return 'Enter a valid email address.';
                               }
 
                               return null;
@@ -401,14 +424,19 @@ void sendResetLink() {
                               ],
                             ),
                             child: ElevatedButton(
-                              onPressed: sendResetLink,
+                              onPressed:
+                                  _loading ? null : sendResetLink,
                               style:
                                   ElevatedButton.styleFrom(
                                 backgroundColor:
                                     Colors.transparent,
+                                disabledBackgroundColor:
+                                    Colors.transparent,
                                 shadowColor:
                                     Colors.transparent,
                                 foregroundColor:
+                                    AppColors.white,
+                                disabledForegroundColor:
                                     AppColors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius:
@@ -417,7 +445,16 @@ void sendResetLink() {
                                   ),
                                 ),
                               ),
-                              child: const Row(
+                              child: _loading
+                                  ? const SizedBox(
+                                      width: 23,
+                                      height: 23,
+                                      child: CircularProgressIndicator(
+                                        color: AppColors.white,
+                                        strokeWidth: 2.5,
+                                      ),
+                                    )
+                                  : const Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.center,
                                 children: [

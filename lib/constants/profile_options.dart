@@ -92,23 +92,35 @@ class ProfileOptions {
   ];
 
   // key = careerGoalId (saved), value = label (shown).
-  // Same IDs as the careerPaths collection.
+  // Same IDs as the careerPaths collection (the 10 newer goals are not in
+  // careerPaths.json yet). Never change an existing ID: users have them saved.
   static const Map<String, String> careerGoals = {
     'software_engineer': 'Software Engineer',
     'web_developer': 'Web Developer',
     'mobile_developer': 'Mobile Developer',
+    'qa_test_engineer': 'QA / Software Test Engineer',
     'data_analyst': 'Data Analyst',
+    'data_engineer': 'Data Engineer',
     'data_scientist': 'Data Scientist',
     'ai_ml_engineer': 'AI / Machine Learning Engineer',
     'cybersecurity_analyst': 'Cybersecurity Analyst',
+    'cybersecurity_grc_specialist': 'Cybersecurity GRC Specialist',
     'cloud_devops_engineer': 'Cloud / DevOps Engineer',
     'network_engineer': 'Network Engineer',
+    'telecom_engineer': 'Telecom Engineer',
+    'infrastructure_data_center_engineer':
+        'Infrastructure / Data Center Engineer',
     'systems_administrator': 'Systems Administrator',
+    'it_support_specialist': 'IT Support Specialist',
     'database_administrator': 'Database Administrator',
     'ui_ux_designer': 'UI/UX Designer',
     'business_analyst': 'Business Analyst',
+    'product_manager': 'Product Manager',
     'it_project_manager': 'IT Project Manager',
     'it_consultant': 'IT Consultant',
+    'erp_consultant': 'ERP Consultant (SAP / Oracle)',
+    'solutions_architect': 'Solutions Architect',
+    'pre_sales_engineer': 'Pre-Sales Engineer',
   };
 
   static const List<String> communityTopics = [
