@@ -39,6 +39,8 @@ dependencies:
   cloud_firestore: ^6.10.0
   file_picker: ^13.1.0
   syncfusion_flutter_pdf: ^35.1.37
+  http: ^1.6.0
+  csv: ^8.0.0
 
 dev_dependencies:
   flutter_test:
@@ -57,15 +59,13 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
-  
-
   uses-material-design: true
 
   assets:
     - lib/assets/images/
+    - lib/assets/data/careerPaths.json
+    - lib/assets/data/Masra_Taxonomy.csv
+    - lib/assets/data/Masra_Career_Analysis_Jobs_881_Title_Cleaned.csv
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

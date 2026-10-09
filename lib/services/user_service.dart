@@ -5,22 +5,29 @@ class UserService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  // الـ UID حق اليوزر المسجل دخول حالياً
   String get _uid {
     final user = _auth.currentUser;
-    if (user == null) throw Exception('No logged-in user');
+
+    if (user == null) {
+      throw Exception('No logged-in user');
+    }
+
     return user.uid;
   }
 
-  // وثيقة اليوزر: users/{uid}
   DocumentReference<Map<String, dynamic>> get _userDoc =>
       _db.collection('users').doc(_uid);
 
-  // نص الـ CV: users/{uid}/private/cv (صاحبه بس يقراه)
   DocumentReference<Map<String, dynamic>> get _cvDoc =>
       _userDoc.collection('private').doc('cv');
 
-  // 1) تُستدعى مباشرة بعد Sign Up
+  DocumentReference<Map<String, dynamic>> get _latestAnalysisDoc =>
+      _userDoc.collection('analysis').doc('latest');
+
+  // ---------------------------------------------------------
+  // ACCOUNT
+  // ---------------------------------------------------------
+
   Future<void> createUser({
     required String fullName,
     required String email,
@@ -34,7 +41,10 @@ class UserService {
     });
   }
 
-  // 2) تُستدعى من شاشة Profile Setup (بعد saveCv)
+  // ---------------------------------------------------------
+  // PROFILE SETUP
+  // ---------------------------------------------------------
+
   Future<void> saveProfile({
     required String university,
     required String degree,
@@ -57,55 +67,193 @@ class UserService {
     });
   }
 
-  // 3) قراءة بيانات اليوزر (لصفحة البروفايل وغيرها)
+  // ---------------------------------------------------------
+  // USER DATA
+  // ---------------------------------------------------------
+
   Future<Map<String, dynamic>?> getUser() async {
     final snapshot = await _userDoc.get();
     return snapshot.data();
   }
 
-  // 4) تحديث حقول معينة (لصفحة Edit Profile)
-  Future<void> updateUser(Map<String, dynamic> data) async {
+  Future<void> updateUser(
+    Map<String, dynamic> data,
+  ) async {
     await _userDoc.update({
       ...data,
       'updatedAt': FieldValue.serverTimestamp(),
     });
   }
 
-  // 5) حفظ أو استبدال الـ CV المحفوظ (Profile Setup و Replace CV)
-  // [text] يجي من CvService.extractText
-  // العمليتين مع بعض: إذا فشلت وحدة ما يتغير شي ويبقى الـ CV القديم
+  // ---------------------------------------------------------
+  // CV
+  // ---------------------------------------------------------
+
   Future<void> saveCv({
     required String fileName,
     required String text,
   }) async {
     final batch = _db.batch();
 
-    batch.update(_userDoc, {
-      'cv': {
-        'fileName': fileName,
-        'uploadedAt': FieldValue.serverTimestamp(),
+    batch.update(
+      _userDoc,
+      {
+        'cv': {
+          'fileName': fileName,
+          'uploadedAt': FieldValue.serverTimestamp(),
+        },
+        'updatedAt': FieldValue.serverTimestamp(),
       },
-      'updatedAt': FieldValue.serverTimestamp(),
-    });
+    );
 
-    batch.set(_cvDoc, {
-      'text': text,
-      'updatedAt': FieldValue.serverTimestamp(),
-    });
+    batch.set(
+      _cvDoc,
+      {
+        'text': text,
+        'updatedAt': FieldValue.serverTimestamp(),
+      },
+    );
 
     await batch.commit();
   }
 
-  // 6) نص الـ CV المحفوظ (للتحليل و CV Improvement)
   Future<String?> getCvText() async {
     final snapshot = await _cvDoc.get();
+
     return snapshot.data()?['text'] as String?;
   }
 
-  // 7) آخر نتيجة AI Career Analysis (null إذا ما سوى تحليل للحين)
+  // ---------------------------------------------------------
+  // CAREER ANALYSIS
+  // ---------------------------------------------------------
+
   Future<Map<String, dynamic>?> getLatestAnalysis() async {
-    final snapshot =
-        await _userDoc.collection('analysis').doc('latest').get();
+    final snapshot = await _latestAnalysisDoc.get();
+
     return snapshot.data();
+  }
+
+  Future<void> saveLatestAnalysis(
+    Map<String, dynamic> analysis,
+  ) async {
+    final userSnapshot = await _userDoc.get();
+    final userData = userSnapshot.data();
+
+    final cvData = userData?['cv'];
+
+    Timestamp? cvUploadedAt;
+
+    if (cvData is Map &&
+        cvData['uploadedAt'] is Timestamp) {
+      cvUploadedAt =
+          cvData['uploadedAt'] as Timestamp;
+    }
+
+    await _latestAnalysisDoc.set({
+      ...analysis,
+
+      // نربط هذا التحليل بالـCV الحالي
+      'cvUploadedAt': cvUploadedAt,
+
+      // وقت تنفيذ التحليل
+      'analyzedAt':
+          FieldValue.serverTimestamp(),
+
+      'updatedAt':
+          FieldValue.serverTimestamp(),
+    });
+  }
+
+  // ---------------------------------------------------------
+  // CHECK IF SAVED ANALYSIS BELONGS TO CURRENT CV
+  // ---------------------------------------------------------
+
+  Future<bool> hasValidLatestAnalysis() async {
+    final userSnapshot =
+        await _userDoc.get();
+
+    final analysisSnapshot =
+        await _latestAnalysisDoc.get();
+
+    final userData = userSnapshot.data();
+    final analysisData =
+        analysisSnapshot.data();
+
+    if (userData == null ||
+        analysisData == null) {
+      return false;
+    }
+
+    final cvData = userData['cv'];
+
+    if (cvData is! Map) {
+      return false;
+    }
+
+    final currentCvUploadedAt =
+        cvData['uploadedAt'];
+
+    final analyzedCvUploadedAt =
+        analysisData['cvUploadedAt'];
+
+    if (currentCvUploadedAt is! Timestamp ||
+        analyzedCvUploadedAt
+            is! Timestamp) {
+      return false;
+    }
+
+    return currentCvUploadedAt ==
+        analyzedCvUploadedAt;
+  }
+
+  // ---------------------------------------------------------
+  // GET ANALYSIS ONLY IF IT BELONGS TO CURRENT CV
+  // ---------------------------------------------------------
+
+  Future<Map<String, dynamic>?>
+      getValidLatestAnalysis() async {
+    final isValid =
+        await hasValidLatestAnalysis();
+
+    if (!isValid) {
+      return null;
+    }
+
+    return getLatestAnalysis();
+  }
+
+  // ---------------------------------------------------------
+  // PROFILE DATA FROM LATEST ANALYSIS
+  // ---------------------------------------------------------
+
+  Future<Map<String, dynamic>?>
+      getProfileAnalysisData() async {
+    final analysis =
+        await getLatestAnalysis();
+
+    if (analysis == null) {
+      return null;
+    }
+
+    return {
+      'currentSkills':
+          analysis['currentSkills'] ?? [],
+      'education':
+          analysis['education'] ?? [],
+      'certifications':
+          analysis['certifications'] ?? [],
+      'projects':
+          analysis['projects'] ?? [],
+      'experience':
+          analysis['experience'] ?? [],
+      'strengths':
+          analysis['strengths'] ?? [],
+      'skillGaps':
+          analysis['skillGaps'] ?? [],
+      'careerGoalId':
+          analysis['careerGoalId'],
+      'careerGoalName':
+          analysis['careerGoalName'],
+    };
   }
 }
