@@ -78,6 +78,16 @@ class _LoginScreenState extends State<LoginScreen>
       final data = await UserService().getUser();
       final completed = data?['profileCompleted'] == true;
 
+      // 3) بعد تغيير الإيميل: نحدّث الإيميل في Firestore عشان يطابق Auth
+      final authEmail = cred.user!.email;
+      if (data != null && authEmail != null && data['email'] != authEmail) {
+        try {
+          await UserService().updateUser({'email': authEmail});
+        } catch (e) {
+          debugPrint('EMAIL SYNC ERROR: $e');
+        }
+      }
+
       _showMessage('Logged in successfully!');
 
       await Future.delayed(const Duration(milliseconds: 700));

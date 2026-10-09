@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:file_picker/file_picker.dart';
@@ -23,6 +25,8 @@ import '../theme/app_colors.dart';
 import 'explore_screen.dart';
 
 import 'home_screen.dart';
+
+import 'login_screen.dart';
 
 import 'onboarding_screen.dart';
 
@@ -63,7 +67,8 @@ class ProfileScreen extends StatefulWidget {
 
 
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ProfileScreenState extends State<ProfileScreen>
+    with WidgetsBindingObserver {
 
   static const Color _logoutRed = Color(0xFFD64545);
 
@@ -101,8 +106,89 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     super.initState();
 
-    _loadProfile();
+    WidgetsBinding.instance.addObserver(this);
 
+    // Load first, then compare the Auth email with the loaded one
+    _loadProfile().then((_) => _syncAuthEmail());
+
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  // Back to the app while on Profile (e.g. after confirming the new
+  // email from the inbox)
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) _syncAuthEmail();
+  }
+
+  // ============================================================
+  // EMAIL SYNC (Auth -> Firestore)
+  // After an email change is confirmed, Auth has the new email.
+  // reload() gets it; if the session was revoked, log in again.
+  // ============================================================
+
+  bool _isSyncingEmail = false;
+
+  Future<void> _syncAuthEmail() async {
+    if (_isSyncingEmail) return;
+    _isSyncingEmail = true;
+
+    try {
+      await FirebaseAuth.instance.currentUser?.reload();
+
+      final authEmail = FirebaseAuth.instance.currentUser?.email;
+      final savedEmail = _user['email'];
+
+      // Skip if the profile didn't load (nothing to compare)
+      if (!mounted || authEmail == null || savedEmail == null) return;
+      if (authEmail == savedEmail) return;
+
+      await _userService.updateUser({'email': authEmail});
+
+      if (!mounted) return;
+      setState(() => _user = {..._user, 'email': authEmail});
+    } on FirebaseAuthException catch (e) {
+      debugPrint('EMAIL SYNC ERROR: ${e.code}');
+
+      // Session no longer valid (e.g. the email was changed)
+      const sessionEnded = {
+        'user-token-expired',
+        'invalid-user-token',
+        'user-not-found',
+        'user-disabled',
+      };
+
+      if (sessionEnded.contains(e.code)) await _logInAgain();
+    } catch (e) {
+      // e.g. no internet: keep showing the page as it is
+      debugPrint('EMAIL SYNC ERROR: $e');
+    } finally {
+      _isSyncingEmail = false;
+    }
+  }
+
+  Future<void> _logInAgain() async {
+    try {
+      await FirebaseAuth.instance.signOut();
+    } catch (_) {}
+
+    if (!mounted) return;
+
+    _showFieldMessage(
+      'Your email was changed. Please log in again.',
+      isError: true,
+    );
+
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (_) => const LoginScreen()),
+      (route) => false,
+    );
   }
 
 
@@ -678,9 +764,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               children: [
 
-                // TOP BAR
+                // TOP BAR (same height as before, so the avatar row
+                // below keeps its position)
 
-                Row(
+                SizedBox(
+
+                  height: 42,
+
+                  child: Row(
 
                   children: [
 
@@ -702,65 +793,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                     ),
 
-                    const Spacer(),
-
-                    Container(
-
-                      width: 62,
-
-                      height: 42,
-
-                      padding: const EdgeInsets.symmetric(horizontal: 7),
-
-                      decoration: BoxDecoration(
-
-                        color: AppColors.white.withValues(alpha: 0.10),
-
-                        borderRadius: BorderRadius.circular(14),
-
-                        border: Border.all(
-
-                          color: AppColors.white.withValues(alpha: 0.12),
-
-                        ),
-
-                      ),
-
-                      child: Image.asset(
-
-                        'lib/assets/images/Logoo.png',
-
-                        fit: BoxFit.contain,
-
-                        errorBuilder: (context, error, stackTrace) {
-
-                          return const Center(
-
-                            child: Text(
-
-                              'Masra',
-
-                              style: TextStyle(
-
-                                color: AppColors.white,
-
-                                fontSize: 12,
-
-                                fontWeight: FontWeight.w800,
-
-                              ),
-
-                            ),
-
-                          );
-
-                        },
-
-                      ),
-
-                    ),
-
                   ],
+
+                  ),
 
                 ),
 
@@ -1013,8 +1048,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
           _infoRow(Icons.badge_outlined, 'Full Name', _fullName,
               onEdit: _editFullName),
 
-          // Read-only: changing the email needs Firebase Auth re-verification
-          _infoRow(Icons.email_outlined, 'Email Address', _text('email')),
+          // Changing the email needs the password + a verification link
+          _infoRow(Icons.email_outlined, 'Email Address', _text('email'),
+              onEdit: _editEmail),
 
         ],
 
@@ -2677,17 +2713,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   // Bottom sheet with one field + Cancel / Save.
   // On success the page shows the new value; on error the old value stays.
+  // buildUpdate = fields saved with updateUser (Firestore).
+  // customSave = any other save (Email). It returns the SnackBar to show
+  // after closing the sheet, or null to keep the sheet open (field error).
   Future<void> _showEditSheet({
     required String label,
     required Widget Function(BuildContext sheetContext, StateSetter setSheetState)
         buildField,
-    required Map<String, dynamic> Function() buildUpdate,
+    Map<String, dynamic> Function()? buildUpdate,
+    Future<_EditResult?> Function(StateSetter setSheetState)? customSave,
   }) async {
     final formKey = GlobalKey<FormState>();
     var isSaving = false;
     Map<String, dynamic>? savedUpdate;
+    var savedOffline = false;
 
-    final saved = await showModalBottomSheet<bool>(
+    final result = await showModalBottomSheet<_EditResult>(
       context: context,
       isScrollControlled: true,
       backgroundColor: AppColors.background,
@@ -2698,18 +2739,60 @@ class _ProfileScreenState extends State<ProfileScreen> {
         return StatefulBuilder(
           builder: (sheetContext, setSheetState) {
             Future<void> save() async {
+              FocusScope.of(sheetContext).unfocus();
               if (!formKey.currentState!.validate()) return;
 
-              final update = buildUpdate();
               setSheetState(() => isSaving = true);
 
+              if (customSave != null) {
+                final custom = await customSave(setSheetState);
+                if (!sheetContext.mounted) return;
+
+                if (custom == null) {
+                  setSheetState(() => isSaving = false);
+                } else {
+                  Navigator.pop(sheetContext, custom);
+                }
+                return;
+              }
+
+              final update = buildUpdate!();
+
               try {
-                await _userService.updateUser(update);
+                // Offline, update() waits for the server forever
+                await _userService
+                    .updateUser(update)
+                    .timeout(const Duration(seconds: 10));
                 savedUpdate = update;
-                if (sheetContext.mounted) Navigator.pop(sheetContext, true);
+                if (sheetContext.mounted) {
+                  Navigator.pop(sheetContext, (
+                    message: '$label updated successfully.',
+                    isError: false,
+                    duration: null,
+                  ));
+                }
+              } on TimeoutException {
+                // Firestore keeps the write queued and saves it when online,
+                // so the page shows the new value right away
+                savedOffline = true;
+                savedUpdate = update;
+                if (sheetContext.mounted) {
+                  Navigator.pop(sheetContext, (
+                    message: "You're offline. Your change will be saved "
+                        "when you're back online.",
+                    isError: false,
+                    duration: const Duration(seconds: 4),
+                  ));
+                }
               } catch (e) {
                 debugPrint('PROFILE FIELD UPDATE ERROR: $e');
-                if (sheetContext.mounted) Navigator.pop(sheetContext, false);
+                if (sheetContext.mounted) {
+                  Navigator.pop(sheetContext, (
+                    message: 'Could not save your changes. Please try again.',
+                    isError: true,
+                    duration: null,
+                  ));
+                }
               }
             }
 
@@ -2841,18 +2924,179 @@ class _ProfileScreenState extends State<ProfileScreen> {
       },
     );
 
-    if (!mounted || saved == null) return;
+    if (!mounted || result == null) return;
 
-    if (saved) {
-      setState(() => _user = {..._user, ...savedUpdate!});
-      _showFieldMessage('$label updated successfully.');
+    final update = savedUpdate;
+    if (update != null) {
+      setState(() => _user = {..._user, ...update});
       _loadProfile(silent: true);
-    } else {
-      _showFieldMessage(
-        'Could not save your changes. Please try again.',
-        isError: true,
-      );
     }
+
+    _showFieldMessage(
+      result.message,
+      isError: result.isError,
+      isInfo: savedOffline,
+      duration: result.duration,
+    );
+  }
+
+  // Email: re-authenticate with the current password, then Firebase sends
+  // a verification link to the new email. The email changes in Auth only
+  // after the link is opened; Firestore is synced on the next log in.
+  Future<void> _editEmail() async {
+    final currentEmail = FirebaseAuth.instance.currentUser?.email ??
+        _user['email']?.toString() ??
+        '';
+
+    var newEmail = '';
+    var password = '';
+    var hidePassword = true;
+
+    // Errors from Firebase shown under the field (sheet stays open)
+    String? emailError;
+    String? passwordError;
+
+    const loginAgainMessage =
+        'For your security, please log in again and then change your email.';
+
+    await _showEditSheet(
+      label: 'Email Address',
+      buildField: (_, setSheetState) => Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          TextFormField(
+            autofocus: true,
+            keyboardType: TextInputType.emailAddress,
+            autocorrect: false,
+            forceErrorText: emailError,
+            onChanged: (value) {
+              newEmail = value;
+              if (emailError != null) setSheetState(() => emailError = null);
+            },
+            // Same rules as Sign Up + must be a different email
+            validator: (value) {
+              if (value == null || value.trim().isEmpty) {
+                return 'Email address is required.';
+              }
+
+              final email = value.trim();
+
+              final emailRegex = RegExp(
+                r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$',
+              );
+
+              if (!emailRegex.hasMatch(email)) {
+                return 'Enter a valid email address.';
+              }
+
+              if (email.toLowerCase() == currentEmail.toLowerCase()) {
+                return 'This is already your email address.';
+              }
+
+              return null;
+            },
+            style: const TextStyle(color: AppColors.navy, fontSize: 14),
+            decoration: _inputDecoration(
+              hint: 'Enter your new email address',
+              icon: Icons.email_outlined,
+            ),
+          ),
+          const SizedBox(height: 14),
+          TextFormField(
+            obscureText: hidePassword,
+            forceErrorText: passwordError,
+            onChanged: (value) {
+              password = value;
+              if (passwordError != null) {
+                setSheetState(() => passwordError = null);
+              }
+            },
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Password is required.';
+              }
+              return null;
+            },
+            style: const TextStyle(color: AppColors.navy, fontSize: 14),
+            decoration: _inputDecoration(
+              hint: 'Enter your current password',
+              icon: Icons.lock_outline_rounded,
+              suffixIcon: IconButton(
+                onPressed: () =>
+                    setSheetState(() => hidePassword = !hidePassword),
+                icon: Icon(
+                  hidePassword
+                      ? Icons.visibility_off_outlined
+                      : Icons.visibility_outlined,
+                  color: AppColors.secondaryText,
+                  size: 21,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+      customSave: (setSheetState) async {
+        final user = FirebaseAuth.instance.currentUser;
+        final email = user?.email;
+
+        if (user == null || email == null) {
+          return (message: loginAgainMessage, isError: true, duration: null);
+        }
+
+        try {
+          await user.reauthenticateWithCredential(
+            EmailAuthProvider.credential(email: email, password: password),
+          );
+
+          await user.verifyBeforeUpdateEmail(newEmail.trim());
+
+          return (
+            message: 'If this email address is available, a verification '
+                'link has been sent to it. Your email will change after '
+                'you confirm it.',
+            isError: false,
+            duration: const Duration(seconds: 6),
+          );
+        } on FirebaseAuthException catch (e) {
+          debugPrint('CHANGE EMAIL ERROR: ${e.code}');
+
+          if (e.code == 'wrong-password' || e.code == 'invalid-credential') {
+            setSheetState(() => passwordError = 'Incorrect password.');
+            return null;
+          }
+
+          if (e.code == 'email-already-in-use') {
+            setSheetState(
+              () => emailError = 'An account with this email already exists.',
+            );
+            return null;
+          }
+
+          if (e.code == 'invalid-email') {
+            setSheetState(() => emailError = 'Enter a valid email address.');
+            return null;
+          }
+
+          final message = switch (e.code) {
+            'requires-recent-login' => loginAgainMessage,
+            'network-request-failed' =>
+              'No internet connection. Please try again.',
+            'too-many-requests' =>
+              'Too many attempts. Please try again later.',
+            _ => 'Something went wrong. Please try again.',
+          };
+          return (message: message, isError: true, duration: null);
+        } catch (e) {
+          debugPrint('CHANGE EMAIL ERROR: $e');
+          return (
+            message: 'Something went wrong. Please try again.',
+            isError: true,
+            duration: null,
+          );
+        }
+      },
+    );
   }
 
   Future<void> _editFullName() async {
@@ -3200,10 +3444,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   // Same style as _showMessage in login_screen.dart
-  void _showFieldMessage(String title, {bool isError = false}) {
+  // isInfo = neutral notice (teal), e.g. a change saved while offline
+  void _showFieldMessage(
+    String title, {
+    bool isError = false,
+    bool isInfo = false,
+    Duration? duration,
+  }) {
     if (!mounted) return;
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(
+
+    // Kept so the SnackBar (and its close button) still works if this
+    // page is replaced, e.g. by Log In
+    final messenger = ScaffoldMessenger.of(context);
+
+    messenger.hideCurrentSnackBar();
+    messenger.showSnackBar(
       SnackBar(
         behavior: SnackBarBehavior.floating,
         backgroundColor: AppColors.softBackground,
@@ -3211,7 +3466,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         margin: const EdgeInsets.fromLTRB(20, 0, 20, 22),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-        duration: Duration(seconds: isError ? 3 : 1),
+        duration: duration ?? Duration(seconds: isError ? 3 : 1),
         content: Row(
           children: [
             Container(
@@ -3220,14 +3475,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
               decoration: BoxDecoration(
                 color: isError
                     ? const Color(0xFFFDECEC)
-                    : const Color(0xFFE4F6EF),
+                    : isInfo
+                        ? AppColors.teal.withValues(alpha: 0.12)
+                        : const Color(0xFFE4F6EF),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(
-                isError ? Icons.error_outline_rounded : Icons.check_rounded,
+                isError
+                    ? Icons.error_outline_rounded
+                    : isInfo
+                        ? Icons.cloud_off_rounded
+                        : Icons.check_rounded,
                 color: isError
                     ? const Color(0xFFD64545)
-                    : const Color(0xFF23966F),
+                    : isInfo
+                        ? AppColors.teal
+                        : const Color(0xFF23966F),
                 size: 22,
               ),
             ),
@@ -3244,8 +3507,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(width: 5),
             IconButton(
-              onPressed: () =>
-                  ScaffoldMessenger.of(context).hideCurrentSnackBar(),
+              onPressed: () => messenger.hideCurrentSnackBar(),
               icon: const Icon(
                 Icons.close_rounded,
                 color: AppColors.secondaryText,
@@ -3515,3 +3777,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
 }
+
+// What an edit sheet shows after closing (SnackBar text, style, how long)
+typedef _EditResult = ({String message, bool isError, Duration? duration});

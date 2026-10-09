@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:masra/screens/email_action_screen.dart';
 import 'package:masra/screens/reset_password_screen.dart';
 import 'package:masra/screens/splash_screen.dart';
 import 'package:masra/theme/app_theme.dart';
@@ -42,8 +43,10 @@ class MyApp extends StatelessWidget {
       // App opened from a link (cold start): if it's a reset password link,
       // open ResetPasswordScreen on top of Splash. Splash still decides the
       // start screen underneath without replacing the reset screen.
+      // Same for an email change link (EmailActionScreen).
       onGenerateInitialRoutes: (initialRoute) {
         final code = resetCodeFromLink(initialRoute);
+        final emailAction = emailActionFromLink(initialRoute);
 
         return [
           MaterialPageRoute(
@@ -53,6 +56,13 @@ class MyApp extends StatelessWidget {
           if (code != null)
             MaterialPageRoute(
               builder: (context) => ResetPasswordScreen(oobCode: code),
+            )
+          else if (emailAction != null)
+            MaterialPageRoute(
+              builder: (context) => EmailActionScreen(
+                mode: emailAction.mode,
+                oobCode: emailAction.oobCode,
+              ),
             ),
         ];
       },
