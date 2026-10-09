@@ -302,15 +302,24 @@ class JobMarketService {
         ];
 
       case 'cybersecurity_analyst':
-        return [
-          'cybersecurity analyst',
-          'cyber security analyst',
-          'security analyst',
-          'soc analyst',
-          'information security analyst',
-          'cyber analyst',
-          'security operations analyst',
-        ];
+  return [
+    'cybersecurity analyst',
+    'cyber security analyst',
+    'security analyst',
+    'soc analyst',
+    'information security analyst',
+    'cyber analyst',
+    'security operations analyst',
+    'security engineer',
+    'cybersecurity engineer',
+    'cyber security engineer',
+    'penetration testing',
+    'penetration tester',
+    'vapt',
+    'iam',
+    'identity and access management',
+    'security operations engineer',
+  ];
 
       case 'cloud_devops_engineer':
         return [
