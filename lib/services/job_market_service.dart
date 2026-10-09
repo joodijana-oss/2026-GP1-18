@@ -58,6 +58,11 @@ class JobMarketService {
       );
     }
 
+    // Newer goals use short keywords (qa, rf, sap, erp, etl), so they
+    // must match whole words only (e.g. "rf" must not match inside a word)
+    final wholeWordsOnly =
+        _wholeWordGoals.contains(careerGoalId);
+
     final relevantJobs =
         <Map<String, String>>[];
 
@@ -94,6 +99,12 @@ class JobMarketService {
         (alias) {
           final normalizedAlias =
               _normalize(alias);
+
+          if (wholeWordsOnly) {
+            return ' $normalizedTitle '.contains(
+              ' $normalizedAlias ',
+            );
+          }
 
           return normalizedTitle.contains(
             normalizedAlias,
@@ -378,10 +389,130 @@ class JobMarketService {
           'information technology consultant',
         ];
 
+      // Newer goals (matched as whole words, see _wholeWordGoals)
+
+      case 'qa_test_engineer':
+        return [
+          'qa',
+          'quality assurance',
+          'tester',
+          'test engineer',
+          'test automation',
+          'software testing',
+          'performance testing',
+          'sdet',
+          'quality engineer',
+        ];
+
+      case 'data_engineer':
+        return [
+          'data engineer',
+          'etl',
+          'big data',
+          'data platform',
+          'data pipeline',
+          'data warehouse',
+          'databricks',
+          'spark',
+          'data integration',
+          'informatica',
+        ];
+
+      case 'cybersecurity_grc_specialist':
+        return [
+          'grc',
+          'governance',
+          'compliance',
+          'information security risk',
+          'cybersecurity risk',
+          'cyber security risk',
+          'risk management',
+        ];
+
+      case 'telecom_engineer':
+        return [
+          'telecom',
+          'telecommunication',
+          'rf',
+          '5g',
+          'lte',
+          'transmission',
+        ];
+
+      case 'infrastructure_data_center_engineer':
+        return [
+          'infrastructure',
+          'data center',
+          'datacenter',
+          'server engineer',
+          'vmware',
+          'virtualization',
+        ];
+
+      case 'it_support_specialist':
+        return [
+          'it support',
+          'help desk',
+          'helpdesk',
+          'service desk',
+          'desktop support',
+          'technical support',
+          'it technician',
+        ];
+
+      case 'product_manager':
+        return [
+          'product manager',
+          'product owner',
+          'product management',
+        ];
+
+      case 'erp_consultant':
+        return [
+          'erp',
+          'sap',
+          'oracle',
+          'dynamics 365',
+          'd365',
+        ];
+
+      case 'solutions_architect':
+        return [
+          'solution architect',
+          'solutions architect',
+          'enterprise architect',
+          'technical architect',
+          'cloud architect',
+          'architect',
+        ];
+
+      case 'pre_sales_engineer':
+        return [
+          'pre-sales',
+          'presales',
+          'pre sales',
+          'sales engineer',
+          'solution consultant',
+          'solutions consultant',
+        ];
+
       default:
         return [];
     }
   }
+
+  static const Set<String> _wholeWordGoals = {
+    'qa_test_engineer',
+    'data_engineer',
+    'cybersecurity_grc_specialist',
+    'telecom_engineer',
+    'infrastructure_data_center_engineer',
+    'it_support_specialist',
+    'product_manager',
+    'erp_consultant',
+    'solutions_architect',
+    'pre_sales_engineer',
+  };
 
   // =========================================================
   // NORMALIZE TEXT

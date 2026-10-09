@@ -92,8 +92,8 @@ class ProfileOptions {
   ];
 
   // key = careerGoalId (saved), value = label (shown).
-  // Same IDs as the careerPaths collection (the 10 newer goals are not in
-  // careerPaths.json yet). Never change an existing ID: users have them saved.
+  // Same IDs and labels as careerPaths.json (all 25 goals).
+  // Never change an existing ID: users have them saved.
   static const Map<String, String> careerGoals = {
     'software_engineer': 'Software Engineer',
     'web_developer': 'Web Developer',
