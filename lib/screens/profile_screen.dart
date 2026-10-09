@@ -4,6 +4,8 @@ import 'package:file_picker/file_picker.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 
+import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 
@@ -24,7 +26,6 @@ import 'home_screen.dart';
 
 import 'onboarding_screen.dart';
 
-import 'profile_setup_screen.dart';
 
 
 
@@ -38,7 +39,9 @@ import 'profile_setup_screen.dart';
 
 // Skills, Certifications, Projects, Experience (from the latest
 
-// AI Career Analysis), CV (with Replace CV), Edit Profile, and Log Out.
+// AI Career Analysis), CV (with Replace CV), and Log Out.
+
+// Each editable field has a pencil icon to edit that one field.
 
 // Data is loaded from Firestore every time the page opens.
 
@@ -112,15 +115,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
 
 
-  Future<void> _loadProfile() async {
+  // silent = reload in place (after editing a field) without the
+  // full-page loader, so the page keeps its scroll position.
+  Future<void> _loadProfile({bool silent = false}) async {
 
-    setState(() {
-
-      _isLoading = true;
-
-      _hasError = false;
-
-    });
+    if (!silent) {
+      setState(() {
+        _isLoading = true;
+        _hasError = false;
+      });
+    }
 
 
 
@@ -153,6 +157,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
 
       if (!mounted) return;
+
+      // Keep showing the current data if a silent reload fails
+      if (silent) return;
 
 
 
@@ -482,24 +489,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           children: [
 
             _buildProfileHero(),
-
-            const SizedBox(height: 22),
-
-            _padded(
-
-              _profileAction(
-
-                icon: Icons.edit_note_rounded,
-
-                title: 'Edit Profile',
-
-                accent: AppColors.teal,
-
-                onTap: _openEditProfile,
-
-              ),
-
-            ),
 
             const SizedBox(height: 28),
 
@@ -1021,8 +1010,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
           const SizedBox(height: 18),
 
-          _infoRow(Icons.badge_outlined, 'Full Name', _fullName),
+          _infoRow(Icons.badge_outlined, 'Full Name', _fullName,
+              onEdit: _editFullName),
 
+          // Read-only: changing the email needs Firebase Auth re-verification
           _infoRow(Icons.email_outlined, 'Email Address', _text('email')),
 
         ],
@@ -1069,21 +1060,46 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
           _infoRow(Icons.account_balance_outlined, 'University',
 
-              _text('university')),
+              _text('university'),
+              onEdit: () => _editDropdownField(
+                    fieldKey: 'university',
+                    label: 'University',
+                    hint: 'Select your university',
+                    icon: Icons.account_balance_outlined,
+                    options: {
+                      for (final u in ProfileOptions.universities) u: u,
+                    },
+                  )),
 
           _infoRow(Icons.workspace_premium_outlined, 'Degree',
 
-              _text('degree')),
+              _text('degree'),
+              onEdit: () => _editDropdownField(
+                    fieldKey: 'degree',
+                    label: 'Degree',
+                    hint: 'Select your degree',
+                    icon: Icons.school_outlined,
+                    options: {for (final d in ProfileOptions.degrees) d: d},
+                  )),
 
-          _infoRow(Icons.menu_book_outlined, 'Major', _text('major')),
+          _infoRow(Icons.menu_book_outlined, 'Major', _text('major'),
+              onEdit: () => _editDropdownField(
+                    fieldKey: 'major',
+                    label: 'Major',
+                    hint: 'Select your major',
+                    icon: Icons.menu_book_outlined,
+                    options: {for (final m in ProfileOptions.majors) m: m},
+                  )),
 
           _infoRow(Icons.flag_outlined, 'Graduation Status',
 
-              _text('graduationStatus')),
+              _text('graduationStatus'),
+              onEdit: _editGraduationStatus),
 
-          _infoRow(Icons.calendar_today_outlined, 'Graduation Year',
+          _infoRow(Icons.calendar_today_outlined, 'Graduation Date',
 
-              _text('graduationYear')),
+              _graduationDateLabel,
+              onEdit: _editGraduationDate),
 
         ],
 
@@ -1129,11 +1145,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
           _infoRow(Icons.auto_awesome_rounded, 'Career Goal',
 
-              _careerGoalLabel),
+              _careerGoalLabel,
+              onEdit: () => _editDropdownField(
+                    fieldKey: 'careerGoalId',
+                    label: 'Career Goal',
+                    hint: 'Select your career goal',
+                    icon: Icons.flag_outlined,
+                    options: ProfileOptions.careerGoals,
+                  )),
 
           _infoRow(Icons.trending_up_rounded, 'Current Experience Level',
 
-              _text('experienceLevel')),
+              _text('experienceLevel'),
+              onEdit: () => _editDropdownField(
+                    fieldKey: 'experienceLevel',
+                    label: 'Current Experience Level',
+                    hint: 'Select your experience level',
+                    icon: Icons.trending_up_rounded,
+                    options: {
+                      for (final l in ProfileOptions.experienceLevels) l: l,
+                    },
+                  )),
 
         ],
 
@@ -1145,7 +1177,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
 
 
-  Widget _infoRow(IconData icon, String label, String value) {
+  // onEdit != null -> shows a pencil to edit only this field
+  Widget _infoRow(IconData icon, String label, String value,
+      {VoidCallback? onEdit}) {
 
     return Padding(
 
@@ -1238,6 +1272,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
 
             ),
+
+            if (onEdit != null)
+              IconButton(
+                onPressed: onEdit,
+                tooltip: 'Edit $label',
+                visualDensity: VisualDensity.compact,
+                icon: const Icon(
+                  Icons.edit_outlined,
+                  color: AppColors.teal,
+                  size: 18,
+                ),
+              ),
 
           ],
 
@@ -2561,24 +2607,655 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
 
 
-  // After editing, reload so the page shows the latest saved data
+  // ============================================================
+  // EDIT ONE FIELD (pencil next to each field)
+  // Same inputs, options and validation as Profile Setup.
+  // Only the edited field (+ updatedAt from updateUser) is written.
+  // ============================================================
 
-  Future<void> _openEditProfile() async {
+  static const List<String> _monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
 
-    await Navigator.push(
+  // e.g. "June 2027" (older profiles may only have graduationYear)
+  String get _graduationDateLabel {
+    final year = _user['graduationYear'];
+    if (year == null) return '-';
 
-      context,
+    final month = _user['graduationMonth'];
+    if (month is int && month >= 1 && month <= 12) {
+      return '${_monthNames[month - 1]} $year';
+    }
+    return year.toString();
+  }
 
-      MaterialPageRoute(builder: (_) => const ProfileSetupScreen()),
+  DateTime? get _savedGraduationDate {
+    final year = _user['graduationYear'];
+    if (year is! int) return null;
 
+    final month = _user['graduationMonth'];
+    return DateTime(year, month is int && month >= 1 && month <= 12 ? month : 1);
+  }
+
+  DateTime get _currentMonth {
+    final now = DateTime.now();
+    return DateTime(now.year, now.month);
+  }
+
+  // Same ranges as Profile Setup (null if no status yet)
+  // Student: current month -> 6 years ahead
+  // Graduate / Fresh Graduate: January 2000 -> current month
+  DateTimeRange? _graduationDateRange(String? status) {
+    if (status == null) return null;
+
+    final current = _currentMonth;
+
+    if (status == 'Student') {
+      return DateTimeRange(
+        start: current,
+        end: DateTime(current.year + 6, current.month),
+      );
+    }
+
+    return DateTimeRange(start: DateTime(2000, 1), end: current);
+  }
+
+  bool _isDateInRange(DateTime date, DateTimeRange range) {
+    return !date.isBefore(range.start) && !date.isAfter(range.end);
+  }
+
+  // Bottom sheet with one field + Cancel / Save.
+  // On success the page shows the new value; on error the old value stays.
+  Future<void> _showEditSheet({
+    required String label,
+    required Widget Function(BuildContext sheetContext, StateSetter setSheetState)
+        buildField,
+    required Map<String, dynamic> Function() buildUpdate,
+  }) async {
+    final formKey = GlobalKey<FormState>();
+    var isSaving = false;
+    Map<String, dynamic>? savedUpdate;
+
+    final saved = await showModalBottomSheet<bool>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: AppColors.background,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+      ),
+      builder: (sheetContext) {
+        return StatefulBuilder(
+          builder: (sheetContext, setSheetState) {
+            Future<void> save() async {
+              if (!formKey.currentState!.validate()) return;
+
+              final update = buildUpdate();
+              setSheetState(() => isSaving = true);
+
+              try {
+                await _userService.updateUser(update);
+                savedUpdate = update;
+                if (sheetContext.mounted) Navigator.pop(sheetContext, true);
+              } catch (e) {
+                debugPrint('PROFILE FIELD UPDATE ERROR: $e');
+                if (sheetContext.mounted) Navigator.pop(sheetContext, false);
+              }
+            }
+
+            return PopScope(
+              // Don't close the sheet while saving
+              canPop: !isSaving,
+              child: Padding(
+                padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(sheetContext).viewInsets.bottom,
+                ),
+                child: SafeArea(
+                  top: false,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(22, 22, 22, 16),
+                    child: Form(
+                      key: formKey,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Edit $label',
+                            style: const TextStyle(
+                              color: AppColors.navy,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          const SizedBox(height: 18),
+                          buildField(sheetContext, setSheetState),
+                          const SizedBox(height: 22),
+                          // Same styles as the Sign Up (secondary) and
+                          // Log In (primary) buttons in login_screen.dart
+                          Row(
+                            children: [
+                              Expanded(
+                                child: SizedBox(
+                                  height: 52,
+                                  child: OutlinedButton(
+                                    onPressed: isSaving
+                                        ? null
+                                        : () => Navigator.pop(sheetContext),
+                                    style: OutlinedButton.styleFrom(
+                                      foregroundColor: AppColors.navy,
+                                      side: BorderSide(
+                                        color: AppColors.navy.withValues(
+                                          alpha: 0.20,
+                                        ),
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(18),
+                                      ),
+                                    ),
+                                    child: const Text(
+                                      'Cancel',
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Container(
+                                  height: 52,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    gradient: const LinearGradient(
+                                      colors: [
+                                        AppColors.navy,
+                                        AppColors.secondaryNavy,
+                                        AppColors.teal,
+                                      ],
+                                    ),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: AppColors.teal.withValues(
+                                          alpha: 0.24,
+                                        ),
+                                        blurRadius: 18,
+                                        offset: const Offset(0, 8),
+                                      ),
+                                    ],
+                                  ),
+                                  child: ElevatedButton(
+                                    onPressed: isSaving ? null : save,
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.transparent,
+                                      disabledBackgroundColor:
+                                          Colors.transparent,
+                                      shadowColor: Colors.transparent,
+                                      foregroundColor: AppColors.white,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                    ),
+                                    child: isSaving
+                                        ? const SizedBox(
+                                            width: 22,
+                                            height: 22,
+                                            child: CircularProgressIndicator(
+                                              strokeWidth: 2.5,
+                                              color: AppColors.white,
+                                            ),
+                                          )
+                                        : const Text(
+                                            'Save',
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w700,
+                                            ),
+                                          ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            );
+          },
+        );
+      },
     );
 
+    if (!mounted || saved == null) return;
 
+    if (saved) {
+      setState(() => _user = {..._user, ...savedUpdate!});
+      _showFieldMessage('$label updated successfully.');
+      _loadProfile(silent: true);
+    } else {
+      _showFieldMessage(
+        'Could not save your changes. Please try again.',
+        isError: true,
+      );
+    }
+  }
 
+  Future<void> _editFullName() async {
+    var name = _user['fullName']?.toString().trim() ?? '';
+
+    await _showEditSheet(
+      label: 'Full Name',
+      buildField: (_, _) => TextFormField(
+        initialValue: name,
+        autofocus: true,
+        textCapitalization: TextCapitalization.words,
+        onChanged: (value) => name = value,
+        validator: (value) {
+          if (value == null || value.trim().isEmpty) {
+            return 'Full name is required.';
+          }
+          return null;
+        },
+        style: const TextStyle(color: AppColors.navy, fontSize: 14),
+        decoration: _inputDecoration(
+          hint: 'Enter your full name',
+          icon: Icons.person_outline_rounded,
+        ),
+      ),
+      buildUpdate: () => {'fullName': name.trim()},
+    );
+  }
+
+  // University, Degree, Major, Career Goal, Experience Level.
+  // options: saved value -> shown label (Career Goal saves the ID).
+  Future<void> _editDropdownField({
+    required String fieldKey,
+    required String label,
+    required String hint,
+    required IconData icon,
+    required Map<String, String> options,
+  }) async {
+    final current = _user[fieldKey]?.toString();
+    String? selected = options.containsKey(current) ? current : null;
+
+    await _showEditSheet(
+      label: label,
+      buildField: (_, _) => _dropdownField(
+        hint: hint,
+        icon: icon,
+        value: selected,
+        options: options,
+        onChanged: (value) => selected = value,
+      ),
+      buildUpdate: () => {fieldKey: selected},
+    );
+  }
+
+  Future<void> _editGraduationStatus() async {
+    final savedStatus = _user['graduationStatus']?.toString();
+    final savedDate = _savedGraduationDate;
+
+    String? status = ProfileOptions.graduationStatuses.contains(savedStatus)
+        ? savedStatus
+        : null;
+    DateTime? date = savedDate;
+
+    // True when the saved graduation date doesn't fit the new status
+    // (e.g. Graduate -> Student needs a future date), same rule as
+    // Profile Setup. Then a new date is required in the same sheet.
+    var needsDate = false;
+
+    await _showEditSheet(
+      label: 'Graduation Status',
+      buildField: (sheetContext, setSheetState) => Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _dropdownField(
+            hint: 'Select your status',
+            icon: Icons.workspace_premium_outlined,
+            value: status,
+            options: {for (final s in ProfileOptions.graduationStatuses) s: s},
+            onChanged: (value) {
+              setSheetState(() {
+                status = value;
+                final range = _graduationDateRange(value);
+                needsDate = range != null &&
+                    (savedDate == null || !_isDateInRange(savedDate, range));
+                date = needsDate ? null : savedDate;
+              });
+            },
+          ),
+          if (needsDate) ...[
+            const SizedBox(height: 14),
+            const Text(
+              "Your graduation date doesn't match this status. "
+              'Please select a new one.',
+              style: TextStyle(
+                color: AppColors.secondaryText,
+                fontSize: 12,
+                height: 1.4,
+              ),
+            ),
+            const SizedBox(height: 10),
+            _graduationDateField(
+              sheetContext: sheetContext,
+              date: date,
+              range: _graduationDateRange(status),
+              onPicked: (picked) => setSheetState(() => date = picked),
+            ),
+          ],
+        ],
+      ),
+      buildUpdate: () {
+        final newDate = date;
+        return {
+          'graduationStatus': status,
+          if (needsDate && newDate != null) ...{
+            'graduationYear': newDate.year,
+            'graduationMonth': newDate.month,
+          },
+        };
+      },
+    );
+  }
+
+  Future<void> _editGraduationDate() async {
+    final range =
+        _graduationDateRange(_user['graduationStatus']?.toString());
+
+    if (range == null) {
+      _showFieldMessage(
+        'Please select your graduation status first.',
+        isError: true,
+      );
+      return;
+    }
+
+    // A saved date outside the allowed range must be picked again
+    final savedDate = _savedGraduationDate;
+    DateTime? date =
+        savedDate != null && _isDateInRange(savedDate, range) ? savedDate : null;
+
+    await _showEditSheet(
+      label: 'Graduation Date',
+      buildField: (sheetContext, setSheetState) => _graduationDateField(
+        sheetContext: sheetContext,
+        date: date,
+        range: range,
+        onPicked: (picked) => setSheetState(() => date = picked),
+      ),
+      buildUpdate: () {
+        final newDate = date!;
+        return {
+          'graduationYear': newDate.year,
+          'graduationMonth': newDate.month,
+        };
+      },
+    );
+  }
+
+  // Same CupertinoDatePicker (monthYear) bottom sheet as Profile Setup
+  Future<DateTime?> _pickGraduationDate(
+    BuildContext pickerContext,
+    DateTimeRange range,
+    DateTime? current,
+  ) {
+    FocusScope.of(pickerContext).unfocus();
+
+    // Value shown in the sheet; only applied when Done is pressed
+    var tempDate = current != null && _isDateInRange(current, range)
+        ? current
+        : _currentMonth;
+
+    return showModalBottomSheet<DateTime>(
+      context: pickerContext,
+      backgroundColor: AppColors.background,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+      ),
+      builder: (sheetContext) {
+        return SafeArea(
+          top: false,
+          child: SizedBox(
+            height: 300,
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                  child: Row(
+                    children: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(sheetContext),
+                        child: const Text(
+                          'Cancel',
+                          style: TextStyle(
+                            color: AppColors.secondaryText,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                      const Spacer(),
+                      TextButton(
+                        onPressed: () => Navigator.pop(sheetContext, tempDate),
+                        child: const Text(
+                          'Done',
+                          style: TextStyle(
+                            color: AppColors.teal,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Divider(height: 1, color: AppColors.lightGray),
+                Expanded(
+                  child: CupertinoDatePicker(
+                    mode: CupertinoDatePickerMode.monthYear,
+                    initialDateTime: tempDate,
+                    minimumDate: range.start,
+                    maximumDate: range.end,
+                    minimumYear: range.start.year,
+                    maximumYear: range.end.year,
+                    onDateTimeChanged: (date) {
+                      tempDate = DateTime(date.year, date.month);
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _graduationDateField({
+    required BuildContext sheetContext,
+    required DateTime? date,
+    required DateTimeRange? range,
+    required ValueChanged<DateTime> onPicked,
+  }) {
+    return FormField<DateTime>(
+      validator: (_) => date == null ? 'This field is required.' : null,
+      builder: (field) {
+        return GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTap: () async {
+            if (range == null) return;
+
+            final picked = await _pickGraduationDate(sheetContext, range, date);
+            if (picked == null) return;
+
+            onPicked(picked);
+            field.didChange(picked);
+
+            // Clear the "required" error if it was showing
+            if (field.hasError) field.validate();
+          },
+          child: InputDecorator(
+            isEmpty: date == null,
+            decoration: _inputDecoration(
+              hint: 'Select your graduation month and year',
+              icon: Icons.calendar_month_outlined,
+              errorText: field.errorText,
+              suffixIcon: const Icon(
+                Icons.keyboard_arrow_down_rounded,
+                color: AppColors.secondaryText,
+              ),
+            ),
+            child: Text(
+              date == null
+                  ? ''
+                  : '${_monthNames[date.month - 1]} ${date.year}',
+              style: const TextStyle(color: AppColors.navy, fontSize: 14),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _dropdownField({
+    required String hint,
+    required IconData icon,
+    required String? value,
+    required Map<String, String> options,
+    required ValueChanged<String?> onChanged,
+  }) {
+    return DropdownButtonFormField<String>(
+      initialValue: value,
+      isExpanded: true,
+      items: options.entries
+          .map(
+            (entry) => DropdownMenuItem<String>(
+              value: entry.key,
+              child: Text(entry.value, overflow: TextOverflow.ellipsis),
+            ),
+          )
+          .toList(),
+      onChanged: onChanged,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'This field is required.';
+        }
+        return null;
+      },
+      style: const TextStyle(color: AppColors.navy, fontSize: 14),
+      dropdownColor: AppColors.softBackground,
+      icon: const Icon(
+        Icons.keyboard_arrow_down_rounded,
+        color: AppColors.secondaryText,
+      ),
+      decoration: _inputDecoration(hint: hint, icon: icon),
+    );
+  }
+
+  // Same input style as Profile Setup
+  InputDecoration _inputDecoration({
+    required String hint,
+    required IconData icon,
+    String? errorText,
+    Widget? suffixIcon,
+  }) {
+    OutlineInputBorder border(Color color, [double width = 1]) {
+      return OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15),
+        borderSide: BorderSide(color: color, width: width),
+      );
+    }
+
+    return InputDecoration(
+      hintText: hint,
+      hintStyle: const TextStyle(color: AppColors.mediumGray, fontSize: 13),
+      errorText: errorText,
+      prefixIcon: Icon(icon, color: AppColors.secondaryText, size: 21),
+      suffixIcon: suffixIcon,
+      filled: true,
+      fillColor: AppColors.softBackground,
+      contentPadding: const EdgeInsets.symmetric(horizontal: 17, vertical: 18),
+      border: border(AppColors.lightGray),
+      enabledBorder: border(AppColors.lightGray),
+      focusedBorder: border(AppColors.teal, 1.5),
+      errorBorder: border(const Color(0xFFC94C4C)),
+    );
+  }
+
+  // Same style as _showMessage in login_screen.dart
+  void _showFieldMessage(String title, {bool isError = false}) {
     if (!mounted) return;
-
-    _loadProfile();
-
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: AppColors.softBackground,
+        elevation: 8,
+        margin: const EdgeInsets.fromLTRB(20, 0, 20, 22),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+        duration: Duration(seconds: isError ? 3 : 1),
+        content: Row(
+          children: [
+            Container(
+              width: 38,
+              height: 38,
+              decoration: BoxDecoration(
+                color: isError
+                    ? const Color(0xFFFDECEC)
+                    : const Color(0xFFE4F6EF),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Icon(
+                isError ? Icons.error_outline_rounded : Icons.check_rounded,
+                color: isError
+                    ? const Color(0xFFD64545)
+                    : const Color(0xFF23966F),
+                size: 22,
+              ),
+            ),
+            const SizedBox(width: 13),
+            Expanded(
+              child: Text(
+                title,
+                style: const TextStyle(
+                  color: AppColors.navy,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            const SizedBox(width: 5),
+            IconButton(
+              onPressed: () =>
+                  ScaffoldMessenger.of(context).hideCurrentSnackBar(),
+              icon: const Icon(
+                Icons.close_rounded,
+                color: AppColors.secondaryText,
+                size: 19,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
 
