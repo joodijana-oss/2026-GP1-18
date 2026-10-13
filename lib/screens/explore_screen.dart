@@ -197,7 +197,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
         backgroundColor: background,
         elevation: 0,
         automaticallyImplyLeading: false,
-        toolbarHeight: 118,
+        toolbarHeight: 76,
 
         title: Padding(
           padding: const EdgeInsets.only(
@@ -208,18 +208,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                width: 108,
-                height: 42,
-                child: Image.asset(
-                  'lib/assets/images/Logoo.png',
-                  fit: BoxFit.contain,
-                  alignment: Alignment.centerLeft,
-                ),
-              ),
-
-              const SizedBox(height: 20),
-
               Text(
                 'Explore',
                 style: TextStyle(

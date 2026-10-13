@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
+import '../services/user_service.dart';
 
 import 'profile_screen.dart';
 import 'explore_screen.dart';
 import '../features/community/community_screen.dart';
+import '../features/career_analysis/career_analysis_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,7 +24,8 @@ class _HomeScreenState extends State<HomeScreen>
   // لاحقاً هذه البيانات تجي من Backend / Database / AI Model
   // ============================================================
 
-  final String userName = 'Jood';
+  // الاسم الأول لليوزر المسجل دخول (فاضي أثناء التحميل أو إذا ما فيه اسم)
+  String userName = '';
 
   final int readinessScore = 72;
 
@@ -30,7 +33,8 @@ class _HomeScreenState extends State<HomeScreen>
   // 1 Develop
   // 2 Build
   // 3 Prepare
-  final int currentJourneyStage = 1;
+  // 0 until the user has a career analysis (also while loading / on error)
+  int currentJourneyStage = 0;
 
   final List<RecommendationItem> recommendations = const [
     RecommendationItem(
@@ -71,6 +75,49 @@ class _HomeScreenState extends State<HomeScreen>
       vsync: this,
       duration: const Duration(milliseconds: 1100),
     )..forward();
+
+    _loadUserName();
+    _loadJourneyStage();
+  }
+
+  // Analysis saved for the current CV -> Analyze done, Develop is current.
+  // Uses the same check as the Career Analysis screen, so after a CV
+  // replace both screens ask for a new analysis.
+  Future<void> _loadJourneyStage() async {
+    try {
+      final analysis = await UserService().getValidLatestAnalysis();
+
+      if (!mounted) return;
+      setState(() => currentJourneyStage = analysis != null ? 1 : 0);
+    } catch (e) {
+      debugPrint('HOME LOAD JOURNEY ERROR: $e');
+    }
+  }
+
+  Future<void> _openCareerAnalysis() async {
+    await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const CareerAnalysisScreen(),
+      ),
+    );
+
+    _loadJourneyStage();
+  }
+
+  // يجيب الاسم الأول من fullName (مثلاً "Sara Ahmed AlHarbi" -> "Sara")
+  Future<void> _loadUserName() async {
+    try {
+      final user = await UserService().getUser();
+      final fullName = user?['fullName']?.toString().trim() ?? '';
+      final firstName =
+          fullName.isEmpty ? '' : fullName.split(RegExp(r'\s+')).first;
+
+      if (!mounted) return;
+      setState(() => userName = firstName);
+    } catch (e) {
+      debugPrint('HOME LOAD USER ERROR: $e');
+    }
   }
 
   @override
@@ -234,13 +281,17 @@ class _HomeScreenState extends State<HomeScreen>
 
              
               GestureDetector(
-                onTap: () {
-                  Navigator.push(
+                onTap: () async {
+                  await Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const ProfileScreen(),
                     ),
                   );
+
+                  // لو اليوزر غيّر اسمه من البروفايل
+                  _loadUserName();
+                  _loadJourneyStage();
                 },
                 child: Container(
                   width: 46,
@@ -282,7 +333,7 @@ class _HomeScreenState extends State<HomeScreen>
           const SizedBox(height: 25),
 
           Text(
-            '$greeting, $userName',
+            userName.isNotEmpty ? '$greeting, $userName' : greeting,
             style: const TextStyle(
               color: AppColors.navy,
               fontSize: 29,
@@ -638,11 +689,16 @@ class _HomeScreenState extends State<HomeScreen>
               Positioned(
                 left: 24,
                 top: 28,
-                child: JourneyNode(
-                  title: 'Analyze',
-                  subtitle: 'Understand\nyour readiness',
-                  icon: Icons.psychology_alt_rounded,
-                  state: _journeyState(0),
+                // Only Analyze opens a screen; locked steps do nothing
+                child: GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTap: _openCareerAnalysis,
+                  child: JourneyNode(
+                    title: 'Analyze',
+                    subtitle: 'Understand\nyour readiness',
+                    icon: Icons.psychology_alt_rounded,
+                    state: _journeyState(0),
+                  ),
                 ),
               ),
 

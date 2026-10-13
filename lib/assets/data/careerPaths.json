@@ -552,5 +552,385 @@
     "priority": 3
    }
   ]
+ },
+ {
+  "id": "qa_test_engineer",
+  "name": "QA / Software Test Engineer",
+  "skills": [
+   {
+    "name": "Test Cases",
+    "priority": 1
+   },
+   {
+    "name": "Defect Tracking",
+    "priority": 1
+   },
+   {
+    "name": "Software Testing",
+    "priority": 1
+   },
+   {
+    "name": "Regression Testing",
+    "priority": 2
+   },
+   {
+    "name": "Test Automation",
+    "priority": 2
+   },
+   {
+    "name": "API Testing",
+    "priority": 2
+   },
+   {
+    "name": "Jira",
+    "priority": 3
+   },
+   {
+    "name": "CI/CD",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "data_engineer",
+  "name": "Data Engineer",
+  "skills": [
+   {
+    "name": "SQL",
+    "priority": 1
+   },
+   {
+    "name": "Python",
+    "priority": 1
+   },
+   {
+    "name": "Data Pipelines",
+    "priority": 1
+   },
+   {
+    "name": "ETL",
+    "priority": 2
+   },
+   {
+    "name": "Data Lakehouse",
+    "priority": 2
+   },
+   {
+    "name": "Data Orchestration",
+    "priority": 2
+   },
+   {
+    "name": "Data Architecture",
+    "priority": 3
+   },
+   {
+    "name": "Spark",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "cybersecurity_grc_specialist",
+  "name": "Cybersecurity GRC Specialist",
+  "skills": [
+   {
+    "name": "Risk Assessment",
+    "priority": 1
+   },
+   {
+    "name": "Risk Management",
+    "priority": 1
+   },
+   {
+    "name": "Audit",
+    "priority": 1
+   },
+   {
+    "name": "ISO 27001",
+    "priority": 2
+   },
+   {
+    "name": "Policies and Procedures",
+    "priority": 2
+   },
+   {
+    "name": "NIST CSF",
+    "priority": 2
+   },
+   {
+    "name": "SAMA Regulations",
+    "priority": 3
+   },
+   {
+    "name": "NCA ECC",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "telecom_engineer",
+  "name": "Telecom Engineer",
+  "skills": [
+   {
+    "name": "Telecommunications",
+    "priority": 1
+   },
+   {
+    "name": "Telecom Networks",
+    "priority": 1
+   },
+   {
+    "name": "Installation and Commissioning",
+    "priority": 1
+   },
+   {
+    "name": "Maintenance",
+    "priority": 2
+   },
+   {
+    "name": "Fiber Optics",
+    "priority": 2
+   },
+   {
+    "name": "Transmission (SDH/OTN/DWDM)",
+    "priority": 2
+   },
+   {
+    "name": "Radio / RF",
+    "priority": 3
+   },
+   {
+    "name": "Mobile Core (EPC / 5G)",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "infrastructure_data_center_engineer",
+  "name": "Infrastructure / Data Center Engineer",
+  "skills": [
+   {
+    "name": "Servers",
+    "priority": 1
+   },
+   {
+    "name": "Networking",
+    "priority": 1
+   },
+   {
+    "name": "Storage",
+    "priority": 1
+   },
+   {
+    "name": "Virtualization",
+    "priority": 2
+   },
+   {
+    "name": "Linux",
+    "priority": 2
+   },
+   {
+    "name": "Data Center Operations",
+    "priority": 2
+   },
+   {
+    "name": "Disaster Recovery",
+    "priority": 3
+   },
+   {
+    "name": "Kubernetes",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "it_support_specialist",
+  "name": "IT Support Specialist",
+  "skills": [
+   {
+    "name": "Hardware and Software Support",
+    "priority": 1
+   },
+   {
+    "name": "Troubleshooting",
+    "priority": 1
+   },
+   {
+    "name": "Windows",
+    "priority": 1
+   },
+   {
+    "name": "Networking",
+    "priority": 2
+   },
+   {
+    "name": "Ticketing Systems",
+    "priority": 2
+   },
+   {
+    "name": "Operating Systems",
+    "priority": 2
+   },
+   {
+    "name": "Microsoft 365",
+    "priority": 3
+   },
+   {
+    "name": "TCP/IP",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "product_manager",
+  "name": "Product Manager",
+  "skills": [
+   {
+    "name": "Product Management",
+    "priority": 1
+   },
+   {
+    "name": "Stakeholder Management",
+    "priority": 1
+   },
+   {
+    "name": "Product Lifecycle",
+    "priority": 1
+   },
+   {
+    "name": "Backlog Management",
+    "priority": 2
+   },
+   {
+    "name": "Agile",
+    "priority": 2
+   },
+   {
+    "name": "Product Roadmap",
+    "priority": 2
+   },
+   {
+    "name": "KPIs",
+    "priority": 3
+   },
+   {
+    "name": "User Stories",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "erp_consultant",
+  "name": "ERP Consultant (SAP / Oracle)",
+  "skills": [
+   {
+    "name": "SAP",
+    "priority": 1
+   },
+   {
+    "name": "Business Processes",
+    "priority": 1
+   },
+   {
+    "name": "ERP Module Configuration",
+    "priority": 1
+   },
+   {
+    "name": "SAP S/4HANA",
+    "priority": 2
+   },
+   {
+    "name": "Oracle ERP",
+    "priority": 2
+   },
+   {
+    "name": "Integrations",
+    "priority": 2
+   },
+   {
+    "name": "User Acceptance Testing",
+    "priority": 3
+   },
+   {
+    "name": "Data Migration",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "solutions_architect",
+  "name": "Solutions Architect",
+  "skills": [
+   {
+    "name": "Solution Architecture",
+    "priority": 1
+   },
+   {
+    "name": "Integration",
+    "priority": 1
+   },
+   {
+    "name": "Enterprise Architecture",
+    "priority": 1
+   },
+   {
+    "name": "Azure",
+    "priority": 2
+   },
+   {
+    "name": "AWS",
+    "priority": 2
+   },
+   {
+    "name": "APIs",
+    "priority": 2
+   },
+   {
+    "name": "Stakeholder Management",
+    "priority": 3
+   },
+   {
+    "name": "TOGAF",
+    "priority": 3
+   }
+  ]
+ },
+ {
+  "id": "pre_sales_engineer",
+  "name": "Pre-Sales Engineer",
+  "skills": [
+   {
+    "name": "Technical Proposals",
+    "priority": 1
+   },
+   {
+    "name": "Product Demonstrations",
+    "priority": 1
+   },
+   {
+    "name": "RFP / RFI Responses",
+    "priority": 1
+   },
+   {
+    "name": "Presentations",
+    "priority": 2
+   },
+   {
+    "name": "Customer Engagement",
+    "priority": 2
+   },
+   {
+    "name": "Proof of Concept",
+    "priority": 2
+   },
+   {
+    "name": "Cloud",
+    "priority": 3
+   },
+   {
+    "name": "Solution Design",
+    "priority": 3
+   }
+  ]
  }
 ]

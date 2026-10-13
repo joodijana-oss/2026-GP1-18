@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import '../screens/email_action_screen.dart';
 import '../screens/reset_password_screen.dart';
 
 // ============================================================
-// PASSWORD RESET LINK (Android App Links)
+// PASSWORD RESET + EMAIL CHANGE LINKS (Android App Links)
 // Firebase's default email link:
 // https://masra-184b3.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=...
+// (or mode=verifyAndChangeEmail / recoverEmail for an email change)
 // Flutter passes it to the app as "/__/auth/action?mode=...&oobCode=..."
 // ============================================================
 
@@ -25,6 +27,34 @@ String? resetCodeFromLink(String? location) {
   if (code == null || code.isEmpty) return null;
 
   return code;
+}
+
+// Email change links:
+// verifyAndChangeEmail = sent to the new email to confirm the change
+// recoverEmail = sent to the old email to undo the change
+const Set<String> emailActionModes = {'verifyAndChangeEmail', 'recoverEmail'};
+
+class EmailActionLink {
+  const EmailActionLink({required this.mode, required this.oobCode});
+
+  final String mode;
+  final String oobCode;
+}
+
+// The mode + oobCode if [location] is an email change link, otherwise null
+EmailActionLink? emailActionFromLink(String? location) {
+  if (location == null) return null;
+
+  final uri = Uri.tryParse(location);
+  if (uri == null || !_isAuthActionLink(uri)) return null;
+
+  final mode = uri.queryParameters['mode'];
+  if (!emailActionModes.contains(mode)) return null;
+
+  final code = uri.queryParameters['oobCode'];
+  if (code == null || code.isEmpty) return null;
+
+  return EmailActionLink(mode: mode!, oobCode: code);
 }
 
 // Link opened while the app is already running.
@@ -50,6 +80,20 @@ class PasswordResetLinkObserver with WidgetsBindingObserver {
       navigatorKey.currentState?.push(
         MaterialPageRoute(
           builder: (context) => ResetPasswordScreen(oobCode: code),
+        ),
+      );
+      return true;
+    }
+
+    final emailAction = emailActionFromLink(uri.toString());
+
+    if (emailAction != null) {
+      navigatorKey.currentState?.push(
+        MaterialPageRoute(
+          builder: (context) => EmailActionScreen(
+            mode: emailAction.mode,
+            oobCode: emailAction.oobCode,
+          ),
         ),
       );
     }
