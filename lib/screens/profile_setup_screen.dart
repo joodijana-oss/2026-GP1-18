@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 
 import '../services/user_service.dart';
 
-import '../services/cv_service.dart';
+import '../utils/cv_validator.dart';
 
 import '../constants/profile_options.dart';
 
@@ -83,6 +83,13 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen>
 
   String? selectedCvText;
 
+  int? selectedCvSize;
+
+  int? selectedCvPages;
+
+  // Validation error shown inside the upload card
+  String? cvError;
+
   // =========================================================
 
   // PAGE STATE
@@ -92,6 +99,12 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen>
   int currentStep = 0;
 
   bool isPickingCv = false;
+
+  // Same red as the "Remove File" button
+  static const Color _cvErrorColor = Color(0xFFC94C4C);
+
+  // True while the picked file is being validated
+  bool isCheckingCv = false;
 
   bool isSaving = false;
 
@@ -390,37 +403,60 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen>
 
       if (file == null) return;
 
-      final bytes = await file.readAsBytes();
+      setState(() {
+        isCheckingCv = true;
+        cvError = null;
+      });
 
-      final text = CvService.extractText(
+      final result = await CvValidator.validate(
         fileName: file.name,
-        bytes: bytes,
+        sizeInBytes: await file.length(),
+        readBytes: file.readAsBytes,
       );
 
       if (!mounted) return;
 
       setState(() {
-        selectedCvBytes = bytes;
-        selectedCvName = file.name;
-        selectedCvText = text;
+        if (result.isValid) {
+          selectedCvBytes = result.bytes;
+          selectedCvName = file.name;
+          selectedCvText = result.text;
+          selectedCvSize = result.sizeInBytes;
+          selectedCvPages = result.pageCount;
+        } else {
+          // Don't keep an invalid file
+          _clearSelectedCv();
+          cvError = result.error;
+        }
       });
 
-      showMessage('Your CV has been selected successfully.');
-    } on CvReadException catch (e) {
-      showMessage(e.message, isError: true);
+      if (result.isValid) {
+        showMessage('Your CV has been selected successfully.');
+      }
     } catch (e) {
       debugPrint('CV ERROR: $e');
-      showMessage(
-        'Unable to read the CV. Please try another PDF.',
-        isError: true,
-      );
+      if (mounted) {
+        setState(() {
+          _clearSelectedCv();
+          cvError = CvValidator.unreadableMessage;
+        });
+      }
     } finally {
       if (mounted) {
         setState(() {
           isPickingCv = false;
+          isCheckingCv = false;
         });
       }
     }
+  }
+
+  void _clearSelectedCv() {
+    selectedCvBytes = null;
+    selectedCvName = null;
+    selectedCvText = null;
+    selectedCvSize = null;
+    selectedCvPages = null;
   }
 
   // =========================================================
@@ -435,11 +471,9 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen>
 
     setState(() {
 
-      selectedCvBytes = null;
+      _clearSelectedCv();
 
-      selectedCvName = null;
-
-      selectedCvText = null;
+      cvError = null;
 
     });
 
@@ -1745,7 +1779,7 @@ SizedBox(
 
           buildDropdown(
 
-            label: 'Graduation Status',
+            label: 'Academic Status',
 
             hint: 'Select your status',
 
@@ -1979,11 +2013,15 @@ SizedBox(
 
             border: Border.all(
 
-              color: hasCv
+              color: cvError != null
 
-                  ? AppColors.teal
+                  ? _cvErrorColor
 
-                  : AppColors.lightGray,
+                  : hasCv
+
+                      ? AppColors.teal
+
+                      : AppColors.lightGray,
 
               width: 1.5,
 
@@ -2027,23 +2065,45 @@ SizedBox(
 
                 ),
 
-                child: Icon(
+                child: isCheckingCv
 
-                  hasCv
+                    ? const Center(
 
-                      ? Icons
+                        child: SizedBox(
 
-                          .description_rounded
+                          width: 28,
 
-                      : Icons
+                          height: 28,
 
-                          .upload_file_rounded,
+                          child: CircularProgressIndicator(
 
-                  color: AppColors.teal,
+                            strokeWidth: 2.5,
 
-                  size: 33,
+                            color: AppColors.teal,
 
-                ),
+                          ),
+
+                        ),
+
+                      )
+
+                    : Icon(
+
+                        hasCv
+
+                            ? Icons
+
+                                .description_rounded
+
+                            : Icons
+
+                                .upload_file_rounded,
+
+                        color: AppColors.teal,
+
+                        size: 33,
+
+                      ),
 
               ),
 
@@ -2053,11 +2113,15 @@ SizedBox(
 
               Text(
 
-                hasCv
+                isCheckingCv
 
-                    ? 'CV Selected'
+                    ? 'Checking Your CV...'
 
-                    : 'Upload Your CV',
+                    : hasCv
+
+                        ? 'CV Selected'
+
+                        : 'Upload Your CV',
 
                 style: const TextStyle(
 
@@ -2103,11 +2167,59 @@ SizedBox(
 
               ),
 
+              // FILE DETAILS (success state)
+
+              if (hasCv && selectedCvSize != null && selectedCvPages != null) ...[
+
+                const SizedBox(height: 8),
+
+                Row(
+
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+                  children: [
+
+                    const Icon(
+
+                      Icons.check_circle_rounded,
+
+                      color: AppColors.teal,
+
+                      size: 16,
+
+                    ),
+
+                    const SizedBox(width: 6),
+
+                    Text(
+
+                      '${CvValidator.formatSize(selectedCvSize!)} · '
+
+                      '$selectedCvPages ${selectedCvPages == 1 ? 'page' : 'pages'}',
+
+                      style: const TextStyle(
+
+                        color: AppColors.teal,
+
+                        fontSize: 12.5,
+
+                        fontWeight: FontWeight.w700,
+
+                      ),
+
+                    ),
+
+                  ],
+
+                ),
+
+              ],
+
               const SizedBox(height: 8),
 
               const Text(
 
-                'PDF format only',
+                'PDF only · Max 5 MB · Up to 3 pages',
 
                 style: TextStyle(
 
@@ -2122,6 +2234,58 @@ SizedBox(
                 ),
 
               ),
+
+              // VALIDATION ERROR
+
+              if (cvError != null) ...[
+
+                const SizedBox(height: 14),
+
+                Row(
+
+                  crossAxisAlignment: CrossAxisAlignment.start,
+
+                  children: [
+
+                    const Icon(
+
+                      Icons.error_outline_rounded,
+
+                      color: _cvErrorColor,
+
+                      size: 18,
+
+                    ),
+
+                    const SizedBox(width: 7),
+
+                    Expanded(
+
+                      child: Text(
+
+                        cvError!,
+
+                        style: const TextStyle(
+
+                          color: _cvErrorColor,
+
+                          fontSize: 12.5,
+
+                          fontWeight: FontWeight.w600,
+
+                          height: 1.4,
+
+                        ),
+
+                      ),
+
+                    ),
+
+                  ],
+
+                ),
+
+              ],
 
               const SizedBox(height: 24),
 
@@ -2419,7 +2583,7 @@ SizedBox(
 
   // Allowed range for the given status (null if no status selected yet)
   // Student: current month -> 6 years ahead
-  // Graduate / Fresh Graduate: January 2000 -> current month
+  // Graduate: January 2000 -> current month
   DateTimeRange? graduationDateRange(String? status) {
     if (status == null) return null;
 
@@ -2458,7 +2622,7 @@ SizedBox(
 
     if (range == null) {
       showMessage(
-        'Please select your graduation status first.',
+        'Please select your academic status first.',
         isError: true,
       );
       return;
@@ -3109,13 +3273,25 @@ SizedBox(
 
         selectedCvName != null;
 
+    // Next stays disabled until every choice on the step is made
+    final isStepComplete = switch (currentStep) {
+      0 => selectedUniversity != null &&
+          selectedDegree != null &&
+          selectedMajor != null,
+      1 => selectedGraduationStatus != null &&
+          selectedGraduationDate != null &&
+          selectedCareerGoalId != null &&
+          selectedExperienceLevel != null,
+      _ => canFinish,
+    };
+
     final isDisabled =
 
         isSaving ||
 
         isPickingCv ||
 
-        (isLastStep && !canFinish);
+        !isStepComplete;
 
     return Container(
 

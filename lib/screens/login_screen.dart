@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:masra/services/user_service.dart';
 import '../theme/app_colors.dart';
+import '../utils/validators.dart';
 import 'forgot_password_screen.dart';
 import 'home_screen.dart';
 import 'profile_setup_screen.dart';
@@ -26,9 +27,20 @@ class _LoginScreenState extends State<LoginScreen>
   late AnimationController _backgroundController;
   late Animation<double> _backgroundAnimation;
 
+  // Log In stays disabled until both fields are valid
+  bool get _isFormValid =>
+      Validators.email(emailController.text) == null &&
+      Validators.enteredPassword(passwordController.text) == null;
+
+  void _onFieldChanged() => setState(() {});
+
   @override
   void initState() {
     super.initState();
+
+    // Refresh the button state on every keystroke
+    emailController.addListener(_onFieldChanged);
+    passwordController.addListener(_onFieldChanged);
 
     _backgroundController = AnimationController(
       vsync: this,
@@ -410,26 +422,10 @@ class _LoginScreenState extends State<LoginScreen>
                           _buildField(
                             controller: emailController,
                             label: 'Email Address',
-                            hint: 'name@example.com',
+                            hint: Validators.emailHint,
                             icon: Icons.mail_outline_rounded,
                             keyboardType: TextInputType.emailAddress,
-                            validator: (value) {
-                              if (value == null || value.trim().isEmpty) {
-                                return 'Please enter your email';
-                              }
-
-                              final email = value.trim();
-
-                              final emailRegex = RegExp(
-                                r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$',
-                              );
-
-                              if (!emailRegex.hasMatch(email)) {
-                                return 'Please enter a valid email address';
-                              }
-
-                              return null;
-                            },
+                            validator: Validators.email,
                           ),
 
                           const SizedBox(height: 17),
@@ -457,13 +453,7 @@ class _LoginScreenState extends State<LoginScreen>
                                 size: 21,
                               ),
                             ),
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter your password';
-                              }
-
-                              return null;
-                            },
+                            validator: Validators.enteredPassword,
                           ),
 
                           const SizedBox(height: 10),
@@ -499,7 +489,11 @@ class _LoginScreenState extends State<LoginScreen>
                           // =================================================
                           // LOGIN BUTTON
                           // =================================================
-                          Container(
+                          // Dimmed and disabled until the form is valid
+                          AnimatedOpacity(
+                            duration: const Duration(milliseconds: 200),
+                            opacity: _isFormValid || _loading ? 1 : 0.5,
+                            child: Container(
                             width: double.infinity,
                             height: 60,
                             decoration: BoxDecoration(
@@ -522,12 +516,14 @@ class _LoginScreenState extends State<LoginScreen>
                               ],
                             ),
                             child: ElevatedButton(
-                              onPressed: _loading ? null : login,
+                              onPressed:
+                                  _loading || !_isFormValid ? null : login,
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.transparent,
                                 disabledBackgroundColor: Colors.transparent,
                                 shadowColor: Colors.transparent,
                                 foregroundColor: AppColors.white,
+                                disabledForegroundColor: AppColors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
                                 ),
@@ -560,6 +556,7 @@ class _LoginScreenState extends State<LoginScreen>
                                       ],
                                     ),
                             ),
+                          ),
                           ),
 
                           const SizedBox(height: 25),
@@ -671,6 +668,9 @@ class _LoginScreenState extends State<LoginScreen>
           obscureText: obscureText,
           keyboardType: keyboardType,
           validator: validator,
+          // Live: re-validates on every change once the user has typed,
+          // untouched fields show no error
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           style: const TextStyle(
             color: AppColors.navy,
             fontSize: 14.5,

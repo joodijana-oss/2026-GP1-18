@@ -6,6 +6,13 @@ import 'profile_screen.dart';
 import 'explore_screen.dart';
 import '../features/community/community_screen.dart';
 import '../features/career_analysis/career_analysis_screen.dart';
+import '../features/learning_roadmap/learning_roadmap_screen.dart';
+import '../features/project_discovery/project_discovery_screen.dart';
+import '../features/mock_interview/mock_interview_screen.dart';
+import '../features/cv_improvement/cv_improvement_screen.dart';
+import '../features/job_match/job_match_screen.dart';
+import '../features/certifications/certifications_screen.dart';
+import '../features/heatmap/heatmap_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -94,16 +101,102 @@ class _HomeScreenState extends State<HomeScreen>
     }
   }
 
-  Future<void> _openCareerAnalysis() async {
+  // "Your Next Step" card content, one per journey stage
+  // (same order as currentJourneyStage).
+  static final List<_NextStepContent> _nextSteps = [
+    _NextStepContent(
+      badge: 'Analyze',
+      title: 'Analyze your readiness',
+      description:
+          'Discover your strengths and skill gaps for your target career path.',
+      buttonLabel: 'Start Analysis',
+      destination: (_) => const CareerAnalysisScreen(),
+    ),
+    _NextStepContent(
+      badge: 'Develop',
+      title: 'Build your skills',
+      description:
+          'Based on your skill gaps, continue developing the skills needed for your career path.',
+      buttonLabel: 'Continue',
+      destination: (_) => const LearningRoadmapScreen(),
+    ),
+    _NextStepContent(
+      badge: 'Build',
+      title: 'Gain real experience',
+      description:
+          'Work on hands-on projects that showcase your skills and strengthen your portfolio.',
+      buttonLabel: 'Find Projects',
+      destination: (_) => const ProjectDiscoveryScreen(),
+    ),
+    _NextStepContent(
+      badge: 'Prepare',
+      title: 'Get job-ready',
+      description:
+          'Practice interviews and polish your profile so you are ready to apply with confidence.',
+      buttonLabel: 'Practice Interview',
+      destination: (_) => const MockInterviewScreen(),
+    ),
+  ];
+
+  _NextStepContent get _currentNextStep =>
+      _nextSteps[currentJourneyStage.clamp(0, _nextSteps.length - 1)];
+
+  void _openNextStep() => _openScreen(_currentNextStep.destination);
+
+  // Pushes a screen on top of Home (back returns here), then refreshes
+  // the journey in case an analysis was run or the CV changed.
+  Future<void> _openScreen(WidgetBuilder builder) async {
     await Navigator.push(
       context,
-      MaterialPageRoute(
-        builder: (context) => const CareerAnalysisScreen(),
-      ),
+      MaterialPageRoute(builder: builder),
     );
 
     _loadJourneyStage();
   }
+
+  // Same as tapping "Explore" in the bottom nav (tabs replace each other)
+  void _switchToExploreTab() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const ExploreScreen(),
+      ),
+    );
+  }
+
+  void _showComingSoon() {
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        const SnackBar(
+          behavior: SnackBarBehavior.floating,
+          content: Text('Coming soon'),
+        ),
+      );
+  }
+
+  // Unlocked stages open their screen; locked ones explain why
+  void _openJourneyStage(int stage) {
+    if (stage > currentJourneyStage) {
+      final previous = _nextSteps[stage - 1].badge;
+      ScaffoldMessenger.of(context)
+        ..hideCurrentSnackBar()
+        ..showSnackBar(
+          SnackBar(
+            behavior: SnackBarBehavior.floating,
+            content: Text('Complete $previous first to unlock this stage.'),
+          ),
+        );
+      return;
+    }
+
+    _openScreen(_nextSteps[stage].destination);
+  }
+
+  // Display only: first letter uppercase, stored name unchanged
+  String get _displayName => userName.isEmpty
+      ? userName
+      : userName[0].toUpperCase() + userName.substring(1);
 
   // يجيب الاسم الأول من fullName (مثلاً "Sara Ahmed AlHarbi" -> "Sara")
   Future<void> _loadUserName() async {
@@ -333,7 +426,7 @@ class _HomeScreenState extends State<HomeScreen>
           const SizedBox(height: 25),
 
           Text(
-            userName.isNotEmpty ? '$greeting, $userName' : greeting,
+            userName.isNotEmpty ? '$greeting, $_displayName' : greeting,
             style: const TextStyle(
               color: AppColors.navy,
               fontSize: 29,
@@ -427,6 +520,7 @@ class _HomeScreenState extends State<HomeScreen>
       animation: _backgroundController,
       builder: (context, child) {
         final value = _backgroundController.value;
+        final step = _currentNextStep;
 
         return Container(
           width: double.infinity,
@@ -546,9 +640,9 @@ class _HomeScreenState extends State<HomeScreen>
                             ),
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: const Text(
-                            'Develop',
-                            style: TextStyle(
+                          child: Text(
+                            step.badge,
+                            style: const TextStyle(
                               color: AppColors.gold,
                               fontSize: 11,
                               fontWeight: FontWeight.w700,
@@ -561,9 +655,9 @@ class _HomeScreenState extends State<HomeScreen>
                     const SizedBox(height: 24),
 
                     // Main next step
-                    const Text(
-                      'Build your skills',
-                      style: TextStyle(
+                    Text(
+                      step.title,
+                      style: const TextStyle(
                         color: AppColors.white,
                         fontSize: 24,
                         fontWeight: FontWeight.w800,
@@ -574,7 +668,7 @@ class _HomeScreenState extends State<HomeScreen>
                     const SizedBox(height: 8),
 
                     Text(
-                      'Based on your skill gaps, continue developing the skills needed for your career path.',
+                      step.description,
                       style: TextStyle(
                         color: AppColors.white.withValues(
                           alpha: 0.76,
@@ -588,14 +682,13 @@ class _HomeScreenState extends State<HomeScreen>
 
                     Align(
                       alignment: Alignment.centerRight,
-                      child: InkWell(
-                        onTap: () {
-                          // TODO:
-                          // لاحقاً نربطه بالصفحة المناسبة للـ next step
-                          // مثل Skill Gap / Learning Roadmap
-                        },
+                      // Material + Ink so the ripple shows over the gradient
+                      child: Material(
+                        type: MaterialType.transparency,
+                        child: InkWell(
+                        onTap: _openNextStep,
                         borderRadius: BorderRadius.circular(16),
-                        child: Container(
+                        child: Ink(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 16,
                             vertical: 11,
@@ -611,19 +704,19 @@ class _HomeScreenState extends State<HomeScreen>
                               ),
                             ),
                           ),
-                          child: const Row(
+                          child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
-                                'Continue',
-                                style: TextStyle(
+                                step.buttonLabel,
+                                style: const TextStyle(
                                   color: AppColors.white,
                                   fontSize: 12.5,
                                   fontWeight: FontWeight.w700,
                                 ),
                               ),
-                              SizedBox(width: 7),
-                              Icon(
+                              const SizedBox(width: 7),
+                              const Icon(
                                 Icons.arrow_forward_rounded,
                                 color: AppColors.white,
                                 size: 18,
@@ -631,6 +724,7 @@ class _HomeScreenState extends State<HomeScreen>
                             ],
                           ),
                         ),
+                      ),
                       ),
                     ),
                   ],
@@ -689,10 +783,10 @@ class _HomeScreenState extends State<HomeScreen>
               Positioned(
                 left: 24,
                 top: 28,
-                // Only Analyze opens a screen; locked steps do nothing
+                // Unlocked stages open their screen; locked ones show a hint
                 child: GestureDetector(
                   behavior: HitTestBehavior.opaque,
-                  onTap: _openCareerAnalysis,
+                  onTap: () => _openJourneyStage(0),
                   child: JourneyNode(
                     title: 'Analyze',
                     subtitle: 'Understand\nyour readiness',
@@ -705,33 +799,45 @@ class _HomeScreenState extends State<HomeScreen>
               Positioned(
                 right: 22,
                 top: 105,
-                child: JourneyNode(
-                  title: 'Develop',
-                  subtitle: 'Build your\nskills',
-                  icon: Icons.auto_graph_rounded,
-                  state: _journeyState(1),
+                child: GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTap: () => _openJourneyStage(1),
+                  child: JourneyNode(
+                    title: 'Develop',
+                    subtitle: 'Build your\nskills',
+                    icon: Icons.auto_graph_rounded,
+                    state: _journeyState(1),
+                  ),
                 ),
               ),
 
               Positioned(
                 left: 35,
                 bottom: 78,
-                child: JourneyNode(
-                  title: 'Build',
-                  subtitle: 'Gain real\nexperience',
-                  icon: Icons.handyman_outlined,
-                  state: _journeyState(2),
+                child: GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTap: () => _openJourneyStage(2),
+                  child: JourneyNode(
+                    title: 'Build',
+                    subtitle: 'Gain real\nexperience',
+                    icon: Icons.handyman_outlined,
+                    state: _journeyState(2),
+                  ),
                 ),
               ),
 
               Positioned(
                 right: 20,
                 bottom: 24,
-                child: JourneyNode(
-                  title: 'Prepare',
-                  subtitle: 'Get job-ready',
-                  icon: Icons.work_outline_rounded,
-                  state: _journeyState(3),
+                child: GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTap: () => _openJourneyStage(3),
+                  child: JourneyNode(
+                    title: 'Prepare',
+                    subtitle: 'Get job-ready',
+                    icon: Icons.work_outline_rounded,
+                    state: _journeyState(3),
+                  ),
                 ),
               ),
             ],
@@ -778,7 +884,8 @@ class _HomeScreenState extends State<HomeScreen>
               ),
 
               TextButton(
-                onPressed: () {},
+                // No "all recommendations" screen yet
+                onPressed: _showComingSoon,
                 child: const Text(
                   'See all',
                   style: TextStyle(
@@ -819,11 +926,19 @@ class _HomeScreenState extends State<HomeScreen>
     int index,
   ) {
     final bool goldAccent = index.isOdd;
+    final destination = _recommendationDestination(item.type);
 
-    return InkWell(
-      onTap: () {},
+    // Material + Ink so the ripple shows on top of the card color
+    return Material(
+      type: MaterialType.transparency,
+      child: InkWell(
+      onTap: destination == null
+          ? _showComingSoon
+          : () => _openScreen(destination),
       borderRadius: BorderRadius.circular(24),
-      child: Container(
+      splashColor: AppColors.teal.withValues(alpha: 0.12),
+      highlightColor: AppColors.teal.withValues(alpha: 0.06),
+      child: Ink(
         width: 242,
         padding: const EdgeInsets.all(18),
         decoration: BoxDecoration(
@@ -934,7 +1049,22 @@ class _HomeScreenState extends State<HomeScreen>
           ],
         ),
       ),
+      ),
     );
+  }
+
+  // Each recommendation type opens the matching Explore feature
+  WidgetBuilder? _recommendationDestination(String type) {
+    switch (type) {
+      case 'Course':
+        return (_) => const LearningRoadmapScreen();
+      case 'Certification':
+        return (_) => const CertificationsScreen();
+      case 'Project':
+        return (_) => const ProjectDiscoveryScreen();
+      default:
+        return null;
+    }
   }
 
   // ============================================================
@@ -942,22 +1072,26 @@ class _HomeScreenState extends State<HomeScreen>
   // ============================================================
 
   Widget _buildQuickActions() {
-    const actions = [
+    final actions = [
       QuickActionItem(
         title: 'Analyze CV',
         icon: Icons.document_scanner_outlined,
+        destination: (_) => const CareerAnalysisScreen(),
       ),
       QuickActionItem(
         title: 'Improve CV',
         icon: Icons.edit_note_rounded,
+        destination: (_) => const CVImprovementScreen(),
       ),
       QuickActionItem(
         title: 'Match a Job',
         icon: Icons.work_outline_rounded,
+        destination: (_) => const JobMatchScreen(),
       ),
       QuickActionItem(
         title: 'Practice\nInterview',
         icon: Icons.record_voice_over_outlined,
+        destination: (_) => const MockInterviewScreen(),
       ),
     ];
 
@@ -996,57 +1130,88 @@ class _HomeScreenState extends State<HomeScreen>
     );
   }
 
+  // Pushed on top of Home, so back returns here with the bottom nav intact
+  void _openQuickAction(QuickActionItem action) {
+    final destination = action.destination;
+
+    if (destination == null) {
+      _showComingSoon();
+      return;
+    }
+
+    _openScreen(destination);
+  }
+
   Widget _quickAction(
     QuickActionItem action,
     int index,
   ) {
-    return InkWell(
-      onTap: () {},
-      borderRadius: BorderRadius.circular(20),
-      child: Column(
-        children: [
-          Container(
-            height: 70,
-            decoration: BoxDecoration(
-              color: AppColors.softBackground,
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(
+    final radius = BorderRadius.circular(20);
+
+    return Column(
+      children: [
+        // Shadow outside, Material + Ink inside so the ripple shows
+        // on top of the card color and is clipped to the rounded corners
+        DecoratedBox(
+          decoration: BoxDecoration(
+            borderRadius: radius,
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.navy.withValues(alpha: 0.045),
+                blurRadius: 12,
+                offset: const Offset(0, 6),
+              ),
+            ],
+          ),
+          child: Material(
+            color: AppColors.softBackground,
+            shape: RoundedRectangleBorder(
+              borderRadius: radius,
+              side: const BorderSide(
                 color: AppColors.lightGray,
               ),
-              boxShadow: [
-                BoxShadow(
-                  color: AppColors.navy.withValues(alpha: 0.045),
-                  blurRadius: 12,
-                  offset: const Offset(0, 6),
-                ),
-              ],
             ),
-            child: Center(
-              child: Container(
-                width: 39,
-                height: 39,
-                decoration: BoxDecoration(
-                  color: index == 2
-                      ? AppColors.gold.withValues(alpha: 0.11)
-                      : AppColors.lightTeal.withValues(
-                          alpha: 0.55,
-                        ),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Icon(
-                  action.icon,
-                  color: index == 2
-                      ? AppColors.gold
-                      : AppColors.teal,
-                  size: 22,
+            clipBehavior: Clip.antiAlias,
+            child: InkWell(
+              onTap: () => _openQuickAction(action),
+              splashColor: AppColors.teal.withValues(alpha: 0.12),
+              highlightColor: AppColors.teal.withValues(alpha: 0.06),
+              child: SizedBox(
+                height: 70,
+                width: double.infinity,
+                child: Center(
+                  child: Container(
+                    width: 39,
+                    height: 39,
+                    decoration: BoxDecoration(
+                      color: index == 2
+                          ? AppColors.gold.withValues(alpha: 0.11)
+                          : AppColors.lightTeal.withValues(
+                              alpha: 0.55,
+                            ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Icon(
+                      action.icon,
+                      color: index == 2
+                          ? AppColors.gold
+                          : AppColors.teal,
+                      size: 22,
+                    ),
+                  ),
                 ),
               ),
             ),
           ),
+        ),
 
-          const SizedBox(height: 9),
+        const SizedBox(height: 9),
 
-          Text(
+        // The label is tappable too, like before
+        GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTap: () => _openQuickAction(action),
+          child: Text(
             action.title,
             textAlign: TextAlign.center,
             style: const TextStyle(
@@ -1056,8 +1221,8 @@ class _HomeScreenState extends State<HomeScreen>
               height: 1.25,
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
@@ -1193,8 +1358,11 @@ class _HomeScreenState extends State<HomeScreen>
 
               const SizedBox(height: 19),
 
-              InkWell(
-                onTap: () {},
+              // Job Demand Heatmap = the Saudi market feature in Explore
+              Material(
+                type: MaterialType.transparency,
+                child: InkWell(
+                onTap: () => _openScreen((_) => const HeatmapScreen()),
                 borderRadius: BorderRadius.circular(12),
                 child: const Padding(
                   padding: EdgeInsets.symmetric(
@@ -1220,6 +1388,7 @@ class _HomeScreenState extends State<HomeScreen>
                     ],
                   ),
                 ),
+              ),
               ),
             ],
           ),
@@ -1361,9 +1530,7 @@ class _HomeScreenState extends State<HomeScreen>
                     const SizedBox(height: 21),
 
                     ElevatedButton(
-                      onPressed: () {
-                        // TODO: Explore page
-                      },
+                      onPressed: _switchToExploreTab,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.gold,
                         foregroundColor: AppColors.white,
@@ -1635,13 +1802,33 @@ class RecommendationItem {
   });
 }
 
+class _NextStepContent {
+  final String badge;
+  final String title;
+  final String description;
+  final String buttonLabel;
+  final WidgetBuilder destination;
+
+  const _NextStepContent({
+    required this.badge,
+    required this.title,
+    required this.description,
+    required this.buttonLabel,
+    required this.destination,
+  });
+}
+
 class QuickActionItem {
   final String title;
   final IconData icon;
 
+  // null = screen not built yet -> "Coming soon" SnackBar
+  final WidgetBuilder? destination;
+
   const QuickActionItem({
     required this.title,
     required this.icon,
+    this.destination,
   });
 }
 

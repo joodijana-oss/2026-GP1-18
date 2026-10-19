@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
+import '../utils/validators.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});
@@ -21,9 +22,15 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
   late AnimationController _backgroundController;
   late Animation<double> _backgroundAnimation;
 
+  // Send stays disabled until the email is valid
+  bool get _isFormValid => Validators.email(emailController.text) == null;
+
   @override
   void initState() {
     super.initState();
+
+    // Refresh the button state on every keystroke
+    emailController.addListener(() => setState(() {}));
 
     _backgroundController = AnimationController(
       vsync: this,
@@ -367,37 +374,23 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                           _buildField(
                             controller: emailController,
                             label: 'Email Address',
-                            hint: 'name@example.com',
+                            hint: Validators.emailHint,
                             icon: Icons.mail_outline_rounded,
                             keyboardType:
                                 TextInputType.emailAddress,
-                            validator: (value) {
-                              if (value == null ||
-                                  value.trim().isEmpty) {
-                                return 'Email address is required.';
-                              }
-
-                              final email = value.trim();
-
-                              final emailRegex = RegExp(
-                                r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$',
-                              );
-
-                              if (!emailRegex
-                                  .hasMatch(email)) {
-                                return 'Enter a valid email address.';
-                              }
-
-                              return null;
-                            },
+                            validator: Validators.email,
                           ),
 
                           const SizedBox(height: 28),
 
                           // =========================
                           // SEND BUTTON
+                          // Dimmed and disabled until the email is valid
                           // =========================
-                          Container(
+                          AnimatedOpacity(
+                            duration: const Duration(milliseconds: 200),
+                            opacity: _isFormValid || _loading ? 1 : 0.5,
+                            child: Container(
                             width: double.infinity,
                             height: 60,
                             decoration: BoxDecoration(
@@ -424,8 +417,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                               ],
                             ),
                             child: ElevatedButton(
-                              onPressed:
-                                  _loading ? null : sendResetLink,
+                              onPressed: _loading || !_isFormValid
+                                  ? null
+                                  : sendResetLink,
                               style:
                                   ElevatedButton.styleFrom(
                                 backgroundColor:
@@ -475,6 +469,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                                 ],
                               ),
                             ),
+                          ),
                           ),
 
                           const SizedBox(height: 26),
@@ -593,6 +588,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
           controller: controller,
           keyboardType: keyboardType,
           validator: validator,
+          // Live: re-validates on every change once the user has typed
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           style: const TextStyle(
             color: AppColors.navy,
             fontSize: 14.5,

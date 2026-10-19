@@ -4,7 +4,8 @@ import 'login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:masra/services/user_service.dart';
 import 'profile_setup_screen.dart';
-import '../utils/password_validator.dart';
+import '../utils/validators.dart';
+import '../widgets/password_rules_checklist.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -22,9 +23,20 @@ class _SignupScreenState extends State<SignupScreen>
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
 
+  final _nameFocus = FocusNode();
+  final _emailFocus = FocusNode();
+
   bool hidePassword = true;
   bool hideConfirmPassword = true;
   bool _loading = false;
+
+  // A field shows errors only after the user typed in it (or left it)
+  bool _nameTouched = false;
+  bool _emailTouched = false;
+  bool _passwordTouched = false;
+  bool _confirmTouched = false;
+
+  static const Color _successColor = PasswordRulesChecklist.successColor;
 
   late AnimationController _backgroundController;
   late Animation<double> _backgroundAnimation;
@@ -32,6 +44,20 @@ class _SignupScreenState extends State<SignupScreen>
   @override
   void initState() {
     super.initState();
+
+    // Re-validate live on every keystroke
+    nameController.addListener(_onFieldChanged);
+    emailController.addListener(_onFieldChanged);
+    passwordController.addListener(_onFieldChanged);
+    confirmPasswordController.addListener(_onFieldChanged);
+
+    // Leaving a field counts as touching it
+    _nameFocus.addListener(() {
+      if (!_nameFocus.hasFocus) setState(() => _nameTouched = true);
+    });
+    _emailFocus.addListener(() {
+      if (!_emailFocus.hasFocus) setState(() => _emailTouched = true);
+    });
 
     _backgroundController = AnimationController(
       vsync: this,
@@ -58,8 +84,36 @@ class _SignupScreenState extends State<SignupScreen>
     passwordController.dispose();
     confirmPasswordController.dispose();
 
+    _nameFocus.dispose();
+    _emailFocus.dispose();
+
     super.dispose();
   }
+
+  void _onFieldChanged() {
+    setState(() {
+      if (nameController.text.isNotEmpty) _nameTouched = true;
+      if (emailController.text.isNotEmpty) _emailTouched = true;
+      if (passwordController.text.isNotEmpty) _passwordTouched = true;
+      if (confirmPasswordController.text.isNotEmpty) _confirmTouched = true;
+    });
+  }
+
+  // ===============================================================
+  // VALIDATION RULES (shared, see utils/validators.dart)
+  // ===============================================================
+  String? _nameError(String? value) => Validators.fullName(value);
+
+  String? _emailError(String? value) => Validators.email(value);
+
+  String? _confirmError(String? value) =>
+      Validators.confirmPassword(value, passwordController.text);
+
+  bool get _isFormValid =>
+      _nameError(nameController.text) == null &&
+      _emailError(emailController.text) == null &&
+      PasswordValidator.validate(passwordController.text) == null &&
+      _confirmError(confirmPasswordController.text) == null;
 Future<void> createAccount() async {
   if (!_formKey.currentState!.validate()) return;
 
@@ -401,13 +455,11 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                             label: 'Full Name',
                             hint: 'Enter your full name',
                             icon: Icons.person_outline_rounded,
-                            validator: (value) {
-                              if (value == null || value.trim().isEmpty) {
-                                return 'Full name is required.';
-                              }
-
-                              return null;
-                            },
+                            focusNode: _nameFocus,
+                            errorText: _nameTouched
+                                ? _nameError(nameController.text)
+                                : null,
+                            validator: _nameError,
                           ),
 
                           const SizedBox(height: 17),
@@ -421,23 +473,20 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                             hint: 'name@example.com',
                             icon: Icons.mail_outline_rounded,
                             keyboardType: TextInputType.emailAddress,
-                            validator: (value) {
-  if (value == null || value.trim().isEmpty) {
-    return 'Email address is required.';
-  }
-
-  final email = value.trim();
-
-  final emailRegex = RegExp(
-    r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$',
-  );
-
-  if (!emailRegex.hasMatch(email)) {
-    return 'Enter a valid email address.';
-  }
-
-  return null;
-},
+                            focusNode: _emailFocus,
+                            errorText: _emailTouched
+                                ? _emailError(emailController.text)
+                                : null,
+                            // Green check once the email is valid
+                            suffixIcon: _emailError(emailController.text) ==
+                                    null
+                                ? const Icon(
+                                    Icons.check_circle_rounded,
+                                    color: _successColor,
+                                    size: 21,
+                                  )
+                                : null,
+                            validator: _emailError,
                           ),
 
                           const SizedBox(height: 17),
@@ -469,6 +518,14 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                                 PasswordValidator.validate(value),
                           ),
 
+                          // Live rules checklist, shown once typing starts
+                          if (_passwordTouched) ...[
+                            const SizedBox(height: 10),
+                            PasswordRulesChecklist(
+                              password: passwordController.text,
+                            ),
+                          ],
+
                           const SizedBox(height: 17),
 
                           // =================================================
@@ -495,17 +552,17 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                                 size: 21,
                               ),
                             ),
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please confirm your password.';
-                              }
-
-                              if (value != passwordController.text) {
-                                return 'Passwords do not match.';
-                              }
-
-                              return null;
-                            },
+                            errorText: _confirmTouched
+                                ? _confirmError(confirmPasswordController.text)
+                                : null,
+                            helperText: _confirmTouched &&
+                                    _confirmError(
+                                          confirmPasswordController.text,
+                                        ) ==
+                                        null
+                                ? 'Passwords match'
+                                : null,
+                            validator: _confirmError,
                           ),
 
                           const SizedBox(height: 28),
@@ -513,7 +570,11 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                           // =================================================
                           // CREATE ACCOUNT BUTTON
                           // =================================================
-                          Container(
+                          // Dimmed and disabled until every field is valid
+                          AnimatedOpacity(
+                            duration: const Duration(milliseconds: 200),
+                            opacity: _isFormValid || _loading ? 1 : 0.5,
+                            child: Container(
                             width: double.infinity,
                             height: 60,
                             decoration: BoxDecoration(
@@ -536,12 +597,13 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                               ],
                             ),
                             child: ElevatedButton(
-  onPressed: _loading ? null : createAccount,
+  onPressed: _loading || !_isFormValid ? null : createAccount,
   style: ElevatedButton.styleFrom(
     backgroundColor: Colors.transparent,
     disabledBackgroundColor: Colors.transparent,
     shadowColor: Colors.transparent,
     foregroundColor: AppColors.white,
+    disabledForegroundColor: AppColors.white,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(20),
     ),
@@ -573,6 +635,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
           ],
         ),
 ),
+                            ),
                           ),
 
                           const SizedBox(height: 25),
@@ -672,6 +735,9 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
     bool obscureText = false,
     TextInputType keyboardType = TextInputType.text,
     Widget? suffixIcon,
+    FocusNode? focusNode,
+    String? errorText,
+    String? helperText,
     String? Function(String?)? validator,
   }) {
     return Column(
@@ -690,6 +756,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
 
         TextFormField(
           controller: controller,
+          focusNode: focusNode,
           obscureText: obscureText,
           keyboardType: keyboardType,
           validator: validator,
@@ -700,6 +767,12 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
           ),
           decoration: InputDecoration(
             hintText: hint,
+            errorText: errorText,
+            helperText: helperText,
+            helperStyle: const TextStyle(
+              color: _successColor,
+              fontWeight: FontWeight.w600,
+            ),
             // يسمح لرسالة شروط كلمة المرور تنعرض على أكثر من سطر
             errorMaxLines: 8,
             hintStyle: const TextStyle(

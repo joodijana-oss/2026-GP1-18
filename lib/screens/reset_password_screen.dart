@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
-import '../utils/password_validator.dart';
+import '../utils/validators.dart';
+import '../widgets/password_rules_checklist.dart';
 import 'forgot_password_screen.dart';
 import 'login_screen.dart';
 
@@ -30,8 +31,15 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
 
+  // Lets a change to the new password re-check the confirm field
+  final _confirmFieldKey = GlobalKey<FormFieldState<String>>();
+
   bool hidePassword = true;
   bool hideConfirmPassword = true;
+
+  // The rules checklist appears once the user starts typing
+  bool _passwordTouched = false;
+  bool _confirmTouched = false;
 
   _LinkState _linkState = _LinkState.checking;
   String? _email;
@@ -54,8 +62,36 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
       curve: Curves.easeInOut,
     );
 
+    passwordController.addListener(_onPasswordChanged);
+    confirmPasswordController.addListener(_onConfirmChanged);
+
     _verifyLink();
   }
+
+  void _onPasswordChanged() {
+    setState(() {
+      if (passwordController.text.isNotEmpty) _passwordTouched = true;
+    });
+    // Same as Sign Up: "Passwords match" updates when the main one changes
+    if (_confirmTouched) _confirmFieldKey.currentState?.validate();
+  }
+
+  void _onConfirmChanged() {
+    setState(() {
+      if (confirmPasswordController.text.isNotEmpty) _confirmTouched = true;
+    });
+  }
+
+  String? _confirmError(String? value) => Validators.confirmPassword(
+        value,
+        passwordController.text,
+        requiredMessage: 'Please confirm your new password.',
+      );
+
+  // Reset Password stays disabled until both fields are valid
+  bool get _isFormValid =>
+      PasswordValidator.validate(passwordController.text) == null &&
+      _confirmError(confirmPasswordController.text) == null;
 
   @override
   void dispose() {
@@ -606,11 +642,19 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
                 size: 21,
               ),
             ),
+            // The checklist below shows the rules live instead of
+            // a long error text; only submit uses the full validator
+            liveValidation: false,
             validator: (value) => PasswordValidator.validate(
               value,
               requiredMessage: 'New password is required.',
             ),
           ),
+
+          if (_passwordTouched) ...[
+            const SizedBox(height: 10),
+            PasswordRulesChecklist(password: passwordController.text),
+          ],
 
           const SizedBox(height: 17),
 
@@ -632,15 +676,12 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
                 size: 21,
               ),
             ),
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Please confirm your new password.';
-              }
-              if (value != passwordController.text) {
-                return 'Passwords do not match.';
-              }
-              return null;
-            },
+            fieldKey: _confirmFieldKey,
+            validator: _confirmError,
+            helperText: _confirmTouched &&
+                    _confirmError(confirmPasswordController.text) == null
+                ? 'Passwords match'
+                : null,
           ),
 
           const SizedBox(height: 28),
@@ -648,7 +689,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
           _buildMainButton(
             text: 'Reset Password',
             icon: Icons.check_rounded,
-            onPressed: _resetPassword,
+            onPressed: _isFormValid ? _resetPassword : null,
             loading: _loading,
           ),
         ],
@@ -662,10 +703,14 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
   Widget _buildMainButton({
     required String text,
     required IconData icon,
-    required VoidCallback onPressed,
+    // null = disabled (dimmed), e.g. form not valid yet
+    required VoidCallback? onPressed,
     bool loading = false,
   }) {
-    return Container(
+    return AnimatedOpacity(
+      duration: const Duration(milliseconds: 200),
+      opacity: onPressed != null || loading ? 1 : 0.5,
+      child: Container(
       width: double.infinity,
       height: 60,
       decoration: BoxDecoration(
@@ -721,6 +766,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
                 ],
               ),
       ),
+      ),
     );
   }
 
@@ -735,6 +781,10 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
     bool obscureText = false,
     Widget? suffixIcon,
     String? Function(String?)? validator,
+    GlobalKey<FormFieldState<String>>? fieldKey,
+    String? helperText,
+    // false = no live error text (e.g. the password has its checklist)
+    bool liveValidation = true,
   }) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -749,9 +799,14 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
         ),
         const SizedBox(height: 8),
         TextFormField(
+          key: fieldKey,
           controller: controller,
           obscureText: obscureText,
           validator: validator,
+          // Live: re-validates on every change once the user has typed
+          autovalidateMode: liveValidation
+              ? AutovalidateMode.onUserInteraction
+              : AutovalidateMode.disabled,
           style: const TextStyle(
             color: AppColors.navy,
             fontSize: 14.5,
@@ -762,6 +817,11 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
             hintStyle: const TextStyle(
               color: AppColors.secondaryText,
               fontSize: 14,
+            ),
+            helperText: helperText,
+            helperStyle: const TextStyle(
+              color: PasswordRulesChecklist.successColor,
+              fontWeight: FontWeight.w600,
             ),
             // Room for the list of unmet password rules
             errorMaxLines: 8,

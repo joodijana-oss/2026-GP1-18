@@ -11,6 +11,14 @@ class PasswordValidator {
   static final RegExp _digit = RegExp(r'[0-9]');
   static final RegExp _special = RegExp(r'[!@#$%^&*(),.?":{}|<>_\-+=]');
 
+  // Individual rules, used by the live checklist on Sign Up
+  static const int minLength = 8;
+  static bool hasMinLength(String value) => value.length >= minLength;
+  static bool hasUppercase(String value) => _uppercase.hasMatch(value);
+  static bool hasLowercase(String value) => _lowercase.hasMatch(value);
+  static bool hasDigit(String value) => _digit.hasMatch(value);
+  static bool hasSpecial(String value) => _special.hasMatch(value);
+
   // [requiredMessage] is shown when the field is empty
   // (Sign Up: "Password is required.", Reset: "New password is required.")
   static String? validate(

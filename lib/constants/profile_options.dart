@@ -75,9 +75,17 @@ class ProfileOptions {
 
   static const List<String> graduationStatuses = [
     'Student',
-    'Fresh Graduate',
     'Graduate',
   ];
+
+  // Older accounts may have 'Fresh Graduate' saved (removed option).
+  // Treat it as 'Graduate'; any other unknown value returns null.
+  static String? normalizeGraduationStatus(String? status) {
+    if (status == null) return null;
+    final value = status.trim();
+    if (value == 'Fresh Graduate') return 'Graduate';
+    return graduationStatuses.contains(value) ? value : null;
+  }
 
   // Shown as text in the dropdown, saved as int with int.parse()
   static final List<String> graduationYears = [

@@ -16,7 +16,9 @@ import '../constants/profile_options.dart';
 
 import '../features/community/community_screen.dart';
 
-import '../services/cv_service.dart';
+import '../utils/cv_validator.dart';
+
+import '../utils/validators.dart';
 
 import '../services/user_service.dart';
 
@@ -1127,9 +1129,12 @@ class _ProfileScreenState extends State<ProfileScreen>
                     options: {for (final m in ProfileOptions.majors) m: m},
                   )),
 
-          _infoRow(Icons.flag_outlined, 'Graduation Status',
+          _infoRow(Icons.flag_outlined, 'Academic Status',
 
-              _text('graduationStatus'),
+              ProfileOptions.normalizeGraduationStatus(
+                    _user['graduationStatus']?.toString(),
+                  ) ??
+                  _text('graduationStatus'),
               onEdit: _editGraduationStatus),
 
           _infoRow(Icons.calendar_today_outlined, 'Graduation Date',
@@ -2051,35 +2056,42 @@ class _ProfileScreenState extends State<ProfileScreen>
 
 
 
-      final bytes = await file.readAsBytes();
+      // Same rules as Profile Setup (size, PDF, 1-3 pages, has text).
+      // Runs on the freshly picked file, before anything is saved.
 
-
-
-      // Throws CvReadException with the exact backlog messages
-
-      final text = CvService.extractText(
+      final result = await CvValidator.validate(
 
         fileName: file.name,
 
-        bytes: bytes,
+        sizeInBytes: await file.length(),
+
+        readBytes: file.readAsBytes,
 
       );
 
 
 
+      // Invalid: show the reason, old CV stays untouched
+
+      if (!result.isValid) {
+
+        _showMessage(result.error!, isError: true);
+
+        return;
+
+      }
+
+
+
       // Saves name + date + text together. If it fails, the old CV stays.
 
-      await _userService.saveCv(fileName: file.name, text: text);
+      await _userService.saveCv(fileName: file.name, text: result.text!);
 
 
 
       await _loadProfile();
 
       _showMessage('Your CV has been replaced successfully.');
-
-    } on CvReadException catch (e) {
-
-      _showMessage(e.message, isError: true);
 
     } catch (e) {
 
@@ -2691,8 +2703,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   // Same ranges as Profile Setup (null if no status yet)
   // Student: current month -> 6 years ahead
-  // Graduate / Fresh Graduate: January 2000 -> current month
+  // Graduate: January 2000 -> current month
   DateTimeRange? _graduationDateRange(String? status) {
+    status = ProfileOptions.normalizeGraduationStatus(status);
     if (status == null) return null;
 
     final current = _currentMonth;
@@ -2716,12 +2729,15 @@ class _ProfileScreenState extends State<ProfileScreen>
   // buildUpdate = fields saved with updateUser (Firestore).
   // customSave = any other save (Email). It returns the SnackBar to show
   // after closing the sheet, or null to keep the sheet open (field error).
+  // canSave = Save stays disabled while it returns false; fields call
+  // setSheetState on change so it updates live.
   Future<void> _showEditSheet({
     required String label,
     required Widget Function(BuildContext sheetContext, StateSetter setSheetState)
         buildField,
     Map<String, dynamic> Function()? buildUpdate,
     Future<_EditResult?> Function(StateSetter setSheetState)? customSave,
+    bool Function()? canSave,
   }) async {
     final formKey = GlobalKey<FormState>();
     var isSaving = false;
@@ -2796,6 +2812,8 @@ class _ProfileScreenState extends State<ProfileScreen>
               }
             }
 
+            final saveEnabled = canSave?.call() ?? true;
+
             return PopScope(
               // Don't close the sheet while saving
               canPop: !isSaving,
@@ -2858,7 +2876,11 @@ class _ProfileScreenState extends State<ProfileScreen>
                               ),
                               const SizedBox(width: 12),
                               Expanded(
-                                child: Container(
+                                // Dimmed and disabled until the field is valid
+                                child: AnimatedOpacity(
+                                  duration: const Duration(milliseconds: 200),
+                                  opacity: saveEnabled || isSaving ? 1 : 0.5,
+                                  child: Container(
                                   height: 52,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
@@ -2880,13 +2902,15 @@ class _ProfileScreenState extends State<ProfileScreen>
                                     ],
                                   ),
                                   child: ElevatedButton(
-                                    onPressed: isSaving ? null : save,
+                                    onPressed:
+                                        isSaving || !saveEnabled ? null : save,
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.transparent,
                                       disabledBackgroundColor:
                                           Colors.transparent,
                                       shadowColor: Colors.transparent,
                                       foregroundColor: AppColors.white,
+                                      disabledForegroundColor: AppColors.white,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(20),
                                       ),
@@ -2908,6 +2932,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                                             ),
                                           ),
                                   ),
+                                ),
                                 ),
                               ),
                             ],
@@ -2959,8 +2984,25 @@ class _ProfileScreenState extends State<ProfileScreen>
     const loginAgainMessage =
         'For your security, please log in again and then change your email.';
 
+    // Same rules as Sign Up + must be a different email
+    String? validateNewEmail(String? value) {
+      final error = Validators.email(value);
+      if (error != null) return error;
+
+      if (value!.trim().toLowerCase() == currentEmail.toLowerCase()) {
+        return 'This is already your email address.';
+      }
+      return null;
+    }
+
     await _showEditSheet(
       label: 'Email Address',
+      // Save only when both fields are valid and no Firebase error is showing
+      canSave: () =>
+          validateNewEmail(newEmail) == null &&
+          Validators.enteredPassword(password) == null &&
+          emailError == null &&
+          passwordError == null,
       buildField: (_, setSheetState) => Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -2969,35 +3011,19 @@ class _ProfileScreenState extends State<ProfileScreen>
             keyboardType: TextInputType.emailAddress,
             autocorrect: false,
             forceErrorText: emailError,
+            // Live: error updates on every keystroke once typing starts
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             onChanged: (value) {
-              newEmail = value;
-              if (emailError != null) setSheetState(() => emailError = null);
+              // Rebuild so the Save button follows the field
+              setSheetState(() {
+                newEmail = value;
+                emailError = null;
+              });
             },
-            // Same rules as Sign Up + must be a different email
-            validator: (value) {
-              if (value == null || value.trim().isEmpty) {
-                return 'Email address is required.';
-              }
-
-              final email = value.trim();
-
-              final emailRegex = RegExp(
-                r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$',
-              );
-
-              if (!emailRegex.hasMatch(email)) {
-                return 'Enter a valid email address.';
-              }
-
-              if (email.toLowerCase() == currentEmail.toLowerCase()) {
-                return 'This is already your email address.';
-              }
-
-              return null;
-            },
+            validator: validateNewEmail,
             style: const TextStyle(color: AppColors.navy, fontSize: 14),
             decoration: _inputDecoration(
-              hint: 'Enter your new email address',
+              hint: Validators.emailHint,
               icon: Icons.email_outlined,
             ),
           ),
@@ -3005,18 +3031,15 @@ class _ProfileScreenState extends State<ProfileScreen>
           TextFormField(
             obscureText: hidePassword,
             forceErrorText: passwordError,
+            // "Password is required" only after the user has typed here
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             onChanged: (value) {
-              password = value;
-              if (passwordError != null) {
-                setSheetState(() => passwordError = null);
-              }
+              setSheetState(() {
+                password = value;
+                passwordError = null;
+              });
             },
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Password is required.';
-              }
-              return null;
-            },
+            validator: Validators.enteredPassword,
             style: const TextStyle(color: AppColors.navy, fontSize: 14),
             decoration: _inputDecoration(
               hint: 'Enter your current password',
@@ -3104,17 +3127,15 @@ class _ProfileScreenState extends State<ProfileScreen>
 
     await _showEditSheet(
       label: 'Full Name',
-      buildField: (_, _) => TextFormField(
+      canSave: () => Validators.fullName(name) == null,
+      buildField: (_, setSheetState) => TextFormField(
         initialValue: name,
         autofocus: true,
         textCapitalization: TextCapitalization.words,
-        onChanged: (value) => name = value,
-        validator: (value) {
-          if (value == null || value.trim().isEmpty) {
-            return 'Full name is required.';
-          }
-          return null;
-        },
+        // Live: "required" shows as soon as the name is cleared
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        onChanged: (value) => setSheetState(() => name = value),
+        validator: Validators.fullName,
         style: const TextStyle(color: AppColors.navy, fontSize: 14),
         decoration: _inputDecoration(
           hint: 'Enter your full name',
@@ -3139,12 +3160,13 @@ class _ProfileScreenState extends State<ProfileScreen>
 
     await _showEditSheet(
       label: label,
-      buildField: (_, _) => _dropdownField(
+      canSave: () => selected != null,
+      buildField: (_, setSheetState) => _dropdownField(
         hint: hint,
         icon: icon,
         value: selected,
         options: options,
-        onChanged: (value) => selected = value,
+        onChanged: (value) => setSheetState(() => selected = value),
       ),
       buildUpdate: () => {fieldKey: selected},
     );
@@ -3154,9 +3176,8 @@ class _ProfileScreenState extends State<ProfileScreen>
     final savedStatus = _user['graduationStatus']?.toString();
     final savedDate = _savedGraduationDate;
 
-    String? status = ProfileOptions.graduationStatuses.contains(savedStatus)
-        ? savedStatus
-        : null;
+    // Old 'Fresh Graduate' values open the sheet as 'Graduate'
+    String? status = ProfileOptions.normalizeGraduationStatus(savedStatus);
     DateTime? date = savedDate;
 
     // True when the saved graduation date doesn't fit the new status
@@ -3165,7 +3186,9 @@ class _ProfileScreenState extends State<ProfileScreen>
     var needsDate = false;
 
     await _showEditSheet(
-      label: 'Graduation Status',
+      label: 'Academic Status',
+      // A new date is required when the old one doesn't fit the status
+      canSave: () => status != null && (!needsDate || date != null),
       buildField: (sheetContext, setSheetState) => Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -3225,7 +3248,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
     if (range == null) {
       _showFieldMessage(
-        'Please select your graduation status first.',
+        'Please select your academic status first.',
         isError: true,
       );
       return;
@@ -3238,6 +3261,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
     await _showEditSheet(
       label: 'Graduation Date',
+      canSave: () => date != null,
       buildField: (sheetContext, setSheetState) => _graduationDateField(
         sheetContext: sheetContext,
         date: date,
