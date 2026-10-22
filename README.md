@@ -1,4 +1,4 @@
-# Masra (المسرى)
+# Masra (مسرى)
 
 **An AI-powered career intelligence platform for Computing and IT students and fresh graduates in Saudi Arabia.**
 
@@ -38,7 +38,6 @@ Masra analyzes a user's CV against real Saudi job market data, identifies skill 
 │   ├── services/        # Firebase and Claude API services
 │   └── models/          # Data models
 ├── assets/              # Images and bundled data files
-├── data_collection/     # Python scripts for collecting and cleaning data
 ├── android/             # Android platform files
 └── pubspec.yaml         # Flutter dependencies
 ```
@@ -53,7 +52,6 @@ Masra analyzes a user's CV against real Saudi job market data, identifies skill 
 - Android Studio with an Android emulator, or a physical Android device
 - A Firebase project
 - A Claude API key from the [Anthropic Console](https://console.anthropic.com/)
-- Python 3.x (only to run the data collection scripts)
 
 ---
 
@@ -89,14 +87,6 @@ flutter run --dart-define=CLAUDE_API_KEY=your_api_key_here
 ```
 
 > Do not commit the API key or paste it into any file in the repository.
-
-### 5. (Optional) Run the data collection scripts
-
-```bash
-cd data_collection
-pip install requests beautifulsoup4 pandas
-python [script_name].py
-```
 
 ---
 
