@@ -24,6 +24,8 @@ import '../services/user_service.dart';
 
 import '../theme/app_colors.dart';
 
+import '../widgets/appearance_card.dart';
+
 import 'explore_screen.dart';
 
 import 'home_screen.dart';
@@ -611,6 +613,10 @@ class _ProfileScreenState extends State<ProfileScreen>
             _padded(_buildCVCard()),
 
             const SizedBox(height: 28),
+
+            _padded(const AppearanceCard()),
+
+            const SizedBox(height: 24),
 
             _padded(
 

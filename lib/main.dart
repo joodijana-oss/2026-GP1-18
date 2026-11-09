@@ -4,6 +4,7 @@ import 'package:masra/screens/reset_password_screen.dart';
 import 'package:masra/screens/splash_screen.dart';
 import 'package:masra/theme/app_colors.dart';
 import 'package:masra/theme/app_theme.dart';
+import 'package:masra/theme/theme_controller.dart';
 import 'package:masra/utils/password_reset_link.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -16,6 +17,9 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // The user's saved light / dark choice (Profile > Appearance)
+  await ThemeController.instance.load();
 
   // Must be added before runApp (see PasswordResetLinkObserver)
   WidgetsBinding.instance.addObserver(PasswordResetLinkObserver(navigatorKey));
@@ -30,31 +34,34 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
-// Follows the phone's light / dark setting.
+// Applies the light / dark choice from ThemeController (Profile >
+// Appearance): Auto follows the phone, Light and Dark are fixed.
 class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
-  static bool get _phoneIsDark =>
-      WidgetsBinding.instance.platformDispatcher.platformBrightness ==
-      Brightness.dark;
+  final ThemeController _theme = ThemeController.instance;
 
   @override
   void initState() {
     super.initState();
-    AppColors.isDark = _phoneIsDark;
+    AppColors.isDark = _theme.isDark;
+    _theme.addListener(_applyTheme);
     WidgetsBinding.instance.addObserver(this);
   }
 
   @override
   void dispose() {
+    _theme.removeListener(_applyTheme);
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
   // The phone switched between light and dark while the app is open.
   @override
-  void didChangePlatformBrightness() {
-    if (_phoneIsDark == AppColors.isDark) return;
+  void didChangePlatformBrightness() => _theme.phoneBrightnessChanged();
 
-    setState(() => AppColors.isDark = _phoneIsDark);
+  void _applyTheme() {
+    if (_theme.isDark == AppColors.isDark) return;
+
+    setState(() => AppColors.isDark = _theme.isDark);
 
     // AppColors are plain getters, so widgets don't know they changed.
     // Ask every widget on screen to rebuild; nothing loses its state.
