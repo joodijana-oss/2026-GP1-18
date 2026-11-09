@@ -195,6 +195,7 @@ class _LoginScreenState extends State<LoginScreen>
             ),
             const SizedBox(width: 5),
             IconButton(
+              tooltip: 'Close',
               onPressed: () =>
                   ScaffoldMessenger.of(context).hideCurrentSnackBar(),
               icon: const Icon(
@@ -347,6 +348,7 @@ class _LoginScreenState extends State<LoginScreen>
                               ),
                             ),
                             child: IconButton(
+                              tooltip: 'Back',
                               onPressed: () {
                                 Navigator.pop(context);
                               },
@@ -440,6 +442,7 @@ class _LoginScreenState extends State<LoginScreen>
                             icon: Icons.lock_outline_rounded,
                             obscureText: hidePassword,
                             suffixIcon: IconButton(
+                              tooltip: 'Show or hide password',
                               onPressed: () {
                                 setState(() {
                                   hidePassword = !hidePassword;

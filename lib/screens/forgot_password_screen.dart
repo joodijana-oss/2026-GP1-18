@@ -288,6 +288,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                               ),
                             ),
                             child: IconButton(
+                              tooltip: 'Back',
                               onPressed: () {
                                 Navigator.pop(context);
                               },

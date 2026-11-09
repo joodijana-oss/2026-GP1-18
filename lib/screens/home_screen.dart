@@ -644,7 +644,7 @@ class _HomeScreenState extends State<HomeScreen>
                             step.badge,
                             style: const TextStyle(
                               color: AppColors.gold,
-                              fontSize: 11,
+                              fontSize: 12,
                               fontWeight: FontWeight.w700,
                             ),
                           ),
@@ -990,7 +990,7 @@ class _HomeScreenState extends State<HomeScreen>
                     color: goldAccent
                         ? AppColors.gold
                         : AppColors.teal,
-                    fontSize: 9.5,
+                    fontSize: 11,
                     fontWeight: FontWeight.w800,
                     letterSpacing: 0.5,
                   ),
@@ -1040,7 +1040,7 @@ class _HomeScreenState extends State<HomeScreen>
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
                       color: AppColors.secondaryText,
-                      fontSize: 10.5,
+                      fontSize: 12,
                     ),
                   ),
                 ),
@@ -1216,7 +1216,7 @@ class _HomeScreenState extends State<HomeScreen>
             textAlign: TextAlign.center,
             style: const TextStyle(
               color: AppColors.navy,
-              fontSize: 11,
+              fontSize: 12,
               fontWeight: FontWeight.w600,
               height: 1.25,
             ),
@@ -1302,7 +1302,7 @@ class _HomeScreenState extends State<HomeScreen>
                           'Saudi Arabia',
                           style: TextStyle(
                             color: AppColors.secondaryText,
-                            fontSize: 11.5,
+                            fontSize: 12,
                           ),
                         ),
                       ],
@@ -1324,7 +1324,7 @@ class _HomeScreenState extends State<HomeScreen>
                       'HIGH',
                       style: TextStyle(
                         color: AppColors.gold,
-                        fontSize: 9.5,
+                        fontSize: 11,
                         fontWeight: FontWeight.w800,
                       ),
                     ),
@@ -1413,7 +1413,7 @@ class _HomeScreenState extends State<HomeScreen>
         name,
         style: const TextStyle(
           color: AppColors.secondaryNavy,
-          fontSize: 10.5,
+          fontSize: 12,
           fontWeight: FontWeight.w600,
         ),
       ),
@@ -1769,7 +1769,7 @@ class _HomeScreenState extends State<HomeScreen>
                 color: selected
                     ? AppColors.teal
                     : AppColors.secondaryText,
-                fontSize: 11,
+                fontSize: 12,
                 fontWeight: selected
                     ? FontWeight.w700
                     : FontWeight.w500,
@@ -1933,7 +1933,7 @@ class JourneyNode extends StatelessWidget {
             subtitle,
             style: const TextStyle(
               color: AppColors.secondaryText,
-              fontSize: 10.5,
+              fontSize: 12,
               height: 1.25,
             ),
           ),

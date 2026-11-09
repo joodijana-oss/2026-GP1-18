@@ -294,6 +294,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
             ),
             const SizedBox(width: 5),
             IconButton(
+              tooltip: 'Close',
               onPressed: () => target.hideCurrentSnackBar(),
               icon: const Icon(
                 Icons.close_rounded,
@@ -425,6 +426,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
                               ),
                             ),
                             child: IconButton(
+                              tooltip: 'Back',
                               onPressed: _loading ? null : _goBack,
                               icon: const Icon(
                                 Icons.arrow_back_rounded,
@@ -633,6 +635,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
             icon: Icons.lock_outline_rounded,
             obscureText: hidePassword,
             suffixIcon: IconButton(
+              tooltip: 'Show or hide password',
               onPressed: () => setState(() => hidePassword = !hidePassword),
               icon: Icon(
                 hidePassword
@@ -666,6 +669,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
             icon: Icons.verified_user_outlined,
             obscureText: hideConfirmPassword,
             suffixIcon: IconButton(
+              tooltip: 'Show or hide password',
               onPressed: () =>
                   setState(() => hideConfirmPassword = !hideConfirmPassword),
               icon: Icon(

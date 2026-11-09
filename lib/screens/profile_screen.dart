@@ -973,7 +973,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                                       color: AppColors.gold,
 
-                                      fontSize: 11.5,
+                                      fontSize: 12,
 
                                       fontWeight: FontWeight.w700,
 
@@ -1047,7 +1047,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
           const SizedBox(height: 18),
 
-          _infoRow(Icons.badge_outlined, 'Full Name', _fullName,
+          _infoRow(Icons.badge_outlined, 'Name', _fullName,
               onEdit: _editFullName),
 
           // Changing the email needs the password + a verification link
@@ -1280,7 +1280,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                       color: AppColors.secondaryText,
 
-                      fontSize: 10.5,
+                      fontSize: 12,
 
                       fontWeight: FontWeight.w500,
 
@@ -1750,7 +1750,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                           color: AppColors.secondaryText,
 
-                          fontSize: 11.5,
+                          fontSize: 12,
 
                           height: 1.35,
 
@@ -1926,7 +1926,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                               color: AppColors.secondaryText,
 
-                              fontSize: 10.5,
+                              fontSize: 12,
 
                             ),
 
@@ -2006,7 +2006,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                   color: AppColors.gold,
 
-                  fontSize: 11,
+                  fontSize: 12,
 
                   fontWeight: FontWeight.w800,
 
@@ -2389,7 +2389,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                   color: AppColors.secondaryText,
 
-                  fontSize: 10.5,
+                  fontSize: 12,
 
                 ),
 
@@ -2627,7 +2627,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                 color: selected ? AppColors.teal : AppColors.secondaryText,
 
-                fontSize: 11,
+                fontSize: 12,
 
                 fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
 
@@ -3045,6 +3045,7 @@ class _ProfileScreenState extends State<ProfileScreen>
               hint: 'Enter your current password',
               icon: Icons.lock_outline_rounded,
               suffixIcon: IconButton(
+                tooltip: 'Show or hide password',
                 onPressed: () =>
                     setSheetState(() => hidePassword = !hidePassword),
                 icon: Icon(
@@ -3126,7 +3127,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     var name = _user['fullName']?.toString().trim() ?? '';
 
     await _showEditSheet(
-      label: 'Full Name',
+      label: 'Name',
       canSave: () => Validators.fullName(name) == null,
       buildField: (_, setSheetState) => TextFormField(
         initialValue: name,
@@ -3138,7 +3139,7 @@ class _ProfileScreenState extends State<ProfileScreen>
         validator: Validators.fullName,
         style: const TextStyle(color: AppColors.navy, fontSize: 14),
         decoration: _inputDecoration(
-          hint: 'Enter your full name',
+          hint: 'Enter your name',
           icon: Icons.person_outline_rounded,
         ),
       ),
@@ -3531,6 +3532,7 @@ class _ProfileScreenState extends State<ProfileScreen>
             ),
             const SizedBox(width: 5),
             IconButton(
+              tooltip: 'Close',
               onPressed: () => messenger.hideCurrentSnackBar(),
               icon: const Icon(
                 Icons.close_rounded,

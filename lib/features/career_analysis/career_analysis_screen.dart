@@ -1497,7 +1497,7 @@ class _CareerGoalBadge extends StatelessWidget {
             'Based on your career goal',
             style: TextStyle(
               color: AppColors.teal,
-              fontSize: 11.2,
+              fontSize: 12,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -1626,7 +1626,7 @@ class _PressableInsightCardState
                 widget.subtitle,
                 style: const TextStyle(
                   color: AppColors.secondaryText,
-                  fontSize: 11.5,
+                  fontSize: 12,
                   height: 1.4,
                 ),
               ),

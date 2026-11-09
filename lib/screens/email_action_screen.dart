@@ -201,6 +201,7 @@ class _EmailActionScreenState extends State<EmailActionScreen>
             ),
             const SizedBox(width: 5),
             IconButton(
+              tooltip: 'Close',
               onPressed: () => target.hideCurrentSnackBar(),
               icon: const Icon(
                 Icons.close_rounded,
@@ -332,6 +333,7 @@ class _EmailActionScreenState extends State<EmailActionScreen>
                               ),
                             ),
                             child: IconButton(
+                              tooltip: 'Back',
                               onPressed: _linkState == _LinkState.applying
                                   ? null
                                   : _goBack,

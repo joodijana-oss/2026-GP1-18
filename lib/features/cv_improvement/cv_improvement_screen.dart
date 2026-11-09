@@ -1111,7 +1111,7 @@ class _SuggestionsOnlyBadge extends StatelessWidget {
             'Your CV stays unchanged',
             style: TextStyle(
               color: AppColors.teal,
-              fontSize: 11.2,
+              fontSize: 12,
               fontWeight: FontWeight.w700,
             ),
           ),

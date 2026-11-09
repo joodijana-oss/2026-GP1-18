@@ -22,7 +22,7 @@ class Validators {
   }
 
   static String? fullName(String? value) =>
-      required(value, 'Full name is required.');
+      required(value, 'Name is required.');
 
   static String? email(String? value) {
     if (value == null || value.trim().isEmpty) {
