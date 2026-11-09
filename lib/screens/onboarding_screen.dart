@@ -53,8 +53,8 @@ class OnboardingScreen extends StatelessWidget {
                   // ==========================
                   Image.asset(
                     'lib/assets/images/Logoo.png',
-                    // The logo is dark navy: show it in white on dark backgrounds.
-                    color: AppColors.isDark ? Colors.white : null,
+                    // No dark-mode tint here: this screen's background image
+                    // is light in both modes, so the navy logo stays readable.
                     width: size.width * 0.62,
                     fit: BoxFit.contain,
                   ),
@@ -67,8 +67,10 @@ class OnboardingScreen extends StatelessWidget {
                   Text(
                     'G U I D E   •   D E V E L O P   •   A C H I E V E',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: AppColors.secondaryText,
+                    style: const TextStyle(
+                      // Fixed colour (light-mode secondary text): it sits on
+                      // the light background image in both modes.
+                      color: Color(0xFF60788C),
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 2.2,
