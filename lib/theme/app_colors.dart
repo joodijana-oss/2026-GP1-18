@@ -1,73 +1,90 @@
-/*import 'package:flutter/material.dart';
-class AppColors {
-  static const navy = Color(0xFF0B2942);
-  static const secondaryNavy = Color(0xFF163E5A);
-
-  static const teal = Color(0xFF2F7F8C);
-  static const lightTeal = Color(0xFF44A1A4);
-
-  static const gold = Color(0xFFC99A3D);
-
-  static const white = Color(0xFFFFFFFF);
-  static const background = Color(0xFFF7F9FA);
-  static const lightGray = Color(0xFFEEF2F4);
-
-  static const darkText = Color(0xFF17212B);
-  static const secondaryText = Color(0xFF66737F);
-}*/
-
 import 'package:flutter/material.dart';
 
+/// Masra colours, for light and dark mode.
+///
+/// Every colour is a getter that returns the light or the dark value
+/// depending on [AppColors.isDark] (set by ThemeController from the phone's
+/// setting). Because of that these colours cannot be used inside `const`
+/// expressions.
+///
+/// Three groups:
+///  - Fill colours (navy, teal, white, background...): backgrounds, cards,
+///    buttons. Brand fills stay brand-coloured in dark mode; surfaces go dark.
+///  - Text colours (navyText, tealText, darkText...): text, icons and borders
+///    drawn ON a surface. They become light in dark mode.
+///  - "onBrand" colours: text and icons drawn on a brand fill (navy header,
+///    primary button). They are the same in both modes.
 class AppColors {
+  /// True while the app is showing its dark theme.
+  static bool isDark = false;
+
+  static Color _pick(int light, int dark) => Color(isDark ? dark : light);
+
   // =========================
-  // MASRA MAIN COLORS
+  // BRAND FILLS
   // =========================
 
   // اللون الكحلي الأساسي - نفس زر الصفحة الترحيبية
-  static const Color navy = Color(0xFF06365A);
+  static Color get navy => _pick(0xFF06365A, 0xFF0B3D63);
 
   // كحلي ثانوي
-  static const Color secondaryNavy = Color(0xFF0B4F6C);
+  static Color get secondaryNavy => _pick(0xFF0B4F6C, 0xFF0F5676);
 
   // التركواز الأساسي
-  static const Color teal = Color(0xFF0B91A6);
+  static Color get teal => _pick(0xFF0B91A6, 0xFF0B91A6);
 
   // تركواز فاتح للخلفيات والكروت
-  static const Color lightTeal = Color(0xFFDCEEF1);
+  static Color get lightTeal => _pick(0xFFDCEEF1, 0xFF103845);
 
   // الذهبي المستوحى من الشمس والطريق
-  static const Color gold = Color(0xFFF2B544);
+  static Color get gold => _pick(0xFFF2B544, 0xFFF2B544);
 
   // =========================
-  // BACKGROUNDS
+  // SURFACES
   // =========================
 
-  // الأبيض الأساسي للتطبيق
-  // اللون اللي اخترتيه: #FDF8F3
-  static const Color white = Color(0xFFFDF8F3);
+  // الأبيض الأساسي للتطبيق (#FDF8F3) - كروت وأسطح
+  static Color get white => _pick(0xFFFDF8F3, 0xFF13212B);
 
   // الخلفية الأساسية
-  static const Color background = Color(0xFFFDF8F3);
+  static Color get background => _pick(0xFFFDF8F3, 0xFF0B161E);
 
   // خلفية خفيفة للكروت والحقول
-  static const Color softBackground = Color(0xFFFFFCF8);
+  static Color get softBackground => _pick(0xFFFFFCF8, 0xFF13212B);
 
   // =========================
-  // NEUTRAL COLORS
+  // NEUTRALS (borders, dividers, disabled)
   // =========================
 
-  static const Color lightGray = Color(0xFFE6EAED);
+  static Color get lightGray => _pick(0xFFE6EAED, 0xFF243540);
 
-  static const Color mediumGray = Color(0xFFB8C2C8);
+  static Color get mediumGray => _pick(0xFFB8C2C8, 0xFF5B6C78);
 
   // =========================
-  // TEXT COLORS
+  // TEXT / ICONS / BORDERS ON A SURFACE
   // =========================
 
   // العناوين
-  static const Color darkText = Color(0xFF06365A);
+  static Color get darkText => _pick(0xFF06365A, 0xFFE4EEF3);
 
-  // النصوص الثانوية
-  // نفس GUIDE • DEVELOP • ACHIEVE
-  static const Color secondaryText = Color(0xFF60788C);
+  // النصوص الثانوية (GUIDE • DEVELOP • ACHIEVE)
+  static Color get secondaryText => _pick(0xFF60788C, 0xFF9DB0BD);
+
+  static Color get navyText => _pick(0xFF06365A, 0xFFE4EEF3);
+
+  static Color get secondaryNavyText => _pick(0xFF0B4F6C, 0xFFB9CFDA);
+
+  static Color get tealText => _pick(0xFF0B91A6, 0xFF43C6DA);
+
+  // =========================
+  // ON BRAND FILLS (same in light and dark)
+  // =========================
+
+  static const Color onBrand = Color(0xFFFDF8F3);
+
+  static const Color onBrandTeal = Color(0xFFDCEEF1);
+
+  static const Color onBrandGray = Color(0xFFE6EAED);
+
+  static const Color onBrandMuted = Color(0xFFB8C2C8);
 }

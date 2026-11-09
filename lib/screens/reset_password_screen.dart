@@ -273,8 +273,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(
-                      color: AppColors.navy,
+                    style: TextStyle(
+                      color: AppColors.navyText,
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
                     ),
@@ -283,7 +283,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
                     const SizedBox(height: 2),
                     Text(
                       subtitle,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: AppColors.secondaryText,
                         fontSize: 12,
                       ),
@@ -296,7 +296,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
             IconButton(
               tooltip: 'Close',
               onPressed: () => target.hideCurrentSnackBar(),
-              icon: const Icon(
+              icon: Icon(
                 Icons.close_rounded,
                 color: AppColors.secondaryText,
                 size: 19,
@@ -319,7 +319,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
           // =========================
           Container(
             height: 315,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -419,10 +419,10 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
                             width: 43,
                             height: 43,
                             decoration: BoxDecoration(
-                              color: AppColors.white.withValues(alpha: 0.13),
+                              color: AppColors.onBrand.withValues(alpha: 0.13),
                               borderRadius: BorderRadius.circular(14),
                               border: Border.all(
-                                color: AppColors.white.withValues(alpha: 0.20),
+                                color: AppColors.onBrand.withValues(alpha: 0.20),
                               ),
                             ),
                             child: IconButton(
@@ -430,7 +430,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
                               onPressed: _loading ? null : _goBack,
                               icon: const Icon(
                                 Icons.arrow_back_rounded,
-                                color: AppColors.white,
+                                color: AppColors.onBrand,
                                 size: 22,
                               ),
                             ),
@@ -447,9 +447,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
                   Container(
                     width: double.infinity,
                     padding: const EdgeInsets.fromLTRB(24, 30, 24, 35),
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: AppColors.background,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(38),
                         topRight: Radius.circular(38),
                       ),
@@ -510,8 +510,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
   // CHECKING LINK
   // ===============================================================
   Widget _buildChecking() {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 60),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 60),
       child: Center(
         child: Column(
           children: [
@@ -519,11 +519,11 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
               width: 28,
               height: 28,
               child: CircularProgressIndicator(
-                color: AppColors.teal,
+                color: AppColors.tealText,
                 strokeWidth: 2.5,
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text(
               'Checking your reset link...',
               style: TextStyle(
@@ -552,8 +552,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
       children: [
         Text(
           title,
-          style: const TextStyle(
-            color: AppColors.navy,
+          style: TextStyle(
+            color: AppColors.navyText,
             fontSize: 29,
             fontWeight: FontWeight.w800,
             letterSpacing: -0.7,
@@ -575,8 +575,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
               Expanded(
                 child: Text(
                   message,
-                  style: const TextStyle(
-                    color: AppColors.navy,
+                  style: TextStyle(
+                    color: AppColors.navyText,
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                     height: 1.45,
@@ -605,10 +605,10 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             'New Password',
             style: TextStyle(
-              color: AppColors.navy,
+              color: AppColors.navyText,
               fontSize: 29,
               fontWeight: FontWeight.w800,
               letterSpacing: -0.7,
@@ -619,7 +619,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
             _email == null
                 ? 'Create a new password for your account.'
                 : 'Create a new password for $_email.',
-            style: const TextStyle(
+            style: TextStyle(
               color: AppColors.secondaryText,
               fontSize: 14,
               height: 1.45,
@@ -719,7 +719,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
       height: 60,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        gradient: const LinearGradient(
+        gradient: LinearGradient(
           colors: [
             AppColors.navy,
             AppColors.secondaryNavy,
@@ -740,8 +740,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
           backgroundColor: Colors.transparent,
           disabledBackgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
-          foregroundColor: AppColors.white,
-          disabledForegroundColor: AppColors.white,
+          foregroundColor: AppColors.onBrand,
+          disabledForegroundColor: AppColors.onBrand,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
@@ -751,7 +751,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
                 width: 23,
                 height: 23,
                 child: CircularProgressIndicator(
-                  color: AppColors.white,
+                  color: AppColors.onBrand,
                   strokeWidth: 2.5,
                 ),
               )
@@ -795,8 +795,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
       children: [
         Text(
           label,
-          style: const TextStyle(
-            color: AppColors.navy,
+          style: TextStyle(
+            color: AppColors.navyText,
             fontSize: 13,
             fontWeight: FontWeight.w700,
           ),
@@ -811,14 +811,14 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
           autovalidateMode: liveValidation
               ? AutovalidateMode.onUserInteraction
               : AutovalidateMode.disabled,
-          style: const TextStyle(
-            color: AppColors.navy,
+          style: TextStyle(
+            color: AppColors.navyText,
             fontSize: 14.5,
             fontWeight: FontWeight.w500,
           ),
           decoration: InputDecoration(
             hintText: hint,
-            hintStyle: const TextStyle(
+            hintStyle: TextStyle(
               color: AppColors.secondaryText,
               fontSize: 14,
             ),
@@ -839,7 +839,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
               ),
               child: Icon(
                 icon,
-                color: AppColors.teal,
+                color: AppColors.tealText,
                 size: 20,
               ),
             ),
@@ -852,14 +852,14 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(17),
-              borderSide: const BorderSide(
+              borderSide: BorderSide(
                 color: AppColors.lightGray,
               ),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(17),
-              borderSide: const BorderSide(
-                color: AppColors.teal,
+              borderSide: BorderSide(
+                color: AppColors.tealText,
                 width: 1.5,
               ),
             ),

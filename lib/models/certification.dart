@@ -48,7 +48,7 @@ class Certification {
     Map<String, dynamic> data,
   ) {
     List<String> list(dynamic value) =>
-        value is List ? value.map((e) => e.toString()).toList() : const [];
+        value is List ? value.map((e) => e.toString()).toList() : [];
 
     return Certification(
       id: id,

@@ -43,22 +43,22 @@ class _HomeScreenState extends State<HomeScreen>
   // 0 until the user has a career analysis (also while loading / on error)
   int currentJourneyStage = 0;
 
-  final List<RecommendationItem> recommendations = const [
-    RecommendationItem(
+  final List<RecommendationItem> recommendations = [
+    const RecommendationItem(
       type: 'Course',
       title: 'Machine Learning Specialization',
       provider: 'Coursera',
       reason: 'Based on your skill gaps',
       icon: Icons.menu_book_rounded,
     ),
-    RecommendationItem(
+    const RecommendationItem(
       type: 'Certification',
       title: 'Google Data Analytics',
       provider: 'Google',
       reason: 'Matches your career interests',
       icon: Icons.workspace_premium_rounded,
     ),
-    RecommendationItem(
+    const RecommendationItem(
       type: 'Project',
       title: 'Build a Data Dashboard',
       provider: 'Masra',
@@ -355,14 +355,16 @@ class _HomeScreenState extends State<HomeScreen>
             children: [
               Image.asset(
                 'lib/assets/images/Logoo.png',
+                // The logo is dark navy: show it in white on dark backgrounds.
+                color: AppColors.isDark ? Colors.white : null,
                 width: 108,
                 height: 48,
                 fit: BoxFit.contain,
                 errorBuilder: (context, error, stackTrace) {
-                  return const Text(
+                  return Text(
                     'Masra',
                     style: TextStyle(
-                      color: AppColors.navy,
+                      color: AppColors.navyText,
                       fontSize: 27,
                       fontWeight: FontWeight.w800,
                     ),
@@ -390,7 +392,7 @@ class _HomeScreenState extends State<HomeScreen>
                   width: 46,
                   height: 46,
                   decoration: BoxDecoration(
-                    gradient: const LinearGradient(
+                    gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [
@@ -413,7 +415,7 @@ class _HomeScreenState extends State<HomeScreen>
                         ? userName[0].toUpperCase()
                         : 'U',
                     style: const TextStyle(
-                      color: AppColors.white,
+                      color: AppColors.onBrand,
                       fontSize: 17,
                       fontWeight: FontWeight.w800,
                     ),
@@ -427,8 +429,8 @@ class _HomeScreenState extends State<HomeScreen>
 
           Text(
             userName.isNotEmpty ? '$greeting, $_displayName' : greeting,
-            style: const TextStyle(
-              color: AppColors.navy,
+            style: TextStyle(
+              color: AppColors.navyText,
               fontSize: 29,
               fontWeight: FontWeight.w800,
               letterSpacing: -0.8,
@@ -437,7 +439,7 @@ class _HomeScreenState extends State<HomeScreen>
 
           const SizedBox(height: 5),
 
-          const Text(
+          Text(
             "Let's continue building your career.",
             style: TextStyle(
               color: AppColors.secondaryText,
@@ -488,7 +490,7 @@ class _HomeScreenState extends State<HomeScreen>
             ),
             child: Icon(
               icon,
-              color: AppColors.navy,
+              color: AppColors.navyText,
               size: 23,
             ),
           ),
@@ -501,7 +503,7 @@ class _HomeScreenState extends State<HomeScreen>
             child: Container(
               width: 8,
               height: 8,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 color: AppColors.gold,
                 shape: BoxShape.circle,
               ),
@@ -527,7 +529,7 @@ class _HomeScreenState extends State<HomeScreen>
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(28),
-            gradient: const LinearGradient(
+            gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
@@ -591,14 +593,14 @@ class _HomeScreenState extends State<HomeScreen>
                           width: 48,
                           height: 48,
                           decoration: BoxDecoration(
-                            color: AppColors.white.withValues(
+                            color: AppColors.onBrand.withValues(
                               alpha: 0.12,
                             ),
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: const Icon(
                             Icons.route_rounded,
-                            color: AppColors.white,
+                            color: AppColors.onBrand,
                             size: 27,
                           ),
                         ),
@@ -612,7 +614,7 @@ class _HomeScreenState extends State<HomeScreen>
                               Text(
                                 'Your Next Step',
                                 style: TextStyle(
-                                  color: AppColors.white,
+                                  color: AppColors.onBrand,
                                   fontSize: 18,
                                   fontWeight: FontWeight.w800,
                                 ),
@@ -642,7 +644,7 @@ class _HomeScreenState extends State<HomeScreen>
                           ),
                           child: Text(
                             step.badge,
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: AppColors.gold,
                               fontSize: 12,
                               fontWeight: FontWeight.w700,
@@ -658,7 +660,7 @@ class _HomeScreenState extends State<HomeScreen>
                     Text(
                       step.title,
                       style: const TextStyle(
-                        color: AppColors.white,
+                        color: AppColors.onBrand,
                         fontSize: 24,
                         fontWeight: FontWeight.w800,
                         letterSpacing: -0.5,
@@ -670,7 +672,7 @@ class _HomeScreenState extends State<HomeScreen>
                     Text(
                       step.description,
                       style: TextStyle(
-                        color: AppColors.white.withValues(
+                        color: AppColors.onBrand.withValues(
                           alpha: 0.76,
                         ),
                         fontSize: 12.5,
@@ -694,12 +696,12 @@ class _HomeScreenState extends State<HomeScreen>
                             vertical: 11,
                           ),
                           decoration: BoxDecoration(
-                            color: AppColors.white.withValues(
+                            color: AppColors.onBrand.withValues(
                               alpha: 0.11,
                             ),
                             borderRadius: BorderRadius.circular(16),
                             border: Border.all(
-                              color: AppColors.white.withValues(
+                              color: AppColors.onBrand.withValues(
                                 alpha: 0.14,
                               ),
                             ),
@@ -710,7 +712,7 @@ class _HomeScreenState extends State<HomeScreen>
                               Text(
                                 step.buttonLabel,
                                 style: const TextStyle(
-                                  color: AppColors.white,
+                                  color: AppColors.onBrand,
                                   fontSize: 12.5,
                                   fontWeight: FontWeight.w700,
                                 ),
@@ -718,7 +720,7 @@ class _HomeScreenState extends State<HomeScreen>
                               const SizedBox(width: 7),
                               const Icon(
                                 Icons.arrow_forward_rounded,
-                                color: AppColors.white,
+                                color: AppColors.onBrand,
                                 size: 18,
                               ),
                             ],
@@ -871,11 +873,11 @@ class _HomeScreenState extends State<HomeScreen>
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
             children: [
-              const Expanded(
+              Expanded(
                 child: Text(
                   'Recommended for You',
                   style: TextStyle(
-                    color: AppColors.navy,
+                    color: AppColors.navyText,
                     fontSize: 21,
                     fontWeight: FontWeight.w800,
                     letterSpacing: -0.4,
@@ -886,10 +888,10 @@ class _HomeScreenState extends State<HomeScreen>
               TextButton(
                 // No "all recommendations" screen yet
                 onPressed: _showComingSoon,
-                child: const Text(
+                child: Text(
                   'See all',
                   style: TextStyle(
-                    color: AppColors.teal,
+                    color: AppColors.tealText,
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                   ),
@@ -907,7 +909,7 @@ class _HomeScreenState extends State<HomeScreen>
             padding: const EdgeInsets.symmetric(horizontal: 20),
             scrollDirection: Axis.horizontal,
             itemCount: recommendations.length,
-            separatorBuilder: (_, __) =>
+            separatorBuilder: (_, _) =>
                 const SizedBox(width: 14),
             itemBuilder: (context, index) {
               return _recommendationCard(
@@ -947,7 +949,7 @@ class _HomeScreenState extends State<HomeScreen>
           border: Border.all(
             color: goldAccent
                 ? AppColors.gold.withValues(alpha: 0.25)
-                : AppColors.teal.withValues(alpha: 0.16),
+                : AppColors.tealText.withValues(alpha: 0.16),
           ),
           boxShadow: [
             BoxShadow(
@@ -977,7 +979,7 @@ class _HomeScreenState extends State<HomeScreen>
                     item.icon,
                     color: goldAccent
                         ? AppColors.gold
-                        : AppColors.teal,
+                        : AppColors.tealText,
                     size: 23,
                   ),
                 ),
@@ -989,7 +991,7 @@ class _HomeScreenState extends State<HomeScreen>
                   style: TextStyle(
                     color: goldAccent
                         ? AppColors.gold
-                        : AppColors.teal,
+                        : AppColors.tealText,
                     fontSize: 11,
                     fontWeight: FontWeight.w800,
                     letterSpacing: 0.5,
@@ -1004,8 +1006,8 @@ class _HomeScreenState extends State<HomeScreen>
               item.title,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                color: AppColors.navy,
+              style: TextStyle(
+                color: AppColors.navyText,
                 fontSize: 16,
                 height: 1.25,
                 fontWeight: FontWeight.w800,
@@ -1016,7 +1018,7 @@ class _HomeScreenState extends State<HomeScreen>
 
             Text(
               item.provider,
-              style: const TextStyle(
+              style: TextStyle(
                 color: AppColors.secondaryText,
                 fontSize: 12,
                 fontWeight: FontWeight.w500,
@@ -1027,10 +1029,10 @@ class _HomeScreenState extends State<HomeScreen>
 
             Row(
               children: [
-                const Icon(
+                Icon(
                   Icons.auto_awesome_rounded,
                   size: 13,
-                  color: AppColors.teal,
+                  color: AppColors.tealText,
                 ),
                 const SizedBox(width: 5),
                 Expanded(
@@ -1038,7 +1040,7 @@ class _HomeScreenState extends State<HomeScreen>
                     item.reason,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: AppColors.secondaryText,
                       fontSize: 12,
                     ),
@@ -1167,7 +1169,7 @@ class _HomeScreenState extends State<HomeScreen>
             color: AppColors.softBackground,
             shape: RoundedRectangleBorder(
               borderRadius: radius,
-              side: const BorderSide(
+              side: BorderSide(
                 color: AppColors.lightGray,
               ),
             ),
@@ -1195,7 +1197,7 @@ class _HomeScreenState extends State<HomeScreen>
                       action.icon,
                       color: index == 2
                           ? AppColors.gold
-                          : AppColors.teal,
+                          : AppColors.tealText,
                       size: 22,
                     ),
                   ),
@@ -1214,8 +1216,8 @@ class _HomeScreenState extends State<HomeScreen>
           child: Text(
             action.title,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: AppColors.navy,
+            style: TextStyle(
+              color: AppColors.navyText,
               fontSize: 12,
               fontWeight: FontWeight.w600,
               height: 1.25,
@@ -1249,7 +1251,7 @@ class _HomeScreenState extends State<HomeScreen>
             color: AppColors.softBackground,
             borderRadius: BorderRadius.circular(27),
             border: Border.all(
-              color: AppColors.teal.withValues(alpha: 0.18),
+              color: AppColors.tealText.withValues(alpha: 0.18),
             ),
             boxShadow: [
               BoxShadow(
@@ -1268,7 +1270,7 @@ class _HomeScreenState extends State<HomeScreen>
                     width: 49,
                     height: 49,
                     decoration: BoxDecoration(
-                      gradient: const LinearGradient(
+                      gradient: LinearGradient(
                         colors: [
                           AppColors.secondaryNavy,
                           AppColors.teal,
@@ -1278,26 +1280,26 @@ class _HomeScreenState extends State<HomeScreen>
                     ),
                     child: const Icon(
                       Icons.trending_up_rounded,
-                      color: AppColors.white,
+                      color: AppColors.onBrand,
                       size: 25,
                     ),
                   ),
 
                   const SizedBox(width: 14),
 
-                  const Expanded(
+                  Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Technology roles are in demand',
                           style: TextStyle(
-                            color: AppColors.navy,
+                            color: AppColors.navyText,
                             fontSize: 15.5,
                             fontWeight: FontWeight.w800,
                           ),
                         ),
-                        SizedBox(height: 3),
+                        const SizedBox(height: 3),
                         Text(
                           'Saudi Arabia',
                           style: TextStyle(
@@ -1320,7 +1322,7 @@ class _HomeScreenState extends State<HomeScreen>
                       ),
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: const Text(
+                    child: Text(
                       'HIGH',
                       style: TextStyle(
                         color: AppColors.gold,
@@ -1334,7 +1336,7 @@ class _HomeScreenState extends State<HomeScreen>
 
               const SizedBox(height: 21),
 
-              const Text(
+              Text(
                 'Skills employers are looking for',
                 style: TextStyle(
                   color: AppColors.secondaryText,
@@ -1364,8 +1366,8 @@ class _HomeScreenState extends State<HomeScreen>
                 child: InkWell(
                 onTap: () => _openScreen((_) => const HeatmapScreen()),
                 borderRadius: BorderRadius.circular(12),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
                     vertical: 3,
                   ),
                   child: Row(
@@ -1374,15 +1376,15 @@ class _HomeScreenState extends State<HomeScreen>
                       Text(
                         'Explore Market',
                         style: TextStyle(
-                          color: AppColors.teal,
+                          color: AppColors.tealText,
                           fontSize: 12.5,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
-                      SizedBox(width: 6),
+                      const SizedBox(width: 6),
                       Icon(
                         Icons.arrow_forward_rounded,
-                        color: AppColors.teal,
+                        color: AppColors.tealText,
                         size: 17,
                       ),
                     ],
@@ -1411,8 +1413,8 @@ class _HomeScreenState extends State<HomeScreen>
       ),
       child: Text(
         name,
-        style: const TextStyle(
-          color: AppColors.secondaryNavy,
+        style: TextStyle(
+          color: AppColors.secondaryNavyText,
           fontSize: 12,
           fontWeight: FontWeight.w600,
         ),
@@ -1434,7 +1436,7 @@ class _HomeScreenState extends State<HomeScreen>
           width: double.infinity,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
-            gradient: const LinearGradient(
+            gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
@@ -1479,7 +1481,7 @@ class _HomeScreenState extends State<HomeScreen>
                     shape: BoxShape.circle,
                     border: Border.all(
                       color:
-                          AppColors.white.withValues(alpha: 0.05),
+                          AppColors.onBrand.withValues(alpha: 0.05),
                       width: 18,
                     ),
                   ),
@@ -1506,7 +1508,7 @@ class _HomeScreenState extends State<HomeScreen>
                         const Text(
                           'Explore Masra',
                           style: TextStyle(
-                            color: AppColors.white,
+                            color: AppColors.onBrand,
                             fontSize: 21,
                             fontWeight: FontWeight.w800,
                           ),
@@ -1519,7 +1521,7 @@ class _HomeScreenState extends State<HomeScreen>
                     Text(
                       'Discover all the tools built to guide, develop, and prepare your career.',
                       style: TextStyle(
-                        color: AppColors.white.withValues(
+                        color: AppColors.onBrand.withValues(
                           alpha: 0.72,
                         ),
                         fontSize: 13,
@@ -1533,7 +1535,7 @@ class _HomeScreenState extends State<HomeScreen>
                       onPressed: _switchToExploreTab,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.gold,
-                        foregroundColor: AppColors.white,
+                        foregroundColor: AppColors.onBrand,
                         elevation: 0,
                         padding: const EdgeInsets.symmetric(
                           horizontal: 19,
@@ -1585,8 +1587,8 @@ class _HomeScreenState extends State<HomeScreen>
       children: [
         Text(
           title,
-          style: const TextStyle(
-            color: AppColors.navy,
+          style: TextStyle(
+            color: AppColors.navyText,
             fontSize: 21,
             fontWeight: FontWeight.w800,
             letterSpacing: -0.4,
@@ -1597,7 +1599,7 @@ class _HomeScreenState extends State<HomeScreen>
 
         Text(
           subtitle,
-          style: const TextStyle(
+          style: TextStyle(
             color: AppColors.secondaryText,
             fontSize: 12.5,
             height: 1.4,
@@ -1740,7 +1742,7 @@ class _HomeScreenState extends State<HomeScreen>
         icon,
         size: 24,
         color: selected
-            ? AppColors.teal
+            ? AppColors.tealText
             : AppColors.secondaryText,
       ),
     ),
@@ -1752,7 +1754,7 @@ class _HomeScreenState extends State<HomeScreen>
         child: Container(
           width: 6,
           height: 6,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: AppColors.gold,
             shape: BoxShape.circle,
           ),
@@ -1767,7 +1769,7 @@ class _HomeScreenState extends State<HomeScreen>
               label,
               style: TextStyle(
                 color: selected
-                    ? AppColors.teal
+                    ? AppColors.tealText
                     : AppColors.secondaryText,
                 fontSize: 12,
                 fontWeight: selected
@@ -1920,7 +1922,7 @@ class JourneyNode extends StatelessWidget {
             title,
             style: TextStyle(
               color: current || completed
-                  ? AppColors.navy
+                  ? AppColors.navyText
                   : AppColors.secondaryText,
               fontSize: 14,
               fontWeight: FontWeight.w800,
@@ -1931,7 +1933,7 @@ class JourneyNode extends StatelessWidget {
 
           Text(
             subtitle,
-            style: const TextStyle(
+            style: TextStyle(
               color: AppColors.secondaryText,
               fontSize: 12,
               height: 1.25,
@@ -2020,7 +2022,7 @@ class CareerPathPainter extends CustomPainter {
     // ============================================================
 
     final progressPaint = Paint()
-      ..shader = const LinearGradient(
+      ..shader = LinearGradient(
         colors: [
           AppColors.secondaryNavy,
           AppColors.teal,

@@ -27,94 +27,94 @@ class ExploreScreen extends StatefulWidget {
 }
 
 class _ExploreScreenState extends State<ExploreScreen> {
-  int _currentIndex = 1;
+  final int _currentIndex = 1;
   String _searchQuery = '';
 
   // ------------------------------------------------------------
   // Colors
   // ------------------------------------------------------------
 
-  static const Color navy = Color(0xFF16324F);
-  static const Color teal = Color(0xFF2D8C99);
-  static const Color lightTeal = Color(0xFFEAF4F5);
-  static const Color gold = Color(0xFFC69225);
-  static const Color background = AppColors.background;
-  static const Color greyText = Color(0xFF71808F);
+  static Color get navy => AppColors.navyText;
+  static Color get teal => AppColors.tealText;
+  static Color get lightTeal => AppColors.lightTeal;
+  static Color get gold => AppColors.gold;
+  static Color get background => AppColors.background;
+  static Color get greyText => AppColors.secondaryText;
 
   // ------------------------------------------------------------
   // Feature data
   // ------------------------------------------------------------
 
   final List<ExploreFeature> _features = [
-    ExploreFeature(
+    const ExploreFeature(
       title: 'AI Career Analysis',
       description: 'Understand your career readiness',
       category: 'UNDERSTAND YOURSELF',
       icon: Icons.psychology_outlined,
-      page: const CareerAnalysisScreen(),
+      page: CareerAnalysisScreen(),
     ),
-    ExploreFeature(
+    const ExploreFeature(
       title: 'Career Path Comparator',
       description: 'Compare two career paths',
       category: 'UNDERSTAND YOURSELF',
       icon: Icons.alt_route_rounded,
-      page: const CareerComparatorScreen(),
+      page: CareerComparatorScreen(),
     ),
-    ExploreFeature(
+    const ExploreFeature(
       title: 'Personalized Learning Roadmap',
       description: 'Your guided skill journey',
       category: 'DEVELOP YOUR SKILLS',
       icon: Icons.account_tree_outlined,
-      page: const LearningRoadmapScreen(),
+      page: LearningRoadmapScreen(),
     ),
-    ExploreFeature(
+    const ExploreFeature(
       title: 'Professional Certification Recommender',
       description: 'Find the right certifications',
       category: 'DEVELOP YOUR SKILLS',
       icon: Icons.workspace_premium_outlined,
-      page: const CertificationsScreen(),
+      page: CertificationsScreen(),
     ),
-    ExploreFeature(
+    const ExploreFeature(
       title: 'Opportunity Radar',
       description: 'Discover development opportunities',
       category: 'DEVELOP YOUR SKILLS',
       icon: Icons.track_changes_rounded,
-      page: const OpportunitiesScreen(),
+      page: OpportunitiesScreen(),
     ),
-    ExploreFeature(
+    const ExploreFeature(
       title: 'Smart Project Discovery',
       description: 'GitHub projects matched to you',
       category: 'DEVELOP YOUR SKILLS',
       icon: Icons.code_rounded,
-      page: const ProjectDiscoveryScreen(),
+      page: ProjectDiscoveryScreen(),
     ),
-    ExploreFeature(
+    const ExploreFeature(
       title: 'CV Improvement Assistant',
       description: 'Optimize your CV with AI',
       category: 'PREPARE FOR JOBS',
       icon: Icons.edit_document,
-      page: const CVImprovementScreen(),
+      page: CVImprovementScreen(),
     ),
-    ExploreFeature(
+    const ExploreFeature(
       title: 'Job Match',
       description: 'Compare your profile to a job',
       category: 'PREPARE FOR JOBS',
       icon: Icons.business_center_outlined,
-      page: const JobMatchScreen(),
+      page: JobMatchScreen(),
     ),
-    ExploreFeature(
+    const ExploreFeature(
       title: 'AI Mock Interview Simulator',
       description: 'Practice with AI interviews',
       category: 'PREPARE FOR JOBS',
       icon: Icons.chat_bubble_outline_rounded,
-      page: const MockInterviewScreen(),
+      page: MockInterviewScreen(),
     ),
-    ExploreFeature(
+    const ExploreFeature(
       title: 'Job Demand Heatmap',
       description: 'Explore demand across Saudi Arabia',
       category: 'UNDERSTAND THE SAUDI MARKET',
       icon: Icons.map_outlined,
-      page: const HeatmapScreen(),
+      page: HeatmapScreen(),
     ),
   ];
 
@@ -211,7 +211,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
               Text(
                 'Explore',
                 style: TextStyle(
-                  color: AppColors.navy,
+                  color: AppColors.navyText,
                   fontSize: 32,
                   fontWeight: FontWeight.w800,
                   height: 1.1,
@@ -252,10 +252,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
             child: Container(
               height: 58,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.white,
                 borderRadius: BorderRadius.circular(18),
                 border: Border.all(
-                  color: const Color(0xFFE8EDF0),
+                  color: AppColors.lightGray,
                 ),
               ),
               child: TextField(
@@ -264,11 +264,11 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     _searchQuery = value;
                   });
                 },
-                style: const TextStyle(
+                style: TextStyle(
                   color: navy,
                   fontSize: 16,
                 ),
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   border: InputBorder.none,
                   prefixIcon: Icon(
                     Icons.search_rounded,
@@ -277,10 +277,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   ),
                   hintText: 'Search features...',
                   hintStyle: TextStyle(
-                    color: Color(0xFFA5AFB8),
+                    color: AppColors.secondaryText,
                     fontSize: 17,
                   ),
-                  contentPadding: EdgeInsets.symmetric(
+                  contentPadding: const EdgeInsets.symmetric(
                     vertical: 17,
                   ),
                 ),
@@ -386,7 +386,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
         Expanded(
           child: Text(
             title,
-            style: const TextStyle(
+            style: TextStyle(
               color: greyText,
               fontSize: 19,
               fontWeight: FontWeight.w800,
@@ -404,7 +404,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   Widget _buildFeatureCard(ExploreFeature feature) {
     return Material(
-      color: Colors.white,
+      color: AppColors.white,
       borderRadius: BorderRadius.circular(24),
       child: InkWell(
         borderRadius: BorderRadius.circular(24),
@@ -420,11 +420,11 @@ class _ExploreScreenState extends State<ExploreScreen> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24),
             border: Border.all(
-              color: const Color(0xFFF0F2F4),
+              color: AppColors.lightGray,
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.025),
+                color: Colors.black.withValues(alpha: 0.025),
                 blurRadius: 10,
                 offset: const Offset(0, 3),
               ),
@@ -461,8 +461,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       feature.title,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: Color(0xFF172332),
+                      style: TextStyle(
+                        color: AppColors.darkText,
                         fontSize: 17,
                         fontWeight: FontWeight.w700,
                         height: 1.25,
@@ -475,7 +475,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       feature.description,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: greyText,
                         fontSize: 14.5,
                         fontWeight: FontWeight.w500,
@@ -490,7 +490,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
               // Arrow
 
-              const Icon(
+              Icon(
                 Icons.arrow_forward_ios_rounded,
                 color: gold,
                 size: 19,
@@ -520,7 +520,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 color: lightTeal,
                 borderRadius: BorderRadius.circular(28),
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.search_off_rounded,
                 color: teal,
                 size: 45,
@@ -529,7 +529,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
             const SizedBox(height: 20),
 
-            const Text(
+            Text(
               'No features found',
               style: TextStyle(
                 color: navy,
@@ -540,7 +540,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
             const SizedBox(height: 8),
 
-            const Text(
+            Text(
               'Try searching for another career tool.',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -646,7 +646,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     icon,
                     size: 24,
                     color: selected
-                        ? AppColors.teal
+                        ? AppColors.tealText
                         : AppColors.secondaryText,
                   ),
                 ),
@@ -658,7 +658,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     child: Container(
                       width: 6,
                       height: 6,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: AppColors.gold,
                         shape: BoxShape.circle,
                       ),
@@ -673,7 +673,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
               label,
               style: TextStyle(
                 color: selected
-                    ? AppColors.teal
+                    ? AppColors.tealText
                     : AppColors.secondaryText,
                 fontSize: 12,
                 fontWeight: selected

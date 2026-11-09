@@ -180,7 +180,7 @@ Return EXACTLY this JSON structure:
       ),
       'education': _normalizeMapList(
         decoded['education'],
-        allowedKeys: const [
+        allowedKeys: [
           'degree',
           'major',
           'institution',
@@ -189,7 +189,7 @@ Return EXACTLY this JSON structure:
       ),
       'certifications': _normalizeMapList(
         decoded['certifications'],
-        allowedKeys: const [
+        allowedKeys: [
           'name',
           'issuer',
           'year',
@@ -197,14 +197,14 @@ Return EXACTLY this JSON structure:
       ),
       'projects': _normalizeMapList(
         decoded['projects'],
-        allowedKeys: const [
+        allowedKeys: [
           'name',
           'description',
         ],
       ),
       'experience': _normalizeMapList(
         decoded['experience'],
-        allowedKeys: const [
+        allowedKeys: [
           'title',
           'organization',
           'duration',
@@ -613,7 +613,7 @@ Return EXACTLY this JSON structure:
       // Keep only items that have both an issue and a suggestion
       result[key] = _normalizeMapList(
         reviewData[key],
-        allowedKeys: const [
+        allowedKeys: [
           'issue',
           'suggestion',
         ],

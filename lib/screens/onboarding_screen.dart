@@ -37,7 +37,7 @@ class OnboardingScreen extends StatelessWidget {
           // ==========================
           Positioned.fill(
             child: Container(
-              color: AppColors.white.withValues(alpha: 0.02),
+              color: AppColors.onBrand.withValues(alpha: 0.02),
             ),
           ),
 
@@ -53,6 +53,8 @@ class OnboardingScreen extends StatelessWidget {
                   // ==========================
                   Image.asset(
                     'lib/assets/images/Logoo.png',
+                    // The logo is dark navy: show it in white on dark backgrounds.
+                    color: AppColors.isDark ? Colors.white : null,
                     width: size.width * 0.62,
                     fit: BoxFit.contain,
                   ),
@@ -62,7 +64,7 @@ class OnboardingScreen extends StatelessWidget {
                   // ==========================
                   // GUIDE • DEVELOP • ACHIEVE
                   // ==========================
-                  const Text(
+                  Text(
                     'G U I D E   •   D E V E L O P   •   A C H I E V E',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -83,7 +85,7 @@ Container(
   height: 60,
   decoration: BoxDecoration(
     borderRadius: BorderRadius.circular(20),
-    gradient: const LinearGradient(
+    gradient: LinearGradient(
       colors: [
         AppColors.navy,
         AppColors.secondaryNavy,
@@ -105,7 +107,7 @@ Container(
     style: ElevatedButton.styleFrom(
       backgroundColor: Colors.transparent,
       shadowColor: Colors.transparent,
-      foregroundColor: AppColors.white,
+      foregroundColor: AppColors.onBrand,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),

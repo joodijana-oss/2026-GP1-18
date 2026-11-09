@@ -180,8 +180,8 @@ class _EmailActionScreenState extends State<EmailActionScreen>
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(
-                      color: AppColors.navy,
+                    style: TextStyle(
+                      color: AppColors.navyText,
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
                     ),
@@ -190,7 +190,7 @@ class _EmailActionScreenState extends State<EmailActionScreen>
                     const SizedBox(height: 2),
                     Text(
                       subtitle,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: AppColors.secondaryText,
                         fontSize: 12,
                       ),
@@ -203,7 +203,7 @@ class _EmailActionScreenState extends State<EmailActionScreen>
             IconButton(
               tooltip: 'Close',
               onPressed: () => target.hideCurrentSnackBar(),
-              icon: const Icon(
+              icon: Icon(
                 Icons.close_rounded,
                 color: AppColors.secondaryText,
                 size: 19,
@@ -226,7 +226,7 @@ class _EmailActionScreenState extends State<EmailActionScreen>
           // =========================
           Container(
             height: 315,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -326,10 +326,10 @@ class _EmailActionScreenState extends State<EmailActionScreen>
                             width: 43,
                             height: 43,
                             decoration: BoxDecoration(
-                              color: AppColors.white.withValues(alpha: 0.13),
+                              color: AppColors.onBrand.withValues(alpha: 0.13),
                               borderRadius: BorderRadius.circular(14),
                               border: Border.all(
-                                color: AppColors.white.withValues(alpha: 0.20),
+                                color: AppColors.onBrand.withValues(alpha: 0.20),
                               ),
                             ),
                             child: IconButton(
@@ -339,7 +339,7 @@ class _EmailActionScreenState extends State<EmailActionScreen>
                                   : _goBack,
                               icon: const Icon(
                                 Icons.arrow_back_rounded,
-                                color: AppColors.white,
+                                color: AppColors.onBrand,
                                 size: 22,
                               ),
                             ),
@@ -356,9 +356,9 @@ class _EmailActionScreenState extends State<EmailActionScreen>
                   Container(
                     width: double.infinity,
                     padding: const EdgeInsets.fromLTRB(24, 30, 24, 35),
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: AppColors.background,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(38),
                         topRight: Radius.circular(38),
                       ),
@@ -422,11 +422,11 @@ class _EmailActionScreenState extends State<EmailActionScreen>
       child: Center(
         child: Column(
           children: [
-            const SizedBox(
+            SizedBox(
               width: 28,
               height: 28,
               child: CircularProgressIndicator(
-                color: AppColors.teal,
+                color: AppColors.tealText,
                 strokeWidth: 2.5,
               ),
             ),
@@ -435,7 +435,7 @@ class _EmailActionScreenState extends State<EmailActionScreen>
               _isRecover
                   ? 'Restoring your email address...'
                   : 'Confirming your new email address...',
-              style: const TextStyle(
+              style: TextStyle(
                 color: AppColors.secondaryText,
                 fontSize: 14,
               ),
@@ -461,8 +461,8 @@ class _EmailActionScreenState extends State<EmailActionScreen>
       children: [
         Text(
           title,
-          style: const TextStyle(
-            color: AppColors.navy,
+          style: TextStyle(
+            color: AppColors.navyText,
             fontSize: 29,
             fontWeight: FontWeight.w800,
             letterSpacing: -0.7,
@@ -484,8 +484,8 @@ class _EmailActionScreenState extends State<EmailActionScreen>
               Expanded(
                 child: Text(
                   message,
-                  style: const TextStyle(
-                    color: AppColors.navy,
+                  style: TextStyle(
+                    color: AppColors.navyText,
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                     height: 1.45,
@@ -518,7 +518,7 @@ class _EmailActionScreenState extends State<EmailActionScreen>
       height: 60,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        gradient: const LinearGradient(
+        gradient: LinearGradient(
           colors: [
             AppColors.navy,
             AppColors.secondaryNavy,
@@ -538,7 +538,7 @@ class _EmailActionScreenState extends State<EmailActionScreen>
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
-          foregroundColor: AppColors.white,
+          foregroundColor: AppColors.onBrand,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),

@@ -202,8 +202,8 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
-                    color: AppColors.navy,
+                  style: TextStyle(
+                    color: AppColors.navyText,
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
                   ),
@@ -212,7 +212,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                   const SizedBox(height: 2),
                   Text(
                     subtitle,
-                    style: const TextStyle(color: AppColors.secondaryText, fontSize: 12),
+                    style: TextStyle(color: AppColors.secondaryText, fontSize: 12),
                   ),
                 ],
               ],
@@ -222,7 +222,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
           IconButton(
             tooltip: 'Close',
             onPressed: () => ScaffoldMessenger.of(context).hideCurrentSnackBar(),
-            icon: const Icon(Icons.close_rounded, color: AppColors.secondaryText, size: 19),
+            icon: Icon(Icons.close_rounded, color: AppColors.secondaryText, size: 19),
           ),
         ],
       ),
@@ -242,7 +242,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
           // =====================================================
           Container(
             height: 315,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -364,12 +364,12 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                   // =================================================
                   // TOP SECTION
                   // =================================================
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 22),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 22),
                     child: Column(
                       children: [
                         
-                        const SizedBox(height: 95),
+                        SizedBox(height: 95),
 
                         // ---------------------------------------------
                         // SUBTITLE
@@ -384,7 +384,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                           ),
                         ),
 */
-                        const SizedBox(height: 28),
+                        SizedBox(height: 28),
                       ],
                     ),
                   ),
@@ -400,9 +400,9 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                       24,
                       28,
                     ),
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: AppColors.background,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(38),
                         topRight: Radius.circular(38),
                       ),
@@ -429,10 +429,10 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                           // ---------------------------------------------
                           // TITLE
                           // ---------------------------------------------
-                          const Text(
+                          Text(
                             'Create Your Account',
                             style: TextStyle(
-                              color: AppColors.navy,
+                              color: AppColors.navyText,
                               fontSize: 29,
                               fontWeight: FontWeight.w800,
                               letterSpacing: -0.7,
@@ -441,7 +441,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
 
                           const SizedBox(height: 7),
 
-                          const Text(
+                          Text(
                             'Join Masra and start building a career path made for you.',
                             style: TextStyle(
                               color: AppColors.secondaryText,
@@ -586,7 +586,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                             height: 60,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              gradient: const LinearGradient(
+                              gradient: LinearGradient(
                                 colors: [
                                   AppColors.navy,
                                   AppColors.secondaryNavy,
@@ -609,8 +609,8 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
     backgroundColor: Colors.transparent,
     disabledBackgroundColor: Colors.transparent,
     shadowColor: Colors.transparent,
-    foregroundColor: AppColors.white,
-    disabledForegroundColor: AppColors.white,
+    foregroundColor: AppColors.onBrand,
+    disabledForegroundColor: AppColors.onBrand,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(20),
     ),
@@ -621,7 +621,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
           height: 24,
           child: CircularProgressIndicator(
             strokeWidth: 2.5,
-            color: AppColors.white,
+            color: AppColors.onBrand,
           ),
         )
       : const Row(
@@ -658,8 +658,8 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                                   color: AppColors.lightGray,
                                 ),
                               ),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
                                   horizontal: 12,
                                 ),
                                 child: Text(
@@ -697,9 +697,9 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
   );
 },
                               style: OutlinedButton.styleFrom(
-                                foregroundColor: AppColors.navy,
+                                foregroundColor: AppColors.navyText,
                                 side: BorderSide(
-                                  color: AppColors.navy.withValues(
+                                  color: AppColors.navyText.withValues(
                                     alpha: 0.20,
                                   ),
                                 ),
@@ -752,8 +752,8 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
       children: [
         Text(
           label,
-          style: const TextStyle(
-            color: AppColors.navy,
+          style: TextStyle(
+            color: AppColors.navyText,
             fontSize: 13,
             fontWeight: FontWeight.w700,
           ),
@@ -767,8 +767,8 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
           obscureText: obscureText,
           keyboardType: keyboardType,
           validator: validator,
-          style: const TextStyle(
-            color: AppColors.navy,
+          style: TextStyle(
+            color: AppColors.navyText,
             fontSize: 14.5,
             fontWeight: FontWeight.w500,
           ),
@@ -782,7 +782,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
             ),
             // يسمح لرسالة شروط كلمة المرور تنعرض على أكثر من سطر
             errorMaxLines: 8,
-            hintStyle: const TextStyle(
+            hintStyle: TextStyle(
               color: AppColors.secondaryText,
               fontSize: 14,
             ),
@@ -797,7 +797,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
               ),
               child: Icon(
                 icon,
-                color: AppColors.teal,
+                color: AppColors.tealText,
                 size: 20,
               ),
             ),
@@ -814,15 +814,15 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
 
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(17),
-              borderSide: const BorderSide(
+              borderSide: BorderSide(
                 color: AppColors.lightGray,
               ),
             ),
 
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(17),
-              borderSide: const BorderSide(
-                color: AppColors.teal,
+              borderSide: BorderSide(
+                color: AppColors.tealText,
                 width: 1.5,
               ),
             ),
