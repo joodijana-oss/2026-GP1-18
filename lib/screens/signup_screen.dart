@@ -3,6 +3,7 @@ import '../theme/app_colors.dart';
 import 'login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:masra/services/user_service.dart';
+import 'package:masra/services/welcome_email_service.dart';
 import 'profile_setup_screen.dart';
 import '../utils/validators.dart';
 import '../widgets/password_rules_checklist.dart';
@@ -141,6 +142,9 @@ Future<void> createAccount() async {
       return;
     }
 
+    // 3) إيميل الترحيب: يرسل في الخلفية وما يوقف التسجيل لو فشل
+    WelcomeEmailService().send(fullName: name);
+
     _showMessage('Account created successfully!', subtitle: 'Welcome to Masra.');
 
     await Future.delayed(const Duration(milliseconds: 700));
@@ -216,6 +220,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
           ),
           const SizedBox(width: 5),
           IconButton(
+            tooltip: 'Close',
             onPressed: () => ScaffoldMessenger.of(context).hideCurrentSnackBar(),
             icon: const Icon(Icons.close_rounded, color: AppColors.secondaryText, size: 19),
           ),
@@ -452,8 +457,8 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                           // =================================================
                           _buildField(
                             controller: nameController,
-                            label: 'Full Name',
-                            hint: 'Enter your full name',
+                            label: 'Name',
+                            hint: 'Enter your name',
                             icon: Icons.person_outline_rounded,
                             focusNode: _nameFocus,
                             errorText: _nameTouched
@@ -501,6 +506,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                             icon: Icons.lock_outline_rounded,
                             obscureText: hidePassword,
                             suffixIcon: IconButton(
+                              tooltip: 'Show or hide password',
                               onPressed: () {
                                 setState(() {
                                   hidePassword = !hidePassword;
@@ -538,6 +544,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                             icon: Icons.verified_user_outlined,
                             obscureText: hideConfirmPassword,
                             suffixIcon: IconButton(
+                              tooltip: 'Show or hide password',
                               onPressed: () {
                                 setState(() {
                                   hideConfirmPassword =
