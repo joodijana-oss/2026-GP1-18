@@ -26,6 +26,8 @@ import '../theme/app_colors.dart';
 
 import '../widgets/appearance_card.dart';
 
+import '../widgets/profile_avatar.dart';
+
 import 'explore_screen.dart';
 
 import 'home_screen.dart';
@@ -819,53 +821,11 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                   children: [
 
-                    Container(
+                    ProfileAvatar(
 
-                      width: 78,
+                      initial: _initial,
 
-                      height: 78,
-
-                      decoration: BoxDecoration(
-
-                        gradient: LinearGradient(
-
-                          begin: Alignment.topLeft,
-
-                          end: Alignment.bottomRight,
-
-                          colors: [AppColors.teal, AppColors.lightTeal],
-
-                        ),
-
-                        borderRadius: BorderRadius.circular(25),
-
-                        border: Border.all(
-
-                          color: AppColors.onBrand.withValues(alpha: 0.18),
-
-                          width: 1.5,
-
-                        ),
-
-                      ),
-
-                      alignment: Alignment.center,
-
-                      child: Text(
-
-                        _initial,
-
-                        style: const TextStyle(
-
-                          color: AppColors.onBrand,
-
-                          fontSize: 35,
-
-                          fontWeight: FontWeight.w800,
-
-                        ),
-
-                      ),
+                      onMessage: _showMessage,
 
                     ),
 
