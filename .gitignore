@@ -46,3 +46,9 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# Firestore upload tool: dependencies and secret service-account keys
+tools/upload_certifications/node_modules/
+*service-account*.json
+*serviceAccount*.json
+*-firebase-adminsdk-*.json
