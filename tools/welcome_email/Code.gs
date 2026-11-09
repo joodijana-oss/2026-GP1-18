@@ -1,8 +1,13 @@
 /**
- * Masra - welcome email service (Google Apps Script).
+ * Masra - email service (Google Apps Script).
  *
- * Runs inside the project Gmail account and sends a designed welcome email
- * when the app reports a new sign-up. No password is stored anywhere.
+ * Runs inside the project Gmail account and sends Masra-designed emails:
+ *  1. A welcome email when the app reports a new sign-up.
+ *  2. The password reset email (Firebase only creates the reset link).
+ *
+ * Password reset needs one secret: the Firebase service-account key, pasted
+ * into Project Settings > Script Properties as FIREBASE_SERVICE_ACCOUNT.
+ * It is never written in this file. Run checkResetSetup to test it.
  *
  * Setup: paste this file into script.google.com (signed in as the project
  * Gmail), run sendTestEmail once to authorise, then Deploy > Web app
@@ -32,6 +37,10 @@ function doGet() {
 function doPost(e) {
   try {
     const body = JSON.parse((e && e.postData && e.postData.contents) || '{}');
+    if (body.action === 'resetPassword') {
+      return json_(handlePasswordReset_(body.email));
+    }
+
     const user = lookupFirebaseUser_(body.idToken);
     if (!user) return json_({ ok: false, error: 'invalid-token' });
 
@@ -204,6 +213,224 @@ function htmlBody_(firstName) {
     // Footer
     '<tr><td align="center" style="background:' + NAVY + ';padding:16px 24px;font-size:12px;line-height:18px;color:#DCEEF1;' + FONT + '">' +
     'You received this email because an account was created with this address in the Masra app.' +
+    '</td></tr>' +
+
+    '</table></td></tr></table></body></html>'
+  );
+}
+
+// ---------------------------------------------------------
+// PASSWORD RESET EMAIL
+// ---------------------------------------------------------
+
+const RESET_SUBJECT = 'Reset your Masra password';
+const RESET_COOLDOWN_SECONDS = 60; // one email per address per minute
+const RESET_DAILY_LIMIT = 80; // Gmail allows about 100 emails a day
+
+/**
+ * Sends the reset email if the address has an account. The answer is the
+ * same whether or not it does, so nobody can test which emails are registered.
+ */
+function handlePasswordReset_(rawEmail) {
+  const email = String(rawEmail || '').trim().toLowerCase();
+  if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return { ok: false, error: 'invalid-email' };
+  }
+
+  const account = serviceAccount_();
+  if (!account) return { ok: false, error: 'not-configured' };
+
+  const cache = CacheService.getScriptCache();
+  const cooldownKey =
+    'reset_' +
+    Utilities.base64EncodeWebSafe(
+      Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, email)
+    );
+  if (cache.get(cooldownKey)) return { ok: true };
+
+  const props = PropertiesService.getScriptProperties();
+  const dayKey = 'reset_count_' + Utilities.formatDate(new Date(), 'UTC', 'yyyyMMdd');
+  const sentToday = Number(props.getProperty(dayKey) || 0);
+  if (sentToday >= RESET_DAILY_LIMIT) return { ok: false, error: 'daily-limit' };
+
+  const link = createResetLink_(account, email);
+  cache.put(cooldownKey, '1', RESET_COOLDOWN_SECONDS);
+  if (!link) return { ok: true }; // no account with this email
+
+  sendResetEmail_(email, link);
+  props.setProperty(dayKey, String(sentToday + 1));
+  return { ok: true };
+}
+
+/**
+ * RUN THIS FROM THE EDITOR after adding FIREBASE_SERVICE_ACCOUNT: checks the
+ * key works and sends a sample of the reset email to the project inbox.
+ */
+function checkResetSetup() {
+  const account = serviceAccount_();
+  if (!account) {
+    throw new Error('FIREBASE_SERVICE_ACCOUNT is missing or is not the full key file text.');
+  }
+  accessToken_(account);
+  const me = Session.getEffectiveUser().getEmail();
+  sendResetEmail_(me, 'https://example.com/this-is-only-a-sample-link');
+  console.log('Setup OK for project ' + account.project_id + '. Sample sent to ' + me);
+}
+
+function serviceAccount_() {
+  const raw = PropertiesService.getScriptProperties().getProperty('FIREBASE_SERVICE_ACCOUNT');
+  if (!raw) return null;
+  try {
+    const account = JSON.parse(raw);
+    return account.client_email && account.private_key && account.project_id ? account : null;
+  } catch (err) {
+    return null;
+  }
+}
+
+/** Google access token for the service account (kept for 50 minutes). */
+function accessToken_(account) {
+  const cache = CacheService.getScriptCache();
+  const cached = cache.get('firebase_access_token');
+  if (cached) return cached;
+
+  const now = Math.floor(Date.now() / 1000);
+  const encode = function (obj) {
+    return Utilities.base64EncodeWebSafe(JSON.stringify(obj)).replace(/=+$/, '');
+  };
+  const unsigned =
+    encode({ alg: 'RS256', typ: 'JWT' }) +
+    '.' +
+    encode({
+      iss: account.client_email,
+      scope:
+        'https://www.googleapis.com/auth/identitytoolkit ' +
+        'https://www.googleapis.com/auth/cloud-platform',
+      aud: 'https://oauth2.googleapis.com/token',
+      iat: now,
+      exp: now + 3600,
+    });
+  const signature = Utilities.base64EncodeWebSafe(
+    Utilities.computeRsaSha256Signature(unsigned, account.private_key)
+  ).replace(/=+$/, '');
+
+  const response = UrlFetchApp.fetch('https://oauth2.googleapis.com/token', {
+    method: 'post',
+    payload: {
+      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+      assertion: unsigned + '.' + signature,
+    },
+    muteHttpExceptions: true,
+  });
+  if (response.getResponseCode() !== 200) {
+    throw new Error('Could not sign in with the service account (' + response.getResponseCode() + ')');
+  }
+  const token = JSON.parse(response.getContentText()).access_token;
+  cache.put('firebase_access_token', token, 3000);
+  return token;
+}
+
+/** Asks Firebase for a reset link WITHOUT sending its own email. Null = no such user. */
+function createResetLink_(account, email) {
+  const response = UrlFetchApp.fetch(
+    'https://identitytoolkit.googleapis.com/v1/projects/' +
+      account.project_id +
+      '/accounts:sendOobCode',
+    {
+      method: 'post',
+      contentType: 'application/json',
+      headers: { Authorization: 'Bearer ' + accessToken_(account) },
+      payload: JSON.stringify({
+        requestType: 'PASSWORD_RESET',
+        email: email,
+        returnOobLink: true,
+      }),
+      muteHttpExceptions: true,
+    }
+  );
+  const data = JSON.parse(response.getContentText() || '{}');
+  if (response.getResponseCode() === 200 && data.oobLink) return data.oobLink;
+
+  const message = (data.error && data.error.message) || '';
+  if (message.indexOf('EMAIL_NOT_FOUND') === 0 || message.indexOf('USER_NOT_FOUND') === 0) {
+    return null;
+  }
+  throw new Error('Reset link failed: ' + response.getResponseCode() + ' ' + message);
+}
+
+function sendResetEmail_(to, link) {
+  MailApp.sendEmail({
+    to: to,
+    subject: RESET_SUBJECT,
+    name: SENDER_NAME,
+    body: [
+      'Reset your password',
+      '',
+      'We received a request to reset the password for your Masra account.',
+      'Open this link to choose a new one:',
+      '',
+      link,
+      '',
+      'If you did not ask for this, you can ignore this email. Your password will stay the same.',
+      '',
+      'The Masra Team',
+    ].join('\n'),
+    htmlBody: resetHtmlBody_(link),
+    inlineImages: {
+      masraLogo: Utilities.newBlob(
+        Utilities.base64Decode(LOGO_PNG_BASE64),
+        'image/png',
+        'masra-logo.png'
+      ),
+    },
+  });
+}
+
+function resetHtmlBody_(link) {
+  const url = escapeHtml_(link);
+  const NAVY = '#06365A';
+  const BG = '#F4F6F8';
+  const TEXT = '#17212B';
+  const MUTED = '#66737F';
+  const FONT = "font-family:'Segoe UI',Tahoma,Arial,sans-serif;";
+
+  return (
+    '<!DOCTYPE html><html><body style="margin:0;padding:0;background:' + BG + ';">' +
+    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:' + BG + ';padding:24px 12px;">' +
+    '<tr><td align="center">' +
+    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" ' +
+    'style="max-width:560px;background:#ffffff;border-radius:14px;overflow:hidden;">' +
+
+    '<tr><td align="center" style="padding:0;background:#ffffff;font-size:0;line-height:0;">' +
+    '<img src="cid:masraLogo" width="560" alt="Masra" ' +
+    'style="display:block;width:100%;max-width:560px;height:auto;border:0;">' +
+    '</td></tr>' +
+
+    '<tr><td style="padding:30px 32px 26px;text-align:left;' + FONT + '">' +
+    '<p style="margin:0 0 12px;font-size:21px;font-weight:bold;color:' + NAVY + ';">Reset your password</p>' +
+    '<p style="margin:0 0 24px;font-size:15px;line-height:24px;color:' + TEXT + ';">' +
+    'We received a request to reset the password for your <b>Masra</b> account. ' +
+    'Tap the button below to choose a new one.</p>' +
+
+    '<table role="presentation" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto 24px;">' +
+    '<tr><td align="center" bgcolor="' + NAVY + '" style="border-radius:30px;">' +
+    '<a href="' + url + '" style="display:inline-block;padding:14px 36px;font-size:15px;font-weight:bold;' +
+    'color:#ffffff;text-decoration:none;border-radius:30px;' + FONT + '">Reset password</a>' +
+    '</td></tr></table>' +
+
+    '<p style="margin:0 0 6px;font-size:13px;line-height:20px;color:' + MUTED + ';">' +
+    'If the button does not work, open this link:</p>' +
+    '<p style="margin:0 0 20px;font-size:12px;line-height:18px;word-break:break-all;">' +
+    '<a href="' + url + '" style="color:#0B91A6;">' + url + '</a></p>' +
+
+    '<p style="margin:0;font-size:13px;line-height:20px;color:' + MUTED + ';">' +
+    'If you did not ask to reset your password, you can ignore this email. ' +
+    'Your password will stay the same.</p>' +
+    '<p style="margin:22px 0 0;font-size:14px;color:' + MUTED + ';">The Masra Team</p>' +
+    '</td></tr>' +
+
+    '<tr><td align="center" style="background:' + NAVY + ';padding:16px 24px;font-size:12px;line-height:18px;color:#DCEEF1;' + FONT + '">' +
+    'This email was sent by the Masra app.' +
     '</td></tr>' +
 
     '</table></td></tr></table></body></html>'

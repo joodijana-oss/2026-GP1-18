@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:masra/services/password_reset_email_service.dart';
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../utils/validators.dart';
@@ -65,9 +66,14 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
     setState(() => _loading = true);
 
     try {
-      await FirebaseAuth.instance.sendPasswordResetEmail(
-        email: emailController.text.trim(),
-      );
+      final email = emailController.text.trim();
+
+      // The Masra-designed email first. If that service is not available,
+      // Firebase sends its own (plain) reset email instead.
+      final sentByMasra = await PasswordResetEmailService().send(email);
+      if (!sentByMasra) {
+        await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
+      }
       _showMessage(_neutralSuccessMessage);
     } on FirebaseAuthException catch (e) {
       // user-not-found only happens when Email Enumeration Protection
