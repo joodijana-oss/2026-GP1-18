@@ -265,8 +265,23 @@ class UserService {
       return false;
     }
  
-    return currentCvUploadedAt ==
-        analyzedCvUploadedAt;
+    if (currentCvUploadedAt != analyzedCvUploadedAt) {
+      return false;
+    }
+
+    // The analysis was made for one career goal. If the user changed the
+    // goal in the profile, this saved analysis belongs to the old goal.
+    return _sameCareerGoal(
+      userData['careerGoalId'],
+      analysisData['careerGoalId'],
+    );
+  }
+
+  /// True when both career goal ids are filled and equal.
+  bool _sameCareerGoal(dynamic current, dynamic saved) {
+    final a = current?.toString().trim() ?? '';
+    final b = saved?.toString().trim() ?? '';
+    return a.isNotEmpty && a == b;
   }
  
   // ---------------------------------------------------------
@@ -341,6 +356,8 @@ class UserService {
  
     await _latestCvReviewDoc.set({
       'areas': areas,
+      // The review uses the career goal name, so it belongs to this goal.
+      'careerGoalId': userData?['careerGoalId'],
       'cvUploadedAt': cvUploadedAt,
       'reviewedAt': FieldValue.serverTimestamp(),
     });
@@ -372,6 +389,15 @@ class UserService {
     if (currentCvUploadedAt is! Timestamp ||
         reviewedCvUploadedAt is! Timestamp ||
         currentCvUploadedAt != reviewedCvUploadedAt) {
+      return null;
+    }
+
+    // A review saved for another career goal (or saved before the goal was
+    // stored with it) is not shown; the user reviews the CV again.
+    if (!_sameCareerGoal(
+      userData['careerGoalId'],
+      reviewData['careerGoalId'],
+    )) {
       return null;
     }
  

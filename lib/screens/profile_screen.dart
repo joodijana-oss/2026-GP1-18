@@ -26,6 +26,8 @@ import '../theme/app_colors.dart';
 
 import '../widgets/appearance_card.dart';
 
+import '../widgets/analysis_update_prompt.dart';
+
 import '../widgets/profile_avatar.dart';
 
 import 'explore_screen.dart';
@@ -2051,6 +2053,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
       // Saves name + date + text together. If it fails, the old CV stays.
 
+      // Is there a saved analysis that is about to become outdated?
+      final hadAnalysis = (await _userService.getLatestAnalysis()) != null;
+
       await _userService.saveCv(fileName: file.name, text: result.text!);
 
 
@@ -2058,6 +2063,13 @@ class _ProfileScreenState extends State<ProfileScreen>
       await _loadProfile();
 
       _showMessage('Your CV has been replaced successfully.');
+
+      // The old analysis, CV review, and certification matches belong to the
+      // old CV: offer to run AI Career Analysis again.
+      if (hadAnalysis && mounted) {
+        await showAnalysisUpdatePrompt(context);
+        if (mounted) await _loadProfile();
+      }
 
     } catch (e) {
 
