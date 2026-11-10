@@ -24,6 +24,10 @@ import '../services/user_service.dart';
 
 import '../theme/app_colors.dart';
 
+import '../widgets/appearance_card.dart';
+
+import '../widgets/profile_avatar.dart';
+
 import 'explore_screen.dart';
 
 import 'home_screen.dart';
@@ -478,9 +482,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
     if (_isLoading) {
 
-      return const Center(
+      return Center(
 
-        child: CircularProgressIndicator(color: AppColors.teal),
+        child: CircularProgressIndicator(color: AppColors.tealText),
 
       );
 
@@ -502,7 +506,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
             children: [
 
-              const Text(
+              Text(
 
                 'Could not load your profile. Please try again.',
 
@@ -510,7 +514,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                 style: TextStyle(
 
-                  color: AppColors.navy,
+                  color: AppColors.navyText,
 
                   fontSize: 14,
 
@@ -526,13 +530,13 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                 onPressed: _loadProfile,
 
-                child: const Text(
+                child: Text(
 
                   'Try Again',
 
                   style: TextStyle(
 
-                    color: AppColors.teal,
+                    color: AppColors.tealText,
 
                     fontWeight: FontWeight.w700,
 
@@ -612,6 +616,10 @@ class _ProfileScreenState extends State<ProfileScreen>
 
             const SizedBox(height: 28),
 
+            _padded(const AppearanceCard()),
+
+            const SizedBox(height: 24),
+
             _padded(
 
               _profileAction(
@@ -670,7 +678,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
       clipBehavior: Clip.antiAlias,
 
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
 
         gradient: LinearGradient(
 
@@ -690,7 +698,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
         ),
 
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
 
           bottomLeft: Radius.circular(42),
 
@@ -769,7 +777,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                 // TOP BAR (same height as before, so the avatar row
                 // below keeps its position)
 
-                SizedBox(
+                const SizedBox(
 
                   height: 42,
 
@@ -777,13 +785,13 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                   children: [
 
-                    const Text(
+                    Text(
 
                       'Profile',
 
                       style: TextStyle(
 
-                        color: AppColors.white,
+                        color: AppColors.onBrand,
 
                         fontSize: 29,
 
@@ -813,53 +821,11 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                   children: [
 
-                    Container(
+                    ProfileAvatar(
 
-                      width: 78,
+                      initial: _initial,
 
-                      height: 78,
-
-                      decoration: BoxDecoration(
-
-                        gradient: const LinearGradient(
-
-                          begin: Alignment.topLeft,
-
-                          end: Alignment.bottomRight,
-
-                          colors: [AppColors.teal, AppColors.lightTeal],
-
-                        ),
-
-                        borderRadius: BorderRadius.circular(25),
-
-                        border: Border.all(
-
-                          color: AppColors.white.withValues(alpha: 0.18),
-
-                          width: 1.5,
-
-                        ),
-
-                      ),
-
-                      alignment: Alignment.center,
-
-                      child: Text(
-
-                        _initial,
-
-                        style: const TextStyle(
-
-                          color: AppColors.white,
-
-                          fontSize: 35,
-
-                          fontWeight: FontWeight.w800,
-
-                        ),
-
-                      ),
+                      onMessage: _showMessage,
 
                     ),
 
@@ -883,7 +849,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                             style: const TextStyle(
 
-                              color: AppColors.white,
+                              color: AppColors.onBrand,
 
                               fontSize: 23,
 
@@ -907,7 +873,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                             style: TextStyle(
 
-                              color: AppColors.white.withValues(alpha: 0.70),
+                              color: AppColors.onBrand.withValues(alpha: 0.70),
 
                               fontSize: 13.5,
 
@@ -949,7 +915,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                               children: [
 
-                                const Icon(
+                                Icon(
 
                                   Icons.gps_fixed_rounded,
 
@@ -969,11 +935,11 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                                     overflow: TextOverflow.ellipsis,
 
-                                    style: const TextStyle(
+                                    style: TextStyle(
 
                                       color: AppColors.gold,
 
-                                      fontSize: 11.5,
+                                      fontSize: 12,
 
                                       fontWeight: FontWeight.w700,
 
@@ -1041,13 +1007,13 @@ class _ProfileScreenState extends State<ProfileScreen>
 
             icon: Icons.person_outline_rounded,
 
-            accent: AppColors.navy,
+            accent: AppColors.navyText,
 
           ),
 
           const SizedBox(height: 18),
 
-          _infoRow(Icons.badge_outlined, 'Full Name', _fullName,
+          _infoRow(Icons.badge_outlined, 'Name', _fullName,
               onEdit: _editFullName),
 
           // Changing the email needs the password + a verification link
@@ -1090,7 +1056,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
             icon: Icons.school_outlined,
 
-            accent: AppColors.teal,
+            accent: AppColors.tealText,
 
           ),
 
@@ -1258,7 +1224,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
               ),
 
-              child: Icon(icon, color: AppColors.teal, size: 19),
+              child: Icon(icon, color: AppColors.tealText, size: 19),
 
             ),
 
@@ -1276,11 +1242,11 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                     label,
 
-                    style: const TextStyle(
+                    style: TextStyle(
 
                       color: AppColors.secondaryText,
 
-                      fontSize: 10.5,
+                      fontSize: 12,
 
                       fontWeight: FontWeight.w500,
 
@@ -1294,9 +1260,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                     value,
 
-                    style: const TextStyle(
+                    style: TextStyle(
 
-                      color: AppColors.navy,
+                      color: AppColors.navyText,
 
                       fontSize: 13,
 
@@ -1319,9 +1285,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                 onPressed: onEdit,
                 tooltip: 'Edit $label',
                 visualDensity: VisualDensity.compact,
-                icon: const Icon(
+                icon: Icon(
                   Icons.edit_outlined,
-                  color: AppColors.teal,
+                  color: AppColors.tealText,
                   size: 18,
                 ),
               ),
@@ -1368,7 +1334,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
             icon: Icons.auto_graph_rounded,
 
-            accent: AppColors.teal,
+            accent: AppColors.tealText,
 
           ),
 
@@ -1412,7 +1378,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
         borderRadius: BorderRadius.circular(20),
 
-        border: Border.all(color: AppColors.teal.withValues(alpha: 0.15)),
+        border: Border.all(color: AppColors.tealText.withValues(alpha: 0.15)),
 
       ),
 
@@ -1420,9 +1386,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
         skill,
 
-        style: const TextStyle(
+        style: TextStyle(
 
-          color: AppColors.navy,
+          color: AppColors.navyText,
 
           fontSize: 12.5,
 
@@ -1539,7 +1505,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
             icon: Icons.code_rounded,
 
-            accent: AppColors.teal,
+            accent: AppColors.tealText,
 
           ),
 
@@ -1557,7 +1523,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
               icon: Icons.folder_open_rounded,
 
-              accent: AppColors.teal,
+              accent: AppColors.tealText,
 
               title: (item) =>
                   item['name']?.toString() ??
@@ -1607,7 +1573,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
             icon: Icons.work_outline_rounded,
 
-            accent: AppColors.teal,
+            accent: AppColors.tealText,
 
           ),
 
@@ -1625,7 +1591,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
               icon: Icons.business_center_outlined,
 
-              accent: AppColors.teal,
+              accent: AppColors.tealText,
 
               title: (item) =>
                   item['title']?.toString() ??
@@ -1726,9 +1692,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                       title(item),
 
-                      style: const TextStyle(
+                      style: TextStyle(
 
-                        color: AppColors.navy,
+                        color: AppColors.navyText,
 
                         fontSize: 14,
 
@@ -1746,11 +1712,11 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                         itemSubtitle,
 
-                        style: const TextStyle(
+                        style: TextStyle(
 
                           color: AppColors.secondaryText,
 
-                          fontSize: 11.5,
+                          fontSize: 12,
 
                           height: 1.35,
 
@@ -1814,7 +1780,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
             icon: Icons.description_outlined,
 
-            accent: AppColors.navy,
+            accent: AppColors.navyText,
 
           ),
 
@@ -1858,7 +1824,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                     decoration: BoxDecoration(
 
-                      gradient: const LinearGradient(
+                      gradient: LinearGradient(
 
                         begin: Alignment.topLeft,
 
@@ -1876,7 +1842,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                       Icons.picture_as_pdf_outlined,
 
-                      color: AppColors.white,
+                      color: AppColors.onBrand,
 
                       size: 25,
 
@@ -1902,9 +1868,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                           overflow: TextOverflow.ellipsis,
 
-                          style: const TextStyle(
+                          style: TextStyle(
 
-                            color: AppColors.navy,
+                            color: AppColors.navyText,
 
                             fontSize: 13.5,
 
@@ -1922,11 +1888,11 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                             'Uploaded $uploadedAt',
 
-                            style: const TextStyle(
+                            style: TextStyle(
 
                               color: AppColors.secondaryText,
 
-                              fontSize: 10.5,
+                              fontSize: 12,
 
                             ),
 
@@ -1982,7 +1948,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
         child: _isReplacingCv
 
-            ? const SizedBox(
+            ? SizedBox(
 
                 width: 16,
 
@@ -2002,11 +1968,11 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                 label,
 
-                style: const TextStyle(
+                style: TextStyle(
 
                   color: AppColors.gold,
 
-                  fontSize: 11,
+                  fontSize: 12,
 
                   fontWeight: FontWeight.w800,
 
@@ -2145,7 +2111,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
       ),
 
-      child: const Text(
+      child: Text(
 
         _emptyMessage,
 
@@ -2245,9 +2211,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
               title,
 
-              style: const TextStyle(
+              style: TextStyle(
 
-                color: AppColors.navy,
+                color: AppColors.navyText,
 
                 fontSize: 13.5,
 
@@ -2361,9 +2327,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                 title,
 
-                style: const TextStyle(
+                style: TextStyle(
 
-                  color: AppColors.navy,
+                  color: AppColors.navyText,
 
                   fontSize: 19,
 
@@ -2385,11 +2351,11 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                 overflow: TextOverflow.ellipsis,
 
-                style: const TextStyle(
+                style: TextStyle(
 
                   color: AppColors.secondaryText,
 
-                  fontSize: 10.5,
+                  fontSize: 12,
 
                 ),
 
@@ -2581,7 +2547,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                     size: 24,
 
-                    color: selected ? AppColors.teal : AppColors.secondaryText,
+                    color: selected ? AppColors.tealText : AppColors.secondaryText,
 
                   ),
 
@@ -2599,7 +2565,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                         height: 6,
 
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
 
                           color: AppColors.gold,
 
@@ -2625,9 +2591,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
               style: TextStyle(
 
-                color: selected ? AppColors.teal : AppColors.secondaryText,
+                color: selected ? AppColors.tealText : AppColors.secondaryText,
 
-                fontSize: 11,
+                fontSize: 12,
 
                 fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
 
@@ -2833,8 +2799,8 @@ class _ProfileScreenState extends State<ProfileScreen>
                         children: [
                           Text(
                             'Edit $label',
-                            style: const TextStyle(
-                              color: AppColors.navy,
+                            style: TextStyle(
+                              color: AppColors.navyText,
                               fontSize: 18,
                               fontWeight: FontWeight.w800,
                             ),
@@ -2854,9 +2820,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                                         ? null
                                         : () => Navigator.pop(sheetContext),
                                     style: OutlinedButton.styleFrom(
-                                      foregroundColor: AppColors.navy,
+                                      foregroundColor: AppColors.navyText,
                                       side: BorderSide(
-                                        color: AppColors.navy.withValues(
+                                        color: AppColors.navyText.withValues(
                                           alpha: 0.20,
                                         ),
                                       ),
@@ -2884,7 +2850,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                                   height: 52,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    gradient: const LinearGradient(
+                                    gradient: LinearGradient(
                                       colors: [
                                         AppColors.navy,
                                         AppColors.secondaryNavy,
@@ -2909,8 +2875,8 @@ class _ProfileScreenState extends State<ProfileScreen>
                                       disabledBackgroundColor:
                                           Colors.transparent,
                                       shadowColor: Colors.transparent,
-                                      foregroundColor: AppColors.white,
-                                      disabledForegroundColor: AppColors.white,
+                                      foregroundColor: AppColors.onBrand,
+                                      disabledForegroundColor: AppColors.onBrand,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(20),
                                       ),
@@ -2921,7 +2887,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                                             height: 22,
                                             child: CircularProgressIndicator(
                                               strokeWidth: 2.5,
-                                              color: AppColors.white,
+                                              color: AppColors.onBrand,
                                             ),
                                           )
                                         : const Text(
@@ -3021,7 +2987,7 @@ class _ProfileScreenState extends State<ProfileScreen>
               });
             },
             validator: validateNewEmail,
-            style: const TextStyle(color: AppColors.navy, fontSize: 14),
+            style: TextStyle(color: AppColors.navyText, fontSize: 14),
             decoration: _inputDecoration(
               hint: Validators.emailHint,
               icon: Icons.email_outlined,
@@ -3040,11 +3006,12 @@ class _ProfileScreenState extends State<ProfileScreen>
               });
             },
             validator: Validators.enteredPassword,
-            style: const TextStyle(color: AppColors.navy, fontSize: 14),
+            style: TextStyle(color: AppColors.navyText, fontSize: 14),
             decoration: _inputDecoration(
               hint: 'Enter your current password',
               icon: Icons.lock_outline_rounded,
               suffixIcon: IconButton(
+                tooltip: 'Show or hide password',
                 onPressed: () =>
                     setSheetState(() => hidePassword = !hidePassword),
                 icon: Icon(
@@ -3126,7 +3093,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     var name = _user['fullName']?.toString().trim() ?? '';
 
     await _showEditSheet(
-      label: 'Full Name',
+      label: 'Name',
       canSave: () => Validators.fullName(name) == null,
       buildField: (_, setSheetState) => TextFormField(
         initialValue: name,
@@ -3136,9 +3103,9 @@ class _ProfileScreenState extends State<ProfileScreen>
         autovalidateMode: AutovalidateMode.onUserInteraction,
         onChanged: (value) => setSheetState(() => name = value),
         validator: Validators.fullName,
-        style: const TextStyle(color: AppColors.navy, fontSize: 14),
+        style: TextStyle(color: AppColors.navyText, fontSize: 14),
         decoration: _inputDecoration(
-          hint: 'Enter your full name',
+          hint: 'Enter your name',
           icon: Icons.person_outline_rounded,
         ),
       ),
@@ -3210,7 +3177,7 @@ class _ProfileScreenState extends State<ProfileScreen>
           ),
           if (needsDate) ...[
             const SizedBox(height: 14),
-            const Text(
+            Text(
               "Your graduation date doesn't match this status. "
               'Please select a new one.',
               style: TextStyle(
@@ -3310,7 +3277,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                     children: [
                       TextButton(
                         onPressed: () => Navigator.pop(sheetContext),
-                        child: const Text(
+                        child: Text(
                           'Cancel',
                           style: TextStyle(
                             color: AppColors.secondaryText,
@@ -3322,10 +3289,10 @@ class _ProfileScreenState extends State<ProfileScreen>
                       const Spacer(),
                       TextButton(
                         onPressed: () => Navigator.pop(sheetContext, tempDate),
-                        child: const Text(
+                        child: Text(
                           'Done',
                           style: TextStyle(
-                            color: AppColors.teal,
+                            color: AppColors.tealText,
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
                           ),
@@ -3334,7 +3301,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                     ],
                   ),
                 ),
-                const Divider(height: 1, color: AppColors.lightGray),
+                Divider(height: 1, color: AppColors.lightGray),
                 Expanded(
                   child: CupertinoDatePicker(
                     mode: CupertinoDatePickerMode.monthYear,
@@ -3385,7 +3352,7 @@ class _ProfileScreenState extends State<ProfileScreen>
               hint: 'Select your graduation month and year',
               icon: Icons.calendar_month_outlined,
               errorText: field.errorText,
-              suffixIcon: const Icon(
+              suffixIcon: Icon(
                 Icons.keyboard_arrow_down_rounded,
                 color: AppColors.secondaryText,
               ),
@@ -3394,7 +3361,7 @@ class _ProfileScreenState extends State<ProfileScreen>
               date == null
                   ? ''
                   : '${_monthNames[date.month - 1]} ${date.year}',
-              style: const TextStyle(color: AppColors.navy, fontSize: 14),
+              style: TextStyle(color: AppColors.navyText, fontSize: 14),
             ),
           ),
         );
@@ -3427,9 +3394,9 @@ class _ProfileScreenState extends State<ProfileScreen>
         }
         return null;
       },
-      style: const TextStyle(color: AppColors.navy, fontSize: 14),
+      style: TextStyle(color: AppColors.navyText, fontSize: 14),
       dropdownColor: AppColors.softBackground,
-      icon: const Icon(
+      icon: Icon(
         Icons.keyboard_arrow_down_rounded,
         color: AppColors.secondaryText,
       ),
@@ -3453,7 +3420,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
     return InputDecoration(
       hintText: hint,
-      hintStyle: const TextStyle(color: AppColors.mediumGray, fontSize: 13),
+      hintStyle: const TextStyle(color: AppColors.onBrandMuted, fontSize: 13),
       errorText: errorText,
       prefixIcon: Icon(icon, color: AppColors.secondaryText, size: 21),
       suffixIcon: suffixIcon,
@@ -3513,7 +3480,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                 color: isError
                     ? const Color(0xFFD64545)
                     : isInfo
-                        ? AppColors.teal
+                        ? AppColors.tealText
                         : const Color(0xFF23966F),
                 size: 22,
               ),
@@ -3522,8 +3489,8 @@ class _ProfileScreenState extends State<ProfileScreen>
             Expanded(
               child: Text(
                 title,
-                style: const TextStyle(
-                  color: AppColors.navy,
+                style: TextStyle(
+                  color: AppColors.navyText,
                   fontSize: 14,
                   fontWeight: FontWeight.w700,
                 ),
@@ -3531,8 +3498,9 @@ class _ProfileScreenState extends State<ProfileScreen>
             ),
             const SizedBox(width: 5),
             IconButton(
+              tooltip: 'Close',
               onPressed: () => messenger.hideCurrentSnackBar(),
-              icon: const Icon(
+              icon: Icon(
                 Icons.close_rounded,
                 color: AppColors.secondaryText,
                 size: 19,
@@ -3614,13 +3582,13 @@ class _ProfileScreenState extends State<ProfileScreen>
 
           ),
 
-          title: const Text(
+          title: Text(
 
             'Log Out',
 
             style: TextStyle(
 
-              color: AppColors.navy,
+              color: AppColors.navyText,
 
               fontSize: 19,
 
@@ -3630,7 +3598,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
           ),
 
-          content: const Text(
+          content: Text(
 
             'Are you sure you want to log out?',
 
@@ -3652,7 +3620,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
               onPressed: () => Navigator.pop(dialogContext, false),
 
-              child: const Text(
+              child: Text(
 
                 'Cancel',
 
@@ -3774,9 +3742,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
                 message,
 
-                style: const TextStyle(
+                style: TextStyle(
 
-                  color: AppColors.navy,
+                  color: AppColors.navyText,
 
                   fontSize: 13,
 

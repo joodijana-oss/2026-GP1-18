@@ -2,85 +2,93 @@ import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
 class AppTheme {
-  static ThemeData lightTheme = ThemeData(
-    useMaterial3: true,
+  /// Theme for the current mode. Built from [AppColors], so set
+  /// [AppColors.isDark] before reading it.
+  static ThemeData get current {
+    final brightness = AppColors.isDark ? Brightness.dark : Brightness.light;
 
-    // =========================
-    // GENERAL
-    // =========================
-    scaffoldBackgroundColor: AppColors.background,
+    return ThemeData(
+      useMaterial3: true,
+      brightness: brightness,
 
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.navy,
-      primary: AppColors.navy,
-      secondary: AppColors.teal,
-      surface: AppColors.background,
-    ),
+      // =========================
+      // GENERAL
+      // =========================
+      scaffoldBackgroundColor: AppColors.background,
 
-    fontFamily: 'Arial',
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: AppColors.navy,
+        brightness: brightness,
+        primary: AppColors.isDark ? AppColors.tealText : AppColors.navy,
+        onPrimary: AppColors.isDark ? AppColors.background : AppColors.onBrand,
+        secondary: AppColors.teal,
+        surface: AppColors.background,
+        onSurface: AppColors.darkText,
+      ),
 
-    
+      fontFamily: 'Arial',
 
-    // =========================
-    // APP BAR
-    // =========================
-    appBarTheme: const AppBarTheme(
-      backgroundColor: AppColors.background,
-      foregroundColor: AppColors.navy,
-      elevation: 0,
-      centerTitle: false,
-    ),
-
-    // =========================
-    // BUTTONS
-    // =========================
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.navy,
-        foregroundColor: AppColors.white,
+      // =========================
+      // APP BAR
+      // =========================
+      appBarTheme: AppBarTheme(
+        backgroundColor: AppColors.background,
+        foregroundColor: AppColors.navyText,
         elevation: 0,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 24,
-          vertical: 16,
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
-        ),
-      ),
-    ),
-
-    // =========================
-    // TEXT FIELDS
-    // =========================
-    inputDecorationTheme: InputDecorationTheme(
-      filled: true,
-      fillColor: AppColors.softBackground,
-
-      hintStyle: const TextStyle(
-        color: AppColors.secondaryText,
+        centerTitle: false,
       ),
 
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(14),
-        borderSide: const BorderSide(
-          color: AppColors.lightGray,
+      // =========================
+      // BUTTONS
+      // =========================
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.navy,
+          foregroundColor: AppColors.onBrand,
+          elevation: 0,
+          padding: const EdgeInsets.symmetric(
+            horizontal: 24,
+            vertical: 16,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
         ),
       ),
 
-      enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(14),
-        borderSide: const BorderSide(
-          color: AppColors.lightGray,
-        ),
-      ),
+      // =========================
+      // TEXT FIELDS
+      // =========================
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: AppColors.softBackground,
 
-      focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(14),
-        borderSide: const BorderSide(
-          color: AppColors.teal,
-          width: 1.5,
+        hintStyle: TextStyle(
+          color: AppColors.secondaryText,
+        ),
+
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: BorderSide(
+            color: AppColors.lightGray,
+          ),
+        ),
+
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: BorderSide(
+            color: AppColors.lightGray,
+          ),
+        ),
+
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: BorderSide(
+            color: AppColors.tealText,
+            width: 1.5,
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }

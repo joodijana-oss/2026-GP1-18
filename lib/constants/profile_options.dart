@@ -87,9 +87,37 @@ class ProfileOptions {
     return graduationStatuses.contains(value) ? value : null;
   }
 
+  // The status to use today. A 'Student' whose graduation month has passed
+  // counts as 'Graduate', so nobody has to update profiles every year.
+  // (No month saved: they count as graduated once that year is over.)
+  static String? effectiveGraduationStatus(
+    String? status, {
+    Object? year,
+    Object? month,
+    DateTime? now,
+  }) {
+    final normalized = normalizeGraduationStatus(status);
+    if (normalized != 'Student') return normalized;
+
+    final y = year is int ? year : int.tryParse('$year');
+    if (y == null) return normalized;
+    final m = month is int ? month : int.tryParse('$month');
+
+    final today = now ?? DateTime.now();
+    final bool passed;
+    if (m != null && m >= 1 && m <= 12) {
+      passed = y < today.year || (y == today.year && m < today.month);
+    } else {
+      passed = y < today.year;
+    }
+
+    return passed ? 'Graduate' : normalized;
+  }
+
   // Shown as text in the dropdown, saved as int with int.parse()
   static final List<String> graduationYears = [
-    for (int year = 2026; year >= 2016; year--) year.toString(),
+    for (int year = DateTime.now().year; year >= 2016; year--)
+      year.toString(),
   ];
 
   static const List<String> experienceLevels = [

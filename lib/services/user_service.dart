@@ -1,5 +1,9 @@
+import 'dart:typed_data';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+
+import '../constants/profile_options.dart';
  
 class UserService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
@@ -21,6 +25,11 @@ class UserService {
   DocumentReference<Map<String, dynamic>> get _cvDoc =>
       _userDoc.collection('private').doc('cv');
  
+  // Profile photo, kept as a small image inside Firestore (the free plan
+  // has no Cloud Storage). Owner-only, like the CV text.
+  DocumentReference<Map<String, dynamic>> get _photoDoc =>
+      _userDoc.collection('private').doc('photo');
+
   DocumentReference<Map<String, dynamic>> get _latestAnalysisDoc =>
       _userDoc.collection('analysis').doc('latest');
  
@@ -76,7 +85,30 @@ class UserService {
  
   Future<Map<String, dynamic>?> getUser() async {
     final snapshot = await _userDoc.get();
-    return snapshot.data();
+    final data = snapshot.data();
+    if (data == null) return null;
+
+    // A student whose graduation date has passed becomes a graduate
+    // automatically (see ProfileOptions.effectiveGraduationStatus).
+    final status = ProfileOptions.effectiveGraduationStatus(
+      data['graduationStatus']?.toString(),
+      year: data['graduationYear'],
+      month: data['graduationMonth'],
+    );
+
+    if (status != null && status != data['graduationStatus']) {
+      data['graduationStatus'] = status;
+      try {
+        await _userDoc.update({
+          'graduationStatus': status,
+          'updatedAt': FieldValue.serverTimestamp(),
+        });
+      } catch (_) {
+        // Offline or not allowed: still show the right status this session.
+      }
+    }
+
+    return data;
   }
  
   Future<void> updateUser(
@@ -88,6 +120,34 @@ class UserService {
     });
   }
  
+  // ---------------------------------------------------------
+  // PROFILE PHOTO (optional)
+  // ---------------------------------------------------------
+
+  // Firestore documents are limited to 1 MB; the app shrinks photos to
+  // far below this before saving.
+  static const int maxPhotoBytes = 400 * 1024;
+
+  Future<Uint8List?> getProfilePhoto() async {
+    final snapshot = await _photoDoc.get();
+    final value = snapshot.data()?['bytes'];
+    return value is Blob ? value.bytes : null;
+  }
+
+  Future<void> saveProfilePhoto(Uint8List bytes) async {
+    if (bytes.isEmpty || bytes.length > maxPhotoBytes) {
+      throw ArgumentError('Photo is empty or too large.');
+    }
+    await _photoDoc.set({
+      'bytes': Blob(bytes),
+      'updatedAt': FieldValue.serverTimestamp(),
+    });
+  }
+
+  Future<void> deleteProfilePhoto() async {
+    await _photoDoc.delete();
+  }
+
   // ---------------------------------------------------------
   // CV
   // ---------------------------------------------------------

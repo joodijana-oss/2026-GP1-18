@@ -1,0 +1,12 @@
+{
+  "name": "masra-upload-certifications",
+  "private": true,
+  "description": "Uploads lib/assets/data/Masra_IT_Certifications.csv to the Firestore 'certifications' collection.",
+  "scripts": {
+    "dry-run": "node upload_certifications.js --dry-run",
+    "upload": "node upload_certifications.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.6.0"
+  }
+}

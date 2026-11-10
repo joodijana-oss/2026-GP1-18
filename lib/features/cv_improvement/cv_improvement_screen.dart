@@ -224,9 +224,9 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
       backgroundColor: AppColors.background,
       body: SafeArea(
         child: _isLoading
-            ? const Center(
+            ? Center(
                 child: CircularProgressIndicator(
-                  color: AppColors.teal,
+                  color: AppColors.tealText,
                 ),
               )
             : SingleChildScrollView(
@@ -287,19 +287,19 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
       children: [
         GestureDetector(
           onTap: () => Navigator.pop(context),
-          child: const Icon(
+          child: Icon(
             Icons.arrow_back_ios_new_rounded,
-            color: AppColors.navy,
+            color: AppColors.navyText,
             size: 21,
           ),
         ),
         const SizedBox(width: 26),
-        const Expanded(
+        Expanded(
           child: Text(
             'CV Improvement Assistant',
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              color: AppColors.navy,
+              color: AppColors.navyText,
               fontSize: 20,
               fontWeight: FontWeight.w700,
             ),
@@ -354,10 +354,10 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
         const SizedBox(height: 24),
         _entrance(
           delay: 130,
-          child: const Text(
+          child: Text(
             'Your review will cover',
             style: TextStyle(
-              color: AppColors.navy,
+              color: AppColors.navyText,
               fontSize: 16,
               fontWeight: FontWeight.w800,
             ),
@@ -423,7 +423,7 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: AppColors.teal.withValues(alpha: 0.10),
+                  color: AppColors.tealText.withValues(alpha: 0.10),
                   width: 18,
                 ),
               ),
@@ -434,21 +434,21 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Expanded(
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'Make your CV ATS-ready',
                         style: TextStyle(
-                          color: AppColors.navy,
+                          color: AppColors.navyText,
                           fontSize: 23,
                           fontWeight: FontWeight.w800,
                           letterSpacing: -0.4,
                           height: 1.16,
                         ),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Text(
                         'Find out what applicant tracking systems may miss in your CV and get clear suggestions to improve it.',
                         style: TextStyle(
@@ -457,8 +457,8 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
                           height: 1.55,
                         ),
                       ),
-                      SizedBox(height: 15),
-                      _SuggestionsOnlyBadge(),
+                      const SizedBox(height: 15),
+                      const _SuggestionsOnlyBadge(),
                     ],
                   ),
                 ),
@@ -493,9 +493,9 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
                         ),
                       ],
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.edit_document,
-                      color: AppColors.teal,
+                      color: AppColors.tealText,
                       size: 30,
                     ),
                   ),
@@ -537,9 +537,9 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
               color: AppColors.lightTeal,
               borderRadius: BorderRadius.circular(16),
             ),
-            child: const Icon(
+            child: Icon(
               Icons.description_rounded,
-              color: AppColors.teal,
+              color: AppColors.tealText,
               size: 28,
             ),
           ),
@@ -552,8 +552,8 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
                   _hasCv ? (_cvFileName ?? 'Uploaded CV') : 'No CV uploaded',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    color: AppColors.navy,
+                  style: TextStyle(
+                    color: AppColors.navyText,
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
                   ),
@@ -563,7 +563,7 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
                   _hasCv
                       ? 'Ready for review'
                       : 'Upload your CV in your profile before starting.',
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppColors.secondaryText,
                     fontSize: 12.5,
                   ),
@@ -579,9 +579,9 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
                 color: AppColors.lightTeal,
                 borderRadius: BorderRadius.circular(11),
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.check_rounded,
-                color: AppColors.teal,
+                color: AppColors.tealText,
                 size: 20,
               ),
             ),
@@ -601,12 +601,12 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(area.icon, color: AppColors.teal, size: 18),
+          Icon(area.icon, color: AppColors.tealText, size: 18),
           const SizedBox(width: 8),
           Text(
             area.title,
-            style: const TextStyle(
-              color: AppColors.navy,
+            style: TextStyle(
+              color: AppColors.navyText,
               fontSize: 13,
               fontWeight: FontWeight.w700,
             ),
@@ -624,17 +624,17 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'Reviewing your CV',
           style: TextStyle(
-            color: AppColors.navy,
+            color: AppColors.navyText,
             fontSize: 24,
             fontWeight: FontWeight.w800,
             letterSpacing: -0.3,
           ),
         ),
         const SizedBox(height: 8),
-        const Text(
+        Text(
           'Masra is checking your CV against common ATS requirements.',
           style: TextStyle(
             color: AppColors.secondaryText,
@@ -662,16 +662,16 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
             children: [
               _buildReviewingIcon(),
               const SizedBox(height: 20),
-              const Text(
+              Text(
                 'Preparing your review',
                 style: TextStyle(
-                  color: AppColors.navy,
+                  color: AppColors.navyText,
                   fontSize: 17,
                   fontWeight: FontWeight.w800,
                 ),
               ),
               const SizedBox(height: 6),
-              const Text(
+              Text(
                 'This may take a few moments.',
                 style: TextStyle(
                   color: AppColors.secondaryText,
@@ -712,9 +712,9 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
           color: AppColors.lightTeal,
           borderRadius: BorderRadius.circular(24),
         ),
-        child: const Icon(
+        child: Icon(
           Icons.edit_document,
-          color: AppColors.teal,
+          color: AppColors.tealText,
           size: 34,
         ),
       ),
@@ -740,26 +740,26 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
           AnimatedSwitcher(
             duration: const Duration(milliseconds: 250),
             child: isCompleted
-                ? const Icon(
+                ? Icon(
                     Icons.check_circle_rounded,
-                    key: ValueKey('done'),
-                    color: AppColors.teal,
+                    key: const ValueKey('done'),
+                    color: AppColors.tealText,
                     size: 23,
                   )
                 : isCurrent
-                    ? const SizedBox(
-                        key: ValueKey('loading'),
+                    ? SizedBox(
+                        key: const ValueKey('loading'),
                         width: 22,
                         height: 22,
                         child: CircularProgressIndicator(
-                          color: AppColors.teal,
+                          color: AppColors.tealText,
                           strokeWidth: 2.2,
                         ),
                       )
                     : const Icon(
                         Icons.radio_button_unchecked_rounded,
                         key: ValueKey('waiting'),
-                        color: AppColors.mediumGray,
+                        color: AppColors.onBrandMuted,
                         size: 22,
                       ),
           ),
@@ -769,7 +769,7 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
               text,
               style: TextStyle(
                 color: isCompleted || isCurrent
-                    ? AppColors.navy
+                    ? AppColors.navyText
                     : AppColors.secondaryText,
                 fontSize: 14,
                 fontWeight: isCurrent ? FontWeight.w700 : FontWeight.w500,
@@ -791,19 +791,19 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
       children: [
         _entrance(
           delay: 0,
-          child: const Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'CV Improvement Results',
                 style: TextStyle(
-                  color: AppColors.navy,
+                  color: AppColors.navyText,
                   fontSize: 26,
                   fontWeight: FontWeight.w800,
                   letterSpacing: -0.5,
                 ),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Text(
                 'Review the issues found in each area and the suggested improvements.',
                 style: TextStyle(
@@ -843,13 +843,13 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(22),
-          side: const BorderSide(color: AppColors.lightGray),
+          side: BorderSide(color: AppColors.lightGray),
         ),
         child: ExpansionTile(
           initiallyExpanded: true,
           tilePadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 7),
           childrenPadding: const EdgeInsets.fromLTRB(18, 0, 18, 18),
-          iconColor: AppColors.teal,
+          iconColor: AppColors.tealText,
           collapsedIconColor: AppColors.secondaryText,
           leading: Container(
             width: 43,
@@ -858,12 +858,12 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
               color: AppColors.lightTeal,
               borderRadius: BorderRadius.circular(13),
             ),
-            child: Icon(area.icon, color: AppColors.teal, size: 23),
+            child: Icon(area.icon, color: AppColors.tealText, size: 23),
           ),
           title: Text(
             area.title,
-            style: const TextStyle(
-              color: AppColors.navy,
+            style: TextStyle(
+              color: AppColors.navyText,
               fontSize: 17,
               fontWeight: FontWeight.w800,
             ),
@@ -873,7 +873,7 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
                 ? '${issues.length} ${issues.length == 1 ? 'issue' : 'issues'} found'
                 : 'No issues found',
             style: TextStyle(
-              color: hasIssues ? AppColors.secondaryText : AppColors.teal,
+              color: hasIssues ? AppColors.secondaryText : AppColors.tealText,
               fontSize: 12,
               fontWeight: FontWeight.w600,
             ),
@@ -902,7 +902,7 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
                 margin: const EdgeInsets.only(top: 7),
                 width: 7,
                 height: 7,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: AppColors.teal,
                   shape: BoxShape.circle,
                 ),
@@ -911,8 +911,8 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
               Expanded(
                 child: Text(
                   item['issue'].toString(),
-                  style: const TextStyle(
-                    color: AppColors.navy,
+                  style: TextStyle(
+                    color: AppColors.navyText,
                     fontSize: 13.5,
                     height: 1.45,
                     fontWeight: FontWeight.w700,
@@ -933,17 +933,17 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Icon(
+                Icon(
                   Icons.lightbulb_outline_rounded,
-                  color: AppColors.teal,
+                  color: AppColors.tealText,
                   size: 18,
                 ),
                 const SizedBox(width: 9),
                 Expanded(
                   child: Text(
                     item['suggestion'].toString(),
-                    style: const TextStyle(
-                      color: AppColors.secondaryNavy,
+                    style: TextStyle(
+                      color: AppColors.secondaryNavyText,
                       fontSize: 13,
                       height: 1.45,
                       fontWeight: FontWeight.w500,
@@ -959,21 +959,21 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
   }
  
   Widget _buildNoIssueItem() {
-    return const Padding(
-      padding: EdgeInsets.only(bottom: 8),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
       child: Row(
         children: [
           Icon(
             Icons.check_circle_rounded,
-            color: AppColors.teal,
+            color: AppColors.tealText,
             size: 20,
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Expanded(
             child: Text(
               'No improvement currently required.',
               style: TextStyle(
-                color: AppColors.secondaryNavy,
+                color: AppColors.secondaryNavyText,
                 fontSize: 13.5,
                 fontWeight: FontWeight.w600,
               ),
@@ -1017,8 +1017,8 @@ class _CVImprovementScreenState extends State<CVImprovementScreen>
           backgroundColor: Colors.transparent,
           disabledBackgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
-          foregroundColor: AppColors.white,
-          disabledForegroundColor: AppColors.white,
+          foregroundColor: AppColors.onBrand,
+          disabledForegroundColor: AppColors.onBrand,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
@@ -1098,20 +1098,20 @@ class _SuggestionsOnlyBadge extends StatelessWidget {
         color: AppColors.softBackground,
         borderRadius: BorderRadius.circular(20),
       ),
-      child: const Row(
+      child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           Icon(
             Icons.lock_outline_rounded,
-            color: AppColors.teal,
+            color: AppColors.tealText,
             size: 14,
           ),
-          SizedBox(width: 6),
+          const SizedBox(width: 6),
           Text(
             'Your CV stays unchanged',
             style: TextStyle(
-              color: AppColors.teal,
-              fontSize: 11.2,
+              color: AppColors.tealText,
+              fontSize: 12,
               fontWeight: FontWeight.w700,
             ),
           ),

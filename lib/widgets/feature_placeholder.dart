@@ -16,21 +16,22 @@ class FeaturePlaceholder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF7F9FA),
+      backgroundColor: AppColors.background,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(
+          tooltip: 'Back',
+          icon: Icon(
             Icons.arrow_back_ios_new,
-            color: Color(0xFF16324F),
+            color: AppColors.navyText,
           ),
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
           title,
-          style: const TextStyle(
-            color: Color(0xFF16324F),
+          style: TextStyle(
+            color: AppColors.navyText,
             fontWeight: FontWeight.w700,
             fontSize: 20,
           ),
@@ -46,13 +47,13 @@ class FeaturePlaceholder extends StatelessWidget {
                 width: 100,
                 height: 100,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFEAF4F5),
+                  color: AppColors.lightTeal,
                   borderRadius: BorderRadius.circular(28),
                 ),
                 child: Icon(
                   icon,
                   size: 50,
-                  color: const Color(0xFF2D8C99),
+                  color: AppColors.tealText,
                 ),
               ),
 
@@ -61,10 +62,10 @@ class FeaturePlaceholder extends StatelessWidget {
               Text(
                 title,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 26,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF16324F),
+                  color: AppColors.navyText,
                 ),
               ),
 
@@ -73,9 +74,9 @@ class FeaturePlaceholder extends StatelessWidget {
               Text(
                 description,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 16,
-                  color: Color(0xFF71808F),
+                  color: AppColors.secondaryText,
                   height: 1.5,
                 ),
               ),
@@ -88,13 +89,13 @@ class FeaturePlaceholder extends StatelessWidget {
                   vertical: 13,
                 ),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFFF7E6),
+                  color: AppColors.gold.withValues(alpha: 0.14),
                   borderRadius: BorderRadius.circular(14),
                 ),
-                child: const Text(
+                child: Text(
                   'Coming soon',
                   style: TextStyle(
-                    color: Color(0xFFC69225),
+                    color: AppColors.gold,
                     fontWeight: FontWeight.w600,
                   ),
                 ),

@@ -86,7 +86,7 @@ void initState() {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -103,7 +103,7 @@ void initState() {
             Text(
               'Masra',
               style: TextStyle(
-                color: AppColors.white,
+                color: AppColors.onBrand,
                 fontSize: 34,
                 fontWeight: FontWeight.w800,
                 letterSpacing: -0.5,
@@ -115,7 +115,7 @@ void initState() {
               height: 26,
               child: CircularProgressIndicator(
                 strokeWidth: 2.5,
-                color: AppColors.white,
+                color: AppColors.onBrand,
               ),
             ),
           ],

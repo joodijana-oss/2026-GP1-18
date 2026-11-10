@@ -305,9 +305,9 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
       backgroundColor: AppColors.background,
       body: SafeArea(
         child: _isLoading
-            ? const Center(
+            ? Center(
                 child: CircularProgressIndicator(
-                  color: AppColors.teal,
+                  color: AppColors.tealText,
                 ),
               )
             : SingleChildScrollView(
@@ -373,17 +373,17 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
       children: [
         GestureDetector(
           onTap: () => Navigator.pop(context),
-          child: const Icon(
+          child: Icon(
             Icons.arrow_back_ios_new_rounded,
-            color: AppColors.navy,
+            color: AppColors.navyText,
             size: 21,
           ),
         ),
         const SizedBox(width: 26),
-        const Text(
+        Text(
           'AI Career Analysis',
           style: TextStyle(
-            color: AppColors.navy,
+            color: AppColors.navyText,
             fontSize: 20,
             fontWeight: FontWeight.w700,
           ),
@@ -438,10 +438,10 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
         const SizedBox(height: 24),
         _entrance(
           delay: 130,
-          child: const Text(
+          child: Text(
             'Your analysis will focus on',
             style: TextStyle(
-              color: AppColors.navy,
+              color: AppColors.navyText,
               fontSize: 16,
               fontWeight: FontWeight.w800,
             ),
@@ -530,7 +530,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: AppColors.teal.withValues(alpha: 0.10),
+                  color: AppColors.tealText.withValues(alpha: 0.10),
                   width: 18,
                 ),
               ),
@@ -541,21 +541,21 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Expanded(
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'Understand your CV with AI',
                         style: TextStyle(
-                          color: AppColors.navy,
+                          color: AppColors.navyText,
                           fontSize: 23,
                           fontWeight: FontWeight.w800,
                           letterSpacing: -0.4,
                           height: 1.16,
                         ),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Text(
                         'Discover what stands out in your CV and which skills can bring you closer to your career goal.',
                         style: TextStyle(
@@ -564,8 +564,8 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                           height: 1.55,
                         ),
                       ),
-                      SizedBox(height: 15),
-                      _CareerGoalBadge(),
+                      const SizedBox(height: 15),
+                      const _CareerGoalBadge(),
                     ],
                   ),
                 ),
@@ -606,9 +606,9 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                         ),
                       ],
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.auto_awesome_rounded,
-                      color: AppColors.teal,
+                      color: AppColors.tealText,
                       size: 30,
                     ),
                   ),
@@ -667,9 +667,9 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
               color: AppColors.lightTeal,
               borderRadius: BorderRadius.circular(16),
             ),
-            child: const Icon(
+            child: Icon(
               Icons.description_rounded,
-              color: AppColors.teal,
+              color: AppColors.tealText,
               size: 28,
             ),
           ),
@@ -684,8 +684,8 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                       : 'No CV uploaded',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    color: AppColors.navy,
+                  style: TextStyle(
+                    color: AppColors.navyText,
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
                   ),
@@ -695,7 +695,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                   _hasCv
                       ? 'Ready for analysis'
                       : 'Upload your CV before starting.',
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppColors.secondaryText,
                     fontSize: 12.5,
                   ),
@@ -711,9 +711,9 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                 color: AppColors.lightTeal,
                 borderRadius: BorderRadius.circular(11),
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.check_rounded,
-                color: AppColors.teal,
+                color: AppColors.tealText,
                 size: 20,
               ),
             ),
@@ -730,17 +730,17 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'Analyzing your CV',
           style: TextStyle(
-            color: AppColors.navy,
+            color: AppColors.navyText,
             fontSize: 24,
             fontWeight: FontWeight.w800,
             letterSpacing: -0.3,
           ),
         ),
         const SizedBox(height: 8),
-        const Text(
+        Text(
           'Masra is comparing your CV with relevant Saudi job-market data.',
           style: TextStyle(
             color: AppColors.secondaryText,
@@ -768,16 +768,16 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
             children: [
               _buildAnalyzingIcon(),
               const SizedBox(height: 20),
-              const Text(
+              Text(
                 'Building your insights',
                 style: TextStyle(
-                  color: AppColors.navy,
+                  color: AppColors.navyText,
                   fontSize: 17,
                   fontWeight: FontWeight.w800,
                 ),
               ),
               const SizedBox(height: 6),
-              const Text(
+              Text(
                 'This may take a few moments.',
                 style: TextStyle(
                   color: AppColors.secondaryText,
@@ -824,9 +824,9 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
           color: AppColors.lightTeal,
           borderRadius: BorderRadius.circular(24),
         ),
-        child: const Icon(
+        child: Icon(
           Icons.auto_awesome_rounded,
-          color: AppColors.teal,
+          color: AppColors.tealText,
           size: 34,
         ),
       ),
@@ -858,26 +858,26 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
           AnimatedSwitcher(
             duration: const Duration(milliseconds: 250),
             child: isCompleted
-                ? const Icon(
+                ? Icon(
                     Icons.check_circle_rounded,
-                    key: ValueKey('done'),
-                    color: AppColors.teal,
+                    key: const ValueKey('done'),
+                    color: AppColors.tealText,
                     size: 23,
                   )
                 : isCurrent
-                    ? const SizedBox(
-                        key: ValueKey('loading'),
+                    ? SizedBox(
+                        key: const ValueKey('loading'),
                         width: 22,
                         height: 22,
                         child: CircularProgressIndicator(
-                          color: AppColors.teal,
+                          color: AppColors.tealText,
                           strokeWidth: 2.2,
                         ),
                       )
                     : const Icon(
                         Icons.radio_button_unchecked_rounded,
                         key: ValueKey('waiting'),
-                        color: AppColors.mediumGray,
+                        color: AppColors.onBrandMuted,
                         size: 22,
                       ),
           ),
@@ -887,7 +887,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
               text,
               style: TextStyle(
                 color: isCompleted || isCurrent
-                    ? AppColors.navy
+                    ? AppColors.navyText
                     : AppColors.secondaryText,
                 fontSize: 14,
                 fontWeight: isCurrent
@@ -911,19 +911,19 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
       children: [
         _entrance(
           delay: 0,
-          child: const Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Your Career Insights',
                 style: TextStyle(
-                  color: AppColors.navy,
+                  color: AppColors.navyText,
                   fontSize: 26,
                   fontWeight: FontWeight.w800,
                   letterSpacing: -0.5,
                 ),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Text(
                 'See what stands out in your CV and what to develop next.',
                 style: TextStyle(
@@ -984,7 +984,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(22),
-          side: const BorderSide(
+          side: BorderSide(
             color: AppColors.lightGray,
           ),
         ),
@@ -1000,7 +1000,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
             18,
             18,
           ),
-          iconColor: AppColors.teal,
+          iconColor: AppColors.tealText,
           collapsedIconColor: AppColors.secondaryText,
           leading: Container(
             width: 43,
@@ -1039,23 +1039,23 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
               },
               child: Icon(
                 icon,
-                color: AppColors.teal,
+                color: AppColors.tealText,
                 size: 23,
               ),
             ),
           ),
           title: Text(
             title,
-            style: const TextStyle(
-              color: AppColors.navy,
+            style: TextStyle(
+              color: AppColors.navyText,
               fontSize: 17,
               fontWeight: FontWeight.w800,
             ),
           ),
           children: items.isEmpty
               ? [
-                  const Padding(
-                    padding: EdgeInsets.only(bottom: 8),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
@@ -1082,7 +1082,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                                 const EdgeInsets.only(top: 7),
                             width: 7,
                             height: 7,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               color: AppColors.teal,
                               shape: BoxShape.circle,
                             ),
@@ -1091,9 +1091,9 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                           Expanded(
                             child: Text(
                               items[index],
-                              style: const TextStyle(
+                              style: TextStyle(
                                 color:
-                                    AppColors.secondaryNavy,
+                                    AppColors.secondaryNavyText,
                                 fontSize: 13,
                                 height: 1.45,
                                 fontWeight: FontWeight.w500,
@@ -1128,26 +1128,26 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
               color: AppColors.softBackground,
               borderRadius: BorderRadius.circular(13),
             ),
-            child: const Icon(
+            child: Icon(
               Icons.account_tree_outlined,
-              color: AppColors.teal,
+              color: AppColors.tealText,
               size: 22,
             ),
           ),
           const SizedBox(width: 13),
-          const Expanded(
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   'Ready for your next step?',
                   style: TextStyle(
-                    color: AppColors.navy,
+                    color: AppColors.navyText,
                     fontSize: 16,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
-                SizedBox(height: 6),
+                const SizedBox(height: 6),
                 Text(
                   'Turn your skill gaps into a personalized learning roadmap built around your career goal.',
                   style: TextStyle(
@@ -1205,8 +1205,8 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
           backgroundColor: Colors.transparent,
           disabledBackgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
-          foregroundColor: AppColors.white,
-          disabledForegroundColor: AppColors.white,
+          foregroundColor: AppColors.onBrand,
+          disabledForegroundColor: AppColors.onBrand,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
@@ -1228,7 +1228,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
       height: 60,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        gradient: const LinearGradient(
+        gradient: LinearGradient(
           colors: [
             AppColors.navy,
             AppColors.secondaryNavy,
@@ -1248,7 +1248,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
-          foregroundColor: AppColors.white,
+          foregroundColor: AppColors.onBrand,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
@@ -1291,9 +1291,9 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
             24,
             28,
           ),
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: AppColors.softBackground,
-            borderRadius: BorderRadius.vertical(
+            borderRadius: const BorderRadius.vertical(
               top: Radius.circular(30),
             ),
           ),
@@ -1321,18 +1321,18 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                       color: AppColors.lightTeal,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.account_tree_outlined,
-                      color: AppColors.teal,
+                      color: AppColors.tealText,
                       size: 24,
                     ),
                   ),
                   const SizedBox(width: 13),
-                  const Expanded(
+                  Expanded(
                     child: Text(
                       'Create your learning roadmap?',
                       style: TextStyle(
-                        color: AppColors.navy,
+                        color: AppColors.navyText,
                         fontSize: 20,
                         fontWeight: FontWeight.w800,
                       ),
@@ -1341,7 +1341,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                 ],
               ),
               const SizedBox(height: 14),
-              const Text(
+              Text(
                 'Masra will use your latest skill gaps and career goal to create a personalized learning roadmap.',
                 style: TextStyle(
                   color: AppColors.secondaryText,
@@ -1360,8 +1360,8 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                           Navigator.pop(bottomSheetContext);
                         },
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: AppColors.navy,
-                          side: const BorderSide(
+                          foregroundColor: AppColors.navyText,
+                          side: BorderSide(
                             color: AppColors.lightGray,
                           ),
                           shape: RoundedRectangleBorder(
@@ -1385,7 +1385,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                       height: 54,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(18),
-                        gradient: const LinearGradient(
+                        gradient: LinearGradient(
                           colors: [
                             AppColors.navy,
                             AppColors.secondaryNavy,
@@ -1408,7 +1408,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.transparent,
                           shadowColor: Colors.transparent,
-                          foregroundColor: AppColors.white,
+                          foregroundColor: AppColors.onBrand,
                           shape: RoundedRectangleBorder(
                             borderRadius:
                                 BorderRadius.circular(18),
@@ -1484,20 +1484,20 @@ class _CareerGoalBadge extends StatelessWidget {
         color: AppColors.softBackground,
         borderRadius: BorderRadius.circular(20),
       ),
-      child: const Row(
+      child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           Icon(
             Icons.track_changes_rounded,
-            color: AppColors.teal,
+            color: AppColors.tealText,
             size: 14,
           ),
-          SizedBox(width: 6),
+          const SizedBox(width: 6),
           Text(
             'Based on your career goal',
             style: TextStyle(
-              color: AppColors.teal,
-              fontSize: 11.2,
+              color: AppColors.tealText,
+              fontSize: 12,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -1607,7 +1607,7 @@ class _PressableInsightCardState
                   },
                   child: Icon(
                     widget.icon,
-                    color: AppColors.teal,
+                    color: AppColors.tealText,
                     size: 22,
                   ),
                 ),
@@ -1615,8 +1615,8 @@ class _PressableInsightCardState
               const SizedBox(height: 14),
               Text(
                 widget.title,
-                style: const TextStyle(
-                  color: AppColors.navy,
+                style: TextStyle(
+                  color: AppColors.navyText,
                   fontSize: 14,
                   fontWeight: FontWeight.w800,
                 ),
@@ -1624,9 +1624,9 @@ class _PressableInsightCardState
               const SizedBox(height: 5),
               Text(
                 widget.subtitle,
-                style: const TextStyle(
+                style: TextStyle(
                   color: AppColors.secondaryText,
-                  fontSize: 11.5,
+                  fontSize: 12,
                   height: 1.4,
                 ),
               ),

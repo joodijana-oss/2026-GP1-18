@@ -266,9 +266,9 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen>
 
                 message,
 
-                style: const TextStyle(
+                style: TextStyle(
 
-                  color: AppColors.navy,
+                  color: AppColors.navyText,
 
                   fontSize: 13,
 
@@ -731,7 +731,7 @@ await UserService().saveCv(
 
             height: 315,
 
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
 
               gradient: LinearGradient(
 
@@ -1007,7 +1007,7 @@ SizedBox(
 
                 decoration: BoxDecoration(
 
-                  color: AppColors.white.withValues(
+                  color: AppColors.onBrand.withValues(
 
                     alpha: 0.13,
 
@@ -1017,7 +1017,7 @@ SizedBox(
 
                   border: Border.all(
 
-                    color: AppColors.white.withValues(
+                    color: AppColors.onBrand.withValues(
 
                       alpha: 0.18,
 
@@ -1031,7 +1031,7 @@ SizedBox(
 
                   Icons.arrow_back_rounded,
 
-                  color: AppColors.white,
+                  color: AppColors.onBrand,
 
                   size: 22,
 
@@ -1057,7 +1057,7 @@ SizedBox(
 
               decoration: BoxDecoration(
 
-                color: AppColors.white.withValues(
+                color: AppColors.onBrand.withValues(
 
                   alpha: 0.13,
 
@@ -1067,7 +1067,7 @@ SizedBox(
 
                 border: Border.all(
 
-                  color: AppColors.white.withValues(
+                  color: AppColors.onBrand.withValues(
 
                     alpha: 0.18,
 
@@ -1083,7 +1083,7 @@ SizedBox(
 
                 style: const TextStyle(
 
-                  color: AppColors.white,
+                  color: AppColors.onBrand,
 
                   fontSize: 12,
 
@@ -1141,7 +1141,7 @@ SizedBox(
 
                     decoration:
 
-                        const BoxDecoration(
+                        BoxDecoration(
 
                       color:
 
@@ -1149,7 +1149,7 @@ SizedBox(
 
                       borderRadius:
 
-                          BorderRadius.only(
+                          const BorderRadius.only(
 
                         topLeft:
 
@@ -1209,9 +1209,9 @@ SizedBox(
 
                           getStepTitle(),
 
-                          style: const TextStyle(
+                          style: TextStyle(
 
-                            color: AppColors.navy,
+                            color: AppColors.navyText,
 
                             fontSize: 28,
 
@@ -1231,7 +1231,7 @@ SizedBox(
 
                           getStepSubtitle(),
 
-                          style: const TextStyle(
+                          style: TextStyle(
 
                             color: AppColors
 
@@ -1313,7 +1313,7 @@ SizedBox(
 
                                   : previousStep,
 
-                              child: const Text(
+                              child: Text(
 
                                 'Previous Step',
 
@@ -1475,7 +1475,7 @@ SizedBox(
 
                           Icons.check_rounded,
 
-                          color: AppColors.white,
+                          color: AppColors.onBrand,
 
                           size: 18,
 
@@ -1489,7 +1489,7 @@ SizedBox(
 
                             color: isCurrent
 
-                                ? AppColors.white
+                                ? AppColors.onBrand
 
                                 : AppColors
 
@@ -2019,7 +2019,7 @@ SizedBox(
 
                   : hasCv
 
-                      ? AppColors.teal
+                      ? AppColors.tealText
 
                       : AppColors.lightGray,
 
@@ -2067,7 +2067,7 @@ SizedBox(
 
                 child: isCheckingCv
 
-                    ? const Center(
+                    ? Center(
 
                         child: SizedBox(
 
@@ -2079,7 +2079,7 @@ SizedBox(
 
                             strokeWidth: 2.5,
 
-                            color: AppColors.teal,
+                            color: AppColors.tealText,
 
                           ),
 
@@ -2099,7 +2099,7 @@ SizedBox(
 
                                 .upload_file_rounded,
 
-                        color: AppColors.teal,
+                        color: AppColors.tealText,
 
                         size: 33,
 
@@ -2123,9 +2123,9 @@ SizedBox(
 
                         : 'Upload Your CV',
 
-                style: const TextStyle(
+                style: TextStyle(
 
-                  color: AppColors.navy,
+                  color: AppColors.navyText,
 
                   fontSize: 18,
 
@@ -2153,7 +2153,7 @@ SizedBox(
 
                     TextAlign.center,
 
-                style: const TextStyle(
+                style: TextStyle(
 
                   color: AppColors
 
@@ -2179,11 +2179,11 @@ SizedBox(
 
                   children: [
 
-                    const Icon(
+                    Icon(
 
                       Icons.check_circle_rounded,
 
-                      color: AppColors.teal,
+                      color: AppColors.tealText,
 
                       size: 16,
 
@@ -2197,9 +2197,9 @@ SizedBox(
 
                       '$selectedCvPages ${selectedCvPages == 1 ? 'page' : 'pages'}',
 
-                      style: const TextStyle(
+                      style: TextStyle(
 
-                        color: AppColors.teal,
+                        color: AppColors.tealText,
 
                         fontSize: 12.5,
 
@@ -2217,13 +2217,13 @@ SizedBox(
 
               const SizedBox(height: 8),
 
-              const Text(
+              Text(
 
                 'PDF only · Max 5 MB · Up to 3 pages',
 
                 style: TextStyle(
 
-                  color: AppColors.teal,
+                  color: AppColors.tealText,
 
                   fontSize: 12,
 
@@ -2313,11 +2313,11 @@ SizedBox(
 
                     foregroundColor:
 
-                        AppColors.navy,
+                        AppColors.navyText,
 
-                    side: const BorderSide(
+                    side: BorderSide(
 
-                      color: AppColors.teal,
+                      color: AppColors.tealText,
 
                       width: 1.3,
 
@@ -2341,7 +2341,7 @@ SizedBox(
 
                   icon: isPickingCv
 
-                      ? const SizedBox(
+                      ? SizedBox(
 
                           width: 17,
 
@@ -2355,7 +2355,7 @@ SizedBox(
 
                             color:
 
-                                AppColors.teal,
+                                AppColors.tealText,
 
                           ),
 
@@ -2499,7 +2499,7 @@ SizedBox(
 
           ),
 
-          child: const Row(
+          child: Row(
 
             crossAxisAlignment:
 
@@ -2513,13 +2513,13 @@ SizedBox(
 
                     .info_outline_rounded,
 
-                color: AppColors.teal,
+                color: AppColors.tealText,
 
                 size: 21,
 
               ),
 
-              SizedBox(width: 12),
+              const SizedBox(width: 12),
 
               Expanded(
 
@@ -2658,7 +2658,7 @@ SizedBox(
                     children: [
                       TextButton(
                         onPressed: () => Navigator.pop(sheetContext),
-                        child: const Text(
+                        child: Text(
                           'Cancel',
                           style: TextStyle(
                             color: AppColors.secondaryText,
@@ -2671,10 +2671,10 @@ SizedBox(
                       TextButton(
                         onPressed: () =>
                             Navigator.pop(sheetContext, tempDate),
-                        child: const Text(
+                        child: Text(
                           'Done',
                           style: TextStyle(
-                            color: AppColors.teal,
+                            color: AppColors.tealText,
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
                           ),
@@ -2683,7 +2683,7 @@ SizedBox(
                     ],
                   ),
                 ),
-                const Divider(
+                Divider(
                   height: 1,
                   color: AppColors.lightGray,
                 ),
@@ -2730,7 +2730,7 @@ SizedBox(
 
     final border = OutlineInputBorder(
       borderRadius: BorderRadius.circular(15),
-      borderSide: const BorderSide(
+      borderSide: BorderSide(
         color: AppColors.lightGray,
       ),
     );
@@ -2738,10 +2738,10 @@ SizedBox(
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'Graduation Date',
           style: TextStyle(
-            color: AppColors.navy,
+            color: AppColors.navyText,
             fontSize: 14,
             fontWeight: FontWeight.w700,
           ),
@@ -2763,16 +2763,16 @@ SizedBox(
                 decoration: InputDecoration(
                   hintText: 'Select your graduation month and year',
                   hintStyle: const TextStyle(
-                    color: AppColors.mediumGray,
+                    color: AppColors.onBrandMuted,
                     fontSize: 13,
                   ),
                   errorText: field.errorText,
-                  prefixIcon: const Icon(
+                  prefixIcon: Icon(
                     Icons.calendar_month_outlined,
                     color: AppColors.secondaryText,
                     size: 21,
                   ),
-                  suffixIcon: const Icon(
+                  suffixIcon: Icon(
                     Icons.keyboard_arrow_down_rounded,
                     color: AppColors.secondaryText,
                   ),
@@ -2786,16 +2786,16 @@ SizedBox(
                   enabledBorder: border,
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
-                    borderSide: const BorderSide(
-                      color: AppColors.teal,
+                    borderSide: BorderSide(
+                      color: AppColors.tealText,
                       width: 1.5,
                     ),
                   ),
                 ),
                 child: Text(
                   date == null ? '' : formatGraduationDate(date),
-                  style: const TextStyle(
-                    color: AppColors.navy,
+                  style: TextStyle(
+                    color: AppColors.navyText,
                     fontSize: 14,
                   ),
                 ),
@@ -2843,9 +2843,9 @@ SizedBox(
 
           label,
 
-          style: const TextStyle(
+          style: TextStyle(
 
-            color: AppColors.navy,
+            color: AppColors.navyText,
 
             fontSize: 14,
 
@@ -2867,9 +2867,9 @@ SizedBox(
 
           validator: validator,
 
-          style: const TextStyle(
+          style: TextStyle(
 
-            color: AppColors.navy,
+            color: AppColors.navyText,
 
             fontSize: 14,
 
@@ -2881,7 +2881,7 @@ SizedBox(
 
             hintStyle:
 
-                const TextStyle(
+                TextStyle(
 
               color: AppColors
 
@@ -2933,7 +2933,7 @@ SizedBox(
 
               borderSide:
 
-                  const BorderSide(
+                  BorderSide(
 
                 color: AppColors
 
@@ -2957,7 +2957,7 @@ SizedBox(
 
               borderSide:
 
-                  const BorderSide(
+                  BorderSide(
 
                 color: AppColors
 
@@ -2981,9 +2981,9 @@ SizedBox(
 
               borderSide:
 
-                  const BorderSide(
+                  BorderSide(
 
-                color: AppColors.teal,
+                color: AppColors.tealText,
 
                 width: 1.5,
 
@@ -3065,9 +3065,9 @@ SizedBox(
 
           label,
 
-          style: const TextStyle(
+          style: TextStyle(
 
-            color: AppColors.navy,
+            color: AppColors.navyText,
 
             fontSize: 14,
 
@@ -3105,9 +3105,9 @@ SizedBox(
 
           },
 
-          style: const TextStyle(
+          style: TextStyle(
 
-            color: AppColors.navy,
+            color: AppColors.navyText,
 
             fontSize: 14,
 
@@ -3117,7 +3117,7 @@ SizedBox(
 
               AppColors.softBackground,
 
-          icon: const Icon(
+          icon: Icon(
 
             Icons
 
@@ -3135,7 +3135,7 @@ SizedBox(
 
             hintStyle:
 
-                const TextStyle(
+                TextStyle(
 
               color: AppColors
 
@@ -3187,7 +3187,7 @@ SizedBox(
 
               borderSide:
 
-                  const BorderSide(
+                  BorderSide(
 
                 color: AppColors
 
@@ -3211,7 +3211,7 @@ SizedBox(
 
               borderSide:
 
-                  const BorderSide(
+                  BorderSide(
 
                 color: AppColors
 
@@ -3235,9 +3235,9 @@ SizedBox(
 
               borderSide:
 
-                  const BorderSide(
+                  BorderSide(
 
-                color: AppColors.teal,
+                color: AppColors.tealText,
 
                 width: 1.5,
 
@@ -3389,11 +3389,11 @@ SizedBox(
 
           foregroundColor:
 
-              AppColors.white,
+              AppColors.onBrand,
 
           disabledForegroundColor:
 
-              AppColors.white,
+              AppColors.onBrand,
 
           shape:
 
@@ -3425,7 +3425,7 @@ SizedBox(
 
                   color:
 
-                      AppColors.white,
+                      AppColors.onBrand,
 
                   strokeWidth: 2.5,
 
