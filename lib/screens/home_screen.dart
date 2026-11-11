@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../services/user_service.dart';
+import '../services/certification_service.dart';
+// If this import is red, change the path to where the recommender file is.
+import '../services/content_based_recommender.dart';
 
 import 'profile_screen.dart';
 import 'explore_screen.dart';
@@ -12,6 +15,8 @@ import '../features/mock_interview/mock_interview_screen.dart';
 import '../features/cv_improvement/cv_improvement_screen.dart';
 import '../features/job_match/job_match_screen.dart';
 import '../features/certifications/certifications_screen.dart';
+// If this import is red, change it to the details screen's file name.
+import '../features/certifications/certification_details_screen.dart';
 import '../features/heatmap/heatmap_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -43,29 +48,16 @@ class _HomeScreenState extends State<HomeScreen>
   // 0 until the user has a career analysis (also while loading / on error)
   int currentJourneyStage = 0;
 
-  final List<RecommendationItem> recommendations = [
-    const RecommendationItem(
-      type: 'Course',
-      title: 'Machine Learning Specialization',
-      provider: 'Coursera',
-      reason: 'Based on your skill gaps',
-      icon: Icons.menu_book_rounded,
-    ),
-    const RecommendationItem(
-      type: 'Certification',
-      title: 'Google Data Analytics',
-      provider: 'Google',
-      reason: 'Matches your career interests',
-      icon: Icons.workspace_premium_rounded,
-    ),
-    const RecommendationItem(
-      type: 'Project',
-      title: 'Build a Data Dashboard',
-      provider: 'Masra',
-      reason: 'Strengthen your portfolio',
-      icon: Icons.code_rounded,
-    ),
-  ];
+  // "Recommended for You": certifications from the Certification
+  // Recommender (same results as the Certifications screen).
+  List<RecommendationItem> recommendations = [];
+  bool _recommendationsLoading = true;
+
+  // false = no AI Career Analysis for the current CV yet
+  bool _hasAnalysis = false;
+
+  // How many certifications Home shows (the rest are in "See all")
+  static const int _maxHomeRecommendations = 3;
 
   @override
   void initState() {
@@ -85,6 +77,87 @@ class _HomeScreenState extends State<HomeScreen>
 
     _loadUserName();
     _loadJourneyStage();
+    _loadRecommendations();
+  }
+
+  // Reads the saved certification matches from the latest analysis.
+  // If they were never saved (the user has not opened the Certifications
+  // screen yet), they are calculated here the same way, without saving.
+  Future<void> _loadRecommendations() async {
+    try {
+      final userService = UserService();
+      final analysis = await userService.getValidLatestAnalysis();
+
+      if (analysis == null) {
+        if (!mounted) return;
+        setState(() {
+          _hasAnalysis = false;
+          recommendations = [];
+          _recommendationsLoading = false;
+        });
+        return;
+      }
+
+      final catalog = await CertificationService().getAll();
+      final byId = {for (final c in catalog) c.id: c};
+      final careerGoalId = analysis['careerGoalId']?.toString() ?? '';
+      final careerName = analysis['careerGoalName']?.toString() ?? '';
+      final skillGaps = ContentBasedRecommender.skillGapsOf(analysis);
+
+      var result = CertificationRecommendations.fromSaved(
+        analysis['certificationMatches'],
+        byId: byId,
+        careerGoalId: careerGoalId,
+        skillGaps: skillGaps,
+      );
+
+      if (result == null) {
+        final user = await userService.getUser();
+        result = const ContentBasedRecommender().recommendCertifications(
+          analysis: analysis,
+          certifications: catalog,
+          experienceLevel: user?['experienceLevel']?.toString(),
+        );
+      }
+
+      // Certifications that close gaps first, then the ones for the goal
+      final matches = [...result.forGaps, ...result.forGoal]
+          .take(_maxHomeRecommendations);
+
+      final items = matches.map((m) {
+        final gaps = m.matchedGaps;
+        return RecommendationItem(
+          type: 'Certification',
+          title: m.certification.name,
+          provider: m.certification.issuer,
+          reason: gaps.isEmpty
+              ? 'Matches your career goal'
+              : 'Covers: ${gaps.join(', ')}',
+          icon: Icons.workspace_premium_rounded,
+          // Tapping the card opens this certification's details
+          destination: (_) => CertificationDetailsScreen(
+            certification: m.certification,
+            matchedGaps: gaps,
+            levelFits: m.levelFits,
+            careerName: careerName,
+          ),
+        );
+      }).toList();
+
+      if (!mounted) return;
+      setState(() {
+        _hasAnalysis = true;
+        recommendations = items;
+        _recommendationsLoading = false;
+      });
+    } catch (e) {
+      debugPrint('HOME LOAD RECOMMENDATIONS ERROR: $e');
+      if (!mounted) return;
+      setState(() {
+        recommendations = [];
+        _recommendationsLoading = false;
+      });
+    }
   }
 
   // Analysis saved for the current CV -> Analyze done, Develop is current.
@@ -152,6 +225,7 @@ class _HomeScreenState extends State<HomeScreen>
     );
 
     _loadJourneyStage();
+    _loadRecommendations();
   }
 
   // Same as tapping "Explore" in the bottom nav (tabs replace each other)
@@ -387,6 +461,7 @@ class _HomeScreenState extends State<HomeScreen>
                   // لو اليوزر غيّر اسمه من البروفايل
                   _loadUserName();
                   _loadJourneyStage();
+                  _loadRecommendations();
                 },
                 child: Container(
                   width: 46,
@@ -886,8 +961,8 @@ class _HomeScreenState extends State<HomeScreen>
               ),
 
               TextButton(
-                // No "all recommendations" screen yet
-                onPressed: _showComingSoon,
+                onPressed: () =>
+                    _openScreen((_) => const CertificationsScreen()),
                 child: Text(
                   'See all',
                   style: TextStyle(
@@ -903,6 +978,25 @@ class _HomeScreenState extends State<HomeScreen>
 
         const SizedBox(height: 12),
 
+        if (_recommendationsLoading)
+          _recommendationsMessage(
+            icon: Icons.hourglass_empty_rounded,
+            text: 'Loading your recommendations...',
+          )
+        else if (!_hasAnalysis)
+          _recommendationsMessage(
+            icon: Icons.document_scanner_outlined,
+            text: 'Analyze your CV to get certifications that fit your skill gaps.',
+            buttonLabel: 'Start Analysis',
+            onPressed: () =>
+                _openScreen((_) => const CareerAnalysisScreen()),
+          )
+        else if (recommendations.isEmpty)
+          _recommendationsMessage(
+            icon: Icons.workspace_premium_outlined,
+            text: 'No certifications found for your career goal yet.',
+          )
+        else
         SizedBox(
           height: 205,
           child: ListView.separated(
@@ -923,12 +1017,75 @@ class _HomeScreenState extends State<HomeScreen>
     );
   }
 
+  // Shown instead of the cards while loading, before the first analysis,
+  // or when no certification fits the career goal.
+  Widget _recommendationsMessage({
+    required IconData icon,
+    required String text,
+    String? buttonLabel,
+    VoidCallback? onPressed,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(18),
+        decoration: BoxDecoration(
+          color: AppColors.softBackground,
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(
+            color: AppColors.tealText.withValues(alpha: 0.16),
+          ),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 46,
+              height: 46,
+              decoration: BoxDecoration(
+                color: AppColors.lightTeal.withValues(alpha: 0.60),
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: Icon(icon, color: AppColors.tealText, size: 23),
+            ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: AppColors.secondaryText,
+                  fontSize: 13,
+                  height: 1.4,
+                ),
+              ),
+            ),
+            if (buttonLabel != null && onPressed != null) ...[
+              const SizedBox(width: 8),
+              TextButton(
+                onPressed: onPressed,
+                child: Text(
+                  buttonLabel,
+                  style: TextStyle(
+                    color: AppColors.tealText,
+                    fontSize: 13,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
   Widget _recommendationCard(
     RecommendationItem item,
     int index,
   ) {
     final bool goldAccent = index.isOdd;
-    final destination = _recommendationDestination(item.type);
+    final destination =
+        item.destination ?? _recommendationDestination(item.type);
 
     // Material + Ink so the ripple shows on top of the card color
     return Material(
@@ -1795,12 +1952,16 @@ class RecommendationItem {
   final String reason;
   final IconData icon;
 
+  // The screen the card opens. null = the default screen for [type].
+  final WidgetBuilder? destination;
+
   const RecommendationItem({
     required this.type,
     required this.title,
     required this.provider,
     required this.reason,
     required this.icon,
+    this.destination,
   });
 }
 
