@@ -6,6 +6,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../constants/profile_options.dart';
  
 class UserService {
+  // Firestore writes never fail while offline: they wait for the server.
+  // Without a limit the screen would show a spinner forever, so every
+  // write gives up after this long and the caller shows its error message.
+  static const Duration _writeTimeout = Duration(seconds: 15);
+
   final FirebaseFirestore _db = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
  
@@ -50,7 +55,7 @@ class UserService {
       'profileCompleted': false,
       'createdAt': FieldValue.serverTimestamp(),
       'updatedAt': FieldValue.serverTimestamp(),
-    });
+    }).timeout(_writeTimeout);
   }
  
   // ---------------------------------------------------------
@@ -76,7 +81,7 @@ class UserService {
       'experienceLevel': experienceLevel,
       'profileCompleted': true,
       'updatedAt': FieldValue.serverTimestamp(),
-    });
+    }).timeout(_writeTimeout);
   }
  
   // ---------------------------------------------------------
@@ -102,7 +107,7 @@ class UserService {
         await _userDoc.update({
           'graduationStatus': status,
           'updatedAt': FieldValue.serverTimestamp(),
-        });
+        }).timeout(const Duration(seconds: 4));
       } catch (_) {
         // Offline or not allowed: still show the right status this session.
       }
@@ -117,7 +122,7 @@ class UserService {
     await _userDoc.update({
       ...data,
       'updatedAt': FieldValue.serverTimestamp(),
-    });
+    }).timeout(_writeTimeout);
   }
  
   // ---------------------------------------------------------
@@ -141,11 +146,11 @@ class UserService {
     await _photoDoc.set({
       'bytes': Blob(bytes),
       'updatedAt': FieldValue.serverTimestamp(),
-    });
+    }).timeout(_writeTimeout);
   }
 
   Future<void> deleteProfilePhoto() async {
-    await _photoDoc.delete();
+    await _photoDoc.delete().timeout(_writeTimeout);
   }
 
   // ---------------------------------------------------------
@@ -177,7 +182,7 @@ class UserService {
       },
     );
  
-    await batch.commit();
+    await batch.commit().timeout(_writeTimeout);
   }
  
   Future<String?> getCvText() async {
@@ -224,7 +229,7 @@ class UserService {
  
       'updatedAt':
           FieldValue.serverTimestamp(),
-    });
+    }).timeout(_writeTimeout);
   }
  
   // ---------------------------------------------------------
@@ -360,7 +365,7 @@ class UserService {
       'careerGoalId': userData?['careerGoalId'],
       'cvUploadedAt': cvUploadedAt,
       'reviewedAt': FieldValue.serverTimestamp(),
-    });
+    }).timeout(_writeTimeout);
   }
  
   // Returns the saved review only if it belongs to the current CV.
