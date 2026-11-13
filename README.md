@@ -80,19 +80,31 @@ flutter pub get
 
 ### 4. Run the app with the Claude API key
 
-The API key is **not stored in the repository**. Pass it at run time:
+The API key is **not stored in the repository**. It is read from a local `.env` file that git ignores.
+
+1. Copy `.env.example` to `.env`.
+2. Put your key after `ANTHROPIC_API_KEY=`.
+3. Run the app:
 
 ```bash
-flutter run --dart-define=CLAUDE_API_KEY=your_api_key_here
+flutter run --dart-define-from-file=.env
 ```
 
-> Do not commit the API key or paste it into any file in the repository.
+In VS Code, pressing F5 does the same (see `.vscode/launch.json`).
+
+To pass the key directly instead of using a file:
+
+```bash
+flutter run --dart-define=ANTHROPIC_API_KEY=your_api_key_here
+```
+
+> Never commit `.env` or upload it through the GitHub website ("Add files via upload" ignores `.gitignore`).
 
 ---
 
 ## Security Note
 
-The Claude API key is passed through `--dart-define` so that it never appears in the source code or the repository. Because such values are still compiled into the app package, this setup is intended for development and testing. Moving Claude API calls to a server-side component (such as Firebase Cloud Functions) is planned before public deployment.
+The Claude API key is passed at build time (`--dart-define`) so that it never appears in the source code or the repository. Because such values are still compiled into the app package, this setup is intended for development and testing. Moving Claude API calls to a server-side component (such as Firebase Cloud Functions) is planned before public deployment.
 
 ---
 
