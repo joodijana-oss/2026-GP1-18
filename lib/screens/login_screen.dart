@@ -5,7 +5,9 @@ import '../theme/app_colors.dart';
 import '../utils/validators.dart';
 import 'forgot_password_screen.dart';
 import 'home_screen.dart';
+import 'onboarding_screen.dart';
 import 'profile_setup_screen.dart';
+import 'signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -27,20 +29,11 @@ class _LoginScreenState extends State<LoginScreen>
   late AnimationController _backgroundController;
   late Animation<double> _backgroundAnimation;
 
-  // Log In stays disabled until both fields are valid
-  bool get _isFormValid =>
-      Validators.email(emailController.text) == null &&
-      Validators.enteredPassword(passwordController.text) == null;
-
-  void _onFieldChanged() => setState(() {});
 
   @override
   void initState() {
     super.initState();
 
-    // Refresh the button state on every keystroke
-    emailController.addListener(_onFieldChanged);
-    passwordController.addListener(_onFieldChanged);
 
     _backgroundController = AnimationController(
       vsync: this,
@@ -59,6 +52,19 @@ class _LoginScreenState extends State<LoginScreen>
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
+  }
+
+  // Back / Sign Up: Log In is sometimes the only screen (after a password
+  // reset link), so popping would leave a black screen.
+  void _leave(Widget fallback) {
+    if (Navigator.canPop(context)) {
+      Navigator.pop(context);
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => fallback),
+      );
+    }
   }
 
   // ===============================================================
@@ -114,9 +120,17 @@ class _LoginScreenState extends State<LoginScreen>
         (route) => false,
       );
     } on FirebaseAuthException catch (e) {
+      // Sign-in may have succeeded before the error (e.g. reading the
+      // token), so never leave a half signed-in session behind.
+      if (FirebaseAuth.instance.currentUser != null) {
+        await FirebaseAuth.instance.signOut();
+      }
       final message = switch (e.code) {
         'invalid-credential' || 'wrong-password' || 'user-not-found' =>
           'Incorrect email address or password.',
+        'invalid-email' => 'Enter a valid email address.',
+        'user-disabled' =>
+          'This account has been disabled. Please contact support.',
         'network-request-failed' =>
           'No internet connection. Please try again.',
         'too-many-requests' => 'Too many attempts. Please try again later.',
@@ -349,9 +363,7 @@ class _LoginScreenState extends State<LoginScreen>
                             ),
                             child: IconButton(
                               tooltip: 'Back',
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
+                              onPressed: () => _leave(const OnboardingScreen()),
                               icon: const Icon(
                                 Icons.arrow_back_rounded,
                                 color: AppColors.onBrand,
@@ -492,10 +504,11 @@ class _LoginScreenState extends State<LoginScreen>
                           // =================================================
                           // LOGIN BUTTON
                           // =================================================
-                          // Dimmed and disabled until the form is valid
+                          // Always tappable: an empty or invalid field shows
+                          // its message under the field instead.
                           AnimatedOpacity(
                             duration: const Duration(milliseconds: 200),
-                            opacity: _isFormValid || _loading ? 1 : 0.5,
+                            opacity: 1,
                             child: Container(
                             width: double.infinity,
                             height: 60,
@@ -519,8 +532,7 @@ class _LoginScreenState extends State<LoginScreen>
                               ],
                             ),
                             child: ElevatedButton(
-                              onPressed:
-                                  _loading || !_isFormValid ? null : login,
+                              onPressed: _loading ? null : login,
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.transparent,
                                 disabledBackgroundColor: Colors.transparent,
@@ -603,9 +615,7 @@ class _LoginScreenState extends State<LoginScreen>
                             width: double.infinity,
                             height: 55,
                             child: OutlinedButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
+                              onPressed: () => _leave(const SignupScreen()),
                               style: OutlinedButton.styleFrom(
                                 foregroundColor: AppColors.navyText,
                                 side: BorderSide(
