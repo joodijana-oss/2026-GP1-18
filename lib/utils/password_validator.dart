@@ -9,7 +9,8 @@ class PasswordValidator {
   static final RegExp _uppercase = RegExp(r'[A-Z]');
   static final RegExp _lowercase = RegExp(r'[a-z]');
   static final RegExp _digit = RegExp(r'[0-9]');
-  static final RegExp _special = RegExp(r'[!@#$%^&*(),.?":{}|<>_\-+=]');
+  // Same symbols Firebase counts as "non-alphanumeric" in its password policy
+  static final RegExp _special = RegExp(r"""[\^$*.\[\]{}()?"!@#%&/\\,><':;|_~`=+\-]""");
 
   // Individual rules, used by the live checklist on Sign Up
   static const int minLength = 8;

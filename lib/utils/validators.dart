@@ -12,8 +12,9 @@ class Validators {
 
   static const String emailHint = 'name@example.com';
 
+  // No empty parts: rejects "a@b..com", ".a@b.com" and "a.@b.com"
   static final RegExp _emailRegex = RegExp(
-    r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$',
+    r'^[A-Za-z0-9_%+-]+(\.[A-Za-z0-9_%+-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$',
   );
 
   static String? required(String? value, String message) {
