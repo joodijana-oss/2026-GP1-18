@@ -70,6 +70,7 @@ flutter:
     - lib/assets/data/Masra_Taxonomy.csv
     - lib/assets/data/Masra_Career_Analysis_Jobs_881_Title_Cleaned.csv
     - lib/assets/data/Masra_IT_Certifications.csv
+    - lib/assets/data/Masra_Opportunities.json
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
