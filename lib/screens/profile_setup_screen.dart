@@ -982,7 +982,7 @@ SizedBox(
     : () async {
         await FirebaseAuth.instance.signOut();
 
-        if (!mounted) return;
+        if (!context.mounted) return;
 
         Navigator.pushAndRemoveUntil(
           context,
