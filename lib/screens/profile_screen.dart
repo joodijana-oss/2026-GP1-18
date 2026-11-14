@@ -2054,7 +2054,13 @@ class _ProfileScreenState extends State<ProfileScreen>
       // Saves name + date + text together. If it fails, the old CV stays.
 
       // Is there a saved analysis that is about to become outdated?
-      final hadAnalysis = (await _userService.getLatestAnalysis()) != null;
+      // (A failed check must not stop the CV from being replaced.)
+      var hadAnalysis = false;
+      try {
+        hadAnalysis = (await _userService.getLatestAnalysis()) != null;
+      } catch (e) {
+        debugPrint('CHECK ANALYSIS ERROR: $e');
+      }
 
       await _userService.saveCv(fileName: file.name, text: result.text!);
 
@@ -2064,8 +2070,8 @@ class _ProfileScreenState extends State<ProfileScreen>
 
       _showMessage('Your CV has been replaced successfully.');
 
-      // The old analysis, CV review, and certification matches belong to the
-      // old CV: offer to run AI Career Analysis again.
+      // The old analysis and CV review belong to the old CV: offer to run
+      // AI Career Analysis again.
       if (hadAnalysis && mounted) {
         await showAnalysisUpdatePrompt(context);
         if (mounted) await _loadProfile();
