@@ -1,139 +1,88 @@
 import '../models/certification.dart';
 import '../utils/skill_matcher.dart';
 
+/// What the user wants the certifications to do for them.
+enum CertificationGoal {
+  /// Certifications that teach the skills the analysis found missing.
+  closeGaps,
+
+  /// Certifications that build on skills the user already has.
+  strengthenSkills,
+}
+
 /// One recommended certification and why it was recommended.
 class CertificationMatch {
   final Certification certification;
 
-  /// The user's skill gaps (as written in the analysis) that this
-  /// certification covers. Empty for "more for your goal" items.
-  final List<String> matchedGaps;
+  /// The user's skills (as written in the analysis) that this certification
+  /// works on: skill gaps it covers, or current skills it builds on,
+  /// depending on the [CertificationGoal]. Empty for "also for your goal".
+  final List<String> matchedSkills;
 
-  /// True when the certification level equals the level that fits the
-  /// user's experience level (Beginner for "No Experience" / "Beginner").
+  /// True when the certification level is the one that suits the user for
+  /// this goal (see [ContentBasedRecommender.preferredLevel]).
   final bool levelFits;
 
   const CertificationMatch({
     required this.certification,
-    required this.matchedGaps,
+    required this.matchedSkills,
     required this.levelFits,
   });
 
-  int get gapCount => matchedGaps.length;
-
-  /// What is saved in Firestore (the certification itself is read again
-  /// from the catalog, so only its id is stored).
-  Map<String, dynamic> toMap() => {
-        'id': certification.id,
-        'gaps': matchedGaps,
-        'levelFits': levelFits,
-      };
-
-  /// Rebuilds a match from [toMap]; null when the certification is no
-  /// longer in the catalog.
-  static CertificationMatch? fromSaved(
-    dynamic raw,
-    Map<String, Certification> byId,
-  ) {
-    if (raw is! Map) return null;
-    final cert = byId[raw['id']?.toString()];
-    if (cert == null) return null;
-    final gaps = raw['gaps'];
-    return CertificationMatch(
-      certification: cert,
-      matchedGaps:
-          gaps is List ? gaps.map((g) => g.toString()).toList() : <String>[],
-      levelFits: raw['levelFits'] == true,
-    );
-  }
+  int get matchCount => matchedSkills.length;
 }
 
 /// The result of [ContentBasedRecommender.recommendCertifications].
 class CertificationRecommendations {
+  final CertificationGoal goal;
   final String careerGoalId;
 
-  /// All skill gaps of the analysis (used to show "2 of 5 gaps covered").
-  final List<String> skillGaps;
+  /// The skills the ranking used: the skill gaps, or the current skills.
+  final List<String> targetSkills;
 
-  /// Certifications for the career goal that cover at least one gap,
-  /// best first.
-  final List<CertificationMatch> forGaps;
+  /// Certifications for the career goal that match at least one target
+  /// skill, best first.
+  final List<CertificationMatch> matched;
 
-  /// Other certifications for the career goal (no gap covered), best first.
-  final List<CertificationMatch> forGoal;
+  /// All other certifications for the career goal, best first.
+  final List<CertificationMatch> others;
 
-  /// How many certifications were hidden because the user already holds
-  /// them (listed in the CV).
+  /// How many certifications were hidden because the CV already lists them.
   final int hiddenOwned;
 
   const CertificationRecommendations({
+    required this.goal,
     required this.careerGoalId,
-    required this.skillGaps,
-    required this.forGaps,
-    required this.forGoal,
+    required this.targetSkills,
+    required this.matched,
+    required this.others,
     required this.hiddenOwned,
   });
 
-  bool get isEmpty => forGaps.isEmpty && forGoal.isEmpty;
+  /// Every certification for the career goal, best first.
+  List<CertificationMatch> get ranked => [...matched, ...others];
 
-  /// What is saved inside the analysis document (`certificationMatches`).
-  Map<String, dynamic> toMap() => {
-        'forGaps': forGaps.map((m) => m.toMap()).toList(),
-        'forGoal': forGoal.map((m) => m.toMap()).toList(),
-        'hiddenOwned': hiddenOwned,
-      };
+  /// The best [limit] certifications, or all of them when [limit] is null.
+  List<CertificationMatch> top(int? limit) =>
+      limit == null ? ranked : ranked.take(limit).toList();
 
-  /// Rebuilds the recommendations from [toMap] using the current catalog.
-  /// Returns null when the saved data cannot be used (malformed, or every
-  /// saved certification has left the catalog) so the caller recomputes.
-  static CertificationRecommendations? fromSaved(
-    dynamic raw, {
-    required Map<String, Certification> byId,
-    required String careerGoalId,
-    required List<String> skillGaps,
-  }) {
-    if (raw is! Map) return null;
-
-    var savedCount = 0;
-    List<CertificationMatch> read(dynamic list) {
-      final result = <CertificationMatch>[];
-      if (list is! List) return result;
-      for (final item in list) {
-        savedCount++;
-        final match = CertificationMatch.fromSaved(item, byId);
-        if (match != null) result.add(match);
-      }
-      return result;
-    }
-
-    final forGaps = read(raw['forGaps']);
-    final forGoal = read(raw['forGoal']);
-    if (savedCount > 0 && forGaps.isEmpty && forGoal.isEmpty) return null;
-
-    final hidden = raw['hiddenOwned'];
-    return CertificationRecommendations(
-      careerGoalId: careerGoalId,
-      skillGaps: skillGaps,
-      forGaps: forGaps,
-      forGoal: forGoal,
-      hiddenOwned: hidden is int ? hidden : 0,
-    );
-  }
+  int get total => matched.length + others.length;
+  bool get isEmpty => total == 0;
 }
 
 /// Content-based recommender for certifications.
 ///
 /// It needs no training data and no other users: it compares the content of
-/// the user's analysis (career goal, skill gaps, certifications already
-/// held) and profile (experience level) with the content of each
-/// certification (career paths, skills, level).
+/// the user's analysis (career goal, skill gaps or current skills,
+/// certifications already held) and profile (experience level) with the
+/// content of each certification (career paths, skills, description, level).
 ///
 /// Steps:
 ///  1. Keep certifications whose `careerPaths` contain the career goal.
 ///  2. Hide certifications the user already holds.
-///  3. Count the skill gaps each certification covers.
-///  4. Rank: more gaps covered first, then the level closest to the user's
-///     experience, then verified certifications, then name.
+///  3. Count the target skills each certification works on.
+///  4. Rank: more skills first, then the level that suits the user, then
+///     verified certifications, then name.
 class ContentBasedRecommender {
   const ContentBasedRecommender();
 
@@ -141,37 +90,39 @@ class ContentBasedRecommender {
     required Map<String, dynamic> analysis,
     required List<Certification> certifications,
     String? experienceLevel,
-    int maxRelated = 6,
+    CertificationGoal goal = CertificationGoal.closeGaps,
   }) {
     final goalId = analysis['careerGoalId']?.toString().trim() ?? '';
-    final gaps = _stringList(analysis['skillGaps']);
-    final heldNames = _heldCertificationNames(analysis['certifications']);
+    final targets = goal == CertificationGoal.closeGaps
+        ? skillGapsOf(analysis)
+        : currentSkillsOf(analysis);
+    final held = _heldCertifications(analysis['certifications']);
 
-    final wantedLevel = preferredLevel(experienceLevel);
+    final wantedLevel = preferredLevel(experienceLevel, goal: goal);
     final wantedRank = wantedLevel == null ? null : _levelRank(wantedLevel);
 
-    final forGaps = <CertificationMatch>[];
-    final forGoal = <CertificationMatch>[];
+    final matched = <CertificationMatch>[];
+    final others = <CertificationMatch>[];
     var hidden = 0;
 
     for (final cert in certifications) {
       if (goalId.isEmpty || !cert.careerPaths.contains(goalId)) continue;
-      if (_isHeld(cert, heldNames)) {
+      if (_isHeld(cert, held)) {
         hidden++;
         continue;
       }
 
-      final matched = SkillMatcher.matchedSkills(gaps, cert.skills);
+      final skills = SkillMatcher.matchedSkills(
+        targets,
+        cert.skills,
+        evidence: '${cert.name} ${cert.description} ${cert.skills.join(' ')}',
+      );
       final match = CertificationMatch(
         certification: cert,
-        matchedGaps: matched,
+        matchedSkills: skills,
         levelFits: wantedRank != null && cert.levelRank == wantedRank,
       );
-      if (matched.isEmpty) {
-        forGoal.add(match);
-      } else {
-        forGaps.add(match);
-      }
+      (skills.isEmpty ? others : matched).add(match);
     }
 
     int levelDistance(CertificationMatch m) {
@@ -190,18 +141,19 @@ class ContentBasedRecommender {
           .compareTo(b.certification.name.toLowerCase());
     }
 
-    forGaps.sort((a, b) {
-      final byGaps = b.gapCount.compareTo(a.gapCount);
-      if (byGaps != 0) return byGaps;
+    matched.sort((a, b) {
+      final bySkills = b.matchCount.compareTo(a.matchCount);
+      if (bySkills != 0) return bySkills;
       return byQuality(a, b);
     });
-    forGoal.sort(byQuality);
+    others.sort(byQuality);
 
     return CertificationRecommendations(
+      goal: goal,
       careerGoalId: goalId,
-      skillGaps: gaps,
-      forGaps: forGaps,
-      forGoal: forGoal.take(maxRelated).toList(),
+      targetSkills: targets,
+      matched: matched,
+      others: others,
       hiddenOwned: hidden,
     );
   }
@@ -210,25 +162,33 @@ class ContentBasedRecommender {
   static List<String> skillGapsOf(Map<String, dynamic> analysis) =>
       _stringList(analysis['skillGaps']);
 
-  /// How many of [skillGaps] are covered by [itemSkills].
-  int calculateSkillMatch(List<String> skillGaps, List<String> itemSkills) {
-    return SkillMatcher.matchedSkills(skillGaps, itemSkills).length;
-  }
+  /// The current skills written in an analysis document.
+  static List<String> currentSkillsOf(Map<String, dynamic> analysis) =>
+      _stringList(analysis['currentSkills']);
 
-  /// The certification level that fits an experience level from the profile
-  /// ("No Experience", "Beginner", "Intermediate", "Advanced").
-  static String? preferredLevel(String? experienceLevel) {
+  /// The certification level that suits an experience level from the
+  /// profile ("No Experience", "Beginner", "Intermediate", "Advanced").
+  /// To strengthen skills the user already has, the next level up suits
+  /// better than the same level.
+  static String? preferredLevel(
+    String? experienceLevel, {
+    CertificationGoal goal = CertificationGoal.closeGaps,
+  }) {
+    const levels = ['Beginner', 'Intermediate', 'Advanced'];
+    final int index;
     switch (experienceLevel) {
       case 'No Experience':
       case 'Beginner':
-        return 'Beginner';
+        index = 0;
       case 'Intermediate':
-        return 'Intermediate';
+        index = 1;
       case 'Advanced':
-        return 'Advanced';
+        index = 2;
       default:
         return null;
     }
+    final step = goal == CertificationGoal.strengthenSkills ? 1 : 0;
+    return levels[(index + step).clamp(0, levels.length - 1)];
   }
 
   // ---------------------------------------------------------
@@ -259,7 +219,7 @@ class ContentBasedRecommender {
 
   /// Normalized names of the certifications found in the CV
   /// (`analysis['certifications']` is a list of {name, issuer, year}).
-  static List<String> _heldCertificationNames(dynamic raw) {
+  static List<String> _heldCertifications(dynamic raw) {
     if (raw is! List) return [];
     final names = <String>[];
     for (final item in raw) {
@@ -270,22 +230,48 @@ class ContentBasedRecommender {
     return names;
   }
 
-  /// True when the user's CV already lists this certification. A short
-  /// name (like "ccna") must match exactly; longer names may be contained
-  /// in each other ("CompTIA Security+" and "CompTIA Security+ (SY0-701)").
-  static bool _isHeld(Certification cert, List<String> heldNames) {
-    if (heldNames.isEmpty) return false;
+  /// Words that do not tell certifications apart.
+  static const Set<String> _genericWords = {
+    'certificate', 'certification', 'certified', 'professional', 'exam',
+    'credential', 'course', 'program', 'programme', 'the', 'and', 'of', 'in',
+  };
+
+  /// The words that identify a certification name: no generic words and
+  /// no codes or years ("sy0 701", "2024").
+  static Set<String> _coreWords(String normalized) => normalized
+      .split(' ')
+      .where((w) =>
+          w.isNotEmpty &&
+          !_genericWords.contains(w) &&
+          !RegExp(r'\d').hasMatch(w))
+      .toSet();
+
+  /// True when the CV already lists this certification:
+  ///  - the same name or short name ("CompTIA Security+", "CCNA"), or
+  ///  - its exam code ("SY0-701"), or
+  ///  - the same identifying words ("Google Data Analytics Certificate" and
+  ///    "Google Data Analytics Professional Certificate").
+  /// A name is never matched just because it is part of a longer one, so
+  /// "Security+" does not hide "Cloud Security" certifications and
+  /// "Microsoft Certified" does not hide every Microsoft certification.
+  static bool _isHeld(Certification cert, List<String> held) {
+    if (held.isEmpty) return false;
     final names = <String>{
       SkillMatcher.normalize(cert.name),
       SkillMatcher.normalize(cert.shortName),
     }..remove('');
+    final examCode = SkillMatcher.normalize(cert.examCode);
+    final certCores = [
+      for (final n in names) _coreWords(n),
+    ].where((c) => c.length >= 2).toList();
 
-    for (final held in heldNames) {
-      for (final name in names) {
-        if (name == held) return true;
-        final shorter = name.length <= held.length ? name : held;
-        final longer = name.length <= held.length ? held : name;
-        if (shorter.length >= 8 && longer.contains(shorter)) return true;
+    for (final h in held) {
+      if (names.contains(h)) return true;
+      if (examCode.isNotEmpty && ' $h '.contains(' $examCode ')) return true;
+      final core = _coreWords(h);
+      if (core.length >= 2 &&
+          certCores.any((c) => c.length == core.length && c.containsAll(core))) {
+        return true;
       }
     }
     return false;

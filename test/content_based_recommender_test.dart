@@ -6,9 +6,11 @@ Certification cert(
   String id, {
   String? name,
   String shortName = '',
+  String examCode = '',
   String level = 'Beginner',
   List<String> paths = const ['data_analyst'],
   List<String> skills = const [],
+  String description = 'Description',
   bool verified = true,
 }) {
   return Certification(
@@ -16,10 +18,10 @@ Certification cert(
     name: name ?? id,
     shortName: shortName,
     issuer: 'Issuer',
-    examCode: '',
+    examCode: examCode,
     level: level,
     category: 'Category',
-    description: 'Description',
+    description: description,
     descriptionAr: '',
     careerPaths: paths,
     skills: skills,
@@ -32,12 +34,14 @@ Certification cert(
 Map<String, dynamic> analysis({
   String goal = 'data_analyst',
   List<String> gaps = const ['SQL', 'Power BI', 'Tableau'],
-  List<Map<String, String>> held = const [],
+  List<String> current = const ['Python', 'Excel'],
+  List<String> held = const [],
 }) {
   return {
     'careerGoalId': goal,
     'skillGaps': gaps,
-    'certifications': held,
+    'currentSkills': current,
+    'certifications': [for (final name in held) {'name': name}],
   };
 }
 
@@ -47,244 +51,192 @@ List<String> ids(List<CertificationMatch> matches) =>
 void main() {
   const recommender = ContentBasedRecommender();
 
-  test('keeps only certifications for the career goal and ranks by gaps', () {
-    final recs = recommender.recommendCertifications(
-      analysis: analysis(),
-      certifications: [
-        cert('one_gap', skills: ['Databases and SQL']),
-        cert('two_gaps', skills: ['Databases and SQL', 'Power BI']),
-        cert('other_goal',
-            paths: ['network_engineer'], skills: ['Databases and SQL']),
-        cert('no_gap', skills: ['Python']),
-      ],
-    );
+  group('close my skill gaps', () {
+    test('keeps only the career goal and ranks by gaps covered', () {
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(),
+        certifications: [
+          cert('one_gap', skills: ['Databases and SQL']),
+          cert('two_gaps', skills: ['Databases and SQL', 'Power BI']),
+          cert('other_goal',
+              paths: ['network_engineer'], skills: ['Databases and SQL']),
+          cert('no_gap', skills: ['Python']),
+        ],
+      );
+      expect(ids(recs.matched), ['two_gaps', 'one_gap']);
+      expect(ids(recs.others), ['no_gap']);
+      expect(recs.matched.first.matchedSkills, ['SQL', 'Power BI']);
+      expect(recs.goal, CertificationGoal.closeGaps);
+    });
 
-    expect(ids(recs.forGaps), ['two_gaps', 'one_gap']);
-    expect(recs.forGaps.first.matchedGaps, ['SQL', 'Power BI']);
-    expect(recs.forGaps.first.gapCount, 2);
-    expect(ids(recs.forGoal), ['no_gap']);
-    expect(recs.forGoal.first.matchedGaps, isEmpty);
-    expect(recs.skillGaps, ['SQL', 'Power BI', 'Tableau']);
-    expect(recs.isEmpty, isFalse);
+    test('"All" returns every certification for the goal, with no cap', () {
+      final certs = [
+        for (var i = 0; i < 40; i++) cert('c$i', skills: ['Python']),
+      ];
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(),
+        certifications: certs,
+      );
+      expect(recs.total, 40);
+      expect(recs.top(null).length, 40);
+      expect(recs.top(5).length, 5);
+      expect(recs.top(10).length, 10);
+    });
+
+    test('top N puts gap matches first, then the rest for the goal', () {
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(),
+        certifications: [
+          cert('goal_a', skills: ['Python']),
+          cert('gap', skills: ['Power BI']),
+          cert('goal_b', skills: ['Linux']),
+        ],
+      );
+      expect(ids(recs.top(2)), ['gap', 'goal_a']);
+    });
   });
 
-  test('hides certifications already listed in the CV', () {
-    final recs = recommender.recommendCertifications(
-      analysis: analysis(held: [
-        {'name': 'Tableau Desktop Specialist', 'issuer': 'Tableau'},
-      ]),
-      certifications: [
-        cert('held',
-            name: 'Tableau Desktop Specialist', skills: ['Data Visualization']),
-        cert('other', skills: ['Databases and SQL']),
-      ],
-    );
+  group('strengthen my skills', () {
+    test('ranks by the current skills the certification builds on', () {
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(current: ['Python', 'Excel', 'SQL']),
+        goal: CertificationGoal.strengthenSkills,
+        certifications: [
+          cert('python_only', skills: ['Python']),
+          cert('python_sql', skills: ['Python', 'Databases and SQL']),
+          cert('gap_only', skills: ['Power BI']),
+        ],
+      );
+      expect(ids(recs.matched), ['python_sql', 'python_only']);
+      expect(recs.matched.first.matchedSkills, ['Python', 'SQL']);
+      expect(recs.targetSkills, ['Python', 'Excel', 'SQL']);
+      expect(ids(recs.others), ['gap_only']);
+    });
 
-    expect(ids(recs.forGaps), ['other']);
-    expect(ids(recs.forGoal), isEmpty);
-    expect(recs.hiddenOwned, 1);
+    test('prefers the next level up', () {
+      expect(
+        ContentBasedRecommender.preferredLevel('Beginner',
+            goal: CertificationGoal.strengthenSkills),
+        'Intermediate',
+      );
+      expect(
+        ContentBasedRecommender.preferredLevel('Advanced',
+            goal: CertificationGoal.strengthenSkills),
+        'Advanced',
+      );
+      expect(ContentBasedRecommender.preferredLevel('No Experience'),
+          'Beginner');
+      expect(ContentBasedRecommender.preferredLevel(null), isNull);
+
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(current: ['Python']),
+        goal: CertificationGoal.strengthenSkills,
+        experienceLevel: 'Beginner',
+        certifications: [
+          cert('beginner', skills: ['Python']),
+          cert('intermediate', level: 'Intermediate', skills: ['Python']),
+        ],
+      );
+      expect(ids(recs.matched), ['intermediate', 'beginner']);
+      expect(recs.matched.first.levelFits, isTrue);
+    });
   });
 
-  test('a short held name must match exactly', () {
-    final recs = recommender.recommendCertifications(
-      analysis: analysis(held: [
-        {'name': 'CCNA'},
-        {'name': 'Cisco'},
-      ]),
-      certifications: [
-        cert('ccna', name: 'Cisco Certified Network Associate', shortName: 'CCNA'),
-        cert('devnet', name: 'Cisco DevNet Associate', shortName: 'DevNet'),
-      ],
-    );
-
-    // "CCNA" equals the short name, so it is hidden.
-    // "Cisco" is too short to match a longer name by containment.
-    expect(ids(recs.forGoal), ['devnet']);
-    expect(recs.hiddenOwned, 1);
+  group('specific technologies need the certification to mention them', () {
+    test('a JavaScript certification does not cover Node.js or Angular', () {
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(
+          goal: 'web_developer',
+          gaps: ['JavaScript', 'Node.js', 'Angular', 'React.js'],
+        ),
+        certifications: [
+          cert('sap_fiori',
+              paths: ['web_developer'],
+              skills: ['JavaScript', 'Frontend Frameworks'],
+              description: 'SAP Fiori and SAPUI5 front-end apps.'),
+          cert('full_stack',
+              paths: ['web_developer'],
+              skills: ['JavaScript', 'Frontend Frameworks'],
+              description: 'Covers HTML, CSS, JavaScript, React, Node.js.'),
+        ],
+      );
+      final byId = {for (final m in recs.ranked) m.certification.id: m};
+      expect(byId['sap_fiori']!.matchedSkills, ['JavaScript']);
+      expect(byId['full_stack']!.matchedSkills,
+          ['JavaScript', 'Node.js', 'React.js']);
+    });
   });
 
-  test('prefers the level closest to the experience level', () {
-    final certs = [
-      cert('beginner', level: 'Beginner', skills: ['Databases and SQL']),
-      cert('advanced', level: 'Advanced', skills: ['Databases and SQL']),
+  group('certifications already in the CV', () {
+    final catalog = [
+      cert('secplus',
+          name: 'CompTIA Security+',
+          shortName: 'Security+',
+          examCode: 'SY0-701',
+          paths: ['cybersecurity_analyst'],
+          skills: ['Information Security']),
+      cert('secx',
+          name: 'CompTIA SecurityX',
+          shortName: 'SecurityX',
+          paths: ['cybersecurity_analyst'],
+          skills: ['Information Security']),
+      cert('cloudsec',
+          name: 'Certificate of Cloud Security Knowledge',
+          shortName: 'CCSK',
+          paths: ['cybersecurity_analyst'],
+          skills: ['Cloud Security']),
+      cert('az900',
+          name: 'Microsoft Certified: Azure Fundamentals',
+          shortName: 'AZ-900',
+          paths: ['cybersecurity_analyst'],
+          skills: ['Azure']),
+      cert('gda',
+          name: 'Google Data Analytics Professional Certificate',
+          paths: ['cybersecurity_analyst'],
+          skills: ['Data Analysis']),
     ];
 
-    final advanced = recommender.recommendCertifications(
-      analysis: analysis(),
-      certifications: certs,
-      experienceLevel: 'Advanced',
-    );
-    expect(ids(advanced.forGaps), ['advanced', 'beginner']);
-    expect(advanced.forGaps.first.levelFits, isTrue);
-    expect(advanced.forGaps.last.levelFits, isFalse);
+    Set<String> hiddenFor(List<String> held) {
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(goal: 'cybersecurity_analyst', held: held),
+        certifications: catalog,
+      );
+      final shown = ids(recs.ranked).toSet();
+      return catalog.map((c) => c.id).where((id) => !shown.contains(id)).toSet();
+    }
 
-    final none = recommender.recommendCertifications(
-      analysis: analysis(),
-      certifications: certs,
-      experienceLevel: 'No Experience',
-    );
-    expect(ids(none.forGaps), ['beginner', 'advanced']);
-    expect(none.forGaps.first.levelFits, isTrue);
+    test('the same name, short name or exam code is hidden', () {
+      expect(hiddenFor(['Security+']), {'secplus'});
+      expect(hiddenFor(['CompTIA Security+ (SY0-701)']), {'secplus'});
+      expect(hiddenFor(['SY0-701']), {'secplus'});
+      expect(hiddenFor(['AZ-900']), {'az900'});
+    });
+
+    test('the same identifying words are hidden', () {
+      expect(hiddenFor(['Google Data Analytics Certificate']), {'gda'});
+    });
+
+    test('a name that is only part of another name hides nothing extra', () {
+      expect(hiddenFor(['Microsoft Certified']), isEmpty);
+      expect(hiddenFor(['Network Security']), isEmpty);
+      expect(hiddenFor(['Introduction to Cybersecurity']), isEmpty);
+      expect(hiddenFor(['CompTIA Security+']), {'secplus'});
+    });
+
+    test('the hidden count is reported', () {
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(goal: 'cybersecurity_analyst', held: ['Security+']),
+        certifications: catalog,
+      );
+      expect(recs.hiddenOwned, 1);
+    });
   });
 
-  test('more gaps covered beats a better level fit', () {
+  test('no career goal means no recommendations', () {
     final recs = recommender.recommendCertifications(
-      analysis: analysis(),
-      certifications: [
-        cert('fits_level',
-            level: 'Advanced', skills: ['Databases and SQL']),
-        cert('more_gaps',
-            level: 'Beginner', skills: ['Databases and SQL', 'Power BI']),
-      ],
-      experienceLevel: 'Advanced',
-    );
-    expect(ids(recs.forGaps), ['more_gaps', 'fits_level']);
-  });
-
-  test('verified certifications come first when everything else is equal', () {
-    final recs = recommender.recommendCertifications(
-      analysis: analysis(),
-      certifications: [
-        cert('a_unverified', verified: false, skills: ['Databases and SQL']),
-        cert('b_verified', skills: ['Databases and SQL']),
-      ],
-    );
-    expect(ids(recs.forGaps), ['b_verified', 'a_unverified']);
-  });
-
-  test('limits the "more for your goal" list', () {
-    final recs = recommender.recommendCertifications(
-      analysis: analysis(),
-      certifications: [
-        for (var i = 0; i < 10; i++) cert('x$i', skills: ['Python']),
-      ],
-      maxRelated: 3,
-    );
-    expect(recs.forGaps, isEmpty);
-    expect(recs.forGoal.length, 3);
-  });
-
-  test('with no skill gaps every certification is a goal-only match', () {
-    final recs = recommender.recommendCertifications(
-      analysis: analysis(gaps: const []),
-      certifications: [
-        cert('a', skills: ['Databases and SQL']),
-        cert('b', skills: ['Python']),
-      ],
-    );
-    expect(recs.forGaps, isEmpty);
-    expect(ids(recs.forGoal).toSet(), {'a', 'b'});
-  });
-
-  test('without a career goal nothing is recommended', () {
-    final recs = recommender.recommendCertifications(
-      analysis: {'skillGaps': ['SQL']},
-      certifications: [cert('a', skills: ['Databases and SQL'])],
+      analysis: analysis(goal: ''),
+      certifications: [cert('a', skills: ['Python'])],
     );
     expect(recs.isEmpty, isTrue);
-  });
-
-  test('calculateSkillMatch counts the covered gaps', () {
-    expect(
-      recommender.calculateSkillMatch(
-        ['SQL', 'Docker', 'Rust crab'],
-        ['Databases and SQL', 'Containers'],
-      ),
-      2,
-    );
-  });
-
-  test('preferredLevel maps the profile experience level', () {
-    expect(ContentBasedRecommender.preferredLevel('No Experience'), 'Beginner');
-    expect(ContentBasedRecommender.preferredLevel('Beginner'), 'Beginner');
-    expect(
-      ContentBasedRecommender.preferredLevel('Intermediate'),
-      'Intermediate',
-    );
-    expect(ContentBasedRecommender.preferredLevel('Advanced'), 'Advanced');
-    expect(ContentBasedRecommender.preferredLevel(null), isNull);
-    expect(ContentBasedRecommender.preferredLevel('Expert'), isNull);
-  });
-
-  group('saved matches', () {
-    final certs = [
-      cert('a', skills: ['Databases and SQL', 'Power BI']),
-      cert('b', skills: ['Databases and SQL']),
-      cert('c', skills: ['Python']),
-    ];
-    final byId = {for (final c in certs) c.id: c};
-    final skillGaps = ContentBasedRecommender.skillGapsOf(analysis());
-
-    test('can be saved and restored', () {
-      final recs = recommender.recommendCertifications(
-        analysis: analysis(),
-        certifications: certs,
-      );
-      final restored = CertificationRecommendations.fromSaved(
-        recs.toMap(),
-        byId: byId,
-        careerGoalId: 'data_analyst',
-        skillGaps: skillGaps,
-      );
-
-      expect(restored, isNotNull);
-      expect(ids(restored!.forGaps), ids(recs.forGaps));
-      expect(ids(restored.forGoal), ids(recs.forGoal));
-      expect(restored.forGaps.first.matchedGaps,
-          recs.forGaps.first.matchedGaps);
-      expect(restored.hiddenOwned, recs.hiddenOwned);
-      expect(restored.skillGaps, skillGaps);
-    });
-
-    test('skips certifications that left the catalog', () {
-      final recs = recommender.recommendCertifications(
-        analysis: analysis(),
-        certifications: certs,
-      );
-      final restored = CertificationRecommendations.fromSaved(
-        recs.toMap(),
-        byId: {'a': certs.first},
-        careerGoalId: 'data_analyst',
-        skillGaps: skillGaps,
-      );
-      expect(ids(restored!.forGaps), ['a']);
-      expect(restored.forGoal, isEmpty);
-    });
-
-    test('returns null when nothing saved is usable', () {
-      final recs = recommender.recommendCertifications(
-        analysis: analysis(),
-        certifications: certs,
-      );
-      expect(
-        CertificationRecommendations.fromSaved(
-          recs.toMap(),
-          byId: const {},
-          careerGoalId: 'data_analyst',
-          skillGaps: skillGaps,
-        ),
-        isNull,
-      );
-      expect(
-        CertificationRecommendations.fromSaved(
-          'not a map',
-          byId: byId,
-          careerGoalId: 'data_analyst',
-          skillGaps: skillGaps,
-        ),
-        isNull,
-      );
-    });
-
-    test('an empty saved result is still a result', () {
-      final restored = CertificationRecommendations.fromSaved(
-        {'forGaps': [], 'forGoal': [], 'hiddenOwned': 0},
-        byId: byId,
-        careerGoalId: 'data_analyst',
-        skillGaps: skillGaps,
-      );
-      expect(restored, isNotNull);
-      expect(restored!.isEmpty, isTrue);
-    });
   });
 }

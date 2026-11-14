@@ -1,10 +1,10 @@
 import 'dart:math' as math;
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../constants/profile_options.dart';
-import '../../services/certification_matches_store.dart';
+import '../../models/certification.dart';
 import '../../services/certification_service.dart';
 import '../../services/content_based_recommender.dart';
 import '../../services/user_service.dart';
@@ -14,11 +14,15 @@ import 'certification_details_screen.dart';
 
 /// Professional Certification Recommender.
 ///
-/// Flow (same as the Release 1 flowchart):
+/// Flow:
 ///  - no valid AI Career Analysis  -> ask the user to complete it first
-///  - analysis found               -> recommend certifications from the
-///                                    skill gaps and the career goal
+///  - analysis found               -> the user chooses what they want
+///                                    (close skill gaps / strengthen skills)
+///                                    and how many (Top 5 / Top 10 / All)
 ///  - nothing found                -> "no matching certifications" message
+///
+/// Matching runs on the phone (300 certifications), so changing a choice
+/// updates the list instantly and nothing is saved in Firestore.
 class CertificationsScreen extends StatefulWidget {
   const CertificationsScreen({super.key});
 
@@ -30,11 +34,14 @@ enum _ScreenState { loading, noAnalysis, start, matching, error, ready }
 
 class _CertificationsScreenState extends State<CertificationsScreen>
     with SingleTickerProviderStateMixin {
-  static const int _pageSize = 10;
+  static const String _goalKey = 'cert_recommender_goal';
+  static const String _limitKey = 'cert_recommender_limit';
+
+  /// Top 5, Top 10, All (null).
+  static const List<int?> _limits = [5, 10, null];
 
   final UserService _userService = UserService();
   final CertificationService _certificationService = CertificationService();
-  final CertificationMatchesStore _matchesStore = CertificationMatchesStore();
   final ContentBasedRecommender _recommender = const ContentBasedRecommender();
 
   late final AnimationController _iconController;
@@ -42,9 +49,14 @@ class _CertificationsScreenState extends State<CertificationsScreen>
   _ScreenState _state = _ScreenState.loading;
   Map<String, dynamic>? _analysis;
   CertificationRecommendations? _recs;
+  List<Certification>? _catalog;
+  String? _experienceLevel;
   String _careerName = '';
-  int _gapCount = 0;
-  int _visibleGapMatches = _pageSize;
+
+  CertificationGoal _goal = CertificationGoal.closeGaps;
+  int? _limit = 5;
+
+  bool get _forGaps => _goal == CertificationGoal.closeGaps;
 
   @override
   void initState() {
@@ -63,13 +75,59 @@ class _CertificationsScreenState extends State<CertificationsScreen>
   }
 
   // ---------------------------------------------------------
+  // CHOICES (remembered on this device)
+  // ---------------------------------------------------------
+  Future<void> _loadChoices() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final goal = prefs.getString(_goalKey);
+      final limit = prefs.getInt(_limitKey);
+      _goal = goal == CertificationGoal.strengthenSkills.name
+          ? CertificationGoal.strengthenSkills
+          : CertificationGoal.closeGaps;
+      // 0 means "All"
+      _limit = limit == null ? 5 : (limit == 0 ? null : limit);
+      if (!_limits.contains(_limit)) _limit = 5;
+    } catch (_) {
+      // Keep the defaults
+    }
+  }
+
+  Future<void> _saveChoices() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(_goalKey, _goal.name);
+      await prefs.setInt(_limitKey, _limit ?? 0);
+    } catch (_) {
+      // Only a convenience: the choice still works for this visit
+    }
+  }
+
+  void _chooseGoal(CertificationGoal goal) {
+    if (goal == _goal) return;
+    setState(() {
+      _goal = goal;
+      if (_state == _ScreenState.ready) _recs = _compute();
+    });
+    _saveChoices();
+  }
+
+  void _chooseLimit(int? limit) {
+    if (limit == _limit) return;
+    setState(() => _limit = limit);
+    _saveChoices();
+  }
+
+  // ---------------------------------------------------------
   // LOAD
   // ---------------------------------------------------------
   /// Step 1: is there an AI Career Analysis for the current CV?
   Future<void> _load() async {
     if (mounted) setState(() => _state = _ScreenState.loading);
     try {
-      // Only an analysis that belongs to the current CV counts.
+      await _loadChoices();
+      // Only an analysis that belongs to the current CV (and career goal)
+      // counts.
       final analysis = await _userService.getValidLatestAnalysis();
       if (!mounted) return;
       if (analysis == null) {
@@ -82,39 +140,12 @@ class _CertificationsScreenState extends State<CertificationsScreen>
 
       final savedName = analysis['careerGoalName']?.toString().trim();
       final goalId = analysis['careerGoalId']?.toString() ?? '';
-      final gaps = analysis['skillGaps'];
-
-      final careerName = (savedName != null && savedName.isNotEmpty)
-          ? savedName
-          : (ProfileOptions.careerGoals[goalId] ?? 'your career goal');
-      final gapCount = gaps is List ? gaps.length : 0;
-
-      // Matches saved for this analysis? Show them right away.
-      final saved = analysis['certificationMatches'];
-      CertificationRecommendations? restored;
-      if (saved is Map) {
-        final all = await _certificationService.getAll();
-        restored = CertificationRecommendations.fromSaved(
-          saved,
-          byId: {for (final cert in all) cert.id: cert},
-          careerGoalId: goalId,
-          skillGaps: ContentBasedRecommender.skillGapsOf(analysis),
-        );
-        if (!mounted) return;
-      }
-
-      final restoredRecs = restored;
       setState(() {
         _analysis = analysis;
-        _careerName = careerName;
-        _gapCount = gapCount;
-        if (restoredRecs != null) {
-          _recs = restoredRecs;
-          _visibleGapMatches = _pageSize;
-          _state = _ScreenState.ready;
-        } else {
-          _state = _ScreenState.start;
-        }
+        _careerName = (savedName != null && savedName.isNotEmpty)
+            ? savedName
+            : (ProfileOptions.careerGoals[goalId] ?? 'your career goal');
+        _state = _ScreenState.start;
       });
     } catch (e) {
       debugPrint('CertificationsScreen: $e');
@@ -126,30 +157,28 @@ class _CertificationsScreenState extends State<CertificationsScreen>
     }
   }
 
+  CertificationRecommendations _compute() {
+    return _recommender.recommendCertifications(
+      analysis: _analysis!,
+      certifications: _catalog!,
+      experienceLevel: _experienceLevel,
+      goal: _goal,
+    );
+  }
+
   /// Step 2: the user taps "Find Certifications".
   Future<void> _findCertifications() async {
-    final analysis = _analysis;
-    if (analysis == null) return;
+    if (_analysis == null) return;
 
     setState(() => _state = _ScreenState.matching);
     try {
       final startedAt = DateTime.now();
-      final user = await _userService.getUser();
-      final all = await _certificationService.getAll();
-
-      final recs = _recommender.recommendCertifications(
-        analysis: analysis,
-        certifications: all,
-        experienceLevel: user?['experienceLevel']?.toString(),
-      );
-
-      // Save the result in the analysis document so it opens by itself next
-      // time. A failed save must not hide the results.
-      try {
-        await _matchesStore.save(recs.toMap());
-      } catch (e) {
-        debugPrint('CertificationsScreen: could not save matches: $e');
+      if (_catalog == null) {
+        final user = await _userService.getUser();
+        _experienceLevel = user?['experienceLevel']?.toString();
+        _catalog = await _certificationService.getAll();
       }
+      final recs = _compute();
 
       // Keep the "matching" screen visible for a moment so it does not flash.
       const minimum = Duration(milliseconds: 900);
@@ -159,7 +188,6 @@ class _CertificationsScreenState extends State<CertificationsScreen>
       if (!mounted) return;
       setState(() {
         _recs = recs;
-        _visibleGapMatches = _pageSize;
         _state = _ScreenState.ready;
       });
     } catch (e) {
@@ -175,6 +203,7 @@ class _CertificationsScreenState extends State<CertificationsScreen>
       MaterialPageRoute(builder: (_) => const CareerAnalysisScreen()),
     );
     if (!mounted) return;
+    _recs = null;
     _load();
   }
 
@@ -184,7 +213,8 @@ class _CertificationsScreenState extends State<CertificationsScreen>
       MaterialPageRoute(
         builder: (_) => CertificationDetailsScreen(
           certification: match.certification,
-          matchedGaps: match.matchedGaps,
+          matchedSkills: match.matchedSkills,
+          goal: _goal,
           levelFits: match.levelFits,
           careerName: _careerName,
         ),
@@ -270,6 +300,12 @@ class _CertificationsScreenState extends State<CertificationsScreen>
   // STATE: START (same layout as the AI Career Analysis start page)
   // ---------------------------------------------------------
   Widget _buildStart() {
+    final targets = _forGaps
+        ? ContentBasedRecommender.skillGapsOf(_analysis!)
+        : ContentBasedRecommender.currentSkillsOf(_analysis!);
+    final n = targets.length;
+    final what = _forGaps ? 'skill gap' : 'current skill';
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -278,7 +314,7 @@ class _CertificationsScreenState extends State<CertificationsScreen>
           child: _buildHero(
             title: 'Find Certifications That Fit You',
             text:
-                'Masra compares your skill gaps and career goal with a catalog of professional certifications and shows how each one helps you.',
+                'Masra compares your analysis and career goal with a catalog of professional certifications and shows how each one helps you.',
             badge: 'Based on your career goal',
             icon: Icons.workspace_premium_outlined,
           ),
@@ -288,49 +324,13 @@ class _CertificationsScreenState extends State<CertificationsScreen>
           delay: 80,
           child: _buildAnalysisCard(
             title: _careerName,
-            subtitle: _gapCount == 1
-                ? '1 skill gap from your latest analysis'
-                : '$_gapCount skill gaps from your latest analysis',
+            subtitle: n == 1
+                ? '1 $what from your latest analysis'
+                : '$n ${what}s from your latest analysis',
           ),
         ),
         const SizedBox(height: 26),
-        _entrance(
-          delay: 140,
-          child: Text(
-            'Your recommendations will focus on',
-            style: TextStyle(
-              color: AppColors.navyText,
-              fontSize: 16,
-              fontWeight: FontWeight.w800,
-            ),
-          ),
-        ),
-        const SizedBox(height: 14),
-        _entrance(
-          delay: 190,
-          child: IntrinsicHeight(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Expanded(
-                  child: _buildInsightCard(
-                    icon: Icons.trending_up_rounded,
-                    title: 'Skill Gaps',
-                    subtitle: 'Certifications that close your gaps',
-                  ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: _buildInsightCard(
-                    icon: Icons.track_changes_rounded,
-                    title: 'Career Goal',
-                    subtitle: 'Certifications for your target role',
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
+        _entrance(delay: 140, child: _buildChoices()),
         const SizedBox(height: 26),
         _entrance(
           delay: 250,
@@ -340,6 +340,159 @@ class _CertificationsScreenState extends State<CertificationsScreen>
           ),
         ),
       ],
+    );
+  }
+
+  /// "What do you want?" and "How many?" (also shown above the results so
+  /// the user can switch without going back).
+  Widget _buildChoices({bool compact = false}) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _choiceLabel('What do you want?'),
+        const SizedBox(height: 10),
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(
+                child: _goalOption(
+                  goal: CertificationGoal.closeGaps,
+                  icon: Icons.trending_up_rounded,
+                  title: 'Close my skill gaps',
+                  subtitle: compact ? null : 'Learn what your career goal needs',
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _goalOption(
+                  goal: CertificationGoal.strengthenSkills,
+                  icon: Icons.bolt_rounded,
+                  title: 'Strengthen my skills',
+                  subtitle: compact ? null : 'Prove and deepen what you know',
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: compact ? 14 : 20),
+        _choiceLabel('How many?'),
+        const SizedBox(height: 10),
+        Row(
+          children: [
+            for (var i = 0; i < _limits.length; i++) ...[
+              if (i > 0) const SizedBox(width: 10),
+              Expanded(child: _limitOption(_limits[i])),
+            ],
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _choiceLabel(String text) {
+    return Text(
+      text,
+      style: TextStyle(
+        color: AppColors.navyText,
+        fontSize: 15,
+        fontWeight: FontWeight.w800,
+      ),
+    );
+  }
+
+  Widget _goalOption({
+    required CertificationGoal goal,
+    required IconData icon,
+    required String title,
+    String? subtitle,
+  }) {
+    final selected = _goal == goal;
+    return Semantics(
+      button: true,
+      selected: selected,
+      label: title,
+      child: GestureDetector(
+        onTap: () => _chooseGoal(goal),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: selected ? AppColors.teal : AppColors.softBackground,
+            borderRadius: BorderRadius.circular(18),
+            border: Border.all(
+              color: selected ? AppColors.teal : AppColors.lightGray,
+              width: selected ? 1.5 : 1,
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(
+                icon,
+                color: selected ? AppColors.onBrand : AppColors.tealText,
+                size: 22,
+              ),
+              const SizedBox(height: 8),
+              Text(
+                title,
+                style: TextStyle(
+                  color: selected ? AppColors.onBrand : AppColors.navyText,
+                  fontSize: 13.5,
+                  fontWeight: FontWeight.w800,
+                  height: 1.3,
+                ),
+              ),
+              if (subtitle != null) ...[
+                const SizedBox(height: 4),
+                Text(
+                  subtitle,
+                  style: TextStyle(
+                    color: selected
+                        ? AppColors.onBrand.withValues(alpha: 0.85)
+                        : AppColors.secondaryText,
+                    fontSize: 12,
+                    height: 1.35,
+                  ),
+                ),
+              ],
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _limitOption(int? limit) {
+    final selected = _limit == limit;
+    final label = limit == null ? 'All' : 'Top $limit';
+    return Semantics(
+      button: true,
+      selected: selected,
+      label: label,
+      child: GestureDetector(
+        onTap: () => _chooseLimit(limit),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+          height: 46,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: selected ? AppColors.navy : AppColors.softBackground,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              color: selected ? AppColors.navy : AppColors.lightGray,
+            ),
+          ),
+          child: Text(
+            label,
+            style: TextStyle(
+              color: selected ? AppColors.onBrand : AppColors.navyText,
+              fontSize: 14,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+        ),
+      ),
     );
   }
 
@@ -399,40 +552,7 @@ class _CertificationsScreenState extends State<CertificationsScreen>
     );
   }
 
-  Widget _buildInsightCard({
-    required IconData icon,
-    required String title,
-    required String subtitle,
-  }) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: _cardDecoration(radius: 20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _iconTile(icon, size: 42, radius: 13),
-          const SizedBox(height: 14),
-          Text(
-            title,
-            style: TextStyle(
-              color: AppColors.navyText,
-              fontSize: 14,
-              fontWeight: FontWeight.w900,
-            ),
-          ),
-          const SizedBox(height: 5),
-          Text(
-            subtitle,
-            style: TextStyle(
-              color: AppColors.secondaryText,
-              fontSize: 11.5,
-              height: 1.4,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+
 
   // ---------------------------------------------------------
   // STATE: MATCHING (short loading view after the button)
@@ -453,7 +573,9 @@ class _CertificationsScreenState extends State<CertificationsScreen>
             ),
             const SizedBox(height: 22),
             Text(
-              'Matching certifications to your skill gaps',
+              _forGaps
+                  ? 'Matching certifications to your skill gaps'
+                  : 'Matching certifications to your skills',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: AppColors.navyText,
@@ -543,9 +665,8 @@ class _CertificationsScreenState extends State<CertificationsScreen>
   // ---------------------------------------------------------
   Widget _buildReady() {
     final recs = _recs!;
-    final shown = recs.forGaps.take(_visibleGapMatches).toList();
-    final hasMore = recs.forGaps.length > shown.length;
-    final totalGaps = recs.skillGaps.length;
+    final total = recs.targetSkills.length;
+    final shown = recs.top(_limit);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -566,7 +687,9 @@ class _CertificationsScreenState extends State<CertificationsScreen>
               ),
               const SizedBox(height: 8),
               Text(
-                'Certifications that fit your skill gaps and your career goal.',
+                _forGaps
+                    ? 'Certifications that close your skill gaps for your career goal.'
+                    : 'Certifications that build on the skills you already have.',
                 style: TextStyle(
                   color: AppColors.secondaryText,
                   fontSize: 13.5,
@@ -577,7 +700,9 @@ class _CertificationsScreenState extends State<CertificationsScreen>
           ),
         ),
         const SizedBox(height: 24),
-        _entrance(delay: 60, child: _buildSummaryCard(recs)),
+        _entrance(delay: 40, child: _buildChoices(compact: true)),
+        const SizedBox(height: 22),
+        _entrance(delay: 80, child: _buildSummaryCard(recs)),
         if (recs.isEmpty) ...[
           const SizedBox(height: 22),
           _entrance(
@@ -589,41 +714,58 @@ class _CertificationsScreenState extends State<CertificationsScreen>
                   'We do not have certifications for this career goal yet. We keep adding new ones, so check back soon.',
             ),
           ),
-        ],
-        if (recs.forGaps.isNotEmpty) ...[
-          const SizedBox(height: 26),
-          _sectionTitle('Closes your skill gaps', recs.forGaps.length),
-          const SizedBox(height: 14),
-          for (final match in shown) _buildCertCard(match, totalGaps),
-          if (hasMore)
-            _buildShowMore(
-              remaining: recs.forGaps.length - shown.length,
-              onTap: () => setState(() => _visibleGapMatches += _pageSize),
-            ),
-        ],
-        if (recs.forGaps.isEmpty && !recs.isEmpty) ...[
-          const SizedBox(height: 22),
-          _entrance(
-            delay: 120,
-            child: _buildInfoCard(
+        ] else ...[
+          if (recs.matched.isEmpty) ...[
+            const SizedBox(height: 22),
+            _buildInfoCard(
               icon: Icons.info_outline_rounded,
-              title: totalGaps == 0
-                  ? 'No skill gaps found'
-                  : 'No certification covers your gaps yet',
-              subtitle: totalGaps == 0
-                  ? 'Here are certifications that fit your career goal.'
-                  : 'These certifications fit your career goal. More are added over time.',
+              title: total == 0
+                  ? (_forGaps ? 'No skill gaps found' : 'No skills found')
+                  : (_forGaps
+                      ? 'No certification covers your gaps yet'
+                      : 'No certification builds on your skills yet'),
+              subtitle: 'Here are certifications that fit your career goal.',
             ),
-          ),
-        ],
-        if (recs.forGoal.isNotEmpty) ...[
-          const SizedBox(height: 26),
-          _sectionTitle('More for your goal', recs.forGoal.length),
-          const SizedBox(height: 14),
-          for (final match in recs.forGoal) _buildCertCard(match, totalGaps),
+          ],
+          if (_limit != null) ...[
+            const SizedBox(height: 26),
+            _sectionTitle(
+              _forGaps
+                  ? 'Top ${shown.length} to close your gaps'
+                  : 'Top ${shown.length} to strengthen your skills',
+              shown.length,
+            ),
+            const SizedBox(height: 14),
+            for (final match in shown) _buildCertCard(match, total),
+            if (recs.total > shown.length)
+              Text(
+                'Showing ${shown.length} of ${recs.total} certifications for your career goal. Choose All to see every one.',
+                style: TextStyle(
+                  color: AppColors.secondaryText,
+                  fontSize: 12.5,
+                  height: 1.5,
+                ),
+              ),
+          ] else ...[
+            if (recs.matched.isNotEmpty) ...[
+              const SizedBox(height: 26),
+              _sectionTitle(
+                _forGaps ? 'Covers your skill gaps' : 'Builds on your skills',
+                recs.matched.length,
+              ),
+              const SizedBox(height: 14),
+              for (final match in recs.matched) _buildCertCard(match, total),
+            ],
+            if (recs.others.isNotEmpty) ...[
+              const SizedBox(height: 26),
+              _sectionTitle('Also for your career goal', recs.others.length),
+              const SizedBox(height: 14),
+              for (final match in recs.others) _buildCertCard(match, total),
+            ],
+          ],
         ],
         if (recs.hiddenOwned > 0) ...[
-          const SizedBox(height: 4),
+          const SizedBox(height: 8),
           Text(
             recs.hiddenOwned == 1
                 ? '1 certification already listed in your CV is hidden.'
@@ -641,7 +783,7 @@ class _CertificationsScreenState extends State<CertificationsScreen>
           child: _buildNextCard(
             title: 'Fresh with every analysis',
             text:
-                'Replace your CV and run a new analysis to get updated certification matches.',
+                'Replace your CV or change your career goal and run a new analysis to get updated certification matches.',
           ),
         ),
       ],
@@ -689,7 +831,7 @@ class _CertificationsScreenState extends State<CertificationsScreen>
           ),
           const SizedBox(height: 16),
           Text(
-            'Your skill gaps',
+            _forGaps ? 'Your skill gaps' : 'Your current skills',
             style: TextStyle(
               color: AppColors.navyText,
               fontSize: 13,
@@ -697,9 +839,11 @@ class _CertificationsScreenState extends State<CertificationsScreen>
             ),
           ),
           const SizedBox(height: 10),
-          if (recs.skillGaps.isEmpty)
+          if (recs.targetSkills.isEmpty)
             Text(
-              'No skill gaps were found in your latest analysis.',
+              _forGaps
+                  ? 'No skill gaps were found in your latest analysis.'
+                  : 'No skills were found in your latest analysis.',
               style: TextStyle(
                 color: AppColors.secondaryText,
                 fontSize: 12.5,
@@ -710,8 +854,13 @@ class _CertificationsScreenState extends State<CertificationsScreen>
               spacing: 8,
               runSpacing: 8,
               children: [
-                for (final gap in recs.skillGaps)
-                  _chip(gap, icon: Icons.trending_up_rounded),
+                for (final skill in recs.targetSkills)
+                  _chip(
+                    skill,
+                    icon: _forGaps
+                        ? Icons.trending_up_rounded
+                        : Icons.check_circle_outline_rounded,
+                  ),
               ],
             ),
         ],
@@ -719,9 +868,9 @@ class _CertificationsScreenState extends State<CertificationsScreen>
     );
   }
 
-  Widget _buildCertCard(CertificationMatch match, int totalGaps) {
+  Widget _buildCertCard(CertificationMatch match, int totalTargets) {
     final cert = match.certification;
-    final covers = match.gapCount > 0;
+    final covers = match.matchCount > 0;
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -810,7 +959,9 @@ class _CertificationsScreenState extends State<CertificationsScreen>
                   Row(
                     children: [
                       Text(
-                        '${match.gapCount} of $totalGaps gaps covered',
+                        _forGaps
+                            ? '${match.matchCount} of $totalTargets gaps covered'
+                            : 'Uses ${match.matchCount} of your $totalTargets skills',
                         style: TextStyle(
                           color: AppColors.tealText,
                           fontSize: 12,
@@ -822,9 +973,9 @@ class _CertificationsScreenState extends State<CertificationsScreen>
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(4),
                           child: LinearProgressIndicator(
-                            value: totalGaps == 0
+                            value: totalTargets == 0
                                 ? 0
-                                : match.gapCount / totalGaps,
+                                : match.matchCount / totalTargets,
                             minHeight: 6,
                             backgroundColor: AppColors.lightGray,
                             valueColor: AlwaysStoppedAnimation<Color>(
@@ -879,14 +1030,18 @@ class _CertificationsScreenState extends State<CertificationsScreen>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                if (match.gapCount > 0)
+                if (match.matchCount > 0)
                   Text.rich(
                     TextSpan(
                       style: baseStyle,
                       children: [
-                        const TextSpan(text: 'Covers your gaps: '),
                         TextSpan(
-                          text: match.matchedGaps.join(', '),
+                          text: _forGaps
+                              ? 'Covers your gaps: '
+                              : 'Builds on your skills: ',
+                        ),
+                        TextSpan(
+                          text: match.matchedSkills.join(', '),
                           style: boldStyle,
                         ),
                       ],
@@ -900,7 +1055,9 @@ class _CertificationsScreenState extends State<CertificationsScreen>
                 if (match.levelFits) ...[
                   const SizedBox(height: 4),
                   Text(
-                    'Fits your experience level.',
+                    _forGaps
+                        ? 'Fits your experience level.'
+                        : 'A good next step for your level.',
                     style: baseStyle,
                   ),
                 ],
@@ -912,33 +1069,7 @@ class _CertificationsScreenState extends State<CertificationsScreen>
     );
   }
 
-  Widget _buildShowMore({
-    required int remaining,
-    required VoidCallback onTap,
-  }) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: double.infinity,
-        height: 54,
-        margin: const EdgeInsets.only(bottom: 4),
-        decoration: BoxDecoration(
-          color: AppColors.softBackground,
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: AppColors.lightGray),
-        ),
-        alignment: Alignment.center,
-        child: Text(
-          'Show more ($remaining)',
-          style: TextStyle(
-            color: AppColors.navyText,
-            fontSize: 15,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
-    );
-  }
+
 
   // ---------------------------------------------------------
   // SMALL PIECES (same look as the AI Career Analysis screen)
@@ -1354,28 +1485,33 @@ class _CertificationsScreenState extends State<CertificationsScreen>
     );
   }
 
+  Color get _errorText =>
+      AppColors.isDark ? const Color(0xFFFF9A9A) : const Color(0xFFB84545);
+
   Widget _buildErrorBox(String message) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: const Color(0xFFFFEEEE),
+        color: AppColors.isDark
+            ? const Color(0xFF3A1F24)
+            : const Color(0xFFFFEEEE),
         borderRadius: BorderRadius.circular(14),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(
+          Icon(
             Icons.error_outline_rounded,
-            color: Color(0xFFB84545),
+            color: _errorText,
             size: 20,
           ),
           const SizedBox(width: 10),
           Expanded(
             child: Text(
               message,
-              style: const TextStyle(
-                color: Color(0xFFB84545),
+              style: TextStyle(
+                color: _errorText,
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
               ),

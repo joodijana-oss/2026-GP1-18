@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../services/user_service.dart';
 import '../services/certification_service.dart';
-// If this import is red, change the path to where the recommender file is.
 import '../services/content_based_recommender.dart';
 
 import 'profile_screen.dart';
@@ -15,7 +14,6 @@ import '../features/mock_interview/mock_interview_screen.dart';
 import '../features/cv_improvement/cv_improvement_screen.dart';
 import '../features/job_match/job_match_screen.dart';
 import '../features/certifications/certifications_screen.dart';
-// If this import is red, change it to the details screen's file name.
 import '../features/certifications/certification_details_screen.dart';
 import '../features/heatmap/heatmap_screen.dart';
 
@@ -56,6 +54,9 @@ class _HomeScreenState extends State<HomeScreen>
   // false = no AI Career Analysis for the current CV yet
   bool _hasAnalysis = false;
 
+  // true = loading the recommendations failed (offline, Firestore error)
+  bool _recommendationsError = false;
+
   // How many certifications Home shows (the rest are in "See all")
   static const int _maxHomeRecommendations = 3;
 
@@ -80,9 +81,8 @@ class _HomeScreenState extends State<HomeScreen>
     _loadRecommendations();
   }
 
-  // Reads the saved certification matches from the latest analysis.
-  // If they were never saved (the user has not opened the Certifications
-  // screen yet), they are calculated here the same way, without saving.
+  // Top certifications for the user's skill gaps (same matching as the
+  // Certifications screen, calculated on the phone).
   Future<void> _loadRecommendations() async {
     try {
       final userService = UserService();
@@ -92,6 +92,7 @@ class _HomeScreenState extends State<HomeScreen>
         if (!mounted) return;
         setState(() {
           _hasAnalysis = false;
+          _recommendationsError = false;
           recommendations = [];
           _recommendationsLoading = false;
         });
@@ -99,33 +100,19 @@ class _HomeScreenState extends State<HomeScreen>
       }
 
       final catalog = await CertificationService().getAll();
-      final byId = {for (final c in catalog) c.id: c};
-      final careerGoalId = analysis['careerGoalId']?.toString() ?? '';
       final careerName = analysis['careerGoalName']?.toString() ?? '';
-      final skillGaps = ContentBasedRecommender.skillGapsOf(analysis);
-
-      var result = CertificationRecommendations.fromSaved(
-        analysis['certificationMatches'],
-        byId: byId,
-        careerGoalId: careerGoalId,
-        skillGaps: skillGaps,
+      final user = await userService.getUser();
+      final result = const ContentBasedRecommender().recommendCertifications(
+        analysis: analysis,
+        certifications: catalog,
+        experienceLevel: user?['experienceLevel']?.toString(),
       );
 
-      if (result == null) {
-        final user = await userService.getUser();
-        result = const ContentBasedRecommender().recommendCertifications(
-          analysis: analysis,
-          certifications: catalog,
-          experienceLevel: user?['experienceLevel']?.toString(),
-        );
-      }
-
       // Certifications that close gaps first, then the ones for the goal
-      final matches = [...result.forGaps, ...result.forGoal]
-          .take(_maxHomeRecommendations);
+      final matches = result.top(_maxHomeRecommendations);
 
       final items = matches.map((m) {
-        final gaps = m.matchedGaps;
+        final gaps = m.matchedSkills;
         return RecommendationItem(
           type: 'Certification',
           title: m.certification.name,
@@ -137,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen>
           // Tapping the card opens this certification's details
           destination: (_) => CertificationDetailsScreen(
             certification: m.certification,
-            matchedGaps: gaps,
+            matchedSkills: gaps,
             levelFits: m.levelFits,
             careerName: careerName,
           ),
@@ -147,6 +134,7 @@ class _HomeScreenState extends State<HomeScreen>
       if (!mounted) return;
       setState(() {
         _hasAnalysis = true;
+        _recommendationsError = false;
         recommendations = items;
         _recommendationsLoading = false;
       });
@@ -154,7 +142,9 @@ class _HomeScreenState extends State<HomeScreen>
       debugPrint('HOME LOAD RECOMMENDATIONS ERROR: $e');
       if (!mounted) return;
       setState(() {
+        // Offline or a read failed: do not ask an analyzed user to analyze
         recommendations = [];
+        _recommendationsError = true;
         _recommendationsLoading = false;
       });
     }
@@ -535,58 +525,6 @@ class _HomeScreenState extends State<HomeScreen>
     );
   }
 
-  Widget _topIconButton({
-    required IconData icon,
-    required VoidCallback onTap,
-    bool showDot = false,
-  }) {
-    return Stack(
-      clipBehavior: Clip.none,
-      children: [
-        InkWell(
-          onTap: onTap,
-          borderRadius: BorderRadius.circular(16),
-          child: Container(
-            width: 46,
-            height: 46,
-            decoration: BoxDecoration(
-              color: AppColors.softBackground,
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(
-                color: AppColors.lightGray,
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: AppColors.navy.withValues(alpha: 0.05),
-                  blurRadius: 12,
-                  offset: const Offset(0, 5),
-                ),
-              ],
-            ),
-            child: Icon(
-              icon,
-              color: AppColors.navyText,
-              size: 23,
-            ),
-          ),
-        ),
-
-        if (showDot)
-          Positioned(
-            top: 7,
-            right: 7,
-            child: Container(
-              width: 8,
-              height: 8,
-              decoration: BoxDecoration(
-                color: AppColors.gold,
-                shape: BoxShape.circle,
-              ),
-            ),
-          ),
-      ],
-    );
-  }
 
   // ============================================================
   // CAREER READINESS
@@ -982,6 +920,16 @@ class _HomeScreenState extends State<HomeScreen>
           _recommendationsMessage(
             icon: Icons.hourglass_empty_rounded,
             text: 'Loading your recommendations...',
+          )
+        else if (_recommendationsError)
+          _recommendationsMessage(
+            icon: Icons.wifi_off_rounded,
+            text: 'Could not load your recommendations. Check your connection.',
+            buttonLabel: 'Try Again',
+            onPressed: () {
+              setState(() => _recommendationsLoading = true);
+              _loadRecommendations();
+            },
           )
         else if (!_hasAnalysis)
           _recommendationsMessage(

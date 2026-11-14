@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../constants/profile_options.dart';
 import '../../models/certification.dart';
+import '../../services/content_based_recommender.dart';
 import '../../theme/app_colors.dart';
 import '../../utils/skill_matcher.dart';
 
@@ -10,10 +12,14 @@ import '../../utils/skill_matcher.dart';
 class CertificationDetailsScreen extends StatefulWidget {
   final Certification certification;
 
-  /// The user's skill gaps that this certification covers (can be empty).
-  final List<String> matchedGaps;
+  /// The user's skills this certification works on (can be empty): skill
+  /// gaps it covers, or current skills it builds on, depending on [goal].
+  final List<String> matchedSkills;
 
-  /// True when the certification level fits the user's experience level.
+  /// What the user chose: close skill gaps or strengthen current skills.
+  final CertificationGoal goal;
+
+  /// True when the certification level suits the user for this goal.
   final bool levelFits;
 
   /// The user's career goal name (for the "Why it fits you" list).
@@ -22,7 +28,8 @@ class CertificationDetailsScreen extends StatefulWidget {
   const CertificationDetailsScreen({
     super.key,
     required this.certification,
-    required this.matchedGaps,
+    required this.matchedSkills,
+    this.goal = CertificationGoal.closeGaps,
     required this.levelFits,
     required this.careerName,
   });
@@ -35,6 +42,7 @@ class CertificationDetailsScreen extends StatefulWidget {
 class _CertificationDetailsScreenState
     extends State<CertificationDetailsScreen> {
   Certification get _cert => widget.certification;
+  bool get _forGaps => widget.goal == CertificationGoal.closeGaps;
 
   Future<void> _openOfficialSource() async {
     final uri = Uri.tryParse(_cert.officialUrl.trim());
@@ -80,6 +88,10 @@ class _CertificationDetailsScreenState
               const SizedBox(height: 16),
               _entrance(delay: 150, child: _buildSkillsCard()),
               const SizedBox(height: 16),
+              if (_cert.careerPaths.isNotEmpty) ...[
+                _entrance(delay: 180, child: _buildCareersCard()),
+                const SizedBox(height: 16),
+              ],
               _entrance(delay: 210, child: _buildWhyCard()),
               const SizedBox(height: 16),
               _entrance(delay: 270, child: _buildFactsCard()),
@@ -305,9 +317,11 @@ class _CertificationDetailsScreenState
     return _sectionCard(
       icon: Icons.trending_up_rounded,
       title: 'Skills Covered',
-      subtitle: widget.matchedGaps.isEmpty
+      subtitle: widget.matchedSkills.isEmpty
           ? null
-          : 'Highlighted skills cover your gaps',
+          : (_forGaps
+              ? 'Highlighted skills cover your gaps'
+              : 'Highlighted skills build on what you know'),
       child: Wrap(
         spacing: 8,
         runSpacing: 8,
@@ -318,10 +332,26 @@ class _CertificationDetailsScreenState
     );
   }
 
-  Widget _skillChip(String skill) {
-    final covers = widget.matchedGaps.any(
-      (gap) => SkillMatcher.matches(gap, skill),
+  /// The career paths (fields) this certification is useful for.
+  Widget _buildCareersCard() {
+    final names = [
+      for (final id in _cert.careerPaths) ProfileOptions.careerGoals[id] ?? id,
+    ];
+    return _sectionCard(
+      icon: Icons.work_outline_rounded,
+      title: 'Related Careers',
+      subtitle: 'Fields where this certification is valued',
+      child: Wrap(
+        spacing: 8,
+        runSpacing: 8,
+        children: [for (final name in names) _skillChip(name, plain: true)],
+      ),
     );
+  }
+
+  Widget _skillChip(String skill, {bool plain = false}) {
+    final covers = !plain &&
+        widget.matchedSkills.any((mine) => SkillMatcher.matches(mine, skill));
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
@@ -358,12 +388,20 @@ class _CertificationDetailsScreenState
   }
 
   Widget _buildWhyCard() {
+    final skills = widget.matchedSkills.join(', ');
+    final career = widget.careerName.trim();
     final reasons = <String>[
-      if (widget.matchedGaps.isNotEmpty)
-        'Covers your skill gaps in ${widget.matchedGaps.join(', ')}.',
+      if (widget.matchedSkills.isNotEmpty)
+        _forGaps
+            ? 'Covers your skill gaps in $skills.'
+            : 'Builds on your skills in $skills.',
       if (widget.levelFits)
-        'Its ${_cert.level} level fits your experience.',
-      'Relevant to your ${widget.careerName} career goal.',
+        _forGaps
+            ? 'Its ${_cert.level} level fits your experience.'
+            : 'Its ${_cert.level} level is a good next step for you.',
+      career.isEmpty
+          ? 'Relevant to your career goal.'
+          : 'Relevant to your $career career goal.',
     ];
 
     return _sectionCard(
@@ -581,7 +619,7 @@ class _CertificationDetailsScreenState
                   ],
                 ),
               ),
-              if (trailing != null) trailing,
+              ?trailing,
             ],
           ),
           const SizedBox(height: 16),
