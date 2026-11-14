@@ -11,6 +11,10 @@ class ClaudeService {
  
   static const String _model =
       'claude-sonnet-5';
+
+  // A stalled connection would otherwise leave the loading screen forever.
+  // The CV review thinks before answering, so the limit is generous.
+  static const Duration _requestTimeout = Duration(seconds: 120);
  
   // =========================================================
   // 1) ANALYZE USER CV
@@ -668,7 +672,7 @@ Return EXACTLY this JSON structure:
           },
         ],
       }),
-    );
+    ).timeout(_requestTimeout);
  
     if (response.statusCode < 200 ||
         response.statusCode >= 300) {

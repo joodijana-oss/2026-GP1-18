@@ -533,13 +533,7 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen>
 
         selectedCvName == null) {
 
-      showMessage(
-
-        'Please upload your CV as a PDF file.',
-
-        isError: true,
-
-      );
+      setState(() => cvError = 'This field is required.');
 
       return;
 
@@ -3082,6 +3076,8 @@ SizedBox(
         const SizedBox(height: 9),
 
         DropdownButtonFormField<String>(
+          // Clears "This field is required." as soon as a value is chosen
+          autovalidateMode: AutovalidateMode.onUserInteraction,
 
           initialValue: value,
 
@@ -3267,31 +3263,9 @@ SizedBox(
 
         currentStep == 2;
 
-    final canFinish =
-
-        selectedCvBytes != null &&
-
-        selectedCvName != null;
-
-    // Next stays disabled until every choice on the step is made
-    final isStepComplete = switch (currentStep) {
-      0 => selectedUniversity != null &&
-          selectedDegree != null &&
-          selectedMajor != null,
-      1 => selectedGraduationStatus != null &&
-          selectedGraduationDate != null &&
-          selectedCareerGoalId != null &&
-          selectedExperienceLevel != null,
-      _ => canFinish,
-    };
-
-    final isDisabled =
-
-        isSaving ||
-
-        isPickingCv ||
-
-        !isStepComplete;
+// The button stays enabled on an incomplete step: tapping it shows
+    // "This field is required." under every field that is still empty.
+    final isDisabled = isSaving || isPickingCv;
 
     return Container(
 

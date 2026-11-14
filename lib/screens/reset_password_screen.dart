@@ -88,10 +88,16 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
         requiredMessage: 'Please confirm your new password.',
       );
 
-  // Reset Password stays disabled until both fields are valid
-  bool get _isFormValid =>
-      PasswordValidator.validate(passwordController.text) == null &&
-      _confirmError(confirmPasswordController.text) == null;
+  // The checklist under the field lists the rules, so the field itself
+  // only says what is wrong in one short line.
+  String? _newPasswordError(String? value) {
+    if (value == null || value.isEmpty) return 'New password is required.';
+    // (the checklist is already visible: it appears once the user types)
+    if (PasswordValidator.validate(value) != null) {
+      return 'Your password must meet all the rules below.';
+    }
+    return null;
+  }
 
   @override
   void dispose() {
@@ -120,6 +126,11 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
       if (e.code == 'network-request-failed') {
         setState(() => _linkState = _LinkState.error);
         _showMessage('No internet connection. Please try again.',
+            isError: true);
+      } else if (e.code == 'too-many-requests') {
+        // The link may be fine: let the user try again later
+        setState(() => _linkState = _LinkState.error);
+        _showMessage('Too many attempts. Please try again later.',
             isError: true);
       } else {
         // expired-action-code, invalid-action-code, user-disabled,
@@ -185,6 +196,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
         'network-request-failed' =>
           'No internet connection. Please try again.',
         'too-many-requests' => 'Too many attempts. Please try again later.',
+        'user-disabled' =>
+          'This account has been disabled. Please contact support.',
         _ => 'Something went wrong. Please try again.',
       };
       _showMessage(message, isError: true);
@@ -648,10 +661,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
             // The checklist below shows the rules live instead of
             // a long error text; only submit uses the full validator
             liveValidation: false,
-            validator: (value) => PasswordValidator.validate(
-              value,
-              requiredMessage: 'New password is required.',
-            ),
+            validator: _newPasswordError,
           ),
 
           if (_passwordTouched) ...[
@@ -693,7 +703,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
           _buildMainButton(
             text: 'Reset Password',
             icon: Icons.check_rounded,
-            onPressed: _isFormValid ? _resetPassword : null,
+            // Always tappable: empty or invalid fields show their message
+            onPressed: _resetPassword,
             loading: _loading,
           ),
         ],
