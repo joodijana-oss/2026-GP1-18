@@ -10,6 +10,10 @@
 ///     certification skill name it belongs to (Databases and SQL).
 ///  3. [matches] compares two names: equal after step 2, or one name
 ///     contains all the words of the other (two words or more).
+///  4. A specific product or technology (React, Node.js, Tableau, Django
+///     ...) only counts when the certification itself mentions it. Knowing
+///     that a certification teaches "JavaScript" is not enough to say it
+///     covers a "Node.js" gap.
 class SkillMatcher {
   SkillMatcher._();
 
@@ -45,20 +49,90 @@ class SkillMatcher {
 
   /// The entries of [wanted] (for example the user's skill gaps) that are
   /// covered by at least one entry of [available] (the certification skills).
+  /// [evidence] is the certification's own text (name, description, skills):
+  /// specific technologies must appear there, and multi-word names found
+  /// there count as covered too.
   /// The original spelling of [wanted] is kept; each entry appears once.
   static List<String> matchedSkills(
     List<String> wanted,
-    List<String> available,
-  ) {
+    List<String> available, {
+    String evidence = '',
+  }) {
+    final text = ' ${normalize(evidence)} ';
     final result = <String>[];
     for (final item in wanted) {
       if (result.contains(item)) continue;
-      if (available.any((skill) => matches(item, skill))) {
-        result.add(item);
+      final key = normalize(item);
+      if (key.isEmpty) continue;
+      final bool covered;
+      if (_specific.contains(key)) {
+        covered = _mentions(text, key) ||
+            available.any((skill) => normalize(skill) == key);
+      } else {
+        covered = available.any((skill) => matches(item, skill)) ||
+            (_tokens(key).length >= 2 && _mentions(text, key));
       }
+      if (covered) result.add(item);
     }
     return result;
   }
+
+  /// True when the padded, normalized [text] contains [key] as whole words
+  /// (also "nodejs" / "node" for "node js").
+  static bool _mentions(String text, String key) {
+    final variants = <String>{key, key.replaceAll(' ', '')};
+    // "react js", "reactjs" and "react" name the same thing
+    final base = key.endsWith(' js')
+        ? key.substring(0, key.length - 3)
+        : (key.endsWith('js') && !key.contains(' ')
+            ? key.substring(0, key.length - 2)
+            : null);
+    if (base != null && base.isNotEmpty) {
+      variants.add('$base js');
+      if (base.length >= 4) variants.add(base);
+    }
+    return variants.any((v) => v.isNotEmpty && text.contains(' $v '));
+  }
+
+  /// Products, frameworks and tools: they belong to a broader skill (Node.js
+  /// is JavaScript, Tableau is Data Visualization), but a certification on
+  /// the broader skill does not necessarily teach them.
+  static final Set<String> _specific = {
+    for (final name in const [
+      'MySQL', 'PostgreSQL', 'Postgres', 'T-SQL', 'PL/SQL', 'SQL Server',
+      'Microsoft SQL Server', 'Oracle SQL', 'Oracle Database', 'SQLite',
+      'Tableau', 'Looker', 'Qlik', 'QlikView', 'Qlik Sense',
+      'Scikit-learn', 'Sklearn', 'TensorFlow', 'PyTorch', 'Keras', 'ChatGPT',
+      'Pandas', 'NumPy',
+      'Node.js', 'NodeJS', 'TypeScript',
+      'React', 'React.js', 'ReactJS', 'Angular', 'Vue', 'Vue.js', 'VueJS',
+      'Next.js', 'Tailwind CSS', 'Bootstrap',
+      'Express', 'Express.js', 'Django', 'Flask', 'Spring Boot', 'Laravel',
+      'ASP.NET', '.NET', 'GraphQL',
+      'GCP', 'Google Cloud', 'Google Cloud Platform',
+      'Podman', 'EKS', 'AKS', 'GKE',
+      'Terraform', 'Ansible', 'CloudFormation', 'Bicep', 'Pulumi', 'Puppet',
+      'Chef', 'Jenkins', 'GitHub Actions', 'GitLab CI',
+      'Red Hat', 'RHEL', 'Ubuntu', 'CentOS', 'PowerShell', 'Bash',
+      'Cisco', 'Cisco IOS', 'OSPF', 'BGP', 'CCNA', 'Palo Alto', 'Fortinet',
+      'Splunk', 'Microsoft Sentinel', 'QRadar',
+      'Burp Suite', 'Metasploit', 'Nessus', 'Kali Linux', 'CEH',
+      'Selenium', 'Cypress', 'Playwright', 'Appium',
+      'Java', 'C++', 'C#', 'C', 'Kotlin', 'Swift', 'Golang', 'Rust', 'PHP',
+      'Ruby',
+      'Android', 'iOS', 'Flutter', 'React Native', 'SwiftUI',
+      'Jetpack Compose',
+      'Figma', 'Adobe XD', 'Sketch',
+      'Hadoop', 'BigQuery', 'Snowflake', 'Redshift',
+      'Talend', 'Informatica', 'SSIS', 'Airflow', 'Apache Airflow', 'dbt',
+      'Kafka', 'Apache Kafka',
+      'VMware', 'Hyper-V', 'vSphere', 'KVM', 'ESXi',
+      'Active Directory', 'AD DS', 'Group Policy', 'NetApp',
+      'Exchange Online', 'SharePoint', 'Microsoft Teams', 'Intune',
+      'SAP FICO', 'SAP MM', 'SAP SD', 'SAP ABAP', 'ABAP', 'SAP Basis',
+    ])
+      normalize(name),
+  };
 
   // ---------------------------------------------------------
   // INTERNALS
@@ -322,7 +396,6 @@ class SkillMatcher {
       'Shell Scripting',
       'Bash Scripting',
       'Automation Scripting',
-      'Automation',
     ],
     'Networking Fundamentals': [
       'Networking',
@@ -395,9 +468,11 @@ class SkillMatcher {
       'IT Security',
       'Security Controls',
       'Security Awareness',
+      'Data Security',
     ],
     'Security Operations': [
       'SOC',
+      'Security Information and Event Management',
       'Security Operations Center',
       'SIEM',
       'Splunk',
@@ -664,7 +739,6 @@ class SkillMatcher {
     'Database Security': [
       'DB Security',
       'Database Protection',
-      'Data Security',
       'Database Auditing',
     ],
     'Backup and Recovery': [
@@ -757,7 +831,6 @@ class SkillMatcher {
       'Technical Troubleshooting',
       'Debugging',
       'Diagnostics',
-      'Problem Solving',
       'Root Cause Analysis',
       'Fault Finding',
       'Issue Resolution',

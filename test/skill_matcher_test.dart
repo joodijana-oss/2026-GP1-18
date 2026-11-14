@@ -79,6 +79,53 @@ void main() {
       expect(result, ['SQL', 'Docker']);
     });
 
+    test('a specific technology needs the certification to mention it', () {
+      // "JavaScript" on the certification is not enough for a Node.js gap
+      expect(
+        SkillMatcher.matchedSkills(['Node.js', 'TypeScript'], ['JavaScript']),
+        isEmpty,
+      );
+      expect(
+        SkillMatcher.matchedSkills(
+          ['Node.js', 'TypeScript', 'Tableau'],
+          ['JavaScript'],
+          evidence: 'Build APIs with Node.js and Express.',
+        ),
+        ['Node.js'],
+      );
+      expect(
+        SkillMatcher.matchedSkills(['NodeJS'], [], evidence: 'Node.js apps'),
+        ['NodeJS'],
+      );
+    });
+
+    test('a multi-word gap written in the certification text counts', () {
+      expect(
+        SkillMatcher.matchedSkills(['Data Governance'], ['Data Analysis'],
+            evidence: 'Covers data governance and data quality.'),
+        ['Data Governance'],
+      );
+    });
+
+    test('vague words do not create matches', () {
+      expect(SkillMatcher.matchedSkills(['Automation'], ['Scripting']),
+          isEmpty);
+      expect(SkillMatcher.matchedSkills(['Problem Solving'], ['Troubleshooting']),
+          isEmpty);
+      expect(
+        SkillMatcher.matchedSkills(
+            ['Security Information and Event Management'],
+            ['Information Security']),
+        isEmpty,
+      );
+      expect(
+        SkillMatcher.matchedSkills(
+            ['Security Information and Event Management'],
+            ['Security Operations']),
+        ['Security Information and Event Management'],
+      );
+    });
+
     test('returns an empty list when nothing matches', () {
       expect(
         SkillMatcher.matchedSkills(['Photoshop'], ['Python', 'Linux']),
