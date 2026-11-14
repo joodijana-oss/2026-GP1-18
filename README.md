@@ -77,6 +77,8 @@ flutter pub get
 3. Place the file in `android/app/`.
 4. Enable **Email/Password** sign-in in Firebase Authentication.
 5. Create a Cloud Firestore database.
+6. In **Authentication → Settings → Password policy**, require at least 8 characters with an uppercase letter, a lowercase letter, a number and a special character, so Firebase enforces the same rules as the app.
+7. Password reset links open the app only when your signing key is listed in `hosting/public/.well-known/assetlinks.json`. Get your SHA-256 with `cd android && ./gradlew signingReport`, add it to `sha256_cert_fingerprints`, then deploy with `firebase deploy --only hosting`.
 
 ### 4. Run the app with the Claude API key
 
