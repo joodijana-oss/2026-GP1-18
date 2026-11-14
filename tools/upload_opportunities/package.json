@@ -1,0 +1,12 @@
+{
+  "name": "masra-upload-opportunities",
+  "private": true,
+  "description": "Uploads lib/assets/data/Masra_Opportunities.json to the Firestore 'opportunities' collection.",
+  "scripts": {
+    "dry-run": "node upload_opportunities.js --dry-run",
+    "upload": "node upload_opportunities.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.6.0"
+  }
+}

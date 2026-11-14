@@ -54,6 +54,7 @@ app.*.map.json
 
 # Firestore upload tool: dependencies and secret service-account keys
 tools/upload_certifications/node_modules/
+tools/upload_opportunities/node_modules/
 *service-account*.json
 *serviceAccount*.json
 *-firebase-adminsdk-*.json
