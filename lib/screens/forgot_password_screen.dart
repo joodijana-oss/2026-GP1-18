@@ -3,6 +3,7 @@ import 'package:masra/services/password_reset_email_service.dart';
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../utils/validators.dart';
+import 'login_screen.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});
@@ -23,15 +24,22 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
   late AnimationController _backgroundController;
   late Animation<double> _backgroundAnimation;
 
-  // Send stays disabled until the email is valid
-  bool get _isFormValid => Validators.email(emailController.text) == null;
+  // Back / Back to Log In: if this screen was opened on its own, go to
+  // Log In instead of popping to an empty (black) screen.
+  void _leave() {
+    if (Navigator.canPop(context)) {
+      Navigator.pop(context);
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
+      );
+    }
+  }
 
   @override
   void initState() {
     super.initState();
-
-    // Refresh the button state on every keystroke
-    emailController.addListener(() => setState(() {}));
 
     _backgroundController = AnimationController(
       vsync: this,
@@ -295,9 +303,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                             ),
                             child: IconButton(
                               tooltip: 'Back',
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
+                              onPressed: _leave,
                               icon: const Icon(
                                 Icons.arrow_back_rounded,
                                 color: AppColors.onBrand,
@@ -392,11 +398,12 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
 
                           // =========================
                           // SEND BUTTON
-                          // Dimmed and disabled until the email is valid
+                          // Always tappable: an empty or invalid email shows
+                          // its message under the field instead.
                           // =========================
                           AnimatedOpacity(
                             duration: const Duration(milliseconds: 200),
-                            opacity: _isFormValid || _loading ? 1 : 0.5,
+                            opacity: 1,
                             child: Container(
                             width: double.infinity,
                             height: 60,
@@ -424,9 +431,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                               ],
                             ),
                             child: ElevatedButton(
-                              onPressed: _loading || !_isFormValid
-                                  ? null
-                                  : sendResetLink,
+                              onPressed: _loading ? null : sendResetLink,
                               style:
                                   ElevatedButton.styleFrom(
                                 backgroundColor:
@@ -523,9 +528,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                             width: double.infinity,
                             height: 55,
                             child: OutlinedButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
+                              onPressed: _leave,
                               style:
                                   OutlinedButton.styleFrom(
                                 foregroundColor:
