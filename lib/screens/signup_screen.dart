@@ -110,12 +110,24 @@ class _SignupScreenState extends State<SignupScreen>
   String? _confirmError(String? value) =>
       Validators.confirmPassword(value, passwordController.text);
 
-  bool get _isFormValid =>
-      _nameError(nameController.text) == null &&
-      _emailError(emailController.text) == null &&
-      PasswordValidator.validate(passwordController.text) == null &&
-      _confirmError(confirmPasswordController.text) == null;
+  // The checklist under the field lists the rules, so the field itself only
+  // says what is wrong in one short line.
+  String? _passwordError(String? value) {
+    if (value == null || value.isEmpty) return 'Password is required.';
+    if (PasswordValidator.validate(value) != null) {
+      return 'Your password must meet all the rules below.';
+    }
+    return null;
+  }
+
 Future<void> createAccount() async {
+  if (_loading) return; // a second tap in the same frame
+  // Show the message under every empty or invalid field, even untouched ones
+  setState(() {
+    _nameTouched = true;
+    _emailTouched = true;
+    _confirmTouched = true;
+  });
   if (!_formKey.currentState!.validate()) return;
 
   setState(() => _loading = true);
@@ -520,8 +532,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                                 size: 21,
                               ),
                             ),
-                            validator: (value) =>
-                                PasswordValidator.validate(value),
+                            validator: _passwordError,
                           ),
 
                           // Live rules checklist, shown once typing starts
@@ -577,10 +588,11 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                           // =================================================
                           // CREATE ACCOUNT BUTTON
                           // =================================================
-                          // Dimmed and disabled until every field is valid
+                          // Always tappable: empty or invalid fields show
+                          // their message under the field instead.
                           AnimatedOpacity(
                             duration: const Duration(milliseconds: 200),
-                            opacity: _isFormValid || _loading ? 1 : 0.5,
+                            opacity: 1,
                             child: Container(
                             width: double.infinity,
                             height: 60,
@@ -604,7 +616,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                               ],
                             ),
                             child: ElevatedButton(
-  onPressed: _loading || !_isFormValid ? null : createAccount,
+  onPressed: _loading ? null : createAccount,
   style: ElevatedButton.styleFrom(
     backgroundColor: Colors.transparent,
     disabledBackgroundColor: Colors.transparent,
