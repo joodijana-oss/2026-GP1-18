@@ -13,7 +13,7 @@ Masra analyzes a user's CV against real Saudi job market data, identifies skill 
 - **User registration and profile:** sign up, log in, log out, password reset, and profile management.
 - **AI Career Analysis:** extracts strengths, current skills, education, certifications, projects, and experience from the uploaded CV, compares them with skills requested in Saudi job postings, and identifies skill gaps.
 - **CV Improvement Assistant:** reviews the CV in five ATS areas (structure, section organization, keyword usage, readability, and content formatting) and gives suggestions.
-- **Certification and Opportunity Recommender:** recommends certifications and opportunities that match the user's skill gaps and career goal.
+- **Certification and Opportunity Recommender:** recommends certifications and opportunities that match the user's skill gaps, career goal, and experience level, and shows why each one fits. Opportunities are ranked with a weighted keyword search (BM25F), and each skill gap is weighted by how often Saudi job postings ask for it.
 
 ---
 
@@ -33,24 +33,44 @@ Masra analyzes a user's CV against real Saudi job market data, identifies skill 
 
 ```
 2026-GP1-18/
-├── lib/                 # Flutter application source code
-│   ├── screens/         # UI screens
-│   ├── services/        # Firebase and Claude API services
-│   └── models/          # Data models
-├── assets/              # Images and bundled data files
-├── android/             # Android platform files
-└── pubspec.yaml         # Flutter dependencies
+├── lib/
+│   ├── main.dart                 # App entry point
+│   ├── config/                   # App settings (admin account)
+│   ├── constants/                # Profile options (universities, degrees, career goals)
+│   ├── features/                 # Feature screens (career analysis, CV improvement,
+│   │                             #   certifications, opportunities, ...)
+│   ├── screens/                  # Onboarding, sign-up, log-in, home, explore, profile
+│   ├── services/                 # Firebase, AI analysis, and recommender services
+│   ├── models/                   # Data models
+│   ├── utils/                    # Validators and skill matching
+│   ├── widgets/                  # Shared widgets
+│   ├── theme/                    # Colors, text styles, and light/dark themes
+│   └── assets/
+│       ├── data/                 # Career paths, job postings, certifications, opportunities
+│       └── images/               # App images
+├── test/                         # Unit tests and evaluation test users (fixtures/)
+├── tools/
+│   ├── recommender_eval/         # Offline evaluation of the opportunity recommender
+│   ├── upload_certifications/    # Uploads the certifications CSV to Firestore
+│   ├── upload_opportunities/     # Uploads the opportunities JSON to Firestore
+│   └── welcome_email/            # Email service (Google Apps Script)
+├── functions/                    # Firebase Cloud Functions (empty for now)
+├── hosting/                      # Firebase Hosting (Android App Links file)
+├── android/ ios/ web/            # Platform files
+├── windows/ macos/ linux/        # Platform files
+├── firebase.json                 # Firebase configuration
+├── .env.example                  # Template for your local .env file
+└── pubspec.yaml                  # Flutter dependencies and assets
 ```
-
-> Update this tree to match the actual folders in the repository.
 
 ---
 
 ## Prerequisites
 
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) [version]
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (stable channel) with Dart 3.13.2 or later, as `pubspec.yaml` requires. The app is developed with Flutter 3.47.5.
 - Android Studio with an Android emulator, or a physical Android device
 - A Firebase project
+- [Node.js](https://nodejs.org/), only to upload data to Firestore
 - A Claude API key from the [Anthropic Console](https://console.anthropic.com/)
 
 ---
@@ -77,8 +97,8 @@ flutter pub get
 3. Place the file in `android/app/`.
 4. Enable **Email/Password** sign-in in Firebase Authentication.
 5. Create a Cloud Firestore database.
-6. In **Authentication → Settings → Password policy**, require at least 8 characters with an uppercase letter, a lowercase letter, a number and a special character, so Firebase enforces the same rules as the app.
-7. Password reset links open the app only when your signing key is listed in `hosting/public/.well-known/assetlinks.json`. Get your SHA-256 with `cd android && ./gradlew signingReport`, add it to `sha256_cert_fingerprints`, then deploy with `firebase deploy --only hosting`.
+6. In **Authentication → Settings → Password policy**, require at least 8 characters with an uppercase letter, a lowercase letter, a number, and a special character, so Firebase enforces the same rules as the app.
+7. Password reset links open the app only when your signing key is listed in `hosting/public/.well-known/assetlinks.json`. Get your SHA-256 fingerprint with `cd android && ./gradlew signingReport`, add it to `sha256_cert_fingerprints`, then deploy with `firebase deploy --only hosting`.
 
 ### 4. Run the app with the Claude API key
 
@@ -86,7 +106,8 @@ The API key is **not stored in the repository**. It is read from a local `.env` 
 
 1. Copy `.env.example` to `.env`.
 2. Put your key after `ANTHROPIC_API_KEY=`.
-3. Run the app:
+3. Optional: put the web app URL of the email script (`tools/welcome_email/Code.gs`) after `WELCOME_EMAIL_URL=`. The script sends the welcome email and a Masra-designed password reset email. If you leave it empty, no welcome email is sent and Firebase sends its own password reset email.
+4. Run the app:
 
 ```bash
 flutter run --dart-define-from-file=.env
@@ -101,6 +122,40 @@ flutter run --dart-define=ANTHROPIC_API_KEY=your_api_key_here
 ```
 
 > Never commit `.env` or upload it through the GitHub website ("Add files via upload" ignores `.gitignore`).
+
+---
+
+## Tests and Evaluation
+
+Run the static checks and the unit tests:
+
+```bash
+flutter analyze
+flutter test
+```
+
+The opportunity recommender has an offline evaluation. It ranks the bundled opportunities for labelled test users and compares the current recommender with the first version (Precision@5, nDCG@10, and gap coverage):
+
+```bash
+dart run tools/recommender_eval/evaluate_recommender.dart --personas test/fixtures/opportunity_eval_personas_heldout.json
+```
+
+The held-out file has 8 career paths that were not used while the ranking was designed, so report its numbers. Without `--personas`, the script uses the development set. Add `--ablation` to see the effect of each technique, and `--top` to print the first 10 results for each test user.
+
+---
+
+## Upload Data to Firestore (Optional)
+
+The app reads certifications and opportunities from Firestore. If Firestore cannot be reached or has no data yet, it uses the bundled files in `lib/assets/data/`. To upload a new version of the data:
+
+```bash
+cd tools/upload_opportunities
+npm install
+npm run dry-run
+node upload_opportunities.js --key path/to/service-account.json
+```
+
+`tools/upload_certifications` works the same way. Download the service account key from **Firebase Console → Project settings → Service accounts**, and never commit it.
 
 ---
 
