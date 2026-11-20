@@ -68,7 +68,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
       page: LearningRoadmapScreen(),
     ),
     const ExploreFeature(
-      title: 'Professional Certification Recommender',
+      title: 'Certification Recommender',
       description: 'Find the right certifications',
       category: 'DEVELOP YOUR SKILLS',
       icon: Icons.workspace_premium_outlined,

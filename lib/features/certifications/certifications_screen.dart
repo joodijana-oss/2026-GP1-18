@@ -12,7 +12,7 @@ import '../../theme/app_colors.dart';
 import '../career_analysis/career_analysis_screen.dart';
 import 'certification_details_screen.dart';
 
-/// Professional Certification Recommender.
+/// Certification Recommender.
 ///
 /// Flow:
 ///  - no valid AI Career Analysis  -> ask the user to complete it first
@@ -607,7 +607,7 @@ class _CertificationsScreenState extends State<CertificationsScreen>
         _entrance(
           delay: 0,
           child: _buildHero(
-            title: 'Start With Your Career Analysis',
+            title: 'Start With Your AI Career Analysis',
             text:
                 'Certification recommendations are built from your skill gaps and your career goal, so Masra needs your AI Career Analysis results first.',
             badge: 'Based on your career goal',

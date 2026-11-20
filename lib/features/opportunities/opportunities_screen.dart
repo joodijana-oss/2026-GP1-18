@@ -378,7 +378,7 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
         _entrance(
           delay: 0,
           child: _buildHero(
-            title: 'Start With Your Career Analysis',
+            title: 'Start With Your AI Career Analysis',
             text:
                 'Opportunity recommendations are built from your skill gaps and your career goal, so Masra needs your AI Career Analysis results first.',
             badge: 'Based on your career goal',
