@@ -55,6 +55,12 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
   String? _source;
   bool _filtersLoaded = false;
 
+  /// The experience level from the profile (loaded once per visit, and
+  /// again on pull to refresh). Null when unknown.
+  String? _experienceLevel;
+  bool _levelLoaded = false;
+  static const Duration _levelTimeout = Duration(seconds: 4);
+
   /// Ignores the result of an older load when a newer one started.
   int _loadId = 0;
 
@@ -168,13 +174,25 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
         return;
       }
 
+      // The level is read at the same time as the opportunities, not after
+      // them. It never throws (see _loadExperienceLevel), so leaving it
+      // unawaited when getAll fails cannot cause an unhandled error.
+      final levelFuture = _loadExperienceLevel(refresh: forceRefresh);
       final opportunities =
           await _opportunityService.getAll(forceRefresh: forceRefresh);
+      final level = await levelFuture;
+      if (!mounted || loadId != _loadId) return;
+
+      // For a new list (first open, or after a refresh) the search index is
+      // built and the list ranked on a background isolate, so the spinner
+      // (or the pull to refresh animation) keeps moving. Later calls on the
+      // same list reuse that index and rank right away.
       final now = DateTime.now();
-      final recs = _recommender.recommend(
+      final recs = await _recommender.recommendInBackground(
         analysis: analysis,
         opportunities: opportunities,
         now: now,
+        experienceLevel: level,
       );
       if (!mounted || loadId != _loadId) return;
 
@@ -211,6 +229,22 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
   }
 
   Future<void> _refresh() => _load(forceRefresh: true, quiet: true);
+
+  /// The profile experience level, as the certifications screen reads it.
+  /// It only fine-tunes the order (opportunities above the user's level
+  /// rank a little lower), so a failure or a slow network is not an error:
+  /// after [_levelTimeout] the ranking goes on without it. Never throws.
+  Future<String?> _loadExperienceLevel({required bool refresh}) async {
+    if (_levelLoaded && !refresh) return _experienceLevel;
+    try {
+      final user = await _userService.getUser().timeout(_levelTimeout);
+      _experienceLevel = user?['experienceLevel']?.toString();
+      _levelLoaded = true;
+    } catch (e) {
+      debugPrint('OpportunitiesScreen: experience level not loaded: $e');
+    }
+    return _experienceLevel;
+  }
 
   /// Same as the certifications screen: the saved name, or the name of the
   /// career goal id.
@@ -575,35 +609,50 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
           ),
           if (recs.closedHidden > 0) ...[
             const SizedBox(height: 14),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 1),
-                  child: Icon(
-                    Icons.info_outline_rounded,
-                    color: AppColors.secondaryText,
-                    size: 16,
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    recs.closedHidden == 1
-                        ? '1 opportunity with closed registration is hidden.'
-                        : '${recs.closedHidden} opportunities with closed registration are hidden.',
-                    style: TextStyle(
-                      color: AppColors.secondaryText,
-                      fontSize: 12.5,
-                      height: 1.45,
-                    ),
-                  ),
-                ),
-              ],
+            _summaryNote(
+              recs.closedHidden == 1
+                  ? '1 opportunity with closed registration is hidden.'
+                  : '${recs.closedHidden} opportunities with closed registration are hidden.',
+            ),
+          ],
+          // A gap with nothing in the catalogue is named, so it does not
+          // silently disappear from the list.
+          if (recs.uncoveredGaps.isNotEmpty) ...[
+            const SizedBox(height: 10),
+            _summaryNote(
+              'No opportunity in our catalog covers ${recs.uncoveredGaps.join(', ')} yet.',
             ),
           ],
         ],
       ),
+    );
+  }
+
+  /// A small grey note with an info icon, under the summary numbers.
+  Widget _summaryNote(String text) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 1),
+          child: Icon(
+            Icons.info_outline_rounded,
+            color: AppColors.secondaryText,
+            size: 16,
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Text(
+            text,
+            style: TextStyle(
+              color: AppColors.secondaryText,
+              fontSize: 12.5,
+              height: 1.45,
+            ),
+          ),
+        ),
+      ],
     );
   }
 
@@ -1030,8 +1079,9 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
     }
 
     final lines = <Widget>[
+      // Best covered first, so a passing mention falls into "+N more".
       if (match.gapSkills.isNotEmpty)
-        reason('Covers your skill gaps: ', match.gapSkills),
+        reason('Covers your skill gaps: ', match.gapSkillsByCoverage),
       if (match.goalRelated)
         _careerName.isEmpty
             ? Text('Related to your career goal.', style: baseStyle)

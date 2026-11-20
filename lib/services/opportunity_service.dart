@@ -62,8 +62,11 @@ class OpportunityService {
       result = await _loadFromAsset();
     }
 
-    _cache = result;
-    return result;
+    // Read-only: the recommender's search index is built from this list,
+    // so no caller may change it in place.
+    final list = List<Opportunity>.unmodifiable(result);
+    _cache = list;
+    return list;
   }
 
   // ---------------------------------------------------------

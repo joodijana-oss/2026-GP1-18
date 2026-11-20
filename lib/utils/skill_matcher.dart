@@ -21,8 +21,11 @@ class SkillMatcher {
   /// becomes a single space. "CI/CD" -> "ci cd", "T-SQL" -> "t sql".
   static String normalize(String input) {
     final lower = input.toLowerCase().replaceAll('&', ' and ');
-    return lower.replaceAll(RegExp(r'[^a-z0-9]+'), ' ').trim();
+    return lower.replaceAll(_nonWord, ' ').trim();
   }
+
+  /// Built once: [normalize] runs on every title and description.
+  static final RegExp _nonWord = RegExp(r'[^a-z0-9]+');
 
   /// The certification skill name (normalized) that [input] stands for.
   static String canonical(String input) {
@@ -31,9 +34,13 @@ class SkillMatcher {
   }
 
   /// True when the two skill names mean the same thing.
-  static bool matches(String a, String b) {
-    final ca = canonical(a);
-    final cb = canonical(b);
+  static bool matches(String a, String b) =>
+      matchesCanonical(canonical(a), canonical(b));
+
+  /// [matches] for two names that already went through [canonical]. The
+  /// search index uses it to normalize each skill tag once instead of on
+  /// every comparison.
+  static bool matchesCanonical(String ca, String cb) {
     if (ca.isEmpty || cb.isEmpty) return false;
     if (ca == cb) return true;
 
@@ -80,6 +87,18 @@ class SkillMatcher {
   /// True when the padded, normalized [text] contains [key] as whole words
   /// (also "nodejs" / "node" for "node js").
   static bool _mentions(String text, String key) {
+    return spellingsOf(key).any((v) => text.contains(' $v '));
+  }
+
+  // ---------------------------------------------------------
+  // SEARCH HELPERS (used by the opportunity search index)
+  // ---------------------------------------------------------
+
+  /// The ways an already normalized name can be written in a text: itself,
+  /// without spaces ("power bi" -> "powerbi"), and for names ending in js
+  /// the three forms "react js", "reactjs" and "react".
+  static Set<String> spellingsOf(String normalizedKey) {
+    final key = normalizedKey;
     final variants = <String>{key, key.replaceAll(' ', '')};
     // "react js", "reactjs" and "react" name the same thing
     final base = key.endsWith(' js')
@@ -91,7 +110,140 @@ class SkillMatcher {
       variants.add('$base js');
       if (base.length >= 4) variants.add(base);
     }
-    return variants.any((v) => v.isNotEmpty && text.contains(' $v '));
+    variants.remove('');
+    return variants;
+  }
+
+  /// Rewrites the C-family language names so they survive [normalize]:
+  /// "C#" -> "csharp", "C++" -> "cpp", "F#" -> "fsharp" (any case, and only
+  /// as a whole name: "abc#" is left alone).
+  ///
+  /// [normalize] removes "#" and "+", so "C#", "C++" and "C" would all
+  /// become the one letter "c". A course on C would then cover a C# gap,
+  /// and the "c)" of a list ("a) ... b) ... c) ...") would count as a
+  /// mention of C#. The search index runs every text and every skill
+  /// through this first. [normalize] itself is left as it is, so the
+  /// certifications recommender behaves as before.
+  static String searchForm(String input) {
+    if (!input.contains('#') && !input.contains('+')) return input;
+    return input.replaceAllMapped(_cFamily, (m) {
+      final name = m[0]!.toLowerCase();
+      return name == 'c#' ? ' csharp ' : (name == 'f#' ? ' fsharp ' : ' cpp ');
+    });
+  }
+
+  /// [normalize] after [searchForm]: the key the search index uses for a
+  /// skill. "C#" -> "csharp", "SQL Server" -> "sql server".
+  static String searchKey(String input) => normalize(searchForm(input));
+
+  /// A version number may follow ("C++17" -> "cpp 17"); a letter may not.
+  static final RegExp _cFamily = RegExp(
+    r'(?<![a-z0-9#+])(?:c#|c\+\+|f#)(?![a-z#+])',
+    caseSensitive: false,
+  );
+
+  /// True for a specific product, framework or tool (React, Tableau,
+  /// Terraform ...), which only counts when it is named itself.
+  static bool isSpecific(String skill) =>
+      _specific.contains(normalize(skill)) ||
+      _specific.contains(searchKey(skill));
+
+  /// The separate field of study that [skill] names ("nlp" and "natural
+  /// language processing" -> "natural language processing"), or null.
+  /// See [_fields].
+  static String? fieldOf(String skill) => _fieldOf[searchKey(skill)];
+
+  /// The names to search for in free text when looking for [skill], without
+  /// query expansion: its spellings ([spellingsOf] of its [searchKey]), and
+  /// for a field of study ([fieldOf]) every name of that field, since "NLP"
+  /// is only the short form of "Natural Language Processing".
+  static List<String> searchNamesOf(String skill) {
+    final key = searchKey(skill);
+    if (key.isEmpty) return const [];
+    final names = <String>{...spellingsOf(key)};
+    final field = _fieldOf[key];
+    if (field != null) {
+      _fieldOf.forEach((name, f) {
+        if (f == field) names.addAll(spellingsOf(name));
+      });
+    }
+    return names.toList();
+  }
+
+  /// [skill] with everything the tag test needs computed once.
+  static PreparedSkill prepare(String skill) {
+    final key = searchKey(skill);
+    return PreparedSkill._(
+      key: key,
+      canonical: canonical(skill),
+      isSpecific:
+          _specific.contains(key) || _specific.contains(normalize(skill)),
+      field: _fieldOf[key],
+    );
+  }
+
+  /// True when the skill tag [tag] of an opportunity stands for the skill
+  /// the user [wanted]. The same rule as [matchedSkills] applies to tags: a
+  /// specific product must be the tag itself, any other skill uses
+  /// [matches] (so the tag "Databases and SQL" covers "SQL"). Names are
+  /// compared in their [searchForm], so the tag "C" does not cover "C#".
+  /// A field of study ([fieldOf]) is only covered by a tag of the same
+  /// field: the tag "Deep Learning" does not cover "Computer Vision".
+  static bool tagCovers(String wanted, String tag) =>
+      tagCoversPrepared(prepare(wanted), prepare(tag));
+
+  /// [tagCovers] for names that went through [prepare] (the search index
+  /// prepares every tag once instead of on every comparison).
+  static bool tagCoversPrepared(PreparedSkill wanted, PreparedSkill tag) {
+    if (wanted.key.isEmpty) return false;
+    if (wanted.isSpecific) return tag.key == wanted.key;
+    if (wanted.field != null) return tag.field == wanted.field;
+    return matchesCanonical(wanted.canonical, tag.canonical);
+  }
+
+  /// Query expansion: the normalized names to search for in free text
+  /// (titles, objectives, descriptions) when looking for [skill].
+  ///
+  /// A course rarely uses the exact words of the user's skill gap. A course
+  /// that teaches SQL may call it "relational databases", so searching for
+  /// the gap name alone would miss it. Expansion searches for the other
+  /// names of the same skill too:
+  ///  - always: the skill itself and its spellings ([spellingsOf]);
+  ///  - for a broad skill: the name of its synonym group ("Databases and
+  ///    SQL") and the synonyms in that group.
+  ///
+  /// Three guards keep the search precise:
+  ///  - a specific product (React, Tableau, PostgreSQL) or a field of study
+  ///    ([fieldOf]) is never expanded: a course on databases does not teach
+  ///    PostgreSQL;
+  ///  - product names are never added as synonyms: a text that names
+  ///    Tableau in passing does not teach Data Visualization as a whole;
+  ///  - only synonyms of two words or more are added. One-word synonyms
+  ///    ("reporting", "security", "routing", "c", "os") appear in texts
+  ///    about many other subjects.
+  /// Skill tags do not need these guards: they go through the full synonym
+  /// table with [tagCovers].
+  ///
+  /// The opportunity recommender keeps expansion off by default
+  /// (`expandSynonyms` in its ranking weights explains why).
+  static List<String> expansionsOf(String skill) {
+    final key = searchKey(skill);
+    if (key.isEmpty) return const [];
+    final names = <String>{...searchNamesOf(skill)};
+    // A field of study is not widened to its group either: a text on
+    // neural networks does not teach Computer Vision.
+    if (!isSpecific(skill) && fieldOf(skill) == null) {
+      final group = canonical(key);
+      names.add(group);
+      for (final synonym in _synonymsOf[group] ?? const <String>[]) {
+        if (synonym.length > 2 &&
+            synonym.contains(' ') &&
+            !_specific.contains(synonym)) {
+          names.add(synonym);
+        }
+      }
+    }
+    return names.toList();
   }
 
   /// Products, frameworks and tools: they belong to a broader skill (Node.js
@@ -131,7 +283,29 @@ class SkillMatcher {
       'Exchange Online', 'SharePoint', 'Microsoft Teams', 'Intune',
       'SAP FICO', 'SAP MM', 'SAP SD', 'SAP ABAP', 'ABAP', 'SAP Basis',
     ])
-      normalize(name),
+      // Both forms: "c" for the certifications, "csharp" and "cpp" for the
+      // opportunity search ([searchKey]).
+      ...{normalize(name), searchKey(name)},
+  };
+
+  /// Separate fields of study inside one synonym group, with their other
+  /// names. For certifications, NLP and Computer Vision both count as Deep
+  /// Learning (the certification skill name), and [canonical] and
+  /// [matches] keep that. But a course on one does not teach the other, so
+  /// the opportunity search keeps them apart ([fieldOf], [tagCovers]). An
+  /// abbreviation is listed here because it is another spelling of the
+  /// same field, not a synonym. ("CV" is left out: it also means a resume.)
+  static const Map<String, List<String>> _fields = {
+    'Natural Language Processing': ['NLP'],
+    'Computer Vision': [],
+  };
+
+  /// normalized name -> normalized field name (from [_fields]).
+  static final Map<String, String> _fieldOf = {
+    for (final entry in _fields.entries) ...{
+      normalize(entry.key): normalize(entry.key),
+      for (final name in entry.value) normalize(name): normalize(entry.key),
+    },
   };
 
   // ---------------------------------------------------------
@@ -924,6 +1098,12 @@ class SkillMatcher {
 
   static final Map<String, String> _aliases = _buildAliases();
 
+  /// normalized certification skill name -> its normalized synonyms.
+  static final Map<String, List<String>> _synonymsOf = {
+    for (final entry in _groups.entries)
+      normalize(entry.key): [for (final s in entry.value) normalize(s)],
+  };
+
   static Map<String, String> _buildAliases() {
     final map = <String, String>{};
     _groups.forEach((canonicalName, synonyms) {
@@ -934,4 +1114,27 @@ class SkillMatcher {
     });
     return map;
   }
+}
+
+/// A skill name with the values [SkillMatcher.tagCoversPrepared] needs,
+/// computed once ([SkillMatcher.prepare]).
+class PreparedSkill {
+  /// [SkillMatcher.searchKey] of the name.
+  final String key;
+
+  /// [SkillMatcher.canonical] of the name.
+  final String canonical;
+
+  /// [SkillMatcher.isSpecific] of the name.
+  final bool isSpecific;
+
+  /// [SkillMatcher.fieldOf] of the name.
+  final String? field;
+
+  const PreparedSkill._({
+    required this.key,
+    required this.canonical,
+    required this.isSpecific,
+    required this.field,
+  });
 }

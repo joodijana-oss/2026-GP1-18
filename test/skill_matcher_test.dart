@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:masra/utils/skill_matcher.dart';
 
@@ -132,5 +135,184 @@ void main() {
         isEmpty,
       );
     });
+  });
+
+  group('query expansion and tags', () {
+    test('a broad skill expands to the multi-word names of its group', () {
+      final names = SkillMatcher.expansionsOf('SQL');
+      expect(
+        names,
+        containsAll([
+          'sql',
+          'databases and sql',
+          'relational databases',
+          'sql queries',
+        ]),
+      );
+      // Products and one-word synonyms are left out.
+      expect(names, isNot(contains('mysql')));
+      expect(names, isNot(contains('postgresql')));
+      expect(names, isNot(contains('database')));
+      expect(names.every((name) => name.length > 2), isTrue);
+
+      final ml = SkillMatcher.expansionsOf('Machine Learning');
+      expect(ml, contains('artificial intelligence'));
+      expect(ml, isNot(contains('ai')));
+      expect(ml, isNot(contains('ml')));
+    });
+
+    test('a specific product is never expanded', () {
+      expect(SkillMatcher.expansionsOf('React'), ['react']);
+      expect(
+        SkillMatcher.expansionsOf('Node.js'),
+        containsAll(['node js', 'nodejs', 'node']),
+      );
+      expect(SkillMatcher.expansionsOf('Node.js'), hasLength(3));
+    });
+
+    test('a skill outside the synonym table is only itself', () {
+      expect(SkillMatcher.expansionsOf('Microservices'), ['microservices']);
+      expect(SkillMatcher.expansionsOf(' '), isEmpty);
+    });
+
+    test('spellingsOf gives the ways a name is written', () {
+      expect(SkillMatcher.spellingsOf('react js'),
+          {'react js', 'reactjs', 'react'});
+      expect(SkillMatcher.spellingsOf('power bi'), {'power bi', 'powerbi'});
+      expect(SkillMatcher.spellingsOf('sql'), {'sql'});
+    });
+
+    test('isSpecific tells products from broad skills', () {
+      expect(SkillMatcher.isSpecific('Tableau'), isTrue);
+      expect(SkillMatcher.isSpecific('React.js'), isTrue);
+      expect(SkillMatcher.isSpecific('SQL'), isFalse);
+      expect(SkillMatcher.isSpecific('Docker'), isFalse);
+    });
+
+    test('tagCovers uses synonyms, but a product must be the tag itself',
+        () {
+      expect(SkillMatcher.tagCovers('SQL', 'Databases and SQL'), isTrue);
+      expect(SkillMatcher.tagCovers('Docker', 'Containers'), isTrue);
+      expect(SkillMatcher.tagCovers('React', 'React'), isTrue);
+      expect(SkillMatcher.tagCovers('React', 'Frontend Frameworks'), isFalse);
+      expect(SkillMatcher.tagCovers('SQL', 'Python'), isFalse);
+      expect(SkillMatcher.tagCovers('', 'Python'), isFalse);
+    });
+  });
+
+  group('C#, C++ and C', () {
+    test('searchForm keeps the C-family names apart', () {
+      expect(SkillMatcher.searchKey('C#'), 'csharp');
+      expect(SkillMatcher.searchKey('c++'), 'cpp');
+      expect(SkillMatcher.searchKey('F#'), 'fsharp');
+      expect(SkillMatcher.searchKey('C'), 'c');
+      expect(SkillMatcher.searchKey('C#/.NET developer'),
+          'csharp net developer');
+      expect(SkillMatcher.searchKey('C++17'), 'cpp 17');
+      // Not a whole name: left as normalize gives it.
+      expect(SkillMatcher.searchKey('abc#'), 'abc');
+      expect(SkillMatcher.searchKey('a) one b) two c) three'),
+          'a one b two c three');
+    });
+
+    test('normalize is unchanged, so certifications behave as before', () {
+      expect(SkillMatcher.normalize('C#'), 'c');
+      expect(SkillMatcher.normalize('C++'), 'c');
+      expect(SkillMatcher.matches('C#', 'C++'), isTrue);
+    });
+
+    test('a tag of one C-family language does not cover another', () {
+      expect(SkillMatcher.tagCovers('C#', 'C#'), isTrue);
+      expect(SkillMatcher.tagCovers('C#', 'C'), isFalse);
+      expect(SkillMatcher.tagCovers('C++', 'C#'), isFalse);
+      expect(SkillMatcher.tagCovers('C', 'C++'), isFalse);
+      expect(SkillMatcher.isSpecific('C#'), isTrue);
+      expect(SkillMatcher.isSpecific('C++'), isTrue);
+    });
+  });
+
+  group('fields of study', () {
+    test('NLP and Computer Vision are fields, NLP is a spelling', () {
+      expect(SkillMatcher.fieldOf('NLP'), 'natural language processing');
+      expect(SkillMatcher.fieldOf('Natural Language Processing'),
+          'natural language processing');
+      expect(SkillMatcher.fieldOf('Computer Vision'), 'computer vision');
+      expect(SkillMatcher.fieldOf('Deep Learning'), isNull);
+      expect(SkillMatcher.searchNamesOf('NLP'),
+          containsAll(['nlp', 'natural language processing']));
+      expect(SkillMatcher.searchNamesOf('Computer Vision'),
+          {'computer vision', 'computervision'});
+    });
+
+    test('a field is only covered by a tag of the same field', () {
+      expect(SkillMatcher.tagCovers('NLP', 'Natural Language Processing'),
+          isTrue);
+      expect(SkillMatcher.tagCovers('Computer Vision', 'Deep Learning'),
+          isFalse);
+      expect(SkillMatcher.tagCovers('NLP', 'Deep Learning'), isFalse);
+      const nlpTag = 'Natural Language Processing';
+      expect(SkillMatcher.tagCovers('Computer Vision', nlpTag), isFalse);
+      // The broader skill is still covered by a tag of the field.
+      expect(SkillMatcher.tagCovers('Deep Learning', nlpTag), isTrue);
+    });
+
+    test('certifications still treat them as Deep Learning', () {
+      expect(SkillMatcher.canonical('NLP'), 'deep learning');
+      expect(SkillMatcher.matches('Computer Vision', 'Deep Learning'), isTrue);
+    });
+
+    test('a field is not widened to its synonym group', () {
+      final names = SkillMatcher.expansionsOf('Computer Vision');
+      expect(names.toSet(), {'computer vision', 'computervision'});
+      expect(SkillMatcher.expansionsOf('NLP'),
+          isNot(contains('neural networks')));
+    });
+  });
+
+  test('prepared tags keep the old tag rule for ordinary names', () {
+    // Every skill tag of the bundled catalogue against many gap names. For
+    // names that are not C-family languages or fields of study, the tag
+    // test must answer as it did before tags were prepared once.
+    final tags = <String>{
+      for (final record in jsonDecode(
+        File('lib/assets/data/Masra_Opportunities.json').readAsStringSync(),
+      ) as List)
+        for (final tag in (record as Map)['skills'] as List) tag as String,
+    };
+    const gaps = [
+      'SQL', 'Power BI', 'Python', 'Data Visualization', 'Tableau', 'Excel',
+      'ETL', 'Incident Response', 'SIEM', 'Vulnerability Management',
+      'Network Security', 'Threat Hunting', 'Splunk', 'Penetration Testing',
+      'REST API', 'Software Testing', 'CI/CD', 'Git', 'Agile', 'Docker',
+      'Microservices', 'Design Patterns', 'Kubernetes', 'Terraform', 'Azure',
+      'Ansible', 'Monitoring', 'Figma', 'Prototyping', 'User Research',
+      'Accessibility', 'Firewall', 'Routing', 'VPN', 'Wireless', 'LLM',
+      'Generative AI', 'PyTorch', 'MLOps', 'Deep Learning', 'Oracle',
+      'SQL Server', 'PostgreSQL', 'High Availability', 'React', 'Node.js',
+      'AWS', 'System Design', 'Cloud',
+    ];
+    bool oldRule(String wanted, String tag) {
+      final key = SkillMatcher.normalize(wanted);
+      if (key.isEmpty) return false;
+      if (SkillMatcher.isSpecific(wanted)) {
+        return SkillMatcher.normalize(tag) == key;
+      }
+      return SkillMatcher.matches(wanted, tag);
+    }
+
+    var compared = 0;
+    for (final gap in gaps) {
+      final prepared = SkillMatcher.prepare(gap);
+      for (final tag in tags) {
+        if (SkillMatcher.fieldOf(tag) != null) continue;
+        expect(
+          SkillMatcher.tagCoversPrepared(prepared, SkillMatcher.prepare(tag)),
+          oldRule(gap, tag),
+          reason: '$gap / $tag',
+        );
+        compared++;
+      }
+    }
+    expect(compared, greaterThan(5000));
   });
 }

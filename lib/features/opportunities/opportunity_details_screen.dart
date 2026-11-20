@@ -339,10 +339,11 @@ class _OpportunityDetailsScreenState extends State<OpportunityDetailsScreen> {
     final career = widget.careerGoalName.trim();
 
     final reasons = <List<InlineSpan>>[
+      // Best covered first, as on the card.
       if (match.gapSkills.isNotEmpty)
         [
           const TextSpan(text: 'Covers your skill gaps: '),
-          _boldSpan(match.gapSkills.join(', ')),
+          _boldSpan(match.gapSkillsByCoverage.join(', ')),
           const TextSpan(text: '.'),
         ],
       if (match.goalRelated)
@@ -568,8 +569,10 @@ class _OpportunityDetailsScreenState extends State<OpportunityDetailsScreen> {
   // ---------------------------------------------------------
   Widget _buildSkillsCard(List<String> skills) {
     final gaps = widget.match.gapSkills;
+    // The same tag rule as the ranking: a broad tag ("UI Design") does not
+    // stand for a specific tool ("Figma").
     bool covers(String skill) =>
-        gaps.any((gap) => SkillMatcher.matches(gap, skill));
+        gaps.any((gap) => SkillMatcher.tagCovers(gap, skill));
     final anyCovered = skills.any(covers);
 
     return _sectionCard(
