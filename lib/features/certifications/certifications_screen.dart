@@ -144,7 +144,7 @@ class _CertificationsScreenState extends State<CertificationsScreen>
         _analysis = analysis;
         _careerName = (savedName != null && savedName.isNotEmpty)
             ? savedName
-            : (ProfileOptions.careerGoals[goalId] ?? 'your career goal');
+            : (ProfileOptions.careerGoals[goalId] ?? '');
         _state = _ScreenState.start;
       });
     } catch (e) {
@@ -323,7 +323,7 @@ class _CertificationsScreenState extends State<CertificationsScreen>
         _entrance(
           delay: 80,
           child: _buildAnalysisCard(
-            title: _careerName,
+            title: _careerName.isEmpty ? 'Your career goal' : _careerName,
             subtitle: n == 1
                 ? '1 $what from your latest analysis'
                 : '$n ${what}s from your latest analysis',
@@ -816,7 +816,7 @@ class _CertificationsScreenState extends State<CertificationsScreen>
                     ),
                     const SizedBox(height: 3),
                     Text(
-                      _careerName,
+                      _careerName.isEmpty ? 'Your career goal' : _careerName,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
