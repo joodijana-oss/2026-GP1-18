@@ -537,7 +537,7 @@ class _CertificationDetailsScreenState
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              available ? 'View Official Source' : 'Official source not available',
+              available ? 'View Official Source' : 'Link Not Available',
               style: const TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w700,

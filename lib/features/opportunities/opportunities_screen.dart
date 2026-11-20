@@ -837,7 +837,7 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 4),
               child: Text(
-                'Clear filters',
+                'Clear Filters',
                 style: TextStyle(
                   color: AppColors.tealText,
                   fontSize: 13,

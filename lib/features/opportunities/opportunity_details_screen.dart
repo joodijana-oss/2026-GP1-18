@@ -674,7 +674,7 @@ class _OpportunityDetailsScreenState extends State<OpportunityDetailsScreen> {
           children: [
             Flexible(
               child: Text(
-                available ? 'Open on ${_sourceName()}' : 'Link not available',
+                available ? 'Open on ${_sourceName()}' : 'Link Not Available',
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(

@@ -87,7 +87,7 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
                   color: AppColors.tealText,
                 ),
                 title: Text(
-                  _photo == null ? 'Choose a photo' : 'Change photo',
+                  _photo == null ? 'Choose Photo' : 'Change Photo',
                   style: TextStyle(
                     color: AppColors.navyText,
                     fontWeight: FontWeight.w700,
@@ -102,7 +102,7 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
                     color: _removeRed,
                   ),
                   title: const Text(
-                    'Remove photo',
+                    'Remove Photo',
                     style: TextStyle(
                       color: _removeRed,
                       fontWeight: FontWeight.w700,

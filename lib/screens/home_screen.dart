@@ -902,7 +902,7 @@ class _HomeScreenState extends State<HomeScreen>
                 onPressed: () =>
                     _openScreen((_) => const CertificationsScreen()),
                 child: Text(
-                  'See all',
+                  'See All',
                   style: TextStyle(
                     color: AppColors.tealText,
                     fontSize: 13,
