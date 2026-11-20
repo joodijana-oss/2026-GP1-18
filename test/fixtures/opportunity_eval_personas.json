@@ -1,0 +1,1558 @@
+[
+  {
+    "id": "persona_data_analyst",
+    "careerGoalId": "data_analyst",
+    "experienceLevel": "Beginner",
+    "currentSkills": [
+      "Google Sheets",
+      "Basic Statistics",
+      "Communication"
+    ],
+    "skillGaps": [
+      "SQL",
+      "Power BI",
+      "Python",
+      "Data Visualization",
+      "Tableau",
+      "Excel",
+      "ETL"
+    ],
+    "relevant": [
+      {
+        "id": "coursera_2K_pi_e3Ee2VmA6uZNJ63w",
+        "grade": 2,
+        "teaches": [
+          "Power BI",
+          "Data Visualization"
+        ]
+      },
+      {
+        "id": "coursera_3bkTOtzVEequVRKuqBsDQw",
+        "grade": 2,
+        "teaches": [
+          "Excel"
+        ]
+      },
+      {
+        "id": "coursera_7A1yFTaREeWWBQrVFXqd1w",
+        "grade": 2,
+        "teaches": [
+          "Python"
+        ]
+      },
+      {
+        "id": "coursera_FhGAKzNiEeyTERK47a9PLQ",
+        "grade": 2,
+        "teaches": [
+          "Tableau",
+          "Data Visualization"
+        ]
+      },
+      {
+        "id": "coursera_GDQMSxDWEeitFhJL4G_A_g",
+        "grade": 2,
+        "teaches": [
+          "SQL",
+          "Python"
+        ]
+      },
+      {
+        "id": "coursera_NRRbf9zWEeqPZRKxGtAxBQ",
+        "grade": 2,
+        "teaches": [
+          "Data Visualization",
+          "Excel"
+        ]
+      },
+      {
+        "id": "coursera_RZ1S0B0MEeacvQ6cODzg5Q",
+        "grade": 2,
+        "teaches": [
+          "Python"
+        ]
+      },
+      {
+        "id": "coursera__8FRmSXkEeeCDQ44DPGlIA",
+        "grade": 2,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera__uJaK_gwEeaksw4f8WaZLg",
+        "grade": 2,
+        "teaches": [
+          "Excel"
+        ]
+      },
+      {
+        "id": "coursera_ejOz7RDUEei99hK0xs_tsg",
+        "grade": 2,
+        "teaches": [
+          "Python"
+        ]
+      },
+      {
+        "id": "coursera_iLNlSQp9Eeun_RJEc0KNDw",
+        "grade": 2,
+        "teaches": [
+          "Data Visualization",
+          "Tableau"
+        ]
+      },
+      {
+        "id": "coursera_juQyOVwuEee8pAru5GvQag",
+        "grade": 2,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_l8EPHG39Ee_Quwr_1ABTmQ",
+        "grade": 2,
+        "teaches": [
+          "Power BI",
+          "ETL"
+        ]
+      },
+      {
+        "id": "doroob_Doroob_C_S_INTEC004_MAY2020",
+        "grade": 2,
+        "teaches": [
+          "Excel"
+        ]
+      },
+      {
+        "id": "tuwaiq_4NnD5Gg3",
+        "grade": 2,
+        "teaches": [
+          "Excel",
+          "Data Visualization"
+        ]
+      },
+      {
+        "id": "tuwaiq_D1KP0Kev",
+        "grade": 2,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "tuwaiq_RVgOLrdG",
+        "grade": 2,
+        "teaches": [
+          "Python"
+        ]
+      },
+      {
+        "id": "tuwaiq_apY0pYvL",
+        "grade": 2,
+        "teaches": [
+          "SQL",
+          "Python"
+        ]
+      },
+      {
+        "id": "tuwaiq_q68wRjlZ",
+        "grade": 2,
+        "teaches": [
+          "Tableau",
+          "Data Visualization"
+        ]
+      },
+      {
+        "id": "tuwaiq_rKQX3gkl",
+        "grade": 2,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_0q3vvPaxEeq6fhKJnrhDJQ",
+        "grade": 1,
+        "teaches": [
+          "Python"
+        ]
+      },
+      {
+        "id": "coursera_1OphugmhEfCkPBKpO2YRyQ",
+        "grade": 1,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_3XMnuVFsEemYkgoCaF1HCg",
+        "grade": 1,
+        "teaches": [
+          "Python"
+        ]
+      },
+      {
+        "id": "coursera_9rSF60wpEe6pFg5BQAqraQ",
+        "grade": 1,
+        "teaches": [
+          "ETL",
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_AlVIMgeyEe2FUAphC_7O7w",
+        "grade": 1,
+        "teaches": [
+          "Data Visualization"
+        ]
+      },
+      {
+        "id": "coursera_CuJ2PscqEeyyUBK3_TLTlw",
+        "grade": 1,
+        "teaches": [
+          "ETL"
+        ]
+      },
+      {
+        "id": "coursera_FbTOjccpEey3GgqQBm7DaQ",
+        "grade": 1,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_NGt9qDv4EeuwehK5Ir7QEw",
+        "grade": 1,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_ORAIlTLtEeizIBKbQHnlqg",
+        "grade": 1,
+        "teaches": [
+          "Python",
+          "Data Visualization"
+        ]
+      },
+      {
+        "id": "coursera_ZWYBq9zVEeqMbw6VbjEnNw",
+        "grade": 1,
+        "teaches": [
+          "Data Visualization"
+        ]
+      },
+      {
+        "id": "coursera_c9dt2Qp9Eeuf7w5EwYPThw",
+        "grade": 1,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_fYuElDEgEeiCvhLLCIZW_A",
+        "grade": 1,
+        "teaches": [
+          "Python"
+        ]
+      },
+      {
+        "id": "coursera_gawUVgp9EeuyHQ758rw_Yw",
+        "grade": 1,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_h_qSTmUJEe21jBLFGcIQ1w",
+        "grade": 1,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_kvb6uMbTEeqZOA5eKDHL_w",
+        "grade": 1,
+        "teaches": [
+          "Data Visualization"
+        ]
+      },
+      {
+        "id": "coursera_mTZFe8cpEeyyUBK3_TLTlw",
+        "grade": 1,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_pmpvJcdAEeyduw6ktL3Xvw",
+        "grade": 1,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_qLFYrxnoEeWwrBKfKrqlSQ",
+        "grade": 1,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_qNrWFjDlEeua_goM8_0Q8w",
+        "grade": 1,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "coursera_zQV3KCOCEeui6AoQjSZBrQ",
+        "grade": 1,
+        "teaches": [
+          "ETL"
+        ]
+      },
+      {
+        "id": "doroob_Doroob_C_S_INTEC010_DEC2020",
+        "grade": 1,
+        "teaches": [
+          "Excel"
+        ]
+      },
+      {
+        "id": "tuwaiq_EW7GVjrV",
+        "grade": 1,
+        "teaches": [
+          "SQL"
+        ]
+      },
+      {
+        "id": "tuwaiq_w2Xbq9gR",
+        "grade": 1,
+        "teaches": [
+          "Data Visualization"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "persona_cybersecurity_analyst",
+    "careerGoalId": "cybersecurity_analyst",
+    "experienceLevel": "Intermediate",
+    "currentSkills": [
+      "Networking",
+      "Linux",
+      "Python Scripting"
+    ],
+    "skillGaps": [
+      "Incident Response",
+      "SIEM",
+      "Vulnerability Management",
+      "Network Security",
+      "Threat Hunting",
+      "Splunk",
+      "Penetration Testing"
+    ],
+    "relevant": [
+      {
+        "id": "coursera_3obxa2UJEe2NnA4jep2fLw",
+        "grade": 2,
+        "teaches": [
+          "Incident Response"
+        ]
+      },
+      {
+        "id": "coursera_6gFvP03FEeqFPAqOSKAo5Q",
+        "grade": 2,
+        "teaches": [
+          "Penetration Testing",
+          "Threat Hunting"
+        ]
+      },
+      {
+        "id": "coursera_Dhb0X03GEeqXxwqxk3C7MQ",
+        "grade": 2,
+        "teaches": [
+          "Incident Response"
+        ]
+      },
+      {
+        "id": "coursera__b0v1_7fEeyQqQ4ISkSP3Q",
+        "grade": 2,
+        "teaches": [
+          "SIEM",
+          "Incident Response"
+        ]
+      },
+      {
+        "id": "coursera_a9kCXv7xEeyQqQ4ISkSP3Q",
+        "grade": 2,
+        "teaches": [
+          "Network Security"
+        ]
+      },
+      {
+        "id": "coursera_bjhy5vuFEe_m2BKpUCEabw",
+        "grade": 2,
+        "teaches": [
+          "Penetration Testing"
+        ]
+      },
+      {
+        "id": "tuwaiq_LJvNmYqG",
+        "grade": 2,
+        "teaches": [
+          "Incident Response",
+          "SIEM"
+        ]
+      },
+      {
+        "id": "tuwaiq_LR97B8OV",
+        "grade": 2,
+        "teaches": [
+          "Vulnerability Management"
+        ]
+      },
+      {
+        "id": "tuwaiq_Y62eNGpg",
+        "grade": 2,
+        "teaches": [
+          "Incident Response",
+          "Threat Hunting"
+        ]
+      },
+      {
+        "id": "coursera_3pCB7HgGEem9bArpYNDHGA",
+        "grade": 1,
+        "teaches": [
+          "Network Security"
+        ]
+      },
+      {
+        "id": "coursera_5RYTQhHCEe26hQ4jkCdYhQ",
+        "grade": 1,
+        "teaches": [
+          "Incident Response"
+        ]
+      },
+      {
+        "id": "coursera_KzP_fzWKEe2quQ6OYH21ww",
+        "grade": 1,
+        "teaches": [
+          "Penetration Testing"
+        ]
+      },
+      {
+        "id": "coursera_PeAVvmUJEe2NnA4jep2fLw",
+        "grade": 1,
+        "teaches": [
+          "Network Security"
+        ]
+      },
+      {
+        "id": "coursera_quF5rVdrEeesGQokJ1NePA",
+        "grade": 1,
+        "teaches": [
+          "Network Security"
+        ]
+      },
+      {
+        "id": "coursera_u9TpajMmEe2fgRKcLe05yw",
+        "grade": 1,
+        "teaches": [
+          "Network Security"
+        ]
+      },
+      {
+        "id": "coursera_y6mmi2UIEe21jBLFGcIQ1w",
+        "grade": 1,
+        "teaches": [
+          "SIEM",
+          "Incident Response"
+        ]
+      },
+      {
+        "id": "coursera_z5Fx9mUJEe2piwrmyBNtEQ",
+        "grade": 1,
+        "teaches": [
+          "Vulnerability Management"
+        ]
+      },
+      {
+        "id": "tuwaiq_5lWkbX2n",
+        "grade": 1,
+        "teaches": [
+          "Incident Response"
+        ]
+      },
+      {
+        "id": "tuwaiq_RkbJpLZO",
+        "grade": 1,
+        "teaches": [
+          "Incident Response"
+        ]
+      },
+      {
+        "id": "tuwaiq_VPwN7D0G",
+        "grade": 1,
+        "teaches": [
+          "Incident Response",
+          "Network Security"
+        ]
+      },
+      {
+        "id": "tuwaiq_XvqDJRQP",
+        "grade": 1,
+        "teaches": [
+          "Network Security",
+          "Penetration Testing"
+        ]
+      },
+      {
+        "id": "tuwaiq_aJ3GaAZE",
+        "grade": 1,
+        "teaches": [
+          "Incident Response"
+        ]
+      },
+      {
+        "id": "tuwaiq_ylWpeJVw",
+        "grade": 1,
+        "teaches": [
+          "Incident Response"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "persona_software_engineer",
+    "careerGoalId": "software_engineer",
+    "experienceLevel": "Beginner",
+    "currentSkills": [
+      "Java",
+      "HTML",
+      "Object-Oriented Programming"
+    ],
+    "skillGaps": [
+      "REST API",
+      "Software Testing",
+      "CI/CD",
+      "Git",
+      "Agile",
+      "Docker",
+      "Microservices",
+      "Design Patterns"
+    ],
+    "relevant": [
+      {
+        "id": "coursera_6lQZLjVvEeWfzhKP8GtZlQ",
+        "grade": 2,
+        "teaches": [
+          "Agile"
+        ]
+      },
+      {
+        "id": "coursera_CVJg1EYkEeejjw678ALX_g",
+        "grade": 2,
+        "teaches": [
+          "Design Patterns"
+        ]
+      },
+      {
+        "id": "coursera_ERIzRKCGEeyFDhLpwtOZqw",
+        "grade": 2,
+        "teaches": [
+          "Git"
+        ]
+      },
+      {
+        "id": "coursera_GGlYeNHJEeq7SQ7kpEztwQ",
+        "grade": 2,
+        "teaches": [
+          "Docker"
+        ]
+      },
+      {
+        "id": "coursera_KsqbpvCQEeuaOxJclk1ROQ",
+        "grade": 2,
+        "teaches": [
+          "Agile"
+        ]
+      },
+      {
+        "id": "coursera_VnhVgoZIEfGgOhLTPyEaaQ",
+        "grade": 2,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_ZenvqVkjEey35BJ4ISJ4_Q",
+        "grade": 2,
+        "teaches": [
+          "CI/CD"
+        ]
+      },
+      {
+        "id": "coursera_ZhjmFVU3Eeibyw6mhOxdLA",
+        "grade": 2,
+        "teaches": [
+          "Microservices"
+        ]
+      },
+      {
+        "id": "coursera__qIqP1FsEemNmQ6a3syMJg",
+        "grade": 2,
+        "teaches": [
+          "Git"
+        ]
+      },
+      {
+        "id": "coursera_a1TGYx_8Eeezow7S6FV5Pg",
+        "grade": 2,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_g98MzcdAEeyduw6ktL3Xvw",
+        "grade": 2,
+        "teaches": [
+          "REST API"
+        ]
+      },
+      {
+        "id": "coursera_k2EFW1kfEeyoJwrNG9Tzyw",
+        "grade": 2,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_szUQ3EqjEfGj0g5_3BvVoQ",
+        "grade": 2,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_vS3glRiaEeeAuQ5XyvTfVA",
+        "grade": 2,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_yHvuv3ZLEei_sRJ3tviPRg",
+        "grade": 2,
+        "teaches": [
+          "CI/CD"
+        ]
+      },
+      {
+        "id": "tuwaiq_6P1QD52b",
+        "grade": 2,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "tuwaiq_mXaR1LD9",
+        "grade": 2,
+        "teaches": [
+          "REST API",
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "tuwaiq_yB1XqojQ",
+        "grade": 2,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_07aYjGy8EeeB2gpod3ECDg",
+        "grade": 1,
+        "teaches": [
+          "Design Patterns"
+        ]
+      },
+      {
+        "id": "coursera_8dd18UqjEfG6yBIHPSW1lw",
+        "grade": 1,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_94jQ_3EnEeWhZxJhllGpHQ",
+        "grade": 1,
+        "teaches": [
+          "Agile"
+        ]
+      },
+      {
+        "id": "coursera_HndaZ_J4EeaJyRLCaPOsJA",
+        "grade": 1,
+        "teaches": [
+          "Agile"
+        ]
+      },
+      {
+        "id": "coursera_MhlnlfD8EeesnRJUyZNfHA",
+        "grade": 1,
+        "teaches": [
+          "Agile"
+        ]
+      },
+      {
+        "id": "coursera_NpTR4zVwEeWfzhKP8GtZlQ",
+        "grade": 1,
+        "teaches": [
+          "Agile"
+        ]
+      },
+      {
+        "id": "coursera_Xpv78UYjEeemlQrrzf9X_A",
+        "grade": 1,
+        "teaches": [
+          "Design Patterns"
+        ]
+      },
+      {
+        "id": "coursera_ZLc4IHCQEee_hhK9f0kJ5A",
+        "grade": 1,
+        "teaches": [
+          "Microservices"
+        ]
+      },
+      {
+        "id": "coursera_bJFsvIQ8EfGrxRKOVP1SwQ",
+        "grade": 1,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_bZ545kqkEfGIVRLgYdLywQ",
+        "grade": 1,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_dVnHjxrGEfCwdwr_1g1Hsw",
+        "grade": 1,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_ifCrRDG3Eey4IRJKBiGcjw",
+        "grade": 1,
+        "teaches": [
+          "CI/CD"
+        ]
+      },
+      {
+        "id": "coursera_kDy16R_8Eee1gxLK2jyL4g",
+        "grade": 1,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_rCMyr92CEfCEtA75x5Rx3w",
+        "grade": 1,
+        "teaches": [
+          "REST API",
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "coursera_wWKidiPbEe2Psg5YTxx2NQ",
+        "grade": 1,
+        "teaches": [
+          "REST API"
+        ]
+      },
+      {
+        "id": "coursera_xp_FcDm7EeeN_xLrqutC_A",
+        "grade": 1,
+        "teaches": [
+          "REST API"
+        ]
+      },
+      {
+        "id": "coursera_zyjUCkqjEfGcdwr_wlrQIw",
+        "grade": 1,
+        "teaches": [
+          "Software Testing"
+        ]
+      },
+      {
+        "id": "doroob_course_v1_Doroob_C_S_BUSAD008_JUN2021",
+        "grade": 1,
+        "teaches": [
+          "Agile"
+        ]
+      },
+      {
+        "id": "tuwaiq_8ROda7MD",
+        "grade": 1,
+        "teaches": [
+          "Git"
+        ]
+      },
+      {
+        "id": "tuwaiq_BW6rY5gL",
+        "grade": 1,
+        "teaches": [
+          "REST API"
+        ]
+      },
+      {
+        "id": "tuwaiq_qd5wG5kz",
+        "grade": 1,
+        "teaches": [
+          "REST API"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "persona_cloud_devops_engineer",
+    "careerGoalId": "cloud_devops_engineer",
+    "experienceLevel": "Advanced",
+    "currentSkills": [
+      "Linux",
+      "Python",
+      "AWS",
+      "Git"
+    ],
+    "skillGaps": [
+      "Kubernetes",
+      "Terraform",
+      "Docker",
+      "CI/CD",
+      "Azure",
+      "Ansible",
+      "Monitoring"
+    ],
+    "relevant": [
+      {
+        "id": "coursera_3F6VL2JKEeuj5A4IE9yi4Q",
+        "grade": 2,
+        "teaches": [
+          "Azure"
+        ]
+      },
+      {
+        "id": "coursera_4gxeLZOXEe65OA7RgKFtYQ",
+        "grade": 2,
+        "teaches": [
+          "Ansible"
+        ]
+      },
+      {
+        "id": "coursera_GGlYeNHJEeq7SQ7kpEztwQ",
+        "grade": 2,
+        "teaches": [
+          "Docker",
+          "Kubernetes"
+        ]
+      },
+      {
+        "id": "coursera_uJ9tNVb3Ee2O6hIM21GqbQ",
+        "grade": 2,
+        "teaches": [
+          "Terraform"
+        ]
+      },
+      {
+        "id": "coursera_yHvuv3ZLEei_sRJ3tviPRg",
+        "grade": 2,
+        "teaches": [
+          "CI/CD"
+        ]
+      },
+      {
+        "id": "tuwaiq_VwromX8Z",
+        "grade": 2,
+        "teaches": [
+          "Kubernetes",
+          "Terraform",
+          "Monitoring"
+        ]
+      },
+      {
+        "id": "coursera_HuWcu1FtEemShQpcsklh7g",
+        "grade": 1,
+        "teaches": [
+          "Ansible"
+        ]
+      },
+      {
+        "id": "coursera_XM7eQJOXEe6n5Q7IOfRXqQ",
+        "grade": 1,
+        "teaches": [
+          "Kubernetes",
+          "Docker"
+        ]
+      },
+      {
+        "id": "coursera_ZenvqVkjEey35BJ4ISJ4_Q",
+        "grade": 1,
+        "teaches": [
+          "CI/CD"
+        ]
+      },
+      {
+        "id": "coursera_gThv_oa4EfGTng5RE3pH2w",
+        "grade": 1,
+        "teaches": [
+          "Azure",
+          "Kubernetes"
+        ]
+      },
+      {
+        "id": "coursera_ifCrRDG3Eey4IRJKBiGcjw",
+        "grade": 1,
+        "teaches": [
+          "CI/CD"
+        ]
+      },
+      {
+        "id": "tuwaiq_JXZ16Vaq",
+        "grade": 1,
+        "teaches": [
+          "Terraform",
+          "Monitoring"
+        ]
+      },
+      {
+        "id": "tuwaiq_aJ3GaAZE",
+        "grade": 1,
+        "teaches": [
+          "Monitoring"
+        ]
+      },
+      {
+        "id": "tuwaiq_qd5wG5kz",
+        "grade": 1,
+        "teaches": [
+          "Monitoring"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "persona_ui_ux_designer",
+    "careerGoalId": "ui_ux_designer",
+    "experienceLevel": "No Experience",
+    "currentSkills": [
+      "Photoshop",
+      "Sketching"
+    ],
+    "skillGaps": [
+      "Figma",
+      "Prototyping",
+      "User Research",
+      "Usability Testing",
+      "Wireframing",
+      "Design Systems",
+      "Accessibility"
+    ],
+    "relevant": [
+      {
+        "id": "coursera_OG6ezsdEEey3GgqQBm7DaQ",
+        "grade": 2,
+        "teaches": [
+          "User Research",
+          "Wireframing",
+          "Figma",
+          "Prototyping",
+          "Usability Testing"
+        ]
+      },
+      {
+        "id": "coursera_QXwxyhvJEfCgrRIWRVUcaw",
+        "grade": 2,
+        "teaches": [
+          "Figma",
+          "Wireframing",
+          "Prototyping",
+          "Usability Testing"
+        ]
+      },
+      {
+        "id": "coursera_TjOLkAp_EeubJBIM7h4jow",
+        "grade": 2,
+        "teaches": [
+          "Wireframing",
+          "Prototyping",
+          "Figma"
+        ]
+      },
+      {
+        "id": "coursera_U7e_Lgp_EeubJBIM7h4jow",
+        "grade": 2,
+        "teaches": [
+          "Usability Testing",
+          "User Research"
+        ]
+      },
+      {
+        "id": "coursera_fZGtX7LUEeilNhJ2KR9bNg",
+        "grade": 2,
+        "teaches": [
+          "User Research",
+          "Usability Testing"
+        ]
+      },
+      {
+        "id": "coursera_nwcmZ4SGEeiFWQ550S4zqg",
+        "grade": 2,
+        "teaches": [
+          "Accessibility"
+        ]
+      },
+      {
+        "id": "coursera_q_MmwLLUEeilNhJ2KR9bNg",
+        "grade": 2,
+        "teaches": [
+          "User Research"
+        ]
+      },
+      {
+        "id": "tuwaiq_M4RmPXap",
+        "grade": 2,
+        "teaches": [
+          "Figma",
+          "Prototyping",
+          "User Research",
+          "Usability Testing",
+          "Design Systems",
+          "Accessibility"
+        ]
+      },
+      {
+        "id": "coursera_DDBg7AlXEeWTSSIAC0MDtg",
+        "grade": 1,
+        "teaches": [
+          "Prototyping",
+          "User Research"
+        ]
+      },
+      {
+        "id": "coursera_GZXr46oKEeek8w7UaDwmVA",
+        "grade": 1,
+        "teaches": [
+          "Prototyping"
+        ]
+      },
+      {
+        "id": "coursera_R_r2uwp_Eeuf7w5EwYPThw",
+        "grade": 1,
+        "teaches": [
+          "User Research"
+        ]
+      },
+      {
+        "id": "coursera_W5kcLAp_Eeua7xKR7OK1aw",
+        "grade": 1,
+        "teaches": [
+          "Figma",
+          "Prototyping"
+        ]
+      },
+      {
+        "id": "coursera__FUerft0Ee6RWQr_yLqxhQ",
+        "grade": 1,
+        "teaches": [
+          "Accessibility"
+        ]
+      },
+      {
+        "id": "coursera_aDPeKsbTEeqqzg7nmRt_BQ",
+        "grade": 1,
+        "teaches": [
+          "User Research",
+          "Accessibility"
+        ]
+      },
+      {
+        "id": "tuwaiq_XmRQvMQq",
+        "grade": 1,
+        "teaches": [
+          "Design Systems",
+          "Figma"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "persona_network_engineer",
+    "careerGoalId": "network_engineer",
+    "experienceLevel": "Intermediate",
+    "currentSkills": [
+      "TCP/IP",
+      "Switching",
+      "Windows Server",
+      "Cisco"
+    ],
+    "skillGaps": [
+      "Troubleshooting",
+      "Firewall",
+      "Routing",
+      "Network Security",
+      "VPN",
+      "Wireless",
+      "Network Automation"
+    ],
+    "relevant": [
+      {
+        "id": "coursera_Dp_9j9CBEfCuyBL4KrCqyQ",
+        "grade": 2,
+        "teaches": [
+          "Wireless"
+        ]
+      },
+      {
+        "id": "coursera_J6WxamC2EfCy5w726iKh0Q",
+        "grade": 2,
+        "teaches": [
+          "Wireless"
+        ]
+      },
+      {
+        "id": "coursera_ZhJU8ekfEe_i1w7KFSEfXw",
+        "grade": 2,
+        "teaches": [
+          "Routing"
+        ]
+      },
+      {
+        "id": "coursera_a9kCXv7xEeyQqQ4ISkSP3Q",
+        "grade": 2,
+        "teaches": [
+          "Network Security",
+          "Firewall"
+        ]
+      },
+      {
+        "id": "coursera_calnTOuTEeyozBJ_29c9rQ",
+        "grade": 2,
+        "teaches": [
+          "Network Automation"
+        ]
+      },
+      {
+        "id": "coursera_3obxa2UJEe2NnA4jep2fLw",
+        "grade": 1,
+        "teaches": [
+          "Network Security"
+        ]
+      },
+      {
+        "id": "coursera_3pCB7HgGEem9bArpYNDHGA",
+        "grade": 1,
+        "teaches": [
+          "Network Security"
+        ]
+      },
+      {
+        "id": "coursera_4dmVtODwEe6VUxI34US_kw",
+        "grade": 1,
+        "teaches": [
+          "VPN"
+        ]
+      },
+      {
+        "id": "coursera_4q10vWTrEee1VA7DqjUt_A",
+        "grade": 1,
+        "teaches": [
+          "Routing"
+        ]
+      },
+      {
+        "id": "coursera_HlI0x1awEe2eggrjYA9Jaw",
+        "grade": 1,
+        "teaches": [
+          "Network Automation"
+        ]
+      },
+      {
+        "id": "coursera_KfuykmTsEeeqbxLIz9M6nA",
+        "grade": 1,
+        "teaches": [
+          "Routing"
+        ]
+      },
+      {
+        "id": "coursera_NBJxE_OmEeiWYg6_QHiENg",
+        "grade": 1,
+        "teaches": [
+          "Firewall",
+          "Network Security"
+        ]
+      },
+      {
+        "id": "coursera_OBdSldfdEe22LAo38arT7w",
+        "grade": 1,
+        "teaches": [
+          "Troubleshooting"
+        ]
+      },
+      {
+        "id": "coursera_PeAVvmUJEe2NnA4jep2fLw",
+        "grade": 1,
+        "teaches": [
+          "Network Security",
+          "Firewall",
+          "VPN"
+        ]
+      },
+      {
+        "id": "coursera_YEzwgUUYEe2WggqTpXEoiw",
+        "grade": 1,
+        "teaches": [
+          "Wireless"
+        ]
+      },
+      {
+        "id": "coursera_quF5rVdrEeesGQokJ1NePA",
+        "grade": 1,
+        "teaches": [
+          "Network Security",
+          "Firewall"
+        ]
+      },
+      {
+        "id": "coursera_snLuLnSeEeagzAq9__mw8w",
+        "grade": 1,
+        "teaches": [
+          "Network Automation"
+        ]
+      },
+      {
+        "id": "coursera_u9TpajMmEe2fgRKcLe05yw",
+        "grade": 1,
+        "teaches": [
+          "Network Security"
+        ]
+      },
+      {
+        "id": "coursera_vfzOmc4_Ee6bkA7BMk6_Yw",
+        "grade": 1,
+        "teaches": [
+          "Troubleshooting"
+        ]
+      },
+      {
+        "id": "coursera_xv_MRNB8EfCGLAr_8kKY0Q",
+        "grade": 1,
+        "teaches": [
+          "Routing"
+        ]
+      },
+      {
+        "id": "tuwaiq_8eJYQJPj",
+        "grade": 1,
+        "teaches": [
+          "Troubleshooting",
+          "Routing"
+        ]
+      },
+      {
+        "id": "tuwaiq_JXZ16Vaq",
+        "grade": 1,
+        "teaches": [
+          "VPN"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "persona_ai_ml_engineer",
+    "careerGoalId": "ai_ml_engineer",
+    "experienceLevel": "Advanced",
+    "currentSkills": [
+      "Python",
+      "scikit-learn",
+      "Statistics",
+      "SQL"
+    ],
+    "skillGaps": [
+      "LLM",
+      "Generative AI",
+      "PyTorch",
+      "MLOps",
+      "Deep Learning",
+      "NLP",
+      "Computer Vision"
+    ],
+    "relevant": [
+      {
+        "id": "coursera_23ktW204Eeu__hKCAZP3Iw",
+        "grade": 2,
+        "teaches": [
+          "MLOps"
+        ]
+      },
+      {
+        "id": "coursera_25Fh8ivBEee6gA5XksfBbg",
+        "grade": 2,
+        "teaches": [
+          "NLP",
+          "Deep Learning"
+        ]
+      },
+      {
+        "id": "coursera_8Ceijel7EeqVIgpj8IJl1w",
+        "grade": 2,
+        "teaches": [
+          "MLOps"
+        ]
+      },
+      {
+        "id": "coursera_Ce_Z0cxyEe_6Xw58oNvdGw",
+        "grade": 2,
+        "teaches": [
+          "PyTorch",
+          "Deep Learning"
+        ]
+      },
+      {
+        "id": "coursera_T3Lj0apXEe6oQA6J_7B2nw",
+        "grade": 2,
+        "teaches": [
+          "LLM",
+          "Generative AI",
+          "Deep Learning"
+        ]
+      },
+      {
+        "id": "coursera_TWpZK5LiEemyIAq1fAvhOg",
+        "grade": 2,
+        "teaches": [
+          "NLP",
+          "Deep Learning"
+        ]
+      },
+      {
+        "id": "coursera_Y0_bH2vNEe_CUA7_5BJkaw",
+        "grade": 2,
+        "teaches": [
+          "LLM",
+          "Generative AI"
+        ]
+      },
+      {
+        "id": "coursera_kWGvJivBEeeW5RJUyz1uFA",
+        "grade": 2,
+        "teaches": [
+          "Computer Vision",
+          "Deep Learning"
+        ]
+      },
+      {
+        "id": "tuwaiq_mBgbKjd0",
+        "grade": 2,
+        "teaches": [
+          "Computer Vision",
+          "PyTorch",
+          "Deep Learning",
+          "MLOps"
+        ]
+      },
+      {
+        "id": "tuwaiq_xjJ5bAV2",
+        "grade": 2,
+        "teaches": [
+          "LLM",
+          "Generative AI",
+          "NLP",
+          "Deep Learning",
+          "MLOps"
+        ]
+      },
+      {
+        "id": "coursera_Rr_BeG1UEe6ZoQ5WeLvw3w",
+        "grade": 1,
+        "teaches": [
+          "Generative AI"
+        ]
+      },
+      {
+        "id": "coursera_W_mOXCrdEeeNPQ68_4aPpA",
+        "grade": 1,
+        "teaches": [
+          "Deep Learning"
+        ]
+      },
+      {
+        "id": "coursera_Z5rfkzWeEeusTAqaKUMfXQ",
+        "grade": 1,
+        "teaches": [
+          "Deep Learning"
+        ]
+      },
+      {
+        "id": "coursera__ZpZKyTxEemb_BL8g3X_rg",
+        "grade": 1,
+        "teaches": [
+          "NLP"
+        ]
+      },
+      {
+        "id": "tuwaiq_390V7nyj",
+        "grade": 1,
+        "teaches": [
+          "Deep Learning",
+          "Computer Vision",
+          "NLP"
+        ]
+      },
+      {
+        "id": "tuwaiq_5lWkbX2n",
+        "grade": 1,
+        "teaches": [
+          "Generative AI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "persona_database_administrator",
+    "careerGoalId": "database_administrator",
+    "experienceLevel": "Beginner",
+    "currentSkills": [
+      "SQL",
+      "MySQL",
+      "Data Modeling"
+    ],
+    "skillGaps": [
+      "Oracle",
+      "SQL Server",
+      "Performance Tuning",
+      "Backup and Recovery",
+      "PostgreSQL",
+      "High Availability",
+      "Database Security",
+      "NoSQL"
+    ],
+    "relevant": [
+      {
+        "id": "coursera_74mXvRGAEeuoOw4b2QFhTw",
+        "grade": 2,
+        "teaches": [
+          "Oracle"
+        ]
+      },
+      {
+        "id": "coursera_NGt9qDv4EeuwehK5Ir7QEw",
+        "grade": 2,
+        "teaches": [
+          "PostgreSQL"
+        ]
+      },
+      {
+        "id": "coursera_XXZBGc97EeufchLeGgZGZQ",
+        "grade": 2,
+        "teaches": [
+          "Database Security",
+          "Performance Tuning"
+        ]
+      },
+      {
+        "id": "coursera_oB_IS0YlEe_xRA6omnSgfQ",
+        "grade": 2,
+        "teaches": [
+          "Database Security"
+        ]
+      },
+      {
+        "id": "tuwaiq_EW7GVjrV",
+        "grade": 2,
+        "teaches": [
+          "SQL Server",
+          "Backup and Recovery",
+          "Database Security"
+        ]
+      },
+      {
+        "id": "coursera_1OphugmhEfCkPBKpO2YRyQ",
+        "grade": 1,
+        "teaches": [
+          "SQL Server",
+          "Performance Tuning"
+        ]
+      },
+      {
+        "id": "coursera_5RYTQhHCEe26hQ4jkCdYhQ",
+        "grade": 1,
+        "teaches": [
+          "Backup and Recovery"
+        ]
+      },
+      {
+        "id": "coursera_TdgEhZh6EfCF1g5ZKbYnew",
+        "grade": 1,
+        "teaches": [
+          "Oracle",
+          "Backup and Recovery"
+        ]
+      },
+      {
+        "id": "coursera_hBmmv1drEeerkQ5vdwUqtA",
+        "grade": 1,
+        "teaches": [
+          "Backup and Recovery"
+        ]
+      },
+      {
+        "id": "coursera_i0Nsm84_Ee65Mwqc6CotZw",
+        "grade": 1,
+        "teaches": [
+          "Backup and Recovery"
+        ]
+      },
+      {
+        "id": "coursera_iOUoN2SmEeuW_BJwyZjLPQ",
+        "grade": 1,
+        "teaches": [
+          "SQL Server",
+          "Oracle"
+        ]
+      },
+      {
+        "id": "coursera_mTZFe8cpEeyyUBK3_TLTlw",
+        "grade": 1,
+        "teaches": [
+          "Performance Tuning"
+        ]
+      },
+      {
+        "id": "coursera_ooghxB0iEfGtGQr_xacGaQ",
+        "grade": 1,
+        "teaches": [
+          "Database Security",
+          "Backup and Recovery"
+        ]
+      },
+      {
+        "id": "coursera_qNrWFjDlEeua_goM8_0Q8w",
+        "grade": 1,
+        "teaches": [
+          "PostgreSQL"
+        ]
+      },
+      {
+        "id": "tuwaiq_D1KP0Kev",
+        "grade": 1,
+        "teaches": [
+          "SQL Server"
+        ]
+      }
+    ]
+  }
+]
