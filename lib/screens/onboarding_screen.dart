@@ -65,7 +65,11 @@ class OnboardingScreen extends StatelessWidget {
                   // GUIDE • DEVELOP • ACHIEVE
                   // ==========================
                   Text(
-                    'G U I D E   •   D E V E L O P   •   A C H I E V E',
+                    // The wide look comes from letterSpacing, not from
+                    // spaces between letters, so the line fits on small
+                    // phones and screen readers read whole words.
+                    'GUIDE • DEVELOP • ACHIEVE',
+                    semanticsLabel: 'Guide, develop, achieve',
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       // Fixed colour (light-mode secondary text): it sits on
@@ -73,7 +77,7 @@ class OnboardingScreen extends StatelessWidget {
                       color: Color(0xFF60788C),
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
-                      letterSpacing: 2.2,
+                      letterSpacing: 3.5,
                     ),
                   ),
 

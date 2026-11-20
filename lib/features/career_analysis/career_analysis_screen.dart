@@ -1256,11 +1256,16 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Generate Learning Roadmap',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
+            // Flexible: with a large system font the label wraps instead
+            // of overflowing the button.
+            Flexible(
+              child: Text(
+                'Create My Roadmap',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
             SizedBox(width: 10),
@@ -1415,7 +1420,7 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
                           ),
                         ),
                         child: const Text(
-                          'Generate',
+                          'Create',
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
