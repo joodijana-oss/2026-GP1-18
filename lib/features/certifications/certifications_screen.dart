@@ -960,8 +960,8 @@ class _CertificationsScreenState extends State<CertificationsScreen>
                     children: [
                       Text(
                         _forGaps
-                            ? '${match.matchCount} of $totalTargets gaps covered'
-                            : 'Uses ${match.matchCount} of your $totalTargets skills',
+                            ? '${match.matchCount} of $totalTargets ${totalTargets == 1 ? 'gap' : 'gaps'} covered'
+                            : 'Uses ${match.matchCount} of your $totalTargets ${totalTargets == 1 ? 'skill' : 'skills'}',
                         style: TextStyle(
                           color: AppColors.tealText,
                           fontSize: 12,

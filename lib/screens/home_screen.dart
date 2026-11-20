@@ -634,7 +634,7 @@ class _HomeScreenState extends State<HomeScreen>
                               ),
                               SizedBox(height: 3),
                               Text(
-                                'Keep moving forward in your career journey',
+                                'Keep moving forward in your career journey.',
                                 style: TextStyle(
                                   color: Color(0xFFC7D6DF),
                                   fontSize: 12,

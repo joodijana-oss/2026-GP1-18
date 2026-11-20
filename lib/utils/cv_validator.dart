@@ -48,7 +48,7 @@ class CvValidator {
   static const String formatMessage =
       'Unsupported file format. Please upload your CV as a PDF file.';
   static const String tooLargeMessage =
-      'File is too large. Maximum size is 5 MB.';
+      'This file is too large. The maximum size is 5 MB.';
   static const String tooManyPagesMessage = 'Your CV must be 3 pages or less.';
   static const String emptyMessage =
       'This file appears to be empty. Please upload a CV with content.';

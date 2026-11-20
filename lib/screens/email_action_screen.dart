@@ -404,9 +404,9 @@ class _EmailActionScreenState extends State<EmailActionScreen>
       case _LinkState.error:
         return _buildMessageState(
           icon: Icons.wifi_off_rounded,
-          title: 'Couldn’t Check Link',
+          title: "Couldn't Check Link",
           message:
-              'We couldn’t check your link. Please check your connection and try again.',
+              "We couldn't check your link. Please check your connection and try again.",
           buttonText: 'Try Again',
           onPressed: _applyLink,
         );

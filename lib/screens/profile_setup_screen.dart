@@ -1389,7 +1389,7 @@ SizedBox(
 
       case 0:
 
-        return 'Let’s start with your educational background.';
+        return "Let's start with your educational background.";
 
       case 1:
 

@@ -578,7 +578,7 @@ void _showMessage(String title, {String? subtitle, bool isError = false}) {
                                           confirmPasswordController.text,
                                         ) ==
                                         null
-                                ? 'Passwords match'
+                                ? 'Passwords match.'
                                 : null,
                             validator: _confirmError,
                           ),

@@ -510,9 +510,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
       case _LinkState.error:
         return _buildMessageState(
           icon: Icons.wifi_off_rounded,
-          title: 'Couldn’t Check Link',
+          title: "Couldn't Check Link",
           message:
-              'We couldn’t check your reset link. Please check your connection and try again.',
+              "We couldn't check your reset link. Please check your connection and try again.",
           buttonText: 'Try Again',
           onPressed: _verifyLink,
         );
@@ -694,7 +694,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
             validator: _confirmError,
             helperText: _confirmTouched &&
                     _confirmError(confirmPasswordController.text) == null
-                ? 'Passwords match'
+                ? 'Passwords match.'
                 : null,
           ),
 
