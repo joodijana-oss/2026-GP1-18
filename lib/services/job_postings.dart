@@ -14,7 +14,8 @@ class JobPostings {
   static const int analysisLimit = 20;
 
   /// The first [limit] postings of [csvText] whose title matches the
-  /// career goal, each as {title, description, city, source}.
+  /// career goal (see [aliasMatches]), each as
+  /// {title, description, city, source}.
   static List<Map<String, String>> relevant(
     String csvText,
     String careerGoalId, {
@@ -51,21 +52,17 @@ class JobPostings {
       );
     }
 
+    // Normalized once here, not again for every row.
     final aliases =
         careerAliases(
       careerGoalId,
-    );
+    ).map(normalize).toList();
 
     if (aliases.isEmpty) {
       throw Exception(
         'No job-title mapping found for career goal: $careerGoalId',
       );
     }
-
-    // Newer goals use short keywords (qa, rf, sap, erp, etl), so they
-    // must match whole words only (e.g. "rf" must not match inside a word)
-    final wholeWordsOnly =
-        _wholeWordGoals.contains(careerGoalId);
 
     final relevantJobs =
         <Map<String, String>>[];
@@ -100,20 +97,10 @@ class JobPostings {
 
       final matches =
           aliases.any(
-        (alias) {
-          final normalizedAlias =
-              normalize(alias);
-
-          if (wholeWordsOnly) {
-            return ' $normalizedTitle '.contains(
-              ' $normalizedAlias ',
-            );
-          }
-
-          return normalizedTitle.contains(
-            normalizedAlias,
-          );
-        },
+        (alias) => aliasMatches(
+          normalizedTitle,
+          alias,
+        ),
       );
 
       if (!matches) {
@@ -353,7 +340,7 @@ class JobPostings {
           'information technology consultant',
         ];
 
-      // Newer goals (matched as whole words, see _wholeWordGoals)
+      // Newer goals
 
       case 'qa_test_engineer':
         return [
@@ -465,18 +452,29 @@ class JobPostings {
     }
   }
 
-  static const Set<String> _wholeWordGoals = {
-    'qa_test_engineer',
-    'data_engineer',
-    'cybersecurity_grc_specialist',
-    'telecom_engineer',
-    'infrastructure_data_center_engineer',
-    'it_support_specialist',
-    'product_manager',
-    'erp_consultant',
-    'solutions_architect',
-    'pre_sales_engineer',
-  };
+  // =========================================================
+  // TITLE MATCHING
+  // =========================================================
+
+  /// Whether [normalizedAlias] names the job in [normalizedTitle], both
+  /// already passed through [normalize]. The alias must appear as whole
+  /// words, side by side and in order; its last word may also take a
+  /// plural "s" ("developers" is the same job as "developer"), but no
+  /// other ending, so "engineer" never matches inside "engineering" and
+  /// "rf" never matches inside "surf". The same rule for every goal.
+  static bool aliasMatches(
+    String normalizedTitle,
+    String normalizedAlias,
+  ) {
+    if (normalizedAlias.isEmpty) {
+      return false;
+    }
+
+    final padded = ' $normalizedTitle ';
+
+    return padded.contains(' $normalizedAlias ') ||
+        padded.contains(' ${normalizedAlias}s ');
+  }
 
   // =========================================================
   // NORMALIZE TEXT
