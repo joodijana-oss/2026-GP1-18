@@ -6,6 +6,7 @@ import 'package:masra/features/certifications/certification_setup_memory.dart';
 import 'package:masra/features/certifications/certifications_screen.dart';
 import 'package:masra/models/certification.dart';
 import 'package:masra/services/certification_service.dart';
+import 'package:masra/services/content_based_recommender.dart';
 import 'package:masra/services/user_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -24,6 +25,35 @@ const _loadError =
 // "Top 5" are non-breaking ( ).
 const _gaps5 = 'Close my skill gaps · Top 5';
 const _strengthen10 = 'Strengthen my skills · Top 10';
+
+// The notes under a Top 5 / Top 10 list. Only certifications that cover a
+// gap (or build on a skill) are counted.
+String _n1Gaps(int shown, int found) =>
+    'Showing $shown of $found certifications that cover your gaps. Tap Change and choose All to see every one.';
+String _n1Skills(int shown, int found) =>
+    'Showing $shown of $found certifications that build on your skills. Tap Change and choose All to see every one.';
+String _n2GapsMany(int found, int limit) =>
+    'We found $found certifications that cover your gaps, fewer than the $limit you chose.';
+String _n2GapsOne(int limit) =>
+    'We found 1 certification that covers your gaps, fewer than the $limit you chose.';
+String _n2SkillsMany(int found, int limit) =>
+    'We found $found certifications that build on your skills, fewer than the $limit you chose.';
+String _n2SkillsOne(int limit) =>
+    'We found 1 certification that builds on your skills, fewer than the $limit you chose.';
+
+// The messages shown instead of a list when no certification covers a gap
+// (or builds on a skill).
+const _eGaps =
+    'We keep adding new ones. For now, look for training in Opportunity Radar.';
+const _eSkills =
+    'We keep adding new ones. For now, look for hackathons and training in Opportunity Radar.';
+const _eNoGaps =
+    'Tap Change and choose Strengthen my skills to build on what you know.';
+const _eNoSkills =
+    'Tap Change and choose Close my skill gaps to learn what your career goal needs.';
+
+/// A certification card: the only place with this icon.
+final _cards = find.byIcon(Icons.chevron_right_rounded);
 
 /// Gives the screen a saved analysis instead of reading Firestore.
 class _FakeUserService implements UserService {
@@ -397,15 +427,13 @@ void main() {
 
     expectResults(_strengthen10);
     expect(find.textContaining('to strengthen your skills'), findsOneWidget);
-    // Only 3 certifications for Top 10: the heading says the list is
-    // complete instead of "Top 3", and the note says why.
-    expect(find.text('All 3 to strengthen your skills'), findsOneWidget);
-    expect(
-      find.text(
-        'Showing all 3 certifications for your career goal, fewer than the 10 you chose. We keep adding new ones.',
-      ),
-      findsOneWidget,
-    );
+    // Only 1 certification builds on the skills for Top 10: the heading
+    // says the list is complete, and the note says how many were found.
+    expect(find.text('The only one to strengthen your skills'), findsOneWidget);
+    expect(find.text(_n2SkillsOne(10)), findsOneWidget);
+    expect(find.text('Python Certificate'), findsOneWidget);
+    expect(find.text('SQL Certificate'), findsNothing);
+    expect(find.text('Power BI Certificate'), findsNothing);
 
     await tapBackArrow(tester);
     await openScreen(tester);
@@ -418,9 +446,10 @@ void main() {
     tester,
   ) async {
     SharedPreferences.setMockInitialValues(savedRun(uid));
+    // They all cover a gap, so they all count.
     certs.catalog = [
       for (var i = 1; i <= 6; i++)
-        _cert('cert_$i', 'Certificate $i', ['Skill $i']),
+        _cert('cert_$i', 'Certificate $i', ['Power BI']),
     ];
 
     await start(tester);
@@ -428,16 +457,13 @@ void main() {
 
     expectResults(_gaps5);
     expect(find.text('Top 5 to close your gaps'), findsOneWidget);
-    expect(
-      find.text(
-        'Showing 5 of 6 certifications for your career goal. Tap Change and choose All to see every one.',
-      ),
-      findsOneWidget,
-    );
+    expect(find.text(_n1Gaps(5, 6)), findsOneWidget);
+    expect(_cards, findsNWidgets(5));
+    expect(find.text('Certificate 6'), findsNothing);
     expect(find.textContaining('fewer than'), findsNothing);
   });
 
-  testWidgets('fewer certifications than chosen: the heading says All 3', (
+  testWidgets('fewer certifications than chosen: the heading says All 2', (
     tester,
   ) async {
     SharedPreferences.setMockInitialValues(savedRun(uid));
@@ -446,14 +472,13 @@ void main() {
     await openScreen(tester);
 
     expectResults(_gaps5);
-    expect(find.text('All 3 to close your gaps'), findsOneWidget);
-    expect(find.textContaining('Top 3'), findsNothing);
-    expect(
-      find.text(
-        'Showing all 3 certifications for your career goal, fewer than the 5 you chose. We keep adding new ones.',
-      ),
-      findsOneWidget,
-    );
+    expect(find.text('All 2 to close your gaps'), findsOneWidget);
+    expect(find.text(_n2GapsMany(2, 5)), findsOneWidget);
+    expect(_cards, findsNWidgets(2));
+    // Python covers no gap, so the list is not filled up with it.
+    expect(find.text('Python Certificate'), findsNothing);
+    expect(find.text('Relevant to your career goal.'), findsNothing);
+    expect(find.textContaining('Top 2'), findsNothing);
     expect(find.textContaining('Tap Change and choose All'), findsNothing);
   });
 
@@ -470,12 +495,7 @@ void main() {
 
     expectResults(_gaps5);
     expect(find.text('The only one to close your gaps'), findsOneWidget);
-    expect(
-      find.text(
-        'Showing the only certification for your career goal, fewer than the 5 you chose. We keep adding new ones.',
-      ),
-      findsOneWidget,
-    );
+    expect(find.text(_n2GapsOne(5)), findsOneWidget);
   });
 
   // Very large text: the "How many?" labels are taller than the old fixed
@@ -689,8 +709,8 @@ void main() {
       SharedPreferences.setMockInitialValues(
         savedRun(uid, goal: 'strengthenSkills', limit: 10),
       );
-      // Skills that no certification uses keep the cards short, so the
-      // test looks only at the choices row.
+      // Skills that no certification uses leave no cards, so the test
+      // looks only at the choices row.
       users.analysis = {
         ...analysisMap(),
         'currentSkills': ['Public Speaking'],
@@ -724,5 +744,305 @@ void main() {
     final change = tester.getRect(find.text('Change'));
     expect(change.left, greaterThan(summary.right));
     expect(change.top, lessThan(summary.bottom));
+  });
+
+  // The results list only certifications that cover a skill gap (or build
+  // on a skill the user has). The others for the career goal are never
+  // listed, and no list fills up with them.
+  group('only certifications that cover a gap', () {
+    String choices(String goal, int limit) =>
+        CertificationSetupMemory.choicesSummary(
+          goal == 'closeGaps'
+              ? CertificationGoal.closeGaps
+              : CertificationGoal.strengthenSkills,
+          limit == 0 ? null : limit,
+        );
+
+    testWidgets('All, close gaps: only the ones that cover a gap', (
+      tester,
+    ) async {
+      SharedPreferences.setMockInitialValues(savedRun(uid, limit: 0));
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(choices('closeGaps', 0));
+      expect(find.text('Covers your skill gaps'), findsOneWidget);
+      expect(_cards, findsNWidgets(2));
+      // The ranking is unchanged: same number of gaps, then name order.
+      expect(
+        tester.getTopLeft(find.text('Power BI Certificate')).dy,
+        lessThan(tester.getTopLeft(find.text('SQL Certificate')).dy),
+      );
+      expect(find.text('1 of 2 gaps covered'), findsNWidgets(2));
+      expect(find.text('Python Certificate'), findsNothing);
+      expect(find.text('Also for your career goal'), findsNothing);
+      expect(find.text('Relevant to your career goal.'), findsNothing);
+    });
+
+    testWidgets('All, strengthen: only the ones that build on a skill', (
+      tester,
+    ) async {
+      SharedPreferences.setMockInitialValues(
+        savedRun(uid, goal: 'strengthenSkills', limit: 0),
+      );
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(choices('strengthenSkills', 0));
+      expect(find.text('Builds on your skills'), findsOneWidget);
+      expect(_cards, findsOneWidget);
+      expect(find.text('Python Certificate'), findsOneWidget);
+      expect(find.text('Uses 1 of your 2 skills'), findsOneWidget);
+      expect(find.text('SQL Certificate'), findsNothing);
+      expect(find.text('Power BI Certificate'), findsNothing);
+      expect(find.text('Also for your career goal'), findsNothing);
+    });
+
+    testWidgets('Top 10, close gaps, fewer found: says how many', (
+      tester,
+    ) async {
+      SharedPreferences.setMockInitialValues(savedRun(uid, limit: 10));
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(choices('closeGaps', 10));
+      expect(find.text('All 2 to close your gaps'), findsOneWidget);
+      expect(find.text(_n2GapsMany(2, 10)), findsOneWidget);
+      expect(_cards, findsNWidgets(2));
+      expect(find.text('Python Certificate'), findsNothing);
+    });
+
+    testWidgets('Top 5, strengthen, one found: says so', (tester) async {
+      SharedPreferences.setMockInitialValues(
+        savedRun(uid, goal: 'strengthenSkills', limit: 5),
+      );
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(choices('strengthenSkills', 5));
+      expect(find.text('The only one to strengthen your skills'), findsOneWidget);
+      expect(find.text(_n2SkillsOne(5)), findsOneWidget);
+      expect(_cards, findsOneWidget);
+    });
+
+    testWidgets('Top 5, strengthen, two found: says how many', (tester) async {
+      SharedPreferences.setMockInitialValues(
+        savedRun(uid, goal: 'strengthenSkills', limit: 5),
+      );
+      certs.catalog = [
+        ...certs.catalog,
+        _cert('excel_cert', 'Excel Certificate', ['Excel']),
+      ];
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(choices('strengthenSkills', 5));
+      expect(find.text('All 2 to strengthen your skills'), findsOneWidget);
+      expect(find.text(_n2SkillsMany(2, 5)), findsOneWidget);
+      expect(_cards, findsNWidgets(2));
+      expect(find.text('Excel Certificate'), findsOneWidget);
+      expect(find.text('Python Certificate'), findsOneWidget);
+      expect(find.text('SQL Certificate'), findsNothing);
+      expect(find.text('Power BI Certificate'), findsNothing);
+    });
+
+    testWidgets('Top 10, strengthen, more found: Showing 10 of 11', (
+      tester,
+    ) async {
+      SharedPreferences.setMockInitialValues(
+        savedRun(uid, goal: 'strengthenSkills', limit: 10),
+      );
+      certs.catalog = [
+        for (var i = 1; i <= 11; i++)
+          _cert('cert_$i', 'Certificate $i', ['Python']),
+      ];
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(_strengthen10);
+      expect(find.text('Top 10 to strengthen your skills'), findsOneWidget);
+      expect(find.text(_n1Skills(10, 11)), findsOneWidget);
+      expect(_cards, findsNWidgets(10));
+      // Ties are ranked by name: 1, 10, 11, 2 ... 9, so 9 is left out.
+      expect(find.text('Certificate 9'), findsNothing);
+      expect(find.textContaining('fewer than'), findsNothing);
+    });
+
+    testWidgets('Top 5, close gaps, exactly 5 found: no note', (tester) async {
+      SharedPreferences.setMockInitialValues(savedRun(uid));
+      certs.catalog = [
+        for (var i = 1; i <= 5; i++)
+          _cert('cert_$i', 'Certificate $i', ['Power BI']),
+      ];
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(_gaps5);
+      expect(find.text('Top 5 to close your gaps'), findsOneWidget);
+      expect(_cards, findsNWidgets(5));
+      expect(find.textContaining('Showing'), findsNothing);
+      expect(find.textContaining('fewer than'), findsNothing);
+    });
+
+    for (final goal in ['closeGaps', 'strengthenSkills']) {
+      for (final limit in [0, 5, 10]) {
+        final label = CertificationSetupMemory.limitLabel(
+          limit == 0 ? null : limit,
+        );
+        testWidgets('none found, $goal, $label: only a message', (
+          tester,
+        ) async {
+          SharedPreferences.setMockInitialValues(
+            savedRun(uid, goal: goal, limit: limit),
+          );
+          users.analysis = {
+            ...analysisMap(),
+            'skillGaps': ['Kubernetes'],
+            'currentSkills': ['Public Speaking'],
+          };
+
+          await start(tester);
+          await openScreen(tester);
+
+          final forGaps = goal == 'closeGaps';
+          expectResults(choices(goal, limit));
+          expect(
+            find.text(
+              forGaps
+                  ? 'No certification covers your gaps yet'
+                  : 'No certification builds on your skills yet',
+            ),
+            findsOneWidget,
+          );
+          expect(find.text(forGaps ? _eGaps : _eSkills), findsOneWidget);
+          expect(_cards, findsNothing);
+          for (final name in [
+            'SQL Certificate',
+            'Power BI Certificate',
+            'Python Certificate',
+          ]) {
+            expect(find.text(name), findsNothing);
+          }
+          expect(find.textContaining('to close your gaps'), findsNothing);
+          expect(find.textContaining('to strengthen your skills'), findsNothing);
+          expect(find.text('Covers your skill gaps'), findsNothing);
+          expect(find.text('Builds on your skills'), findsNothing);
+          expect(find.text('Also for your career goal'), findsNothing);
+          expect(
+            find.text('Here are certifications that fit your career goal.'),
+            findsNothing,
+          );
+          expect(find.textContaining('Showing'), findsNothing);
+          expect(find.textContaining('fewer than'), findsNothing);
+          expect(find.text('Fresh with every analysis'), findsOneWidget);
+        });
+      }
+    }
+
+    testWidgets('no skill gaps in the analysis: only a message', (
+      tester,
+    ) async {
+      SharedPreferences.setMockInitialValues(savedRun(uid));
+      users.analysis = {...analysisMap(), 'skillGaps': <String>[]};
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(_gaps5);
+      expect(find.text('No skill gaps found'), findsOneWidget);
+      expect(find.text(_eNoGaps), findsOneWidget);
+      expect(_cards, findsNothing);
+    });
+
+    testWidgets('no skills in the analysis: only a message', (tester) async {
+      SharedPreferences.setMockInitialValues(
+        savedRun(uid, goal: 'strengthenSkills', limit: 0),
+      );
+      users.analysis = {...analysisMap(), 'currentSkills': <String>[]};
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(choices('strengthenSkills', 0));
+      expect(find.text('No skills found'), findsOneWidget);
+      expect(find.text(_eNoSkills), findsOneWidget);
+      expect(_cards, findsNothing);
+    });
+
+    testWidgets('no certification for the career goal: message unchanged', (
+      tester,
+    ) async {
+      SharedPreferences.setMockInitialValues(savedRun(uid));
+      certs.catalog = [];
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(_gaps5);
+      expect(find.text('No matching certifications yet'), findsOneWidget);
+      expect(
+        find.text(
+          'We do not have certifications for this career goal yet. We keep adding new ones, so check back soon.',
+        ),
+        findsOneWidget,
+      );
+      expect(_cards, findsNothing);
+    });
+
+    testWidgets('a certification in the CV is still hidden and counted', (
+      tester,
+    ) async {
+      SharedPreferences.setMockInitialValues(savedRun(uid, limit: 0));
+      users.analysis = {
+        ...analysisMap(),
+        'certifications': [
+          {'name': 'Power BI Certificate'},
+        ],
+      };
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(choices('closeGaps', 0));
+      expect(_cards, findsOneWidget);
+      expect(find.text('SQL Certificate'), findsOneWidget);
+      expect(find.text('Power BI Certificate'), findsNothing);
+      expect(
+        find.text('1 certification already listed in your CV is hidden.'),
+        findsOneWidget,
+      );
+    });
+
+    testWidgets('none found and one hidden: the message and the hidden note', (
+      tester,
+    ) async {
+      SharedPreferences.setMockInitialValues(savedRun(uid, limit: 0));
+      users.analysis = {
+        ...analysisMap(),
+        'skillGaps': ['Kubernetes'],
+        'certifications': [
+          {'name': 'Power BI Certificate'},
+        ],
+      };
+
+      await start(tester);
+      await openScreen(tester);
+
+      expectResults(choices('closeGaps', 0));
+      expect(find.text('No certification covers your gaps yet'), findsOneWidget);
+      expect(find.text(_eGaps), findsOneWidget);
+      expect(
+        find.text('1 certification already listed in your CV is hidden.'),
+        findsOneWidget,
+      );
+      expect(_cards, findsNothing);
+    });
   });
 }

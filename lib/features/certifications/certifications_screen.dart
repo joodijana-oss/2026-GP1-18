@@ -28,6 +28,8 @@ import 'certification_setup_memory.dart';
 ///  - "Change" on the results      -> back to the setup page; the back arrow
 ///                                    returns to the same results
 ///  - nothing found                -> "no matching certifications" message
+///  - no certification covers a gap
+///    (or builds on a skill)       -> a short message, with no list
 ///
 /// Matching runs on the phone (300 certifications). The choices are
 /// remembered on this device for each signed-in user when Find
@@ -796,7 +798,10 @@ class _CertificationsScreenState extends State<CertificationsScreen>
     final recs = _recs!;
     final total = recs.targetSkills.length;
     final limit = _limit;
-    final shown = recs.top(limit);
+    // Only certifications that cover a gap (or build on a skill) are listed.
+    final found = recs.matched.length;
+    final shown =
+        limit == null ? recs.matched : recs.matched.take(limit).toList();
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -854,30 +859,41 @@ class _CertificationsScreenState extends State<CertificationsScreen>
                   : (_forGaps
                       ? 'No certification covers your gaps yet'
                       : 'No certification builds on your skills yet'),
-              subtitle: 'Here are certifications that fit your career goal.',
+              subtitle: total == 0
+                  ? (_forGaps
+                      ? 'Tap Change and choose Strengthen my skills to build on what you know.'
+                      : 'Tap Change and choose Close my skill gaps to learn what your career goal needs.')
+                  : (_forGaps
+                      ? 'We keep adding new ones. For now, look for training in Opportunity Radar.'
+                      : 'We keep adding new ones. For now, look for hackathons and training in Opportunity Radar.'),
             ),
-          ],
-          if (limit != null) ...[
+          ] else if (limit != null) ...[
             const SizedBox(height: 26),
             _sectionTitle(_topHeading(shown.length, limit), shown.length),
             const SizedBox(height: 14),
             for (final match in shown) _buildCertCard(match, total),
-            if (recs.total > shown.length)
+            if (found > shown.length)
               Text(
-                'Showing ${shown.length} of ${recs.total} certifications for your career goal. Tap Change and choose All to see every one.',
+                _forGaps
+                    ? 'Showing ${shown.length} of $found certifications that cover your gaps. Tap Change and choose All to see every one.'
+                    : 'Showing ${shown.length} of $found certifications that build on your skills. Tap Change and choose All to see every one.',
                 style: TextStyle(
                   color: AppColors.secondaryText,
                   fontSize: 12.5,
                   height: 1.5,
                 ),
               ),
-            // Fewer than chosen: every certification for the career goal is
-            // already on screen.
+            // Fewer than chosen: every certification that covers a gap (or
+            // builds on a skill) is already on screen.
             if (shown.length < limit)
               Text(
                 shown.length == 1
-                    ? 'Showing the only certification for your career goal, fewer than the $limit you chose. We keep adding new ones.'
-                    : 'Showing all ${shown.length} certifications for your career goal, fewer than the $limit you chose. We keep adding new ones.',
+                    ? (_forGaps
+                        ? 'We found 1 certification that covers your gaps, fewer than the $limit you chose.'
+                        : 'We found 1 certification that builds on your skills, fewer than the $limit you chose.')
+                    : (_forGaps
+                        ? 'We found $found certifications that cover your gaps, fewer than the $limit you chose.'
+                        : 'We found $found certifications that build on your skills, fewer than the $limit you chose.'),
                 style: TextStyle(
                   color: AppColors.secondaryText,
                   fontSize: 12.5,
@@ -885,21 +901,13 @@ class _CertificationsScreenState extends State<CertificationsScreen>
                 ),
               ),
           ] else ...[
-            if (recs.matched.isNotEmpty) ...[
-              const SizedBox(height: 26),
-              _sectionTitle(
-                _forGaps ? 'Covers your skill gaps' : 'Builds on your skills',
-                recs.matched.length,
-              ),
-              const SizedBox(height: 14),
-              for (final match in recs.matched) _buildCertCard(match, total),
-            ],
-            if (recs.others.isNotEmpty) ...[
-              const SizedBox(height: 26),
-              _sectionTitle('Also for your career goal', recs.others.length),
-              const SizedBox(height: 14),
-              for (final match in recs.others) _buildCertCard(match, total),
-            ],
+            const SizedBox(height: 26),
+            _sectionTitle(
+              _forGaps ? 'Covers your skill gaps' : 'Builds on your skills',
+              recs.matched.length,
+            ),
+            const SizedBox(height: 14),
+            for (final match in recs.matched) _buildCertCard(match, total),
           ],
         ],
         if (recs.hiddenOwned > 0) ...[
@@ -1157,9 +1165,10 @@ class _CertificationsScreenState extends State<CertificationsScreen>
     );
   }
 
+  // Every listed certification covers at least one gap (or builds on at
+  // least one skill), so the card always shows the progress line.
   Widget _buildCertCard(CertificationMatch match, int totalTargets) {
     final cert = match.certification;
-    final covers = match.matchCount > 0;
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -1243,39 +1252,37 @@ class _CertificationsScreenState extends State<CertificationsScreen>
                 ),
                 const SizedBox(height: 14),
                 _buildWhyBox(match),
-                if (covers) ...[
-                  const SizedBox(height: 12),
-                  Row(
-                    children: [
-                      Text(
-                        _forGaps
-                            ? '${match.matchCount} of $totalTargets ${totalTargets == 1 ? 'gap' : 'gaps'} covered'
-                            : 'Uses ${match.matchCount} of your $totalTargets ${totalTargets == 1 ? 'skill' : 'skills'}',
-                        style: TextStyle(
-                          color: AppColors.tealText,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w700,
-                        ),
+                const SizedBox(height: 12),
+                Row(
+                  children: [
+                    Text(
+                      _forGaps
+                          ? '${match.matchCount} of $totalTargets ${totalTargets == 1 ? 'gap' : 'gaps'} covered'
+                          : 'Uses ${match.matchCount} of your $totalTargets ${totalTargets == 1 ? 'skill' : 'skills'}',
+                      style: TextStyle(
+                        color: AppColors.tealText,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700,
                       ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(4),
-                          child: LinearProgressIndicator(
-                            value: totalTargets == 0
-                                ? 0
-                                : match.matchCount / totalTargets,
-                            minHeight: 6,
-                            backgroundColor: AppColors.lightGray,
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                              AppColors.teal,
-                            ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(4),
+                        child: LinearProgressIndicator(
+                          value: totalTargets == 0
+                              ? 0
+                              : match.matchCount / totalTargets,
+                          minHeight: 6,
+                          backgroundColor: AppColors.lightGray,
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                            AppColors.teal,
                           ),
                         ),
                       ),
-                    ],
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -1319,28 +1326,22 @@ class _CertificationsScreenState extends State<CertificationsScreen>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                if (match.matchCount > 0)
-                  Text.rich(
-                    TextSpan(
-                      style: baseStyle,
-                      children: [
-                        TextSpan(
-                          text: _forGaps
-                              ? 'Covers your gaps: '
-                              : 'Builds on your skills: ',
-                        ),
-                        TextSpan(
-                          text: match.matchedSkills.join(', '),
-                          style: boldStyle,
-                        ),
-                      ],
-                    ),
-                  )
-                else
-                  Text(
-                    'Relevant to your career goal.',
+                Text.rich(
+                  TextSpan(
                     style: baseStyle,
+                    children: [
+                      TextSpan(
+                        text: _forGaps
+                            ? 'Covers your gaps: '
+                            : 'Builds on your skills: ',
+                      ),
+                      TextSpan(
+                        text: match.matchedSkills.join(', '),
+                        style: boldStyle,
+                      ),
+                    ],
                   ),
+                ),
                 if (match.levelFits) ...[
                   const SizedBox(height: 4),
                   Text(

@@ -108,8 +108,9 @@ class _HomeScreenState extends State<HomeScreen>
         experienceLevel: user?['experienceLevel']?.toString(),
       );
 
-      // Certifications that close gaps first, then the ones for the goal
-      final matches = result.top(_maxHomeRecommendations);
+      // Only certifications that cover a skill gap, as on the
+      // Certifications screen.
+      final matches = result.matched.take(_maxHomeRecommendations).toList();
 
       final items = matches.map((m) {
         final gaps = m.matchedSkills;
@@ -117,9 +118,7 @@ class _HomeScreenState extends State<HomeScreen>
           type: 'Certification',
           title: m.certification.name,
           provider: m.certification.issuer,
-          reason: gaps.isEmpty
-              ? 'Matches your career goal'
-              : 'Covers: ${gaps.join(', ')}',
+          reason: 'Covers: ${gaps.join(', ')}',
           icon: Icons.workspace_premium_rounded,
           // Tapping the card opens this certification's details
           destination: (_) => CertificationDetailsScreen(
@@ -942,7 +941,7 @@ class _HomeScreenState extends State<HomeScreen>
         else if (recommendations.isEmpty)
           _recommendationsMessage(
             icon: Icons.workspace_premium_outlined,
-            text: 'No certifications found for your career goal yet.',
+            text: 'No certifications to recommend for your skill gaps yet.',
           )
         else
         SizedBox(
@@ -966,7 +965,7 @@ class _HomeScreenState extends State<HomeScreen>
   }
 
   // Shown instead of the cards while loading, before the first analysis,
-  // or when no certification fits the career goal.
+  // or when no certification covers a skill gap.
   Widget _recommendationsMessage({
     required IconData icon,
     required String text,
