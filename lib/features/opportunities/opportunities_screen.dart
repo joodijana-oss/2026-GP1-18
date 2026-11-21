@@ -607,18 +607,10 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
               ],
             ),
           ),
-          if (recs.closedHidden > 0) ...[
-            const SizedBox(height: 14),
-            _summaryNote(
-              recs.closedHidden == 1
-                  ? '1 opportunity with closed registration is hidden.'
-                  : '${recs.closedHidden} opportunities with closed registration are hidden.',
-            ),
-          ],
           // A gap with nothing in the catalogue is named, so it does not
           // silently disappear from the list.
           if (recs.uncoveredGaps.isNotEmpty) ...[
-            const SizedBox(height: 10),
+            const SizedBox(height: 14),
             _summaryNote(
               'No opportunity in our catalog covers ${recs.uncoveredGaps.join(', ')} yet.',
             ),
