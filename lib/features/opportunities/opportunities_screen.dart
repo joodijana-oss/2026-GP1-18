@@ -537,17 +537,6 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
                 _buildCard(shown[index], animate: index < 4),
           ),
         ),
-      _gap(8),
-      _padded(
-        _entrance(
-          delay: 120,
-          child: _buildNextCard(
-            title: 'Always up to date',
-            text:
-                'New opportunities are added often. Pull down to refresh, or run a new analysis after you change your CV or career goal.',
-          ),
-        ),
-      ),
     ];
   }
 
@@ -1298,60 +1287,6 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
                     color: AppColors.secondaryText,
                     fontSize: 12.5,
                     height: 1.45,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildNextCard({required String title, required String text}) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: AppColors.lightTeal.withValues(alpha: 0.35),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: 42,
-            height: 42,
-            decoration: BoxDecoration(
-              color: AppColors.softBackground,
-              borderRadius: BorderRadius.circular(13),
-            ),
-            child: Icon(
-              Icons.refresh_rounded,
-              color: AppColors.tealText,
-              size: 22,
-            ),
-          ),
-          const SizedBox(width: 13),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(
-                    color: AppColors.navyText,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-                const SizedBox(height: 6),
-                Text(
-                  text,
-                  style: TextStyle(
-                    color: AppColors.secondaryText,
-                    fontSize: 13,
-                    height: 1.5,
                   ),
                 ),
               ],
