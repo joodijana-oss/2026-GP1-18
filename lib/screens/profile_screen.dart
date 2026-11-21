@@ -3560,9 +3560,11 @@ class _ProfileScreenState extends State<ProfileScreen>
 
 
 
+  // Community opens on top of Profile, so going back returns here.
+
   void _openCommunity() {
 
-    Navigator.pushReplacement(
+    Navigator.push(
 
       context,
 

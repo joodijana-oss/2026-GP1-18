@@ -159,8 +159,9 @@ class _ExploreScreenState extends State<ExploreScreen> {
       );
     }
 
+    // Community opens on top of this tab, so going back returns here.
     if (index == 2) {
-      Navigator.pushReplacement(
+      Navigator.push(
         context,
         MaterialPageRoute(
           builder: (_) => const CommunityScreen(),

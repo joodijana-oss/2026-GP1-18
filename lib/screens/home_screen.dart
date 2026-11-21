@@ -1778,8 +1778,10 @@ class _HomeScreenState extends State<HomeScreen>
                 icon: Icons.groups_2_outlined,
                 label: 'Community',
                 selected: false,
+                // Community opens on top of Home, so going back
+                // returns here.
                 onTap: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
