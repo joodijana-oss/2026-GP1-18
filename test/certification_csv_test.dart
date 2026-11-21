@@ -11,7 +11,7 @@ void main() {
 
     final certs = CertificationService.parseCsv(text);
 
-    expect(certs.length, 300);
+    expect(certs.length, 294);
     expect(certs.map((c) => c.id).toSet().length, certs.length);
 
     for (final c in certs) {

@@ -2049,7 +2049,7 @@
   "provider": "Tuwaiq Academy",
   "type": "Bootcamp",
   "title": "UX/UI Design Bootcamp",
-  "description": "The UX/UI design bootcamp enables participants to understand the fundamentals of user-centered design and design thinking, conduct user research and analyze user needs, design professional interfaces with Figma, and evaluate usability with specialized tools such as Maze and Optimal Workshop, while using AI tools such as Claude to support data analysis, idea generation and design improvement.",
+  "description": "The UX/UI design bootcamp enables participants to understand the fundamentals of user-centered design and design thinking, conduct user research and analyze user needs, design professional interfaces with Figma, and evaluate usability with specialized tools such as Maze and Optimal Workshop, while using AI tools to support data analysis, idea generation and design improvement.",
   "objectives": [
    "Apply visual and interaction design principles to improve the user experience.",
    "Design app and website interfaces using professional tools such as Figma.",
@@ -8368,32 +8368,6 @@
   "skills": [
    "Databases and SQL",
    "Database Design"
-  ],
-  "careerPathIds": [
-   "database_administrator"
-  ]
- },
- {
-  "id": "coursera_iOUoN2SmEeuW_BJwyZjLPQ",
-  "source": "coursera",
-  "provider": "Google Cloud",
-  "type": "Course",
-  "title": "Enterprise Database Migration",
-  "description": "This course is intended to give architects, engineers, and developers the skills required to help enterprise customers architect, plan, execute, and test database migration projects. Through a combination of presentations, demos, and hands-on labs participants move databases to Google Cloud while taking advantage of various services. This course covers how to move on-premises, enterprise databases like SQL Server to Google Cloud (Compute Engine and Cloud SQL) and Oracle to Google Cloud bare metal.",
-  "objectives": [],
-  "requirements": [],
-  "field": "Data & AI",
-  "location": "Online",
-  "isFree": null,
-  "price": "",
-  "startDate": "",
-  "endDate": "",
-  "registrationDeadline": "",
-  "duration": "3 weeks of study, 6-8 hours/week",
-  "url": "https://www.coursera.org/learn/enterprise-database-migration",
-  "skills": [
-   "Databases and SQL",
-   "Data Migration"
   ],
   "careerPathIds": [
    "database_administrator"
