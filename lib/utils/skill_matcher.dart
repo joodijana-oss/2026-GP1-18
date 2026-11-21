@@ -27,6 +27,15 @@ class SkillMatcher {
   /// Built once: [normalize] runs on every title and description.
   static final RegExp _nonWord = RegExp(r'[^a-z0-9]+');
 
+  /// A skill name as an identity, for telling the names of one list apart.
+  /// It is [normalize] with '+' and '#' kept as words, so "C++", "C#" and
+  /// "C" stay three skills ("c plus plus", "c sharp", "c") and "Data+" is
+  /// not "Data". [normalize] alone is right for searching a text,
+  /// where those signs are lost anyway.
+  static String identityKey(String input) => normalize(
+        input.replaceAll('+', ' plus ').replaceAll('#', ' sharp '),
+      );
+
   /// The certification skill name (normalized) that [input] stands for.
   static String canonical(String input) {
     final key = normalize(input);
@@ -244,6 +253,14 @@ class SkillMatcher {
       }
     }
     return names.toList();
+  }
+
+  /// True when [name] is a name the table knows: a group name or one of its
+  /// synonyms. The career analysis uses it to keep a known name whole when
+  /// it cleans bundled market skill names.
+  static bool isKnownName(String name) {
+    final key = normalize(name);
+    return _aliases.containsKey(key) || _synonymsOf.containsKey(key);
   }
 
   /// Products, frameworks and tools: they belong to a broader skill (Node.js

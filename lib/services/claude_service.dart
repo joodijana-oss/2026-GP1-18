@@ -1,8 +1,14 @@
 import 'dart:convert';
  
 import 'package:http/http.dart' as http;
+
+import 'analysis_requests.dart';
  
-class ClaudeService {
+/// The neutral name the rest of the app and the evaluation tools use for
+/// the AI analysis service.
+typedef AnalysisAi = ClaudeService;
+ 
+class ClaudeService implements AnalysisRequests {
   static const String _apiKey =
       String.fromEnvironment('ANTHROPIC_API_KEY');
  
@@ -15,15 +21,25 @@ class ClaudeService {
   // A stalled connection would otherwise leave the loading screen forever.
   // The CV review thinks before answering, so the limit is generous.
   static const Duration _requestTimeout = Duration(seconds: 120);
+
+  /// Set only by the evaluation tools and the tests: the key to send
+  /// instead of the one compiled into the app, and the HTTP client to send
+  /// requests with. The app leaves both unset.
+  String? apiKey;
+  http.Client? client;
+
+  /// The key every request uses.
+  String get _effectiveKey => apiKey ?? _apiKey;
  
   // =========================================================
   // 1) ANALYZE USER CV
   // =========================================================
  
+  @override
   Future<Map<String, dynamic>> analyzeCv({
     required String cvText,
   }) async {
-    if (_apiKey.isEmpty) {
+    if (_effectiveKey.isEmpty) {
       throw Exception(
         'ANTHROPIC_API_KEY is missing.',
       );
@@ -222,11 +238,15 @@ Return EXACTLY this JSON structure:
   // 2) EXTRACT MARKET SKILLS FROM REAL JOB POSTINGS
   // =========================================================
  
+  /// With [singleSkillNames] the request also asks for one skill, tool or
+  /// certification per entry ([singleSkillRule]).
+  @override
   Future<List<String>> extractMarketSkills({
     required String careerName,
     required String jobMarketText,
+    bool singleSkillNames = false,
   }) async {
-    if (_apiKey.isEmpty) {
+    if (_effectiveKey.isEmpty) {
       throw Exception(
         'ANTHROPIC_API_KEY is missing.',
       );
@@ -289,7 +309,7 @@ Examples:
  
 11. Do not include markdown.
  
-Return exactly:
+${singleSkillNames ? singleSkillRule : ''}Return exactly:
  
 {
   "targetSkills": []
@@ -310,11 +330,16 @@ Return exactly:
   // 3) SEMANTIC SKILL GAP COMPARISON
   // =========================================================
  
+  /// [timeLimit] replaces the usual limit of two minutes. The analysis
+  /// passes a shorter one when this request is the fallback of the CV
+  /// evidence check.
+  @override
   Future<List<String>> identifySkillGaps({
     required List<String> currentSkills,
     required List<String> targetSkills,
+    Duration? timeLimit,
   }) async {
-    if (_apiKey.isEmpty) {
+    if (_effectiveKey.isEmpty) {
       throw Exception(
         'ANTHROPIC_API_KEY is missing.',
       );
@@ -399,6 +424,7 @@ Return exactly:
     final decoded = await _sendPrompt(
       prompt: prompt,
       maxTokens: 1200,
+      timeLimit: timeLimit,
     );
  
     final gaps = _normalizeStringList(
@@ -444,6 +470,172 @@ Return exactly:
   }
  
   // =========================================================
+  // 3b) SINGLE-SKILL NAMES AND CV EVIDENCE CHECK
+  // =========================================================
+
+  /// Added to the market-skills request when it must return one skill per
+  /// entry. Without it the list repeats what postings do: several
+  /// certifications or vendors packed into one entry, which no course can
+  /// be matched to. The examples are from career goals the evaluation does
+  /// not use.
+  static const String singleSkillRule = '''
+12. Every entry must name exactly ONE skill, tool or certification,
+    the way a learner would search for it:
+    - no parentheses and no examples inside a name;
+    - no lists joined by "/", ",", "or" or "and";
+    - no "such as", "e.g." or "including";
+    - never a category that stands for several different things.
+      Return the things themselves, each as its own entry, when the
+      postings name them, and leave the category out.
+
+Examples:
+- "Design Tools (Figma, Sketch)" -> "Figma" and "Sketch"
+- "Python or R" -> "Python" and "R"
+- "ETL Pipelines (Airflow/dbt)" -> "ETL Pipelines"
+- "Vendor Certifications" -> the certifications the postings name
+
+''';
+
+  /// The rules of the CV evidence check ([skillEvidencePrompt]). The
+  /// examples are from career goals the evaluation does not use.
+  static const String cvEvidenceRules = '''
+STATUS:
+- "shown": the CV gives direct evidence of the skill: work or internship
+  tasks, a project, coursework with practical work, a lab, a competition,
+  a certification that covers it, or the CV lists it as a skill.
+- "partly": only weak or indirect evidence: a passing mention, a course
+  title with no practical work, or a related skill that is not the same.
+- "missing": the CV does not show it.
+
+RULES:
+
+1. Read the whole CV: experience, projects, education, certifications,
+   activities and skills. Judge what the person did, not which words the
+   CV uses. Evidence written as an activity counts.
+
+Example:
+- "Interviewed 12 customers and turned their answers into a feature
+  list" shows "User Research", although the CV never uses that name.
+
+2. A skill that is a certification is "shown" only when the person holds
+   that certification. A similar certification is not the same one.
+
+3. A skill that is a specific product or tool is "shown" only when the CV
+   names that product or tool, or the person holds a certification about
+   it.
+
+4. Do not over-generalize. A related skill is not the same skill.
+
+Examples:
+- "Built wireframes in a design tool" does not show "Usability Testing".
+- "Spliced and tested fibre cables" does not show "RF Planning".
+- "Wrote SQL reports" does not show "Data Pipeline Orchestration".
+
+5. For "shown" and "partly", put in "quote" a short piece of the CV text
+   that is the evidence: 3 to 15 words from one line of the CV, copied
+   exactly, character by character. Never write a quote that is not in the
+   CV. For "missing", use an empty string.
+
+6. Return every listed skill exactly once, with its name exactly as it is
+   written in the list, in the same order.
+
+7. Return ONLY valid JSON. Do not include markdown or explanations.
+
+Return exactly:
+
+{
+  "skills": [
+    {
+      "skill": "",
+      "status": "shown",
+      "quote": ""
+    }
+  ]
+}
+''';
+
+  /// The request that checks every market skill against the CV text.
+  static String skillEvidencePrompt({
+    required String cvText,
+    required List<String> currentSkills,
+    required List<String> certifications,
+    required List<String> targetSkills,
+  }) {
+    return '''
+You are checking a CV against the skills that job postings ask for,
+for Masra, a Saudi career-development application for university
+students and fresh graduates in Computing and IT.
+
+CV TEXT
+----------------
+$cvText
+----------------
+
+SKILLS ALREADY EXTRACTED FROM THIS CV:
+${jsonEncode(currentSkills)}
+
+CERTIFICATIONS THE PERSON HOLDS (FROM THIS CV):
+${jsonEncode(certifications)}
+
+TARGET SKILLS IDENTIFIED FROM REAL JOB POSTINGS:
+${jsonEncode(targetSkills)}
+
+TASK:
+
+For every TARGET SKILL, decide from the CV text whether the person
+already shows it.
+
+$cvEvidenceRules''';
+  }
+
+  /// Sends [prompt] and returns the JSON object of the answer. The CV
+  /// evidence check and the evaluation tools use it (the tools send the
+  /// texts of tools/gap_eval/arms/ through it). [timeLimit] replaces the
+  /// usual limit of two minutes.
+  Future<Map<String, dynamic>> requestJson({
+    required String prompt,
+    required int maxTokens,
+    Duration? timeLimit,
+  }) async {
+    if (_effectiveKey.isEmpty) {
+      throw Exception(
+        'AI request failed: the API key is missing.',
+      );
+    }
+
+    return _sendPrompt(
+      prompt: prompt,
+      maxTokens: maxTokens,
+      timeLimit: timeLimit,
+    );
+  }
+
+  /// Checks every target skill against the CV text. Returns the raw
+  /// `skills` list of the answer (`{skill, status, quote}` per skill);
+  /// lib/services/skill_gap_check.dart verifies it and turns it into gaps.
+  @override
+  Future<dynamic> checkSkillsAgainstCv({
+    required String cvText,
+    required List<String> currentSkills,
+    required List<String> certifications,
+    required List<String> targetSkills,
+    Duration? timeLimit,
+  }) async {
+    final decoded = await requestJson(
+      prompt: skillEvidencePrompt(
+        cvText: cvText,
+        currentSkills: currentSkills,
+        certifications: certifications,
+        targetSkills: targetSkills,
+      ),
+      maxTokens: 2500,
+      timeLimit: timeLimit,
+    );
+
+    return decoded['skills'];
+  }
+
+  // =========================================================
   // 4) CV IMPROVEMENT (ATS REVIEW)
   // =========================================================
  
@@ -460,7 +652,7 @@ Return exactly:
     required String cvText,
     required String careerName,
   }) async {
-    if (_apiKey.isEmpty) {
+    if (_effectiveKey.isEmpty) {
       throw Exception(
         'ANTHROPIC_API_KEY is missing.',
       );
@@ -638,8 +830,14 @@ Return EXACTLY this JSON structure:
     required String prompt,
     required int maxTokens,
     bool enableThinking = false,
+    Duration? timeLimit,
   }) async {
-    final response = await http.post(
+    // Each request has its own HTTP client unless one was set. Closing it
+    // after the answer is what http.post does too; closing it when the
+    // time limit is reached also stops the request, so its connection does
+    // not stay open in the background.
+    final own = client == null ? http.Client() : null;
+    final request = (client ?? own!).post(
       Uri.parse(
         _endpoint,
       ),
@@ -647,7 +845,7 @@ Return EXACTLY this JSON structure:
         'Content-Type':
             'application/json',
         'x-api-key':
-            _apiKey,
+            _effectiveKey,
         'anthropic-version':
             '2023-06-01',
       },
@@ -672,7 +870,14 @@ Return EXACTLY this JSON structure:
           },
         ],
       }),
-    ).timeout(_requestTimeout);
+    );
+
+    final http.Response response;
+    try {
+      response = await request.timeout(timeLimit ?? _requestTimeout);
+    } finally {
+      own?.close();
+    }
  
     if (response.statusCode < 200 ||
         response.statusCode >= 300) {

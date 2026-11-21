@@ -1,7 +1,11 @@
 import 'dart:math' as math;
 
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
+import '../../services/career_analysis_pipeline.dart';
 import '../../services/career_path_service.dart';
 import '../../services/claude_service.dart';
 import '../../services/job_market_service.dart';
@@ -152,84 +156,45 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
       final careerName =
           await _careerPathService.getCareerName(careerGoalId);
 
-      // 2) Analyze CV
-      final cvAnalysis = await _claudeService.analyzeCv(
-        cvText: _cvText!,
-      );
-
-      final currentSkills = List<String>.from(
-        cvAnalysis['currentSkills'] ?? [],
-      );
-
-      if (!mounted) return;
-      setState(() => _analysisStep = 1);
-
-      // 3) Relevant jobs from Masra dataset
+      // 2) Relevant jobs from Masra dataset
       final relevantJobs =
           await _jobMarketService.getRelevantJobs(
         careerGoalId,
         limit: 20,
       );
 
-      if (relevantJobs.isEmpty) {
-        throw Exception(
-          'No relevant job postings were found for $careerName.',
-        );
-      }
+      // 3) to 7) The AI steps: read the CV, read the job postings, find
+      // the skill gaps. They live in the pipeline, with their fallbacks.
+      const settings = AnalysisSettings.app;
+
+      final pipeline = CareerAnalysisPipeline(
+        _claudeService,
+        settings: settings,
+        names: settings.isOriginal
+            ? null
+            : await _loadCatalogueNames(),
+      );
+
+      // Leaving the screen while the CV or the job postings are being
+      // read stops the analysis, with nothing saved (AnalysisCancelled).
+      final finalAnalysis = await pipeline.run(
+        cvText: _cvText!,
+        careerGoalId: careerGoalId,
+        careerName: careerName,
+        jobs: relevantJobs,
+        onStep: (step) {
+          if (mounted) setState(() => _analysisStep = step);
+        },
+        isCancelled: () => !mounted,
+      );
 
       final marketJobCount = relevantJobs.length;
-
-      // 4) Build market text
-      final jobMarketText = _buildJobMarketText(relevantJobs);
-
-      // 5) Extract target market skills
-      final targetSkills =
-          await _claudeService.extractMarketSkills(
-        careerName: careerName,
-        jobMarketText: jobMarketText,
-      );
-
-      if (targetSkills.isEmpty) {
-        throw Exception(
-          'No market skills could be identified.',
-        );
-      }
-
-      if (!mounted) return;
-      setState(() => _analysisStep = 2);
-
-      // 6) Semantic comparison
-      final skillGaps =
-          await _claudeService.identifySkillGaps(
-        currentSkills: currentSkills,
-        targetSkills: targetSkills,
-      );
-
-      // 7) Final analysis
-      final finalAnalysis = <String, dynamic>{
-        'strengths': List<String>.from(
-          cvAnalysis['strengths'] ?? [],
-        ),
-        'currentSkills': currentSkills,
-        'skillGaps': skillGaps,
-        'targetSkills': targetSkills,
-
-        // Keep structured AI output as-is.
-        'education': cvAnalysis['education'] ?? [],
-        'certifications': cvAnalysis['certifications'] ?? [],
-        'projects': cvAnalysis['projects'] ?? [],
-        'experience': cvAnalysis['experience'] ?? [],
-
-        'careerGoalId': careerGoalId,
-        'careerGoalName': careerName,
-        'marketJobCount': marketJobCount,
-        'analysisSource':
-            'Masra Saudi job postings dataset',
-        'marketBased': true,
-      };
+      final currentSkills = finalAnalysis['currentSkills'];
+      final targetSkills = finalAnalysis['targetSkills'];
+      final skillGaps = finalAnalysis['skillGaps'];
 
       // 8) Save
-      await _userService.saveLatestAnalysis(finalAnalysis);
+      await _saveAnalysis(finalAnalysis);
 
       if (!mounted) return;
 
@@ -254,6 +219,9 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
       debugPrint('Market Target Skills: $targetSkills');
       debugPrint('Skill Gaps: $skillGaps');
       debugPrint('================================');
+    } on AnalysisCancelled {
+      // The user left the screen: nothing to show and nothing saved.
+      return;
     } catch (e) {
       debugPrint('CAREER ANALYSIS ERROR: $e');
 
@@ -267,29 +235,47 @@ class _CareerAnalysisScreenState extends State<CareerAnalysisScreen>
     }
   }
 
-  String _buildJobMarketText(
-    List<Map<String, String>> jobs,
+  /// Saves the analysis. The fields the pipeline adds are optional, so
+  /// when the database refuses them (its rules may list the allowed
+  /// fields) the analysis is saved once more without them: the user keeps
+  /// the result ([CareerAnalysisPipeline.saveWithFallback]).
+  Future<void> _saveAnalysis(
+    Map<String, dynamic> analysis,
   ) {
-    final buffer = StringBuffer();
+    return CareerAnalysisPipeline.saveWithFallback(
+      analysis,
+      save: _userService.saveLatestAnalysis,
+      isRefusal: (error) =>
+          error is FirebaseException && error.code == 'permission-denied',
+    );
+  }
 
-    for (int i = 0; i < jobs.length; i++) {
-      final job = jobs[i];
+  /// The skill tags of the bundled opportunities, read once per app run.
+  static List<String>? _opportunityTags;
 
-      buffer.writeln('JOB ${i + 1}');
-      buffer.writeln('Title: ${job['title'] ?? ''}');
-
-      final city = job['city'] ?? '';
-
-      if (city.trim().isNotEmpty) {
-        buffer.writeln('City: $city');
+  /// The skill names the app knows, for the pipeline. The opportunities
+  /// file (about 0.5 MB) is decoded away from the main isolate, so the
+  /// loading animation keeps running, and it is not kept in the asset
+  /// cache: only its tags are kept, for the next analysis. When the file
+  /// cannot be read, the names of the synonym table are used.
+  Future<CatalogueNames> _loadCatalogueNames() async {
+    try {
+      var tags = _opportunityTags;
+      if (tags == null) {
+        final text = await rootBundle.loadString(
+          'lib/assets/data/Masra_Opportunities.json',
+          cache: false,
+        );
+        tags = await compute<String, List<String>>(
+          CatalogueNames.opportunityTagsFromJson,
+          text,
+        );
+        _opportunityTags = tags;
       }
-
-      buffer.writeln('Description:');
-      buffer.writeln(job['description'] ?? '');
-      buffer.writeln('------------------------------');
+      return CatalogueNames(opportunityTags: tags);
+    } catch (_) {
+      return CatalogueNames();
     }
-
-    return buffer.toString();
   }
 
   bool get _hasCv =>
