@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:masra/models/gap_link.dart';
 import 'package:masra/services/analysis_requests.dart';
 import 'package:masra/services/career_analysis_pipeline.dart';
 
@@ -38,6 +39,36 @@ class FakeAi implements AnalysisRequests {
   Object? evidenceError;
   Object? namesError;
   Duration evidenceDelay = Duration.zero;
+
+  /// When the evidence check answered (the end of the gap step).
+  DateTime? evidenceAnsweredAt;
+
+  /// The answer of the typed link request.
+  dynamic links = [
+    {
+      'skill': 'User Research',
+      'kind': 'skill',
+      'same': ['UX Research'],
+      'covers': [],
+      'terms': ['user interviews'],
+    },
+    {
+      'skill': 'Roadmap Planning',
+      'kind': 'skill',
+      'same': [],
+      'covers': ['Product Management', 'Not A Catalogue Name'],
+      'terms': ['roadmap', 'a term that is much too long to keep'],
+    },
+    {'skill': 'SQL', 'kind': 'tool', 'same': ['SQL'], 'covers': []},
+  ];
+  Object? linkError;
+  Duration linkDelay = Duration.zero;
+  List<String>? linkSkillsSeen;
+  List<String>? linkConceptsSeen;
+  LinkRequest? linkRequestSeen;
+
+  /// The arguments of the gap requests, to compare two runs.
+  final List<String> gapInputs = [];
 
   final List<String> calls = [];
   bool? askedForSingleNames;
@@ -81,6 +112,7 @@ class FakeAi implements AnalysisRequests {
     Duration? timeLimit,
   }) async {
     calls.add('names');
+    gapInputs.add('names|$currentSkills|$targetSkills');
     namesTimeLimit = timeLimit;
     if (namesError != null) throw namesError!;
     return gapsByNames;
@@ -95,12 +127,39 @@ class FakeAi implements AnalysisRequests {
     Duration? timeLimit,
   }) async {
     calls.add('evidence');
+    gapInputs.add(
+        'evidence|$cvText|$currentSkills|$certifications|$targetSkills|'
+        '$timeLimit');
     certificationsSeen = certifications;
     await Future<void>.delayed(evidenceDelay);
+    evidenceAnsweredAt = DateTime.now();
     if (evidenceError != null) throw evidenceError!;
     return evidence;
   }
+
+  @override
+  Future<dynamic> linkSkillsToConcepts({
+    required List<String> skills,
+    required List<String> concepts,
+    LinkRequest request = LinkRequest.typed,
+    Duration? timeLimit,
+  }) async {
+    calls.add('link');
+    linkSkillsSeen = skills;
+    linkConceptsSeen = concepts;
+    linkRequestSeen = request;
+    await Future<void>.delayed(linkDelay);
+    if (linkError != null) throw linkError!;
+    return links;
+  }
 }
+
+/// What the app runs, with the link request switched on.
+const AnalysisSettings withLinks = AnalysisSettings(
+  gapMethod: GapMethod.cvEvidence,
+  singleSkillNames: true,
+  linkSkills: true,
+);
 
 final CatalogueNames names = CatalogueNames(
   opportunityTags: const ['Product Management', 'UX Research'],
@@ -139,12 +198,14 @@ const List<String> originalFields = [
 
 void main() {
   group('what the app runs', () {
-    test('single-skill market names and the CV evidence check', () {
+    test('single-skill market names and the CV evidence check, no links', () {
       const app = AnalysisSettings.app;
       expect(app.gapMethod, GapMethod.cvEvidence);
       expect(app.singleSkillNames, isTrue);
       expect(app.partlyIsGap, isFalse);
       expect(app.isOriginal, isFalse);
+      // Matching by meaning stays off until it has passed its rules.
+      expect(app.linkSkills, isFalse);
     });
 
     test('a pipeline built without settings runs what the app runs',
@@ -187,6 +248,7 @@ void main() {
         'gapMethod',
         'targetSkillStatus',
       ]);
+      expect(analysis.containsKey('gapLinks'), isFalse);
     });
 
     test('when the evidence check fails, the names-only path answers with '
@@ -335,6 +397,207 @@ void main() {
       expect(outcome.usedFallback, isTrue);
       expect(outcome.failure, 'time limit reached');
       expect(outcome.method, GapOutcome.namesOnly);
+    });
+  });
+
+  group('meaning links', () {
+    test('the link request runs next to the gap step and the links of the '
+        'gaps are stored', () async {
+      final ai = FakeAi();
+      final analysis = await run(ai, withLinks);
+
+      expect(ai.calls.take(2), ['analyze', 'market']);
+      expect(ai.calls.skip(2), unorderedEquals(['evidence', 'link']));
+      expect(ai.linkSkillsSeen, ['User Research', 'Roadmap Planning', 'SQL']);
+      expect(ai.linkRequestSeen, LinkRequest.typed);
+      // The synonym table names and the opportunity tags.
+      expect(ai.linkConceptsSeen, containsAll(['Product Management', 'UX Research']));
+
+      // Only "Roadmap Planning" is a gap. A name the app does not know is
+      // dropped, and so is a term of more than four words.
+      expect(analysis['skillGaps'], ['Roadmap Planning']);
+      expect(analysis['gapLinks'], [
+        {
+          'gap': 'Roadmap Planning',
+          'kind': 'skill',
+          'concepts': ['Product Management'],
+          'phrases': <String>[],
+          'terms': ['roadmap'],
+        },
+      ]);
+    });
+
+    test('the gap step sends the same requests and finds the same gaps with '
+        'links on and off', () async {
+      final off = FakeAi();
+      final on = FakeAi();
+      final without = await run(off, AnalysisSettings.app);
+      final withThem = await run(on, withLinks);
+
+      expect(on.gapInputs, off.gapInputs);
+      expect(on.calls.where((call) => call != 'link'), off.calls);
+      expect({...withThem}..remove('gapLinks'), without);
+
+      // The same when the evidence check fails and the names answer.
+      final offFailing = FakeAi()..evidenceError = Exception('AI failed');
+      final onFailing = FakeAi()..evidenceError = Exception('AI failed');
+      final plain = await run(offFailing, AnalysisSettings.app);
+      final linked = await run(onFailing, withLinks);
+      expect(onFailing.gapInputs, offFailing.gapInputs);
+      expect({...linked}..remove('gapLinks'), plain);
+    });
+
+    test('the first link request can be asked for, and its answer is read',
+        () async {
+      final ai = FakeAi()
+        ..links = [
+          {
+            'skill': 'Roadmap Planning',
+            'kind': 'skill',
+            'concepts': ['Product Management', 'UX Research', 'SQL'],
+            'phrases': ['product roadmap', 'roadmap', 'Roadmap Planning'],
+          },
+        ];
+      final analysis = await run(
+        ai,
+        const AnalysisSettings(
+          gapMethod: GapMethod.cvEvidence,
+          singleSkillNames: true,
+          linkSkills: true,
+          linkRequest: LinkRequest.names,
+        ),
+      );
+      expect(ai.linkRequestSeen, LinkRequest.names);
+      // At most two names; a one-word phrase and the skill's own name are
+      // not phrases.
+      expect(analysis['gapLinks'], [
+        {
+          'gap': 'Roadmap Planning',
+          'kind': 'skill',
+          'concepts': ['Product Management', 'UX Research'],
+          'phrases': ['product roadmap'],
+        },
+      ]);
+    });
+
+    test('a name is the same skill or a broader one, never both', () {
+      final links = CareerAnalysisPipeline.linksFrom(
+        [
+          {
+            'skill': 'Roadmap Planning',
+            'kind': 'Skill',
+            'same': ['Product Management'],
+            'covers': ['Product Management', 'UX Research'],
+          },
+        ],
+        skills: const ['Roadmap Planning'],
+        concepts: names.concepts,
+      );
+      expect(links.single.same, ['Product Management']);
+      expect(links.single.covers, ['UX Research']);
+    });
+
+    test('a failing link request keeps the gaps and saves no links', () async {
+      final ai = FakeAi()..linkError = Exception('AI request failed');
+      final analysis = await run(ai, withLinks);
+      expect(analysis['skillGaps'], ['Roadmap Planning']);
+      expect(analysis['gapMethod'], 'cv-evidence');
+      expect(analysis.containsKey('gapLinks'), isFalse);
+    });
+
+    test('an unusable link answer saves no links', () async {
+      for (final answer in [
+        null,
+        'not json',
+        {'links': 'none'},
+      ]) {
+        final ai = FakeAi()..links = answer;
+        final analysis = await run(ai, withLinks);
+        expect(analysis['skillGaps'], ['Roadmap Planning']);
+        expect(analysis.containsKey('gapLinks'), isFalse);
+      }
+    });
+
+    test('a link request that passes its time limit saves no links and '
+        'holds the analysis no longer than that limit', () async {
+      final ai = FakeAi()..linkDelay = const Duration(seconds: 2);
+      final watch = Stopwatch()..start();
+      final analysis = await run(
+        ai,
+        const AnalysisSettings(
+          gapMethod: GapMethod.cvEvidence,
+          singleSkillNames: true,
+          linkSkills: true,
+          linkLimit: Duration(milliseconds: 40),
+        ),
+      );
+      expect(watch.elapsed, lessThan(const Duration(seconds: 1)));
+      expect(analysis['skillGaps'], ['Roadmap Planning']);
+      expect(analysis.containsKey('gapLinks'), isFalse);
+    });
+
+    test('the limit of the link request is shorter than the gap check\'s, '
+        'so a slow link request never outlasts the gap step\'s own limit',
+        () {
+      expect(AnalysisSettings.app.linkLimit,
+          lessThan(AnalysisSettings.app.gapCheckLimit));
+    });
+
+    test('a slow link request holds the saved result no longer than the '
+        'grace after the gap step, and its late answer is dropped', () async {
+      final ai = FakeAi()
+        ..evidenceDelay = const Duration(milliseconds: 50)
+        ..linkDelay = const Duration(seconds: 3);
+      final analysis = await run(
+        ai,
+        const AnalysisSettings(
+          gapMethod: GapMethod.cvEvidence,
+          singleSkillNames: true,
+          linkSkills: true,
+          linkGrace: Duration(milliseconds: 100),
+        ),
+      );
+      final saved = DateTime.now();
+      // The gap step ended when the evidence check answered; the result
+      // came at most the grace (plus scheduling) after it, long before the
+      // link request's own limit of 45 seconds.
+      expect(saved.difference(ai.evidenceAnsweredAt!),
+          lessThan(const Duration(milliseconds: 600)));
+      expect(analysis['skillGaps'], ['Roadmap Planning']);
+      expect(analysis.containsKey('gapLinks'), isFalse);
+    });
+
+    test('a link answer that comes within the grace is stored', () async {
+      final ai = FakeAi()..linkDelay = const Duration(milliseconds: 30);
+      final analysis = await run(
+        ai,
+        const AnalysisSettings(
+          gapMethod: GapMethod.cvEvidence,
+          singleSkillNames: true,
+          linkSkills: true,
+          linkGrace: Duration(seconds: 2),
+        ),
+      );
+      expect(analysis['gapLinks'], isNotEmpty);
+    });
+
+    test('the app waits a few seconds at most for links after the gap step',
+        () {
+      expect(AnalysisSettings.app.linkGrace,
+          lessThanOrEqualTo(const Duration(seconds: 3)));
+    });
+
+    test('a link is stored under the gap\'s own spelling', () {
+      final links = CareerAnalysisPipeline.linksForGaps(
+        const [GapLink(gap: 'roadmap planning', concepts: ['Product Management'])],
+        const ['Roadmap Planning'],
+      );
+      expect(links.single.gap, 'Roadmap Planning');
+      expect(links.single.concepts, ['Product Management']);
+    });
+
+    test('a refused save drops the links with the other new fields', () {
+      expect(CareerAnalysisPipeline.optionalFields, contains('gapLinks'));
     });
   });
 

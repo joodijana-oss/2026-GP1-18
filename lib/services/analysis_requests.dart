@@ -1,3 +1,5 @@
+import '../models/gap_link.dart';
+
 /// The AI requests one career analysis makes.
 ///
 /// The analysis pipeline (career_analysis_pipeline.dart) only knows this
@@ -37,6 +39,16 @@ abstract interface class AnalysisRequests {
     required List<String> currentSkills,
     required List<String> certifications,
     required List<String> targetSkills,
+    Duration? timeLimit,
+  });
+
+  /// The catalogue names each skill is linked to: the raw `links` list of
+  /// the answer, one `{skill, kind, ...}` entry per skill, in the shape of
+  /// the wanted [request] (CareerAnalysisPipeline.linksFrom reads both).
+  Future<dynamic> linkSkillsToConcepts({
+    required List<String> skills,
+    required List<String> concepts,
+    LinkRequest request,
     Duration? timeLimit,
   });
 }

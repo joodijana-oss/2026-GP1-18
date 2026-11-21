@@ -69,10 +69,22 @@ class SkillMatcher {
   /// specific technologies must appear there, and multi-word names found
   /// there count as covered too.
   /// The original spelling of [wanted] is kept; each entry appears once.
+  ///
+  /// [links] and [phrases] are meaning links (lib/models/gap_link.dart). For
+  /// an entry that its own name does not cover, the names in `links[entry]`
+  /// are tried in its place by the same rules, and each wording of two
+  /// words or more in `phrases[entry]` counts when the certification's
+  /// text contains it. The caller decides which entries get links (only
+  /// those that no skill of the whole catalogue matches) and which linked
+  /// names count for this certification, so links fill holes and never
+  /// change a match that words already find. A specific product never uses
+  /// links: a certification on the broad skill does not teach the product.
   static List<String> matchedSkills(
     List<String> wanted,
     List<String> available, {
     String evidence = '',
+    Map<String, List<String>> links = const {},
+    Map<String, List<String>> phrases = const {},
   }) {
     final text = ' ${normalize(evidence)} ';
     final result = <String>[];
@@ -80,17 +92,38 @@ class SkillMatcher {
       if (result.contains(item)) continue;
       final key = normalize(item);
       if (key.isEmpty) continue;
-      final bool covered;
-      if (_specific.contains(key)) {
-        covered = _mentions(text, key) ||
-            available.any((skill) => normalize(skill) == key);
-      } else {
-        covered = available.any((skill) => matches(item, skill)) ||
-            (_tokens(key).length >= 2 && _mentions(text, key));
+      var covered = _covers(item, key, available, text);
+      if (!covered && !_specific.contains(key)) {
+        covered = (links[item] ?? const <String>[]).any((name) {
+              final nameKey = normalize(name);
+              return nameKey.isNotEmpty &&
+                  _covers(name, nameKey, available, text);
+            }) ||
+            (phrases[item] ?? const <String>[]).any((phrase) {
+              final phraseKey = normalize(phrase);
+              return _tokens(phraseKey).length >= 2 &&
+                  _mentions(text, phraseKey);
+            });
       }
       if (covered) result.add(item);
     }
     return result;
+  }
+
+  /// True when one of the [available] skills, or the padded, normalized
+  /// [text], covers the skill [name] ([key] is its [normalize]d form).
+  static bool _covers(
+    String name,
+    String key,
+    List<String> available,
+    String text,
+  ) {
+    if (_specific.contains(key)) {
+      return _mentions(text, key) ||
+          available.any((skill) => normalize(skill) == key);
+    }
+    return available.any((skill) => matches(name, skill)) ||
+        (_tokens(key).length >= 2 && _mentions(text, key));
   }
 
   /// True when the padded, normalized [text] contains [key] as whole words
@@ -254,6 +287,13 @@ class SkillMatcher {
     }
     return names.toList();
   }
+
+  /// The names of the synonym groups, as written in the table (the
+  /// certification skill names). Together with the opportunity skill tags
+  /// they are the names a meaning link may point to. They are read from the
+  /// table, so nothing has to be kept in step by hand.
+  static List<String> get conceptNames =>
+      _groups.keys.toList(growable: false);
 
   /// True when [name] is a name the table knows: a group name or one of its
   /// synonyms. The career analysis uses it to keep a known name whole when

@@ -1,5 +1,8 @@
 import '../models/certification.dart';
+import '../models/gap_link.dart';
 import '../utils/skill_matcher.dart';
+import 'link_support.dart';
+import 'opportunity_index.dart' show OpportunityIndex;
 
 /// What the user wants the certifications to do for them.
 enum CertificationGoal {
@@ -85,8 +88,25 @@ class CertificationRecommendations {
 ///     certification ([gapNamesCertification]).
 ///  4. Rank: more skills first, then the level that suits the user, then
 ///     verified certifications, then name.
+///
+/// Matching by meaning. A skill gap is written as job postings write it,
+/// and its name may match no certification skill at all, although
+/// certifications on that subject exist under another name. For such a gap
+/// (and only for such a gap) the meaning links stored with the analysis
+/// are used (`gapLinks`, lib/models/gap_link.dart; [links] says how). A
+/// linked name of the same skill counts like the gap's own name. A linked
+/// name of a broader skill counts for a certification only when the
+/// certification's own text (its name and description) supports the gap:
+/// it contains the gap's whole name, or a word of it that is distinctive
+/// in this list of certifications. A gap whose own name matches a
+/// certification skill is matched exactly as before, and so is an analysis
+/// without links. The card still shows the user's own gap name.
 class ContentBasedRecommender {
-  const ContentBasedRecommender();
+  const ContentBasedRecommender({this.links = LinkSettings.appCertifications});
+
+  /// How stored meaning links are used. Whatever the setting, an analysis
+  /// saved without links (no `gapLinks`) gives exactly the old list.
+  final LinkSettings links;
 
   CertificationRecommendations recommendCertifications({
     required Map<String, dynamic> analysis,
@@ -103,6 +123,11 @@ class ContentBasedRecommender {
     final wantedLevel = preferredLevel(experienceLevel, goal: goal);
     final wantedRank = wantedLevel == null ? null : _levelRank(wantedLevel);
 
+    // Links are for skill gaps only: a current skill is the user's own
+    // wording of something they know, not a market name to translate.
+    final gapLinks = goal == CertificationGoal.closeGaps
+        ? _linksFor(targets, analysis, certifications)
+        : const <String, _CertificationLink>{};
     // What the certification-name rule needs of each gap, worked out once
     // per call instead of once per certification.
     final gapNames = goal == CertificationGoal.closeGaps
@@ -124,10 +149,24 @@ class ContentBasedRecommender {
         continue;
       }
 
+      // The linked names that count for this certification, per gap.
+      final names = <String, List<String>>{};
+      final wordings = <String, List<String>>{};
+      gapLinks.forEach((gap, link) {
+        final allowed = [
+          ...link.same,
+          if (link.supported == null || link.supported!.contains(position))
+            ...link.covers,
+        ];
+        if (allowed.isNotEmpty) names[gap] = allowed;
+        if (link.searched.isNotEmpty) wordings[gap] = link.searched;
+      });
       final byWords = SkillMatcher.matchedSkills(
         targets,
         cert.skills,
         evidence: '${cert.name} ${cert.description} ${cert.skills.join(' ')}',
+        links: names,
+        phrases: wordings,
       );
       // Both lists keep the order of the targets, so a ranking where no
       // gap names a certification is exactly what words alone give.
@@ -191,6 +230,70 @@ class ContentBasedRecommender {
   /// The current skills written in an analysis document.
   static List<String> currentSkillsOf(Map<String, dynamic> analysis) =>
       _stringList(analysis['currentSkills']);
+
+  /// The meaning links written in an analysis document (`gapLinks`). Empty
+  /// for an analysis saved before links existed.
+  static List<GapLink> gapLinksOf(Map<String, dynamic> analysis) =>
+      GapLink.listFrom(analysis['gapLinks']);
+
+  /// The link each skill gap uses, for the gaps that are a hole in the
+  /// certification catalogue: no skill of any certification matches the
+  /// gap's own name ([SkillMatcher.matches]). A specific product, a gap the
+  /// analysis calls a tool or a certification, and a separate field of
+  /// study ([SkillMatcher.fieldOf]) never get one, as for opportunities:
+  /// the table keeps Computer Vision apart from Deep Learning on purpose,
+  /// and a link must not undo that.
+  Map<String, _CertificationLink> _linksFor(
+    List<String> gaps,
+    Map<String, dynamic> analysis,
+    List<Certification> certifications,
+  ) {
+    const none = <String, _CertificationLink>{};
+    if (!links.enabled || analysis['gapLinks'] is! List) return none;
+    final stored = GapLink.byGap(gapLinksOf(analysis));
+    if (stored.isEmpty) return none;
+
+    List<String> longEnough(Iterable<String> wordings) => [
+          for (final wording in wordings)
+            if (OpportunityIndex.tokensOf(wording).length >= 2) wording,
+        ];
+
+    final listNames = _CertificationNames.of(certifications);
+    final result = <String, _CertificationLink>{};
+    for (final gap in gaps) {
+      final link = stored[gap];
+      if (link == null ||
+          link.isProduct ||
+          SkillMatcher.isSpecific(gap) ||
+          SkillMatcher.fieldOf(gap) != null) {
+        continue;
+      }
+      if (!listNames.isHole(gap)) continue;
+      final covers = links.useCovers ? link.covers : const <String>[];
+      final searched = <String>[
+        if (links.phraseSearch) ...longEnough(link.phrases),
+        if (links.termEvidence && link.concepts.isEmpty)
+          ...longEnough(link.supportTerms),
+      ];
+      if (link.same.isEmpty && covers.isEmpty && searched.isEmpty) continue;
+      result[gap] = _CertificationLink(
+        same: link.same,
+        covers: covers,
+        searched: searched,
+        supported: covers.isEmpty || !links.supportGate
+            ? null
+            : CertificationTexts.of(certifications).supportFor(
+                gap,
+                terms: links.termSupport
+                    ? link.supportTerms
+                    : const <String>[],
+                theta: links.theta,
+                tags: links.tagSupport,
+              ),
+      );
+    }
+    return result;
+  }
 
   /// True when the skill gap [gap] names the certification [cert] itself.
   /// Job postings ask for certifications by name, and the synonym table
@@ -368,8 +471,9 @@ class _CertNames {
 
 /// What the ranking needs of a whole certification list, worked out once
 /// per list and reused while the list still holds the same certifications
-/// (kept in an Expando): the names of each certification for the
-/// certification-name rule.
+/// (kept in an Expando, like [CertificationTexts]): the names of each
+/// certification for the certification-name rule, and which gaps are
+/// holes in the catalogue for the meaning links.
 class _CertificationNames {
   _CertificationNames._(this._items)
       : _names = List<_CertNames?>.filled(_items.length, null);
@@ -379,6 +483,16 @@ class _CertificationNames {
   /// The names of each certification, worked out the first time the
   /// ranking asks for them (only the certifications of the career goal).
   final List<_CertNames?> _names;
+
+  /// Every skill of every certification, through [SkillMatcher.canonical].
+  /// Built on first use: only the meaning links need it.
+  late final List<String> _skills = {
+    for (final cert in _items)
+      for (final skill in cert.skills) SkillMatcher.canonical(skill),
+  }.toList(growable: false);
+
+  /// gap -> whether it is a hole, remembered per name.
+  final Map<String, bool> _holes = {};
 
   static final Expando<_CertificationNames> _cache =
       Expando<_CertificationNames>();
@@ -401,4 +515,157 @@ class _CertificationNames {
   /// The names of the certification at [position] in the list.
   _CertNames at(int position) =>
       _names[position] ??= _CertNames.of(_items[position]);
+
+  /// True when no skill of any certification matches the gap's own name
+  /// ([SkillMatcher.matches]).
+  bool isHole(String gap) => _holes[gap] ??= () {
+        final wanted = SkillMatcher.canonical(gap);
+        return !_skills
+            .any((skill) => SkillMatcher.matchesCanonical(wanted, skill));
+      }();
+}
+
+/// The meaning link one skill gap uses in a certification ranking.
+class _CertificationLink {
+  /// Catalogue names of the same skill.
+  final List<String> same;
+
+  /// Catalogue names of a broader skill.
+  final List<String> covers;
+
+  /// Stored wording searched in the certification's text.
+  final List<String> searched;
+
+  /// The positions, in the list given to the recommender, of the
+  /// certifications whose own text supports the gap: only for them do the
+  /// [covers] names count. Null when every certification may use them.
+  final Set<int>? supported;
+
+  const _CertificationLink({
+    required this.same,
+    required this.covers,
+    required this.searched,
+    required this.supported,
+  });
+}
+
+/// The words of each certification's own text (its name and description),
+/// prepared once per list for the support test of the meaning links. It is
+/// the certification counterpart of [OpportunityIndex.supportFor] and
+/// follows the same rules, with the same tokens ([OpportunityIndex.tokensOf]).
+class CertificationTexts {
+  CertificationTexts._(this._items, this._texts, this._tags);
+
+  final List<Certification> _items;
+
+  /// Tokens of the name and of the description, per certification.
+  final List<List<List<String>>> _texts;
+
+  /// Tokens of each skill, per certification.
+  final List<List<List<String>>> _tags;
+
+  static final Expando<CertificationTexts> _cache =
+      Expando<CertificationTexts>();
+
+  /// The prepared texts of [list], built on the first call and reused while
+  /// the list still holds the same certifications.
+  static CertificationTexts of(List<Certification> list) {
+    final cached = _cache[list];
+    if (cached != null && cached._sameItems(list)) return cached;
+    return _cache[list] = CertificationTexts._(
+      List<Certification>.of(list, growable: false),
+      [
+        for (final cert in list)
+          [
+            OpportunityIndex.tokensOf(cert.name),
+            OpportunityIndex.tokensOf(cert.description),
+          ],
+      ],
+      [
+        for (final cert in list)
+          [for (final skill in cert.skills) OpportunityIndex.tokensOf(skill)],
+      ],
+    );
+  }
+
+  bool _sameItems(List<Certification> list) {
+    if (list.length != _items.length) return false;
+    for (var i = 0; i < list.length; i++) {
+      if (!identical(list[i], _items[i])) return false;
+    }
+    return true;
+  }
+
+  /// token -> certifications that contain it, without and with the skills.
+  late final Map<String, Set<int>> _wordDocs = _docsOf(false);
+  late final Map<String, Set<int>> _wordDocsWithTags = _docsOf(true);
+
+  Map<String, Set<int>> _docsOf(bool tags) {
+    final docs = <String, Set<int>>{};
+    for (var i = 0; i < _items.length; i++) {
+      for (final tokens in [..._texts[i], if (tags) ..._tags[i]]) {
+        for (final token in tokens) {
+          (docs[token] ??= <int>{}).add(i);
+        }
+      }
+    }
+    return docs;
+  }
+
+  final Map<String, Set<int>> _supportCache = {};
+
+  /// The positions of the certifications whose own text supports the skill
+  /// gap [gap]: it contains the gap's whole name as a phrase, a distinctive
+  /// word of it, or one of [terms] ([LinkSupport.supported] has the rule,
+  /// shared with the opportunities). A word is distinctive when at most the
+  /// share [theta] of the certifications of this list contain it. With
+  /// [tags] the skills of a certification count as its text too. The
+  /// result is remembered, keyed on the names as given.
+  Set<int> supportFor(
+    String gap, {
+    Iterable<String> terms = const [],
+    required double theta,
+    bool tags = false,
+  }) {
+    final termList = terms is List<String> ? terms : terms.toList();
+    final cacheKey = '$theta|$tags|$gap|${termList.join('\u0001')}';
+    return _supportCache[cacheKey] ??= () {
+      final words = tags ? _wordDocsWithTags : _wordDocs;
+      Iterable<int> withPhrase(List<String> phrase) {
+        Set<int>? candidates;
+        for (final word in phrase) {
+          final docs = words[word];
+          if (docs == null) return const <int>[];
+          candidates =
+              candidates == null ? docs : candidates.intersection(docs);
+        }
+        return [
+          for (final i in candidates ?? const <int>{})
+            if ([..._texts[i], if (tags) ..._tags[i]]
+                .any((tokens) => _hasPhrase(tokens, phrase)))
+              i,
+        ];
+      }
+
+      return LinkSupport.supported(
+        gapTokens: OpportunityIndex.tokensOf(gap),
+        terms: [for (final term in termList) OpportunityIndex.tokensOf(term)],
+        theta: theta,
+        size: _items.length,
+        itemsWithWord: (word) => words[word],
+        itemsWithPhrase: withPhrase,
+      );
+    }();
+  }
+
+  static bool _hasPhrase(List<String> tokens, List<String> phrase) {
+    for (var start = 0; start + phrase.length <= tokens.length; start++) {
+      var same = true;
+      for (var k = 0; k < phrase.length && same; k++) {
+        same = tokens[start + k] == phrase[k];
+      }
+      if (same) return true;
+    }
+    return false;
+  }
 }

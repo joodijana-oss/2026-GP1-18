@@ -1,6 +1,7 @@
 import 'dart:isolate';
 import 'dart:math';
 
+import '../models/gap_link.dart';
 import '../models/opportunity.dart';
 import '../utils/skill_matcher.dart';
 import 'content_based_recommender.dart';
@@ -101,7 +102,11 @@ class OpportunityRecommendations {
   /// the analysis: the catalogue has nothing on them (Splunk, NoSQL). The
   /// screen says so instead of dropping them silently. A gap that is
   /// covered, but only through a tag of its synonym group and never by
-  /// name, is not listed here.
+  /// name, is not listed here; neither is a gap linked to a catalogue name
+  /// of the same skill that another gap of the analysis already stands for
+  /// (the two are one aspect, and the card names the one the opportunity
+  /// names itself). A gap whose only evidence is kept for the ranking and
+  /// not for the reason line ([LinkSettings.reasonOnly]) is listed.
   List<String> get uncoveredGaps {
     final ranking = _ranking;
     if (ranking != null) return ranking.uncoveredGaps;
@@ -285,6 +290,13 @@ class RankingWeights {
   /// in few ("Kafka"); a unit test shows that case.
   final bool useIdf;
 
+  /// Matching by meaning: how the links stored with the analysis are used
+  /// for a skill gap whose own name finds no skill tag in the catalogue
+  /// (see "Meaning links" in [OpportunityRecommender]). Whatever the
+  /// setting, an analysis without links is ranked exactly as before. The
+  /// evaluation tools pass other settings to measure each approach.
+  final LinkSettings links;
+
   const RankingWeights({
     this.k1 = 1.2,
     this.b = 0.75,
@@ -301,6 +313,7 @@ class RankingWeights {
     this.fullDepthHours = 18,
     this.expandSynonyms = false,
     this.useIdf = true,
+    this.links = LinkSettings.appOpportunities,
   });
 }
 
@@ -406,11 +419,36 @@ class RankingWeights {
 ///     is re-ranked on its own with step 6
 ///     ([OpportunityRecommendations.filter]).
 ///
-/// Limits: matching is by words, not by meaning ("React Native" counts for
-/// a "React" gap, and a course titled "Risk Identification, Monitoring, and
-/// Analysis" counts for a "Monitoring" gap of a cloud engineer).
-/// Understanding meaning needs a language model (embeddings), which is
-/// future work.
+/// Meaning links. A skill gap is written as job postings write it, and the
+/// catalogue has its own names. When no skill tag of the catalogue stands
+/// for the gap's own name, the gap is a hole: only a text that happens to
+/// use the same words can find it, and courses that teach it under another
+/// name are missed. For a hole (and only for a hole) the recommender also
+/// uses the catalogue names the analysis linked the gap to (`gapLinks`,
+/// lib/models/gap_link.dart; [RankingWeights.links] says how):
+///   - a name of the same skill is searched like a skill tag of the gap;
+///   - a name of a broader skill is searched too, but it counts for an
+///     opportunity only when the opportunity's own text supports the gap
+///     ([OpportunityIndex.supportFor]): find by meaning, claim only with
+///     evidence. A course that merely carries the broad tag is not said to
+///     teach the gap.
+/// For each opportunity the best evidence counts: the gap's own or a
+/// linked name's, never both added up. The IDF counts every opportunity
+/// that has evidence either way. Links never remove a match, a gap that a
+/// tag already covers never uses them, and neither does a specific product
+/// or a gap the analysis calls a tool or a certification: a course on the
+/// broad skill does not teach the product. The card shows the user's own
+/// gap name. A gap linked to a name of the same skill joins that name's
+/// aspect (step 4), so the same courses are not rewarded twice. A gap
+/// linked only to broader names keeps its own aspect while the support
+/// test decides its evidence: only the courses that show it cover it.
+///
+/// Limits: without a link, matching is by words, not by meaning ("React
+/// Native" counts for a "React" gap, and a course titled "Risk
+/// Identification, Monitoring, and Analysis" counts for a "Monitoring" gap
+/// of a cloud engineer). A link says which catalogue skill a gap belongs
+/// to, and the support test looks for the gap's words in the course; it
+/// does not understand the course.
 class OpportunityRecommender {
   const OpportunityRecommender({this.weights = const RankingWeights()});
 
@@ -439,10 +477,30 @@ class OpportunityRecommender {
     final closed = open.where((isOpen) => !isOpen).length;
 
     // Steps 2 to 4: evidence per gap, and how much each gap weighs.
-    final bm25 = [for (final gap in gaps) _bm25ForGap(index, gap, goalId)];
+    final links = _linksFor(index, gaps, analysis);
+    // Per gap, the opportunities that rank through a link but may not name
+    // the gap as their reason ([LinkSettings.reasonOnly]); empty otherwise.
+    final unclaimed = [for (final _ in gaps) <int>{}];
+    final bm25 = [
+      for (var g = 0; g < gaps.length; g++)
+        _bm25ForGap(index, gaps[g], goalId,
+            link: links[g], unclaimed: unclaimed[g]),
+    ];
     final bestBm25 = [for (final scores in bm25) _bestOpen(scores, open)];
     final gapWeights = _gapWeights(gaps, analysis);
-    final aspects = _Aspects.of(gaps, gapWeights);
+    final settings = weights.links;
+    final aspects = _Aspects.of(gaps, gapWeights, links,
+        coversShareAspect: !settings.supportGate || settings.reasonOnly);
+    // A hole gap linked only to broader names, under the support gate, may
+    // be named on every opportunity it claims: the gate already checked
+    // that the opportunity's own text shows it ([_shownGaps]).
+    final namedByLink = [
+      for (final link in links)
+        settings.supportGate &&
+            link != null &&
+            link.same.isEmpty &&
+            link.covers.isNotEmpty,
+    ];
     final currentHits = [
       for (final skill in current) _evidenceFor(index, skill, goalId),
     ];
@@ -463,7 +521,12 @@ class OpportunityRecommender {
       ];
       if (covered.isEmpty && !goalRelated) continue;
 
-      final shown = _shownGaps(index, i, covered, gaps, gapWeights, aspects);
+      final claimed = [
+        for (final g in covered)
+          if (!unclaimed[g].contains(i)) g,
+      ];
+      final shown = _shownGaps(
+          index, i, claimed, gaps, gapWeights, aspects, namedByLink);
       final gapSkills = [for (final g in shown) gaps[g]];
       final gapKeys = gapSkills.map(SkillMatcher.canonical).toSet();
       final currentSkills = <String>[
@@ -523,9 +586,13 @@ class OpportunityRecommender {
         teaching: [for (final pick in picks) pick.candidate],
         share: aspects.share,
         diversity: diversity,
+        // A gap is uncovered when no open opportunity has evidence that it
+        // may name the gap for (the evidence kept only for the ranking by
+        // [LinkSettings.reasonOnly] does not count).
         uncoveredGaps: [
           for (var g = 0; g < gaps.length; g++)
-            if (bestBm25[g] <= 0) gaps[g],
+            if (!bm25[g].keys.any((i) => open[i] && !unclaimed[g].contains(i)))
+              gaps[g],
         ],
       ),
       careerGoalId: goalId,
@@ -576,6 +643,13 @@ class OpportunityRecommender {
             : const [])
           if (skill is String) skill,
       ],
+      // The meaning links as plain maps. The field is left out when the
+      // analysis has none, so "no links stored" stays visible over there.
+      if (analysis['gapLinks'] is List)
+        'gapLinks': [
+          for (final link in ContentBasedRecommender.gapLinksOf(analysis))
+            link.toMap(),
+        ],
     };
     final today = now ?? DateTime.now();
     OpportunityRecommendations here() => recommend(
@@ -629,6 +703,12 @@ class OpportunityRecommender {
   /// the tag "Network Security" stands for Firewall, VPN and Network
   /// Security alike, but a course should only be said to teach VPN when it
   /// says so. When it names none of them, the most demanded one is shown.
+  ///
+  /// [namedByLink] marks the hole gaps linked only to broader names under
+  /// the support gate. They count as named on every opportunity in
+  /// [covered]: an opportunity is only there for such a gap when its own
+  /// text supports it. (It matters when such a gap shares an aspect, as it
+  /// does with [LinkSettings.reasonOnly].)
   static List<int> _shownGaps(
     OpportunityIndex index,
     int i,
@@ -636,6 +716,7 @@ class OpportunityRecommender {
     List<String> gaps,
     List<double> gapWeights,
     _Aspects aspects,
+    List<bool> namedByLink,
   ) {
     final byAspect = <int, List<int>>{};
     for (final g in covered) {
@@ -649,7 +730,7 @@ class OpportunityRecommender {
       }
       final named = [
         for (final g in inAspect)
-          if (index.namesItself(i, gaps[g])) g,
+          if (namedByLink[g] || index.namesItself(i, gaps[g])) g,
       ];
       if (named.isNotEmpty) {
         shown.addAll(named);
@@ -762,20 +843,79 @@ class OpportunityRecommender {
   /// opportunity index -> BM25 score of [skill], for every opportunity in
   /// the catalogue that teaches it (see step 3 of the class comment).
   /// [goalId] is the user's career goal ([_evidenceFor] needs it).
+  ///
+  /// With a [link] (a gap whose own name is a hole, see "Meaning links" in
+  /// the class comment) the linked names are searched too. Each
+  /// opportunity keeps its best evidence, and n counts the opportunities
+  /// that have evidence by any of the names. A broader-skill name counts
+  /// only for the opportunities whose own text supports the gap. With
+  /// [LinkSettings.reasonOnly] the others keep that evidence for the
+  /// ranking and are added to [unclaimed] instead, so the reason line
+  /// leaves the gap out.
   Map<int, double> _bm25ForGap(
     OpportunityIndex index,
     String skill,
-    String goalId,
-  ) {
+    String goalId, {
+    _Link? link,
+    Set<int>? unclaimed,
+  }) {
     final evidence = _evidenceFor(index, skill, goalId);
     // n counts closed opportunities too, and only the evidence that does
     // not depend on the user: how rare a skill is in the catalogue does not
     // change from day to day or from user to user.
-    final n = index
-        .hitsFor(skill, expand: weights.expandSynonyms)
-        .values
-        .where((hits) => hits.hasEvidence)
-        .length;
+    final teaching = <int>{};
+    void count(Map<int, FieldHits> hits, Set<int>? only) {
+      hits.forEach((i, found) {
+        if (found.hasEvidence && (only == null || only.contains(i))) {
+          teaching.add(i);
+        }
+      });
+    }
+
+    count(index.hitsFor(skill, expand: weights.expandSynonyms), null);
+    if (link != null) {
+      final settings = weights.links;
+      // Opportunities with evidence the card may name the gap for.
+      final claimed = evidence.keys.toSet();
+      void merge(String name, {bool textOnly = false, Set<int>? only}) {
+        final keepAll = only == null || settings.reasonOnly;
+        count(
+          index.hitsFor(name,
+              expand: weights.expandSynonyms, textOnly: textOnly),
+          keepAll ? null : only,
+        );
+        _evidenceFor(index, name, goalId, textOnly: textOnly)
+            .forEach((i, tf) {
+          final supported = only == null || only.contains(i);
+          if (!supported && !keepAll) return;
+          if (supported) claimed.add(i);
+          final own = evidence[i];
+          if (own == null || tf > own) evidence[i] = tf;
+        });
+      }
+
+      for (final name in link.same) {
+        merge(name);
+      }
+      if (link.covers.isNotEmpty) {
+        final supported = settings.supportGate
+            ? index.supportFor(
+                skill,
+                terms: link.supportTerms,
+                theta: settings.theta,
+                tags: settings.tagSupport,
+              )
+            : null;
+        for (final name in link.covers) {
+          merge(name, only: supported);
+        }
+      }
+      for (final wording in link.searched) {
+        merge(wording, textOnly: true);
+      }
+      unclaimed?.addAll(evidence.keys.where((i) => !claimed.contains(i)));
+    }
+    final n = teaching.length;
     final idf = weights.useIdf
         ? log(1 + (index.size - n + 0.5) / (n + 0.5))
         : 1.0;
@@ -787,14 +927,17 @@ class OpportunityRecommender {
   /// class comment). Only opportunities with evidence are in the result.
   /// Loose mentions in long objectives ([FieldHits.looseObjectives]) count
   /// as objective mentions only for an opportunity listed for the career
-  /// goal [goalId].
+  /// goal [goalId]. [textOnly] is passed on to [OpportunityIndex.hitsFor].
   Map<int, double> _evidenceFor(
     OpportunityIndex index,
     String skill,
-    String goalId,
-  ) {
+    String goalId, {
+    bool textOnly = false,
+  }) {
     final result = <int, double>{};
-    index.hitsFor(skill, expand: weights.expandSynonyms).forEach((i, hits) {
+    index
+        .hitsFor(skill, expand: weights.expandSynonyms, textOnly: textOnly)
+        .forEach((i, hits) {
       final inGoal = goalId.isNotEmpty &&
           index.opportunityAt(i).careerPathIds.contains(goalId);
       var tf = 0.0;
@@ -826,6 +969,60 @@ class OpportunityRecommender {
       case OpportunityField.description:
         return weights.descriptionWeight;
     }
+  }
+
+  /// The meaning link each gap uses, or null (one entry per gap). A gap
+  /// gets one only when it is a hole: no skill tag of the catalogue stands
+  /// for its own name ([OpportunityIndex.anyTagCovers]). A specific product
+  /// never gets one, and neither does a gap the analysis calls a tool or a
+  /// certification, nor a separate field of study ([SkillMatcher.fieldOf]):
+  /// the table keeps Computer Vision apart from Deep Learning on purpose,
+  /// and a link must not undo that. Wording that is searched in the texts
+  /// must have two words or more.
+  List<_Link?> _linksFor(
+    OpportunityIndex index,
+    List<String> gaps,
+    Map<String, dynamic> analysis,
+  ) {
+    final none = List<_Link?>.filled(gaps.length, null);
+    final settings = weights.links;
+    if (!settings.enabled || analysis['gapLinks'] is! List) return none;
+    final stored = GapLink.byGap(ContentBasedRecommender.gapLinksOf(analysis));
+    if (stored.isEmpty) return none;
+
+    List<String> longEnough(Iterable<String> wordings) => [
+          for (final wording in wordings)
+            if (OpportunityIndex.tokensOf(wording).length >= 2) wording,
+        ];
+
+    final result = <_Link?>[];
+    for (final gap in gaps) {
+      _Link? link;
+      final found = stored[gap];
+      if (found != null &&
+          !found.isProduct &&
+          !SkillMatcher.isSpecific(gap) &&
+          SkillMatcher.fieldOf(gap) == null &&
+          !index.anyTagCovers(gap)) {
+        final covers = settings.useCovers ? found.covers : const <String>[];
+        final searched = <String>[
+          if (settings.phraseSearch) ...longEnough(found.phrases),
+          if (settings.termEvidence && found.concepts.isEmpty)
+            ...longEnough(found.supportTerms),
+        ];
+        if (found.same.isNotEmpty || covers.isNotEmpty || searched.isNotEmpty) {
+          link = _Link(
+            same: found.same,
+            covers: covers,
+            supportTerms:
+                settings.termSupport ? found.supportTerms : const <String>[],
+            searched: searched,
+          );
+        }
+      }
+      result.add(link);
+    }
+    return result;
   }
 
   /// The best score among the opportunities that are still open.
@@ -981,13 +1178,33 @@ class _Aspects {
 
   int get count => weight.length;
 
-  factory _Aspects.of(List<String> gaps, List<double> gapWeights) {
+  /// [links] holds the meaning link of each gap, or null. A gap with a
+  /// link is a hole: its own name is not in the catalogue.
+  ///  - Linked to a name of the same skill, it belongs to the aspect of the
+  ///    first such name: it is that skill under another name, as a synonym
+  ///    would be.
+  ///  - Linked only to names of a broader skill, it keeps its own aspect
+  ///    when the support gate limits its evidence to the opportunities that
+  ///    show the gap: a course on the broad skill that does not show it
+  ///    neither covers it nor takes it off the reason line of a course that
+  ///    does. With [coversShareAspect] (no gate, or the gate only for the
+  ///    reason line, [LinkSettings.reasonOnly]) its evidence is the broad
+  ///    name's own, so it belongs to that name's aspect, and the same
+  ///    courses are not rewarded twice.
+  factory _Aspects.of(
+    List<String> gaps,
+    List<double> gapWeights,
+    List<_Link?> links, {
+    required bool coversShareAspect,
+  }) {
     final keys = <String>[];
     final ofGap = <int>[];
     final weight = <double>[];
     final gapCount = <int>[];
     for (var g = 0; g < gaps.length; g++) {
-      final key = keyOf(gaps[g]);
+      final linked =
+          links[g]?.aspectName(coversShareAspect: coversShareAspect);
+      final key = keyOf(linked ?? gaps[g]);
       var a = keys.indexOf(key);
       if (a < 0) {
         a = keys.length;
@@ -1066,4 +1283,37 @@ class _Candidate {
         score: score,
         gapCoverage: gapCoverage,
       );
+}
+
+/// The meaning link one gap uses in a ranking (see "Meaning links" in
+/// [OpportunityRecommender]).
+class _Link {
+  /// Catalogue names of the same skill: searched like the gap itself.
+  final List<String> same;
+
+  /// Catalogue names of a broader skill: they count where the opportunity's
+  /// own text supports the gap.
+  final List<String> covers;
+
+  /// Stored wording that also counts as support.
+  final List<String> supportTerms;
+
+  /// Stored wording searched in the texts as evidence of its own.
+  final List<String> searched;
+
+  const _Link({
+    this.same = const [],
+    this.covers = const [],
+    this.supportTerms = const [],
+    this.searched = const [],
+  });
+
+  /// The linked name whose aspect the gap joins ([_Aspects.of]): the first
+  /// name of the same skill, else, with [coversShareAspect], the first name
+  /// of a broader skill. Null: the gap is its own aspect.
+  String? aspectName({required bool coversShareAspect}) {
+    if (same.isNotEmpty) return same.first;
+    if (coversShareAspect && covers.isNotEmpty) return covers.first;
+    return null;
+  }
 }

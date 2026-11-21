@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 
+import '../models/gap_link.dart';
+import '../utils/skill_matcher.dart';
 import 'analysis_requests.dart';
 import 'job_postings.dart';
 import 'market_skill_names.dart';
@@ -45,12 +47,39 @@ class AnalysisSettings {
   /// the comparison by names alone may take on its own (two minutes).
   final Duration fallbackLimit;
 
+  /// Ask the AI model to link the market skills to the names the
+  /// catalogues use, and store the links of the gaps as `gapLinks`
+  /// (lib/models/gap_link.dart). It is one more request, sent next to the
+  /// gap step; the gap step itself is not changed by it.
+  final bool linkSkills;
+
+  /// Which of the two link requests is sent.
+  final LinkRequest linkRequest;
+
+  /// The link request starts together with the gap step and has this long.
+  /// When it fails or is late, the analysis is saved without links and
+  /// matching works by words, as it did before links existed.
+  final Duration linkLimit;
+
+  /// How long the analysis waits for the link request once the gap step
+  /// has finished (never past [linkLimit]). The user is on the loading
+  /// screen, so a slow or stalled link request may hold the saved result
+  /// at most this much longer than the gap step; after that the analysis
+  /// is saved without links. A link answer is longer than the gap check's,
+  /// so it often arrives a little after it: on the development CVs the
+  /// link request finished 1.8 to 2.7 seconds after the gap step.
+  final Duration linkGrace;
+
   const AnalysisSettings({
     this.gapMethod = GapMethod.namesOnly,
     this.singleSkillNames = false,
     this.partlyIsGap = false,
     this.gapCheckLimit = const Duration(seconds: 60),
     this.fallbackLimit = const Duration(seconds: 45),
+    this.linkSkills = false,
+    this.linkRequest = LinkRequest.typed,
+    this.linkLimit = const Duration(seconds: 45),
+    this.linkGrace = const Duration(seconds: 3),
   });
 
   /// What the app runs, chosen by the held-out evaluation of the skill
@@ -58,16 +87,21 @@ class AnalysisSettings {
   /// and checks every market skill against a quote from it. It was the
   /// only approach that passed every decision rule (gaps for something the
   /// CV clearly shows fell from 18% to none, with recall inside its
-  /// limit).
+  /// limit). Matching to courses and certifications stays by words and the
+  /// synonym table until a meaning-based approach has passed its rules:
+  /// the link request is switched by [LinkSettings.requestedByApp], which
+  /// is off.
   static const AnalysisSettings app = AnalysisSettings(
     gapMethod: GapMethod.cvEvidence,
     singleSkillNames: true,
+    linkSkills: LinkSettings.requestedByApp,
+    linkRequest: LinkSettings.appRequest,
   );
 
   /// True when nothing new is switched on: the analysis then makes the
   /// same requests and saves the same fields as it always did.
   bool get isOriginal =>
-      gapMethod == GapMethod.namesOnly && !singleSkillNames;
+      gapMethod == GapMethod.namesOnly && !singleSkillNames && !linkSkills;
 }
 
 /// The skill names the app knows, read from its own data at run time.
@@ -76,7 +110,12 @@ class CatalogueNames {
   /// ([MarketSkillNames.knownFrom]).
   final bool Function(String name) isKnown;
 
-  const CatalogueNames._(this.isKnown);
+  /// The names a meaning link may point to: the synonym table groups, then
+  /// the opportunity skill tags that are not a group name. Read from the
+  /// app's data, never written by hand.
+  final List<String> concepts;
+
+  const CatalogueNames._(this.isKnown, this.concepts);
 
   /// [opportunityTags] are the skill tags of the opportunities. The
   /// synonym table is always known. The app passes no
@@ -87,8 +126,16 @@ class CatalogueNames {
     Iterable<String> opportunityTags = const [],
     Iterable<String> certificationSkills = const [],
   }) {
+    final concepts = <String>[];
+    final seen = <String>{};
+    for (final name in [...SkillMatcher.conceptNames, ...opportunityTags]) {
+      final text = name.trim();
+      final key = SkillMatcher.normalize(text);
+      if (key.isNotEmpty && seen.add(key)) concepts.add(text);
+    }
     return CatalogueNames._(
       MarketSkillNames.knownFrom([...opportunityTags, ...certificationSkills]),
+      concepts,
     );
   }
 
@@ -168,11 +215,16 @@ class AnalysisCancelled implements Exception {
 ///  1. Read the CV: strengths, current skills, certifications, projects.
 ///  2. Read the job postings of the career goal: the market skills, most
 ///     requested first ([marketSkills]).
-///  3. Find the skill gaps ([skillGaps]).
+///  3. Find the skill gaps ([skillGaps]) and, when the settings ask for
+///     it, link the market skills to the names the catalogues use at the
+///     same time ([skillLinks]).
 ///
 /// Nothing new may cost the user their analysis. The evidence check has
 /// one attempt and a time limit, and falls back to the comparison by
-/// names. Only the steps that always existed can end in an error.
+/// names. The link request has its own limit, it may hold the saved result
+/// at most [AnalysisSettings.linkGrace] past the end of the gap step, and
+/// when it fails or is late the analysis is simply saved without links.
+/// Only the steps that always existed can end in an error.
 ///
 /// This file has no Flutter import. The career analysis screen runs it,
 /// and so does the evaluation tool, which is how it measures the code that
@@ -196,6 +248,7 @@ class CareerAnalysisPipeline {
     'analysisVersion',
     'gapMethod',
     'targetSkillStatus',
+    'gapLinks',
   ];
 
   static const int analysisVersion = 2;
@@ -242,11 +295,19 @@ class CareerAnalysisPipeline {
     if (isCancelled?.call() ?? false) throw const AnalysisCancelled();
     onStep?.call(2);
 
+    // The links are for all market skills, so the request does not have
+    // to wait for the gaps: both run at the same time. The gap step gets
+    // the same inputs with links on and off.
+    final linkClock = Stopwatch()..start();
+    final linksRequest = settings.linkSkills
+        ? skillLinks(targetSkills)
+        : Future<List<GapLink>?>.value();
     final outcome = await skillGaps(
       cvText: cvText,
       cvAnalysis: cvAnalysis,
       targetSkills: targetSkills,
     );
+    final links = await afterGapStep(linksRequest, linkClock.elapsed);
 
     return <String, dynamic>{
       'strengths': List<String>.from(
@@ -272,6 +333,10 @@ class CareerAnalysisPipeline {
         'analysisVersion': analysisVersion,
         'gapMethod': outcome.method,
         if (outcome.statuses != null) 'targetSkillStatus': outcome.statuses,
+        if (links != null)
+          'gapLinks': [
+            for (final link in linksForGaps(links, outcome.gaps)) link.toMap(),
+          ],
       },
     };
   }
@@ -378,6 +443,180 @@ class CareerAnalysisPipeline {
       if (name.isEmpty) continue;
       final issuer = item is Map ? item['issuer']?.toString().trim() ?? '' : '';
       result.add(issuer.isEmpty ? name : '$name ($issuer)');
+    }
+    return result;
+  }
+
+  // ---------------------------------------------------------
+  // STEP 3 (IN PARALLEL): MEANING LINKS
+  // ---------------------------------------------------------
+
+  /// The answer of [request] once the gap step has finished, [elapsed]
+  /// after the link request started: it waits at most
+  /// [AnalysisSettings.linkGrace] more, and never past
+  /// [AnalysisSettings.linkLimit]. Null when the answer is not there by
+  /// then; the request itself is not waited for any longer, and its late
+  /// answer is dropped.
+  Future<List<GapLink>?> afterGapStep(
+    Future<List<GapLink>?> request,
+    Duration elapsed,
+  ) {
+    final left = settings.linkLimit - elapsed;
+    var wait = left < settings.linkGrace ? left : settings.linkGrace;
+    if (wait < Duration.zero) wait = Duration.zero;
+    // An answer that is already there is taken even with no time left: a
+    // finished future completes before a zero timer fires.
+    return request.timeout(wait, onTimeout: () => null);
+  }
+
+  /// The links of [skills] to the catalogue names, or null when the
+  /// request failed, answered with something unusable, or was late. Never
+  /// throws.
+  Future<List<GapLink>?> skillLinks(List<String> skills) async {
+    if (skills.isEmpty) return const [];
+    try {
+      final raw = await ai
+          .linkSkillsToConcepts(
+            skills: skills,
+            concepts: names.concepts,
+            request: settings.linkRequest,
+            timeLimit: settings.linkLimit,
+          )
+          .timeout(settings.linkLimit);
+      return linksFrom(raw, skills: skills, concepts: names.concepts);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// The usable part of a link answer ([raw] is its `links` list): one
+  /// link per skill of [skills] that the answer mentions, in the order of
+  /// [skills]. Both requests are read here. A catalogue name that is not
+  /// in [concepts] is dropped (the answer may only point to names the app
+  /// knows). At most [maxConcepts] names are kept of each kind: `same`
+  /// and `covers` for the typed request, `concepts` for the first one
+  /// (they are then all treated as broader-skill names). A phrase must
+  /// have 2 to [maxPhraseWords] words and differ from the skill name; a
+  /// term has 1 to [maxTermWords] words.
+  static List<GapLink> linksFrom(
+    dynamic raw, {
+    required List<String> skills,
+    required List<String> concepts,
+  }) {
+    if (raw is! List) {
+      throw const FormatException('The link request returned no list.');
+    }
+    final known = {
+      for (final name in concepts) SkillMatcher.normalize(name): name,
+    };
+    final answers = <String, Map>{};
+    for (final item in raw) {
+      if (item is! Map) continue;
+      final key = SkillMatcher.normalize(item['skill']?.toString() ?? '');
+      if (key.isNotEmpty) answers.putIfAbsent(key, () => item);
+    }
+
+    List<String> knownNames(dynamic values, {List<String> not = const []}) {
+      final result = <String>[];
+      for (final value in values is List ? values : const []) {
+        final name = known[SkillMatcher.normalize(value.toString())];
+        if (name == null || result.contains(name) || not.contains(name)) {
+          continue;
+        }
+        result.add(name);
+        if (result.length >= maxConcepts) break;
+      }
+      return result;
+    }
+
+    List<String> wordings(
+      dynamic values, {
+      required int minWords,
+      required int maxWords,
+      required int limit,
+      String? not,
+    }) {
+      final result = <String>[];
+      for (final value in values is List ? values : const []) {
+        final wording = value.toString().trim();
+        final wordingKey = SkillMatcher.normalize(wording);
+        final words = wordingKey.isEmpty ? 0 : wordingKey.split(' ').length;
+        if (words < minWords || words > maxWords || wordingKey == not) continue;
+        if (!result.contains(wording)) result.add(wording);
+        if (result.length >= limit) break;
+      }
+      return result;
+    }
+
+    final result = <GapLink>[];
+    for (final skill in skills) {
+      final key = SkillMatcher.normalize(skill);
+      final answer = answers[key];
+      if (answer == null) continue;
+
+      final kind = answer['kind']?.toString().trim().toLowerCase() ?? '';
+      final same = knownNames(answer['same']);
+      final covers = [
+        ...knownNames(answer['covers'], not: same),
+        ...knownNames(answer['concepts'], not: same),
+      ];
+      result.add(GapLink(
+        gap: skill,
+        kind: GapLink.kinds.contains(kind) ? kind : GapLink.skillKind,
+        concepts: [
+          ...same,
+          for (final name in covers.toSet().take(maxConcepts)) name,
+        ],
+        same: same,
+        phrases: wordings(
+          answer['phrases'],
+          minWords: 2,
+          maxWords: maxPhraseWords,
+          limit: maxPhrases,
+          not: key,
+        ),
+        terms: wordings(
+          answer['terms'],
+          minWords: 1,
+          maxWords: maxTermWords,
+          limit: maxTerms,
+        ),
+      ));
+    }
+    return result;
+  }
+
+  static const int maxConcepts = 2;
+  static const int maxPhrases = 3;
+  static const int maxPhraseWords = 5;
+  static const int maxTerms = 4;
+  static const int maxTermWords = 4;
+
+  /// The links of the gaps only, in the order of [gaps]: the analysis
+  /// stores what the recommenders use and nothing else. A link is found by
+  /// the gap's normalized name ([SkillMatcher.normalize]), since the gap
+  /// step may give a gap in its own spelling (the comparison by names, when
+  /// the evidence check failed), and it is stored under the gap's spelling,
+  /// which is what the recommenders look it up by.
+  static List<GapLink> linksForGaps(List<GapLink> links, List<String> gaps) {
+    final byKey = <String, GapLink>{};
+    for (final link in links) {
+      byKey.putIfAbsent(SkillMatcher.normalize(link.gap), () => link);
+    }
+    final result = <GapLink>[];
+    for (final gap in gaps) {
+      final link = byKey[SkillMatcher.normalize(gap)];
+      if (link == null) continue;
+      result.add(link.gap == gap
+          ? link
+          : GapLink(
+              gap: gap,
+              kind: link.kind,
+              concepts: link.concepts,
+              same: link.same,
+              phrases: link.phrases,
+              terms: link.terms,
+            ));
     }
     return result;
   }

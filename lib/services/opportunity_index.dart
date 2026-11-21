@@ -1,5 +1,6 @@
 import '../models/opportunity.dart';
 import '../utils/skill_matcher.dart';
+import 'link_support.dart';
 
 /// The parts of an opportunity that are searched for a skill.
 /// Requirements are left out on purpose: they are what the learner needs
@@ -257,6 +258,8 @@ class OpportunityIndex {
     copy._hitsCache.addAll(_hitsCache);
     copy._openCache.addAll(_openCache);
     copy._preparedTags.addAll(_preparedTags);
+    copy._tagCoverCache.addAll(_tagCoverCache);
+    copy._supportCache.addAll(_supportCache);
     return copy;
   }
 
@@ -418,12 +421,21 @@ class OpportunityIndex {
   ///    description only when the title or a tag names the skill too:
   ///    "a) ... b) ... c) ..." is not a mention of C.
   ///
+  /// With [textOnly] the skill tags are not looked at: only the title, the
+  /// objectives and the description are searched. The recommender uses it
+  /// for the stored wording of a meaning link, which is something to find
+  /// in a text, not a skill name to compare with tags.
+  ///
   /// The result is remembered, so asking again for the same skill is free.
-  Map<int, FieldHits> hitsFor(String skill, {bool expand = false}) {
+  Map<int, FieldHits> hitsFor(
+    String skill, {
+    bool expand = false,
+    bool textOnly = false,
+  }) {
     final wanted = SkillMatcher.prepare(skill);
     final key = wanted.key;
     if (key.isEmpty) return const {};
-    final cacheKey = '$expand|$key';
+    final cacheKey = textOnly ? 'text|$expand|$key' : '$expand|$key';
     final cached = _hitsCache[cacheKey];
     if (cached != null) return cached;
 
@@ -444,7 +456,7 @@ class OpportunityIndex {
       for (final phrase in phrases)
         phrase.length == 1 && phrase.first.length == 1,
     ];
-    final tagCounts = _tagCounts(wanted);
+    final tagCounts = textOnly ? const <int, int>{} : _tagCounts(wanted);
 
     final candidates = <int>{...tagCounts.keys};
     for (final phrase in phrases) {
@@ -534,6 +546,129 @@ class OpportunityIndex {
       }
     }
     return false;
+  }
+
+  /// True when at least one skill tag of the catalogue stands for [skill]
+  /// ([SkillMatcher.tagCovers]). When none does, the skill's own name is a
+  /// hole in the catalogue: only a mention in a text can find it, and the
+  /// recommender may use a meaning link for it.
+  ///
+  /// The answer is remembered per name, so a gap asked about again (the
+  /// same analysis on the next call) costs nothing.
+  bool anyTagCovers(String skill) => _tagCoverCache[skill] ??= () {
+        final wanted = SkillMatcher.prepare(skill);
+        if (wanted.key.isEmpty) return false;
+        for (final tag in _tagDocs.keys) {
+          final prepared = _preparedTags[tag] ??= SkillMatcher.prepare(tag);
+          if (SkillMatcher.tagCoversPrepared(wanted, prepared)) return true;
+        }
+        return false;
+      }();
+
+  final Map<String, bool> _tagCoverCache = {};
+
+  /// The distinct skill tags of the catalogue, as written.
+  Iterable<String> get tags => _tagDocs.keys;
+
+  // ---------------------------------------------------------
+  // SUPPORT (the gate of the meaning links)
+  // ---------------------------------------------------------
+
+  /// The opportunities whose own text supports the skill gap [gap]: the
+  /// test a meaning link must pass before the gap is named as the reason
+  /// for an opportunity (see "Meaning links" in OpportunityRecommender).
+  /// Own text is the title, the objectives and the description; with
+  /// [tags] the skill tags count too.
+  ///
+  /// An opportunity supports the gap when its own text contains the gap's
+  /// whole name as a phrase, a distinctive word of it, or one of [terms],
+  /// the wording stored with the link ([LinkSupport.supported] has the
+  /// rule, shared with the certifications). The share that makes a word
+  /// distinctive is counted here, from this catalogue: a common word
+  /// ("management", "network") exceeds [theta] by itself, so no word list
+  /// is needed, and the same word can be distinctive in one catalogue and
+  /// common in another.
+  ///
+  /// Words are the tokens of [tokensOf], so plurals and the spellings of
+  /// "C#" behave as in the search. The result is remembered, keyed on the
+  /// names as given, so a repeated call does not even tokenize them.
+  Set<int> supportFor(
+    String gap, {
+    Iterable<String> terms = const [],
+    required double theta,
+    bool tags = false,
+  }) {
+    final termList = terms is List<String> ? terms : terms.toList();
+    final cacheKey = '$theta|$tags|$gap|${termList.join('\u0001')}';
+    return _supportCache[cacheKey] ??= LinkSupport.supported(
+      gapTokens: tokensOf(gap),
+      terms: [for (final term in termList) tokensOf(term)],
+      theta: theta,
+      size: size,
+      itemsWithWord: (word) => _docsWithWord(word, tags: tags),
+      itemsWithPhrase: (phrase) => _docsWithPhrase(phrase, tags: tags),
+    );
+  }
+
+  /// The opportunities whose own text (with [tags], also a skill tag)
+  /// contains the words of [phrase] next to each other, in order.
+  Set<int> _docsWithPhrase(List<String> phrase, {required bool tags}) {
+    final result = <int>{
+      for (final i in _docsWithAll(phrase))
+        if (_textHasPhrase(i, phrase)) i,
+    };
+    if (!tags) return result;
+    _tagTokens.forEach((tag, tokens) {
+      for (var start = 0; start + phrase.length <= tokens.length; start++) {
+        if (_startsWith(tokens, start, phrase)) {
+          result.addAll(_tagDocs[tag]!);
+          break;
+        }
+      }
+    });
+    return result;
+  }
+
+  final Map<String, Set<int>> _supportCache = {};
+
+  /// Each distinct skill tag as tokens; filled on first use.
+  late final Map<String, List<String>> _tagTokens = {
+    for (final tag in _tagDocs.keys) tag: tokensOf(tag),
+  };
+
+  /// token -> opportunities with a skill tag that contains it.
+  late final Map<String, Set<int>> _tagTokenDocs = () {
+    final docs = <String, Set<int>>{};
+    _tagTokens.forEach((tag, tokens) {
+      for (final token in tokens) {
+        (docs[token] ??= <int>{}).addAll(_tagDocs[tag]!);
+      }
+    });
+    return docs;
+  }();
+
+  /// The opportunities that contain [word] in a text field, or with [tags]
+  /// also in a skill tag.
+  Set<int> _docsWithWord(String word, {required bool tags}) {
+    final inText = _tokenDocs[word] ?? const <int>{};
+    if (!tags) return inText;
+    final inTags = _tagTokenDocs[word];
+    return inTags == null ? inText : {...inText, ...inTags};
+  }
+
+  /// True when the title, one objective or the description of opportunity
+  /// [index] contains the words of [phrase] next to each other, in order.
+  bool _textHasPhrase(int index, List<String> phrase) {
+    bool inside(List<String> tokens) {
+      for (var start = 0; start + phrase.length <= tokens.length; start++) {
+        if (_startsWith(tokens, start, phrase)) return true;
+      }
+      return false;
+    }
+
+    return inside(_title[index]) ||
+        _objectives[index].any(inside) ||
+        inside(_description[index]);
   }
 
   /// opportunity index -> how many of its tags stand for [wanted]. Each

@@ -2,6 +2,7 @@ import 'dart:convert';
  
 import 'package:http/http.dart' as http;
 
+import '../models/gap_link.dart';
 import 'analysis_requests.dart';
  
 /// The neutral name the rest of the app and the evaluation tools use for
@@ -588,6 +589,187 @@ already shows it.
 $cvEvidenceRules''';
   }
 
+  /// The request that links market skills to the names the catalogues use
+  /// (round 1's text, kept word for word so its stored answers stay
+  /// comparable). The examples are from career goals the evaluation does
+  /// not use.
+  static String skillLinkPrompt({
+    required List<String> skills,
+    required List<String> concepts,
+  }) {
+    return '''
+You are linking skill names taken from job postings to the skill names
+of a learning catalogue, for Masra, a Saudi career-development
+application. The catalogue holds courses, training programs and
+certifications for Computing and IT.
+
+SKILLS FROM JOB POSTINGS:
+${jsonEncode(skills)}
+
+CATALOGUE SKILL NAMES:
+${jsonEncode(concepts)}
+
+TASK:
+
+For every skill from the job postings return:
+
+- "kind":
+  "skill" for a competency or an area of knowledge,
+  "tool" for a specific product, platform, framework or programming
+  language,
+  "certification" for a named certificate or exam,
+  "soft" for a personal or communication skill.
+
+- "concepts": 0, 1 or 2 CATALOGUE SKILL NAMES that name the same skill,
+  or a broader skill that fully contains it, so that a course on that
+  catalogue skill would normally teach the job-posting skill.
+
+- "phrases": 0 to 3 short phrases of 2 to 5 words that a course
+  description would use when it teaches this skill, in other words than
+  the skill name itself.
+
+RULES:
+
+1. Judge by meaning, not by shared words.
+
+Examples:
+- "Roadmap Planning" means product planning. It can link to a catalogue
+  name about product management even with no word in common.
+- "Radio Network Planning" must not link to a catalogue name about
+  project planning only because both contain "planning".
+
+2. Copy catalogue names exactly as they are written in CATALOGUE SKILL
+   NAMES. Never return a name that is not in that list.
+
+3. Return an empty "concepts" array when no catalogue name fits. A name
+   that is only related, or that is narrower than the skill, does not
+   fit. An empty array is a correct answer.
+
+4. For kind "tool" and "certification", "concepts" must be empty unless
+   a catalogue name is that very tool or certification.
+
+5. Do not put product or vendor names in "phrases" unless the skill
+   itself is that product.
+
+6. Return every skill exactly once, with its name exactly as it is
+   written in SKILLS FROM JOB POSTINGS, in the same order.
+
+7. Return ONLY valid JSON. Do not include markdown or explanations.
+
+Return exactly:
+
+{
+  "links": [
+    {
+      "skill": "",
+      "kind": "skill",
+      "concepts": [],
+      "phrases": []
+    }
+  ]
+}
+''';
+  }
+
+  /// The typed link request. It separates a catalogue name that names the
+  /// very same skill from a broader one that only teaches it, and asks for
+  /// the words a course text uses when it really teaches the skill, so the
+  /// recommenders can check a broader link against each course's own text
+  /// (lib/models/gap_link.dart). The examples are invented and come from
+  /// career goals the evaluation does not use.
+  static String typedSkillLinkPrompt({
+    required List<String> skills,
+    required List<String> concepts,
+  }) {
+    return '''
+You are linking skill names taken from job postings to the skill names
+of a learning catalogue, for Masra, a Saudi career-development
+application. The catalogue holds courses, training programs and
+certifications for Computing and IT.
+
+SKILLS FROM JOB POSTINGS:
+${jsonEncode(skills)}
+
+CATALOGUE SKILL NAMES:
+${jsonEncode(concepts)}
+
+TASK:
+
+For every skill from the job postings return:
+
+- "kind":
+  "skill" for a competency or an area of knowledge,
+  "tool" for a specific product, platform, framework or programming
+  language,
+  "certification" for a named certificate or exam,
+  "soft" for a personal or communication skill.
+
+- "same": 0, 1 or 2 CATALOGUE SKILL NAMES that name this very skill:
+  another name for it, its abbreviation, or a wording variant. A learner
+  who took a course on that catalogue skill has learned exactly this
+  skill.
+
+- "covers": 0, 1 or 2 CATALOGUE SKILL NAMES of a broader skill whose
+  typical course teaches this skill as one of its main topics.
+  Never put here:
+  a neighbouring skill,
+  a skill this one is only used together with,
+  a skill that is a part of this one (a narrower skill),
+  a wide field in which this skill is only a small part.
+
+- "terms": 0 to 4 short terms of 1 to 4 words that the text of a course
+  contains when it really teaches this skill: its key words, its usual
+  abbreviation and its other common names. No vendor or product names
+  unless the skill is that product. No general words of the broad field
+  (a course that only says such a word does not teach this skill).
+
+RULES:
+
+1. Judge by meaning, not by shared words.
+
+Examples:
+- "Roadmap Planning" is deciding what a product will deliver and when.
+  It is a main topic of a course on product management, so a catalogue
+  name about product management goes in "covers", even with no word in
+  common. Its terms could be "product roadmap" and "roadmap".
+- "Drive Testing" and a catalogue name "Drive Test Measurement" are two
+  names of one skill, so that catalogue name goes in "same".
+- "Radio Network Planning" must not link to a catalogue name about
+  project planning only because both contain "planning".
+
+2. Copy catalogue names exactly as they are written in CATALOGUE SKILL
+   NAMES. Never return a name that is not in that list. A name goes in
+   "same" or in "covers", never in both.
+
+3. An empty list is a correct answer, and it is better than a loose
+   link. Leave "same" and "covers" empty when no catalogue name fits by
+   the definitions above.
+
+4. For kind "tool" and "certification", "same" may hold a catalogue name
+   only when it is that very tool or certification, and "covers" must be
+   empty.
+
+5. Return every skill exactly once, with its name exactly as it is
+   written in SKILLS FROM JOB POSTINGS, in the same order.
+
+6. Return ONLY valid JSON. Do not include markdown or explanations.
+
+Return exactly:
+
+{
+  "links": [
+    {
+      "skill": "",
+      "kind": "skill",
+      "same": [],
+      "covers": [],
+      "terms": []
+    }
+  ]
+}
+''';
+  }
+
   /// Sends [prompt] and returns the JSON object of the answer. The CV
   /// evidence check and the evaluation tools use it (the tools send the
   /// texts of tools/gap_eval/arms/ through it). [timeLimit] replaces the
@@ -633,6 +815,28 @@ $cvEvidenceRules''';
     );
 
     return decoded['skills'];
+  }
+
+  /// Links [skills] to the catalogue names in [concepts] with the wanted
+  /// [request]. Returns the raw `links` list of the answer; the analysis
+  /// pipeline checks it against the catalogue names
+  /// (CareerAnalysisPipeline.linksFrom).
+  @override
+  Future<dynamic> linkSkillsToConcepts({
+    required List<String> skills,
+    required List<String> concepts,
+    LinkRequest request = LinkRequest.typed,
+    Duration? timeLimit,
+  }) async {
+    final decoded = await requestJson(
+      prompt: request == LinkRequest.typed
+          ? typedSkillLinkPrompt(skills: skills, concepts: concepts)
+          : skillLinkPrompt(skills: skills, concepts: concepts),
+      maxTokens: 3000,
+      timeLimit: timeLimit,
+    );
+
+    return decoded['links'];
   }
 
   // =========================================================
