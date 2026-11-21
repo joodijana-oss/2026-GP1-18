@@ -1,0 +1,32 @@
+{
+ "settings": {
+  "set": "heldout",
+  "arms": [
+   "G0E0",
+   "G0E1",
+   "G1E1",
+   "G2E1"
+  ],
+  "runs": 3,
+  "extraGoals": [
+   "solutions_architect",
+   "infrastructure_data_center_engineer",
+   "pre_sales_engineer",
+   "erp_consultant",
+   "it_project_manager"
+  ],
+  "links": true,
+  "partlyIsGap": false,
+  "seed": 20261119
+ },
+ "hashes": {
+  "services": "f46a39afa1e1afc1f20c4229504506c40ebaefa5e62b6a6cd60f3fcffebc6bf8",
+  "utils": "a31bbeafd9959f6704806ec86217af2293e03148ada1c3c18a991928849cd348",
+  "models": "af76f90cbb851c0c33ebdad368a2dafe0f8ba71041c9654ca4eee773941d831e",
+  "gapEvalTools": "beb33f05648b2f6e23ece697e43197e800b6026ab61a3705b451814722d7cc9b",
+  "recommenderEvalTools": "c1bf861d35675cc32484ff1e5f151d8aff6c658ee8f202fb93539c5b6b8ae9e0",
+  "catalogueData": "f32ad6cbfd51036cafe60d42de77279034e9ab2fc925962ca13cdc2528d3265a",
+  "testSet": "519a3cdf79e99e91678cae961db40f7077785e04d8b2e257b80c8617f33523ed",
+  "decisionRules": "c73adaae5c2515e39011f5a260852d99d0a9e1770ae29c8e49f5a0b046683a49"
+ }
+}

@@ -1,0 +1,28 @@
+Hessa Al-Mansour
+Al-Ahsa | hessa.almansour@example.com | +966 50 000 0000
+
+Profile
+Management Information Systems graduate with a six-month internship in the business intelligence unit of a pharmacy chain. I like the moment when a manager stops asking for a spreadsheet because the dashboard already answers the question.
+
+Experience
+Business Intelligence Intern, head office of a pharmacy retail chain, Riyadh (Jun 2025 - Dec 2025)
+- Built four Tableau dashboards for the sales department (branch sales, basket size, stock-outs, loyalty sign-ups) that are now used in the Sunday regional meeting.
+- Wrote the SQL behind each dashboard on the SQL Server reporting database, mostly joins and window functions for week-on-week change.
+- Met the regional managers to list which numbers they look at each week and turned the list into the dashboard specification.
+- Added calculated fields for same-store growth and sales per square metre so branches of different sizes can be compared fairly.
+- Reconciled dashboard totals with the finance team's monthly figures and traced a 2% gap to returns being counted twice.
+- Replaced a weekly Excel report that took an analyst three hours with a scheduled extract.
+
+Education
+B.Sc. Management Information Systems, King Faisal University, Al-Ahsa, 2025. GPA 4.3/5.
+Courses: Data Management, Data Warehousing, Business Statistics, Decision Support Systems
+Data Management course project: normalised a messy student-housing dataset to third normal form and wrote its data dictionary.
+
+Skills
+Tableau, SQL, Excel, Power BI (basic), Python (pandas)
+
+Activities
+Volunteer organiser, college career day 2024. Member of the university's women in tech society.
+
+Languages
+Arabic (native), English (IELTS 6.5)

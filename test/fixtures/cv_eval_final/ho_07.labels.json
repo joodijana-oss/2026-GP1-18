@@ -1,0 +1,272 @@
+{
+  "id": "ho_07",
+  "careerGoalId": "cloud_devops_engineer",
+  "shown": [
+    {
+      "skill": "Amazon Web Services",
+      "alsoCalled": [
+        "AWS"
+      ],
+      "evidence": "Cut the monthly AWS bill by 31% by right-sizing instances and moving product images to a cheaper storage tier",
+      "source": "experience"
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "evidence": "packaged each service as an image and now run them all on a managed cluster (EKS)",
+      "source": "experience"
+    },
+    {
+      "skill": "Kubernetes",
+      "alsoCalled": [
+        "K8s",
+        "Container Orchestration"
+      ],
+      "evidence": "Wrote the deployment manifests and the rules that add pods when the evening rush starts and remove them after midnight",
+      "source": "experience"
+    },
+    {
+      "skill": "Terraform",
+      "alsoCalled": [
+        "HashiCorp Terraform"
+      ],
+      "evidence": "is now described in Terraform files kept in the repository and created by a pipeline, not by clicking in the console",
+      "source": "experience"
+    },
+    {
+      "skill": "Infrastructure as Code",
+      "alsoCalled": [
+        "IaC"
+      ],
+      "evidence": "is now described in Terraform files kept in the repository and created by a pipeline, not by clicking in the console",
+      "source": "experience"
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Deployment Pipelines"
+      ],
+      "evidence": "tests, image build, security scan, then a gradual rollout that reverses itself when the error rate climbs",
+      "source": "experience"
+    },
+    {
+      "skill": "Monitoring",
+      "alsoCalled": [
+        "Observability",
+        "Infrastructure Monitoring",
+        "Alerting"
+      ],
+      "evidence": "put dashboards and on-call alerts in place (Grafana on top of Prometheus)",
+      "source": "experience"
+    },
+    {
+      "skill": "Prometheus",
+      "alsoCalled": [
+        "Prometheus Monitoring"
+      ],
+      "evidence": "put dashboards and on-call alerts in place (Grafana on top of Prometheus)",
+      "source": "experience"
+    },
+    {
+      "skill": "Cloud Networking",
+      "alsoCalled": [
+        "VPC",
+        "Virtual Networks"
+      ],
+      "evidence": "Split the single flat network into public and private subnets across two availability zones",
+      "source": "experience"
+    },
+    {
+      "skill": "High Availability",
+      "alsoCalled": [
+        "Load Balancing",
+        "Auto Scaling"
+      ],
+      "evidence": "across two availability zones behind a load balancer",
+      "source": "experience"
+    },
+    {
+      "skill": "Bash Scripting",
+      "alsoCalled": [
+        "Shell Scripting"
+      ],
+      "evidence": "Wrote small shell scripts for the nightly database dumps and for log rotation",
+      "source": "experience"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration"
+      ],
+      "evidence": "Racked servers, installed Ubuntu on them and kept the cabling records",
+      "source": "experience"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control"
+      ],
+      "evidence": "AWS, Terraform, Docker, Linux, Git",
+      "source": "skills_section"
+    },
+    {
+      "skill": "AWS Certified Solutions Architect - Associate",
+      "alsoCalled": [
+        "AWS SAA",
+        "AWS Solutions Architect Associate"
+      ],
+      "evidence": "AWS Certified Solutions Architect – Associate (October 2025)",
+      "source": "certification"
+    },
+    {
+      "skill": "GitHub Actions",
+      "alsoCalled": [
+        "GitHub Workflows"
+      ],
+      "evidence": "Built the release pipeline in GitHub Actions",
+      "source": "experience"
+    },
+    {
+      "skill": "Grafana",
+      "alsoCalled": [
+        "Grafana Dashboards"
+      ],
+      "evidence": "Grafana on top of Prometheus",
+      "source": "experience"
+    },
+    {
+      "skill": "Cloud Cost Optimization",
+      "alsoCalled": [
+        "FinOps",
+        "Cloud Cost Management"
+      ],
+      "evidence": "by right-sizing instances and moving product images to a cheaper storage tier",
+      "source": "experience"
+    },
+    {
+      "skill": "Amazon EKS",
+      "alsoCalled": [
+        "Elastic Kubernetes Service"
+      ],
+      "evidence": "now run them all on a managed cluster (EKS)",
+      "source": "experience"
+    },
+    {
+      "skill": "Server Hardware Installation",
+      "alsoCalled": [
+        "Rack and Stack"
+      ],
+      "evidence": "Racked servers",
+      "source": "experience"
+    },
+    {
+      "skill": "Public Speaking",
+      "alsoCalled": [
+        "Technical Talks"
+      ],
+      "evidence": "\"What a Ramadan outage taught us\", a Madinah developers meetup, May 2026",
+      "source": "other"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Cloud Security",
+      "alsoCalled": [
+        "IAM",
+        "Identity and Access Management"
+      ],
+      "evidence": "with the database reachable only from the application tier",
+      "why": "One network restriction and a scan step; no identity, permission or secrets work is described."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Microsoft Azure",
+      "alsoCalled": [
+        "Azure"
+      ],
+      "why": "All of the cloud work is on one other provider.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Jenkins",
+      "alsoCalled": [
+        "Jenkins Pipelines"
+      ],
+      "why": "Built the release pipeline in a different tool.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Scripting"
+      ],
+      "why": "The only scripting described is shell.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Certified Kubernetes Administrator",
+      "alsoCalled": [
+        "CKA"
+      ],
+      "why": "Runs workloads on a managed cluster, but does not hold this certification.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Helm",
+      "alsoCalled": [
+        "Helm Charts"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Google Cloud Platform",
+      "alsoCalled": [
+        "GCP"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Secrets Management",
+      "alsoCalled": [
+        "HashiCorp Vault"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "GitOps",
+      "alsoCalled": [
+        "Argo CD"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "HashiCorp Certified: Terraform Associate",
+      "alsoCalled": [
+        "Terraform Associate"
+      ],
+      "why": "Asked for in some job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Ansible",
+      "alsoCalled": [
+        "Configuration Management"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "AWS Certified Solutions Architect – Associate"
+  ]
+}

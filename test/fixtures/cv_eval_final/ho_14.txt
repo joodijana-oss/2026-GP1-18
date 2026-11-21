@@ -1,0 +1,29 @@
+TURKI AL-BALAWI
+Riyadh (from Tabuk) | turki.albalawi@example.com | +966 59 000 0000
+
+PROFILE
+Two years on the IT support desk of a schools group. The network faults were always the tickets I wanted, so I built a lab at home and I am now looking for a junior network role.
+
+EXPERIENCE
+IT Support Officer, a group of private schools with seven campuses, Riyadh
+September 2024 - present
+- First contact for about 400 teachers and staff: password resets, replacement PCs, projectors and printers; roughly 30 requests a day.
+- When a classroom loses its connection I trace it from the wall socket to the patch panel to the switch port, test the cable and re-terminate it if needed.
+- The network contractor uses me as their hands on site: I have replaced two failed access switches by loading the saved configuration onto the spare and moving the uplinks across.
+- Moved printers and cameras onto fixed addresses and keep the address sheet for each campus so that nothing collides.
+- Walked two campuses with a signal-strength app, mapped the dead spots and moved four access points; complaints from those buildings stopped.
+
+HOME LAB (2025 - now)
+Two used Cisco routers and a managed switch bought second-hand, plus GNS3 on an old desktop. Everything is configured from the command line.
+- Split my flat into four networks (family, guests, cameras, lab) on the one switch with a trunk up to the router, and wrote access lists so that the cameras cannot reach anything else.
+- Built an encrypted tunnel between my flat and my parents' house in Tabuk so that both ends see each other's file shares as if they were on one network; it comes back by itself after a power cut.
+- In GNS3, run OSPF inside each of two pretend companies, and have them exchange prefixes with a pretend provider, each side under its own AS number.
+
+EDUCATION
+B.Sc. Information Technology, Saudi Electronic University, 2024
+
+TRAINING
+Studying for the CCNA; exam booked for January 2027.
+
+LANGUAGES
+Arabic (native), English (good)

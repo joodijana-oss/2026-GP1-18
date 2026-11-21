@@ -1,0 +1,239 @@
+{
+  "id": "dev_05",
+  "careerGoalId": "database_administrator",
+  "shown": [
+    {
+      "skill": "Oracle Database",
+      "alsoCalled": [
+        "Oracle",
+        "Oracle 19c"
+      ],
+      "evidence": "Look after 9 Oracle 19c and 6 SQL Server 2019 instances",
+      "source": "experience"
+    },
+    {
+      "skill": "Microsoft SQL Server",
+      "alsoCalled": [
+        "SQL Server",
+        "MSSQL"
+      ],
+      "evidence": "6 SQL Server 2019 instances behind the point-of-sale, e-commerce and warehouse systems",
+      "source": "experience"
+    },
+    {
+      "skill": "Database Backup",
+      "alsoCalled": [
+        "Backup and Recovery",
+        "RMAN",
+        "Database Restore"
+      ],
+      "evidence": "Schedule the RMAN and native dumps and check them every morning; run a full restore to a spare server each month",
+      "source": "experience"
+    },
+    {
+      "skill": "Database Security",
+      "alsoCalled": [
+        "Database Access Control",
+        "Roles and Privileges",
+        "User Access Management"
+      ],
+      "evidence": "before the external audit replaced direct table grants for 70 users with roles",
+      "source": "experience"
+    },
+    {
+      "skill": "Database Performance Tuning",
+      "alsoCalled": [
+        "Performance Tuning",
+        "SQL Tuning",
+        "Slow Query Analysis"
+      ],
+      "evidence": "Find the statements hogging the point-of-sale database from AWR reports and execution plans",
+      "source": "experience"
+    },
+    {
+      "skill": "Patch Management",
+      "alsoCalled": [
+        "Patching",
+        "WSUS",
+        "Update Management"
+      ],
+      "evidence": "Apply the quarterly patch sets in the Friday-night window, always with a way back",
+      "source": "experience"
+    },
+    {
+      "skill": "High Availability",
+      "alsoCalled": [
+        "Load Balancing and Failover",
+        "Auto Scaling",
+        "Fault Tolerance"
+      ],
+      "evidence": "Keep a standby copy of the e-commerce database in sync with Data Guard and took part in two switchover drills",
+      "source": "experience"
+    },
+    {
+      "skill": "Database Monitoring",
+      "alsoCalled": [
+        "Database Health Checks",
+        "Oracle Enterprise Manager"
+      ],
+      "evidence": "Watch space, sessions and blocking locks in Oracle Enterprise Manager and extend tablespaces before they fill",
+      "source": "experience"
+    },
+    {
+      "skill": "PL/SQL",
+      "alsoCalled": [
+        "Oracle PL/SQL"
+      ],
+      "evidence": "Wrote shell and PL/SQL scripts that purge old audit rows and email a morning health check",
+      "source": "experience"
+    },
+    {
+      "skill": "Bash Scripting",
+      "alsoCalled": [
+        "Shell Scripting",
+        "Bash"
+      ],
+      "evidence": "Wrote shell and PL/SQL scripts",
+      "source": "experience"
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "Oracle Database SQL Certified Associate (1Z0-071), 2025",
+      "source": "certification"
+    },
+    {
+      "skill": "Data Masking",
+      "alsoCalled": [
+        "Data Anonymization",
+        "Data Scrambling"
+      ],
+      "evidence": "Refresh the test environments from production with customers' phone numbers scrambled",
+      "source": "experience"
+    },
+    {
+      "skill": "Technical Support",
+      "alsoCalled": [
+        "Help Desk",
+        "Service Desk",
+        "IT Support",
+        "User Support"
+      ],
+      "evidence": "Answered store staff's calls about the point-of-sale system",
+      "source": "experience"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "Oracle, SQL Server, SQL, PL/SQL, RMAN, Linux",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Oracle Database SQL Certified Associate",
+      "alsoCalled": [
+        "1Z0-071"
+      ],
+      "evidence": "Oracle Database SQL Certified Associate (1Z0-071), 2025",
+      "source": "certification"
+    }
+  ],
+  "partly": [],
+  "notShown": [
+    {
+      "skill": "PostgreSQL",
+      "alsoCalled": [
+        "Postgres"
+      ],
+      "why": "Works on Oracle and SQL Server only.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Oracle RAC",
+      "alsoCalled": [
+        "Real Application Clusters"
+      ],
+      "why": "Keeps a standby database, but no clustered database.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Oracle Database Administration Certified Professional",
+      "alsoCalled": [
+        "OCP",
+        "Oracle Certified Professional"
+      ],
+      "why": "Holds the SQL associate certificate, not the administration one.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Data Modeling",
+      "alsoCalled": [
+        "Data Modelling",
+        "Star Schema",
+        "Dimensional Modeling"
+      ],
+      "why": "Supports existing databases; does not design schemas.",
+      "nearMiss": true
+    },
+    {
+      "skill": "MySQL",
+      "alsoCalled": [
+        "MySQL Database"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Database Migration",
+      "alsoCalled": [
+        "Database Upgrade",
+        "Data Migration"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "AWS",
+      "alsoCalled": [
+        "Amazon Web Services"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "NoSQL",
+      "alsoCalled": [
+        "MongoDB",
+        "Document Databases"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Data Warehousing",
+      "alsoCalled": [
+        "Data Warehouse",
+        "DWH"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "Oracle Database SQL Certified Associate (1Z0-071)"
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "id": "ho_01",
+  "careerGoalId": "cybersecurity_analyst",
+  "shown": [
+    {
+      "skill": "SIEM",
+      "alsoCalled": [
+        "Security Information and Event Management",
+        "SIEM Monitoring"
+      ],
+      "evidence": "forwarded their Windows event logs and Linux auth logs to one central console, then wrote 11 rules that raise an alert",
+      "source": "project"
+    },
+    {
+      "skill": "Log Analysis",
+      "alsoCalled": [
+        "Security Log Review"
+      ],
+      "evidence": "I run a weekly session where new members practise reading logs from a staged incident",
+      "source": "other"
+    },
+    {
+      "skill": "Vulnerability Assessment",
+      "alsoCalled": [
+        "Vulnerability Scanning",
+        "Vulnerability Management"
+      ],
+      "evidence": "ran Nessus Essentials against the club's two servers, ranked the 23 findings by severity and handed over a fix list",
+      "source": "project"
+    },
+    {
+      "skill": "MITRE ATT&CK",
+      "alsoCalled": [
+        "ATT&CK Framework"
+      ],
+      "evidence": "Mapped each rule to the attacker technique it is meant to catch, using the public ATT&CK matrix as the reference",
+      "source": "project"
+    },
+    {
+      "skill": "Digital Forensics",
+      "alsoCalled": [
+        "Computer Forensics",
+        "DFIR"
+      ],
+      "evidence": "pulling a hidden process and its command line out of a RAM dump",
+      "source": "other"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Scripting"
+      ],
+      "evidence": "wrote a short Python script that reads the capture files",
+      "source": "project"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "Linux (Ubuntu, Kali)",
+      "source": "skills_section"
+    },
+    {
+      "skill": "CompTIA Security+",
+      "alsoCalled": [
+        "Security+"
+      ],
+      "evidence": "CompTIA Security+ (SY0-701), March 2026",
+      "source": "certification"
+    },
+    {
+      "skill": "Wireshark",
+      "alsoCalled": [
+        "Packet Analysis",
+        "Packet Capture"
+      ],
+      "evidence": "Captured my own home traffic for a week",
+      "source": "project"
+    },
+    {
+      "skill": "Nessus",
+      "alsoCalled": [
+        "Tenable Nessus"
+      ],
+      "evidence": "ran Nessus Essentials against the club's two servers",
+      "source": "project"
+    },
+    {
+      "skill": "Bash Scripting",
+      "alsoCalled": [
+        "Shell Scripting"
+      ],
+      "evidence": "basic Bash",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Virtualization",
+      "alsoCalled": [
+        "Virtual Machines"
+      ],
+      "evidence": "Set up three virtual machines on my laptop",
+      "source": "project"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Security Operations Center Monitoring",
+      "alsoCalled": [
+        "SOC Monitoring",
+        "SOC Operations",
+        "Alert Triage"
+      ],
+      "evidence": "check which rules fired and which stayed silent, and tuned the noisy ones",
+      "why": "Alert tuning in a home lab only; no monitoring of a live environment."
+    },
+    {
+      "skill": "TCP/IP Networking",
+      "alsoCalled": [
+        "Networking Fundamentals",
+        "Network Protocols"
+      ],
+      "evidence": "Relevant courses: Computer Networks, Operating Systems, Information Security, Cryptography.",
+      "why": "Course title and one traffic capture; network knowledge is not shown directly."
+    },
+    {
+      "skill": "Cryptography",
+      "alsoCalled": [
+        "Encryption"
+      ],
+      "evidence": "Relevant courses: Computer Networks, Operating Systems, Information Security, Cryptography.",
+      "why": "Course title only."
+    },
+    {
+      "skill": "Web Application Security",
+      "alsoCalled": [
+        "Web Security",
+        "OWASP Top 10"
+      ],
+      "evidence": "solved web challenges including one SQL injection login bypass",
+      "why": "One passing mention from a competition."
+    },
+    {
+      "skill": "Network Security",
+      "alsoCalled": [
+        "Network Defence"
+      ],
+      "evidence": "Captured my own home traffic for a week and wrote a short Python script that reads the capture files and lists every device that talks to an address outside the country",
+      "why": "Holds a broad security certificate and watched her own traffic for outside connections, but has not secured or defended a network."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Incident Response",
+      "alsoCalled": [
+        "Security Incident Handling",
+        "IR"
+      ],
+      "why": "Practises reading logs from a staged incident, but has never handled or contained an incident.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Penetration Testing",
+      "alsoCalled": [
+        "Ethical Hacking",
+        "Pentesting"
+      ],
+      "why": "Ran a permitted vulnerability scan and replayed attacks on her own lab; no penetration test with exploitation and reporting.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Certified Ethical Hacker",
+      "alsoCalled": [
+        "CEH"
+      ],
+      "why": "Often asked for in job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Firewall Management",
+      "alsoCalled": [
+        "Firewall Administration",
+        "Firewall Rules"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Intrusion Detection Systems",
+      "alsoCalled": [
+        "IDS",
+        "Intrusion Prevention"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Threat Intelligence",
+      "alsoCalled": [
+        "Cyber Threat Intelligence",
+        "CTI"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Malware Analysis",
+      "alsoCalled": [
+        "Malware Triage"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Endpoint Detection and Response",
+      "alsoCalled": [
+        "EDR",
+        "Endpoint Security"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "NCA Essential Cybersecurity Controls",
+      "alsoCalled": [
+        "NCA ECC",
+        "ECC"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Threat Hunting",
+      "alsoCalled": [
+        "Proactive Threat Detection"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "CompTIA Security+ (SY0-701)"
+  ]
+}

@@ -1,0 +1,85 @@
+You are linking skill names taken from job postings to the skill names
+of a learning catalogue, for Masra, a Saudi career-development
+application. The catalogue holds courses, training programs and
+certifications for Computing and IT.
+
+SKILLS FROM JOB POSTINGS:
+["{{MARKET_SKILLS}}"]
+
+CATALOGUE SKILL NAMES:
+["{{CATALOGUE_SKILL_NAMES}}"]
+
+TASK:
+
+For every skill from the job postings return:
+
+- "kind":
+  "skill" for a competency or an area of knowledge,
+  "tool" for a specific product, platform, framework or programming
+  language,
+  "certification" for a named certificate or exam,
+  "soft" for a personal or communication skill.
+
+- "same": 0, 1 or 2 CATALOGUE SKILL NAMES that name this very skill:
+  another name for it, its abbreviation, or a wording variant. A learner
+  who took a course on that catalogue skill has learned exactly this
+  skill.
+
+- "covers": 0, 1 or 2 CATALOGUE SKILL NAMES of a broader skill whose
+  typical course teaches this skill as one of its main topics.
+  Never put here:
+  a neighbouring skill,
+  a skill this one is only used together with,
+  a skill that is a part of this one (a narrower skill),
+  a wide field in which this skill is only a small part.
+
+- "terms": 0 to 4 short terms of 1 to 4 words that the text of a course
+  contains when it really teaches this skill: its key words, its usual
+  abbreviation and its other common names. No vendor or product names
+  unless the skill is that product. No general words of the broad field
+  (a course that only says such a word does not teach this skill).
+
+RULES:
+
+1. Judge by meaning, not by shared words.
+
+Examples:
+- "Roadmap Planning" is deciding what a product will deliver and when.
+  It is a main topic of a course on product management, so a catalogue
+  name about product management goes in "covers", even with no word in
+  common. Its terms could be "product roadmap" and "roadmap".
+- "Drive Testing" and a catalogue name "Drive Test Measurement" are two
+  names of one skill, so that catalogue name goes in "same".
+- "Radio Network Planning" must not link to a catalogue name about
+  project planning only because both contain "planning".
+
+2. Copy catalogue names exactly as they are written in CATALOGUE SKILL
+   NAMES. Never return a name that is not in that list. A name goes in
+   "same" or in "covers", never in both.
+
+3. An empty list is a correct answer, and it is better than a loose
+   link. Leave "same" and "covers" empty when no catalogue name fits by
+   the definitions above.
+
+4. For kind "tool" and "certification", "same" may hold a catalogue name
+   only when it is that very tool or certification, and "covers" must be
+   empty.
+
+5. Return every skill exactly once, with its name exactly as it is
+   written in SKILLS FROM JOB POSTINGS, in the same order.
+
+6. Return ONLY valid JSON. Do not include markdown or explanations.
+
+Return exactly:
+
+{
+  "links": [
+    {
+      "skill": "",
+      "kind": "skill",
+      "same": [],
+      "covers": [],
+      "terms": []
+    }
+  ]
+}

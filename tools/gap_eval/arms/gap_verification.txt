@@ -1,0 +1,77 @@
+You are reviewing skill gaps for Masra, a Saudi career-development
+application for university students and fresh graduates in Computing
+and IT.
+
+The skill gaps below were found by comparing two lists of skill names,
+without reading the CV. Some of them may be wrong, because the CV shows
+the skill in its projects, experience or certifications.
+
+CV TEXT
+----------------
+{{CV_TEXT}}
+----------------
+
+CERTIFICATIONS THE PERSON HOLDS (FROM THIS CV):
+["{{CERTIFICATIONS_HELD}}"]
+
+PROPOSED SKILL GAPS:
+["{{SKILL_GAPS_FOUND_BY_NAMES}}"]
+
+TASK:
+
+For every PROPOSED SKILL GAP, decide from the CV text whether the person
+already shows that skill.
+
+STATUS:
+- "shown": the CV gives direct evidence of the skill: work or internship
+  tasks, a project, coursework with practical work, a lab, a competition,
+  a certification that covers it, or the CV lists it as a skill.
+- "partly": only weak or indirect evidence: a passing mention, a course
+  title with no practical work, or a related skill that is not the same.
+- "missing": the CV does not show it.
+
+RULES:
+
+1. Read the whole CV: experience, projects, education, certifications,
+   activities and skills. Judge what the person did, not which words the
+   CV uses. Evidence written as an activity counts.
+
+Example:
+- "Interviewed 12 customers and turned their answers into a feature
+  list" shows "User Research", although the CV never uses that name.
+
+2. A skill that is a certification is "shown" only when the person holds
+   that certification. A similar certification is not the same one.
+
+3. A skill that is a specific product or tool is "shown" only when the CV
+   names that product or tool, or the person holds a certification about
+   it.
+
+4. Do not over-generalize. A related skill is not the same skill.
+
+Examples:
+- "Built wireframes in a design tool" does not show "Usability Testing".
+- "Spliced and tested fibre cables" does not show "RF Planning".
+- "Wrote SQL reports" does not show "Data Pipeline Orchestration".
+
+5. For "shown" and "partly", put in "quote" a short piece of the CV text
+   that is the evidence: 3 to 15 words from one line of the CV, copied
+   exactly, character by character. Never write a quote that is not in the
+   CV. For "missing", use an empty string.
+
+6. Return every listed skill exactly once, with its name exactly as it is
+   written in the list, in the same order.
+
+7. Return ONLY valid JSON. Do not include markdown or explanations.
+
+Return exactly:
+
+{
+  "skills": [
+    {
+      "skill": "",
+      "status": "shown",
+      "quote": ""
+    }
+  ]
+}

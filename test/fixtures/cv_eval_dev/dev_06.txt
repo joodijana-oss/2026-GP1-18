@@ -1,0 +1,29 @@
+Ghala Al-Amri
+Buraydah | ghala.alamri@example.com | +966 50 000 0000
+
+Third-year Computer Science student at Qassim University. I have built two apps with the university's app development club, and one of them is on Google Play.
+
+Education
+Qassim University, B.Sc. Computer Science, 2024 - 2028 (expected), GPA 4.4/5
+Courses: Object-Oriented Programming (Java), Data Structures, Human-Computer Interaction
+
+App development club (2025 - now, team lead of 4 since 2026)
+Sufra - splits the cost of shared meals between friends (published on Google Play, 1,200 installs)
+- Built in Flutter with Dart; state is handled with Provider.
+- Every screen works in Arabic and English, with layouts that flip for right-to-left.
+- Saves groups and expenses in Firebase Firestore and signs users in with a code sent to their phone number.
+- Went through the Play Console steps myself: signing, store listing, screenshots and a closed test with 20 club members before the public release.
+- Read the Crashlytics reports after launch and fixed the three most common crashes; crash-free sessions went from 96.1% to 99.4%.
+- Turned the club designer's Figma screens into widgets and a small set of shared components.
+
+Qa'ati - finds a free study room on campus (not published)
+- Shows free rooms by reading the timetable from a JSON feed that the college IT unit exposes, and keeps the last result for when there is no signal.
+- Reminds the user ten minutes before a booked slot ends with a notification scheduled on the device.
+- Wrote widget tests for the booking form.
+- The team works on feature branches and merges through pull requests; tasks are on a Trello board.
+
+Skills
+Flutter, Dart, Firebase, Git, Java (course)
+
+Languages
+Arabic (native), English (good)

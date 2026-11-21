@@ -1,0 +1,285 @@
+{
+  "id": "ho_16",
+  "careerGoalId": "software_engineer",
+  "shown": [
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming"
+      ],
+      "evidence": "Own the booking and payments services, written in Python (Django) on PostgreSQL",
+      "source": "experience"
+    },
+    {
+      "skill": "REST APIs",
+      "alsoCalled": [
+        "RESTful Web Services",
+        "API Development"
+      ],
+      "evidence": "Designed and built the public interface that the mobile apps and partner sites call to search slots, hold one and pay for it",
+      "source": "experience"
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Relational Databases",
+        "SQL Queries"
+      ],
+      "evidence": "Rewrote the three slowest queries and added indexes; a slot search went from 1.9 s to 240 ms",
+      "source": "experience"
+    },
+    {
+      "skill": "Debugging",
+      "alsoCalled": [
+        "Troubleshooting Code"
+      ],
+      "evidence": "Stopped the same slot being sold twice under load by moving the hold step into one database transaction with a row lock",
+      "source": "experience"
+    },
+    {
+      "skill": "Microservices",
+      "alsoCalled": [
+        "Microservice Architecture"
+      ],
+      "evidence": "out of the main application into a separate small service that listens on a message queue",
+      "source": "experience"
+    },
+    {
+      "skill": "Unit Testing",
+      "alsoCalled": [
+        "Automated Unit Tests"
+      ],
+      "evidence": "Wrote more than 300 automated tests around payments",
+      "source": "experience"
+    },
+    {
+      "skill": "Code Review",
+      "alsoCalled": [
+        "Peer Review",
+        "Pull Request Review"
+      ],
+      "evidence": "I review about ten a week and wrote the team's one-page review checklist",
+      "source": "experience"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control"
+      ],
+      "evidence": "a pull request cannot be merged until they pass and another developer has approved it",
+      "source": "experience"
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery"
+      ],
+      "evidence": "Set up the delivery pipeline in my first year",
+      "source": "experience"
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "evidence": "each merge is built into a Docker image",
+      "source": "experience"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Servers"
+      ],
+      "evidence": "rolled out to our two rented Ubuntu servers with no downtime",
+      "source": "experience"
+    },
+    {
+      "skill": "Django",
+      "alsoCalled": [
+        "Django Framework"
+      ],
+      "evidence": "written in Python (Django) on PostgreSQL",
+      "source": "experience"
+    },
+    {
+      "skill": "PostgreSQL",
+      "alsoCalled": [
+        "Postgres"
+      ],
+      "evidence": "written in Python (Django) on PostgreSQL",
+      "source": "experience"
+    },
+    {
+      "skill": "Redis",
+      "alsoCalled": [
+        "Caching"
+      ],
+      "evidence": "Python, Django, PostgreSQL, Docker, Git, Redis",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Message Queues",
+      "alsoCalled": [
+        "Message Brokers",
+        "Asynchronous Messaging"
+      ],
+      "evidence": "a separate small service that listens on a message queue",
+      "source": "experience"
+    },
+    {
+      "skill": "Payment Gateway Integration",
+      "alsoCalled": [
+        "Payment Integration"
+      ],
+      "evidence": "Connected the local payment gateway for mada cards and Apple Pay, including refunds and the nightly reconciliation job",
+      "source": "experience"
+    },
+    {
+      "skill": "Database Performance Tuning",
+      "alsoCalled": [
+        "Query Optimization",
+        "Indexing"
+      ],
+      "evidence": "Rewrote the three slowest queries and added indexes",
+      "source": "experience"
+    },
+    {
+      "skill": "API Documentation",
+      "alsoCalled": [
+        "OpenAPI",
+        "Swagger"
+      ],
+      "evidence": "described in an OpenAPI file",
+      "source": "experience"
+    },
+    {
+      "skill": "Mentoring",
+      "alsoCalled": [
+        "Coaching"
+      ],
+      "evidence": "Looked after a co-op student for six months in 2026",
+      "source": "experience"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Object-Oriented Programming",
+      "alsoCalled": [
+        "OOP"
+      ],
+      "evidence": "Final-year courses included Object-Oriented Programming, Algorithms and Software Engineering",
+      "why": "Course title only; the work is not described in these terms."
+    },
+    {
+      "skill": "Data Structures and Algorithms",
+      "alsoCalled": [
+        "DSA",
+        "Algorithms"
+      ],
+      "evidence": "Final-year courses included Object-Oriented Programming, Algorithms and Software Engineering",
+      "why": "Course title only."
+    },
+    {
+      "skill": "System Design",
+      "alsoCalled": [
+        "Software Architecture"
+      ],
+      "evidence": "so a slow SMS provider no longer holds up checkout",
+      "why": "One design decision; no wider architecture work is described."
+    },
+    {
+      "skill": "Web Development",
+      "alsoCalled": [
+        "Web Applications"
+      ],
+      "evidence": "Built an internal page for booking meeting rooms",
+      "why": "One passing mention from a summer placement."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java SE"
+      ],
+      "why": "All of the backend work is in another language.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Spring Boot",
+      "alsoCalled": [
+        "Spring Framework"
+      ],
+      "why": "Uses a web framework from a different language.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Amazon Web Services",
+      "alsoCalled": [
+        "AWS"
+      ],
+      "why": "Deploys to rented servers; no cloud platform services are mentioned.",
+      "nearMiss": true
+    },
+    {
+      "skill": "AWS Certified Developer - Associate",
+      "alsoCalled": [
+        "AWS Developer Associate"
+      ],
+      "why": "Asked for in some job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Kubernetes",
+      "alsoCalled": [
+        "K8s"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "MongoDB",
+      "alsoCalled": [
+        "Mongo"
+      ],
+      "why": "Lists a key-value store in the skills section, but no document database.",
+      "nearMiss": true
+    },
+    {
+      "skill": "GraphQL",
+      "alsoCalled": [
+        "GraphQL APIs"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Agile",
+      "alsoCalled": [
+        "Scrum",
+        "Agile Methodology"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "JavaScript",
+      "alsoCalled": [
+        "JS"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Design Patterns",
+      "alsoCalled": [
+        "Software Design Patterns"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

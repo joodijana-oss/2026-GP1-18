@@ -1,0 +1,251 @@
+{
+  "id": "ho_05",
+  "careerGoalId": "software_engineer",
+  "shown": [
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java SE"
+      ],
+      "evidence": "which is written in Java with Spring Boot and stores its data in PostgreSQL",
+      "source": "experience"
+    },
+    {
+      "skill": "Spring Boot",
+      "alsoCalled": [
+        "Spring Framework"
+      ],
+      "evidence": "which is written in Java with Spring Boot and stores its data in PostgreSQL",
+      "source": "experience"
+    },
+    {
+      "skill": "REST APIs",
+      "alsoCalled": [
+        "RESTful Web Services",
+        "API Development"
+      ],
+      "evidence": "Added two endpoints so that partner systems can ask for a container's status over HTTP and get JSON back",
+      "source": "experience"
+    },
+    {
+      "skill": "Unit Testing",
+      "alsoCalled": [
+        "Automated Unit Tests"
+      ],
+      "evidence": "Wrote tests for the fee calculator that run by themselves on every push",
+      "source": "experience"
+    },
+    {
+      "skill": "Debugging",
+      "alsoCalled": [
+        "Troubleshooting Code"
+      ],
+      "evidence": "I reproduced it on my machine, stepped through it with breakpoints and closed the gap with a uniqueness constraint",
+      "source": "experience"
+    },
+    {
+      "skill": "Code Review",
+      "alsoCalled": [
+        "Peer Review",
+        "Pull Request Review"
+      ],
+      "evidence": "twice a week I read and commented on my teammates' requests",
+      "source": "experience"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control"
+      ],
+      "evidence": "Every change I made went through a merge request",
+      "source": "experience"
+    },
+    {
+      "skill": "Agile",
+      "alsoCalled": [
+        "Scrum",
+        "Agile Methodology"
+      ],
+      "evidence": "Worked in two-week sprints with a daily stand-up and a demo to the product owner at the end of each one",
+      "source": "experience"
+    },
+    {
+      "skill": "Object-Oriented Programming",
+      "alsoCalled": [
+        "OOP"
+      ],
+      "evidence": "Designed the class model: Booking, Seat and User, with a shared abstract Reservable type",
+      "source": "project"
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Relational Databases",
+        "SQL Queries"
+      ],
+      "evidence": "Java, Python, SQL, C++, HTML, CSS",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming"
+      ],
+      "evidence": "Java, Python, SQL, C++, HTML, CSS",
+      "source": "skills_section"
+    },
+    {
+      "skill": "C++",
+      "alsoCalled": [
+        "C Plus Plus"
+      ],
+      "evidence": "Java, Python, SQL, C++, HTML, CSS",
+      "source": "skills_section"
+    },
+    {
+      "skill": "HTML",
+      "alsoCalled": [
+        "HTML5"
+      ],
+      "evidence": "Java, Python, SQL, C++, HTML, CSS",
+      "source": "skills_section"
+    },
+    {
+      "skill": "CSS",
+      "alsoCalled": [
+        "CSS3"
+      ],
+      "evidence": "Java, Python, SQL, C++, HTML, CSS",
+      "source": "skills_section"
+    },
+    {
+      "skill": "PostgreSQL",
+      "alsoCalled": [
+        "Postgres"
+      ],
+      "evidence": "stores its data in PostgreSQL",
+      "source": "experience"
+    },
+    {
+      "skill": "Technical Documentation",
+      "alsoCalled": [
+        "API Documentation"
+      ],
+      "evidence": "wrote the request and response documentation for them",
+      "source": "experience"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Data Structures and Algorithms",
+      "alsoCalled": [
+        "DSA",
+        "Algorithms"
+      ],
+      "evidence": "Courses: Data Structures, Algorithms, Software Engineering, Database Systems, Operating Systems",
+      "why": "Course titles only."
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery"
+      ],
+      "evidence": "run by themselves on every push",
+      "why": "Used an existing automated test run; did not set up or maintain a pipeline."
+    },
+    {
+      "skill": "System Design",
+      "alsoCalled": [
+        "Software Architecture"
+      ],
+      "evidence": "so that study rooms could be added later without rewriting the booking logic",
+      "why": "One design decision in a student project."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "JavaScript",
+      "alsoCalled": [
+        "JS"
+      ],
+      "why": "Lists page markup and styling, but no scripting for the browser.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Microservices",
+      "alsoCalled": [
+        "Microservice Architecture"
+      ],
+      "why": "Worked inside one service; nothing about splitting or connecting services.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Oracle Certified Professional: Java SE Developer",
+      "alsoCalled": [
+        "OCP Java",
+        "Oracle Java Certification"
+      ],
+      "why": "Asked for in some job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Kubernetes",
+      "alsoCalled": [
+        "K8s"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "MongoDB",
+      "alsoCalled": [
+        "NoSQL"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "React",
+      "alsoCalled": [
+        "React.js"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Design Patterns",
+      "alsoCalled": [
+        "Software Design Patterns"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Amazon Web Services",
+      "alsoCalled": [
+        "AWS"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Servers"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

@@ -1,0 +1,269 @@
+{
+  "id": "dev_02",
+  "careerGoalId": "data_analyst",
+  "shown": [
+    {
+      "skill": "Tableau",
+      "alsoCalled": [
+        "Tableau Desktop"
+      ],
+      "evidence": "Built four Tableau dashboards for the sales department",
+      "source": "experience"
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "Wrote the SQL behind each dashboard on the SQL Server reporting database, mostly joins and window functions for week-on-week change",
+      "source": "experience"
+    },
+    {
+      "skill": "Dashboard Development",
+      "alsoCalled": [
+        "Dashboards",
+        "Dashboard Design",
+        "BI Dashboards"
+      ],
+      "evidence": "Built four Tableau dashboards for the sales department (branch sales, basket size, stock-outs, loyalty sign-ups)",
+      "source": "experience"
+    },
+    {
+      "skill": "Data Visualization",
+      "alsoCalled": [
+        "Data Visualisation",
+        "Charts and Graphs"
+      ],
+      "evidence": "that are now used in the Sunday regional meeting",
+      "source": "experience"
+    },
+    {
+      "skill": "Requirements Gathering",
+      "alsoCalled": [
+        "Business Requirements",
+        "Stakeholder Requirements",
+        "Requirements Elicitation"
+      ],
+      "evidence": "Met the regional managers to list which numbers they look at each week and turned the list into the dashboard specification",
+      "source": "experience"
+    },
+    {
+      "skill": "KPI Tracking",
+      "alsoCalled": [
+        "KPIs",
+        "Key Performance Indicators",
+        "Performance Metrics"
+      ],
+      "evidence": "Added calculated fields for same-store growth and sales per square metre",
+      "source": "experience"
+    },
+    {
+      "skill": "Data Quality",
+      "alsoCalled": [
+        "Data Validation",
+        "Data Accuracy Checks",
+        "Data Reconciliation"
+      ],
+      "evidence": "Reconciled dashboard totals with the finance team's monthly figures and traced a 2% gap to returns being counted twice",
+      "source": "experience"
+    },
+    {
+      "skill": "Reporting",
+      "alsoCalled": [
+        "Business Reporting",
+        "Management Reports",
+        "Periodic Reports"
+      ],
+      "evidence": "Replaced a weekly Excel report that took an analyst three hours with a scheduled extract",
+      "source": "experience"
+    },
+    {
+      "skill": "Data Modeling",
+      "alsoCalled": [
+        "Data Modelling",
+        "Star Schema",
+        "Dimensional Modeling"
+      ],
+      "evidence": "normalised a messy student-housing dataset to third normal form",
+      "source": "education"
+    },
+    {
+      "skill": "Data Documentation",
+      "alsoCalled": [
+        "Data Dictionary",
+        "Metadata Documentation"
+      ],
+      "evidence": "wrote its data dictionary",
+      "source": "education"
+    },
+    {
+      "skill": "Microsoft SQL Server",
+      "alsoCalled": [
+        "SQL Server",
+        "MSSQL"
+      ],
+      "evidence": "on the SQL Server reporting database",
+      "source": "experience"
+    },
+    {
+      "skill": "Excel",
+      "alsoCalled": [
+        "Microsoft Excel",
+        "Spreadsheets"
+      ],
+      "evidence": "Tableau, SQL, Excel, Power BI (basic), Python (pandas)",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Power BI",
+      "alsoCalled": [
+        "Microsoft Power BI"
+      ],
+      "evidence": "Tableau, SQL, Excel, Power BI (basic), Python (pandas)",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "evidence": "Tableau, SQL, Excel, Power BI (basic), Python (pandas)",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Pandas",
+      "alsoCalled": [
+        "Python Pandas"
+      ],
+      "evidence": "Tableau, SQL, Excel, Power BI (basic), Python (pandas)",
+      "source": "skills_section"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Data Warehousing",
+      "alsoCalled": [
+        "Data Warehouse",
+        "DWH"
+      ],
+      "evidence": "Courses: Data Management, Data Warehousing, Business Statistics, Decision Support Systems",
+      "why": "Course title only."
+    },
+    {
+      "skill": "Statistics",
+      "alsoCalled": [
+        "Statistical Analysis",
+        "Descriptive Statistics"
+      ],
+      "evidence": "Business Statistics, Decision Support Systems",
+      "why": "Course title only."
+    },
+    {
+      "skill": "ETL",
+      "alsoCalled": [
+        "Extract Transform Load",
+        "Data Pipelines"
+      ],
+      "evidence": "with a scheduled extract",
+      "why": "One scheduled extract; no pipeline work described."
+    },
+    {
+      "skill": "Data Cleaning",
+      "alsoCalled": [
+        "Data Wrangling",
+        "Data Cleansing"
+      ],
+      "evidence": "a messy student-housing dataset",
+      "why": "Implied by one course project."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "DAX",
+      "alsoCalled": [
+        "Data Analysis Expressions"
+      ],
+      "why": "Wrote calculated fields in Tableau, not DAX measures.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Data Storytelling",
+      "alsoCalled": [
+        "Presenting Insights",
+        "Communicating Findings"
+      ],
+      "why": "Her dashboards are used in meetings, but she does not present findings herself.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Tableau Desktop Specialist",
+      "alsoCalled": [
+        "Tableau Certification"
+      ],
+      "why": "Uses Tableau at work but holds no certification.",
+      "nearMiss": true
+    },
+    {
+      "skill": "R",
+      "alsoCalled": [
+        "R Programming"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "A/B Testing",
+      "alsoCalled": [
+        "Split Testing",
+        "Controlled Experiments",
+        "Experimentation"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Microsoft Power BI Data Analyst Associate",
+      "alsoCalled": [
+        "PL-300"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Google Data Analytics Certificate",
+      "alsoCalled": [
+        "Google Data Analytics Professional Certificate"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Forecasting",
+      "alsoCalled": [
+        "Time Series Forecasting",
+        "Demand Forecasting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Power Query",
+      "alsoCalled": [
+        "M Query"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Data Governance",
+      "alsoCalled": [
+        "Data Stewardship"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

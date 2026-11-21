@@ -1,0 +1,72 @@
+## 7. Decision rule for the final measurement (fixed now, copied word for word into tools/gap_eval/decision_rule_r2.txt and hashed)
+
+All numbers on the decision names of 5.2, strata M and W together
+**[V12]** (the draft's "all of them are in unseen goals" no longer holds:
+W names can belong to goals seen in development; what makes them new is
+the name-level exclusion list). "Today" means the frozen A0. TeachHit@5, AttribPrec@5 and FalseUncovered
+are defined as in hardest/plan_final.md section 4.3: teachable means some
+pooled item is graded at least 1 in that catalogue, and each name's value is
+the mean over its link runs.
+
+7.1 Feasibility gate (before measuring): no new service or key; offline at
+recommendation time; app size +2 MB at most; no new native dependency; for
+C also at most +10 s analysis time at the 90th percentile in the development
+smoke run.
+
+7.2 Hard guards, each must pass:
+(a) An analysis without gapLinks gives exactly today's opportunity and
+    certification lists: unit tests, and evaluate_recommender without links
+    equal to today at 3 decimals on both persona files.
+(b) Persona guard with links (evaluate_recommender, the frozen link prompt,
+    mean over 3 link runs), both persona files: nDCG@10, GapCov@10 and P@5
+    each at least today's value minus 0.02, and TopGapRank at most today's
+    value plus 0.02. **[V1]** This tolerance is new in round 2; round 1's
+    rule was "not lower than today" (TopGapRank not higher). It is frozen
+    only if the orchestrator shows, before the freeze, that the user's own
+    instruction for this round set it, and the freeze file records that
+    source. Otherwise the frozen text is round 1's rule with tolerance 0.
+    Today: development 0.837 / 0.933 / 1.000 / 1.25,
+    held-out 0.806 / 0.750 / 0.975 / 1.50. An item that newly enters the
+    first 10 without a label counts as not relevant. If the guard fails only
+    because of such items, the result is "pending": the candidate does not
+    ship unless the user approves blind labelling of those items (labels
+    added, never removed) and the guard then passes.
+(c) AttribPrec@5 >= 0.70 for opportunities and >= 0.70 for certifications,
+    on the decision names (micro over names, each name's link runs weigh 1
+    in total, as round 1's scorer). A catalogue with no attribution at all
+    passes. The guard is the point estimate, as in round 1; its 90%
+    interval and the number of attributions behind it are printed next to
+    it (reported, not a decision input).
+(d) Timing (TIMING block of evaluate_recommender, same process, 21
+    repetitions alternating today and the candidate, medians): recommend()
+    with the index built at most 2 x today's median; the first call on a new
+    list at most 1.10 x today's.
+
+7.3 Adoption: TeachHit@5 on the decision names (mean of the two catalogues)
+beats A0 by at least 0.10, with the 95% bootstrap interval of the difference
+above 0 (10,000 resamples of names within (stratum, goal) **[V12]**, a name
+with both catalogues as one unit, seed 20261121); and in neither catalogue
+is the candidate below A0 (point estimate).
+
+7.4 Winner: the highest TeachHit@5 among frozen candidates that pass 7.2 and
+7.3. If two are within noise (the interval of their difference includes 0):
+lower FalseUncovered, then fewer requests per analysis (A = B < C), then
+fewer moving parts. An X-opp fallback can win only if its full candidate
+fails.
+
+7.5 No winner: A0 stays and the link code is switched off (8.6).
+
+7.6 Control: if the winner's TeachHit@5 is not above L1g's (point estimate),
+the report says that the gain is not shown to come from meaning, and the
+user decides before anything ships.
+
+7.7 Reported, never used to decide: **[V12]** every metric per stratum (M
+and W) and the size report; the names that were a G1E1 gap of a final-set
+CV; the reason lines of whole analyses of the final-set CVs (all gaps at
+once, as the app shows them); AttribPrec and TeachHit per goal; L1, and M1
+where available; FalseUncovered; the share of the gain over A0 kept relative
+to M1 where M1 is available; **[V14]** for B and C, a note that the link (or
+verification) answers and the grades both come from AI models with similar
+notions of "teaches", so agreement between them may look better than a
+human reader would find it.
+

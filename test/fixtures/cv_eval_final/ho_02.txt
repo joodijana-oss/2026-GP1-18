@@ -1,0 +1,35 @@
+YAZEED BAKHSH
+Jeddah | yazeed.bakhsh@example.com | +966 55 000 0000
+
+PROFILE
+Two years keeping hospital servers and networks running. Along the way the security side of the job became the part I enjoy most, and I am now looking for a junior analyst seat in a security operations team.
+
+EXPERIENCE
+Systems and Network Operations Technician, a private hospital group (three sites), Jeddah
+August 2024 - present
+- Look after 60 Windows and Linux servers: monthly patching, user accounts in Active Directory and nightly backups.
+- Maintain the rule base on the two perimeter FortiGate devices: review change requests, add or remove rules and clear out unused ones every quarter.
+- When the antivirus console flagged a ward workstation encrypting shared files in 2025, I pulled it off the network, restored the share from the previous night's backup and wrote the timeline for management.
+- Rolled out Microsoft Defender for Endpoint to 900 PCs and now handle the detections it raises each day, deciding which are real and which are harmless.
+- Wrote a PowerShell script that emails me every morning the accounts that were locked out overnight and the machines the attempts came from.
+- After an internal audit note, moved infusion pumps and imaging devices onto their own VLANs so that office PCs can no longer reach them.
+- On call one week in four for all three sites.
+
+IT Helpdesk Trainee (summer training), a shipping agency at Jeddah Islamic Port
+June 2023 - August 2023
+- Answered staff calls, replaced hardware and prepared new laptops.
+
+EDUCATION
+B.Sc. Information Technology, University of Jeddah, 2024
+
+SELF-STUDY
+About 40 hours of online blue-team labs so far, mostly phishing cases: reading email headers and opening attachments in a sandbox to see what they do.
+
+CERTIFICATIONS
+Fortinet NSE 4 Network Security Professional, 2025
+
+SKILLS
+Windows Server, Active Directory, FortiGate, PowerShell, VMware vSphere, Linux
+
+LANGUAGES
+Arabic (native), English (professional working level)

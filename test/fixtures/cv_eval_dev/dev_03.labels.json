@@ -1,0 +1,261 @@
+{
+  "id": "dev_03",
+  "careerGoalId": "web_developer",
+  "shown": [
+    {
+      "skill": "HTML",
+      "alsoCalled": [
+        "HTML5",
+        "Semantic HTML"
+      ],
+      "evidence": "hand-written with semantic markup",
+      "source": "experience"
+    },
+    {
+      "skill": "CSS",
+      "alsoCalled": [
+        "CSS3",
+        "Flexbox",
+        "CSS Grid"
+      ],
+      "evidence": "Flexbox and Grid layouts",
+      "source": "experience"
+    },
+    {
+      "skill": "Responsive Design",
+      "alsoCalled": [
+        "Responsive Web Design",
+        "Mobile-First Design"
+      ],
+      "evidence": "looks right from a small phone to a desktop screen",
+      "source": "experience"
+    },
+    {
+      "skill": "JavaScript",
+      "alsoCalled": [
+        "JS",
+        "ECMAScript"
+      ],
+      "evidence": "Plain JavaScript with localStorage",
+      "source": "project"
+    },
+    {
+      "skill": "React",
+      "alsoCalled": [
+        "React.js",
+        "ReactJS"
+      ],
+      "evidence": "React front end using hooks for state",
+      "source": "project"
+    },
+    {
+      "skill": "Node.js",
+      "alsoCalled": [
+        "Node",
+        "NodeJS"
+      ],
+      "evidence": "built with Node.js, Express and MongoDB",
+      "source": "experience"
+    },
+    {
+      "skill": "Express",
+      "alsoCalled": [
+        "Express.js"
+      ],
+      "evidence": "it talks to an Express backend I wrote",
+      "source": "project"
+    },
+    {
+      "skill": "NoSQL",
+      "alsoCalled": [
+        "MongoDB",
+        "Document Databases"
+      ],
+      "evidence": "built with Node.js, Express and MongoDB",
+      "source": "experience"
+    },
+    {
+      "skill": "REST APIs",
+      "alsoCalled": [
+        "RESTful APIs",
+        "API Development",
+        "Web Services"
+      ],
+      "evidence": "an Express backend I wrote, with routes for pitches, slots and bookings",
+      "source": "project"
+    },
+    {
+      "skill": "Authentication",
+      "alsoCalled": [
+        "User Login",
+        "JWT",
+        "OTP Sign-In"
+      ],
+      "evidence": "Users sign in with email and password, and sessions are kept with JWT",
+      "source": "project"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ],
+      "evidence": "I use branches and pull requests even when working alone",
+      "source": "project"
+    },
+    {
+      "skill": "Web Hosting",
+      "alsoCalled": [
+        "Website Deployment",
+        "Domain and Hosting Setup"
+      ],
+      "evidence": "Bought the domains, set up hosting on Netlify and a shared cPanel host, and switched every site to HTTPS",
+      "source": "experience"
+    },
+    {
+      "skill": "Web Performance Optimization",
+      "alsoCalled": [
+        "Page Speed Optimization",
+        "Lighthouse"
+      ],
+      "evidence": "Raised the date farm site's Lighthouse performance score from 48 to 93 by compressing images and loading them lazily",
+      "source": "experience"
+    },
+    {
+      "skill": "Progressive Web Apps",
+      "alsoCalled": [
+        "PWA"
+      ],
+      "evidence": "can be installed on a phone as a PWA and works offline",
+      "source": "project"
+    },
+    {
+      "skill": "Figma",
+      "alsoCalled": [
+        "Figma Design"
+      ],
+      "evidence": "HTML, CSS, JavaScript, React, Node.js, Git, Figma (basic)",
+      "source": "skills_section"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "Database Systems (in progress)",
+      "why": "Course in progress; his projects use MongoDB."
+    },
+    {
+      "skill": "Requirements Gathering",
+      "alsoCalled": [
+        "Business Requirements",
+        "Stakeholder Requirements",
+        "Requirements Elicitation"
+      ],
+      "evidence": "Agree the pages and the price with each owner before starting",
+      "why": "Informal agreement with small clients."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Next.js",
+      "alsoCalled": [
+        "NextJS"
+      ],
+      "why": "Uses React on its own, without a framework on top.",
+      "nearMiss": true
+    },
+    {
+      "skill": "WordPress",
+      "alsoCalled": [
+        "WordPress Development",
+        "CMS"
+      ],
+      "why": "Builds business sites by hand rather than on a content management system.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Web Accessibility",
+      "alsoCalled": [
+        "WCAG",
+        "a11y"
+      ],
+      "why": "Writes semantic markup, but no accessibility checks or standards are mentioned.",
+      "nearMiss": true
+    },
+    {
+      "skill": "TypeScript",
+      "alsoCalled": [
+        "TS"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Unit Testing",
+      "alsoCalled": [
+        "Unit Tests",
+        "Automated Tests",
+        "Test-Driven Development"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Bootstrap",
+      "alsoCalled": [
+        "Bootstrap CSS"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "PHP",
+      "alsoCalled": [
+        "PHP Programming"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build Pipelines"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Web Security",
+      "alsoCalled": [
+        "Secure Web Development",
+        "OWASP"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Meta Front-End Developer Certificate",
+      "alsoCalled": [
+        "Meta Front-End Developer Professional Certificate"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

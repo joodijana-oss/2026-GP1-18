@@ -1,0 +1,195 @@
+row_id,case_id,name,status,label_skill,bundled,note
+n_6b9da64c9b,ho_02,Metasploit,not_shown,,no,final reviewer
+n_b188fa22c4,ho_02,OSCP,not_shown,,no,final reviewer: not held
+n_292ae61657,ho_11,Printer/Peripheral Setup and Support,shown,Printer Support,no,final reviewer: lab printers
+n_342704123f,ho_12,"GRC Platforms (e.g., Archer, ServiceNow GRC, OneTrust)",not_shown,RSA Archer,yes,final reviewer: three products in one name
+n_8b2c30ae3e,ho_11,DNS,not_shown,,no,final reviewer: not named
+n_f112032274,ho_09,Prometheus,not_shown,,no,final reviewer
+n_9999b20998,ho_14,Firewall Management (Palo Alto/FortiGate/Fortinet),not_shown,Firewall Configuration,yes,final reviewer: vendors in one name
+n_7a602a01f0,ho_01,OSCP,not_shown,,no,final reviewer: not held
+n_a8da32118a,ho_12,CISSP,not_shown,,no,final reviewer: not held
+n_5a5bfe62ba,ho_14,Technical Documentation,partly,Network Documentation,no,final reviewer: address sheet per campus only
+n_90b640cb0a,ho_01,Security Risk Assessment,partly,,no,final reviewer: ranked scan findings by severity; no wider risk assessment
+n_8081b551a9,ho_11,"Routers, Switches, and Firewalls",partly,Computer Networking,yes,final reviewer: three device types in one name; home routers only
+n_dd4b63ccf0,ho_08,Network Security,partly,,no,"final reviewer: segmented broadcast domains, basic firewalls; no security role"
+n_eb1ca842ea,ho_11,Networking (LAN/WAN/Wi-Fi/TCP-IP),partly,Computer Networking,yes,final reviewer: four network areas in one name; home routers only
+n_78c9f5ac50,ho_09,C++,not_shown,,no,final reviewer
+n_d30314cf83,ho_03,Pandas/NumPy,partly,Pandas,yes,"final reviewer: two libraries in one name; pandas shown, NumPy not"
+n_c244c8ce08,ho_12,Compliance Audits,shown,Compliance Auditing,no,final reviewer: control-by-control assessment
+n_943d45728e,ho_08,MPLS/BGP/OSPF,partly,OSPF,yes,"final reviewer: three protocols in one name; OSPF shown, MPLS and BGP not"
+n_a6176199e3,ho_04,Dashboard Development,partly,Data Visualization,no,final reviewer: charts in a course report; no dashboard built
+n_f5975e7668,ho_02,Access Control,shown,,no,"final reviewer: AD user accounts, VLAN separation and firewall rules restrict who reaches what"
+n_2dd39da908,ho_08,Fortinet,shown,Firewall Configuration,no,final reviewer: Fortinet firewalls listed in skills
+n_646b154e9e,ho_10,Agile/Scrum Methodologies,shown,Agile,no,final reviewer: one method family
+n_80ec69e70e,ho_07,Bash,shown,Bash Scripting,no,final reviewer: shell scripts for dumps and log rotation
+n_0b2e5e9fcd,ho_09,Ansible,not_shown,,no,final reviewer
+n_3f92953886,ho_06,Kubernetes,not_shown,,no,final reviewer
+n_9dab63b345,ho_05,JavaScript/TypeScript,not_shown,JavaScript,yes,final reviewer: two languages in one name; neither shown
+n_c9f49afdca,ho_11,User Account and Access Management,not_shown,Active Directory,no,final reviewer: as the label
+n_c052868b83,ho_08,Network Monitoring and Troubleshooting,partly,Network Troubleshooting,yes,"final reviewer: two skills joined by and; troubleshooting shown, monitoring not"
+n_f1066548c5,ho_01,Access Control,not_shown,,no,final reviewer: no access control work
+n_9a996dd514,ho_08,Routing and Switching,shown,Switching,no,final reviewer
+n_9def880f58,ho_15,LLM / Generative AI,not_shown,Large Language Models,no,"final reviewer: two names for one area; fine-tuned an encoder, as the label"
+n_e32c65cae9,ho_01,"Security Certifications (CISSP, CEH, Security+, OSCP)",partly,,yes,final reviewer: four certifications in one name; holds Security+ only
+n_35157522bf,ho_15,Prometheus,not_shown,,no,final reviewer
+n_646a2fa0f2,ho_12,Cybersecurity Governance Framework Development,partly,Policy Development,no,final reviewer: applied frameworks and wrote policies; built no framework
+n_063d0df4ed,ho_12,NIST,not_shown,NIST Cybersecurity Framework,no,final reviewer: as the label
+n_c6a373c60c,ho_08,CCNA/CCNP Certification,partly,Cisco CCNA,yes,"final reviewer: two certifications in one name; holds CCNA, not CCNP"
+n_698a475025,ho_07,Monitoring & Observability (Prometheus/Grafana),shown,Monitoring,yes,final reviewer: two skills and two tools in one name; Grafana on Prometheus
+n_9042d93304,ho_15,Terraform,not_shown,,no,final reviewer
+n_4d294b21ba,ho_15,LangChain,not_shown,,no,final reviewer
+n_54caf17479,ho_14,CCNP,not_shown,Cisco CCNP,no,final reviewer
+n_20036dad36,ho_08,VPN Configuration,not_shown,VPN,no,final reviewer: as the label
+n_e75813b424,ho_14,Routing and Switching,shown,Switching,no,final reviewer
+n_487da3a0df,ho_14,Cisco Routers and Switches,shown,Cisco IOS,no,final reviewer: home lab Cisco routers and managed switch
+n_020ecfa22d,ho_12,Compliance Audits & Regulatory Assessments,shown,Compliance Auditing,yes,final reviewer: two activities joined by &; both shown
+n_6aeb635707,ho_07,Site Reliability Engineering (SLIs/SLOs),partly,,no,"final reviewer: on-call alerts, dashboards, automatic rollback; no SLIs or SLOs"
+n_49da702d49,ho_11,IT Asset Management,not_shown,Asset Management,no,final reviewer: as the label
+n_a59c658b38,ho_09,Linux,not_shown,,no,final reviewer: not mentioned
+n_b32bbd9840,ho_01,Nmap,not_shown,,no,final reviewer: not named (Nessus only)
+n_db801c9245,ho_09,CI/CD & Infrastructure-as-Code,not_shown,,yes,final reviewer: two skills joined by &
+n_247a642a85,ho_02,Security Monitoring & Log Analysis,partly,Security Operations Center Monitoring,yes,final reviewer: two skills joined by &; both partly per labels
+n_f2552aab50,ho_13,Monitoring & Observability (Prometheus/Grafana),partly,Monitoring,yes,"final reviewer: two skills and two tools in one name; monitoring by script, no Prometheus or Grafana"
+n_4996491bda,ho_16,React,not_shown,,no,final reviewer
+n_8e47fd02ad,ho_16,Node.js,not_shown,,no,final reviewer
+n_5ea1ee1bd9,ho_14,Firewall Management (Palo Alto/Fortinet),not_shown,Firewall Configuration,yes,final reviewer: two vendors in one name
+n_46adb7d5c5,ho_06,JavaScript/TypeScript,partly,JavaScript,yes,"final reviewer: two languages in one name; JavaScript shown, TypeScript not"
+n_c45e1fd403,ho_12,Cybersecurity Governance Frameworks,shown,ISO/IEC 27001,no,"final reviewer: regulator framework, NCA ECC, ISO 27001"
+n_8416068f58,ho_02,Security Risk Assessment,not_shown,,no,final reviewer: no assessment of risks; acted on an audit note
+n_b20bdba08d,ho_11,Customer Service and Communication,shown,Customer Service,yes,final reviewer: two soft skills joined by and; explains repairs to customers
+n_546944fc5a,ho_11,Customer Service and Communication Skills,shown,Customer Service,yes,final reviewer: two soft skills joined by and
+n_21285e6b1a,ho_01,Cloud Security,not_shown,,no,final reviewer: no cloud work
+n_4782fc41ac,ho_14,Network Monitoring and Troubleshooting,partly,Network Troubleshooting,yes,"final reviewer: two skills joined by and; troubleshooting shown, monitoring not"
+n_3309785677,ho_12,Policy and Standards Development,shown,Policy Development,no,"final reviewer: rewrote two policies, approved"
+n_4a47c2e2ca,ho_01,Endpoint Detection and Response (EDR),not_shown,Endpoint Detection and Response,no,final reviewer: as the label
+n_9e65379114,ho_08,Network Monitoring and Performance Management,not_shown,Network Monitoring,yes,final reviewer: two skills joined by and; as the label
+n_d319cc1541,ho_07,Cloud Platforms (AWS/Azure/GCP),partly,Amazon Web Services,yes,final reviewer: three vendors in one name; AWS shown only
+n_0e17106b60,ho_14,FortiGate,not_shown,,no,final reviewer
+n_38e9eca67e,ho_01,Log Analysis and Threat Detection,shown,Log Analysis,yes,final reviewer: two skills joined by and; log review and alert rules tested against replayed attacks
+n_3b6a749d19,ho_12,Cybersecurity Governance Frameworks & Policy Development,shown,Policy Development,yes,final reviewer: two skills joined by &; both shown
+n_793222dbae,ho_13,Cloud Platforms (AWS/Azure/GCP),partly,Amazon Web Services,yes,final reviewer: three vendors in one name; AWS shown only
+n_b10bb0005c,ho_03,Data Governance,partly,,no,final reviewer: merged duplicates and agreed measure definitions; no governance policies or ownership
+n_69c70ca32c,ho_08,FortiGate,shown,Firewall Configuration,no,final reviewer: Fortinet firewalls listed in skills
+n_7f483fc71a,ho_02,Cloud Security (AWS/GCP/Azure),not_shown,,yes,final reviewer: three vendors in one name
+n_874b3d8c50,ho_03,Stakeholder Collaboration,shown,Requirements Gathering,no,"final reviewer: agreed definitions with supervisor and manager, served sales team"
+n_88027bf9b5,ho_11,Printer/Peripheral Support,shown,Printer Support,no,final reviewer
+n_f3a5c21f74,ho_07,GitOps (Argo CD),not_shown,GitOps,no,final reviewer: one tool named as the example; as the label
+n_eeead5b6f9,ho_14,Cisco Networking,shown,Cisco IOS,no,final reviewer: Cisco routers configured from the command line
+n_19bbee1e0d,ho_16,C++,not_shown,,no,final reviewer
+n_3926e0666f,ho_14,Network Monitoring and Performance Management,not_shown,Network Monitoring,yes,final reviewer: two skills joined by and; as the label
+n_cabfeece97,ho_01,IAM,not_shown,,no,final reviewer
+n_2ac75e1cce,ho_15,C++,not_shown,,no,final reviewer
+n_5387ef76a5,ho_09,LLM / Generative AI,not_shown,Large Language Models,no,final reviewer: two names for one area; as the label
+n_68fb193415,ho_01,Metasploit,not_shown,,no,final reviewer: not named
+n_226e188a93,ho_04,Data Analysis,shown,,no,"final reviewer: summarised delays by hour and route, mean and median"
+n_4b6d7a6a61,ho_08,LAN/WAN,shown,Switching,no,final reviewer: campus network across three buildings
+n_39631d7640,ho_14,MPLS/BGP/OSPF,partly,OSPF,yes,"final reviewer: three protocols in one name; OSPF and BGP shown, MPLS not"
+n_93ebaa8132,ho_14,VLAN,shown,VLANs,no,final reviewer: as the label
+n_e6a9ae8d44,ho_14,Network Security,shown,Access Control Lists,no,"final reviewer: ACLs isolate the cameras, segmented networks, encrypted tunnel"
+n_42cb4b4943,ho_12,GRC Platforms,not_shown,RSA Archer,no,final reviewer: as the label
+n_af84493051,ho_14,Fortinet,not_shown,,no,final reviewer
+n_1cf65e5de5,ho_10,Test Case Design and Execution,shown,Test Case Design,no,final reviewer: wrote 120 scenarios and runs the suite
+n_0d5d9ad90f,ho_12,"GRC Platforms (Archer, ServiceNow GRC, OneTrust, CyberArrow)",not_shown,RSA Archer,yes,final reviewer: four products in one name
+n_24b53a3ccb,ho_14,VPN Configuration,shown,VPN,no,final reviewer: as the label
+n_d0209706b1,ho_04,Pandas/NumPy,not_shown,Pandas,yes,final reviewer: two libraries in one name; neither shown
+n_06b10726de,ho_12,KPI/KRI Reporting,partly,Report Writing,no,final reviewer: monthly compliance status summary; no KPI or KRI set
+n_27b91dc08e,ho_12,Audit Coordination,shown,Audit Preparation,no,final reviewer: evidence for 120 controls before the external audit
+n_1ac7b4b2ef,ho_09,Kubernetes,not_shown,,no,final reviewer
+n_f8e03ce865,ho_14,Firewall Management,not_shown,Firewall Configuration,no,final reviewer: router access lists only; as the label
+n_4e2fbeaa9b,ho_11,Desktop/Laptop Support,shown,Hardware Troubleshooting,no,final reviewer
+n_d6817edf43,ho_10,Defect Tracking and Management,shown,Bug Tracking,no,final reviewer
+n_f2a2188842,ho_14,LAN/WAN,shown,Switching,no,final reviewer: campus LANs and a site-to-site tunnel
+n_f9324d598d,ho_12,SAMA Cybersecurity Framework,partly,SAMA Cyber Security Framework,no,final reviewer: as the label
+n_35997f7ca3,ho_13,GitOps (Argo CD),not_shown,,no,final reviewer: one tool named as the example
+n_a29a4dc05a,ho_11,TCP/IP,partly,Computer Networking,no,final reviewer: fixes connectivity; protocols not named
+n_c6037c5a55,ho_14,Palo Alto,not_shown,,no,final reviewer
+n_8307a261ca,ho_13,Site Reliability Engineering (SLIs/SLOs),not_shown,,no,final reviewer: home service checks only
+n_90f9897fda,ho_02,IAM,partly,Active Directory,no,final reviewer: account administration in AD only; no IAM design
+n_4d04110f4a,ho_01,Cloud Security (AWS/GCP/Azure),not_shown,,yes,final reviewer: three vendors in one name; no cloud work
+n_1bb00886df,ho_15,Model Deployment & Optimization,partly,Hyperparameter Tuning,yes,"final reviewer: two skills joined by &; deployment not shown, tuning only partly"
+n_1115c68cf9,ho_08,Firewalls (Palo Alto/Fortinet),shown,Firewall Configuration,yes,final reviewer: two vendors in one name; Fortinet firewalls
+n_8e41b09fb7,ho_02,Firewalls,shown,Firewall Management,no,final reviewer: as the label (FortiGate rule base)
+n_71f6a0ba72,ho_12,Third-Party/Vendor Risk Management,shown,Third-Party Risk Management,no,final reviewer: two names for one skill
+n_5ab7a7c6e5,ho_16,REST API Design,shown,REST APIs,no,final reviewer: designed the versioned public interface with OpenAPI
+n_f821c2a734,ho_13,CI/CD Pipeline Design,shown,CI/CD,no,final reviewer: merge builds and publishes the site
+n_76e003a966,ho_11,Wi-Fi Troubleshooting,shown,Wireless Networking,no,final reviewer: home router wireless fixes
+n_a3e65d0e27,ho_10,Defect Tracking,shown,Bug Tracking,no,final reviewer: 410 faults written up in Jira
+n_56c23fe7bb,ho_01,Firewalls (Palo Alto/Fortinet),not_shown,Firewall Management,yes,final reviewer: two vendors in one name
+n_b21567b081,ho_12,Compliance Audit Support,shown,Audit Preparation,no,final reviewer
+n_8ca9d8811f,ho_11,Routers/Switches/Firewalls Configuration,partly,Computer Networking,yes,final reviewer: three device types in one name; home routers only
+n_597771e5b9,ho_11,Ticketing Systems (ServiceNow/Remedy),partly,IT Ticketing,yes,"final reviewer: two products in one name; a ticketing system, not these"
+n_fcea4ce256,ho_07,Site Reliability Engineering (SLIs/SLOs/Incident Management),partly,,yes,final reviewer: three things in one name; on-call and an outage review only
+n_836e6f2607,ho_12,NIST Framework,not_shown,NIST Cybersecurity Framework,no,final reviewer: as the label
+n_a291133134,ho_08,Technical Documentation,shown,Network Documentation,no,final reviewer: topology drawing and cabling sheet
+n_e0b73caa64,ho_04,Stakeholder Collaboration,not_shown,Requirements Gathering,no,final reviewer
+n_4deec9aa05,ho_03,Stakeholder Management,partly,,no,final reviewer: works with and presents to managers; managing stakeholders not shown as such
+n_3d6f8dee25,ho_05,REST API Design,shown,REST APIs,no,final reviewer: added and documented two JSON endpoints
+n_0abb8e8937,ho_15,Kubernetes,not_shown,,no,final reviewer
+n_8b3e8d1885,ho_16,Microservices Architecture,shown,Microservices,no,final reviewer: as the label
+n_cb95aece00,ho_04,Data Governance,not_shown,,no,final reviewer
+n_0f8e60e1ae,ho_05,Microservices Architecture,not_shown,Microservices,no,final reviewer: as the label
+n_44f093c432,ho_02,Log Analysis and Threat Detection,partly,Log Analysis,yes,"final reviewer: two skills joined by and; daily triage of endpoint detections, log analysis partly"
+n_7f12783599,ho_04,Machine Learning,not_shown,,no,final reviewer
+n_1f68368028,ho_02,Firewalls (Palo Alto/Fortinet),shown,Firewall Management,yes,final reviewer: two vendors in one name; runs FortiGate
+n_005dfadee9,ho_12,Risk Register Management,shown,Risk Management,no,final reviewer
+n_ab50379168,ho_08,CCNP,not_shown,Cisco CCNP,no,final reviewer: as the label
+n_26ef7f6bb9,ho_08,Firewall Management,shown,Firewall Configuration,no,final reviewer: as the label (Fortinet firewalls in skills)
+n_f47c53fac9,ho_15,Ansible,not_shown,,no,final reviewer
+n_c8496a5e7f,ho_03,Relational Databases,shown,SQL,no,final reviewer: queried the order database and joined tables
+n_2399a120e9,ho_08,Cisco Routers and Switches,shown,Cisco IOS,no,final reviewer: Cisco 2960/3560 and ISR in the lab
+n_8cf32e0f2f,ho_01,IAM (Identity & Access Management),not_shown,,no,final reviewer: abbreviation and its expansion
+n_0ae7ad7d68,ho_16,JavaScript/TypeScript,not_shown,JavaScript,yes,final reviewer: two languages in one name; neither shown
+n_340f5d0ae2,ho_01,Firewalls,not_shown,Firewall Management,no,final reviewer: as the label
+n_d846f64864,ho_02,IDS/IPS,not_shown,Intrusion Detection Systems,no,final reviewer: one concept; as the label
+n_8876909a4b,ho_06,Microservices Architecture,not_shown,Microservices,no,final reviewer: as the label
+n_72012fb240,ho_11,Ticketing Systems,shown,IT Ticketing,no,final reviewer: college request system
+n_15c6fa6d1c,ho_10,Agile/Scrum,shown,Agile,no,final reviewer: one method family; sprints and planning
+n_322b3c78a4,ho_04,NumPy,not_shown,,no,final reviewer
+n_324a13cb99,ho_11,DHCP,not_shown,,no,final reviewer: not named
+n_2bb2e965e7,ho_06,Node.js,not_shown,,no,final reviewer: Flask backend
+n_b819a79312,ho_11,Networking,partly,Computer Networking,no,final reviewer: as the label
+n_d1a3ee3c18,ho_10,Defect Tracking and Reporting,shown,Bug Tracking,no,final reviewer
+n_557e43059f,ho_12,Cybersecurity Risk Register Management,shown,Risk Management,no,"final reviewer: kept the threat list with owner, likelihood and impact"
+n_24caa1b0b9,ho_02,"Security Certifications (CISSP, CEH, Security+, OSCP)",not_shown,,yes,final reviewer: four certifications in one name; holds none of them
+n_beb5045388,ho_08,Cisco Networking,shown,Cisco IOS,no,final reviewer: configured Cisco switches and routers; CCNA
+n_47e4280f36,ho_11,Windows Operating System,shown,Windows,no,final reviewer
+n_44ab95fd6f,ho_06,React,not_shown,,no,final reviewer: plain JavaScript page
+n_e3a5ffe9ea,ho_03,NumPy,not_shown,,no,final reviewer: not named
+n_7d96ff3c9e,ho_08,Firewall Management (Palo Alto/FortiGate/Fortinet),shown,Firewall Configuration,yes,final reviewer: vendors in one name; Fortinet firewalls
+n_aa53778212,ho_08,VLAN,shown,VLANs,no,final reviewer: as the label
+n_361cc4bbe3,ho_01,Security Monitoring & Log Analysis,shown,SIEM,yes,"final reviewer: two skills joined by &; central log console with alert rules, log reading"
+n_970da0e62c,ho_13,Site Reliability Engineering (SLIs/SLOs/Incident Management),not_shown,,yes,final reviewer: three things in one name
+n_425b1a1d12,ho_05,Node.js,not_shown,,no,final reviewer
+n_f2a605ede8,ho_07,CI/CD Pipeline Design,shown,CI/CD,no,final reviewer: built the release pipeline with gradual rollout
+n_0344af30eb,ho_09,Terraform,not_shown,,no,final reviewer
+n_40b79a1ef3,ho_02,Nmap,not_shown,,no,final reviewer
+n_4d7a897dac,ho_13,Bash,shown,Bash Scripting,no,final reviewer: shell script health check
+n_5ca1151213,ho_08,Palo Alto,not_shown,,no,final reviewer
+n_4e342619da,ho_11,LAN Administration,partly,Computer Networking,no,final reviewer: home routers only
+n_8bcfe817e8,ho_14,CCNA/CCNP Certification,not_shown,Cisco CCNA,yes,final reviewer: two certifications in one name; holds neither yet
+n_a40aa9c499,ho_04,Relational Databases,shown,SQL,no,final reviewer: SELECT with joins and designed tables in the database lab
+n_de6801519d,ho_12,NCA Essential Cybersecurity Controls (ECC),shown,NCA Essential Cybersecurity Controls,no,final reviewer: as the label
+n_7ac345d265,ho_10,Integration Testing,partly,API Testing,no,final reviewer: backend calls and ledger checks against the screen; not named
+n_628ef9ad8c,ho_12,KPI/KRI Development & Reporting,partly,Report Writing,yes,"final reviewer: two activities joined by &; status reporting only, no metric design"
+n_7e2d8107da,ho_11,Routers and Switches Configuration,partly,Computer Networking,no,final reviewer: home routers only
+n_4bbf9d1152,ho_14,Firewalls (Palo Alto/Fortinet),not_shown,Firewall Configuration,yes,final reviewer: two vendors in one name
+n_2dd1c47325,ho_02,IAM (Identity & Access Management),partly,Active Directory,no,final reviewer: account administration in AD only
+n_44aab18d5e,ho_15,CI/CD & Infrastructure-as-Code,not_shown,,yes,final reviewer: two skills joined by &
+n_d97a0dec4a,ho_04,Stakeholder Management,not_shown,,no,final reviewer
+n_97c4e89ffa,ho_11,Windows OS Support,shown,Windows,no,final reviewer
+n_d3d719395f,ho_02,Cloud Security,not_shown,,no,final reviewer
+n_c45c46b4fd,ho_08,Firewall Management (Palo Alto/Fortinet),shown,Firewall Configuration,yes,final reviewer: two vendors in one name; Fortinet firewalls
+n_f9dd1fb309,ho_01,IDS/IPS,not_shown,Intrusion Detection Systems,no,final reviewer: one concept; as the label
+n_fee04d60ce,ho_11,Software Installation and Configuration,shown,Software Installation,no,final reviewer: reinstalls drivers and programs
+n_2dd0780ee3,ho_06,REST API Design,shown,REST APIs,no,final reviewer: Flask app answering requests with JSON
+n_9f9eec717c,ho_01,CISSP,not_shown,,no,final reviewer: not held
+n_f6a968d570,ho_02,CISSP,not_shown,,no,final reviewer: not held
+n_987c25ac35,ho_02,CEH,not_shown,Certified Ethical Hacker,no,final reviewer: not held
+n_bb191b269a,ho_09,LangChain,not_shown,,no,final reviewer
+n_03571c2d85,ho_12,SAMA Cybersecurity Framework (CSF),partly,SAMA Cyber Security Framework,no,final reviewer: as the label
+n_5359b36092,ho_13,Grafana,not_shown,,no,final reviewer
+n_3c22ac3db7,ho_09,Model Deployment & Optimization,shown,Model Deployment,yes,final reviewer: two skills joined by &; deployed and compressed the model for the phone
+n_4c48203733,ho_02,Endpoint Detection and Response (EDR),shown,Endpoint Detection and Response,no,final reviewer: as the label (Defender for Endpoint)
+n_f8eba13ac8,ho_03,Dashboard Development,shown,Data Visualization,no,final reviewer: weekly one-page chart summary that replaced a manual report; Power BI and Tableau listed
+n_baf1911cf2,ho_11,CCNA,not_shown,,no,final reviewer
+n_2bacadd2cf,ho_11,VPN,not_shown,,no,final reviewer

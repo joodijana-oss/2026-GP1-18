@@ -1,0 +1,34 @@
+JOOD AL-RASHEED
+Dammam, Eastern Province | jood.alrasheed@example.com | +966 56 000 0000
+
+SUMMARY
+Computer Science graduate (2026) who spent the last seven months of the degree as a co-op trainee on a real product team. Looking for a junior developer position.
+
+EDUCATION
+B.Sc. Computer Science, Imam Abdulrahman Bin Faisal University, Dammam, 2021 - 2026
+Courses: Data Structures, Algorithms, Software Engineering, Database Systems, Operating Systems
+
+CO-OP PLACEMENT
+Software co-op trainee, a company that builds customs-clearance software for freight forwarders, Dammam
+January 2026 - July 2026
+- Joined the team behind the shipment-tracking service, which is written in Java with Spring Boot and stores its data in PostgreSQL.
+- Added two endpoints so that partner systems can ask for a container's status over HTTP and get JSON back, and wrote the request and response documentation for them.
+- Wrote tests for the fee calculator that run by themselves on every push, raising the tested share of that module from 38% to 81%.
+- Found out why invoices were sometimes issued twice: two threads were writing the same row. I reproduced it on my machine, stepped through it with breakpoints and closed the gap with a uniqueness constraint.
+- Every change I made went through a merge request, and twice a week I read and commented on my teammates' requests.
+- Worked in two-week sprints with a daily stand-up and a demo to the product owner at the end of each one.
+
+GRADUATION PROJECT
+Seat booking for the university library (team of four, 2025)
+- Designed the class model: Booking, Seat and User, with a shared abstract Reservable type so that study rooms could be added later without rewriting the booking logic.
+- Wrote the booking rules and the screens for the librarian.
+
+SKILLS
+Java, Python, SQL, C++, HTML, CSS
+
+ACTIVITIES
+- Organiser, "Code and Karak" weekly study circle for first-year women students, 2024 - 2025
+- Volunteer usher, Sharqiah Season, 2023
+
+LANGUAGES
+Arabic (native), English (TOEFL iBT 92)

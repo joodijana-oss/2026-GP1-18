@@ -1,0 +1,196 @@
+{
+  "id": "ho_04",
+  "careerGoalId": "data_analyst",
+  "shown": [
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "I wrote SELECT statements with joins and grouping over a made-up student registration schema",
+      "source": "education"
+    },
+    {
+      "skill": "Microsoft Excel",
+      "alsoCalled": [
+        "Excel",
+        "Spreadsheets"
+      ],
+      "evidence": "Summarised delays by hour and by route with pivot tables",
+      "source": "project"
+    },
+    {
+      "skill": "Data Cleaning",
+      "alsoCalled": [
+        "Data Wrangling",
+        "Data Preparation"
+      ],
+      "evidence": "Removed blank and repeated rows and fixed times that had been typed in two different formats",
+      "source": "project"
+    },
+    {
+      "skill": "Data Visualization",
+      "alsoCalled": [
+        "Dashboards",
+        "Charts"
+      ],
+      "evidence": "drew three charts showing that the worst delays come in the two hours after Isha prayer",
+      "source": "project"
+    },
+    {
+      "skill": "Reporting",
+      "alsoCalled": [
+        "Business Reporting",
+        "Management Reports"
+      ],
+      "evidence": "Wrote a four-page report with my recommendations",
+      "source": "project"
+    },
+    {
+      "skill": "Presentation Skills",
+      "alsoCalled": [
+        "Communicating Insights",
+        "Data Storytelling"
+      ],
+      "evidence": "presented it to the class in ten minutes",
+      "source": "project"
+    },
+    {
+      "skill": "Budget Tracking",
+      "alsoCalled": [
+        "Budgeting"
+      ],
+      "evidence": "I keep the club budget in a shared sheet with formulas that total the spending per event",
+      "source": "other"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Statistics",
+      "alsoCalled": [
+        "Statistical Analysis"
+      ],
+      "evidence": "Worked out the average and the median delay for each route and explained why the two differ",
+      "why": "Basic descriptive measures only, plus a course title."
+    },
+    {
+      "skill": "Data Modeling",
+      "alsoCalled": [
+        "Dimensional Modeling"
+      ],
+      "evidence": "for the final task designed the tables for a small clinic",
+      "why": "One lab task on table design."
+    },
+    {
+      "skill": "Power BI",
+      "alsoCalled": [
+        "Microsoft Power BI"
+      ],
+      "evidence": "Finished a free 10-hour online introduction to Power BI in August 2026 (videos only, no project yet)",
+      "why": "Watched an introduction; has not used the tool."
+    },
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java Programming"
+      ],
+      "evidence": "Introduction to Programming (Java)",
+      "why": "Course title only."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Tableau",
+      "alsoCalled": [
+        "Tableau Desktop"
+      ],
+      "why": "Drew charts in a spreadsheet, but has not used a dashboard tool.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming"
+      ],
+      "why": "Took a programming course in another language; no data work in code.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Microsoft Power BI Data Analyst Associate",
+      "alsoCalled": [
+        "PL-300"
+      ],
+      "why": "Often asked for in job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "ETL",
+      "alsoCalled": [
+        "Extract Transform Load",
+        "Data Pipelines"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "DAX",
+      "alsoCalled": [
+        "Data Analysis Expressions"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "R",
+      "alsoCalled": [
+        "R Programming"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Pandas",
+      "alsoCalled": [
+        "Python Pandas"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Requirements Gathering",
+      "alsoCalled": [
+        "Stakeholder Requirements"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "KPI Development",
+      "alsoCalled": [
+        "Key Performance Indicators",
+        "Metrics Definition"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "A/B Testing",
+      "alsoCalled": [
+        "Hypothesis Testing",
+        "Experimentation"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Data Warehousing",
+      "alsoCalled": [
+        "Data Warehouse"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

@@ -1,0 +1,278 @@
+{
+  "id": "dev_01",
+  "careerGoalId": "cybersecurity_analyst",
+  "shown": [
+    {
+      "skill": "SIEM Monitoring",
+      "alsoCalled": [
+        "SIEM",
+        "Security Information and Event Management",
+        "Security Monitoring"
+      ],
+      "evidence": "Watched the alert queue on the Splunk console during day shifts, about 70 alerts a shift",
+      "source": "experience"
+    },
+    {
+      "skill": "Alert Triage",
+      "alsoCalled": [
+        "Alert Analysis",
+        "Tier 1 Triage"
+      ],
+      "evidence": "decided which were false alarms and which needed a case",
+      "source": "experience"
+    },
+    {
+      "skill": "Incident Response",
+      "alsoCalled": [
+        "Security Incident Handling",
+        "Incident Handling",
+        "IR"
+      ],
+      "evidence": "Opened cases for the real ones, gathered the related events and the affected machine's details, and escalated to the tier-2 analyst",
+      "source": "experience"
+    },
+    {
+      "skill": "Phishing Analysis",
+      "alsoCalled": [
+        "Phishing Investigation",
+        "Email Security Analysis"
+      ],
+      "evidence": "Checked emails that customers' staff reported as suspicious: sender, links and attachments against sandbox results",
+      "source": "experience"
+    },
+    {
+      "skill": "Detection Engineering",
+      "alsoCalled": [
+        "Detection Rule Tuning",
+        "Use Case Tuning"
+      ],
+      "evidence": "Tuned three noisy detection rules with the senior analyst",
+      "source": "experience"
+    },
+    {
+      "skill": "Splunk",
+      "alsoCalled": [
+        "Splunk Enterprise"
+      ],
+      "evidence": "Watched the alert queue on the Splunk console",
+      "source": "experience"
+    },
+    {
+      "skill": "Wazuh",
+      "alsoCalled": [
+        "Wazuh SIEM"
+      ],
+      "evidence": "Installed Wazuh on an old laptop and enrolled two Windows virtual machines and an Ubuntu web server as agents",
+      "source": "project"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "an Ubuntu web server",
+      "source": "project"
+    },
+    {
+      "skill": "Log Analysis",
+      "alsoCalled": [
+        "Log Review",
+        "Event Log Analysis"
+      ],
+      "evidence": "Added Sysmon to the Windows machines to get process-creation events",
+      "source": "project"
+    },
+    {
+      "skill": "Intrusion Detection",
+      "alsoCalled": [
+        "IDS",
+        "IPS",
+        "Intrusion Detection and Prevention"
+      ],
+      "evidence": "Snort signatures in a virtual network",
+      "source": "education"
+    },
+    {
+      "skill": "Firewall Management",
+      "alsoCalled": [
+        "Firewall Administration",
+        "Firewall Configuration",
+        "Firewall Rules"
+      ],
+      "evidence": "configured pfSense rules",
+      "source": "education"
+    },
+    {
+      "skill": "Packet Analysis",
+      "alsoCalled": [
+        "Wireshark",
+        "Packet Capture"
+      ],
+      "evidence": "Splunk, Wazuh, Linux, Windows event logs, Wireshark, Python (basic)",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "evidence": "Splunk, Wazuh, Linux, Windows event logs, Wireshark, Python (basic)",
+      "source": "skills_section"
+    },
+    {
+      "skill": "CompTIA Security+",
+      "alsoCalled": [
+        "Security+",
+        "SY0-701"
+      ],
+      "evidence": "CompTIA Security+, 2026",
+      "source": "certification"
+    },
+    {
+      "skill": "Google Cybersecurity Professional Certificate",
+      "alsoCalled": [
+        "Google Cybersecurity Certificate"
+      ],
+      "evidence": "Google Cybersecurity Professional Certificate, 2025",
+      "source": "certification"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Threat Intelligence",
+      "alsoCalled": [
+        "Cyber Threat Intelligence",
+        "CTI"
+      ],
+      "evidence": "Looked up addresses and file hashes in VirusTotal and the provider's own feed",
+      "why": "Look-ups while closing cases; no intelligence analysis or reporting."
+    },
+    {
+      "skill": "Penetration Testing",
+      "alsoCalled": [
+        "Ethical Hacking",
+        "Pentesting"
+      ],
+      "evidence": "Simulated attacks from Kali (password spraying, a reverse shell, a web scan with Nikto)",
+      "why": "Attacks were run only to test her own alerts."
+    },
+    {
+      "skill": "Security Reporting",
+      "alsoCalled": [
+        "Incident Reporting",
+        "Security Documentation"
+      ],
+      "evidence": "with a short written summary",
+      "why": "Escalation notes only."
+    },
+    {
+      "skill": "Network Security",
+      "alsoCalled": [
+        "Network Defense",
+        "Network Segmentation",
+        "Access Control Lists"
+      ],
+      "evidence": "Network Security course lab",
+      "why": "One course lab."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Vulnerability Assessment",
+      "alsoCalled": [
+        "Vulnerability Scanning",
+        "Vulnerability Management"
+      ],
+      "why": "Ran one web scan to trigger alerts; did not assess or rank weaknesses.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Malware Analysis",
+      "alsoCalled": [
+        "Malware Investigation",
+        "Reverse Engineering Malware"
+      ],
+      "why": "Compares attachments with sandbox results; does not analyse samples herself.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Endpoint Security",
+      "alsoCalled": [
+        "Endpoint Protection",
+        "EDR",
+        "Endpoint Detection and Response",
+        "Antivirus Management"
+      ],
+      "why": "Collects endpoint events, but has not worked with an endpoint protection product.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Digital Forensics",
+      "alsoCalled": [
+        "Computer Forensics",
+        "DFIR",
+        "Forensic Analysis"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "MITRE ATT&CK",
+      "alsoCalled": [
+        "ATT&CK Framework"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "NCA Essential Cybersecurity Controls",
+      "alsoCalled": [
+        "NCA ECC",
+        "ECC"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Cloud Security",
+      "alsoCalled": [
+        "Cloud Security Fundamentals",
+        "Securing Cloud Workloads"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Threat Hunting",
+      "alsoCalled": [
+        "Proactive Threat Hunting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "CompTIA CySA+",
+      "alsoCalled": [
+        "CySA+",
+        "Cybersecurity Analyst+"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Active Directory",
+      "alsoCalled": [
+        "AD",
+        "User Account Management"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "CompTIA Security+",
+    "Google Cybersecurity Professional Certificate"
+  ]
+}

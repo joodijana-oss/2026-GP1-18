@@ -1,0 +1,248 @@
+{
+  "id": "ho_13",
+  "careerGoalId": "cloud_devops_engineer",
+  "shown": [
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration"
+      ],
+      "evidence": "Runs Debian and hosts the family photo library",
+      "source": "project"
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "evidence": "each one in its own container and all of them started from a single compose file",
+      "source": "project"
+    },
+    {
+      "skill": "Infrastructure as Code",
+      "alsoCalled": [
+        "IaC"
+      ],
+      "evidence": "Rebuilding the whole machine is one command: a set of playbooks installs the packages, creates the users and brings every service back",
+      "source": "project"
+    },
+    {
+      "skill": "Monitoring",
+      "alsoCalled": [
+        "Observability",
+        "Infrastructure Monitoring",
+        "Alerting"
+      ],
+      "evidence": "checks every five minutes that each service answers, and sends me a Telegram message when one does not",
+      "source": "project"
+    },
+    {
+      "skill": "Bash Scripting",
+      "alsoCalled": [
+        "Shell Scripting"
+      ],
+      "evidence": "A small shell script checks every five minutes that each service answers",
+      "source": "project"
+    },
+    {
+      "skill": "Amazon Web Services",
+      "alsoCalled": [
+        "AWS"
+      ],
+      "evidence": "Moved the Hail Tech Club website to the AWS free tier",
+      "source": "project"
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Deployment Pipelines"
+      ],
+      "evidence": "Every merge into the main branch now builds the site and publishes it by itself",
+      "source": "project"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control"
+      ],
+      "evidence": "Every merge into the main branch",
+      "source": "project"
+    },
+    {
+      "skill": "Backup and Recovery",
+      "alsoCalled": [
+        "Data Backup",
+        "Offsite Backup"
+      ],
+      "evidence": "Photos are copied every night to a second disk and once a week to my brother's house in Buraydah",
+      "source": "project"
+    },
+    {
+      "skill": "Technical Documentation",
+      "alsoCalled": [
+        "Runbooks",
+        "User Guides"
+      ],
+      "evidence": "Wrote a two-page guide so that the next committee can keep it running",
+      "source": "project"
+    },
+    {
+      "skill": "Technical Training",
+      "alsoCalled": [
+        "Workshop Delivery"
+      ],
+      "evidence": "Gave a hands-on workshop, \"Your first virtual machine in the cloud\", to 35 students",
+      "source": "other"
+    },
+    {
+      "skill": "Static Website Hosting",
+      "alsoCalled": [
+        "Static Site Hosting"
+      ],
+      "evidence": "the pages sit in a storage bucket behind the content delivery network",
+      "source": "project"
+    },
+    {
+      "skill": "Ansible",
+      "alsoCalled": [
+        "Configuration Management"
+      ],
+      "evidence": "a set of playbooks installs the packages, creates the users and brings every service back",
+      "source": "project"
+    },
+    {
+      "skill": "Cloud Computing",
+      "alsoCalled": [
+        "Cloud Fundamentals"
+      ],
+      "evidence": "Moved the Hail Tech Club website to the AWS free tier",
+      "source": "project"
+    },
+    {
+      "skill": "Amazon S3",
+      "alsoCalled": [
+        "S3",
+        "Object Storage"
+      ],
+      "evidence": "the pages sit in a storage bucket",
+      "source": "project"
+    },
+    {
+      "skill": "Content Delivery Network",
+      "alsoCalled": [
+        "CDN"
+      ],
+      "evidence": "behind the content delivery network",
+      "source": "project"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Distributed Systems",
+      "alsoCalled": [
+        "Distributed Computing"
+      ],
+      "evidence": "Courses: Operating Systems, Computer Networks, Distributed Systems",
+      "why": "Course title only."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Kubernetes",
+      "alsoCalled": [
+        "K8s",
+        "Container Orchestration"
+      ],
+      "why": "Runs containers on one machine; nothing about running them across a cluster.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Terraform",
+      "alsoCalled": [
+        "HashiCorp Terraform"
+      ],
+      "why": "Automates the setup of one machine, but does not create cloud resources from code.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Prometheus",
+      "alsoCalled": [
+        "Prometheus Monitoring"
+      ],
+      "why": "Checks his services with a home-made script, not a monitoring system.",
+      "nearMiss": true
+    },
+    {
+      "skill": "AWS Certified Solutions Architect - Associate",
+      "alsoCalled": [
+        "AWS SAA",
+        "AWS Solutions Architect Associate"
+      ],
+      "why": "Often asked for in job ads for this role; he holds no certification.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Microsoft Azure",
+      "alsoCalled": [
+        "Azure"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Jenkins",
+      "alsoCalled": [
+        "Jenkins Pipelines"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Scripting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Cloud Networking",
+      "alsoCalled": [
+        "VPC",
+        "Virtual Networks"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Cloud Security",
+      "alsoCalled": [
+        "IAM",
+        "Identity and Access Management"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Certified Kubernetes Administrator",
+      "alsoCalled": [
+        "CKA"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "High Availability",
+      "alsoCalled": [
+        "Load Balancing",
+        "Auto Scaling"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

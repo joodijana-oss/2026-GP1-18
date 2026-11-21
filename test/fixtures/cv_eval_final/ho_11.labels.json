@@ -1,0 +1,217 @@
+{
+  "id": "ho_11",
+  "careerGoalId": "it_support_specialist",
+  "shown": [
+    {
+      "skill": "Hardware Troubleshooting",
+      "alsoCalled": [
+        "PC Repair",
+        "Hardware Support"
+      ],
+      "evidence": "Work out why laptops and desktops will not start, overheat or crash, and replace memory, drives, fans and screens",
+      "source": "experience"
+    },
+    {
+      "skill": "Operating System Installation",
+      "alsoCalled": [
+        "OS Imaging",
+        "OS Deployment"
+      ],
+      "evidence": "Wipe customers' machines and rebuild them from a USB stick",
+      "source": "experience"
+    },
+    {
+      "skill": "Software Installation",
+      "alsoCalled": [
+        "Application Deployment"
+      ],
+      "evidence": "then put back their drivers, their programs and their files",
+      "source": "experience"
+    },
+    {
+      "skill": "Backup and Recovery",
+      "alsoCalled": [
+        "Data Backup",
+        "Data Recovery"
+      ],
+      "evidence": "copy the customer's photos and documents to the shop drive and return them afterwards",
+      "source": "experience"
+    },
+    {
+      "skill": "Customer Service",
+      "alsoCalled": [
+        "End-User Support",
+        "User Support"
+      ],
+      "evidence": "Explain to walk-in customers, many of them elderly, what went wrong and what it will cost, in plain words",
+      "source": "experience"
+    },
+    {
+      "skill": "Network Troubleshooting",
+      "alsoCalled": [
+        "Connectivity Troubleshooting"
+      ],
+      "evidence": "fix \"connected but no internet\" cases",
+      "source": "experience"
+    },
+    {
+      "skill": "Wireless Networking",
+      "alsoCalled": [
+        "Wi-Fi Setup",
+        "WLAN"
+      ],
+      "evidence": "reset, update the firmware, set a new wireless name and password",
+      "source": "experience"
+    },
+    {
+      "skill": "Technical Documentation",
+      "alsoCalled": [
+        "Knowledge Base Articles",
+        "User Guides"
+      ],
+      "evidence": "Wrote 20 one-page how-to sheets with photos for the shop's two new apprentices",
+      "source": "experience"
+    },
+    {
+      "skill": "IT Ticketing",
+      "alsoCalled": [
+        "Help Desk Ticketing",
+        "Service Desk Tickets"
+      ],
+      "evidence": "entered dead PCs and projectors in the college's request system and closed each request once the fault was fixed",
+      "source": "other"
+    },
+    {
+      "skill": "Printer Support",
+      "alsoCalled": [
+        "Printer Troubleshooting"
+      ],
+      "evidence": "Cleared paper jams and replaced toner in the lab printers",
+      "source": "other"
+    },
+    {
+      "skill": "Windows",
+      "alsoCalled": [
+        "Windows 10",
+        "Windows 11",
+        "Windows Support"
+      ],
+      "evidence": "Windows 10 and 11 installation",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Microsoft Office",
+      "alsoCalled": [
+        "MS Office",
+        "Office Applications"
+      ],
+      "evidence": "Microsoft Office",
+      "source": "skills_section"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Computer Networking",
+      "alsoCalled": [
+        "Networking Fundamentals"
+      ],
+      "evidence": "Courses so far: Computer Hardware, Operating Systems, Introduction to Networks",
+      "why": "Course title only beyond home router work."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Microsoft 365",
+      "alsoCalled": [
+        "Office 365",
+        "Microsoft 365 Administration"
+      ],
+      "why": "Lists the desktop office programs, but nothing about managing accounts, mailboxes or licences.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Remote Support",
+      "alsoCalled": [
+        "Remote Desktop Support"
+      ],
+      "why": "All of his support is done face to face at a bench or in a lab.",
+      "nearMiss": true
+    },
+    {
+      "skill": "CompTIA A+",
+      "alsoCalled": [
+        "A+"
+      ],
+      "why": "His repair work covers similar ground, but he does not hold this certification.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Windows Server",
+      "alsoCalled": [
+        "Windows Server Administration"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "PowerShell",
+      "alsoCalled": [
+        "PowerShell Scripting"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Active Directory",
+      "alsoCalled": [
+        "AD",
+        "User Account Management"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "ITIL",
+      "alsoCalled": [
+        "ITIL 4 Foundation"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "macOS",
+      "alsoCalled": [
+        "Mac Support"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Asset Management",
+      "alsoCalled": [
+        "IT Inventory",
+        "IT Asset Tracking"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Endpoint Security",
+      "alsoCalled": [
+        "Antivirus Management"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Mobile Device Management",
+      "alsoCalled": [
+        "MDM",
+        "Microsoft Intune"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

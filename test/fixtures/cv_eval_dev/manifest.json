@@ -1,0 +1,57 @@
+{
+  "set": "dev",
+  "version": 1,
+  "writtenOn": "2026-11-20",
+  "note": "Fictional CVs written for evaluation. Any resemblance to real people is unintended.",
+  "changes": [],
+  "cases": [
+    {
+      "id": "dev_01",
+      "careerGoalId": "cybersecurity_analyst",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "dev_01.txt",
+      "labels": "dev_01.labels.json"
+    },
+    {
+      "id": "dev_02",
+      "careerGoalId": "data_analyst",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "dev_02.txt",
+      "labels": "dev_02.labels.json"
+    },
+    {
+      "id": "dev_03",
+      "careerGoalId": "web_developer",
+      "level": "student",
+      "experienceLevel": "Beginner",
+      "cv": "dev_03.txt",
+      "labels": "dev_03.labels.json"
+    },
+    {
+      "id": "dev_04",
+      "careerGoalId": "systems_administrator",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "dev_04.txt",
+      "labels": "dev_04.labels.json"
+    },
+    {
+      "id": "dev_05",
+      "careerGoalId": "database_administrator",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "dev_05.txt",
+      "labels": "dev_05.labels.json"
+    },
+    {
+      "id": "dev_06",
+      "careerGoalId": "mobile_developer",
+      "level": "student",
+      "experienceLevel": "Beginner",
+      "cv": "dev_06.txt",
+      "labels": "dev_06.labels.json"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+LAYAN AL-DOSSARI
+Al-Kharj, Riyadh Region | layan.aldossari@example.com | +966 50 000 0000
+
+OBJECTIVE
+Computer Engineering graduate from the networks track, looking for a junior role in a network operations or implementation team.
+
+EDUCATION
+B.Sc. Computer Engineering (Networks track), Prince Sattam bin Abdulaziz University, Al-Kharj, 2026
+Second Class Honours, upper division
+
+LAB PROJECTS
+Campus in a rack (senior project, 2025 - 2026)
+- Built a three-building campus network on six real Cisco 2960 and 3560 switches and three ISR routers borrowed from the department lab, configuring all of them from the console.
+- Kept students, staff and security cameras in separate broadcast domains that can reach each other only through the distribution layer.
+- Carved a single /22 into right-sized blocks for 11 departments and recorded every allocation.
+- Ran a link-state routing protocol in a single backbone area between the three routers, and checked that traffic found a new path in under 10 seconds when I unplugged a link.
+- Drew the topology and wrote a port-by-port cabling sheet that the lab still uses.
+
+Guest Wi-Fi for the college open day (2025)
+- Set up two access points with a separate visitor network, and chose channels that do not overlap after walking the hall with a phone analyser.
+
+Why is Lab 3 slow? (2025)
+- Captured traffic on the lab uplink, found one PC flooding the segment with broadcast frames from a faulty network card, and shut its port until the card was replaced.
+
+SUMMER TRAINING
+Trainee, a telecom contractor, Riyadh, June - August 2025
+- Shadowed the field team installing branch routers for a bank; labelled cables and filled in site-acceptance checklists.
+
+CERTIFICATIONS
+Cisco Certified Network Associate (CCNA), February 2026
+
+SKILLS
+Cisco IOS, Wireshark, Packet Tracer, Python, Fortinet firewalls (basic)
+
+ACTIVITIES
+- Member of the IEEE student branch; helped run two networking workshops for secondary-school girls.
+
+LANGUAGES
+Arabic (native), English (good)

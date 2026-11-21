@@ -1,0 +1,34 @@
+WIJDAN AL-QARNI
+Abha, Asir | wijdan.alqarni@example.com | +966 55 000 0000
+
+EDUCATION
+King Khalid University, Abha
+B.Sc. Computer Science, First Class Honours                Sep 2022 - 06/2026
+Selected courses: Artificial Intelligence, Probability and Statistics, Linear Algebra, Image Pro-
+cessing
+
+GRADUATION PROJECT
+"Asir Leaf": telling coffee-plant diseases apart from phone photos           2025/2026
+● Collected 6,400 leaf photos with two farmers' cooperatives in the Asir highlands and labelled them with an agronomist.
+● Threw out blurred shots, and evened out the classes by rotating, flipping and cropping photos of the rarer diseases.
+● Started from a network already trained on everyday images and retrained its last layers on our leaves, using PyTorch.
+● Kept back every photo from one farm that the model never saw during training, and reported precision and recall per disease with a confusion matrix, not a single accuracy figure.
+● Tried 24 combinations of learning rate, batch size and number of frozen layers and kept the one that scored best on the validation photos.
+● Shrank the finished model until it answers in under a second on a mid-range Android phone with no internet, and wrapped it in a small app that eleven farmers used for a month.
+● Result: 93% of test photos assigned to the right disease (five classes). Supervisor's grade: A+.
+
+OTHER COURSEWORK
+Used-car prices (Artificial Intelligence course, 2025)
+● Predicted asking prices from 18,000 Saudi classified adverts, comparing linear regression, a random forest and gradient boosting; the boosted model was off by 9% on average.
+
+RESEARCH DAY
+● Poster on Asir Leaf at the university's 2026 undergraduate research day (2nd prize, computing track).
+
+SKILLS
+Python, PyTorch, scikit-learn, NumPy, Git
+
+VOLUNTEERING
+● Taught a four-week "first steps in coding" class for girls aged 12 to 14 at a neighbourhood centre in Abha, summer 2024.
+
+LANGUAGES
+Arabic (mother tongue), English (IELTS 7.0)

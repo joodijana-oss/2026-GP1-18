@@ -1,0 +1,33 @@
+Grading instructions for the teaching sheet (final matching measurement).
+
+Judge only from the text shown: the skill name and the item text on the row.
+Do not look anything up, and do not use what you know about the item from
+elsewhere. You are not told which version of the app produced a row.
+
+### judgements/teaching.csv
+
+Columns:
+
+```
+row_id,career_goal_id,gap,item_type,item_id,item_title,item_text,grade,note
+```
+
+- `item_type` is opportunity (a course, programme, bootcamp or event) or
+  certification.
+- **[S7]** Some rows come from career goals that have no CV in the set. Grade
+  them the same way: the grade depends only on the skill name and the item
+  text, never on a CV.
+- `grade`:
+  - 2: the item teaches the skill as one of its main topics;
+  - 1: the item teaches it as a clear part;
+  - 0: it does not teach it (a passing mention, a different meaning of the
+    same word, or only a prerequisite).
+
+  Example (telecom, not in any set): for "RF Planning", a 5G radio network
+  design course is 2, a general telecom fundamentals course with one unit on
+  radio planning is 1, and a fibre splicing course is 0.
+
+  **[S7]** When the skill name itself packs several things, grade 1 or 2 only
+  if the item teaches the main part of what the name says, and write
+  "bundled name" in `note`.
+

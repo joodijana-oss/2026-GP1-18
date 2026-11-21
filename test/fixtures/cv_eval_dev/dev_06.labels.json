@@ -1,0 +1,252 @@
+{
+  "id": "dev_06",
+  "careerGoalId": "mobile_developer",
+  "shown": [
+    {
+      "skill": "Flutter",
+      "alsoCalled": [
+        "Flutter SDK"
+      ],
+      "evidence": "Built in Flutter with Dart",
+      "source": "project"
+    },
+    {
+      "skill": "Dart",
+      "alsoCalled": [
+        "Dart Programming"
+      ],
+      "evidence": "Built in Flutter with Dart; state is handled with Provider",
+      "source": "project"
+    },
+    {
+      "skill": "State Management",
+      "alsoCalled": [
+        "Provider",
+        "Bloc"
+      ],
+      "evidence": "state is handled with Provider",
+      "source": "project"
+    },
+    {
+      "skill": "Firebase",
+      "alsoCalled": [
+        "Firestore",
+        "Firebase Firestore"
+      ],
+      "evidence": "Saves groups and expenses in Firebase Firestore",
+      "source": "project"
+    },
+    {
+      "skill": "App Publishing",
+      "alsoCalled": [
+        "App Release",
+        "Google Play Publishing",
+        "Store Submission"
+      ],
+      "evidence": "Went through the Play Console steps myself: signing, store listing, screenshots and a closed test with 20 club members before the public release",
+      "source": "project"
+    },
+    {
+      "skill": "Localization",
+      "alsoCalled": [
+        "Internationalization",
+        "i18n",
+        "RTL Support"
+      ],
+      "evidence": "Every screen works in Arabic and English, with layouts that flip for right-to-left",
+      "source": "project"
+    },
+    {
+      "skill": "Authentication",
+      "alsoCalled": [
+        "User Login",
+        "JWT",
+        "OTP Sign-In"
+      ],
+      "evidence": "signs users in with a code sent to their phone number",
+      "source": "project"
+    },
+    {
+      "skill": "API Integration",
+      "alsoCalled": [
+        "Consuming APIs",
+        "REST API Integration"
+      ],
+      "evidence": "reading the timetable from a JSON feed that the college IT unit exposes",
+      "source": "project"
+    },
+    {
+      "skill": "Unit Testing",
+      "alsoCalled": [
+        "Unit Tests",
+        "Automated Tests",
+        "Test-Driven Development"
+      ],
+      "evidence": "Wrote widget tests for the booking form",
+      "source": "project"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ],
+      "evidence": "The team works on feature branches and merges through pull requests",
+      "source": "project"
+    },
+    {
+      "skill": "Debugging",
+      "alsoCalled": [
+        "Troubleshooting Code",
+        "Bug Fixing",
+        "Root Cause Analysis"
+      ],
+      "evidence": "Read the Crashlytics reports after launch and fixed the three most common crashes",
+      "source": "project"
+    },
+    {
+      "skill": "UI Implementation",
+      "alsoCalled": [
+        "UI Development",
+        "Design to Code"
+      ],
+      "evidence": "Turned the club designer's Figma screens into widgets and a small set of shared components",
+      "source": "project"
+    },
+    {
+      "skill": "Offline Storage",
+      "alsoCalled": [
+        "Local Caching",
+        "Offline Support"
+      ],
+      "evidence": "keeps the last result for when there is no signal",
+      "source": "project"
+    },
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java Programming",
+        "Core Java"
+      ],
+      "evidence": "Courses: Object-Oriented Programming (Java), Data Structures, Human-Computer Interaction",
+      "source": "education"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Agile",
+      "alsoCalled": [
+        "Scrum",
+        "Agile Methodology"
+      ],
+      "evidence": "tasks are on a Trello board",
+      "why": "A task board only; no sprints or ceremonies described."
+    },
+    {
+      "skill": "Object-Oriented Programming",
+      "alsoCalled": [
+        "OOP",
+        "Object-Oriented Design"
+      ],
+      "evidence": "Object-Oriented Programming (Java)",
+      "why": "Course title only."
+    },
+    {
+      "skill": "UI Design",
+      "alsoCalled": [
+        "Interface Design",
+        "UX Design"
+      ],
+      "evidence": "Human-Computer Interaction",
+      "why": "Course title only; the screens were designed by someone else."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Kotlin",
+      "alsoCalled": [
+        "Native Android Development"
+      ],
+      "why": "Her app runs on Android, but it is written in Flutter, not native code.",
+      "nearMiss": true
+    },
+    {
+      "skill": "iOS App Store Publishing",
+      "alsoCalled": [
+        "App Store Submission",
+        "TestFlight"
+      ],
+      "why": "Published on Google Play only.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Push Notifications",
+      "alsoCalled": [
+        "Firebase Cloud Messaging",
+        "FCM"
+      ],
+      "why": "Schedules a notification on the device; no server-sent push.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Swift",
+      "alsoCalled": [
+        "Native iOS Development"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build Pipelines"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "SQLite",
+      "alsoCalled": [
+        "Embedded Database"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "React Native",
+      "alsoCalled": [
+        "RN"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Google Associate Android Developer",
+      "alsoCalled": [
+        "Associate Android Developer"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "MVVM",
+      "alsoCalled": [
+        "Clean Architecture",
+        "App Architecture"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "GraphQL",
+      "alsoCalled": [
+        "GraphQL APIs"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

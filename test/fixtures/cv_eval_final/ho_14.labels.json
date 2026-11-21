@@ -1,0 +1,241 @@
+{
+  "id": "ho_14",
+  "careerGoalId": "network_engineer",
+  "shown": [
+    {
+      "skill": "Network Troubleshooting",
+      "alsoCalled": [
+        "Fault Finding"
+      ],
+      "evidence": "I trace it from the wall socket to the patch panel to the switch port, test the cable and re-terminate it if needed",
+      "source": "experience"
+    },
+    {
+      "skill": "Wireless Networking",
+      "alsoCalled": [
+        "Wi-Fi",
+        "WLAN"
+      ],
+      "evidence": "Walked two campuses with a signal-strength app, mapped the dead spots and moved four access points",
+      "source": "experience"
+    },
+    {
+      "skill": "TCP/IP",
+      "alsoCalled": [
+        "Networking Fundamentals",
+        "Network Protocols"
+      ],
+      "evidence": "Moved printers and cameras onto fixed addresses and keep the address sheet for each campus so that nothing collides",
+      "source": "experience"
+    },
+    {
+      "skill": "VLANs",
+      "alsoCalled": [
+        "Virtual LANs",
+        "Network Segmentation"
+      ],
+      "evidence": "Split my flat into four networks (family, guests, cameras, lab) on the one switch with a trunk up to the router",
+      "source": "project"
+    },
+    {
+      "skill": "VPN",
+      "alsoCalled": [
+        "IPsec VPN",
+        "Site-to-Site VPN"
+      ],
+      "evidence": "Built an encrypted tunnel between my flat and my parents' house in Tabuk",
+      "source": "project"
+    },
+    {
+      "skill": "OSPF",
+      "alsoCalled": [
+        "Open Shortest Path First"
+      ],
+      "evidence": "run OSPF inside each of two pretend companies",
+      "source": "project"
+    },
+    {
+      "skill": "BGP",
+      "alsoCalled": [
+        "Border Gateway Protocol"
+      ],
+      "evidence": "have them exchange prefixes with a pretend provider, each side under its own AS number",
+      "source": "project"
+    },
+    {
+      "skill": "Routing",
+      "alsoCalled": [
+        "IP Routing",
+        "Dynamic Routing"
+      ],
+      "evidence": "run OSPF inside each of two pretend companies, and have them exchange prefixes with a pretend provider",
+      "source": "project"
+    },
+    {
+      "skill": "Cisco IOS",
+      "alsoCalled": [
+        "Cisco CLI"
+      ],
+      "evidence": "Two used Cisco routers and a managed switch bought second-hand, plus GNS3 on an old desktop. Everything is configured from the command line",
+      "source": "project"
+    },
+    {
+      "skill": "IT Support",
+      "alsoCalled": [
+        "Help Desk",
+        "Technical Support"
+      ],
+      "evidence": "First contact for about 400 teachers and staff: password resets, replacement PCs, projectors and printers",
+      "source": "experience"
+    },
+    {
+      "skill": "Structured Cabling",
+      "alsoCalled": [
+        "Network Cabling",
+        "Cable Termination"
+      ],
+      "evidence": "test the cable and re-terminate it if needed",
+      "source": "experience"
+    },
+    {
+      "skill": "Access Control Lists",
+      "alsoCalled": [
+        "ACLs"
+      ],
+      "evidence": "wrote access lists so that the cameras cannot reach anything else",
+      "source": "project"
+    },
+    {
+      "skill": "GNS3",
+      "alsoCalled": [
+        "Network Simulation",
+        "Network Emulation"
+      ],
+      "evidence": "plus GNS3 on an old desktop",
+      "source": "project"
+    },
+    {
+      "skill": "Switching",
+      "alsoCalled": [
+        "LAN Switching",
+        "Layer 2 Switching"
+      ],
+      "evidence": "on the one switch with a trunk up to the router",
+      "source": "project"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Subnetting",
+      "alsoCalled": [
+        "IP Addressing",
+        "IP Address Planning"
+      ],
+      "evidence": "Split my flat into four networks (family, guests, cameras, lab)",
+      "why": "Implied by four separate networks; no address plan is described."
+    },
+    {
+      "skill": "Network Documentation",
+      "alsoCalled": [
+        "Network Diagrams"
+      ],
+      "evidence": "keep the address sheet for each campus",
+      "why": "One address list; no diagrams or wider records."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Firewall Configuration",
+      "alsoCalled": [
+        "Firewalls",
+        "Firewall Administration"
+      ],
+      "why": "Wrote access lists on a router at home; has not configured a firewall.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Cisco CCNA",
+      "alsoCalled": [
+        "CCNA",
+        "Cisco Certified Network Associate"
+      ],
+      "why": "Preparing for the exam; not yet held.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Network Monitoring",
+      "alsoCalled": [
+        "SNMP Monitoring"
+      ],
+      "why": "Responds to faults when users report them; no monitoring of devices or links.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Fortinet NSE 4",
+      "alsoCalled": [
+        "NSE 4",
+        "Fortinet Network Security Professional"
+      ],
+      "why": "Asked for in some job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "MPLS",
+      "alsoCalled": [
+        "Multiprotocol Label Switching"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "IPv6",
+      "alsoCalled": [
+        "IPv6 Addressing"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Wireshark",
+      "alsoCalled": [
+        "Packet Analysis",
+        "Packet Capture"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Cisco CCNP",
+      "alsoCalled": [
+        "CCNP Enterprise"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "SD-WAN",
+      "alsoCalled": [
+        "Software-Defined WAN"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Network Automation",
+      "alsoCalled": [
+        "Python for Networking"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Quality of Service",
+      "alsoCalled": [
+        "QoS"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

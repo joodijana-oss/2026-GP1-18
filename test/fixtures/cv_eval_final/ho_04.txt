@@ -1,0 +1,28 @@
+Hattan Al-Sulami
+Makkah | hattan.alsulami@example.com | +966 54 000 0000
+
+Third-year Information Systems student at Umm Al-Qura University. I like finding out what numbers say, and I am looking for a summer placement where I can do that with real data.
+
+Education
+B.Sc. Information Systems, Umm Al-Qura University, Makkah (2024 - expected 2028)
+Courses so far: Introduction to Programming (Java), Database Systems, Probability and Statistics, Systems Analysis and Design.
+In the weekly Database Systems lab I wrote SELECT statements with joins and grouping over a made-up student registration schema, and for the final task designed the tables for a small clinic.
+
+Course project
+Shuttle delays in the Hajj season (Systems Analysis and Design, spring 2026)
+- Downloaded two months of shuttle-bus trip records as a spreadsheet from a government open data portal.
+- Removed blank and repeated rows and fixed times that had been typed in two different formats.
+- Summarised delays by hour and by route with pivot tables, and drew three charts showing that the worst delays come in the two hours after Isha prayer.
+- Worked out the average and the median delay for each route and explained why the two differ.
+- Wrote a four-page report with my recommendations and presented it to the class in ten minutes.
+
+Activities
+- Treasurer, Information Systems Students Club, 2025 - 2026: I keep the club budget in a shared sheet with formulas that total the spending per event, and tell the members the balance each month.
+- Hajj season volunteer, 2025: guided pilgrims at a shuttle station in Mina for twelve days, which is where the idea for my course project came from.
+- Finished a free 10-hour online introduction to Power BI in August 2026 (videos only, no project yet).
+
+Languages
+Arabic (native), English (good), basic Urdu
+
+Interests
+Football statistics, cycling, photography

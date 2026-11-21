@@ -1,0 +1,253 @@
+{
+  "id": "ho_12",
+  "careerGoalId": "cybersecurity_grc_specialist",
+  "shown": [
+    {
+      "skill": "Gap Analysis",
+      "alsoCalled": [
+        "Compliance Gap Assessment"
+      ],
+      "evidence": "marked which controls the company already meets and which it does not, and turned the missing ones into a tracked action list of 46 items",
+      "source": "experience"
+    },
+    {
+      "skill": "Compliance Auditing",
+      "alsoCalled": [
+        "Compliance Assessment",
+        "Controls Assessment"
+      ],
+      "evidence": "Went through the regulator's cyber framework control by control with each department",
+      "source": "experience"
+    },
+    {
+      "skill": "Control Testing",
+      "alsoCalled": [
+        "Control Effectiveness Testing",
+        "Evidence Review"
+      ],
+      "evidence": "Collected screenshots, configurations and signed records as proof for 120 controls",
+      "source": "experience"
+    },
+    {
+      "skill": "Third-Party Risk Management",
+      "alsoCalled": [
+        "Vendor Risk",
+        "Supplier Security Assessment"
+      ],
+      "evidence": "Sent questionnaires to nine suppliers who handle policyholder data, scored their answers and flagged two for follow-up",
+      "source": "experience"
+    },
+    {
+      "skill": "Policy Development",
+      "alsoCalled": [
+        "Security Policies",
+        "Policy Writing"
+      ],
+      "evidence": "Rewrote the acceptable-use and password rules as two short documents that staff can actually read",
+      "source": "experience"
+    },
+    {
+      "skill": "Security Awareness",
+      "alsoCalled": [
+        "Awareness Training",
+        "Phishing Simulation"
+      ],
+      "evidence": "Ran the quarterly fake-phishing email exercise for 600 staff and gave a 20-minute talk to the 48 who clicked",
+      "source": "experience"
+    },
+    {
+      "skill": "Risk Management",
+      "alsoCalled": [
+        "Risk Register",
+        "Risk Treatment"
+      ],
+      "evidence": "Kept the department's list of open threats up to date: owner, likelihood, impact and what is being done about each",
+      "source": "experience"
+    },
+    {
+      "skill": "Report Writing",
+      "alsoCalled": [
+        "Audit Reports",
+        "Compliance Reports"
+      ],
+      "evidence": "Wrote the monthly compliance status summary that goes to the head of cybersecurity",
+      "source": "experience"
+    },
+    {
+      "skill": "ISO/IEC 27001",
+      "alsoCalled": [
+        "ISO 27001",
+        "ISMS"
+      ],
+      "evidence": "wrote the statement of applicability for an invented dental clinic chain, following ISO/IEC 27001 Annex A",
+      "source": "project"
+    },
+    {
+      "skill": "NCA Essential Cybersecurity Controls",
+      "alsoCalled": [
+        "NCA ECC",
+        "ECC"
+      ],
+      "evidence": "ISO/IEC 27001, NCA ECC, risk registers, Excel",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Microsoft Excel",
+      "alsoCalled": [
+        "Excel",
+        "Spreadsheets"
+      ],
+      "evidence": "ISO/IEC 27001, NCA ECC, risk registers, Excel",
+      "source": "skills_section"
+    },
+    {
+      "skill": "ISO/IEC 27001 Lead Implementer",
+      "alsoCalled": [
+        "ISO 27001 LI",
+        "PECB Lead Implementer"
+      ],
+      "evidence": "ISO/IEC 27001:2022 Lead Implementer (PECB), Aug 2026",
+      "source": "certification"
+    },
+    {
+      "skill": "Audit Preparation",
+      "alsoCalled": [
+        "Audit Support",
+        "Audit Readiness"
+      ],
+      "evidence": "as proof for 120 controls ahead of the external auditors' visit",
+      "source": "experience"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "SAMA Cyber Security Framework",
+      "alsoCalled": [
+        "SAMA CSF"
+      ],
+      "evidence": "Went through the regulator's cyber framework control by control with each department",
+      "why": "A regulator framework at an insurance company, but the CV does not say which one."
+    },
+    {
+      "skill": "Risk Assessment",
+      "alsoCalled": [
+        "Cybersecurity Risk Assessment",
+        "Risk Analysis"
+      ],
+      "evidence": "owner, likelihood, impact and what is being done about each",
+      "why": "Maintained existing entries; it is not clear that she assessed risks herself."
+    },
+    {
+      "skill": "Internal Audit",
+      "alsoCalled": [
+        "IT Audit"
+      ],
+      "evidence": "Courses included: Information Security Management, IT Audit and Assurance, Cyber Law",
+      "why": "Course title only; her internship supported an external audit."
+    },
+    {
+      "skill": "Personal Data Protection Law",
+      "alsoCalled": [
+        "PDPL",
+        "Data Privacy"
+      ],
+      "evidence": "Cyber Law (including the Kingdom's personal data law)",
+      "why": "Mentioned as part of one course."
+    },
+    {
+      "skill": "Stakeholder Communication",
+      "alsoCalled": [
+        "Stakeholder Management"
+      ],
+      "evidence": "control by control with each department",
+      "why": "Implied by working with departments; not described."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "NIST Cybersecurity Framework",
+      "alsoCalled": [
+        "NIST CSF"
+      ],
+      "why": "Works with other frameworks; this one is not mentioned.",
+      "nearMiss": true
+    },
+    {
+      "skill": "ISO/IEC 27001 Lead Auditor",
+      "alsoCalled": [
+        "ISO 27001 LA"
+      ],
+      "why": "Holds the implementer certificate for the same standard, not the auditor one.",
+      "nearMiss": true
+    },
+    {
+      "skill": "CISA",
+      "alsoCalled": [
+        "Certified Information Systems Auditor"
+      ],
+      "why": "Often asked for in job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "CRISC",
+      "alsoCalled": [
+        "Certified in Risk and Information Systems Control"
+      ],
+      "why": "Asked for in some job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "CISM",
+      "alsoCalled": [
+        "Certified Information Security Manager"
+      ],
+      "why": "Asked for in some job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "PCI DSS",
+      "alsoCalled": [
+        "Payment Card Industry Data Security Standard"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "COBIT",
+      "alsoCalled": [
+        "COBIT 2019"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "RSA Archer",
+      "alsoCalled": [
+        "Archer GRC",
+        "GRC Platform"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Business Continuity",
+      "alsoCalled": [
+        "BCP",
+        "Disaster Recovery Planning"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Data Classification",
+      "alsoCalled": [
+        "Information Classification"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "ISO/IEC 27001:2022 Lead Implementer (PECB)"
+  ]
+}

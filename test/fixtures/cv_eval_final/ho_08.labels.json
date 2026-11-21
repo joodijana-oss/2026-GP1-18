@@ -1,0 +1,234 @@
+{
+  "id": "ho_08",
+  "careerGoalId": "network_engineer",
+  "shown": [
+    {
+      "skill": "Switching",
+      "alsoCalled": [
+        "LAN Switching",
+        "Layer 2 Switching"
+      ],
+      "evidence": "Built a three-building campus network on six real Cisco 2960 and 3560 switches and three ISR routers",
+      "source": "project"
+    },
+    {
+      "skill": "VLANs",
+      "alsoCalled": [
+        "Virtual LANs",
+        "Network Segmentation"
+      ],
+      "evidence": "Kept students, staff and security cameras in separate broadcast domains that can reach each other only through the distribution layer",
+      "source": "project"
+    },
+    {
+      "skill": "Subnetting",
+      "alsoCalled": [
+        "IP Addressing",
+        "IP Address Planning"
+      ],
+      "evidence": "Carved a single /22 into right-sized blocks for 11 departments and recorded every allocation",
+      "source": "project"
+    },
+    {
+      "skill": "OSPF",
+      "alsoCalled": [
+        "Open Shortest Path First"
+      ],
+      "evidence": "Ran a link-state routing protocol in a single backbone area between the three routers",
+      "source": "project"
+    },
+    {
+      "skill": "Routing",
+      "alsoCalled": [
+        "IP Routing",
+        "Dynamic Routing"
+      ],
+      "evidence": "checked that traffic found a new path in under 10 seconds when I unplugged a link",
+      "source": "project"
+    },
+    {
+      "skill": "Network Documentation",
+      "alsoCalled": [
+        "Network Diagrams"
+      ],
+      "evidence": "Drew the topology and wrote a port-by-port cabling sheet that the lab still uses",
+      "source": "project"
+    },
+    {
+      "skill": "Wireless Networking",
+      "alsoCalled": [
+        "Wi-Fi",
+        "WLAN"
+      ],
+      "evidence": "Set up two access points with a separate visitor network, and chose channels that do not overlap",
+      "source": "project"
+    },
+    {
+      "skill": "Network Troubleshooting",
+      "alsoCalled": [
+        "Fault Finding"
+      ],
+      "evidence": "found one PC flooding the segment with broadcast frames from a faulty network card, and shut its port",
+      "source": "project"
+    },
+    {
+      "skill": "Wireshark",
+      "alsoCalled": [
+        "Packet Analysis",
+        "Packet Capture"
+      ],
+      "evidence": "Captured traffic on the lab uplink",
+      "source": "project"
+    },
+    {
+      "skill": "Cisco IOS",
+      "alsoCalled": [
+        "Cisco CLI"
+      ],
+      "evidence": "configuring all of them from the console",
+      "source": "project"
+    },
+    {
+      "skill": "Cisco CCNA",
+      "alsoCalled": [
+        "CCNA",
+        "Cisco Certified Network Associate"
+      ],
+      "evidence": "Cisco Certified Network Associate (CCNA), February 2026",
+      "source": "certification"
+    },
+    {
+      "skill": "TCP/IP",
+      "alsoCalled": [
+        "Networking Fundamentals",
+        "Network Protocols"
+      ],
+      "evidence": "Cisco Certified Network Associate (CCNA), February 2026",
+      "source": "certification"
+    },
+    {
+      "skill": "Firewall Configuration",
+      "alsoCalled": [
+        "Firewalls",
+        "Firewall Administration"
+      ],
+      "evidence": "Fortinet firewalls (basic)",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming"
+      ],
+      "evidence": "Cisco IOS, Wireshark, Packet Tracer, Python, Fortinet firewalls (basic)",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Cisco Packet Tracer",
+      "alsoCalled": [
+        "Packet Tracer",
+        "Network Simulation"
+      ],
+      "evidence": "Cisco IOS, Wireshark, Packet Tracer, Python, Fortinet firewalls (basic)",
+      "source": "skills_section"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Network Installation",
+      "alsoCalled": [
+        "Site Installation",
+        "Network Deployment"
+      ],
+      "evidence": "Shadowed the field team installing branch routers for a bank; labelled cables and filled in site-acceptance checklists",
+      "why": "Watched and assisted; did not install or configure the equipment herself."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "BGP",
+      "alsoCalled": [
+        "Border Gateway Protocol"
+      ],
+      "why": "Ran one routing protocol inside a single network; nothing about routing between separate networks or providers.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Network Monitoring",
+      "alsoCalled": [
+        "SNMP Monitoring"
+      ],
+      "why": "Captured traffic once to find a fault; no ongoing monitoring of devices or links.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Network Automation",
+      "alsoCalled": [
+        "Python for Networking"
+      ],
+      "why": "Lists a programming language, but nothing shows it being used on network devices.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Cisco CCNP",
+      "alsoCalled": [
+        "CCNP Enterprise"
+      ],
+      "why": "Often asked for in job ads for this role; holds only the associate level.",
+      "nearMiss": true
+    },
+    {
+      "skill": "MPLS",
+      "alsoCalled": [
+        "Multiprotocol Label Switching"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "IPv6",
+      "alsoCalled": [
+        "IPv6 Addressing"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Network Access Control",
+      "alsoCalled": [
+        "NAC",
+        "Cisco ISE"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "VPN",
+      "alsoCalled": [
+        "IPsec VPN",
+        "Site-to-Site VPN"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "SD-WAN",
+      "alsoCalled": [
+        "Software-Defined WAN"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Quality of Service",
+      "alsoCalled": [
+        "QoS"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "Cisco Certified Network Associate (CCNA)"
+  ]
+}

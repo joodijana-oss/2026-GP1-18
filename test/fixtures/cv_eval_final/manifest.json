@@ -1,0 +1,137 @@
+{
+  "set": "final",
+  "version": 1,
+  "writtenOn": "2026-11-20",
+  "note": "Fictional CVs written for evaluation. Any resemblance to real people is unintended.",
+  "changes": [],
+  "cases": [
+    {
+      "id": "ho_01",
+      "careerGoalId": "cybersecurity_analyst",
+      "level": "student",
+      "experienceLevel": "No Experience",
+      "cv": "ho_01.txt",
+      "labels": "ho_01.labels.json"
+    },
+    {
+      "id": "ho_02",
+      "careerGoalId": "cybersecurity_analyst",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "ho_02.txt",
+      "labels": "ho_02.labels.json"
+    },
+    {
+      "id": "ho_03",
+      "careerGoalId": "data_analyst",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "ho_03.txt",
+      "labels": "ho_03.labels.json"
+    },
+    {
+      "id": "ho_04",
+      "careerGoalId": "data_analyst",
+      "level": "student",
+      "experienceLevel": "No Experience",
+      "cv": "ho_04.txt",
+      "labels": "ho_04.labels.json"
+    },
+    {
+      "id": "ho_05",
+      "careerGoalId": "software_engineer",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "ho_05.txt",
+      "labels": "ho_05.labels.json"
+    },
+    {
+      "id": "ho_06",
+      "careerGoalId": "software_engineer",
+      "level": "student",
+      "experienceLevel": "Beginner",
+      "cv": "ho_06.txt",
+      "labels": "ho_06.labels.json"
+    },
+    {
+      "id": "ho_07",
+      "careerGoalId": "cloud_devops_engineer",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "ho_07.txt",
+      "labels": "ho_07.labels.json"
+    },
+    {
+      "id": "ho_08",
+      "careerGoalId": "network_engineer",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "ho_08.txt",
+      "labels": "ho_08.labels.json"
+    },
+    {
+      "id": "ho_09",
+      "careerGoalId": "ai_ml_engineer",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "ho_09.txt",
+      "labels": "ho_09.labels.json"
+    },
+    {
+      "id": "ho_10",
+      "careerGoalId": "qa_test_engineer",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "ho_10.txt",
+      "labels": "ho_10.labels.json"
+    },
+    {
+      "id": "ho_11",
+      "careerGoalId": "it_support_specialist",
+      "level": "student",
+      "experienceLevel": "No Experience",
+      "cv": "ho_11.txt",
+      "labels": "ho_11.labels.json"
+    },
+    {
+      "id": "ho_12",
+      "careerGoalId": "cybersecurity_grc_specialist",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "ho_12.txt",
+      "labels": "ho_12.labels.json"
+    },
+    {
+      "id": "ho_13",
+      "careerGoalId": "cloud_devops_engineer",
+      "level": "student",
+      "experienceLevel": "No Experience",
+      "cv": "ho_13.txt",
+      "labels": "ho_13.labels.json"
+    },
+    {
+      "id": "ho_14",
+      "careerGoalId": "network_engineer",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "ho_14.txt",
+      "labels": "ho_14.labels.json"
+    },
+    {
+      "id": "ho_15",
+      "careerGoalId": "ai_ml_engineer",
+      "level": "student",
+      "experienceLevel": "No Experience",
+      "cv": "ho_15.txt",
+      "labels": "ho_15.labels.json"
+    },
+    {
+      "id": "ho_16",
+      "careerGoalId": "software_engineer",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "ho_16.txt",
+      "labels": "ho_16.labels.json"
+    }
+  ]
+}

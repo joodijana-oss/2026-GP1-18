@@ -1,0 +1,37 @@
+RIMAS AL-THUBAITI
+Taif, Saudi Arabia | rimas.althubaiti@example.com | +966 50 000 0000
+
+SUMMARY
+Final-year Computer Science student at Taif University who wants to work on the defensive side of security. Most of what I know comes from building things at home and from competitions.
+
+EDUCATION
+B.Sc. Computer Science, Taif University, expected June 2027. GPA 4.52 / 5.
+Relevant courses: Computer Networks, Operating Systems, Information Security, Cryptography.
+
+PROJECTS
+Watchtower at home (2026)
+- Set up three virtual machines on my laptop and forwarded their Windows event logs and Linux auth logs to one central console, then wrote 11 rules that raise an alert when, for example, a login fails five times in a minute.
+- Replayed a brute-force attack and a suspicious PowerShell download against my own machines to check which rules fired and which stayed silent, and tuned the noisy ones.
+- Mapped each rule to the attacker technique it is meant to catch, using the public ATT&CK matrix as the reference.
+
+Scan my campus club (2026)
+- With the club supervisor's written permission, ran Nessus Essentials against the club's two servers, ranked the 23 findings by severity and handed over a fix list; the four critical ones were patched within a week.
+
+Packet diary (2025)
+- Captured my own home traffic for a week and wrote a short Python script that reads the capture files and lists every device that talks to an address outside the country.
+
+COMPETITIONS
+- CyberNights CTF, Taif University, 2026: 3rd of 41 teams. Solved the memory-image challenges by pulling a hidden process and its command line out of a RAM dump.
+- National university cyber challenge qualifier, 2025: solved web challenges including one SQL injection login bypass.
+
+CERTIFICATIONS
+CompTIA Security+ (SY0-701), March 2026
+
+SKILLS
+Linux (Ubuntu, Kali), Python, Wireshark, Nessus, basic Bash
+
+ACTIVITIES
+Vice-lead, Taif University Cybersecurity Club: I run a weekly session where new members practise reading logs from a staged incident.
+
+LANGUAGES
+Arabic (native), English (fluent)

@@ -1,0 +1,33 @@
+RAGAD SINDI
+Jeddah | ragad.sindi@example.com | +966 54 000 0000
+
+PROFILE
+Software tester with one year on a digital wallet used by about 300,000 people. Careful, curious, and now teaching myself to automate the checks I repeat most often.
+
+EXPERIENCE
+Software Tester, a company that builds a digital wallet app, Jeddah
+October 2025 - present
+- Go through every new build of the Android and iPhone apps by hand before release, following a suite of about 340 step-by-step scenarios, 120 of which I wrote myself.
+- After every fix, run the whole money-transfer and bill-payment suite again to make sure nothing that used to work has broken.
+- Write up every fault I find in Jira with steps, screenshots, device and build number, and stay with it until the developer's fix is confirmed; 410 written up in my first year.
+- Send requests straight to the wallet's backend with Postman to check balances, limits and error codes without the app in the way.
+- Look up transfers in the test database with my own queries to confirm that the ledger agrees with what the screen shows.
+- Sat with five agent-shop cashiers for two days while they tried the new cash-in flow before it went live, and collected their sign-off.
+- The team works in two-week sprints; I take part in planning and estimate the testing effort for each story.
+- Since June 2026: recording browser scripts for the admin portal's login and user-search pages with Selenium IDE. 14 recorded flows so far; they are not yet part of the release process.
+
+Quality intern, a company that makes point-of-sale software for restaurants, Jeddah
+June 2024 - August 2024
+- Checked Arabic translations and right-to-left layout on 60 screens and listed the mistakes for the developers.
+
+EDUCATION
+B.Sc. Computer Science, Effat University, Jeddah, 2025
+
+CERTIFICATIONS
+ISTQB Certified Tester Foundation Level (CTFL), 2025
+
+SKILLS
+Jira, Postman, SQL, Java (basic)
+
+LANGUAGES
+Arabic (native), English (fluent)

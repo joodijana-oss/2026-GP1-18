@@ -1,0 +1,31 @@
+BASSAM AL-JUHANI
+Hail | bassam.aljuhani@example.com | +966 58 000 0000
+
+Fourth-year Computer Science and Software Engineering student at the University of Hail. I run more servers at home than is reasonable and I am looking for a co-op placement with an infrastructure or platform team for spring 2027.
+
+EDUCATION
+B.Sc. Computer Science and Software Engineering, University of Hail (2023 - expected 2027)
+Courses: Operating Systems, Computer Networks, Distributed Systems, Cloud Computing (elective, in progress)
+
+PROJECTS
+
+The majlis server (2024 - now)
+An old office PC under my desk that serves my family and a few friends.
+- Runs Debian and hosts the family photo library, my mother's recipe site and a network-wide ad blocker, each one in its own container and all of them started from a single compose file.
+- Rebuilding the whole machine is one command: a set of playbooks installs the packages, creates the users and brings every service back. I proved it by wiping the disk twice.
+- A small shell script checks every five minutes that each service answers, and sends me a Telegram message when one does not.
+- Photos are copied every night to a second disk and once a week to my brother's house in Buraydah.
+
+Publishing the club website without FTP (2026)
+- Moved the Hail Tech Club website to the AWS free tier: the pages sit in a storage bucket behind the content delivery network.
+- Every merge into the main branch now builds the site and publishes it by itself, so members no longer upload files by hand; a broken build is never published.
+- Wrote a two-page guide so that the next committee can keep it running.
+
+UNIVERSITY CLUB
+Infrastructure lead, Hail Tech Club (2025 - now)
+- Gave a hands-on workshop, "Your first virtual machine in the cloud", to 35 students.
+- Look after the club's shared accounts and hand them over each year.
+
+OTHER
+- Arabic (native), English (good; I read documentation all day)
+- Weekend job at my uncle's date farm during the harvest

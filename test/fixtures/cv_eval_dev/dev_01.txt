@@ -1,0 +1,33 @@
+Shahad Al-Maliki
+Taif | shahad.almaliki@example.com | +966 50 000 0000
+
+Summary
+Computer Science graduate (Taif University, 2026) with a six-month internship on the day shift of a security operations centre and a monitoring lab at home. Looking for a tier-1 analyst position.
+
+Experience
+Security Operations Intern, a managed security services provider, Riyadh (Feb 2026 - Jul 2026)
+- Watched the alert queue on the Splunk console during day shifts, about 70 alerts a shift, and decided which were false alarms and which needed a case.
+- Opened cases for the real ones, gathered the related events and the affected machine's details, and escalated to the tier-2 analyst with a short written summary.
+- Checked emails that customers' staff reported as suspicious: sender, links and attachments against sandbox results.
+- Tuned three noisy detection rules with the senior analyst, halving the false alarms from the VPN logins rule.
+- Looked up addresses and file hashes in VirusTotal and the provider's own feed before closing a case.
+
+Home lab
+Security monitoring lab (2025)
+- Installed Wazuh on an old laptop and enrolled two Windows virtual machines and an Ubuntu web server as agents.
+- Simulated attacks from Kali (password spraying, a reverse shell, a web scan with Nikto) and wrote rules until each one raised an alert.
+- Added Sysmon to the Windows machines to get process-creation events.
+
+Education
+B.Sc. Computer Science, Taif University, 2026
+Network Security course lab: configured pfSense rules and Snort signatures in a virtual network.
+
+Certifications
+CompTIA Security+, 2026
+Google Cybersecurity Professional Certificate, 2025
+
+Skills
+Splunk, Wazuh, Linux, Windows event logs, Wireshark, Python (basic)
+
+Languages
+Arabic (native), English (very good)

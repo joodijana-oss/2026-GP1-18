@@ -1,0 +1,246 @@
+{
+  "id": "ho_09",
+  "careerGoalId": "ai_ml_engineer",
+  "shown": [
+    {
+      "skill": "PyTorch",
+      "alsoCalled": [
+        "Torch"
+      ],
+      "evidence": "retrained its last layers on our leaves, using PyTorch",
+      "source": "project"
+    },
+    {
+      "skill": "Deep Learning",
+      "alsoCalled": [
+        "Neural Networks"
+      ],
+      "evidence": "Started from a network already trained on everyday images and retrained its last layers on our leaves",
+      "source": "project"
+    },
+    {
+      "skill": "Computer Vision",
+      "alsoCalled": [
+        "Image Recognition",
+        "Image Processing"
+      ],
+      "evidence": "telling coffee-plant diseases apart from phone photos",
+      "source": "project"
+    },
+    {
+      "skill": "Data Preprocessing",
+      "alsoCalled": [
+        "Feature Engineering",
+        "Data Preparation"
+      ],
+      "evidence": "evened out the classes by rotating, flipping and cropping photos of the rarer diseases",
+      "source": "project"
+    },
+    {
+      "skill": "Model Evaluation",
+      "alsoCalled": [
+        "Model Validation",
+        "Performance Metrics"
+      ],
+      "evidence": "Kept back every photo from one farm that the model never saw during training, and reported precision and recall per disease",
+      "source": "project"
+    },
+    {
+      "skill": "Hyperparameter Tuning",
+      "alsoCalled": [
+        "Model Optimization"
+      ],
+      "evidence": "Tried 24 combinations of learning rate, batch size and number of frozen layers and kept the one that scored best",
+      "source": "project"
+    },
+    {
+      "skill": "Model Deployment",
+      "alsoCalled": [
+        "Model Serving",
+        "ML in Production"
+      ],
+      "evidence": "Shrank the finished model until it answers in under a second on a mid-range Android phone with no internet",
+      "source": "project"
+    },
+    {
+      "skill": "Machine Learning",
+      "alsoCalled": [
+        "ML",
+        "Predictive Modeling"
+      ],
+      "evidence": "comparing linear regression, a random forest and gradient boosting",
+      "source": "education"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming"
+      ],
+      "evidence": "Python, PyTorch, scikit-learn, NumPy, Git",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Scikit-learn",
+      "alsoCalled": [
+        "sklearn"
+      ],
+      "evidence": "Python, PyTorch, scikit-learn, NumPy, Git",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control"
+      ],
+      "evidence": "Python, PyTorch, scikit-learn, NumPy, Git",
+      "source": "skills_section"
+    },
+    {
+      "skill": "NumPy",
+      "alsoCalled": [
+        "Numerical Python"
+      ],
+      "evidence": "Python, PyTorch, scikit-learn, NumPy, Git",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Data Collection",
+      "alsoCalled": [
+        "Data Labeling",
+        "Data Annotation"
+      ],
+      "evidence": "Collected 6,400 leaf photos with two farmers' cooperatives in the Asir highlands and labelled them with an agronomist",
+      "source": "project"
+    },
+    {
+      "skill": "Transfer Learning",
+      "alsoCalled": [
+        "Fine-Tuning"
+      ],
+      "evidence": "Started from a network already trained on everyday images and retrained its last layers on our leaves",
+      "source": "project"
+    },
+    {
+      "skill": "Model Optimization for Mobile",
+      "alsoCalled": [
+        "On-Device Inference",
+        "Edge AI",
+        "Model Compression"
+      ],
+      "evidence": "Shrank the finished model until it answers in under a second on a mid-range Android phone",
+      "source": "project"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Statistics",
+      "alsoCalled": [
+        "Probability and Statistics"
+      ],
+      "evidence": "Selected courses: Artificial Intelligence, Probability and Statistics, Linear Algebra, Image Pro-",
+      "why": "Course title only."
+    },
+    {
+      "skill": "Mobile App Development",
+      "alsoCalled": [
+        "Android Development"
+      ],
+      "evidence": "wrapped it in a small app that eleven farmers used for a month",
+      "why": "One passing mention; nothing on how the app was built."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "TensorFlow",
+      "alsoCalled": [
+        "Keras"
+      ],
+      "why": "Trained her models in a different framework.",
+      "nearMiss": true
+    },
+    {
+      "skill": "MLOps",
+      "alsoCalled": [
+        "ML Pipelines"
+      ],
+      "why": "Put one model on a phone once; no pipeline for retraining, versioning or monitoring models.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Natural Language Processing",
+      "alsoCalled": [
+        "NLP",
+        "Text Mining"
+      ],
+      "why": "All of the work is on images and tables; nothing on text.",
+      "nearMiss": false
+    },
+    {
+      "skill": "AWS Certified Machine Learning - Specialty",
+      "alsoCalled": [
+        "AWS ML Specialty"
+      ],
+      "why": "Asked for in some job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Apache Spark",
+      "alsoCalled": [
+        "PySpark"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Experiment Tracking",
+      "alsoCalled": [
+        "MLflow"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "SQL Queries"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Large Language Models",
+      "alsoCalled": [
+        "LLMs",
+        "Generative AI"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Cloud Computing",
+      "alsoCalled": [
+        "Cloud Platforms"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Transformers",
+      "alsoCalled": [
+        "Transformer Models",
+        "Hugging Face Transformers"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

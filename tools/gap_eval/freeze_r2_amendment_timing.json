@@ -1,0 +1,34 @@
+{
+ "amendment": 1,
+ "rule": "7.2 (d)",
+ "text": "Rule 7.2 (d), amendment 1 (one fixed re-measurement, approved by the user after the development first-call ratio of B/10/10/bt was 1.1006 against the 1.10 limit). For each persona file (development and held-out), run the TIMING block of evaluate_recommender 5 separate times (separate processes, each with its 21 alternating repetitions, ABBA order), for the frozen candidate B/10/10/bt (its result serves the -opp fallback too, as before), with the frozen link file of that persona file. Take the median of the 5 ratios for each of: first call (limit 1.10) and recommend() with the index built (limit 2.00), compared at full precision. Pass only if all four medians (2 files x 2 ratios) are within their limits. Measured once. No further re-measurement. If it fails, task 4 stops and A0 stays. The persona guard results already in build/gap_eval/final_r3/guards/ stay as they are; only the timing part is replaced by this rule.",
+ "source": "User decision in chat, 2026-11-21, answering \"Re-measure the speed check with one fixed, longer test and continue if it passes?\": the user agreed; the answer was given in Arabic and means \"yes, fine, I agree\" (the original words are recorded in hardest/user_decisions_r2.md). The user was told the protocol: 5 separate measurements, take the median; if it is under the limit the final measurement continues, if it is over, task 4 stops for good; this is a change to how speed is measured, made after seeing the result. The result seen: the development first-call ratio of B/10/10/bt was 1.1006 against the 1.10 limit (build/gap_eval/final_r3/guards/dev.json). Record: hardest/user_decisions_r2.md.",
+ "freezeFile": "tools/gap_eval/freeze_r2.json",
+ "freezeSha256": "50b50b1e7f4d90681e1c6c00907981df12255687f4c4470ef6764ab051a917c5",
+ "candidate": "B/10/10/bt",
+ "runs": 5,
+ "statistic": "median",
+ "warmLimit": 2.0,
+ "firstLimit": 1.1,
+ "comparedAt": "full precision",
+ "toolHashes": {
+  "gapEvalTools": {
+   "frozen": "d6d73c3193fe998aad8572217c6b7b5f5eeba66d6bc9fd46a0ef7e53752303ba",
+   "amended": "311520dc8d9b61d8b38f134d33c3896df33ca45211b6cbed8bc24eacab79c41c"
+  }
+ },
+ "guardFiles": {
+  "test/fixtures/opportunity_eval_personas.json": {
+   "path": "build/gap_eval/final_r3/guards/dev.json",
+   "sha256": "38bad4eef108753aa5de678b11f59e8042bcb084a3e58e1dba9e90222985672b"
+  },
+  "test/fixtures/opportunity_eval_personas_heldout.json": {
+   "path": "build/gap_eval/final_r3/guards/heldout.json",
+   "sha256": "ea37441de56507c403bf33e52a84db2a4e42ada8b322c226293e14d4645a5afa"
+  }
+ },
+ "timingFiles": {
+  "test/fixtures/opportunity_eval_personas.json": "build/gap_eval/final_r3/guards/timing_dev.json",
+  "test/fixtures/opportunity_eval_personas_heldout.json": "build/gap_eval/final_r3/guards/timing_heldout.json"
+ }
+}

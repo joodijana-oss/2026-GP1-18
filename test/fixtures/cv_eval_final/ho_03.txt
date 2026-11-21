@@ -1,0 +1,36 @@
+DALAL AL-MUTLAQ
+Buraydah, Al-Qassim  |  dalal.almutlaq@example.com  |  +966 53 000 0000
+
+OBJECTIVE
+Information Systems graduate looking for a first full-time role working with data.
+
+EDUCATION
+Qassim University - B.Sc. Information Systems                         2022 - 2026
+GPA 4.31/5
+
+INTERNSHIP
+Operations intern - a dates packing and export company, Buraydah
+06/2026 - Aug 2026
+• Pulled three seasons of shipment records out of the order database with my own queries and joined them to the customer table to see which buyers reorder.
+• Found the same customer under several spellings, merged 412 duplicate records and filled in missing country codes before counting anything.
+• Kept the cleaned data in an Excel workbook with lookup formulas so the warehouse supervisor could filter it himself.
+• Built a weekly one-page summary for the export manager with charts of late shipments by destination; it replaced a report that
+used to be typed by hand every Thursday.
+• Sat with the warehouse supervisor and the export manager to agree what "late" should mean, and wrote it down as three measures that are now tracked every week.
+• Answered one-off questions from the sales team, for example which five destinations have grown fastest since 2024.
+• Presented what I found to the owner and four managers on my last day.
+
+GRADUATION PROJECT
+"Do coupons work?"   (Sep 2025 – May 2026)
+• Used an open retail dataset to compare the basket size of shoppers who received a coupon with those who did not, and ran a t-test to check the gap was not down to chance.
+• Did the work in a notebook with pandas; team of three, I wrote the analysis chapter.
+
+SKILLS
+Excel, SQL, Power BI, Tableau
+
+LANGUAGES
+Arabic (native) ; English (IELTS 6.5)
+
+OTHER
+• Volunteer at the visitor desk of the Buraydah Dates Festival, 2024 and 2025
+• Class representative for the Information Systems department in my final year

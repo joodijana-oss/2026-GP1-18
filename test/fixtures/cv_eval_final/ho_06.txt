@@ -1,0 +1,33 @@
+ANAS FELEMBAN
+Tabuk | anas.felemban@example.com | +966 58 000 0000
+
+EDUCATION
+University of Tabuk, B.Sc. Computer Science, third year (expected graduation 2028)
+Courses completed: Programming 1 and 2, Object-Oriented Programming (taught in Java), Discrete Mathematics, Computer Organisation
+
+COMPETITIVE PROGRAMMING
+- Around 650 problems solved on online judges over three years, almost all in C++. Strongest on graphs, dynamic programming and segment trees.
+- Team "Tabuk Overflow": 14th of 96 teams at the 2026 national collegiate programming contest, and 2nd in the northern region qualifier.
+- Coach the first-year training group every Sunday evening and set their practice problems.
+
+PERSONAL PROJECTS
+Sallah bot (2025 - now)
+- A Telegram bot written in Python that sends prayer-time reminders for the user's city; about 1,200 people use it.
+- Runs on a small rented Ubuntu server that I set up myself and keep patched over SSH.
+- Keeps each user's city and reminder choices in SQLite; I wrote the tables and the queries by hand.
+- Tracked down a time-zone bug that sent Fajr reminders an hour late to users outside the Kingdom, and added a check so it cannot come back unnoticed.
+
+Tutor Match (2026)
+- A website where University of Tabuk students find a peer tutor for a course. The page is plain JavaScript; behind it a small Flask application answers the page's requests with the tutor list as JSON.
+- The whole history is public: about 140 commits, one branch per feature, merged only after I had tried the feature on a test copy.
+- 85 students signed up in the first term.
+
+SKILLS
+C++, Python
+
+AWARDS
+- Dean's list, 2024 - 2025 and 2025 - 2026
+- Best first-year project, College of Computers and Information Technology, 2024
+
+LANGUAGES
+Arabic (native), English (very good)

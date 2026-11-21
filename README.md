@@ -142,6 +142,16 @@ dart run tools/recommender_eval/evaluate_recommender.dart --personas test/fixtur
 
 The held-out file has 8 career paths that were not used while the ranking was designed, so report its numbers. Without `--personas`, the script uses the development set. Add `--ablation` to see the effect of each technique, and `--top` to print the first 10 results for each test user.
 
+The skill gaps of the career analysis have their own evaluation. It runs the analysis steps of the app on test CVs with real AI requests (they use API credit), so start with `--dry-run`, which prints how many requests a run would send. The tool reads the API key from `.env` itself and never prints it:
+
+```bash
+dart run tools/gap_eval/evaluate_gaps.dart --set test/fixtures/cv_eval_dev --runs 3 --dry-run
+dart run tools/gap_eval/evaluate_gaps.dart --set test/fixtures/cv_eval_dev --runs 3
+dart run tools/gap_eval/evaluate_gaps.dart --score build/gap_eval/<run folder>
+```
+
+It compares the original analysis (`G0E0`: gaps from two lists of skill names) with the one the app runs (`G1E1`: single-skill market names, and every market skill checked against a quote from the CV). The development CVs in `test/fixtures/cv_eval_dev` may be used while building; decisions are taken on a held-out set that nobody reads while building.
+
 ---
 
 ## Upload Data to Firestore (Optional)

@@ -1,0 +1,29 @@
+ASEEL QUTUB
+Jazan | aseel.qutub@example.com | +966 50 000 0000
+
+EDUCATION
+B.Sc. Computer Science, Jazan University, fourth year (expected June 2027), GPA 4.78 / 5
+Courses: Probability and Statistics, Linear Algebra, Artificial Intelligence, Database Systems
+
+RESEARCH
+Summer research assistant, Arabic language technology lab of a research university on the Red Sea coast
+June 2026 - August 2026
+- Prepared 180,000 Arabic customer-complaint tweets for training: stripped diacritics and letter elongation, dropped duplicate retweets, and split the text into sub-word pieces.
+- Labelled 3,000 of them by dialect with two other assistants and measured how often we agreed.
+- Adapted a pretrained Arabic transformer encoder to sort complaints into nine topics. Macro-F1 rose from 0.71 for a bag-of-words baseline to 0.86.
+- Ran every experiment on the lab's shared GPU machine over SSH and kept each run's settings and scores in a spreadsheet so that results could be repeated.
+- Presented the results at the lab's end-of-summer meeting; my supervisor is including them in a workshop paper.
+
+COMPETITIONS
+- Two bronze medals in online tabular-data competitions (top 9% and top 8% of about 2,000 teams). My best entry blended gradient-boosted trees, used features I built from dates and locations, and was checked with five-fold validation before every submission.
+- Jazan AI Challenge 2025, 2nd place: trained a model that counts mango fruit in tree photos taken from a drone, for a local farm cooperative.
+
+SKILLS
+Python, pandas, scikit-learn
+
+ACTIVITIES
+- Founder of a weekly paper-reading circle in the College of Computer Science; 12 regular members
+- Tutor for first-year discrete mathematics
+
+LANGUAGES
+Arabic (native), English (TOEFL iBT 101)

@@ -1,0 +1,229 @@
+{
+  "id": "ho_06",
+  "careerGoalId": "software_engineer",
+  "shown": [
+    {
+      "skill": "Data Structures and Algorithms",
+      "alsoCalled": [
+        "DSA",
+        "Algorithms"
+      ],
+      "evidence": "Strongest on graphs, dynamic programming and segment trees",
+      "source": "other"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming"
+      ],
+      "evidence": "A Telegram bot written in Python that sends prayer-time reminders",
+      "source": "project"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Servers"
+      ],
+      "evidence": "Runs on a small rented Ubuntu server that I set up myself and keep patched over SSH",
+      "source": "project"
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Relational Databases",
+        "SQL Queries"
+      ],
+      "evidence": "Keeps each user's city and reminder choices in SQLite; I wrote the tables and the queries by hand",
+      "source": "project"
+    },
+    {
+      "skill": "Debugging",
+      "alsoCalled": [
+        "Troubleshooting Code"
+      ],
+      "evidence": "Tracked down a time-zone bug that sent Fajr reminders an hour late to users outside the Kingdom",
+      "source": "project"
+    },
+    {
+      "skill": "JavaScript",
+      "alsoCalled": [
+        "JS"
+      ],
+      "evidence": "The page is plain JavaScript",
+      "source": "project"
+    },
+    {
+      "skill": "REST APIs",
+      "alsoCalled": [
+        "RESTful Web Services",
+        "API Development"
+      ],
+      "evidence": "a small Flask application answers the page's requests with the tutor list as JSON",
+      "source": "project"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control"
+      ],
+      "evidence": "about 140 commits, one branch per feature",
+      "source": "project"
+    },
+    {
+      "skill": "C++",
+      "alsoCalled": [
+        "C Plus Plus"
+      ],
+      "evidence": "Around 650 problems solved on online judges over three years, almost all in C++",
+      "source": "other"
+    },
+    {
+      "skill": "Flask",
+      "alsoCalled": [
+        "Python Flask"
+      ],
+      "evidence": "a small Flask application",
+      "source": "project"
+    },
+    {
+      "skill": "Competitive Programming",
+      "alsoCalled": [
+        "Programming Contests",
+        "Problem Solving"
+      ],
+      "evidence": "14th of 96 teams at the 2026 national collegiate programming contest",
+      "source": "other"
+    },
+    {
+      "skill": "SQLite",
+      "alsoCalled": [
+        "Embedded Database"
+      ],
+      "evidence": "reminder choices in SQLite",
+      "source": "project"
+    },
+    {
+      "skill": "Mentoring",
+      "alsoCalled": [
+        "Coaching",
+        "Peer Teaching"
+      ],
+      "evidence": "Coach the first-year training group every Sunday evening and set their practice problems",
+      "source": "other"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Object-Oriented Programming",
+      "alsoCalled": [
+        "OOP"
+      ],
+      "evidence": "Object-Oriented Programming (taught in Java)",
+      "why": "Course title only; no project is described in these terms."
+    },
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java SE"
+      ],
+      "evidence": "Object-Oriented Programming (taught in Java)",
+      "why": "Used in one course only."
+    },
+    {
+      "skill": "Unit Testing",
+      "alsoCalled": [
+        "Automated Unit Tests"
+      ],
+      "evidence": "added a check so it cannot come back unnoticed",
+      "why": "After fixing a bug he added a check so it cannot return, which reads like a test; no other testing is described."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "why": "Sets up his server by hand; nothing is packaged in containers.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Amazon Web Services",
+      "alsoCalled": [
+        "AWS"
+      ],
+      "why": "Rents one small server; no cloud platform services are used.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Oracle Certified Professional: Java SE Developer",
+      "alsoCalled": [
+        "OCP Java",
+        "Oracle Java Certification"
+      ],
+      "why": "Asked for in some job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Agile",
+      "alsoCalled": [
+        "Scrum",
+        "Agile Methodology"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Spring Boot",
+      "alsoCalled": [
+        "Spring Framework"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Microservices",
+      "alsoCalled": [
+        "Microservice Architecture"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Design Patterns",
+      "alsoCalled": [
+        "Software Design Patterns"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Code Review",
+      "alsoCalled": [
+        "Peer Review",
+        "Pull Request Review"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "System Design",
+      "alsoCalled": [
+        "Software Architecture"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

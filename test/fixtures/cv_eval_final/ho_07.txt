@@ -1,0 +1,38 @@
+Thamer Al-Hazmi
+Madinah (working remotely for a Riyadh company)
+thamer.alhazmi@example.com · +966 59 000 0000
+
+Profile
+Platform engineer with a little under two years at a fast-growing start-up. I like making
+releases boring.
+
+Experience
+Platform Engineer – an online grocery delivery start-up, Riyadh          Mar 2025 – Present
+– Moved the ordering backend off three hand-configured virtual machines: packaged each service as an image and now run them all on a managed cluster (EKS). Releases went from once a fortnight to several a day.
+– Wrote the deployment manifests and the rules that add pods when the evening rush starts and remove them after midnight.
+– Every part of the environment (networks, databases, queues) is now described in Terraform files kept in the repository and created by a pipeline, not by clicking in the console. A fresh staging copy takes 20 minutes.
+– Built the release pipeline in GitHub Actions: tests, image build, security scan, then a gradual rollout that reverses itself when the error rate climbs.
+– After an outage on a Ramadan evening, put dashboards and on-call alerts in place (Grafana on top of Prometheus). The time it takes us to notice a fault fell from about 25 minutes to under 3.
+– Split the single flat network into public and private subnets across two availability zones behind a load balancer, with the database reachable only from the application tier.
+– Cut the monthly AWS bill by 31% by right-sizing instances and moving product images to a cheaper storage tier.
+– Wrote small shell scripts for the nightly database dumps and for log rotation.
+
+Page 1 of 2
+
+IT Intern – data centre of Taibah University, Madinah                    06/2023-08/2023
+– Racked servers, installed Ubuntu on them and kept the cabling records.
+
+Education
+B.Sc. Computer Engineering, Taibah University, 2024
+
+Certifications
+AWS Certified Solutions Architect – Associate (October 2025)
+
+Skills
+AWS, Terraform, Docker, Linux, Git
+
+Talks
+"What a Ramadan outage taught us", a Madinah developers meetup, May 2026
+
+Languages
+Arabic, English

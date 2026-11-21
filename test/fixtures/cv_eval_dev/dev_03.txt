@@ -1,0 +1,30 @@
+Ziyad Al-Harthi
+Madinah | ziyad.alharthi@example.com | +966 50 000 0000
+
+Third-year Computer Science student at Taibah University who builds websites for local businesses on the side. Looking for a summer internship in a front-end or full-stack team.
+
+Education
+Taibah University, B.Sc. Computer Science, 2024 - 2028 (expected)
+Courses: Web Programming, Data Structures, Database Systems (in progress)
+
+Freelance work (2025 - now)
+- Built and launched sites for five local businesses: two restaurants, a barbershop, a date farm and a tutoring centre.
+- Each one is hand-written with semantic markup and Flexbox and Grid layouts, and looks right from a small phone to a desktop screen.
+- Restaurant menu site: the owner edits dishes and prices through a small admin page; built with Node.js, Express and MongoDB.
+- Bought the domains, set up hosting on Netlify and a shared cPanel host, and switched every site to HTTPS.
+- Raised the date farm site's Lighthouse performance score from 48 to 93 by compressing images and loading them lazily.
+- Agree the pages and the price with each owner before starting, and hand over a one-page guide at the end.
+
+Personal projects
+Mubarat (five-a-side pitch booking)
+- React front end using hooks for state; it talks to an Express backend I wrote, with routes for pitches, slots and bookings.
+- Users sign in with email and password, and sessions are kept with JWT.
+Hifz tracker (Quran memorisation log)
+- Plain JavaScript with localStorage; can be installed on a phone as a PWA and works offline.
+All of my code is on GitHub. I use branches and pull requests even when working alone.
+
+Skills
+HTML, CSS, JavaScript, React, Node.js, Git, Figma (basic)
+
+Languages
+Arabic (native), English (good)

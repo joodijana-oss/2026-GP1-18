@@ -1,0 +1,272 @@
+{
+  "id": "ho_02",
+  "careerGoalId": "cybersecurity_analyst",
+  "shown": [
+    {
+      "skill": "Incident Response",
+      "alsoCalled": [
+        "Security Incident Handling",
+        "IR"
+      ],
+      "evidence": "I pulled it off the network, restored the share from the previous night's backup and wrote the timeline for management",
+      "source": "experience"
+    },
+    {
+      "skill": "Firewall Management",
+      "alsoCalled": [
+        "Firewall Administration",
+        "Firewall Rules"
+      ],
+      "evidence": "Maintain the rule base on the two perimeter FortiGate devices: review change requests, add or remove rules",
+      "source": "experience"
+    },
+    {
+      "skill": "Endpoint Detection and Response",
+      "alsoCalled": [
+        "EDR",
+        "Endpoint Security"
+      ],
+      "evidence": "Rolled out Microsoft Defender for Endpoint to 900 PCs and now handle the detections it raises each day",
+      "source": "experience"
+    },
+    {
+      "skill": "Network Security",
+      "alsoCalled": [
+        "Network Defence"
+      ],
+      "evidence": "moved infusion pumps and imaging devices onto their own VLANs so that office PCs can no longer reach them",
+      "source": "experience"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "Look after 60 Windows and Linux servers",
+      "source": "experience"
+    },
+    {
+      "skill": "Windows Server",
+      "alsoCalled": [
+        "Windows Server Administration"
+      ],
+      "evidence": "Look after 60 Windows and Linux servers",
+      "source": "experience"
+    },
+    {
+      "skill": "Active Directory",
+      "alsoCalled": [
+        "AD",
+        "User Account Management"
+      ],
+      "evidence": "user accounts in Active Directory",
+      "source": "experience"
+    },
+    {
+      "skill": "PowerShell",
+      "alsoCalled": [
+        "PowerShell Scripting"
+      ],
+      "evidence": "Wrote a PowerShell script that emails me every morning the accounts that were locked out overnight",
+      "source": "experience"
+    },
+    {
+      "skill": "Patch Management",
+      "alsoCalled": [
+        "Patching"
+      ],
+      "evidence": "monthly patching",
+      "source": "experience"
+    },
+    {
+      "skill": "Backup and Recovery",
+      "alsoCalled": [
+        "Data Backup"
+      ],
+      "evidence": "nightly backups",
+      "source": "experience"
+    },
+    {
+      "skill": "VLANs",
+      "alsoCalled": [
+        "Network Segmentation"
+      ],
+      "evidence": "onto their own VLANs",
+      "source": "experience"
+    },
+    {
+      "skill": "VMware vSphere",
+      "alsoCalled": [
+        "VMware",
+        "Virtualization"
+      ],
+      "evidence": "VMware vSphere",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Fortinet NSE 4",
+      "alsoCalled": [
+        "NSE 4",
+        "Fortinet Network Security Professional"
+      ],
+      "evidence": "Fortinet NSE 4 Network Security Professional, 2025",
+      "source": "certification"
+    },
+    {
+      "skill": "IT Support",
+      "alsoCalled": [
+        "Help Desk",
+        "Technical Support"
+      ],
+      "evidence": "Answered staff calls, replaced hardware and prepared new laptops",
+      "source": "experience"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Log Analysis",
+      "alsoCalled": [
+        "Security Log Review"
+      ],
+      "evidence": "the accounts that were locked out overnight and the machines the attempts came from",
+      "why": "One script that reports lockout events; no wider review of logs is described."
+    },
+    {
+      "skill": "Malware Analysis",
+      "alsoCalled": [
+        "Malware Triage"
+      ],
+      "evidence": "opening attachments in a sandbox to see what they do",
+      "why": "Self-study labs only."
+    },
+    {
+      "skill": "Security Operations Center Monitoring",
+      "alsoCalled": [
+        "SOC Monitoring",
+        "SOC Operations",
+        "Alert Triage"
+      ],
+      "evidence": "deciding which are real and which are harmless",
+      "why": "Sorts detections from one endpoint tool as part of an operations job; not work in a security operations centre."
+    },
+    {
+      "skill": "TCP/IP Networking",
+      "alsoCalled": [
+        "Networking Fundamentals",
+        "Network Protocols"
+      ],
+      "evidence": "Maintain the rule base on the two perimeter FortiGate devices",
+      "why": "Implied by firewall and network work, but not shown directly."
+    },
+    {
+      "skill": "Phishing Analysis",
+      "alsoCalled": [
+        "Email Security",
+        "Email Header Analysis"
+      ],
+      "evidence": "reading email headers",
+      "why": "Self-study labs only."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "SIEM",
+      "alsoCalled": [
+        "Security Information and Event Management",
+        "SIEM Monitoring"
+      ],
+      "why": "Handles detections from an antivirus and endpoint console, but has not used a central log and alert platform.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Vulnerability Assessment",
+      "alsoCalled": [
+        "Vulnerability Scanning",
+        "Vulnerability Management"
+      ],
+      "why": "Patches servers every month, but no scanning for or ranking of weaknesses.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Scripting"
+      ],
+      "why": "Scripts in another language only.",
+      "nearMiss": true
+    },
+    {
+      "skill": "CompTIA Security+",
+      "alsoCalled": [
+        "Security+"
+      ],
+      "why": "Often asked for in job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Penetration Testing",
+      "alsoCalled": [
+        "Ethical Hacking",
+        "Pentesting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Intrusion Detection Systems",
+      "alsoCalled": [
+        "IDS",
+        "Intrusion Prevention"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Threat Intelligence",
+      "alsoCalled": [
+        "Cyber Threat Intelligence",
+        "CTI"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Digital Forensics",
+      "alsoCalled": [
+        "Computer Forensics",
+        "DFIR"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "MITRE ATT&CK",
+      "alsoCalled": [
+        "ATT&CK Framework"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "NCA Essential Cybersecurity Controls",
+      "alsoCalled": [
+        "NCA ECC",
+        "ECC"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Threat Hunting",
+      "alsoCalled": [
+        "Proactive Threat Detection"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "Fortinet NSE 4 Network Security Professional"
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "id": "dev_04",
+  "careerGoalId": "systems_administrator",
+  "shown": [
+    {
+      "skill": "Windows Server",
+      "alsoCalled": [
+        "Windows Server Administration"
+      ],
+      "evidence": "Administer 45 Windows Server 2019 and 2022 hosts",
+      "source": "experience"
+    },
+    {
+      "skill": "Active Directory",
+      "alsoCalled": [
+        "AD",
+        "User Account Management"
+      ],
+      "evidence": "Own Active Directory for 800 users: organisational units, Group Policy, joiners and leavers",
+      "source": "experience"
+    },
+    {
+      "skill": "Group Policy",
+      "alsoCalled": [
+        "GPO",
+        "Group Policy Objects"
+      ],
+      "evidence": "Rolled out password and screen-lock policies",
+      "source": "experience"
+    },
+    {
+      "skill": "Virtualization",
+      "alsoCalled": [
+        "Virtual Machines",
+        "VMware",
+        "VirtualBox"
+      ],
+      "evidence": "on a three-host VMware vSphere cluster",
+      "source": "experience"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "20 Rocky Linux virtual machines",
+      "source": "experience"
+    },
+    {
+      "skill": "Patch Management",
+      "alsoCalled": [
+        "Patching",
+        "WSUS",
+        "Update Management"
+      ],
+      "evidence": "Install monthly updates through WSUS, on a pilot ring of ten servers first and the rest a week later",
+      "source": "experience"
+    },
+    {
+      "skill": "Data Backup",
+      "alsoCalled": [
+        "Backup and Restore",
+        "Data Recovery",
+        "Backups"
+      ],
+      "evidence": "Run the nightly Veeam jobs",
+      "source": "experience"
+    },
+    {
+      "skill": "Disaster Recovery",
+      "alsoCalled": [
+        "DR",
+        "Backup and Restore",
+        "Recovery Drills"
+      ],
+      "evidence": "rebuilt the ERP database server from last night's copy in under two hours after a storage controller failed",
+      "source": "experience"
+    },
+    {
+      "skill": "PowerShell",
+      "alsoCalled": [
+        "PowerShell Scripting"
+      ],
+      "evidence": "Wrote PowerShell that creates new starters' accounts, mailboxes and licences from the HR spreadsheet",
+      "source": "experience"
+    },
+    {
+      "skill": "Microsoft 365",
+      "alsoCalled": [
+        "Office 365",
+        "O365"
+      ],
+      "evidence": "Moved 800 mailboxes from on-premises Exchange to Exchange Online over three weekends",
+      "source": "experience"
+    },
+    {
+      "skill": "Infrastructure Monitoring",
+      "alsoCalled": [
+        "Observability",
+        "System Monitoring",
+        "Alerting"
+      ],
+      "evidence": "Keep an eye on disk, memory and services in Zabbix and get a text message when a threshold is crossed",
+      "source": "experience"
+    },
+    {
+      "skill": "Identity and Access Management",
+      "alsoCalled": [
+        "IAM",
+        "Access Control",
+        "Access Reviews"
+      ],
+      "evidence": "Moved file-share permissions from individual users to role groups",
+      "source": "experience"
+    },
+    {
+      "skill": "DNS",
+      "alsoCalled": [
+        "Domain Name System"
+      ],
+      "evidence": "Look after the internal DNS zones and DHCP scopes",
+      "source": "experience"
+    },
+    {
+      "skill": "DHCP",
+      "alsoCalled": [
+        "Dynamic Host Configuration Protocol"
+      ],
+      "evidence": "the internal DNS zones and DHCP scopes",
+      "source": "experience"
+    },
+    {
+      "skill": "Disk Encryption",
+      "alsoCalled": [
+        "BitLocker",
+        "Full Disk Encryption"
+      ],
+      "evidence": "turned on BitLocker on 600 laptops",
+      "source": "experience"
+    },
+    {
+      "skill": "Technical Support",
+      "alsoCalled": [
+        "Help Desk",
+        "Service Desk",
+        "IT Support",
+        "User Support"
+      ],
+      "evidence": "Second-line support for the help desk",
+      "source": "experience"
+    },
+    {
+      "skill": "Microsoft Azure",
+      "alsoCalled": [
+        "Azure"
+      ],
+      "evidence": "Microsoft Certified: Azure Administrator Associate (AZ-104), 2025",
+      "source": "certification"
+    },
+    {
+      "skill": "Microsoft Certified: Azure Administrator Associate",
+      "alsoCalled": [
+        "AZ-104"
+      ],
+      "evidence": "Microsoft Certified: Azure Administrator Associate (AZ-104), 2025",
+      "source": "certification"
+    }
+  ],
+  "partly": [],
+  "notShown": [
+    {
+      "skill": "Bash Scripting",
+      "alsoCalled": [
+        "Shell Scripting",
+        "Bash"
+      ],
+      "why": "Runs Linux machines, but all the scripting he describes is PowerShell.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Storage Administration",
+      "alsoCalled": [
+        "SAN",
+        "NAS",
+        "Storage Management"
+      ],
+      "why": "Recovered from a storage failure, but does not describe managing the storage itself.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Red Hat Certified System Administrator",
+      "alsoCalled": [
+        "RHCSA"
+      ],
+      "why": "Runs Rocky Linux at work but holds no Linux certification.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Ansible",
+      "alsoCalled": [
+        "Configuration Management"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "AWS",
+      "alsoCalled": [
+        "Amazon Web Services"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Terraform",
+      "alsoCalled": [
+        "Infrastructure as Code",
+        "IaC"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Firewall Management",
+      "alsoCalled": [
+        "Firewall Administration",
+        "Firewall Configuration",
+        "Firewall Rules"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Hyper-V",
+      "alsoCalled": [
+        "Microsoft Hyper-V"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "ITIL",
+      "alsoCalled": [
+        "ITIL 4",
+        "IT Service Management",
+        "ITSM"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Kubernetes",
+      "alsoCalled": [
+        "K8s",
+        "Container Orchestration"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "Microsoft Certified: Azure Administrator Associate (AZ-104)"
+  ]
+}

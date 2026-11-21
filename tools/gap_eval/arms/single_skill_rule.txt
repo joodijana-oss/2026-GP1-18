@@ -1,0 +1,15 @@
+12. Every entry must name exactly ONE skill, tool or certification,
+    the way a learner would search for it:
+    - no parentheses and no examples inside a name;
+    - no lists joined by "/", ",", "or" or "and";
+    - no "such as", "e.g." or "including";
+    - never a category that stands for several different things.
+      Return the things themselves, each as its own entry, when the
+      postings name them, and leave the category out.
+
+Examples:
+- "Design Tools (Figma, Sketch)" -> "Figma" and "Sketch"
+- "Python or R" -> "Python" and "R"
+- "ETL Pipelines (Airflow/dbt)" -> "ETL Pipelines"
+- "Vendor Certifications" -> the certifications the postings name
+

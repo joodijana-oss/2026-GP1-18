@@ -1,0 +1,220 @@
+{
+  "id": "ho_03",
+  "careerGoalId": "data_analyst",
+  "shown": [
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "Pulled three seasons of shipment records out of the order database with my own queries and joined them to the customer table",
+      "source": "experience"
+    },
+    {
+      "skill": "Data Cleaning",
+      "alsoCalled": [
+        "Data Wrangling",
+        "Data Preparation"
+      ],
+      "evidence": "merged 412 duplicate records and filled in missing country codes before counting anything",
+      "source": "experience"
+    },
+    {
+      "skill": "Microsoft Excel",
+      "alsoCalled": [
+        "Excel",
+        "Spreadsheets"
+      ],
+      "evidence": "Kept the cleaned data in an Excel workbook with lookup formulas",
+      "source": "experience"
+    },
+    {
+      "skill": "Data Visualization",
+      "alsoCalled": [
+        "Dashboards",
+        "Charts"
+      ],
+      "evidence": "with charts of late shipments by destination",
+      "source": "experience"
+    },
+    {
+      "skill": "Reporting",
+      "alsoCalled": [
+        "Business Reporting",
+        "Management Reports"
+      ],
+      "evidence": "Built a weekly one-page summary for the export manager",
+      "source": "experience"
+    },
+    {
+      "skill": "KPI Development",
+      "alsoCalled": [
+        "Key Performance Indicators",
+        "Metrics Definition"
+      ],
+      "evidence": "wrote it down as three measures that are now tracked every week",
+      "source": "experience"
+    },
+    {
+      "skill": "Requirements Gathering",
+      "alsoCalled": [
+        "Stakeholder Requirements"
+      ],
+      "evidence": "Sat with the warehouse supervisor and the export manager to agree what \"late\" should mean",
+      "source": "experience"
+    },
+    {
+      "skill": "Presentation Skills",
+      "alsoCalled": [
+        "Communicating Insights",
+        "Data Storytelling"
+      ],
+      "evidence": "Presented what I found to the owner and four managers on my last day",
+      "source": "experience"
+    },
+    {
+      "skill": "A/B Testing",
+      "alsoCalled": [
+        "Hypothesis Testing",
+        "Experimentation"
+      ],
+      "evidence": "compare the basket size of shoppers who received a coupon with those who did not",
+      "source": "project"
+    },
+    {
+      "skill": "Statistics",
+      "alsoCalled": [
+        "Statistical Analysis"
+      ],
+      "evidence": "ran a t-test to check the gap was not down to chance",
+      "source": "project"
+    },
+    {
+      "skill": "Pandas",
+      "alsoCalled": [
+        "Python Pandas"
+      ],
+      "evidence": "Did the work in a notebook with pandas",
+      "source": "project"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming"
+      ],
+      "evidence": "Did the work in a notebook with pandas",
+      "source": "project"
+    },
+    {
+      "skill": "Power BI",
+      "alsoCalled": [
+        "Microsoft Power BI"
+      ],
+      "evidence": "Excel, SQL, Power BI, Tableau",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Tableau",
+      "alsoCalled": [
+        "Tableau Desktop"
+      ],
+      "evidence": "Excel, SQL, Power BI, Tableau",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Data Analysis",
+      "alsoCalled": [
+        "Ad Hoc Analysis"
+      ],
+      "evidence": "Answered one-off questions from the sales team, for example which five destinations have grown fastest since 2024",
+      "source": "experience"
+    }
+  ],
+  "partly": [],
+  "notShown": [
+    {
+      "skill": "ETL",
+      "alsoCalled": [
+        "Extract Transform Load",
+        "Data Pipelines"
+      ],
+      "why": "Pulled and cleaned data once by hand; no repeatable loading process or pipeline.",
+      "nearMiss": true
+    },
+    {
+      "skill": "DAX",
+      "alsoCalled": [
+        "Data Analysis Expressions"
+      ],
+      "why": "Lists a tool that uses it, but no measures or formulas in that tool are described.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Machine Learning",
+      "alsoCalled": [
+        "Predictive Modeling"
+      ],
+      "why": "Ran a statistical test, but built no predictive model.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Microsoft Power BI Data Analyst Associate",
+      "alsoCalled": [
+        "PL-300"
+      ],
+      "why": "Often asked for in job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Forecasting",
+      "alsoCalled": [
+        "Time Series Forecasting",
+        "Demand Forecasting"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "SAS",
+      "alsoCalled": [
+        "SAS Programming"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Google Analytics",
+      "alsoCalled": [
+        "Web Analytics"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Data Modeling",
+      "alsoCalled": [
+        "Dimensional Modeling"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "R",
+      "alsoCalled": [
+        "R Programming"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Data Warehousing",
+      "alsoCalled": [
+        "Data Warehouse"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

@@ -1,0 +1,32 @@
+Nawaf Al-Bishi
+Jeddah | nawaf.albishi@example.com | +966 50 000 0000
+
+Summary
+Junior database administrator with two years supporting the databases behind the shops, website and warehouses of a home-furnishings retailer.
+
+Experience
+Junior Database Administrator, a home-furnishings retail chain, Jeddah (Aug 2024 - present)
+- Look after 9 Oracle 19c and 6 SQL Server 2019 instances behind the point-of-sale, e-commerce and warehouse systems.
+- Schedule the RMAN and native dumps and check them every morning; run a full restore to a spare server each month and note how long it took.
+- Create accounts and roles from request tickets, and before the external audit replaced direct table grants for 70 users with roles.
+- Find the statements hogging the point-of-sale database from AWR reports and execution plans; one added composite index took the end-of-day sales job from 50 minutes to 7.
+- Apply the quarterly patch sets in the Friday-night window, always with a way back.
+- Keep a standby copy of the e-commerce database in sync with Data Guard and took part in two switchover drills.
+- Watch space, sessions and blocking locks in Oracle Enterprise Manager and extend tablespaces before they fill.
+- Wrote shell and PL/SQL scripts that purge old audit rows and email a morning health check.
+- Refresh the test environments from production with customers' phone numbers scrambled.
+
+Application Support Trainee (co-op), same employer (Jan 2024 - Jun 2024)
+- Answered store staff's calls about the point-of-sale system and passed database faults to the DBA team.
+
+Education
+B.Sc. Computer Science, Jazan University, 2024
+
+Certifications
+Oracle Database SQL Certified Associate (1Z0-071), 2025
+
+Skills
+Oracle, SQL Server, SQL, PL/SQL, RMAN, Linux
+
+Languages
+Arabic (native), English (good)

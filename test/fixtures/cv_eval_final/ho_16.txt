@@ -1,0 +1,33 @@
+Ziyad Al-Anazi
+Riyadh • ziyad.alanazi@example.com • +966 55 000 0000
+
+SUMMARY
+Backend developer, two years at a 12-person product company. I own the parts of the system
+that take bookings and money.
+
+EXPERIENCE
+Backend Developer                                              09/2024 – present
+A company that makes booking software for football pitches and padel courts, Riyadh
+• Own the booking and payments services, written in Python (Django) on PostgreSQL.
+• Designed and built the public interface that the mobile apps and partner sites call to search slots, hold one and pay for it. It is versioned, described in an OpenAPI file and answers about 2 million calls a month.
+• Stopped the same slot being sold twice under load by moving the hold step into one database transaction with a row lock.
+• Rewrote the three slowest queries and added indexes; a slot search went from 1.9 s to 240 ms.
+• Pulled notifications (SMS, email, push) out of the main application into a separate small service that listens on a message queue, so a slow SMS provider no longer holds up checkout.
+• Connected the local payment gateway for mada cards and Apple Pay, including refunds and the nightly reconciliation job.
+• Wrote more than 300 automated tests around payments; a pull request cannot be merged until they pass and another developer has approved it. I review about ten a week and wrote the team's one-page review checklist.
+• Set up the delivery pipeline in my first year: each merge is built into a Docker image and rolled out to our two rented Ubuntu servers with no downtime.
+   o On call one week in three
+   o Looked after a co-op student for six months in 2026
+
+Summer trainee, IT department of a cement company, Riyadh        Jun 2023 - Aug 2023
+• Built an internal page for booking meeting rooms.
+
+EDUCATION
+B.Sc. Computer Science, Majmaah University                     2020 – 2024
+Final-year courses included Object-Oriented Programming, Algorithms and Software Engineering
+
+SKILLS
+Python, Django, PostgreSQL, Docker, Git, Redis
+
+LANGUAGES
+Arabic, English

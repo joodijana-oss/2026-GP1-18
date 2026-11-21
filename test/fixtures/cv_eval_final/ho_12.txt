@@ -1,0 +1,38 @@
+Shahad Al-Amri
+Riyadh  |  shahad.alamri@example.com  |  +966 56 000 0000
+
+PROFILE
+Cybersecurity graduate who prefers the governance side: rules, evidence and
+getting people to follow them. Six months of co-op experience in a regulated financial company.
+
+EDUCATION
+Princess Nourah bint Abdulrahman University, Riyadh
+B.Sc. Cybersecurity                                         2022 – 2026
+Courses included: Information Security Management, IT Audit and Assurance, Cyber Law (including the Kingdom's personal data law), Network Security
+
+EXPERIENCE
+Governance and compliance co-op trainee
+A cooperative insurance company, Riyadh                     02/2026 – Jul 2026
+* Went through the regulator's cyber framework control by control with each department, marked which controls the company already meets and which it does not, and turned the missing ones into a tracked action list of 46 items.
+* Collected screenshots, configurations and signed records as proof for 120 controls ahead of the external auditors' visit, and checked each one against what the control actually asks for.
+* Sent questionnaires to nine suppliers who handle policyholder data, scored their answers and flagged two for follow-up.
+* Rewrote the acceptable-use and password rules as two short documents that staff can actually read; the committee approved both in June.
+* Ran the quarterly fake-phishing email exercise for 600 staff and gave a 20-minute talk to the 48 who clicked.
+* Kept the department's list of open threats up to date: owner, likelihood, impact and what is being done about each.
+* Wrote the monthly compliance status summary that goes to the head of cybersecurity.
+
+CAPSTONE PROJECT (2025)
+* Defined the scope and wrote the statement of applicability for an invented dental clinic chain, following ISO/IEC 27001 Annex A.
+
+CERTIFICATIONS
+ISO/IEC 27001:2022 Lead Implementer (PECB), Aug 2026
+
+SKILLS
+ISO/IEC 27001, NCA ECC, risk registers, Excel
+
+LANGUAGES
+Arabic - native
+English - fluent (IELTS 7.5)
+
+ACTIVITIES
+* Co-founder of the university's cyber law reading group, 2024-25

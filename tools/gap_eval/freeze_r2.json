@@ -1,0 +1,70 @@
+{
+ "candidates": [
+  "B/10/10/bt",
+  "B/10/10/bt-opp"
+ ],
+ "requests": [
+  "typed"
+ ],
+ "decisionGoals": [
+  "data_scientist",
+  "business_analyst",
+  "it_consultant",
+  "data_engineer"
+ ],
+ "promptExampleGoals": [
+  "product_manager",
+  "telecom_engineer"
+ ],
+ "marketRuns": 8,
+ "writerLinkRuns": 3,
+ "writerNamesPerRequest": 12,
+ "maxDecisionNames": 150,
+ "seeds": {
+  "sample": 20261121,
+  "bootstrap": 20261121,
+  "secondRater": 20261122,
+  "developmentLowerBound": 20261123
+ },
+ "personaGuard": {
+  "precision": 3,
+  "tolerance": 0,
+  "source": "User decision in chat, 2026-11-21: \"Yes, approve both\", answering \"Approve the two task 4 rules I recommend?\". Rule 1: the persona guard (plan 7.2 b) compares the candidate with today at 3 decimals, tolerance 0: nDCG@10, GapCov@10 and P@5, each rounded to 3 decimals, at least the value of today rounded to 3 decimals; TopGapRank at most that of today. The user was told this reading was chosen after seeing the development numbers. Record: hardest/user_decisions_r2.md."
+ },
+ "linkGrace": {
+  "seconds": 3,
+  "source": "User decision in chat, 2026-11-21: \"Yes, approve both\", answering \"Approve the two task 4 rules I recommend?\". Rule 2: after the gap step the analysis waits at most 3 seconds more for the link answer (AnalysisSettings.linkGrace); a later answer is dropped and the analysis is saved without gapLinks. Replaces plan V8. Record: hardest/user_decisions_r2.md."
+ },
+ "writerNames": {
+  "use": true,
+  "source": "User decision in chat, 2026-11-21: \"Yes, reuse them\", answering \"Reuse the 40 skill names from the untouched CVs to test approach B?\" (the question of plan section 0: reuse the final set's 40 writers' names, stratum W, in this decision, every pair graded again by blind graders). Record: hardest/user_decisions_r2.md."
+ },
+ "earlierGrades": {
+  "path": "test/fixtures/cv_eval_final/judgements/teaching.csv",
+  "sha256": "a37e55fdd7d305a5a8523445c71cafd980cc687b3d48146bb73b9ea297b61834",
+  "use": "report only"
+ },
+ "personaLinks": [
+  "build/gap_eval/persona_links/dev_typed.json",
+  "build/gap_eval/persona_links/heldout_typed.json"
+ ],
+ "personaLinkFor": {
+  "test/fixtures/opportunity_eval_personas.json": "build/gap_eval/persona_links/dev_typed.json",
+  "test/fixtures/opportunity_eval_personas_heldout.json": "build/gap_eval/persona_links/heldout_typed.json"
+ },
+ "hashes": {
+  "services": "519ed4898af5492eeffad757b9c09e46dffeee9ced03630156c1068885d564a0",
+  "utils": "f221068559f8f2d255d5f981598913bc6e4f752f698324526415ce03a159830e",
+  "models": "85432ea6fe8212b30bff138094fc86a0f85252684d7a37e96b286eab2efe62ef",
+  "gapEvalTools": "d6d73c3193fe998aad8572217c6b7b5f5eeba66d6bc9fd46a0ef7e53752303ba",
+  "recommenderEvalTools": "17105b84a5225ef68dcb390771e0eba58958b0dd8f6971baeb9007bbc2949f2c",
+  "catalogueData": "377d9d47baca292472b192269bc8ac8c229ba2078bc5a315881c85a65c757d74",
+  "exclusionList": "0c398ad8bcdf61807a00a39d8385161699f1d7469fb9653e597533353bb32eb9",
+  "decisionRule": "91e9b42f01ffb967416e1f7843bbb31916835fa7d22260ea074c8eebc8b2ed4d",
+  "gradingInstructions": "df8e26c10a70abf51c1d21ade6dc0f703930072e6649493c63fea9205d68b8c0",
+  "personas": "d941236f0f9b4a102ccca2a61e90b98bf665eb484ef55009029099ffb98a53e1",
+  "personasHeldOut": "cb01d1c6531d32ac29c476356834619fb2d03c0b0aa7a574610cfcb40d359dcd",
+  "personaLinks:build/gap_eval/persona_links/dev_typed.json": "1e292cbce6c5705548146e6189b5c72217fc67ed6ea5494a14d6ae1820d0748a",
+  "personaLinks:build/gap_eval/persona_links/heldout_typed.json": "9616f29218536ec3cc102db046853b5a46e38fa9657dec4a9c248cc965b8b1a8"
+ }
+}

@@ -1,0 +1,239 @@
+{
+  "id": "ho_10",
+  "careerGoalId": "qa_test_engineer",
+  "shown": [
+    {
+      "skill": "Manual Testing",
+      "alsoCalled": [
+        "Functional Testing"
+      ],
+      "evidence": "Go through every new build of the Android and iPhone apps by hand before release",
+      "source": "experience"
+    },
+    {
+      "skill": "Mobile Testing",
+      "alsoCalled": [
+        "Mobile App Testing"
+      ],
+      "evidence": "Go through every new build of the Android and iPhone apps by hand before release",
+      "source": "experience"
+    },
+    {
+      "skill": "Test Case Design",
+      "alsoCalled": [
+        "Test Cases",
+        "Test Scenarios"
+      ],
+      "evidence": "a suite of about 340 step-by-step scenarios, 120 of which I wrote myself",
+      "source": "experience"
+    },
+    {
+      "skill": "Regression Testing",
+      "alsoCalled": [
+        "Regression Suites"
+      ],
+      "evidence": "run the whole money-transfer and bill-payment suite again to make sure nothing that used to work has broken",
+      "source": "experience"
+    },
+    {
+      "skill": "Bug Tracking",
+      "alsoCalled": [
+        "Defect Reporting",
+        "Defect Management"
+      ],
+      "evidence": "with steps, screenshots, device and build number, and stay with it until the developer's fix is confirmed",
+      "source": "experience"
+    },
+    {
+      "skill": "Jira",
+      "alsoCalled": [
+        "Atlassian Jira"
+      ],
+      "evidence": "Write up every fault I find in Jira",
+      "source": "experience"
+    },
+    {
+      "skill": "API Testing",
+      "alsoCalled": [
+        "REST API Testing",
+        "Web Services Testing"
+      ],
+      "evidence": "Send requests straight to the wallet's backend with Postman to check balances, limits and error codes without the app in the way",
+      "source": "experience"
+    },
+    {
+      "skill": "Postman",
+      "alsoCalled": [
+        "Postman Collections"
+      ],
+      "evidence": "Send requests straight to the wallet's backend with Postman",
+      "source": "experience"
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Database Testing",
+        "SQL Queries"
+      ],
+      "evidence": "Look up transfers in the test database with my own queries to confirm that the ledger agrees with what the screen shows",
+      "source": "experience"
+    },
+    {
+      "skill": "User Acceptance Testing",
+      "alsoCalled": [
+        "UAT"
+      ],
+      "evidence": "Sat with five agent-shop cashiers for two days while they tried the new cash-in flow before it went live, and collected their sign-off",
+      "source": "experience"
+    },
+    {
+      "skill": "Agile",
+      "alsoCalled": [
+        "Scrum",
+        "Agile Methodology"
+      ],
+      "evidence": "The team works in two-week sprints; I take part in planning and estimate the testing effort for each story",
+      "source": "experience"
+    },
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java Programming"
+      ],
+      "evidence": "Java (basic)",
+      "source": "skills_section"
+    },
+    {
+      "skill": "ISTQB Certified Tester Foundation Level",
+      "alsoCalled": [
+        "ISTQB CTFL",
+        "ISTQB Foundation"
+      ],
+      "evidence": "ISTQB Certified Tester Foundation Level (CTFL), 2025",
+      "source": "certification"
+    },
+    {
+      "skill": "Localization Testing",
+      "alsoCalled": [
+        "Arabic Localization Testing",
+        "RTL Testing"
+      ],
+      "evidence": "Checked Arabic translations and right-to-left layout on 60 screens and listed the mistakes for the developers",
+      "source": "experience"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Test Automation",
+      "alsoCalled": [
+        "Automated Testing",
+        "Automation Testing"
+      ],
+      "evidence": "recording browser scripts for the admin portal's login and user-search pages",
+      "why": "Just started; recorded flows that are not yet used for releases."
+    },
+    {
+      "skill": "Selenium",
+      "alsoCalled": [
+        "Selenium WebDriver"
+      ],
+      "evidence": "with Selenium IDE. 14 recorded flows so far; they are not yet part of the release process",
+      "why": "Record-and-playback only; no scripted tests in code."
+    },
+    {
+      "skill": "Test Planning",
+      "alsoCalled": [
+        "Test Plan",
+        "Test Strategy"
+      ],
+      "evidence": "I take part in planning and estimate the testing effort for each story",
+      "why": "Estimates testing effort in sprint planning and holds the foundation certificate, which covers planning; has not written a test plan or strategy."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Mobile Test Automation",
+      "alsoCalled": [
+        "Appium"
+      ],
+      "why": "Tests the phone apps by hand only.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Security Testing",
+      "alsoCalled": [
+        "Application Security Testing"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "ISTQB Advanced Level Test Analyst",
+      "alsoCalled": [
+        "ISTQB CTAL-TA"
+      ],
+      "why": "Asked for in some job ads for this role; holds only the foundation level.",
+      "nearMiss": true
+    },
+    {
+      "skill": "TestNG",
+      "alsoCalled": [
+        "Java Test Framework"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Behaviour-Driven Development",
+      "alsoCalled": [
+        "BDD",
+        "Cucumber"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Performance Testing",
+      "alsoCalled": [
+        "Load Testing"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "JMeter",
+      "alsoCalled": [
+        "Apache JMeter"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Cypress",
+      "alsoCalled": [
+        "Cypress.io"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Scripting"
+      ],
+      "why": "Asked for in some job ads for this role, mainly for automation; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "ISTQB Certified Tester Foundation Level (CTFL)"
+  ]
+}

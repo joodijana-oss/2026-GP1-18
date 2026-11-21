@@ -1,0 +1,31 @@
+Majed Al-Enezi
+Riyadh | majed.alenezi@example.com | +966 50 000 0000
+
+Summary
+Systems administrator with two and a half years looking after the servers and the directory of a food manufacturer with 800 staff.
+
+Experience
+Systems Administrator, a food manufacturing company, Riyadh (Jun 2024 - present)
+- Administer 45 Windows Server 2019 and 2022 hosts and 20 Rocky Linux virtual machines on a three-host VMware vSphere cluster.
+- Own Active Directory for 800 users: organisational units, Group Policy, joiners and leavers.
+- Moved file-share permissions from individual users to role groups, so access now follows the job rather than the person.
+- Rolled out password and screen-lock policies and turned on BitLocker on 600 laptops.
+- Install monthly updates through WSUS, on a pilot ring of ten servers first and the rest a week later.
+- Run the nightly Veeam jobs; rebuilt the ERP database server from last night's copy in under two hours after a storage controller failed.
+- Wrote PowerShell that creates new starters' accounts, mailboxes and licences from the HR spreadsheet, saving about four hours a week.
+- Moved 800 mailboxes from on-premises Exchange to Exchange Online over three weekends.
+- Keep an eye on disk, memory and services in Zabbix and get a text message when a threshold is crossed.
+- Look after the internal DNS zones and DHCP scopes.
+- Second-line support for the help desk.
+
+Education
+B.Sc. Information Technology, University of Tabuk, 2024
+
+Certifications
+Microsoft Certified: Azure Administrator Associate (AZ-104), 2025
+
+Skills
+Windows Server, Active Directory, PowerShell, VMware, Linux, Microsoft 365
+
+Languages
+Arabic (native), English (good)

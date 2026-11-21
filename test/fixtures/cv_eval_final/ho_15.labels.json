@@ -1,0 +1,245 @@
+{
+  "id": "ho_15",
+  "careerGoalId": "ai_ml_engineer",
+  "shown": [
+    {
+      "skill": "Natural Language Processing",
+      "alsoCalled": [
+        "NLP",
+        "Text Mining"
+      ],
+      "evidence": "stripped diacritics and letter elongation, dropped duplicate retweets, and split the text into sub-word pieces",
+      "source": "experience"
+    },
+    {
+      "skill": "Transformers",
+      "alsoCalled": [
+        "Transformer Models",
+        "Hugging Face Transformers"
+      ],
+      "evidence": "Adapted a pretrained Arabic transformer encoder to sort complaints into nine topics",
+      "source": "experience"
+    },
+    {
+      "skill": "Deep Learning",
+      "alsoCalled": [
+        "Neural Networks"
+      ],
+      "evidence": "Adapted a pretrained Arabic transformer encoder to sort complaints into nine topics",
+      "source": "experience"
+    },
+    {
+      "skill": "Model Evaluation",
+      "alsoCalled": [
+        "Model Validation",
+        "Performance Metrics"
+      ],
+      "evidence": "was checked with five-fold validation before every submission",
+      "source": "other"
+    },
+    {
+      "skill": "Data Preprocessing",
+      "alsoCalled": [
+        "Feature Engineering",
+        "Data Preparation"
+      ],
+      "evidence": "used features I built from dates and locations",
+      "source": "other"
+    },
+    {
+      "skill": "Machine Learning",
+      "alsoCalled": [
+        "ML",
+        "Predictive Modeling"
+      ],
+      "evidence": "My best entry blended gradient-boosted trees",
+      "source": "other"
+    },
+    {
+      "skill": "Computer Vision",
+      "alsoCalled": [
+        "Image Recognition",
+        "Image Processing"
+      ],
+      "evidence": "trained a model that counts mango fruit in tree photos taken from a drone",
+      "source": "other"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming"
+      ],
+      "evidence": "Python, pandas, scikit-learn",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Scikit-learn",
+      "alsoCalled": [
+        "sklearn"
+      ],
+      "evidence": "Python, pandas, scikit-learn",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Pandas",
+      "alsoCalled": [
+        "Python Pandas"
+      ],
+      "evidence": "Python, pandas, scikit-learn",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Text Classification",
+      "alsoCalled": [
+        "Topic Classification"
+      ],
+      "evidence": "to sort complaints into nine topics. Macro-F1 rose from 0.71 for a bag-of-words baseline to 0.86",
+      "source": "experience"
+    },
+    {
+      "skill": "Data Labeling",
+      "alsoCalled": [
+        "Data Annotation",
+        "Inter-Annotator Agreement"
+      ],
+      "evidence": "Labelled 3,000 of them by dialect with two other assistants and measured how often we agreed",
+      "source": "experience"
+    },
+    {
+      "skill": "Ensemble Methods",
+      "alsoCalled": [
+        "Gradient Boosting",
+        "Model Ensembling"
+      ],
+      "evidence": "My best entry blended gradient-boosted trees",
+      "source": "other"
+    },
+    {
+      "skill": "Research",
+      "alsoCalled": [
+        "Academic Research"
+      ],
+      "evidence": "Presented the results at the lab's end-of-summer meeting; my supervisor is including them in a workshop paper",
+      "source": "experience"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Statistics",
+      "alsoCalled": [
+        "Probability and Statistics"
+      ],
+      "evidence": "Courses: Probability and Statistics, Linear Algebra, Artificial Intelligence, Database Systems",
+      "why": "Course title only."
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "SQL Queries"
+      ],
+      "evidence": "Courses: Probability and Statistics, Linear Algebra, Artificial Intelligence, Database Systems",
+      "why": "A database course title only."
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Command Line"
+      ],
+      "evidence": "Ran every experiment on the lab's shared GPU machine over SSH",
+      "why": "Implied by remote work on a shared machine; not described."
+    },
+    {
+      "skill": "Hyperparameter Tuning",
+      "alsoCalled": [
+        "Model Optimization"
+      ],
+      "evidence": "kept each run's settings and scores in a spreadsheet so that results could be repeated",
+      "why": "Ran and recorded many experiment runs, which suggests trying different settings, but no search over settings is described."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "PyTorch",
+      "alsoCalled": [
+        "Torch"
+      ],
+      "why": "Trained deep models, but the CV does not say with which framework.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Large Language Models",
+      "alsoCalled": [
+        "LLMs",
+        "Generative AI"
+      ],
+      "why": "Adapted a language encoder for sorting text; no work with generative models or prompts.",
+      "nearMiss": true
+    },
+    {
+      "skill": "MLOps",
+      "alsoCalled": [
+        "ML Pipelines"
+      ],
+      "why": "Kept run settings in a spreadsheet; no pipeline, versioning or deployment of models.",
+      "nearMiss": true
+    },
+    {
+      "skill": "AWS Certified Machine Learning - Specialty",
+      "alsoCalled": [
+        "AWS ML Specialty"
+      ],
+      "why": "Asked for in some job ads for this role; not held.",
+      "nearMiss": false
+    },
+    {
+      "skill": "TensorFlow",
+      "alsoCalled": [
+        "Keras"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Model Deployment",
+      "alsoCalled": [
+        "Model Serving",
+        "ML in Production"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Cloud Computing",
+      "alsoCalled": [
+        "Cloud Platforms"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Apache Spark",
+      "alsoCalled": [
+        "PySpark"
+      ],
+      "why": "Asked for in some job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}
