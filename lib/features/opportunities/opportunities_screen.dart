@@ -33,6 +33,17 @@ class OpportunitiesScreen extends StatefulWidget {
 
 enum _ScreenState { loading, noAnalysis, error, empty, ready }
 
+/// Joins names for a sentence: "A", "A and B", "A, B, and C".
+///
+/// Kept outside the screen so a test can check it.
+@visibleForTesting
+String joinWithAnd(List<String> items) {
+  if (items.length <= 1) return items.join();
+  if (items.length == 2) return '${items[0]} and ${items[1]}';
+  final allButLast = items.sublist(0, items.length - 1).join(', ');
+  return '$allButLast, and ${items.last}';
+}
+
 class _OpportunitiesScreenState extends State<OpportunitiesScreen>
     with SingleTickerProviderStateMixin {
   static const String _typeKey = 'opportunity_filter_type';
@@ -448,7 +459,7 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
             icon: Icons.event_busy_rounded,
             title: 'No open opportunities right now',
             subtitle:
-                'Nothing matches your career goal and skill gaps at the moment. New programs, bootcamps and hackathons are added often, so pull down to refresh or check back soon.',
+                'Nothing matches your career goal and skill gaps at the moment. New programs, bootcamps, and hackathons are added often, so pull down to refresh or check back soon.',
           ),
         ),
         const SizedBox(height: 26),
@@ -612,7 +623,7 @@ class _OpportunitiesScreenState extends State<OpportunitiesScreen>
           if (recs.uncoveredGaps.isNotEmpty) ...[
             const SizedBox(height: 14),
             _summaryNote(
-              'No opportunity in our catalog covers ${recs.uncoveredGaps.join(', ')} yet.',
+              'No opportunity in our catalog covers ${joinWithAnd(recs.uncoveredGaps)} yet.',
             ),
           ],
         ],
