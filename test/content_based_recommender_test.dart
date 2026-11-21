@@ -239,4 +239,82 @@ void main() {
     );
     expect(recs.isEmpty, isTrue);
   });
+
+  group('a skill gap that names a certification', () {
+    final telecom = [
+      cert('ccnp_sp',
+          name: 'Cisco Certified Network Professional Service Provider',
+          shortName: 'CCNP Service Provider',
+          paths: ['telecom_engineer'],
+          skills: ['Networking Fundamentals']),
+      cert('ccnp_ent',
+          name: 'Cisco Certified Network Professional Enterprise',
+          shortName: 'CCNP Enterprise',
+          paths: ['telecom_engineer'],
+          skills: ['Networking Fundamentals']),
+      cert('fiber',
+          name: 'Certified Fiber Optics Technician',
+          shortName: 'CFOT',
+          paths: ['telecom_engineer'],
+          skills: ['Fiber Optics']),
+    ];
+
+    test('counts for that certification, by short name or family', () {
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(goal: 'telecom_engineer', gaps: ['CFOT', 'CCNP']),
+        certifications: telecom,
+      );
+      final matched = {
+        for (final m in recs.matched) m.certification.id: m.matchedSkills,
+      };
+      expect(matched['fiber'], ['CFOT']);
+      expect(matched['ccnp_sp'], ['CCNP']);
+      expect(matched['ccnp_ent'], ['CCNP']);
+    });
+
+    test('changes nothing when no gap names a certification', () {
+      final gaps = ['Fiber Optics', 'Routing'];
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(goal: 'telecom_engineer', gaps: gaps),
+        certifications: telecom,
+      );
+      expect(ids(recs.matched), ['fiber']);
+      expect(recs.matched.single.matchedSkills, ['Fiber Optics']);
+    });
+
+    test('the rule itself', () {
+      final dataPlus = cert('data_plus', shortName: 'Data+');
+      final linuxPlus = cert('linux_plus', shortName: 'Linux+');
+      bool names(String gap, Certification c) =>
+          ContentBasedRecommender.gapNamesCertification(gap, c);
+
+      expect(names('Data+', dataPlus), isTrue);
+      expect(names('data +', dataPlus), isTrue);
+      // "+" is part of the name: the skill "Data" is not the certification.
+      expect(names('Data', dataPlus), isFalse);
+      // A family is written in capitals; a skill name is not a family.
+      expect(names('Linux', linuxPlus), isFalse);
+      expect(names('CCNP', telecom.first), isTrue);
+      expect(names('Ccnp', telecom.first), isFalse);
+      // A name the synonym table knows keeps its own matching ("SQL" is a
+      // skill, not a family of certifications).
+      expect(names('SQL', cert('sql_ai', shortName: 'SQL AI Developer')),
+          isFalse);
+      expect(names('SQL AI Developer',
+              cert('sql_ai', shortName: 'SQL AI Developer')),
+          isTrue);
+      // The full name counts too; one or two letters never do.
+      expect(names('Certified Fiber Optics Technician', telecom.last), isTrue);
+      expect(names('CC', cert('cc', shortName: 'CC')), isFalse);
+    });
+
+    test('is for skill gaps only, not for strengthening current skills', () {
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(goal: 'telecom_engineer', current: ['CFOT']),
+        certifications: telecom,
+        goal: CertificationGoal.strengthenSkills,
+      );
+      expect(recs.matched, isEmpty);
+    });
+  });
 }

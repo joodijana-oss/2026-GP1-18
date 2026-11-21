@@ -80,7 +80,9 @@ class CertificationRecommendations {
 /// Steps:
 ///  1. Keep certifications whose `careerPaths` contain the career goal.
 ///  2. Hide certifications the user already holds.
-///  3. Count the target skills each certification works on.
+///  3. Count the target skills each certification works on. A skill gap
+///     that names a certification itself ("CFOT", "CCNP") counts for that
+///     certification ([gapNamesCertification]).
 ///  4. Rank: more skills first, then the level that suits the user, then
 ///     verified certifications, then name.
 class ContentBasedRecommender {
@@ -101,22 +103,46 @@ class ContentBasedRecommender {
     final wantedLevel = preferredLevel(experienceLevel, goal: goal);
     final wantedRank = wantedLevel == null ? null : _levelRank(wantedLevel);
 
+    // What the certification-name rule needs of each gap, worked out once
+    // per call instead of once per certification.
+    final gapNames = goal == CertificationGoal.closeGaps
+        ? [for (final gap in targets) _GapName.of(gap)]
+        : const <_GapName>[];
+    final listNames = goal == CertificationGoal.closeGaps
+        ? _CertificationNames.of(certifications)
+        : null;
+
     final matched = <CertificationMatch>[];
     final others = <CertificationMatch>[];
     var hidden = 0;
 
-    for (final cert in certifications) {
+    for (var position = 0; position < certifications.length; position++) {
+      final cert = certifications[position];
       if (goalId.isEmpty || !cert.careerPaths.contains(goalId)) continue;
       if (_isHeld(cert, held)) {
         hidden++;
         continue;
       }
 
-      final skills = SkillMatcher.matchedSkills(
+      final byWords = SkillMatcher.matchedSkills(
         targets,
         cert.skills,
         evidence: '${cert.name} ${cert.description} ${cert.skills.join(' ')}',
       );
+      // Both lists keep the order of the targets, so a ranking where no
+      // gap names a certification is exactly what words alone give.
+      final List<String> skills;
+      if (listNames == null) {
+        skills = byWords;
+      } else {
+        final certNames = listNames.at(position);
+        skills = [
+          for (var g = 0; g < targets.length; g++)
+            if (byWords.contains(targets[g]) ||
+                gapNames[g].names(certNames))
+              targets[g],
+        ];
+      }
       final match = CertificationMatch(
         certification: cert,
         matchedSkills: skills,
@@ -165,6 +191,24 @@ class ContentBasedRecommender {
   /// The current skills written in an analysis document.
   static List<String> currentSkillsOf(Map<String, dynamic> analysis) =>
       _stringList(analysis['currentSkills']);
+
+  /// True when the skill gap [gap] names the certification [cert] itself.
+  /// Job postings ask for certifications by name, and the synonym table
+  /// holds skills, not certifications, so without this a "CFOT" gap would
+  /// never count for the CFOT certification. A gap names a certification
+  /// when it is its short name or its full name. It also names a family of
+  /// certifications when it is written in capitals, is the first words of
+  /// the short name ("CCNP" for "CCNP Enterprise" and "CCNP Data
+  /// Center"), and is not a name the synonym table knows: a known name is a
+  /// skill or a platform with its own matching, so "AWS" is not read as
+  /// every AWS certification, nor "Linux" as "Linux+". The names are
+  /// compared with [SkillMatcher.identityKey], so "Data+" is not "Data",
+  /// and a name of one or two letters never counts.
+  ///
+  /// The ranking runs the same rule with the gap and the certification
+  /// names prepared once ([_GapName], [_CertificationNames]).
+  static bool gapNamesCertification(String gap, Certification cert) =>
+      _GapName.of(gap).names(_CertNames.of(cert));
 
   /// The certification level that suits an experience level from the
   /// profile ("No Experience", "Beginner", "Intermediate", "Advanced").
@@ -276,4 +320,85 @@ class ContentBasedRecommender {
     }
     return false;
   }
+}
+
+/// A skill gap as the certification-name rule needs it
+/// ([ContentBasedRecommender.gapNamesCertification]), worked out once.
+class _GapName {
+  /// [SkillMatcher.identityKey] of the gap, or empty when the name is too
+  /// short to name a certification (one or two letters).
+  final String key;
+
+  /// Whether the gap may name a family of certifications: it is written in
+  /// capitals and is not a name the synonym table knows.
+  final bool family;
+
+  const _GapName(this.key, this.family);
+
+  factory _GapName.of(String gap) {
+    final key = SkillMatcher.identityKey(gap);
+    if (key.length < 3) return const _GapName('', false);
+    return _GapName(
+      key,
+      gap.toUpperCase() == gap && !SkillMatcher.isKnownName(gap),
+    );
+  }
+
+  /// True when this gap names the certification whose names are [cert].
+  bool names(_CertNames cert) {
+    if (key.isEmpty) return false;
+    if (key == cert.short || key == cert.name) return true;
+    return family && cert.short.isNotEmpty && cert.short.startsWith('$key ');
+  }
+}
+
+/// The short name and the full name of one certification, as
+/// [SkillMatcher.identityKey]s.
+class _CertNames {
+  final String short;
+  final String name;
+
+  const _CertNames(this.short, this.name);
+
+  factory _CertNames.of(Certification cert) => _CertNames(
+        SkillMatcher.identityKey(cert.shortName),
+        SkillMatcher.identityKey(cert.name),
+      );
+}
+
+/// What the ranking needs of a whole certification list, worked out once
+/// per list and reused while the list still holds the same certifications
+/// (kept in an Expando): the names of each certification for the
+/// certification-name rule.
+class _CertificationNames {
+  _CertificationNames._(this._items)
+      : _names = List<_CertNames?>.filled(_items.length, null);
+
+  final List<Certification> _items;
+
+  /// The names of each certification, worked out the first time the
+  /// ranking asks for them (only the certifications of the career goal).
+  final List<_CertNames?> _names;
+
+  static final Expando<_CertificationNames> _cache =
+      Expando<_CertificationNames>();
+
+  static _CertificationNames of(List<Certification> list) {
+    final cached = _cache[list];
+    if (cached != null && cached._sameItems(list)) return cached;
+    return _cache[list] =
+        _CertificationNames._(List<Certification>.of(list, growable: false));
+  }
+
+  bool _sameItems(List<Certification> list) {
+    if (list.length != _items.length) return false;
+    for (var i = 0; i < list.length; i++) {
+      if (!identical(list[i], _items[i])) return false;
+    }
+    return true;
+  }
+
+  /// The names of the certification at [position] in the list.
+  _CertNames at(int position) =>
+      _names[position] ??= _CertNames.of(_items[position]);
 }
