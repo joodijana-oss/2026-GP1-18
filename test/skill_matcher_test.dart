@@ -215,7 +215,8 @@ void main() {
           'a one b two c three');
     });
 
-    test('normalize is unchanged, so certifications behave as before', () {
+    test('normalize is unchanged and C-family names share one synonym group',
+        () {
       expect(SkillMatcher.normalize('C#'), 'c');
       expect(SkillMatcher.normalize('C++'), 'c');
       expect(SkillMatcher.matches('C#', 'C++'), isTrue);
@@ -314,5 +315,127 @@ void main() {
       }
     }
     expect(compared, greaterThan(5000));
+  });
+
+  group('names with signs in certification text', () {
+    // Made-up certification texts and gap names, not taken from the
+    // bundled data. A sign that is part of a language name is kept.
+    const family = ['C++', 'C#', 'C'];
+
+    test('a C-family gap counts only where its own name is written', () {
+      expect(
+        SkillMatcher.matchedSkills(family, const [],
+            evidence: 'Write cloud services in C# and Go.'),
+        ['C#'],
+      );
+      expect(
+        SkillMatcher.matchedSkills(family, const [],
+            evidence: 'Tune game engines written in modern C++20.'),
+        ['C++'],
+      );
+      expect(
+        SkillMatcher.matchedSkills(family, const [],
+            evidence: 'Program small boards in plain C.'),
+        ['C'],
+      );
+      expect(
+        SkillMatcher.matchedSkills(family, const [],
+            evidence: 'Port drivers between C and C++ code bases.'),
+        ['C++', 'C'],
+      );
+      expect(
+        SkillMatcher.matchedSkills(family, const [],
+            evidence: 'Embedded work in C/C++ and a little C#/.NET.'),
+        ['C++', 'C#', 'C'],
+      );
+    });
+
+    test('other spellings of the same name count', () {
+      expect(
+        SkillMatcher.matchedSkills(['C++'], const [],
+            evidence: 'Templates and cpp build tools.'),
+        ['C++'],
+      );
+      expect(
+        SkillMatcher.matchedSkills(['CSharp'], const [],
+            evidence: 'Desktop apps in C#.'),
+        ['CSharp'],
+      );
+      expect(
+        SkillMatcher.matchedSkills(['c#'], const [],
+            evidence: 'LINQ queries in C#.'),
+        ['c#'],
+      );
+    });
+
+    test('a certification skill with a sign covers only the same name', () {
+      expect(SkillMatcher.matchedSkills(family, const ['C#']), ['C#']);
+      expect(SkillMatcher.matchedSkills(family, const ['C++']), ['C++']);
+    });
+
+    test('a name of several words keeps its sign', () {
+      const text = 'An exam on C# programming for web APIs.';
+      expect(
+        SkillMatcher.matchedSkills(
+            ['C++ Programming'], const ['Programming Fundamentals'],
+            evidence: text),
+        isEmpty,
+      );
+      expect(
+        SkillMatcher.matchedSkills(['C# Programming'], const [],
+            evidence: text),
+        ['C# Programming'],
+      );
+      expect(SkillMatcher.matches('C++ Programming', 'C Programming'),
+          isFalse);
+      expect(SkillMatcher.canonical('C# Programming'),
+          isNot(SkillMatcher.canonical('C Programming')));
+    });
+
+    test('.NET names and lower-case signs', () {
+      expect(
+        SkillMatcher.matchedSkills(['.NET', 'C#', 'C++', 'C'], const [],
+            evidence: 'Line-of-business apps in C#.NET.'),
+        ['.NET', 'C#'],
+      );
+      expect(
+        SkillMatcher.matchedSkills(['ASP.NET', '.NET', 'Node.js'], const [],
+            evidence: 'Services on ASP.NET Core and nodejs.'),
+        ['ASP.NET', '.NET', 'Node.js'],
+      );
+      expect(
+        SkillMatcher.matchedSkills(family, const [],
+            evidence: 'Systems programming in modern c++ and rust.'),
+        ['C++'],
+      );
+      expect(
+        SkillMatcher.matchedSkills(['C/C++', 'C++', 'C'], const [],
+            evidence: 'Drivers in C, C++ and some Rust.'),
+        ['C/C++', 'C++', 'C'],
+      );
+    });
+
+    test('longer names keep their sign in the opportunity tag test', () {
+      expect(SkillMatcher.tagCovers('C# Programming', 'C Programming'),
+          isFalse);
+      expect(SkillMatcher.tagCovers('C++ Programming', 'Programming in C++'),
+          isTrue);
+      expect(SkillMatcher.tagCovers('C Programming', 'C/C++ Programming'),
+          isTrue);
+    });
+
+    test('names without signs and the synonym groups read as before', () {
+      expect(
+        SkillMatcher.matchedSkills(
+          ['SQL', 'Machine Learning'],
+          const ['Databases and SQL'],
+          evidence: 'Machine learning in C# and Python.',
+        ),
+        ['SQL', 'Machine Learning'],
+      );
+      expect(SkillMatcher.matches('C#', 'Programming Fundamentals'), isTrue);
+      expect(SkillMatcher.canonical('C++'),
+          SkillMatcher.canonical('Programming'));
+    });
   });
 }

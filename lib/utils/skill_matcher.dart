@@ -2,10 +2,13 @@
 /// "SQL" or "Microsoft Power BI") with the skill names stored on
 /// certifications (for example "Databases and SQL").
 ///
-/// Claude writes skill gaps as short free-text names taken from job
+/// The AI analysis writes skill gaps as short free-text names taken from job
 /// postings, while the certification dataset uses a fixed list of 87 skill
 /// names. This class bridges the two:
-///  1. [normalize] lower-cases a name and removes punctuation.
+///  1. [searchKey] lower-cases a name and removes punctuation
+///     ([normalize]), after [searchForm] has kept the C-family language
+///     names whole ("C#" -> "csharp", "C++" -> "cpp"). Names and
+///     certification texts are both read this way.
 ///  2. [canonical] replaces a known synonym (SQL, MySQL, T-SQL ...) with the
 ///     certification skill name it belongs to (Databases and SQL).
 ///  3. [matches] compares two names: equal after step 2, or one name
@@ -30,15 +33,17 @@ class SkillMatcher {
   /// A skill name as an identity, for telling the names of one list apart.
   /// It is [normalize] with '+' and '#' kept as words, so "C++", "C#" and
   /// "C" stay three skills ("c plus plus", "c sharp", "c") and "Data+" is
-  /// not "Data". [normalize] alone is right for searching a text,
-  /// where those signs are lost anyway.
+  /// not "Data". Matching a name against a text uses [searchKey]
+  /// instead, which keeps the C-family language names apart.
   static String identityKey(String input) => normalize(
         input.replaceAll('+', ' plus ').replaceAll('#', ' sharp '),
       );
 
   /// The certification skill name (normalized) that [input] stands for.
+  /// The name is read in its [searchForm], so "C# Programming" stays
+  /// "csharp programming" and is not "C Programming".
   static String canonical(String input) {
-    final key = normalize(input);
+    final key = searchKey(input);
     return _aliases[key] ?? key;
   }
 
@@ -86,21 +91,23 @@ class SkillMatcher {
     Map<String, List<String>> links = const {},
     Map<String, List<String>> phrases = const {},
   }) {
-    final text = ' ${normalize(evidence)} ';
+    // Names and text are read in their [searchForm], as the opportunity
+    // search reads them: a "C++" gap must not find the "c" left of "C#".
+    final text = ' ${searchKey(evidence)} ';
     final result = <String>[];
     for (final item in wanted) {
       if (result.contains(item)) continue;
-      final key = normalize(item);
+      final key = searchKey(item);
       if (key.isEmpty) continue;
       var covered = _covers(item, key, available, text);
       if (!covered && !_specific.contains(key)) {
         covered = (links[item] ?? const <String>[]).any((name) {
-              final nameKey = normalize(name);
+              final nameKey = searchKey(name);
               return nameKey.isNotEmpty &&
                   _covers(name, nameKey, available, text);
             }) ||
             (phrases[item] ?? const <String>[]).any((phrase) {
-              final phraseKey = normalize(phrase);
+              final phraseKey = searchKey(phrase);
               return _tokens(phraseKey).length >= 2 &&
                   _mentions(text, phraseKey);
             });
@@ -110,8 +117,8 @@ class SkillMatcher {
     return result;
   }
 
-  /// True when one of the [available] skills, or the padded, normalized
-  /// [text], covers the skill [name] ([key] is its [normalize]d form).
+  /// True when one of the [available] skills, or the padded [text] (in its
+  /// [searchKey] form), covers the skill [name] ([key] is its [searchKey]).
   static bool _covers(
     String name,
     String key,
@@ -120,14 +127,14 @@ class SkillMatcher {
   ) {
     if (_specific.contains(key)) {
       return _mentions(text, key) ||
-          available.any((skill) => normalize(skill) == key);
+          available.any((skill) => searchKey(skill) == key);
     }
     return available.any((skill) => matches(name, skill)) ||
         (_tokens(key).length >= 2 && _mentions(text, key));
   }
 
-  /// True when the padded, normalized [text] contains [key] as whole words
-  /// (also "nodejs" / "node" for "node js").
+  /// True when the padded [text] (in its [searchKey] form) contains [key]
+  /// as whole words (also "nodejs" / "node" for "node js").
   static bool _mentions(String text, String key) {
     return spellingsOf(key).any((v) => text.contains(' $v '));
   }
@@ -164,8 +171,8 @@ class SkillMatcher {
   /// become the one letter "c". A course on C would then cover a C# gap,
   /// and the "c)" of a list ("a) ... b) ... c) ...") would count as a
   /// mention of C#. The search index runs every text and every skill
-  /// through this first. [normalize] itself is left as it is, so the
-  /// certifications recommender behaves as before.
+  /// through this first, and so do [canonical] and [matchedSkills] for the
+  /// certifications. [normalize] itself is left as it is.
   static String searchForm(String input) {
     if (!input.contains('#') && !input.contains('+')) return input;
     return input.replaceAllMapped(_cFamily, (m) {
@@ -340,8 +347,8 @@ class SkillMatcher {
       'Exchange Online', 'SharePoint', 'Microsoft Teams', 'Intune',
       'SAP FICO', 'SAP MM', 'SAP SD', 'SAP ABAP', 'ABAP', 'SAP Basis',
     ])
-      // Both forms: "c" for the certifications, "csharp" and "cpp" for the
-      // opportunity search ([searchKey]).
+      // Both forms: matching reads names in their [searchKey] form
+      // ("csharp", "cpp"); [isSpecific] also accepts the [normalize] form.
       ...{normalize(name), searchKey(name)},
   };
 
@@ -1166,7 +1173,8 @@ class SkillMatcher {
     _groups.forEach((canonicalName, synonyms) {
       final target = normalize(canonicalName);
       for (final synonym in synonyms) {
-        map[normalize(synonym)] = target;
+        // Keyed like [canonical] reads a name: "C#" -> "csharp".
+        map[searchKey(synonym)] = target;
       }
     });
     return map;

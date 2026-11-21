@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:masra/models/certification.dart';
+import 'package:masra/services/certification_service.dart';
 import 'package:masra/services/content_based_recommender.dart';
 
 Certification cert(
@@ -315,6 +318,93 @@ void main() {
         goal: CertificationGoal.strengthenSkills,
       );
       expect(recs.matched, isEmpty);
+    });
+  });
+
+  group('names with signs', () {
+    // Made-up certifications, not from the bundled CSV.
+    final catalog = [
+      cert('web_api',
+          paths: ['software_engineer'],
+          skills: ['Programming Fundamentals', 'APIs'],
+          description: 'Shows you can build web APIs with C# and Python.'),
+      cert('engine',
+          paths: ['software_engineer'],
+          skills: ['Programming Fundamentals'],
+          description: 'For developers who write game engines in C++17.'),
+      cert('firmware',
+          paths: ['software_engineer'],
+          skills: ['Programming Fundamentals'],
+          description: 'Firmware for small devices, written in C.'),
+      cert('both',
+          paths: ['software_engineer'],
+          skills: ['Programming Fundamentals'],
+          description: 'Moving old C code to modern C++.'),
+    ];
+
+    test('each C-family gap counts only where its own name is written', () {
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(
+            goal: 'software_engineer', gaps: ['C++', 'C#', 'C', 'APIs']),
+        certifications: catalog,
+      );
+      final byId = {
+        for (final m in recs.ranked) m.certification.id: m.matchedSkills,
+      };
+      expect(byId['web_api'], ['C#', 'APIs']);
+      expect(byId['engine'], ['C++']);
+      expect(byId['firmware'], ['C']);
+      expect(byId['both'], ['C++', 'C']);
+    });
+
+    test('current skills follow the same rule', () {
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(goal: 'software_engineer', current: ['C#']),
+        goal: CertificationGoal.strengthenSkills,
+        certifications: catalog,
+      );
+      expect(ids(recs.matched), ['web_api']);
+      expect(recs.matched.single.matchedSkills, ['C#']);
+    });
+
+    test('on the bundled certifications a C-family gap needs its own name',
+        () {
+      // The bundled certifications go through the ranking itself, so the
+      // check follows whatever text the recommender reads. Expected: a gap
+      // counts exactly when the certification's own name, description or
+      // skills write that name.
+      final certs = CertificationService.parseCsv(
+        File('lib/assets/data/Masra_IT_Certifications.csv')
+            .readAsStringSync(),
+      );
+      final written = {
+        'C++': RegExp(r'(?<![a-z0-9#+])c\+\+(?![a-z#+])',
+            caseSensitive: false),
+        'C#': RegExp(r'(?<![a-z0-9#+])c#(?![a-z#+])', caseSensitive: false),
+        'C': RegExp(r'(?<![a-z0-9#+])c(?![a-z0-9#+])', caseSensitive: false),
+      };
+      final gaps = written.keys.toList();
+      final covered = <String, List<String>>{};
+      for (final path in {for (final c in certs) ...c.careerPaths}) {
+        final recs = recommender.recommendCertifications(
+          analysis: analysis(goal: path, gaps: gaps),
+          certifications: certs,
+        );
+        for (final m in [...recs.matched, ...recs.others]) {
+          covered[m.certification.id] = m.matchedSkills;
+        }
+      }
+      expect(covered.length, certs.length);
+      var checked = 0;
+      for (final c in certs) {
+        final text = '${c.name} ${c.description} ${c.skills.join(' ')}';
+        written.forEach((gap, pattern) {
+          expect(covered[c.id]!.contains(gap), pattern.hasMatch(text),
+              reason: '${c.id} / $gap');
+          checked++;
+        });
+      }
+      expect(checked, greaterThan(800));
     });
   });
 }
