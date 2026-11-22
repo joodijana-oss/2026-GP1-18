@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'dart:ui' as ui;
 
@@ -10,8 +11,9 @@ import 'package:masra/theme/app_theme.dart';
 
 // The welcome page shows the light picture with the navy logo in light mode,
 // and the new dark picture with the white logo (coloured road and compass)
-// in dark mode. No Firebase app is needed, and the button is never tapped
-// (it opens Sign Up, which needs Firebase).
+// in dark mode. The page loads the pictures of both modes when it opens, and
+// the dark picture's corners are filled. No Firebase app is needed, and the
+// button is never tapped (it opens Sign Up, which needs Firebase).
 //
 // Roboto is loaded under the name 'Arial' (the theme's font) before the
 // tests. The default test font draws every letter as a full square, wider
@@ -90,6 +92,70 @@ Future<void> _showWelcome(
   });
   await tester.pump();
   expect(errors, isEmpty);
+}
+
+/// The image cache key of the bundled picture [name], the same key the
+/// page's Image widgets use.
+Future<Object> _cacheKey(WidgetTester tester, String name) async {
+  final context = tester.element(find.byType(OnboardingScreen));
+  final key = await tester.runAsync(
+    () => AssetImage(name).obtainKey(createLocalImageConfiguration(context)),
+  );
+  return key!;
+}
+
+/// Whether the picture [name] has its pixels on screen, not a blank space
+/// while it loads.
+bool _isDrawn(WidgetTester tester, String name) =>
+    tester
+        .widget<RawImage>(
+          find.descendant(of: _asset(name), matching: find.byType(RawImage)),
+        )
+        .image !=
+    null;
+
+/// Sends the low-memory warning that Android gives each time the app goes to
+/// the background, for example while the user opens Settings to change the
+/// theme. Flutter then empties its image cache and the list of the app's
+/// files that AssetImage reads to find a picture. The caller pumps.
+void _memoryWarning(WidgetTester tester) {
+  // Not awaited: the warning takes effect at once, and its reply needs a
+  // pump to arrive.
+  unawaited(
+    tester.binding.defaultBinaryMessenger.handlePlatformMessage(
+      SystemChannels.system.name,
+      SystemChannels.system.codec
+          .encodeMessage(<String, Object?>{'type': 'memoryPressure'}),
+      (_) {},
+    ),
+  );
+}
+
+/// Makes the app's files arrive a moment after they are asked for, as on a
+/// phone, instead of at once as in a normal widget test. A frame that has to
+/// wait for a file then shows the wait.
+void _loadFilesLikeAPhone(WidgetTester tester) {
+  final messenger = tester.binding.defaultBinaryMessenger;
+  messenger.allMessagesHandler = (channel, handler, message) {
+    final answer = handler != null
+        ? handler(message)
+        : messenger.delegate.send(channel, message);
+    if (channel != 'flutter/assets' || answer == null) return answer;
+    return answer.then((data) => Future<ByteData?>.value(data));
+  };
+  addTearDown(() => messenger.allMessagesHandler = null);
+}
+
+/// Switches the theme the way main.dart does: sets AppColors.isDark and asks
+/// every widget to rebuild. The caller pumps.
+void _switchTheme(WidgetTester tester, {required bool dark}) {
+  void rebuild(Element element) {
+    element.markNeedsBuild();
+    element.visitChildren(rebuild);
+  }
+
+  AppColors.isDark = dark;
+  tester.binding.rootElement!.visitChildren(rebuild);
 }
 
 Color? _taglineColor(WidgetTester tester) =>
@@ -223,13 +289,7 @@ void main() {
     expect(_asset(_lightLogo), findsOneWidget);
 
     // Rebuild every widget, the way main.dart does when the theme changes.
-    void rebuild(Element element) {
-      element.markNeedsBuild();
-      element.visitChildren(rebuild);
-    }
-
-    AppColors.isDark = true;
-    tester.binding.rootElement!.visitChildren(rebuild);
+    _switchTheme(tester, dark: true);
     await tester.pump();
     expect(_asset(_darkBackground), findsOneWidget);
     expect(_asset(_darkLogo), findsOneWidget);
@@ -242,8 +302,7 @@ void main() {
     expect(_lightOverlay(), findsNothing);
     expect(_statusBarStyle(), findsOneWidget);
 
-    AppColors.isDark = false;
-    tester.binding.rootElement!.visitChildren(rebuild);
+    _switchTheme(tester, dark: false);
     await tester.pump();
     expect(_asset(_lightBackground), findsOneWidget);
     expect(_asset(_lightLogo), findsOneWidget);
@@ -256,6 +315,81 @@ void main() {
     expect(_lightOverlay(), findsOneWidget);
     expect(_statusBarStyle(), findsNothing);
   });
+
+  for (final startDark in [false, true]) {
+    final from = startDark ? 'dark' : 'light';
+    final to = startDark ? 'light' : 'dark';
+    testWidgets(
+        'loads the pictures of both modes when it opens, so a change from '
+        '$from to $to shows them in the first frame', (tester) async {
+      // Start from an empty image cache: pictures loaded by earlier tests
+      // must not count.
+      imageCache.clear();
+      imageCache.clearLiveImages();
+      addTearDown(() {
+        imageCache.clear();
+        imageCache.clearLiveImages();
+      });
+
+      // _showWelcome itself only loads the two pictures on screen.
+      await _showWelcome(tester, dark: startDark);
+
+      // All four were asked for when the page first built, before any
+      // theme change.
+      const all = [_lightBackground, _darkBackground, _lightLogo, _darkLogo];
+      final keys = {for (final name in all) name: await _cacheKey(tester, name)};
+      for (final name in all) {
+        expect(imageCache.statusForKey(keys[name]!).tracked, isTrue,
+            reason: '$name was not loaded when the page opened');
+      }
+
+      // Let them finish loading (up to 10 s). This only waits; it loads
+      // nothing itself.
+      for (var attempt = 0;; attempt++) {
+        final loaded = all.every((name) {
+          final status = imageCache.statusForKey(keys[name]!);
+          return status.tracked && !status.pending;
+        });
+        if (loaded) break;
+        if (attempt == 500) fail('the pictures did not finish loading');
+        await tester.runAsync(
+          () => Future<void>.delayed(const Duration(milliseconds: 20)),
+        );
+        await tester.pump();
+      }
+
+      // Then the app goes to the background and comes back, as when the
+      // user changes the theme in the phone's Settings. The low-memory
+      // warning on the way empties the image cache and the list of the
+      // app's files, and on a phone that list takes a moment to read again.
+      _loadFilesLikeAPhone(tester);
+      _memoryWarning(tester);
+      await tester.pump();
+
+      // The very first frame after the change already shows the other
+      // mode's background and logo: no blank frame in between.
+      _switchTheme(tester, dark: !startDark);
+      await tester.pump();
+      expect(_isDrawn(tester, startDark ? _lightBackground : _darkBackground),
+          isTrue);
+      expect(_isDrawn(tester, startDark ? _lightLogo : _darkLogo), isTrue);
+
+      // The same on the way back.
+      _switchTheme(tester, dark: startDark);
+      await tester.pump();
+      expect(_isDrawn(tester, startDark ? _darkBackground : _lightBackground),
+          isTrue);
+      expect(_isDrawn(tester, startDark ? _darkLogo : _lightLogo), isTrue);
+
+      // When the page closes it lets go of all four, so the image cache can
+      // drop them when it needs the room.
+      await tester.pumpWidget(const SizedBox());
+      for (final name in all) {
+        expect(imageCache.statusForKey(keys[name]!).live, isFalse,
+            reason: '$name was still held after the page closed');
+      }
+    });
+  }
 
   for (final dark in [false, true]) {
     final mode = dark ? 'dark' : 'light';
@@ -285,8 +419,9 @@ void main() {
     expect(logo, [990, 397, 8, 6]);
 
     final background = _pngHeader(await rootBundle.load(_darkBackground));
-    // The original picture, not enlarged.
-    expect(background.sublist(0, 2), [733, 1600]);
+    // The original picture, not enlarged: 733 x 1600, 8 bits per channel,
+    // colour type 2 (red, green, blue).
+    expect(background, [733, 1600, 8, 2]);
   });
 
   testWidgets('the dark-mode logo is truly see-through, with no checker '
@@ -338,5 +473,73 @@ void main() {
     expect(clear / total, greaterThan(0.5));
     expect(solid / total, greaterThan(0.15));
     expect(greyResidue, lessThanOrEqualTo(20));
+  });
+
+  testWidgets('the dark picture has no black corners, and they blend in',
+      (tester) async {
+    final data = await rootBundle.load(_darkBackground);
+    final bytes =
+        data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+    late ByteData rgba;
+    late int width;
+    late int height;
+    await tester.runAsync(() async {
+      final codec = await ui.instantiateImageCodec(bytes);
+      final frame = await codec.getNextFrame();
+      width = frame.image.width;
+      height = frame.image.height;
+      rgba = (await frame.image.toByteData(
+        format: ui.ImageByteFormat.rawStraightRgba,
+      ))!;
+    });
+
+    // Each corner: its pixel and the steps that go inward from it.
+    final corners = <String, (int, int, int, int)>{
+      'top left': (0, 0, 1, 1),
+      'top right': (width - 1, 0, -1, 1),
+      'bottom left': (0, height - 1, 1, -1),
+      'bottom right': (width - 1, height - 1, -1, -1),
+    };
+    corners.forEach((name, corner) {
+      final (x0, y0, dx, dy) = corner;
+      int at(int i, int j, int c) =>
+          rgba.getUint8(((y0 + dy * j) * width + x0 + dx * i) * 4 + c);
+
+      // No black pixel in the 48 x 48 px at the corner. The sky and the
+      // ground there are navy, with a blue channel of 37 or more.
+      var black = 0;
+      for (var j = 0; j < 48; j++) {
+        for (var i = 0; i < 48; i++) {
+          if (at(i, j, 0) <= 12 && at(i, j, 1) <= 12 && at(i, j, 2) <= 12) {
+            black++;
+          }
+        }
+      }
+      expect(black, 0, reason: 'black pixels in the $name corner');
+
+      // The corner blends in: every pixel of its 32 x 32 px is within 6 of
+      // the mean colour of the 16 x 16 px block diagonally inside it, so no
+      // dark curve or light rim is left. On the right, the picture's last 3
+      // columns are left out: a thin greyish line runs down the whole right
+      // edge, which was there before and is not part of a corner.
+      for (var c = 0; c < 3; c++) {
+        var sum = 0;
+        for (var j = 16; j < 32; j++) {
+          for (var i = 16; i < 32; i++) {
+            sum += at(i, j, c);
+          }
+        }
+        final mean = sum / 256;
+        var worst = 0.0;
+        for (var j = 0; j < 32; j++) {
+          for (var i = dx < 0 ? 3 : 0; i < 32; i++) {
+            final gap = (at(i, j, c) - mean).abs();
+            if (gap > worst) worst = gap;
+          }
+        }
+        expect(worst, lessThanOrEqualTo(6),
+            reason: '$name corner, channel $c');
+      }
+    });
   });
 }
