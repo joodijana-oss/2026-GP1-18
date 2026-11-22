@@ -16,16 +16,11 @@ Python from the saved records, independently of the Dart tools, and ends with
 a table that marks each check PASS, FAIL or SKIPPED. It sends no request to
 the AI service.
 
-Open it in Jupyter or Colab and run it there:
+Open it in Colab and run it there:
 
-[![Open in Jupyter](https://img.shields.io/badge/Open%20in-Jupyter-F37626?logo=jupyter&logoColor=white)](https://mybinder.org/v2/gh/joodijana-oss/2026-GP1-18/evaluation-records?labpath=evaluation%2FMasra_Evaluation.ipynb)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/joodijana-oss/2026-GP1-18/blob/evaluation-records/evaluation/Masra_Evaluation.ipynb)
 
-- **Open in Jupyter** starts a free Jupyter session on mybinder.org (the
-  first start can take a few minutes; its packages are listed in
-  `binder/requirements.txt`).
-- **Open in Colab** opens it in Google Colab; the first cell downloads the
-  repository for the session.
+The first cell downloads the repository for the Colab session.
 
 To run it on your own computer, from the repository root:
 
@@ -34,8 +29,8 @@ python -m nbconvert --to notebook --execute --inplace evaluation/Masra_Evaluatio
 ```
 
 It needs Python 3 with pandas, numpy, matplotlib, nbconvert and ipykernel.
-Without Dart and Flutter (in Jupyter on mybinder.org or in Colab), the checks
-that need them are marked SKIPPED, never PASS.
+Without Dart and Flutter (for example in Colab), the checks that need them
+are marked SKIPPED, never PASS.
 
 ## Check the results again with the project's tools
 
