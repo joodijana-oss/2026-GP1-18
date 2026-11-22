@@ -773,11 +773,14 @@ Return exactly:
   /// Sends [prompt] and returns the JSON object of the answer. The CV
   /// evidence check and the evaluation tools use it (the tools send the
   /// texts of tools/gap_eval/arms/ through it). [timeLimit] replaces the
-  /// usual limit of two minutes.
+  /// usual limit of two minutes. [enableThinking] sends the request the
+  /// way the ATS review does (tools/ats_eval); every other request keeps
+  /// thinking off.
   Future<Map<String, dynamic>> requestJson({
     required String prompt,
     required int maxTokens,
     Duration? timeLimit,
+    bool enableThinking = false,
   }) async {
     if (_effectiveKey.isEmpty) {
       throw Exception(
@@ -788,6 +791,7 @@ Return exactly:
     return _sendPrompt(
       prompt: prompt,
       maxTokens: maxTokens,
+      enableThinking: enableThinking,
       timeLimit: timeLimit,
     );
   }
@@ -852,21 +856,15 @@ Return exactly:
     'contentFormatting',
   ];
  
-  Future<Map<String, List<Map<String, dynamic>>>> improveCv({
+  /// The text of the ATS review: what to check in each of the five
+  /// areas, with the target career goal, today's date and the CV text
+  /// in place. tools/ats_eval and the tests read it here.
+  static String cvImprovementPrompt({
     required String cvText,
     required String careerName,
-  }) async {
-    if (_effectiveKey.isEmpty) {
-      throw Exception(
-        'ANTHROPIC_API_KEY is missing.',
-      );
-    }
- 
-    final now = DateTime.now();
-    final today =
-        '${now.year}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}';
- 
-    final prompt = '''
+    required String today,
+  }) {
+    return '''
 You are the CV Improvement Assistant for Masra,
 a Saudi career-development application for university students
 and fresh graduates in Computing and IT.
@@ -977,6 +975,27 @@ Return EXACTLY this JSON structure:
   "contentFormatting": []
 }
 ''';
+  }
+
+  Future<Map<String, List<Map<String, dynamic>>>> improveCv({
+    required String cvText,
+    required String careerName,
+  }) async {
+    if (_effectiveKey.isEmpty) {
+      throw Exception(
+        'ANTHROPIC_API_KEY is missing.',
+      );
+    }
+ 
+    final now = DateTime.now();
+    final today =
+        '${now.year}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}';
+ 
+    final prompt = cvImprovementPrompt(
+      cvText: cvText,
+      careerName: careerName,
+      today: today,
+    );
  
     // Try twice before showing an error to the user
     Map<String, dynamic>? decoded;
@@ -1004,7 +1023,16 @@ Return EXACTLY this JSON structure:
     if (decoded == null) {
       throw Exception('CV review failed: $lastError');
     }
- 
+
+    return cvImprovementFrom(decoded);
+  }
+
+  /// The five areas of an ATS review answer, as the screen shows them.
+  /// The evaluation tools parse their answers here too, so both go
+  /// through the same parsing.
+  Map<String, List<Map<String, dynamic>>> cvImprovementFrom(
+    Map<String, dynamic> decoded,
+  ) {
     final reviewData = decoded;
  
     final result = <String, List<Map<String, dynamic>>>{};

@@ -1,0 +1,100 @@
+ATS REVIEW: DECISION RULE (fixed 2026-11-22, before any measurement;
+amended by the plan reviewer the same day, and by the fixer the same
+day to pin the reworded NEW text, still before any request was sent)
+
+Versions: OLD = the review text the app sent before this change
+(tools/ats_eval/old_improve_cv_prompt.txt, sha256 of the text with
+CRLF turned into LF: 61df986f8be2f4ebaad6784eb0388c8eb7784769f99de7fe873d1443355509bb).
+NEW = the app's improveCv text after the change (sha256 of its form
+with the three placeholders, LF:
+512c0968af9bf7b8000b30fd448d2151f7c760e93d4453080894b76ffd3c131e).
+Both are sent the same way the app sends the review: thinking on,
+max_tokens 10000, the app's request time limit, the same CV text
+(for a CV given as a PDF, the app's own PDF text extraction; a CV
+given as a .txt file is used exactly as written), the same career
+goal name and the same date.
+
+Deciding set: the held-out set only. ho_a, ho_b and ho_d have planted
+problems; ho_c is the clean CV (if the held-out keys name a different
+clean CV, the roles are corrected from the keys before any request is
+sent, and the correction is reported). 3 runs per CV per version, so 12
+outputs per version. The development set (the flawed and the clean
+development CVs, 3 runs per version) is graded and reported the same
+way but never decides.
+
+Grading is blind: the grader sees outputs under anonymous labels only,
+grades every reported issue on one sheet, and the sheet's sha256 is
+recorded (frozen) before the label mapping is opened. The grader
+follows the key's own crediting notes where the key has them.
+
+How each issue is graded (one verdict per issue):
+- PLANTED: it identifies a planted problem of the key (or a listed
+  weakness of the clean CV) at the place the key names, and what it
+  says about that content is true. The credits column lists every
+  planted problem it identifies; it may list more than one.
+- NEUTRAL: a true problem the key does not plant (listed by the key as
+  neutral, or checked as true against the CV text by the grader).
+- ARTIFACT: it reports an effect of the text extraction (lost bullet
+  symbols, joined lines, a heading on the same line as its text).
+  Left out of every count below.
+- WRONG: a false statement about the CV, or a partly wrong one (it
+  describes the content incorrectly). It credits nothing.
+- PADDED: it asks for a skill, tool, platform, field, certification or
+  section the CV does not have and the key does not call missing, or
+  it is filler with no specific defect of this CV.
+- FINE_FLAGGED: it reports an item the key lists as fine.
+- DUPLICATE: the same problem is already reported in another area of
+  the same output (the first one keeps its verdict).
+Each issue also gets a point label for consistency: its credited key
+IDs, or for an issue without credits a short label of the point it
+makes, used identically for the same point in every output of that CV.
+
+Counts per version:
+(a) Recall = planted problems found / (3 x number of planted problems),
+    pooled over ho_a, ho_b and ho_d. A planted problem is found in a run
+    when at least one issue of that run credits it, in any area. A
+    problem left out because its area already holds 3 issues counts as
+    missed (it is also reported separately).
+(b) Precision = (PLANTED + NEUTRAL) / (PLANTED + NEUTRAL + WRONG +
+    PADDED + FINE_FLAGGED + DUPLICATE), pooled over all 12 outputs.
+(c) Invented facts = number of distinct facts not in the CV that an
+    issue or suggestion offers as content for the CV (a date or month,
+    a number, an issuer or provider, an employer, a tool, a model, a
+    result), unless written as a bracketed placeholder or as an
+    explicit condition ("if you used ..."). Misquotes = number of
+    quoted spans presented as CV text that are not in the CV text the
+    review received. Letter case, whitespace, quote marks and "..." for
+    left-out words are ignored; changed words, words joined from
+    different sentences, and invented words are misquotes. Proposed
+    rewrites in quotation marks are not quotes of the CV. Both are
+    summed over all 12 outputs.
+(d) False or padded on the clean CV = WRONG + PADDED + FINE_FLAGGED +
+    DUPLICATE issues on ho_c, summed over its 3 runs.
+(e) Consistency = for each CV, the mean Jaccard similarity of the
+    point-label sets of its 3 runs (3 pairs); then the mean over the
+    4 CVs (12 pairs). Two empty sets count as 1.0. Rounded to 2
+    decimals.
+
+Adopt NEW only if all five hold ((a) and (b) are compared exactly, as
+fractions of whole counts, without floating-point rounding):
+(a) Recall(NEW) - Recall(OLD) >= 0.100 (computed from the counts, not
+    rounded).
+(b) Precision(NEW) >= Precision(OLD) - 0.030.
+(c) Invented facts(NEW) <= Invented facts(OLD) and
+    Misquotes(NEW) <= Misquotes(OLD).
+(d) False or padded on ho_c (NEW) <= the same count (OLD).
+(e) Consistency(NEW) >= Consistency(OLD) (a tie passes).
+Otherwise keep OLD: the app's review text goes back to OLD word for
+word (the sha256 above), and the result is reported as it is.
+
+Failed requests: a run whose request fails is tried once more, as the
+app does. A credit, billing or rate error stops everything at once; the
+run is resumed later and the slot is filled then. A slot that fails
+for another reason after the retry is sent again, at most 3 more
+times; failures per version are reported next to the decision. Runs
+that never succeed count as outputs with no issues.
+
+Reported with the decision but not deciding: the development set's
+numbers for (a)-(e), issues per area, area agreement with the keys,
+problems left out by the 3-issue cap, failed requests, and the tokens
+and cost the meter counted.
