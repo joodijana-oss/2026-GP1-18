@@ -1,0 +1,52 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Able to extract and join data from databases using SQL queries",
+   "Experience cleaning and deduplicating data to ensure accuracy before analysis",
+   "Built self-service reporting tools using Excel lookup formulas",
+   "Created recurring summary reports with visualizations for management",
+   "Collaborated with stakeholders to define and standardize measurable metrics",
+   "Able to answer ad-hoc analytical questions for business teams",
+   "Presented findings to senior stakeholders including company owner and managers",
+   "Applied statistical testing to validate analysis findings",
+   "Strong academic performance with high GPA",
+   "Demonstrated leadership through class representative role"
+  ],
+  "currentSkills": [
+   "SQL",
+   "Data Analysis",
+   "Data Cleaning",
+   "Excel",
+   "Power BI",
+   "Tableau",
+   "Statistics",
+   "Pandas",
+   "Data Visualization",
+   "Reporting",
+   "Stakeholder Communication"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Systems",
+    "institution": "Qassim University",
+    "year": "2022 - 2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Do coupons work?",
+    "description": "Used an open retail dataset to compare basket size of shoppers who received a coupon versus those who did not, running a t-test to check statistical significance. Work was done in a notebook using pandas as part of a team of three; wrote the analysis chapter."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Operations intern",
+    "organization": "a dates packing and export company, Buraydah",
+    "duration": "06/2026 - Aug 2026",
+    "description": "Pulled shipment records from the order database using SQL queries and joined them with the customer table to identify reordering buyers. Found and merged 412 duplicate customer records and filled in missing country codes before analysis. Maintained cleaned data in an Excel workbook with lookup formulas for the warehouse supervisor to use. Built a weekly one-page summary report with charts of late shipments by destination, replacing a manual report. Collaborated with the warehouse supervisor and export manager to define three tracked measures of lateness. Answered ad-hoc questions from the sales team, such as identifying fastest-growing destinations since 2024. Presented findings to the owner and four managers on the final day."
+   }
+  ]
+ }
+}

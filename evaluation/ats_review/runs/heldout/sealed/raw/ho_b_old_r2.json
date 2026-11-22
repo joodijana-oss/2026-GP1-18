@@ -1,0 +1,117 @@
+{
+ "label": "ho_b_01",
+ "cv": "ho_b",
+ "version": "old",
+ "run": 2,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:07:42.240225",
+ "finishedAt": "2026-11-22T02:08:49.524751",
+ "seconds": 67.284,
+ "inputTokens": 2465,
+ "outputTokens": 6622,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "The Personal Details section lists Date of Birth, Marital Status, Nationality, and Gender, which are not standard for ATS-screened CVs and can introduce bias risk.",
+    "suggestion": "Remove the Date of Birth, Marital Status, and Gender fields and keep only Nationality if required by the employer."
+   },
+   {
+    "issue": "The closing line 'References available upon request' adds no information and is an outdated CV convention.",
+    "suggestion": "Remove this line entirely, since references can be provided later if requested."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The Certifications section mixes a properly detailed entry (CompTIA Security+ with issuer and date) with vague, unnamed entries like 'Security course certificate' and 'Networking certificate - completed' that lack titles, issuers, and dates.",
+    "suggestion": "Replace the vague entries with the actual course or certificate names, issuing body, and completion date, or remove them if the names cannot be specified."
+   },
+   {
+    "issue": "The Technical Skills table structure is broken, with tool names and proficiency levels misaligned ('Wireshark Nmap Advanced Intermediate'), making it unclear which level belongs to which tool.",
+    "suggestion": "List each tool with its proficiency level on its own line, such as 'Wireshark – Advanced' and 'Nmap – Intermediate', instead of using a table."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "The 'Other Skills' section includes outdated or irrelevant items such as 'Windows XP' and generic skills like 'Internet browsing' and 'Printing and scanning', which dilute the cybersecurity-focused keywords in the CV.",
+    "suggestion": "Remove outdated and generic entries like Windows XP and basic office tasks, keeping this section focused on skills relevant to the Cybersecurity Analyst role."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "Several Security Lab Assistant and SOC Analyst Intern bullets are written in first-person and use weak phrasing instead of action verbs, for example 'I was helping my supervisor to look at the phishing emails' and 'I was answering the students questions during the lab'.",
+    "suggestion": "Rewrite these bullets starting with strong action verbs, such as 'Reviewed reported phishing emails with the SOC team' and 'Supported students with troubleshooting lab exercises'."
+   },
+   {
+    "issue": "The bullet 'I learned how the team writes the weekly report and I was sometimes writing parts of it' describes a learning process rather than a concrete contribution.",
+    "suggestion": "Rephrase to highlight the actual contribution, for example 'Contributed to weekly SOC incident reports summarizing triaged alerts and findings'."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Education section does not include start or end dates for the Bachelor of Science in Cybersecurity, making it unclear when the degree was completed.",
+    "suggestion": "Add the enrollment and graduation dates for the degree, for example '2021 – 2025', to clarify the timeline."
+   },
+   {
+    "issue": "Experience dates use inconsistent formats, such as '03/2025 – 06/2025', '2023-09 to Dec 23', and 'Summer 2022'.",
+    "suggestion": "Standardize all experience dates to a single consistent format, such as MM/YYYY, throughout the CV."
+   },
+   {
+    "issue": "The section heading 'Work Experiance' contains a spelling error, which may prevent ATS systems from correctly recognizing the section.",
+    "suggestion": "Correct the heading to 'Work Experience' to match standard ATS-recognized section titles."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "The Personal Details section lists Date of Birth, Marital Status, Nationality, and Gender, which are not standard for ATS-screened CVs and can introduce bias risk.",
+    "suggestion": "Remove the Date of Birth, Marital Status, and Gender fields and keep only Nationality if required by the employer."
+   },
+   {
+    "issue": "The closing line 'References available upon request' adds no information and is an outdated CV convention.",
+    "suggestion": "Remove this line entirely, since references can be provided later if requested."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The Certifications section mixes a properly detailed entry (CompTIA Security+ with issuer and date) with vague, unnamed entries like 'Security course certificate' and 'Networking certificate - completed' that lack titles, issuers, and dates.",
+    "suggestion": "Replace the vague entries with the actual course or certificate names, issuing body, and completion date, or remove them if the names cannot be specified."
+   },
+   {
+    "issue": "The Technical Skills table structure is broken, with tool names and proficiency levels misaligned ('Wireshark Nmap Advanced Intermediate'), making it unclear which level belongs to which tool.",
+    "suggestion": "List each tool with its proficiency level on its own line, such as 'Wireshark – Advanced' and 'Nmap – Intermediate', instead of using a table."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "The 'Other Skills' section includes outdated or irrelevant items such as 'Windows XP' and generic skills like 'Internet browsing' and 'Printing and scanning', which dilute the cybersecurity-focused keywords in the CV.",
+    "suggestion": "Remove outdated and generic entries like Windows XP and basic office tasks, keeping this section focused on skills relevant to the Cybersecurity Analyst role."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "Several Security Lab Assistant and SOC Analyst Intern bullets are written in first-person and use weak phrasing instead of action verbs, for example 'I was helping my supervisor to look at the phishing emails' and 'I was answering the students questions during the lab'.",
+    "suggestion": "Rewrite these bullets starting with strong action verbs, such as 'Reviewed reported phishing emails with the SOC team' and 'Supported students with troubleshooting lab exercises'."
+   },
+   {
+    "issue": "The bullet 'I learned how the team writes the weekly report and I was sometimes writing parts of it' describes a learning process rather than a concrete contribution.",
+    "suggestion": "Rephrase to highlight the actual contribution, for example 'Contributed to weekly SOC incident reports summarizing triaged alerts and findings'."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Education section does not include start or end dates for the Bachelor of Science in Cybersecurity, making it unclear when the degree was completed.",
+    "suggestion": "Add the enrollment and graduation dates for the degree, for example '2021 – 2025', to clarify the timeline."
+   },
+   {
+    "issue": "Experience dates use inconsistent formats, such as '03/2025 – 06/2025', '2023-09 to Dec 23', and 'Summer 2022'.",
+    "suggestion": "Standardize all experience dates to a single consistent format, such as MM/YYYY, throughout the CV."
+   },
+   {
+    "issue": "The section heading 'Work Experiance' contains a spelling error, which may prevent ATS systems from correctly recognizing the section.",
+    "suggestion": "Correct the heading to 'Work Experience' to match standard ATS-recognized section titles."
+   }
+  ]
+ }
+}

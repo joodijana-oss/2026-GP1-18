@@ -1,0 +1,127 @@
+{
+ "goal": "qa_test_engineer",
+ "extractor": "E0",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Manual Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "executing test cases manually",
+    "manual verification of software",
+    "hands-on testing techniques"
+   ]
+  },
+  {
+   "gap": "Jira",
+   "kind": "tool",
+   "concepts": [
+    "Jira"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Test Case Design",
+   "kind": "skill",
+   "concepts": [
+    "Test Cases"
+   ],
+   "phrases": [
+    "writing effective test cases",
+    "designing test scenarios",
+    "test case creation techniques"
+   ]
+  },
+  {
+   "gap": "Regression Testing",
+   "kind": "skill",
+   "concepts": [
+    "Regression Testing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Functional Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "verifying functional requirements",
+    "testing application features",
+    "validating system behavior"
+   ]
+  },
+  {
+   "gap": "Defect Tracking",
+   "kind": "skill",
+   "concepts": [
+    "Defect Tracking"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "API Testing",
+   "kind": "skill",
+   "concepts": [
+    "API Testing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Selenium",
+   "kind": "tool",
+   "concepts": [
+    "Test Automation"
+   ],
+   "phrases": [
+    "automated browser testing",
+    "writing automated test scripts",
+    "web application automation"
+   ]
+  },
+  {
+   "gap": "Appium",
+   "kind": "tool",
+   "concepts": [
+    "Test Automation"
+   ],
+   "phrases": [
+    "automated mobile app testing",
+    "mobile test automation framework",
+    "cross-platform app testing"
+   ]
+  },
+  {
+   "gap": "Agile/Scrum",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "scrum framework practices",
+    "sprint planning and ceremonies",
+    "agile project workflows"
+   ]
+  },
+  {
+   "gap": "CI/CD",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": []
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "targets": [
+  "Kubernetes",
+  "C++",
+  "TensorFlow",
+  "Linux",
+  "Docker",
+  "Terraform",
+  "Ansible",
+  "Computer Vision",
+  "Prometheus",
+  "LangChain"
+ ],
+ "answer": [
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "TensorFlow",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux",
+   "status": "partly",
+   "quote": "Submitted training jobs to the shared GPU cluster with Slurm scripts"
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Ansible",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Computer Vision",
+   "status": "shown",
+   "quote": "Fine-tuned a pretrained convolutional network to sort 18,000 reef photos"
+  },
+  {
+   "skill": "Prometheus",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "LangChain",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "targets": [
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Machine Learning",
+  "Pandas",
+  "NumPy",
+  "Stakeholder Management"
+ ],
+ "answer": [
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Visualization",
+   "status": "shown",
+   "quote": "refreshed every Monday in Power BI"
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "shown",
+   "quote": "Built a one-page view for the operations manager"
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Pandas",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "NumPy",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "shown",
+   "quote": "Sat with dispatch supervisors to agree what \"late\" should mean"
+  }
+ ]
+}

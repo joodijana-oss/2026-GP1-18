@@ -1,0 +1,52 @@
+{
+ "cvStructure": [
+  {
+   "issue": "Certifications (AWS Certified Cloud Practitioner and Scrum Fundamentals Certified) are embedded inside the Skills section instead of having their own heading, which can make them harder for ATS parsers to detect as credentials.",
+   "suggestion": "Create a separate 'Certifications' section listing the AWS and Scrum certifications so they are clearly parsed and highlighted."
+  }
+ ],
+ "sectionOrganization": [
+  {
+   "issue": "The experience section is labeled 'My Journey So Far' instead of a standard heading like 'Experience' or 'Work Experience', which ATS systems may not recognize as the experience section.",
+   "suggestion": "Rename this section to 'Experience' or 'Work Experience' so ATS parsers correctly identify and categorize the roles listed."
+  },
+  {
+   "issue": "The experience entries are ordered oldest to newest (Campus IT Help Desk, then Najm Logistics, then Rimal Tech), rather than most recent first, since Rimal Tech is the current role and should appear first.",
+   "suggestion": "Reorder the experience entries so the current role at Rimal Tech appears first, followed by Najm Logistics Solutions, then Campus IT Help Desk."
+  }
+ ],
+ "keywordUsage": [
+  {
+   "issue": "The same technology is written inconsistently across the CV, for example 'React', 'Reactjs', and 'React.JS', which can cause ATS systems to treat them as different skills.",
+   "suggestion": "Standardize all mentions to a single spelling such as 'React' throughout the Skills and Projects sections."
+  }
+ ],
+ "readability": [
+  {
+   "issue": "The 'About Me' section uses generic, non-specific phrases like 'excellent skills', 'great passion for technology', and 'always gives 100%' without concrete evidence.",
+   "suggestion": "Replace the generic phrasing with a concise summary that mentions specific technologies and one measurable achievement, such as the response-time improvement at Rimal Tech."
+  },
+  {
+   "issue": "The Campus IT Help Desk bullets ('Responsible for bugs', 'Meetings with team', 'Tickets and emails from students') are sentence fragments without action verbs or specific outcomes.",
+   "suggestion": "Rewrite these bullets starting with action verbs and include specifics, for example 'Resolved X student support tickets per week via email and in-person requests'."
+  },
+  {
+   "issue": "The Najm Logistics Solutions description is a single long paragraph written in first-person narrative style instead of concise, result-oriented statements.",
+   "suggestion": "Break this description into short bullet points starting with action verbs, similar to the Rimal Tech entry, and quantify the impact of the speed improvement."
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "The Najm Logistics Solutions dates read 'Jun 2025 - Aug 2024', where the end date is earlier than the start date, which is an internal date inconsistency.",
+   "suggestion": "Correct the start and end dates for the Najm Logistics Solutions internship so they reflect the actual chronological period."
+  },
+  {
+   "issue": "The Maktabati project lists 'java script' and 'Postgress' in the Stack line, which contain spelling errors compared to the correct terms 'JavaScript' and 'PostgreSQL'.",
+   "suggestion": "Correct these to 'JavaScript' and 'PostgreSQL' to ensure accurate keyword matching and professional presentation."
+  },
+  {
+   "issue": "The Najm Logistics Solutions entry is formatted as a paragraph while the other experience entries use bullet points, creating inconsistent formatting within the same section.",
+   "suggestion": "Reformat the Najm Logistics Solutions entry into bullet points to match the style used for Campus IT Help Desk and Rimal Tech."
+  }
+ ]
+}

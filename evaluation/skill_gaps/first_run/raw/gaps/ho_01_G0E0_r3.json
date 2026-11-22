@@ -1,0 +1,20 @@
+{
+ "case": "ho_01",
+ "arm": "G0E0",
+ "run": 3,
+ "gaps": [
+  "SIEM",
+  "Incident Response",
+  "Firewalls",
+  "SOC Operations",
+  "IAM",
+  "EDR",
+  "Security Risk Assessment",
+  "Cloud Security"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

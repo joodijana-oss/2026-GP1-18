@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Git",
+  "REST API Design",
+  "SQL",
+  "React",
+  "Node.js",
+  "Java",
+  "Docker",
+  "Spring Boot",
+  "Python",
+  "Linux",
+  "Kubernetes",
+  "C++"
+ ],
+ "answer": [
+  {
+   "skill": "Git",
+   "status": "shown",
+   "quote": "Every change I made went through a merge request"
+  },
+  {
+   "skill": "REST API Design",
+   "status": "shown",
+   "quote": "ask for a container's status over HTTP and get JSON back"
+  },
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "SQL"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Java",
+   "status": "shown",
+   "quote": "written in Java with Spring Boot"
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "shown",
+   "quote": "written in Java with Spring Boot"
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Python"
+  },
+  {
+   "skill": "Linux",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "shown",
+   "quote": "C++"
+  }
+ ]
+}

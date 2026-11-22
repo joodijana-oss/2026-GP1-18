@@ -1,0 +1,123 @@
+{
+ "goal": "software_engineer",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "REST APIs",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [
+    "building RESTful services",
+    "designing web APIs",
+    "API request and response design"
+   ]
+  },
+  {
+   "gap": "Git",
+   "kind": "tool",
+   "concepts": [
+    "Git"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "React",
+   "kind": "tool",
+   "concepts": [
+    "Frontend Frameworks"
+   ],
+   "phrases": [
+    "building user interfaces",
+    "component-based UI development"
+   ]
+  },
+  {
+   "gap": "Node.js",
+   "kind": "tool",
+   "concepts": [
+    "Backend Development"
+   ],
+   "phrases": [
+    "server-side JavaScript",
+    "building backend services"
+   ]
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "writing queries",
+    "relational database querying"
+   ]
+  },
+  {
+   "gap": "Java",
+   "kind": "tool",
+   "concepts": [
+    "Java"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Spring Boot",
+   "kind": "tool",
+   "concepts": [
+    "Spring Boot"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": [
+    "containerizing applications",
+    "building container images"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Linux",
+   "kind": "tool",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Microservices Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Backend Development"
+   ],
+   "phrases": [
+    "designing distributed services",
+    "service-oriented architecture",
+    "decomposing applications into services"
+   ]
+  }
+ ]
+}

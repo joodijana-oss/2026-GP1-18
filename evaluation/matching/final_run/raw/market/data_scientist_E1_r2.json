@@ -1,0 +1,34 @@
+{
+ "goal": "data_scientist",
+ "extractor": "E1",
+ "run": 2,
+ "postings": 14,
+ "rawNames": [
+  "Python",
+  "Machine Learning",
+  "SQL",
+  "Generative AI",
+  "Large Language Models",
+  "Data Visualization",
+  "Retrieval-Augmented Generation",
+  "Prompt Engineering",
+  "TensorFlow",
+  "PyTorch",
+  "AWS",
+  "Power BI"
+ ],
+ "names": [
+  "Python",
+  "Machine Learning",
+  "SQL",
+  "Generative AI",
+  "Large Language Models",
+  "Data Visualization",
+  "Retrieval-Augmented Generation",
+  "Prompt Engineering",
+  "TensorFlow",
+  "PyTorch",
+  "AWS",
+  "Power BI"
+ ]
+}

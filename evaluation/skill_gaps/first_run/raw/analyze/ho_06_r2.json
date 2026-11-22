@@ -1,0 +1,57 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Strong competitive programming skills with a Codeforces Specialist rating and 700+ problems solved",
+   "Experience handling algorithmic problems such as shortest-path and segment-tree under contest conditions",
+   "Mentors and coaches first-year students through weekly practice sessions and editorial writing",
+   "Builds and maintains real-world projects end to end, including deployment and maintenance on a VPS",
+   "Applies structured software design, such as splitting game logic into entity, map and renderer classes behind a shared interface",
+   "Debugging skill demonstrated by tracing and fixing an off-by-one error in a map loader",
+   "Uses version control practices such as branch-per-feature workflow and changelogs"
+  ],
+  "currentSkills": [
+   "C++",
+   "Java",
+   "Python",
+   "SQLite",
+   "Git",
+   "GitHub",
+   "Swing",
+   "A* Search",
+   "Data Structures",
+   "Algorithms",
+   "Systemd",
+   "Linux",
+   "API Integration",
+   "Debugging",
+   "Object-Oriented Design"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "King Saud University",
+    "year": "2024 - 2028 (expected)"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Salati (prayer-time bot for Telegram)",
+    "description": "Python bot that calls a public prayer-times web API and caches each city's answer for a day to reduce load. Stores user city and reminder choices in SQLite. Deployed on a rented VPS under systemd, with manual monitoring via journal logs and restarts. Used daily by 340 people. Maintained on GitHub with a branch-per-feature workflow and changelog."
+   },
+   {
+    "name": "Maze Runner (2D game, Java)",
+    "description": "2D game built with plain Java and Swing where enemies chase the player using A* search. Code organized into entity, map and renderer classes behind a shared interface to simplify adding new enemy types. Fixed a save/load bug by tracing an off-by-one error in the map reader and adding checks for broken files."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Coach",
+    "organization": "College programming club",
+    "duration": "",
+    "description": "Coaches two weekly practice sessions for first-year students and writes the editorial for each problem set."
+   }
+  ]
+ }
+}

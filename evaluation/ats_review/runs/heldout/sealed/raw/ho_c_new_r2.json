@@ -1,0 +1,47 @@
+{
+ "label": "ho_c_04",
+ "cv": "ho_c",
+ "version": "new",
+ "run": 2,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:12:06.045054",
+ "finishedAt": "2026-11-22T02:12:43.285492",
+ "seconds": 37.24,
+ "inputTokens": 4115,
+ "outputTokens": 3948,
+ "decoded": {
+  "cvStructure": [],
+  "sectionOrganization": [
+   {
+    "issue": "In Projects, the Riyadh Housing Prices Analysis (2024) is listed before the Student Attendance Dashboard (2025), which is actually the more recent project.",
+    "suggestion": "List Student Attendance Dashboard (graduation project, 2025) first, then Riyadh Housing Prices Analysis (2024)."
+   }
+  ],
+  "keywordUsage": [],
+  "readability": [
+   {
+    "issue": "The last point under Junior Data Analyst, \"Worked on data cleaning tasks for the team,\" is vague, starts with a weak verb, and gives no measurable result.",
+    "suggestion": "Rewrite it with a stronger verb and a specific outcome, for example \"Cleaned and standardized [dataset/type] records, reducing [error type] by [percentage]\"."
+   }
+  ],
+  "contentFormatting": []
+ },
+ "areas": {
+  "cvStructure": [],
+  "sectionOrganization": [
+   {
+    "issue": "In Projects, the Riyadh Housing Prices Analysis (2024) is listed before the Student Attendance Dashboard (2025), which is actually the more recent project.",
+    "suggestion": "List Student Attendance Dashboard (graduation project, 2025) first, then Riyadh Housing Prices Analysis (2024)."
+   }
+  ],
+  "keywordUsage": [],
+  "readability": [
+   {
+    "issue": "The last point under Junior Data Analyst, \"Worked on data cleaning tasks for the team,\" is vague, starts with a weak verb, and gives no measurable result.",
+    "suggestion": "Rewrite it with a stronger verb and a specific outcome, for example \"Cleaned and standardized [dataset/type] records, reducing [error type] by [percentage]\"."
+   }
+  ],
+  "contentFormatting": []
+ }
+}

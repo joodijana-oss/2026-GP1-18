@@ -1,0 +1,56 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Experience working on a real production system involving Java, Spring Boot, and PostgreSQL",
+   "Implemented API endpoints and wrote related documentation for partner system integration",
+   "Improved test coverage of the fee calculator module from 38% to 81% using automated tests",
+   "Diagnosed and resolved a concurrency bug causing duplicate invoices by identifying a race condition and applying a uniqueness constraint",
+   "Experience with collaborative development practices including merge requests and code review",
+   "Worked within an agile process involving sprints, daily stand-ups, and sprint demos",
+   "Designed a class model using abstraction (Reservable type) to support extensibility in a team project",
+   "Demonstrated community involvement through organizing a technical study circle for peers"
+  ],
+  "currentSkills": [
+   "Java",
+   "Python",
+   "SQL",
+   "C++",
+   "HTML",
+   "CSS",
+   "Spring Boot",
+   "PostgreSQL",
+   "REST API Development",
+   "API Documentation",
+   "Unit Testing",
+   "Automated Testing",
+   "Debugging",
+   "Concurrency Handling",
+   "Git",
+   "Agile/Scrum",
+   "Object-Oriented Design"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "Imam Abdulrahman Bin Faisal University",
+    "year": "2021 - 2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Seat booking for the university library",
+    "description": "Team project (team of four) to design a seat booking system; designed the class model (Booking, Seat, User) with a shared abstract Reservable type to allow future extension to study rooms, wrote booking rules, and built the librarian screens."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Software co-op trainee",
+    "organization": "A company that builds customs-clearance software for freight forwarders, Dammam",
+    "duration": "January 2026 - July 2026",
+    "description": "Worked on the shipment-tracking service (Java, Spring Boot, PostgreSQL). Added two HTTP endpoints for partner systems to query container status and wrote related documentation. Wrote automated tests for the fee calculator, raising tested coverage from 38% to 81%. Diagnosed and fixed a double-invoicing bug caused by a race condition between two threads, resolving it with a uniqueness constraint. Participated in merge request reviews twice a week and worked in two-week sprints with daily stand-ups and sprint-end demos to the product owner."
+   }
+  ]
+ }
+}

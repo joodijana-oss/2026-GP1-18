@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SIEM",
+  "Penetration Testing",
+  "Vulnerability Assessment",
+  "Incident Response",
+  "Firewall Administration",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Security+",
+  "Nmap",
+  "Metasploit",
+  "Python"
+ ],
+ "answer": [
+  {
+   "skill": "SIEM",
+   "status": "partly",
+   "quote": "searching Splunk for signs of lateral movement"
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Incident Response",
+   "status": "shown",
+   "quote": "Handle P1 outages under the group's ITIL major-incident process"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "shown",
+   "quote": "Add, review and retire rules on the FortiGate firewalls"
+  },
+  {
+   "skill": "CEH",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Security+",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Nmap",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Wrote Python scripts that back up every switch configuration nightly"
+  }
+ ]
+}

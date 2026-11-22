@@ -1,0 +1,42 @@
+{
+ "targets": [
+  "React",
+  "Node.js",
+  "Spring Boot",
+  "Linux",
+  "Microservices Architecture",
+  "Kubernetes"
+ ],
+ "answer": [
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "partly",
+   "quote": "split of the shared \"core\" app into separate billing and scheduling modules"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

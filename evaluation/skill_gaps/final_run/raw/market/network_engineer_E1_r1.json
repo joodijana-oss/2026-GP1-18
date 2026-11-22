@@ -1,0 +1,34 @@
+{
+ "goal": "network_engineer",
+ "extractor": "E1",
+ "run": 1,
+ "postings": 12,
+ "rawNames": [
+  "LAN/WAN",
+  "Cisco Routers and Switches",
+  "VPN",
+  "VLAN",
+  "CCNA",
+  "Firewall Management",
+  "BGP",
+  "OSPF",
+  "MPLS",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto"
+ ],
+ "names": [
+  "LAN/WAN",
+  "Cisco Routers and Switches",
+  "VPN",
+  "VLAN",
+  "CCNA",
+  "Firewall Management",
+  "BGP",
+  "OSPF",
+  "MPLS",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto"
+ ]
+}

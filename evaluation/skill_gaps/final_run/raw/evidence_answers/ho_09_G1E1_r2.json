@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Python",
+  "PyTorch",
+  "TensorFlow",
+  "Kubernetes",
+  "C++",
+  "Linux",
+  "Docker",
+  "MLOps",
+  "Computer Vision",
+  "LangChain",
+  "Terraform",
+  "Prometheus"
+ ],
+ "answer": [
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Python, PyTorch, scikit-learn, NumPy, Git"
+  },
+  {
+   "skill": "PyTorch",
+   "status": "shown",
+   "quote": "retrained its last layers on our leaves, using PyTorch"
+  },
+  {
+   "skill": "TensorFlow",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "MLOps",
+   "status": "partly",
+   "quote": "Shrank the finished model until it answers in under a second"
+  },
+  {
+   "skill": "Computer Vision",
+   "status": "shown",
+   "quote": "telling coffee-plant diseases apart from phone photos"
+  },
+  {
+   "skill": "LangChain",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Prometheus",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

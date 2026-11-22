@@ -1,0 +1,133 @@
+{
+ "goal": "network_engineer",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "LAN/WAN",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "local and wide area networks",
+    "network connectivity basics",
+    "network topology design"
+   ]
+  },
+  {
+   "gap": "Cisco Routers and Switches",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring routers and switches",
+    "Cisco device administration",
+    "router and switch setup"
+   ]
+  },
+  {
+   "gap": "VPN",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "virtual private networks",
+    "secure remote access",
+    "tunneling protocols"
+   ]
+  },
+  {
+   "gap": "VLAN",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "virtual local area networks",
+    "network segmentation",
+    "switch port configuration"
+   ]
+  },
+  {
+   "gap": "CCNA",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Firewall Management",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "firewall configuration and rules",
+    "perimeter defense management",
+    "network access control"
+   ]
+  },
+  {
+   "gap": "BGP",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "border gateway protocol",
+    "inter-domain routing",
+    "dynamic routing protocols"
+   ]
+  },
+  {
+   "gap": "OSPF",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "open shortest path first",
+    "interior gateway routing",
+    "link-state routing protocol"
+   ]
+  },
+  {
+   "gap": "MPLS",
+   "kind": "skill",
+   "concepts": [
+    "Telecom Networks"
+   ],
+   "phrases": [
+    "multiprotocol label switching",
+    "label-based packet forwarding",
+    "wide area network transport"
+   ]
+  },
+  {
+   "gap": "CCNP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Fortinet",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "FortiGate configuration",
+    "Fortinet security appliances",
+    "unified threat management setup"
+   ]
+  },
+  {
+   "gap": "Palo Alto",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "Palo Alto firewall configuration",
+    "next-generation firewall platform",
+    "PAN-OS administration"
+   ]
+  }
+ ]
+}

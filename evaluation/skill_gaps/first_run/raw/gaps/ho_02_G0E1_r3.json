@@ -1,0 +1,21 @@
+{
+ "case": "ho_02",
+ "arm": "G0E1",
+ "run": 3,
+ "gaps": [
+  "SIEM",
+  "Penetration Testing",
+  "Vulnerability Assessment",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Security+",
+  "Nmap",
+  "Metasploit"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

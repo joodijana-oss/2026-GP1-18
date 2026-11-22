@@ -1,0 +1,139 @@
+{
+ "goal": "software_engineer",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "REST APIs",
+   "kind": "tool",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [
+    "building REST APIs",
+    "API design and development"
+   ]
+  },
+  {
+   "gap": "Git",
+   "kind": "tool",
+   "concepts": [
+    "Git"
+   ],
+   "phrases": [
+    "version control with Git",
+    "source code management"
+   ]
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "writing SQL queries",
+    "querying relational databases"
+   ]
+  },
+  {
+   "gap": "Java",
+   "kind": "tool",
+   "concepts": [
+    "Java"
+   ],
+   "phrases": [
+    "programming in Java",
+    "Java application development"
+   ]
+  },
+  {
+   "gap": "React",
+   "kind": "tool",
+   "concepts": [
+    "Frontend Frameworks"
+   ],
+   "phrases": [
+    "building UIs with React",
+    "component-based frontend development"
+   ]
+  },
+  {
+   "gap": "Node.js",
+   "kind": "tool",
+   "concepts": [
+    "Backend Development"
+   ],
+   "phrases": [
+    "server-side JavaScript",
+    "building backend services"
+   ]
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": [
+    "containerizing applications",
+    "working with Docker images"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": [
+    "programming in Python",
+    "writing Python scripts"
+   ]
+  },
+  {
+   "gap": "Spring Boot",
+   "kind": "tool",
+   "concepts": [
+    "Spring Boot"
+   ],
+   "phrases": [
+    "building Java microservices",
+    "Spring Boot application development"
+   ]
+  },
+  {
+   "gap": "Microservices Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing microservices",
+    "distributed service architecture"
+   ]
+  },
+  {
+   "gap": "Linux",
+   "kind": "tool",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "Linux system administration",
+    "working with Linux command line"
+   ]
+  },
+  {
+   "gap": "CI/CD",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": [
+    "continuous integration pipelines",
+    "automated deployment processes"
+   ]
+  }
+ ]
+}

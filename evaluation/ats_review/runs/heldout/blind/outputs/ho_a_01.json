@@ -1,0 +1,48 @@
+{
+ "cvStructure": [
+  {
+   "issue": "The contact information block only lists an email and a GitHub link, with no phone number provided.",
+   "suggestion": "Add a phone number to the contact section so recruiters and ATS systems can identify a direct way to reach Faisal."
+  }
+ ],
+ "sectionOrganization": [
+  {
+   "issue": "The work experience section is labeled 'My Journey So Far' instead of a standard heading like 'Experience' or 'Work Experience', which ATS parsers may not recognize.",
+   "suggestion": "Rename the section to 'Experience' or 'Work Experience' so ATS systems correctly categorize this content."
+  },
+  {
+   "issue": "Within the experience section, Rimal Tech (Oct 2025 - Present), the most recent role, is listed last instead of first.",
+   "suggestion": "Reorder the entries so Rimal Tech appears first, followed by Najm Logistics Solutions, then Campus IT Help Desk, to keep the most recent experience at the top."
+  },
+  {
+   "issue": "The Najm Logistics Solutions entry is written as one long paragraph, while all other experience and project entries use bullet points.",
+   "suggestion": "Reformat the Najm Logistics Solutions description into 3-4 bullet points to match the style used for Rimal Tech and the project entries."
+  }
+ ],
+ "keywordUsage": [
+  {
+   "issue": "Technology names are spelled inconsistently across the CV, such as 'Reactjs' and 'java script' in the Maktabati project versus 'React.JS' and 'Javascript' in Souq Tracker, and 'Postgress' instead of 'PostgreSQL'.",
+   "suggestion": "Use standard, consistent spellings throughout, such as 'React', 'JavaScript', and 'PostgreSQL', so ATS keyword matching works correctly."
+  }
+ ],
+ "readability": [
+  {
+   "issue": "The About Me section uses generic, unquantified phrases like 'hard-working team player', 'excellent skills', and 'always gives 100%' without concrete evidence.",
+   "suggestion": "Replace the About Me text with a concise summary that references actual skills and results, such as building REST APIs with Node.js or reducing response times at Rimal Tech."
+  },
+  {
+   "issue": "The Campus IT Help Desk bullets ('Responsible for bugs', 'Meetings with team', 'Tickets and emails from students') do not start with action verbs and give no measurable outcomes.",
+   "suggestion": "Rewrite these bullets with action verbs and specifics, for example 'Resolved X technical support tickets per week for students and staff'."
+  },
+  {
+   "issue": "The Najm Logistics Solutions description is a single dense paragraph without clear achievements or metrics, making it hard to scan quickly.",
+   "suggestion": "Break this into short bullet points highlighting specific contributions, such as the faster-loading shipment screen or the automated code-check feature, with results where possible."
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "The Najm Logistics Solutions Internship dates read 'Jun 2025 - Aug 2024', showing an end date before the start date.",
+   "suggestion": "Correct the internship dates to reflect the actual start and end months in chronological order."
+  }
+ ]
+}

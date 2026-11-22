@@ -1,0 +1,34 @@
+DANAH AL-RASHEED
+Riyadh, KSA ▪ danah.alrasheed@example.com ▪ +966 50 000 0000
+
+PROFILE
+Cybersecurity graduate with a six-month internship in the information security governance office of a bank. I am more
+interested in policies, controls and audits than in hands-on hacking.
+
+EDUCATION
+Prince Sultan University, Riyadh – B.Sc. Cybersecurity (Sep. 2021 – Jan. 2026)
+Relevant coursework: Information Security Management, IT Audit and Assurance, Cyber Law and Ethics, Network Security
+Course work (Information Security Management): scored a fictional clinic's assets and threats for likelihood and impact on a 5x5 matrix and proposed treatments for the top ten risks.
+
+INTERNSHIP
+Information Security Governance Intern – a Riyadh-based commercial bank
+2/2026 – 7/2026
+▪ Compared 114 controls of the SAMA Cyber Security Framework against existing bank procedures and recorded where proof was missing or outdated
+▪ Collected screenshots, configurations and sign-off sheets from system owners and checked each against the control wording ahead of the regulator's visit
+▪ Redrafted the acceptable-use and clean-desk rules for staff into shorter Arabic and English versions, approved by the CISO office
+▪ Sent security questionnaires to 9 outsourcing suppliers and scored their answers to decide which needed a follow-up visit
+▪ Updated the quarterly status deck for the cybersecurity steering committee with open findings by department and age
+▪ Helped run the yearly phishing-simulation campaign and the follow-up sessions for the 4% of staff who clicked
+▪ Shadowed internal audit during a two-day review of privileged accounts on the core banking system
+
+CERTIFICATES
+ISO/IEC 27001:2022 Foundation – 2025
+
+SKILLS
+SAMA CSF, NCA ECC, ISO 27001, Risk assessment, Microsoft Excel
+
+VOLUNTEERING
+Organising team, university cybersecurity day 2024: booked speakers and ran registration for 300 visitors.
+
+LANGUAGES
+Arabic (mother tongue); English (IELTS 7.5)

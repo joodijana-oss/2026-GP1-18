@@ -1,0 +1,62 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Experience managing and patching a large server environment (60 Windows and Linux servers)",
+   "Hands-on firewall rule base management and review on FortiGate devices",
+   "Incident response experience, including isolating infected machines, restoring from backup and writing incident timelines",
+   "Deployed and operated Microsoft Defender for Endpoint across 900 PCs, triaging daily detections",
+   "Automated security monitoring using PowerShell scripting",
+   "Implemented network segmentation (VLANs) for critical medical devices following an audit finding",
+   "Holds Fortinet NSE 4 certification demonstrating validated network security knowledge",
+   "Self-directed learning in blue-team security topics including phishing analysis"
+  ],
+  "currentSkills": [
+   "Windows Server",
+   "Active Directory",
+   "FortiGate",
+   "PowerShell",
+   "VMware vSphere",
+   "Linux",
+   "Network Security",
+   "Firewall Management",
+   "Incident Response",
+   "Endpoint Security",
+   "Microsoft Defender for Endpoint",
+   "VLAN Segmentation",
+   "Scripting",
+   "Phishing Analysis",
+   "Email Header Analysis",
+   "Sandbox Analysis"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Technology",
+    "institution": "University of Jeddah",
+    "year": "2024"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "Fortinet NSE 4 Network Security Professional",
+    "issuer": "Fortinet",
+    "year": "2025"
+   }
+  ],
+  "projects": [],
+  "experience": [
+   {
+    "title": "Systems and Network Operations Technician",
+    "organization": "a private hospital group (three sites), Jeddah",
+    "duration": "August 2024 - present",
+    "description": "Managed 60 Windows and Linux servers including monthly patching, Active Directory user accounts and nightly backups. Maintained rule base on two perimeter FortiGate devices, reviewing change requests and removing unused rules quarterly. Responded to a ransomware-like incident by isolating an infected workstation, restoring data from backup and documenting the timeline for management. Rolled out Microsoft Defender for Endpoint to 900 PCs and handled daily detection triage. Wrote a PowerShell script to report overnight account lockouts and source machines. Segmented infusion pumps and imaging devices onto separate VLANs following an internal audit. On call one week in four for all three sites."
+   },
+   {
+    "title": "IT Helpdesk Trainee (summer training)",
+    "organization": "a shipping agency at Jeddah Islamic Port",
+    "duration": "June 2023 - August 2023",
+    "description": "Answered staff calls, replaced hardware and prepared new laptops."
+   }
+  ]
+ }
+}

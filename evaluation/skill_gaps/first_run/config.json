@@ -1,0 +1,22 @@
+{
+ "set": "heldout",
+ "setPath": "evaluation/skill_gaps/first_set",
+ "arms": [
+  "G0E0",
+  "G0E1",
+  "G1E1",
+  "G2E1"
+ ],
+ "runs": 3,
+ "extraGoals": [
+  "solutions_architect",
+  "infrastructure_data_center_engineer",
+  "pre_sales_engineer",
+  "erp_consultant",
+  "it_project_manager"
+ ],
+ "links": true,
+ "partlyIsGap": false,
+ "seed": 20261119,
+ "startedAt": "20261120_233449"
+}

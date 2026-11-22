@@ -1,0 +1,46 @@
+{
+ "goal": "data_analyst",
+ "list": "W1",
+ "run": 1,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "KPI Development",
+   "kind": "skill",
+   "concepts": [
+    "KPIs"
+   ],
+   "phrases": [],
+   "same": [
+    "KPIs"
+   ],
+   "terms": [
+    "KPI",
+    "key performance indicators",
+    "performance metrics"
+   ]
+  },
+  {
+   "gap": "Google Analytics",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Google Analytics",
+    "web analytics",
+    "GA4"
+   ]
+  },
+  {
+   "gap": "Budget Tracking",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "budget tracking",
+    "budget management",
+    "cost tracking"
+   ]
+  }
+ ]
+}

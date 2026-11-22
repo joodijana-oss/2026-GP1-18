@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Kubernetes",
+  "Terraform",
+  "Docker",
+  "CI/CD Pipeline Design",
+  "Linux Administration",
+  "Ansible",
+  "Python",
+  "AWS",
+  "Azure",
+  "Prometheus",
+  "Grafana",
+  "Bash Scripting"
+ ],
+ "answer": [
+  {
+   "skill": "Kubernetes",
+   "status": "shown",
+   "quote": "Three Raspberry Pi boards running k3s; redeployed the photo library there"
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "shown",
+   "quote": "each isolated in its own image and started from one compose file"
+  },
+  {
+   "skill": "CI/CD Pipeline Design",
+   "status": "shown",
+   "quote": "runs the checks and publishes the site automatically with GitHub Actions"
+  },
+  {
+   "skill": "Linux Administration",
+   "status": "shown",
+   "quote": "An old office PC running Debian that hosts my family's photo library"
+  },
+  {
+   "skill": "Ansible",
+   "status": "shown",
+   "quote": "I configure from a playbook, so it can be rebuilt from nothing"
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "AWS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Azure",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Prometheus",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Grafana",
+   "status": "shown",
+   "quote": "Graphs of CPU, memory, disk and temperature in Grafana"
+  },
+  {
+   "skill": "Bash Scripting",
+   "status": "shown",
+   "quote": "A nightly cron job written as a shell script copies the photo volume"
+  }
+ ]
+}

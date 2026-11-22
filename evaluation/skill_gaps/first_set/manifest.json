@@ -1,0 +1,198 @@
+{
+  "set": "heldout",
+  "version": 1,
+  "writtenOn": "2026-11-20",
+  "note": "Fictional CVs written for evaluation. Any resemblance to real people is unintended.",
+  "changes": [
+    {
+      "date": "2026-11-20",
+      "case": "ho_02",
+      "change": "Threat Hunting removed from notShown.",
+      "reason": "The training line names a room on searching Splunk for signs of lateral movement, which is a threat-hunting exercise, so the skill is not absent. It would be partly, but partly already holds 5 entries and Threat Hunting is not one of the 20 role skills, so it is left unlabelled."
+    },
+    {
+      "date": "2026-11-20",
+      "case": "ho_02",
+      "change": "Active Directory stays in notShown; its reason is rewritten and it is marked as a near miss.",
+      "reason": "The old reason said nothing in the CV, but the help-desk line mentions password resets. Password resets alone do not show directory administration."
+    },
+    {
+      "date": "2026-11-20",
+      "case": "ho_04",
+      "change": "Data Quality moved from notShown to partly.",
+      "reason": "The project standardised the mileage and model-year columns, which is weak evidence of data quality work. ho_03 already treats cleaning as partly evidence for Data Quality; this keeps the two CVs consistent."
+    },
+    {
+      "date": "2026-11-20",
+      "case": "ho_07",
+      "change": "Secrets Management moved from notShown to partly.",
+      "reason": "The script that rotates access keys older than 60 days is secret rotation, one of the skill's other names. One script is weak evidence, so partly."
+    },
+    {
+      "date": "2026-11-20",
+      "case": "ho_07",
+      "change": "GitOps stays in notShown; its reason is rewritten and it is marked as a near miss.",
+      "reason": "The old reason said nothing in the CV, but Terraform changes go through merge requests and GitLab jobs roll out every merge. No GitOps tool or pull-based set-up is shown."
+    },
+    {
+      "date": "2026-11-20",
+      "case": "ho_07",
+      "change": "Red Hat Certified System Administrator added to notShown.",
+      "reason": "Keeps at least 10 notShown entries after Secrets Management moved to partly. The CV holds only the AWS certification."
+    },
+    {
+      "date": "2026-11-20",
+      "case": "ho_09",
+      "change": "Statistics stays in notShown; its reason is rewritten and it is marked as a near miss.",
+      "reason": "The old reason said nothing in the CV, but the CV uses logistic regression and naive Bayes and reports error rates. No statistical analysis or statistics course is shown."
+    },
+    {
+      "date": "2026-11-20",
+      "case": "ho_16",
+      "change": "Object-Oriented Programming moved from notShown to partly.",
+      "reason": "He builds daily with Django REST Framework, which is class-based, and lists Java. The old reason itself said the skill is likely in daily use, so it is not clearly absent; it is not shown directly either."
+    },
+    {
+      "date": "2026-11-20",
+      "case": "ho_16",
+      "change": "Node.js added to notShown.",
+      "reason": "Keeps at least 10 notShown entries after Object-Oriented Programming moved to partly. His only JavaScript is a little front-end code in Django templates."
+    },
+    {
+      "date": "2026-11-20",
+      "case": "ho_13",
+      "change": "Data Backup (shown) keeps its label, but \"Backup and Restore\" is dropped from its other names; they are now Backups and Data Recovery.",
+      "reason": "Duplicate name: \"Backup and Restore\" was also an other name of Disaster Recovery, which this CV labels partly, so the same name pointed at two categories. He backs up nightly but never restores, so the name belongs with the partly entry. roles.json and every other CV are unchanged."
+    }
+  ],
+  "cases": [
+    {
+      "id": "ho_01",
+      "careerGoalId": "cybersecurity_analyst",
+      "level": "student",
+      "experienceLevel": "No Experience",
+      "cv": "ho_01.txt",
+      "labels": "ho_01.labels.json"
+    },
+    {
+      "id": "ho_02",
+      "careerGoalId": "cybersecurity_analyst",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "ho_02.txt",
+      "labels": "ho_02.labels.json"
+    },
+    {
+      "id": "ho_03",
+      "careerGoalId": "data_analyst",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "ho_03.txt",
+      "labels": "ho_03.labels.json"
+    },
+    {
+      "id": "ho_04",
+      "careerGoalId": "data_analyst",
+      "level": "student",
+      "experienceLevel": "No Experience",
+      "cv": "ho_04.txt",
+      "labels": "ho_04.labels.json"
+    },
+    {
+      "id": "ho_05",
+      "careerGoalId": "software_engineer",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "ho_05.txt",
+      "labels": "ho_05.labels.json"
+    },
+    {
+      "id": "ho_06",
+      "careerGoalId": "software_engineer",
+      "level": "student",
+      "experienceLevel": "Beginner",
+      "cv": "ho_06.txt",
+      "labels": "ho_06.labels.json"
+    },
+    {
+      "id": "ho_07",
+      "careerGoalId": "cloud_devops_engineer",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "ho_07.txt",
+      "labels": "ho_07.labels.json"
+    },
+    {
+      "id": "ho_08",
+      "careerGoalId": "network_engineer",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "ho_08.txt",
+      "labels": "ho_08.labels.json"
+    },
+    {
+      "id": "ho_09",
+      "careerGoalId": "ai_ml_engineer",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "ho_09.txt",
+      "labels": "ho_09.labels.json"
+    },
+    {
+      "id": "ho_10",
+      "careerGoalId": "qa_test_engineer",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "ho_10.txt",
+      "labels": "ho_10.labels.json"
+    },
+    {
+      "id": "ho_11",
+      "careerGoalId": "it_support_specialist",
+      "level": "student",
+      "experienceLevel": "No Experience",
+      "cv": "ho_11.txt",
+      "labels": "ho_11.labels.json"
+    },
+    {
+      "id": "ho_12",
+      "careerGoalId": "cybersecurity_grc_specialist",
+      "level": "fresh_graduate",
+      "experienceLevel": "Beginner",
+      "cv": "ho_12.txt",
+      "labels": "ho_12.labels.json"
+    },
+    {
+      "id": "ho_13",
+      "careerGoalId": "cloud_devops_engineer",
+      "level": "student",
+      "experienceLevel": "No Experience",
+      "cv": "ho_13.txt",
+      "labels": "ho_13.labels.json"
+    },
+    {
+      "id": "ho_14",
+      "careerGoalId": "network_engineer",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "ho_14.txt",
+      "labels": "ho_14.labels.json"
+    },
+    {
+      "id": "ho_15",
+      "careerGoalId": "ai_ml_engineer",
+      "level": "student",
+      "experienceLevel": "No Experience",
+      "cv": "ho_15.txt",
+      "labels": "ho_15.labels.json"
+    },
+    {
+      "id": "ho_16",
+      "careerGoalId": "software_engineer",
+      "level": "experienced",
+      "experienceLevel": "Intermediate",
+      "cv": "ho_16.txt",
+      "labels": "ho_16.labels.json"
+    }
+  ]
+}

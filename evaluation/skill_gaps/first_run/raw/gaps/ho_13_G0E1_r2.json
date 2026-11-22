@@ -1,0 +1,17 @@
+{
+ "case": "ho_13",
+ "arm": "G0E1",
+ "run": 2,
+ "gaps": [
+  "Terraform",
+  "CI/CD Pipeline Design",
+  "Python",
+  "AWS",
+  "Azure"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

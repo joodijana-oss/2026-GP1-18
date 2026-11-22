@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Git",
+  "REST API Design",
+  "SQL",
+  "React",
+  "Node.js",
+  "Java",
+  "Docker",
+  "Spring Boot",
+  "Python",
+  "Linux",
+  "Kubernetes",
+  "C++"
+ ],
+ "answer": [
+  {
+   "skill": "Git",
+   "status": "shown",
+   "quote": "Python, Django, PostgreSQL, Redis, Docker, Git, Java, MongoDB, AWS"
+  },
+  {
+   "skill": "REST API Design",
+   "status": "shown",
+   "quote": "Designed the JSON interface used by the mobile and web teams, with versioned routes"
+  },
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "rewrote it with joins and prefetching"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Java",
+   "status": "shown",
+   "quote": "Python, Django, PostgreSQL, Redis, Docker, Git, Java, MongoDB, AWS"
+  },
+  {
+   "skill": "Docker",
+   "status": "shown",
+   "quote": "a tagged commit builds a container image and rolls it out"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "server side of three client products in Python (Django REST Framework)"
+  },
+  {
+   "skill": "Linux",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "case": "ho_10",
+ "arm": "G0E0",
+ "run": 2,
+ "gaps": [
+  "Functional Testing",
+  "Defect Tracking",
+  "Selenium",
+  "Appium",
+  "CI/CD"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

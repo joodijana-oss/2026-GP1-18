@@ -1,0 +1,128 @@
+{
+ "goal": "qa_test_engineer",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Manual Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "testing software without automation",
+    "executing test cases manually",
+    "manual quality checks"
+   ]
+  },
+  {
+   "gap": "Test Case Design",
+   "kind": "skill",
+   "concepts": [
+    "Test Cases"
+   ],
+   "phrases": [
+    "writing test cases",
+    "designing test scenarios",
+    "creating test conditions"
+   ]
+  },
+  {
+   "gap": "Jira",
+   "kind": "tool",
+   "concepts": [
+    "Jira"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Regression Testing",
+   "kind": "skill",
+   "concepts": [
+    "Regression Testing"
+   ],
+   "phrases": [
+    "retesting after changes",
+    "verifying existing functionality"
+   ]
+  },
+  {
+   "gap": "Functional Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "validating software functionality",
+    "testing features against requirements"
+   ]
+  },
+  {
+   "gap": "Selenium",
+   "kind": "tool",
+   "concepts": [
+    "Test Automation"
+   ],
+   "phrases": [
+    "automating browser tests",
+    "automated web testing framework"
+   ]
+  },
+  {
+   "gap": "API Testing",
+   "kind": "skill",
+   "concepts": [
+    "API Testing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Appium",
+   "kind": "tool",
+   "concepts": [
+    "Test Automation"
+   ],
+   "phrases": [
+    "automating mobile app tests",
+    "mobile test automation framework"
+   ]
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Postman",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "testing APIs with requests",
+    "sending API requests"
+   ]
+  },
+  {
+   "gap": "Agile",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Scrum",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "sprint planning and ceremonies",
+    "working in scrum teams",
+    "iterative project delivery"
+   ]
+  }
+ ]
+}

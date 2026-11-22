@@ -1,0 +1,18 @@
+{
+ "case": "ho_12",
+ "arm": "G0E0",
+ "run": 3,
+ "gaps": [
+  "Cybersecurity Risk Assessment",
+  "SAMA Cybersecurity Framework (CSF)",
+  "KPI/KRI Development & Reporting",
+  "GRC Platforms (Archer, ServiceNow GRC, OneTrust, CyberArrow)",
+  "NIST Framework",
+  "PCI DSS"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

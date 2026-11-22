@@ -1,0 +1,77 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on experience self-hosting and managing multiple services on a home server",
+   "Practical knowledge of containerization using Docker Compose",
+   "Experience setting up reverse proxies with automatic TLS",
+   "Implemented automated backup solutions with failure alerting",
+   "Set up monitoring and alerting dashboards for system metrics",
+   "Led infrastructure automation for a university club, including CI/CD pipeline setup",
+   "Experience with infrastructure as code using configuration management playbooks",
+   "Hands-on experience with Kubernetes concepts via k3s on Raspberry Pi cluster",
+   "Teaching and mentoring experience through workshops and tutoring",
+   "Strong academic performance (GPA 4.3/5) in Computer Science"
+  ],
+  "currentSkills": [
+   "Linux",
+   "Debian",
+   "Docker",
+   "Docker Compose",
+   "Caddy",
+   "TLS Configuration",
+   "Shell Scripting",
+   "Cron",
+   "Telegram API Integration",
+   "Grafana",
+   "Prometheus Node Exporter",
+   "System Monitoring",
+   "GitHub Actions",
+   "CI/CD",
+   "Oracle Cloud",
+   "Ansible",
+   "Kubernetes",
+   "k3s",
+   "Raspberry Pi",
+   "Networking",
+   "DNS",
+   "Cloud Computing"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "University of Jeddah",
+    "year": "2023 - 2027 (expected)"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Home server",
+    "description": "Set up an old office PC running Debian hosting a photo library, media server, and ad-blocking DNS resolver, each isolated in its own container and started from one Docker Compose file. Configured Caddy as reverse proxy with automatic TLS so each service is reachable by name. Wrote a nightly cron shell script to back up photo volume to an external disk and object storage, with Telegram failure notifications. Set up Grafana dashboards fed by node exporters to monitor CPU, memory, disk and temperature, with alerts when disk usage passes 85%."
+   },
+   {
+    "name": "Club website",
+    "description": "Served as infrastructure lead for university computing club. Migrated the club site from manual FTP uploads to an automated setup where every push to the main branch runs checks and publishes the site via GitHub Actions. Hosted the site on a free-tier Oracle Cloud virtual machine configured from a playbook, allowing full rebuild from nothing in ten minutes."
+   },
+   {
+    "name": "Kubernetes at home",
+    "description": "Built a three-node Raspberry Pi cluster running k3s and redeployed the photo library service to learn deployments, services, and ingress concepts."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Infrastructure Lead",
+    "organization": "University computing club",
+    "duration": "2025 - now",
+    "description": "Led infrastructure for the club website, migrating from FTP uploads to automated CI/CD with GitHub Actions, hosting on Oracle Cloud configured via playbook. Taught a three-evening 'Linux for beginners' workshop to 45 members."
+   },
+   {
+    "title": "Private Tutor",
+    "organization": "Self-employed",
+    "duration": "",
+    "description": "Private tutor for high-school mathematics at weekends."
+   }
+  ]
+ }
+}

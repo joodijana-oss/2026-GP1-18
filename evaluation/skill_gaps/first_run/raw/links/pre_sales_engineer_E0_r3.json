@@ -1,0 +1,137 @@
+{
+ "goal": "pre_sales_engineer",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Technical Proposal Writing",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "writing technical proposals",
+    "drafting solution proposals",
+    "proposal documentation"
+   ]
+  },
+  {
+   "gap": "RFP/RFQ/RFI Response",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "responding to tenders",
+    "bid response preparation",
+    "procurement document response"
+   ]
+  },
+  {
+   "gap": "Solution Design and Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing end to end solutions",
+    "architecting technical solutions"
+   ]
+  },
+  {
+   "gap": "BOQ/BOM Preparation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "bill of quantities preparation",
+    "bill of materials preparation",
+    "costing technical components"
+   ]
+  },
+  {
+   "gap": "Product Demonstrations and Proof of Concept (POC)",
+   "kind": "skill",
+   "concepts": [
+    "Product Demonstrations"
+   ],
+   "phrases": [
+    "running proof of concept trials",
+    "demonstrating product capabilities",
+    "pilot testing solutions"
+   ]
+  },
+  {
+   "gap": "Customer Requirements Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Requirements Gathering"
+   ],
+   "phrases": [
+    "analyzing client needs",
+    "gathering customer requirements"
+   ]
+  },
+  {
+   "gap": "Presentation and Communication Skills",
+   "kind": "soft",
+   "concepts": [
+    "Presentations"
+   ],
+   "phrases": [
+    "delivering effective presentations",
+    "communicating clearly with audiences"
+   ]
+  },
+  {
+   "gap": "Vendor and Partner Coordination",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "coordinating with vendors",
+    "managing partner relationships",
+    "liaising with suppliers"
+   ]
+  },
+  {
+   "gap": "Cloud Solutions (AWS/Azure/GCP)",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "designing cloud based solutions",
+    "working with public cloud platforms"
+   ]
+  },
+  {
+   "gap": "Network and Security Solutions",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "designing secure network solutions",
+    "network and security architecture"
+   ]
+  },
+  {
+   "gap": "Stakeholder and C-level Engagement",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "engaging senior executives",
+    "managing stakeholder relationships",
+    "communicating with leadership"
+   ]
+  },
+  {
+   "gap": "Cybersecurity Solutions Design",
+   "kind": "skill",
+   "concepts": [
+    "Information Security"
+   ],
+   "phrases": [
+    "designing security architectures",
+    "building cybersecurity solutions"
+   ]
+  }
+ ]
+}

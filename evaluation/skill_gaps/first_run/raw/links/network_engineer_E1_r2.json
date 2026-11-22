@@ -1,0 +1,116 @@
+{
+ "goal": "network_engineer",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Routing and Switching",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "configuring routers and switches",
+    "network traffic forwarding",
+    "switching protocols"
+   ]
+  },
+  {
+   "gap": "VPN",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "secure remote access",
+    "virtual private networks",
+    "encrypted tunnels"
+   ]
+  },
+  {
+   "gap": "LAN/WAN",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "local and wide area networks",
+    "network topology design"
+   ]
+  },
+  {
+   "gap": "VLAN",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "virtual local area networks",
+    "network segmentation"
+   ]
+  },
+  {
+   "gap": "CCNA",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Firewall Management",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "configuring firewall rules",
+    "perimeter security management"
+   ]
+  },
+  {
+   "gap": "Cisco Networking",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "CCNP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Fortinet",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Palo Alto",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "BGP",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "border gateway protocol",
+    "inter-domain routing"
+   ]
+  },
+  {
+   "gap": "Network Monitoring and Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Troubleshooting"
+   ],
+   "phrases": [
+    "diagnosing network issues",
+    "monitoring network performance"
+   ]
+  }
+ ]
+}

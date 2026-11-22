@@ -1,0 +1,75 @@
+{
+ "label": "ho_c_05",
+ "cv": "ho_c",
+ "version": "old",
+ "run": 2,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:07:30.965557",
+ "finishedAt": "2026-11-22T02:07:55.445651",
+ "seconds": 24.48,
+ "inputTokens": 2037,
+ "outputTokens": 2383,
+ "decoded": {
+  "cvStructure": [],
+  "sectionOrganization": [
+   {
+    "issue": "The Projects section lists the 2024 Riyadh Housing Prices Analysis before the 2025 Student Attendance Dashboard, which is not in reverse-chronological order like the rest of the CV.",
+    "suggestion": "Move the Student Attendance Dashboard (2025) above the Riyadh Housing Prices Analysis (2024) so the most recent project appears first."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "The CV describes designing a star schema for the Student Attendance Dashboard, but 'Data Modeling' is not listed as a skill, which is a common keyword recruiters search for in Data Analyst roles.",
+    "suggestion": "Add 'Data Modeling' to the Skills section since the graduation project already demonstrates this capability."
+   },
+   {
+    "issue": "The skill 'Statistics' is listed without specifying any technique, even though the Riyadh Housing Prices project applied a regression model.",
+    "suggestion": "Make the skill more specific, for example 'Statistics (Regression Analysis)', to match the technique actually used in the project."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The bullet 'Worked on data cleaning tasks for the team' under the Sahel Retail Company role uses a weak verb and has no measurable result, unlike the other bullets in the CV.",
+    "suggestion": "Rewrite it with a strong action verb and a quantifiable outcome, for example specifying the dataset size or time saved from the cleaning work."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Experience and Education entries use full month-year dates (e.g., 'Sep 2025 - Present'), while Projects and Certifications only show the year (e.g., '2024', '2025'), creating inconsistent date formatting across the CV.",
+    "suggestion": "Use the same month-year format in the Projects and Certifications sections as used in Experience and Education for consistency."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [],
+  "sectionOrganization": [
+   {
+    "issue": "The Projects section lists the 2024 Riyadh Housing Prices Analysis before the 2025 Student Attendance Dashboard, which is not in reverse-chronological order like the rest of the CV.",
+    "suggestion": "Move the Student Attendance Dashboard (2025) above the Riyadh Housing Prices Analysis (2024) so the most recent project appears first."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "The CV describes designing a star schema for the Student Attendance Dashboard, but 'Data Modeling' is not listed as a skill, which is a common keyword recruiters search for in Data Analyst roles.",
+    "suggestion": "Add 'Data Modeling' to the Skills section since the graduation project already demonstrates this capability."
+   },
+   {
+    "issue": "The skill 'Statistics' is listed without specifying any technique, even though the Riyadh Housing Prices project applied a regression model.",
+    "suggestion": "Make the skill more specific, for example 'Statistics (Regression Analysis)', to match the technique actually used in the project."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The bullet 'Worked on data cleaning tasks for the team' under the Sahel Retail Company role uses a weak verb and has no measurable result, unlike the other bullets in the CV.",
+    "suggestion": "Rewrite it with a strong action verb and a quantifiable outcome, for example specifying the dataset size or time saved from the cleaning work."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Experience and Education entries use full month-year dates (e.g., 'Sep 2025 - Present'), while Projects and Certifications only show the year (e.g., '2024', '2025'), creating inconsistent date formatting across the CV.",
+    "suggestion": "Use the same month-year format in the Projects and Certifications sections as used in Experience and Education for consistency."
+   }
+  ]
+ }
+}

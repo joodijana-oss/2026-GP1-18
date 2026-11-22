@@ -1,0 +1,156 @@
+SKILL GAP SCORES  (build/gap_eval/final_r2)
+Test set: test/fixtures/cv_eval_final ("final"), 16 CVs, 3 runs per case
+
+ALL CVS  (16 CVs)
+  Arm    FalseGap  CVs>0  Recall   Prec     F1  Bundled (detector)  Stable  Fallback  BadQuote  Gaps  Errors
+  G0E0      0.185  0.750   0.990  0.750  0.853    0.166      0.164   0.581     0.000     0.000   7.0       0
+  G1E1      0.005  0.021   0.956  0.995  0.975    0.000      0.000   0.765     0.000     0.000   5.6       0
+
+UNSEEN GOALS  (12 CVs)
+  Arm    FalseGap  CVs>0  Recall   Prec     F1  Bundled (detector)  Stable  Fallback  BadQuote  Gaps  Errors
+  G0E0      0.188  0.778   0.991  0.746  0.851    0.183      0.186   0.603     0.000     0.000   6.6       0
+  G1E1      0.000  0.000   0.965  1.000  0.982    0.000      0.000   0.788     0.000     0.000   5.4       0
+
+SEEN GOALS  (4 CVs)
+  Arm    FalseGap  CVs>0  Recall   Prec     F1  Bundled (detector)  Stable  Fallback  BadQuote  Gaps  Errors
+  G0E0      0.173  0.667   0.986  0.763  0.861    0.116      0.099   0.516     0.000     0.000   8.3       0
+  G1E1      0.021  0.083   0.932  0.979  0.955    0.000      0.000   0.698     0.000     0.000   6.3       0
+
+  FalseGap: share of the gaps that the CV clearly shows (lower is better). CVs>0: share of the analyses with at least one such gap.
+  Recall: share of the skills the CV does not show that were returned as gaps. Bundled: share of the gap names a reviewer marked
+  as several things in one name; (detector) is the same by the shape of the name. Stable: how alike the runs of one CV are.
+  Fallback: share of the runs where the wanted gap step failed and the fallback answered. BadQuote: answers dropped because their
+  quote is not in the CV. Errors: runs without any result.
+
+MARKET SKILL NAMES (the extractor), bundled share
+  E0: reviewers 0.130, detector 0.134  (576 names)
+  E1: reviewers 0.003, detector 0.000  (576 names)
+
+AGAINST G0E0 (the original analysis), paired over CVs, 95% bootstrap interval
+  G1E1
+    FalseGap, all CVs     : -0.179  [-0.240, -0.121]  (16 CVs)
+    FalseGap, unseen goals: -0.188  [-0.251, -0.126]  (12 CVs)
+    Recall, all CVs       : -0.033  [-0.074, +0.000]
+    pass  every run gave a result
+    pass  recall not more than 0.05 below G0E0
+    pass  bundled gap names at most 2% (reviewers)
+    pass  fallback in at most 10% of the runs
+    pass  FalseGap at least 0.05 lower on all CVs, interval excludes 0
+    pass  FalseGap at least 0.05 lower on unseen goals (point estimate)
+
+DECISION: arms that pass every rule, lowest FalseGap first: G1E1
+  This is not the held-out set: use it to develop, not to decide.
+
+GAPS PER CV  (! = the CV shows it, ~ = partly, ? = not judged)
+  ho_01  (cybersecurity_analyst)
+    G0E0 r1: Penetration Testing; ~Network Security; Firewalls (Palo Alto/Fortinet); ~SOC Operations; Endpoint Detection and Response (EDR); Cloud Security (AWS/GCP/Azure); IAM (Identity & Access Management)
+    G0E0 r2: Penetration Testing; Incident Response; Firewalls; ~Network Security; ~SOC Operations; IDS/IPS; ~Security Certifications (CISSP, CEH, Security+, OSCP); Cloud Security (AWS/GCP/Azure)
+    G0E0 r3: Penetration Testing; Incident Response; Firewalls; ~Network Security; ~SOC Operations; IAM; EDR; ~Security Risk Assessment; Cloud Security
+    G1E1 r1: Firewall Administration; CISSP; OSCP; Nmap; Metasploit
+    G1E1 r2: Firewall Administration; CISSP; CEH; OSCP; Access Control
+    G1E1 r3: Firewall Administration; CEH; OSCP; CISSP; Nmap; Metasploit
+  ho_02  (cybersecurity_analyst)
+    G0E0 r1: SIEM; Vulnerability Assessment; Penetration Testing; !Firewalls (Palo Alto/Fortinet); ~Security Monitoring & Log Analysis; ~SOC Operations; !Endpoint Detection and Response (EDR); Python; Cloud Security (AWS/GCP/Azure); ~IAM (Identity & Access Management)
+    G0E0 r2: SIEM; Vulnerability Assessment; Penetration Testing; !Network Security; ~SOC Operations; IDS/IPS; Security Certifications (CISSP, CEH, Security+, OSCP); Python Scripting; Cloud Security (AWS/GCP/Azure); ~Log Analysis and Threat Detection
+    G0E0 r3: SIEM; Vulnerability Assessment; Penetration Testing; ~SOC Operations; ~IAM; Security Risk Assessment; Python; Cloud Security
+    G1E1 r1: SIEM; Vulnerability Assessment; Penetration Testing; CISSP; OSCP; Nmap; Metasploit; Python; CompTIA Security+
+    G1E1 r2: SIEM; Penetration Testing; Vulnerability Assessment; CISSP; CEH; Security+; OSCP; Python
+    G1E1 r3: SIEM; Penetration Testing; Vulnerability Assessment; CEH; OSCP; CISSP; Security+; Nmap; Metasploit; Python
+  ho_03  (data_analyst)
+    G0E0 r1: !Python; !Dashboard Development; !Stakeholder Collaboration; Machine Learning; ~Data Governance; ~Pandas/NumPy; !Relational Databases
+    G0E0 r2: !Python; !Dashboard Development; ~Stakeholder Management; Machine Learning; ~Data Governance; R; !Relational Databases
+    G0E0 r3: !Python; !Dashboard Development; ~Stakeholder Management; Machine Learning; !Relational Databases; R; ~Data Governance
+    G1E1 r1: !Python; R; Machine Learning; NumPy
+    G1E1 r2: R; Machine Learning
+    G1E1 r3: R; Machine Learning; NumPy
+  ho_04  (data_analyst)
+    G0E0 r1: ~Power BI; Python; ~Dashboard Development; Tableau; Stakeholder Collaboration; Machine Learning; Data Governance; Pandas/NumPy; !Relational Databases
+    G0E0 r2: Python; ~Dashboard Development; Tableau; Stakeholder Management; Machine Learning; Data Governance; R; !Relational Databases
+    G0E0 r3: ~Power BI; Python; ~Dashboard Development; Tableau; Stakeholder Management; Machine Learning; !Relational Databases; R; Data Governance
+    G1E1 r1: Python; ~Dashboard Development; Tableau; R; Machine Learning; Pandas; NumPy; Stakeholder Management
+    G1E1 r2: Python; ~Dashboard Development; Tableau; R; Machine Learning; Stakeholder Management; Pandas; Data Governance
+    G1E1 r3: Python; ~Dashboard Development; Tableau; R; Machine Learning; Pandas; NumPy; Stakeholder Management
+  ho_05  (software_engineer)
+    G0E0 r1: React; Node.js; Docker; Microservices Architecture; Linux; ~CI/CD; JavaScript/TypeScript
+    G0E0 r2: Node.js; React; Docker; Microservices Architecture; Linux; ~CI/CD
+    G0E0 r3: React; Node.js; Docker; Microservices Architecture; Linux; ~CI/CD
+    G1E1 r1: React; Node.js; Docker; Linux; Microservices Architecture; Kubernetes
+    G1E1 r2: React; Node.js; Docker; Linux; Kubernetes; Microservices Architecture
+    G1E1 r3: React; Node.js; Docker; Linux; Kubernetes
+  ho_06  (software_engineer)
+    G0E0 r1: !REST APIs; React; Node.js; Docker; Microservices Architecture; CI/CD; ~JavaScript/TypeScript
+    G0E0 r2: !REST APIs; Node.js; React; Docker; Spring Boot; Microservices Architecture; CI/CD
+    G0E0 r3: !REST APIs; React; Node.js; Docker; Spring Boot; Microservices Architecture; CI/CD
+    G1E1 r1: React; Node.js; Spring Boot; Docker; Microservices Architecture; Kubernetes
+    G1E1 r2: React; Node.js; Spring Boot; Docker; Kubernetes; Microservices Architecture
+    G1E1 r3: React; Node.js; Docker; Spring Boot; Kubernetes
+  ho_07  (cloud_devops_engineer)
+    G0E0 r1: Ansible; Python; ~Site Reliability Engineering (SLIs/SLOs); GitOps (Argo CD)
+    G0E0 r2: !CI/CD Pipeline Design; Ansible; Python; GitOps (Argo CD); ~Site Reliability Engineering (SLIs/SLOs/Incident Management)
+    G0E0 r3: !CI/CD Pipeline Design; Ansible; ~Cloud Platforms (AWS/Azure/GCP); Python; ~Site Reliability Engineering (SLIs/SLOs/Incident Management); !Bash Scripting
+    G1E1 r1: Ansible; Python; Azure
+    G1E1 r2: Ansible; Python; Azure
+    G1E1 r3: Ansible; Python; Azure
+  ho_08  (network_engineer)
+    G0E0 r1: !LAN/WAN; VPN; ~CCNA/CCNP Certification; Network Monitoring and Performance Management; ~Network Security; !TCP/IP
+    G0E0 r2: !LAN/WAN; VPN Configuration; Network Monitoring and Performance Management; ~CCNA/CCNP Certification; ~Network Security; MPLS
+    G0E0 r3: !LAN/WAN; VPN; ~Network Security; ~CCNA/CCNP Certification; Network Monitoring and Performance Management; ~MPLS/BGP/OSPF
+    G1E1 r1: VPN; BGP; MPLS; CCNP; Palo Alto
+    G1E1 r2: VPN; CCNP; Palo Alto; BGP
+    G1E1 r3: VPN; BGP; QoS; MPLS; Palo Alto
+  ho_09  (ai_ml_engineer)
+    G0E0 r1: TensorFlow; !Deep Learning; !Computer Vision; Linux; MLOps; Kubernetes; Docker; C++; LLM / Generative AI; CI/CD & Infrastructure-as-Code
+    G0E0 r2: !Deep Learning; TensorFlow; !Computer Vision; MLOps; Kubernetes; C++; Linux; !Model Deployment & Optimization; Docker; LLM / Generative AI
+    G0E0 r3: TensorFlow; !Computer Vision; Linux; MLOps; Kubernetes; C++; LLM/Generative AI; !Model Deployment & Optimization; Docker
+    G1E1 r1: Kubernetes; C++; TensorFlow; Linux; Docker; Terraform; Ansible; Prometheus; LangChain
+    G1E1 r2: TensorFlow; Kubernetes; C++; Linux; Docker; LangChain; Terraform; Prometheus
+    G1E1 r3: Kubernetes; TensorFlow; C++; Linux; Terraform; LangChain; Docker
+  ho_10  (qa_test_engineer)
+    G0E0 r1: !Functional Testing; ~Integration Testing; ~Selenium
+    G0E0 r2: !Functional Testing; !Defect Tracking; ~Selenium; Appium; CI/CD
+    G0E0 r3: !Defect Tracking and Management; !Functional Testing; ~Selenium; Appium
+    G1E1 r1: Appium
+    G1E1 r2: Appium
+    G1E1 r3: Appium
+  ho_11  (it_support_specialist)
+    G0E0 r1: Active Directory; Microsoft 365; ~Ticketing Systems (ServiceNow/Remedy); ~Routers, Switches, and Firewalls; User Account and Access Management; IT Asset Management
+    G0E0 r2: Active Directory; ~Ticketing Systems (ServiceNow/Remedy); Microsoft 365; IT Asset Management; User Account Management; ~Routers/Switches/Firewalls Configuration
+    G0E0 r3: Active Directory; ~Ticketing Systems (ServiceNow/Remedy); IT Asset Management
+    G1E1 r1: Active Directory; ~TCP/IP; Microsoft 365; DHCP; DNS; CCNA; VPN
+    G1E1 r2: Active Directory; ~TCP/IP; IT Asset Management
+    G1E1 r3: Active Directory; Microsoft 365; ~TCP/IP; IT Asset Management; DNS; DHCP
+  ho_12  (cybersecurity_grc_specialist)
+    G0E0 r1: ~Cybersecurity Risk Assessment; ~SAMA CSF; !Cybersecurity Governance Frameworks; NIST Framework; ~KPI/KRI Reporting; GRC Platforms (e.g., Archer, ServiceNow GRC, OneTrust)
+    G0E0 r2: ~Cybersecurity Risk Assessment; ~SAMA CSF; !Cybersecurity Governance Frameworks; !Compliance Audits; NIST; ~KPI/KRI Reporting; GRC Platforms
+    G0E0 r3: ~Cybersecurity Risk Assessment; ~SAMA Cybersecurity Framework (CSF); ~KPI/KRI Development & Reporting; GRC Platforms (Archer, ServiceNow GRC, OneTrust, CyberArrow); NIST Framework; PCI DSS
+    G1E1 r1: ~SAMA CSF; CISA; CISM; NIST; CRISC; PCI DSS
+    G1E1 r2: ~SAMA CSF; CISA; CISM; CRISC; NIST; PCI DSS; CISSP
+    G1E1 r3: ~SAMA Cybersecurity Framework; CISSP; CISA; CISM; NIST Framework; PCI DSS; CRISC
+  ho_13  (cloud_devops_engineer)
+    G0E0 r1: Kubernetes; Terraform; !CI/CD Pipeline Design; Python; Site Reliability Engineering (SLIs/SLOs); ~Monitoring & Observability (Prometheus/Grafana); !Bash Scripting; GitOps (Argo CD)
+    G0E0 r2: Kubernetes; !CI/CD Pipeline Design; Terraform; !Ansible; ~Cloud Platforms (AWS/Azure/GCP); Python; ~Monitoring & Observability (Prometheus/Grafana); GitOps (Argo CD); Site Reliability Engineering (SLIs/SLOs/Incident Management)
+    G0E0 r3: Kubernetes; !CI/CD Pipeline Design; Terraform; Python; ~Monitoring & Observability (Prometheus/Grafana); !Infrastructure as Code; Site Reliability Engineering (SLIs/SLOs/Incident Management); !Bash Scripting
+    G1E1 r1: Kubernetes; Terraform; Python; Azure; Prometheus; Grafana
+    G1E1 r2: Kubernetes; Terraform; Python; Azure; Prometheus; Grafana
+    G1E1 r3: Kubernetes; Terraform; Python; Azure; Prometheus; Grafana
+  ho_14  (network_engineer)
+    G0E0 r1: Firewalls (Palo Alto/Fortinet); CCNA/CCNP Certification; Network Monitoring and Performance Management; !Network Security; !TCP/IP; ~Network Documentation
+    G0E0 r2: Firewall Management (Palo Alto/Fortinet); Network Monitoring and Performance Management; CCNA/CCNP Certification; !Network Security; MPLS; ~Technical Documentation
+    G0E0 r3: Firewall Management (Palo Alto/FortiGate/Fortinet); !Network Security; CCNA/CCNP Certification; Network Monitoring and Performance Management; ~Network Documentation
+    G1E1 r1: Firewall Management; MPLS; CCNP; Fortinet; Palo Alto
+    G1E1 r2: Firewall Management; CCNP; Fortinet; Palo Alto
+    G1E1 r3: QoS; MPLS; FortiGate; Palo Alto
+  ho_15  (ai_ml_engineer)
+    G0E0 r1: PyTorch; TensorFlow; !Deep Learning; ~Linux; MLOps; Kubernetes; Docker; C++; LLM / Generative AI; CI/CD & Infrastructure-as-Code
+    G0E0 r2: PyTorch; !Deep Learning; TensorFlow; !Computer Vision; MLOps; Kubernetes; C++; ~Linux; ~Model Deployment & Optimization; Docker; LLM / Generative AI
+    G0E0 r3: PyTorch; TensorFlow; !Deep Learning; !Computer Vision; ~Linux; MLOps; Kubernetes; C++; LLM/Generative AI; ~Model Deployment & Optimization; Docker
+    G1E1 r1: PyTorch; Kubernetes; C++; TensorFlow; Docker; Terraform; Ansible; Prometheus; LangChain
+    G1E1 r2: PyTorch; TensorFlow; Kubernetes; C++; Docker; MLOps; LangChain; Terraform; Prometheus
+    G1E1 r3: PyTorch; Kubernetes; TensorFlow; C++; MLOps; Terraform; LangChain; Docker
+  ho_16  (software_engineer)
+    G0E0 r1: Java; React; Node.js; !Microservices Architecture; JavaScript/TypeScript
+    G0E0 r2: Java; Node.js; React; Spring Boot; !Microservices Architecture; !Linux
+    G0E0 r3: Java; React; Node.js; Spring Boot; !Microservices Architecture
+    G1E1 r1: React; Node.js; Java; Spring Boot; Kubernetes
+    G1E1 r2: React; Node.js; Java; Spring Boot; Kubernetes
+    G1E1 r3: React; Node.js; Java; Spring Boot; Kubernetes; C++

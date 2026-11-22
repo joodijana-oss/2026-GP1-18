@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "LAN/WAN",
+  "Cisco Routers and Switches",
+  "VPN",
+  "VLAN",
+  "Firewall Management",
+  "CCNA",
+  "BGP",
+  "OSPF",
+  "QoS",
+  "MPLS",
+  "FortiGate",
+  "Palo Alto"
+ ],
+ "answer": [
+  {
+   "skill": "LAN/WAN",
+   "status": "shown",
+   "quote": "Connected the two branches over an encrypted IPsec tunnel across a simulated ISP"
+  },
+  {
+   "skill": "Cisco Routers and Switches",
+   "status": "shown",
+   "quote": "six real Cisco 2960 and ISR devices in the college lab"
+  },
+  {
+   "skill": "VPN",
+   "status": "shown",
+   "quote": "Connected the two branches over an encrypted IPsec tunnel"
+  },
+  {
+   "skill": "VLAN",
+   "status": "shown",
+   "quote": "trunked links between the access and distribution layers"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CCNA",
+   "status": "shown",
+   "quote": "Cisco Certified Network Associate (CCNA 200-301) – 14/02/2026"
+  },
+  {
+   "skill": "BGP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSPF",
+   "status": "shown",
+   "quote": "Ran OSPF in two areas between the branches and checked failover"
+  },
+  {
+   "skill": "QoS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "MPLS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "FortiGate",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

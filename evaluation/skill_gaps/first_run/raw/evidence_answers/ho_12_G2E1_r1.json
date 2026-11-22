@@ -1,0 +1,60 @@
+{
+ "targets": [
+  "Cybersecurity Risk Assessment",
+  "Cybersecurity Governance Framework Development",
+  "Risk Register Management",
+  "CISA",
+  "CISM",
+  "NIST",
+  "Third-Party Risk Management",
+  "CRISC",
+  "PCI DSS"
+ ],
+ "answer": [
+  {
+   "skill": "Cybersecurity Risk Assessment",
+   "status": "shown",
+   "quote": "scored a fictional clinic's assets and threats for likelihood and impact on a 5x5 matrix"
+  },
+  {
+   "skill": "Cybersecurity Governance Framework Development",
+   "status": "partly",
+   "quote": "Compared 114 controls of the SAMA Cyber Security Framework against existing bank procedures"
+  },
+  {
+   "skill": "Risk Register Management",
+   "status": "partly",
+   "quote": "proposed treatments for the top ten risks"
+  },
+  {
+   "skill": "CISA",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CISM",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "NIST",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Third-Party Risk Management",
+   "status": "shown",
+   "quote": "Sent security questionnaires to 9 outsourcing suppliers and scored their answers"
+  },
+  {
+   "skill": "CRISC",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "PCI DSS",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

@@ -1,0 +1,236 @@
+{
+  "id": "ho_06",
+  "careerGoalId": "software_engineer",
+  "shown": [
+    {
+      "skill": "Data Structures and Algorithms",
+      "alsoCalled": [
+        "DSA",
+        "Algorithms",
+        "Problem Solving"
+      ],
+      "evidence": "solved 700+ problems in C++, mostly graphs, dynamic programming and greedy",
+      "source": "other"
+    },
+    {
+      "skill": "C++",
+      "alsoCalled": [
+        "CPP"
+      ],
+      "evidence": "solved 700+ problems in C++",
+      "source": "other"
+    },
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java Programming",
+        "Core Java"
+      ],
+      "evidence": "Built with plain Java and Swing; enemies chase the player with A* search",
+      "source": "project"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "evidence": "Wrote it in Python",
+      "source": "project"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ],
+      "evidence": "Kept the code on GitHub from the first day, with a branch per feature and a short changelog",
+      "source": "project"
+    },
+    {
+      "skill": "Object-Oriented Programming",
+      "alsoCalled": [
+        "OOP",
+        "Object-Oriented Design"
+      ],
+      "evidence": "Split the game into entity, map and renderer classes behind a shared interface",
+      "source": "project"
+    },
+    {
+      "skill": "Debugging",
+      "alsoCalled": [
+        "Troubleshooting Code",
+        "Bug Fixing",
+        "Root Cause Analysis"
+      ],
+      "evidence": "stepped through the loader, found an off-by-one in the map reader",
+      "source": "project"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "Runs on a small rented VPS under systemd, where I read the journal and restart it myself when it falls over",
+      "source": "project"
+    },
+    {
+      "skill": "SQLite",
+      "alsoCalled": [
+        "Embedded Database"
+      ],
+      "evidence": "Stores each user's city and reminder choices in SQLite",
+      "source": "project"
+    },
+    {
+      "skill": "Competitive Programming",
+      "alsoCalled": [
+        "Programming Contests",
+        "ICPC"
+      ],
+      "evidence": "Saudi Collegiate Programming Contest 2025: 9th of 110 teams",
+      "source": "other"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "REST APIs",
+      "alsoCalled": [
+        "RESTful APIs",
+        "API Development",
+        "Web Services"
+      ],
+      "evidence": "it calls a public prayer-times web API",
+      "why": "Calls someone else's API; has not built one."
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "Database Systems (this term)",
+      "why": "Course in progress, and the bot's SQLite use is not described in any detail."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Unit Testing",
+      "alsoCalled": [
+        "Unit Tests",
+        "Automated Tests",
+        "Test-Driven Development"
+      ],
+      "why": "Added input checks after a fault, but wrote no tests.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Design Patterns",
+      "alsoCalled": [
+        "Software Design Patterns"
+      ],
+      "why": "Uses classes and an interface sensibly, but names or applies no design pattern.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Code Review",
+      "alsoCalled": [
+        "Peer Review",
+        "Pull Request Review"
+      ],
+      "why": "Works alone on his projects; nobody reviews the code.",
+      "nearMiss": false
+    },
+    {
+      "skill": "AWS Certified Developer - Associate",
+      "alsoCalled": [
+        "AWS Developer Associate",
+        "DVA-C02"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "JavaScript",
+      "alsoCalled": [
+        "JS",
+        "ECMAScript"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Spring Boot",
+      "alsoCalled": [
+        "Spring Framework",
+        "Spring"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build Pipelines"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Agile",
+      "alsoCalled": [
+        "Scrum",
+        "Agile Methodology"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "System Design",
+      "alsoCalled": [
+        "Software Architecture",
+        "Architecture Design"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Microservices",
+      "alsoCalled": [
+        "Microservice Architecture"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "AWS",
+      "alsoCalled": [
+        "Amazon Web Services"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "NoSQL",
+      "alsoCalled": [
+        "MongoDB",
+        "Document Databases"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

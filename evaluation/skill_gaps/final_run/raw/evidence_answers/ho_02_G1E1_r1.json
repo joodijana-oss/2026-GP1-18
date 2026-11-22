@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SIEM",
+  "Vulnerability Assessment",
+  "Penetration Testing",
+  "Incident Response",
+  "Firewall Administration",
+  "CISSP",
+  "OSCP",
+  "Nmap",
+  "Metasploit",
+  "Python",
+  "CompTIA Security+",
+  "Network Security"
+ ],
+ "answer": [
+  {
+   "skill": "SIEM",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Incident Response",
+   "status": "shown",
+   "quote": "pulled it off the network, restored the share from the previous night's backup"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "shown",
+   "quote": "Maintain the rule base on the two perimeter FortiGate devices"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Nmap",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CompTIA Security+",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Network Security",
+   "status": "shown",
+   "quote": "Fortinet NSE 4 Network Security Professional, 2025"
+  }
+ ]
+}

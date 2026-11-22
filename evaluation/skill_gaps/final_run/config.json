@@ -1,0 +1,12 @@
+{
+ "set": "final",
+ "setPath": "test/fixtures/cv_eval_final",
+ "arms": [
+  "G0E0",
+  "G1E1"
+ ],
+ "runs": 3,
+ "partlyIsGap": false,
+ "seed": 20261119,
+ "startedAt": "2026-11-21T06:16:14"
+}

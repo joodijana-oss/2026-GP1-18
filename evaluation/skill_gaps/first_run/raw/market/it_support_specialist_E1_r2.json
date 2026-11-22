@@ -1,0 +1,34 @@
+{
+ "goal": "it_support_specialist",
+ "extractor": "E1",
+ "run": 2,
+ "postings": 20,
+ "rawNames": [
+  "Hardware Troubleshooting",
+  "Windows Operating System",
+  "Networking",
+  "Active Directory",
+  "Ticketing Systems",
+  "Microsoft 365",
+  "LAN Administration",
+  "Wi-Fi Troubleshooting",
+  "TCP/IP",
+  "Printer Support",
+  "IT Asset Management",
+  "Customer Service"
+ ],
+ "names": [
+  "Hardware Troubleshooting",
+  "Windows Operating System",
+  "Networking",
+  "Active Directory",
+  "Ticketing Systems",
+  "Microsoft 365",
+  "LAN Administration",
+  "Wi-Fi Troubleshooting",
+  "TCP/IP",
+  "Printer Support",
+  "IT Asset Management",
+  "Customer Service"
+ ]
+}

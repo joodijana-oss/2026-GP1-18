@@ -1,0 +1,17 @@
+{
+ "cvStructure": [],
+ "sectionOrganization": [
+  {
+   "issue": "In Projects, the Riyadh Housing Prices Analysis (2024) is listed before the Student Attendance Dashboard (2025), so they are not in most recent first order.",
+   "suggestion": "List Student Attendance Dashboard (2025) first, then Riyadh Housing Prices Analysis (2024)."
+  }
+ ],
+ "keywordUsage": [],
+ "readability": [
+  {
+   "issue": "In the Junior Data Analyst entry, the point \"Worked on data cleaning tasks for the team\" uses a vague phrase instead of a strong action verb and has no specific result.",
+   "suggestion": "Rewrite it with a stronger verb and a result, for example \"Cleaned and standardized [dataset/type] data, reducing errors by [percentage]\"."
+  }
+ ],
+ "contentFormatting": []
+}

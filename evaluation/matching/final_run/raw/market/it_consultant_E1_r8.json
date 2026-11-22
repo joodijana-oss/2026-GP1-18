@@ -1,0 +1,34 @@
+{
+ "goal": "it_consultant",
+ "extractor": "E1",
+ "run": 8,
+ "postings": 6,
+ "rawNames": [
+  "SQL",
+  "PL/SQL",
+  "Digital Transformation",
+  "Oracle E-Business Suite",
+  "Java",
+  "REST",
+  "SOAP Web Services",
+  "BI Publisher",
+  "Business Process Automation",
+  "Oracle BPM Suite",
+  "Technical Documentation",
+  "Cybersecurity"
+ ],
+ "names": [
+  "SQL",
+  "PL/SQL",
+  "Digital Transformation",
+  "Oracle E-Business Suite",
+  "Java",
+  "REST",
+  "SOAP Web Services",
+  "BI Publisher",
+  "Business Process Automation",
+  "Oracle BPM Suite",
+  "Technical Documentation",
+  "Cybersecurity"
+ ]
+}

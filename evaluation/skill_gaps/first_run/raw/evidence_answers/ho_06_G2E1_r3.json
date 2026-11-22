@@ -1,0 +1,48 @@
+{
+ "targets": [
+  "REST API Design",
+  "SQL",
+  "React",
+  "Node.js",
+  "Docker",
+  "Spring Boot",
+  "Kubernetes"
+ ],
+ "answer": [
+  {
+   "skill": "REST API Design",
+   "status": "partly",
+   "quote": "calls a public prayer-times web API and caches each city's answer"
+  },
+  {
+   "skill": "SQL",
+   "status": "partly",
+   "quote": "Database Systems (this term)"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

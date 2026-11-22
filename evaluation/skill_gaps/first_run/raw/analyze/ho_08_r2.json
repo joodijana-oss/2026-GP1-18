@@ -1,0 +1,57 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on experience designing and implementing a multi-branch campus network including IP addressing, VLANs, routing, and site-to-site VPN",
+   "Practical troubleshooting ability demonstrated through diagnosing network faults using show/debug commands, ping and traceroute",
+   "Real-world deployment experience configuring and testing wireless access points and cabling during a large-scale volunteer event",
+   "Experience working with both simulated (Packet Tracer) and real physical networking equipment (Cisco 2960, ISR)",
+   "Holds an industry-recognized networking certification (CCNA) supporting theoretical and practical knowledge",
+   "Documentation skills shown through creating topology diagrams, address plans, and change logs"
+  ],
+  "currentSkills": [
+   "Cisco IOS",
+   "OSPF",
+   "VLANs",
+   "Wireshark",
+   "Python",
+   "IP Addressing and Subnetting",
+   "Network Troubleshooting",
+   "IPsec VPN",
+   "DHCP",
+   "Packet Tracer",
+   "Network Documentation",
+   "Structured Cabling",
+   "Wireless Access Point Deployment"
+  ],
+  "education": [
+   {
+    "degree": "Bachelor",
+    "major": "Computer Engineering",
+    "institution": "Umm Al-Qura University",
+    "year": "2021-2026"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "Cisco Certified Network Associate (CCNA 200-301)",
+    "issuer": "Cisco",
+    "year": "14/02/2026"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Two-branch campus network (graduation project)",
+    "description": "Planned IP addressing for 1,200 hosts across 14 departments by subnetting a /20 block, separated departments at layer 2 with trunked links between access and distribution layers, routed between them on a layer-3 switch, ran OSPF in two areas with failover testing, connected branches over an encrypted IPsec tunnel across a simulated ISP, centrally distributed addresses using DHCP scopes and relays, and documented topology and address plan in Visio with a change log. Built first in Packet Tracer then implemented on six real Cisco 2960 and ISR devices."
+   },
+   {
+    "name": "Hajj season volunteer network",
+    "description": "Helped install and aim 22 access points in two pilgrim guidance tents, tested coverage using a phone survey app, and crimped and tested around 80 Cat6 cable runs to a temporary rack."
+   },
+   {
+    "name": "Faulty lab exercise series (Networks 2 course)",
+    "description": "Diagnosed weekly network faults such as mismatched native VLAN, wrong subnet mask, and missing default route using show and debug commands, ping and traceroute."
+   }
+  ],
+  "experience": []
+ }
+}

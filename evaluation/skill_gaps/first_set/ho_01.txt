@@ -1,0 +1,38 @@
+Raghad Al-Otaibi
+Riyadh, Saudi Arabia | raghad.alotaibi@example.com | +966 50 000 0000
+
+PROFILE
+Final-year Cybersecurity student at King Saud University looking for a graduate position in a security operations team. Most of what I know comes from projects and competitions rather than paid work.
+
+EDUCATION
+King Saud University, Riyadh
+B.Sc. Cybersecurity, expected June 2027, GPA 4.5/5
+Relevant courses: Network Security, Operating Systems, Digital Forensics, Secure Software Development
+
+PROJECTS
+Six weeks of an SSH honeypot (graduation project, team of 4)
+- Deployed a Cowrie honeypot on an Ubuntu virtual machine in the cloud and locked the real management port down to our own addresses with iptables.
+- Parsed 48,000 recorded login attempts from the JSON logs with a Python script to find the most tried usernames and passwords and the commands intruders ran after getting in.
+- Looked up the 500 busiest source addresses in public reputation feeds and found that 71% were already reported as scanners.
+- Mapped the intruders' post-login behaviour to ATT&CK techniques and wrote a 40-page report presented to the department committee.
+
+Web application weaknesses lab (Secure Software Development course)
+- Found and exploited SQL injection and stored XSS in a deliberately vulnerable shop application using Burp Suite, then wrote the fix for each finding.
+- Ran Nmap and Nessus against the lab subnet and ranked the 23 findings by CVSS score.
+
+Suspicious attachment teardown (self-study)
+- Opened a macro-enabled Word document in an isolated VM, pulled out the hidden PowerShell downloader and listed the domains it called.
+
+COMPETITIONS
+- University Capture the Flag 2025: 3rd place of 60 teams. Recovered deleted files from a disk image with Autopsy and read a memory dump with Volatility.
+- National CTF qualifier 2026: solved the packet-capture challenges by following TCP streams in Wireshark.
+
+CERTIFICATIONS
+CompTIA Security+ (SY0-701), March 2026
+
+SKILLS
+Python, Linux, Wireshark, Burp Suite, Bash
+
+ACTIVITIES
+Cybersecurity club: gave an awareness talk on phishing to 90 first-year students.
+Languages: Arabic (native), English (IELTS 7.0)

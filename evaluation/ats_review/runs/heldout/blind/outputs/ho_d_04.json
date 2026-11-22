@@ -1,0 +1,43 @@
+{
+ "cvStructure": [
+  {
+   "issue": "The CV has no dedicated Skills section listing tools and technologies, even though tools like Kubernetes, Terraform, AWS, Git Hub Actions, Prometheus, and Grafana are mentioned only inside bullet points.",
+   "suggestion": "Add a standalone 'Technical Skills' section grouping tools such as AWS, Kubernetes, Terraform, CI/CD, Prometheus/Grafana, Ansible, and Bash so ATS systems can easily match them to job keywords."
+  }
+ ],
+ "sectionOrganization": [],
+ "keywordUsage": [
+  {
+   "issue": "The tool name 'Kubernets' is misspelled in the first Sadeem Cloud Services bullet point.",
+   "suggestion": "Correct the spelling to 'Kubernetes' so ATS keyword matching for this common DevOps tool works correctly."
+  },
+  {
+   "issue": "The tool name 'Terrafrom' is misspelled in the VPC/RDS provisioning bullet point.",
+   "suggestion": "Correct the spelling to 'Terraform', which is also the subject of the listed HashiCorp certification."
+  },
+  {
+   "issue": "'Git Hub Actions' is written as two words instead of the standard product name 'GitHub Actions'.",
+   "suggestion": "Write it as 'GitHub Actions' to match the standard tool name recognized by ATS and recruiters."
+  }
+ ],
+ "readability": [
+  {
+   "issue": "The summary claims 'over 3 years of professional experience', but the Experience section only shows a 3-month internship (Jun-Aug 2025) and a current role starting Mar 2026, totaling less than a year.",
+   "suggestion": "Revise the summary to accurately reflect the actual duration of professional experience shown in the Experience section."
+  },
+  {
+   "issue": "The Cloud Operations Intern bullets ('Monitoring', 'Server stuff and deployments', 'Helping with tickets') are vague sentence fragments without action verbs or measurable results.",
+   "suggestion": "Rewrite these as full bullet points starting with action verbs and include specifics, similar to the strong 'Wrote a Bash script...' bullet already in that role."
+  },
+  {
+   "issue": "The graduation project description ('I worked on the servers part with my team and it was successful') is vague and lacks technologies used or measurable outcomes.",
+   "suggestion": "Describe the specific server-related tasks performed, tools/technologies used, and any measurable result or impact of the project."
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "The 'Graduation project' entry has no date, while the other project entry ('Self-hosted Git server... 2025') includes one, creating inconsistent formatting.",
+   "suggestion": "Add a date or date range to the graduation project entry to match the formatting of the other project listed."
+  }
+ ]
+}

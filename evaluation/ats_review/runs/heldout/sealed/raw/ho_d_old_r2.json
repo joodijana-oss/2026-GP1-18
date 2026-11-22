@@ -1,0 +1,75 @@
+{
+ "label": "ho_d_01",
+ "cv": "ho_d",
+ "version": "old",
+ "run": 2,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:10:29.253353",
+ "finishedAt": "2026-11-22T02:11:14.844809",
+ "seconds": 45.591,
+ "inputTokens": 1916,
+ "outputTokens": 4456,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "The CV does not include a dedicated Skills section listing core technical tools and platforms, even though terms like Kubernetes, Terraform, CI/CD, and monitoring tools appear scattered across bullet points.",
+    "suggestion": "Add a Skills section that groups tools such as AWS, Kubernetes, Terraform, GitHub Actions, Prometheus, Grafana, Linux, and Bash so ATS systems and recruiters can quickly scan core competencies."
+   }
+  ],
+  "sectionOrganization": [],
+  "keywordUsage": [
+   {
+    "issue": "Several key technical terms are misspelled, including 'Kubernets' instead of 'Kubernetes', 'Terrafrom' instead of 'Terraform', and 'Git Hub Actions' instead of 'GitHub Actions'.",
+    "suggestion": "Correct these spellings so ATS keyword matching and recruiter searches correctly identify your experience with Kubernetes, Terraform, and GitHub Actions."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Cloud Operations Intern bullets ('Monitoring', 'Server stuff and deployments', 'Helping with tickets') are vague fragments without action verbs or measurable outcomes, unlike the detailed bullets in the current role.",
+    "suggestion": "Rewrite these as full sentences starting with action verbs, for example 'Monitored server health and resolved support tickets for production systems,' and add specific tools or results where possible."
+   },
+   {
+    "issue": "The Graduation project description ('I worked on the servers part with my team and it was successful') is vague and does not mention specific technologies or measurable results.",
+    "suggestion": "Describe the specific technologies used for the server component and any measurable outcome, similar to the detail provided in the self-hosted Git server project."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Projects section is inconsistent in date formatting: the self-hosted Git server project includes a year (2025) while the Graduation project has no date at all.",
+    "suggestion": "Add a date or date range to the Graduation project entry to match the formatting used for the other project."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "The CV does not include a dedicated Skills section listing core technical tools and platforms, even though terms like Kubernetes, Terraform, CI/CD, and monitoring tools appear scattered across bullet points.",
+    "suggestion": "Add a Skills section that groups tools such as AWS, Kubernetes, Terraform, GitHub Actions, Prometheus, Grafana, Linux, and Bash so ATS systems and recruiters can quickly scan core competencies."
+   }
+  ],
+  "sectionOrganization": [],
+  "keywordUsage": [
+   {
+    "issue": "Several key technical terms are misspelled, including 'Kubernets' instead of 'Kubernetes', 'Terrafrom' instead of 'Terraform', and 'Git Hub Actions' instead of 'GitHub Actions'.",
+    "suggestion": "Correct these spellings so ATS keyword matching and recruiter searches correctly identify your experience with Kubernetes, Terraform, and GitHub Actions."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Cloud Operations Intern bullets ('Monitoring', 'Server stuff and deployments', 'Helping with tickets') are vague fragments without action verbs or measurable outcomes, unlike the detailed bullets in the current role.",
+    "suggestion": "Rewrite these as full sentences starting with action verbs, for example 'Monitored server health and resolved support tickets for production systems,' and add specific tools or results where possible."
+   },
+   {
+    "issue": "The Graduation project description ('I worked on the servers part with my team and it was successful') is vague and does not mention specific technologies or measurable results.",
+    "suggestion": "Describe the specific technologies used for the server component and any measurable outcome, similar to the detail provided in the self-hosted Git server project."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Projects section is inconsistent in date formatting: the self-hosted Git server project includes a year (2025) while the Graduation project has no date at all.",
+    "suggestion": "Add a date or date range to the Graduation project entry to match the formatting used for the other project."
+   }
+  ]
+ }
+}

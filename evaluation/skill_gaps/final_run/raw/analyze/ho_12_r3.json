@@ -1,0 +1,61 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Experience performing gap analysis against a regulatory cyber framework and tracking remediation actions",
+   "Experience collecting and validating audit evidence for a large number of controls ahead of external audits",
+   "Experience conducting third-party/supplier risk assessments related to data handling",
+   "Able to rewrite policy documents into clear, staff-readable form that gained committee approval",
+   "Experience running security awareness exercises (phishing simulation) and delivering training",
+   "Maintains structured risk tracking (risk register with owner, likelihood, impact)",
+   "Experience producing regular compliance reporting for leadership",
+   "Relevant academic background in cybersecurity governance, audit and cyber law",
+   "Holds a recognized ISO/IEC 27001 Lead Implementer certification",
+   "Fluent in English (IELTS 7.5) and native Arabic speaker"
+  ],
+  "currentSkills": [
+   "ISO/IEC 27001",
+   "NCA ECC",
+   "Risk Registers",
+   "Excel",
+   "IT Audit",
+   "Compliance Monitoring",
+   "Gap Analysis",
+   "Policy Writing",
+   "Security Awareness Training",
+   "Vendor Risk Assessment",
+   "Information Security Management",
+   "Cyber Law",
+   "Network Security",
+   "Statement of Applicability"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Cybersecurity",
+    "institution": "Princess Nourah bint Abdulrahman University, Riyadh",
+    "year": "2022 – 2026"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "ISO/IEC 27001:2022 Lead Implementer",
+    "issuer": "PECB",
+    "year": "Aug 2026"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Capstone Project",
+    "description": "Defined the scope and wrote the statement of applicability for an invented dental clinic chain, following ISO/IEC 27001 Annex A."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Governance and compliance co-op trainee",
+    "organization": "A cooperative insurance company, Riyadh",
+    "duration": "02/2026 – Jul 2026",
+    "description": "Reviewed the regulator's cyber framework control by control with each department, identified compliance gaps and created a tracked action list of 46 items; collected evidence (screenshots, configurations, signed records) for 120 controls ahead of external audits and verified each against control requirements; sent and scored supplier questionnaires for nine suppliers handling policyholder data, flagging two for follow-up; rewrote acceptable-use and password policies into two documents approved by the committee in June; ran a quarterly phishing simulation for 600 staff and delivered a 20-minute awareness talk to 48 staff who clicked; maintained the department's risk register with owner, likelihood, impact and mitigation status; wrote the monthly compliance status summary for the head of cybersecurity."
+   }
+  ]
+ }
+}

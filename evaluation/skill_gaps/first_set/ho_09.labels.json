@@ -1,0 +1,307 @@
+{
+  "id": "ho_09",
+  "careerGoalId": "ai_ml_engineer",
+  "shown": [
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "evidence": "Trained a convolutional-recurrent network with CTC loss in PyTorch on the university GPU server",
+      "source": "project"
+    },
+    {
+      "skill": "PyTorch",
+      "alsoCalled": [
+        "Torch"
+      ],
+      "evidence": "Trained a convolutional-recurrent network with CTC loss in PyTorch",
+      "source": "project"
+    },
+    {
+      "skill": "Deep Learning",
+      "alsoCalled": [
+        "Neural Networks",
+        "DL"
+      ],
+      "evidence": "Trained a convolutional-recurrent network with CTC loss",
+      "source": "project"
+    },
+    {
+      "skill": "Computer Vision",
+      "alsoCalled": [
+        "Image Classification",
+        "Image Processing"
+      ],
+      "evidence": "Straightened, cropped and binarised each image",
+      "source": "project"
+    },
+    {
+      "skill": "Data Preprocessing",
+      "alsoCalled": [
+        "Data Preparation",
+        "Data Cleaning for ML"
+      ],
+      "evidence": "settled disagreements between labellers and removed blurred images",
+      "source": "project"
+    },
+    {
+      "skill": "Hyperparameter Tuning",
+      "alsoCalled": [
+        "Hyperparameter Optimization",
+        "Model Tuning",
+        "Grid Search"
+      ],
+      "evidence": "Compared runs over learning rate, batch size and dropout using a grid of 36 settings",
+      "source": "project"
+    },
+    {
+      "skill": "Model Evaluation",
+      "alsoCalled": [
+        "Model Validation",
+        "Cross-Validation",
+        "Evaluation Metrics"
+      ],
+      "evidence": "Measured results with character and word error rate on a held-out set of prescriptions from pharmacies the network never saw",
+      "source": "project"
+    },
+    {
+      "skill": "Model Deployment",
+      "alsoCalled": [
+        "Model Serving",
+        "ML Deployment"
+      ],
+      "evidence": "Wrapped the trained network behind a small FastAPI service so the pharmacy students could upload a photo from a browser",
+      "source": "project"
+    },
+    {
+      "skill": "Natural Language Processing",
+      "alsoCalled": [
+        "NLP",
+        "Text Classification",
+        "Text Mining"
+      ],
+      "evidence": "Spam SMS filter in Arabic and English",
+      "source": "project"
+    },
+    {
+      "skill": "Feature Engineering",
+      "alsoCalled": [
+        "Feature Extraction",
+        "Feature Selection"
+      ],
+      "evidence": "Turned 11,000 messages into TF-IDF and character n-gram vectors",
+      "source": "project"
+    },
+    {
+      "skill": "Machine Learning",
+      "alsoCalled": [
+        "ML",
+        "Supervised Learning"
+      ],
+      "evidence": "compared logistic regression, naive Bayes and a linear SVM; best F1 0.96",
+      "source": "project"
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "Wrote queries on the entity's Oracle warehouse to prepare monthly service-usage tables",
+      "source": "experience"
+    },
+    {
+      "skill": "Scikit-learn",
+      "alsoCalled": [
+        "sklearn"
+      ],
+      "evidence": "Python, PyTorch, scikit-learn, pandas, NumPy, TensorFlow, Git",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Pandas",
+      "alsoCalled": [
+        "Python Pandas"
+      ],
+      "evidence": "Python, PyTorch, scikit-learn, pandas, NumPy, TensorFlow, Git",
+      "source": "skills_section"
+    },
+    {
+      "skill": "NumPy",
+      "alsoCalled": [
+        "Numerical Python"
+      ],
+      "evidence": "Python, PyTorch, scikit-learn, pandas, NumPy, TensorFlow, Git",
+      "source": "skills_section"
+    },
+    {
+      "skill": "TensorFlow",
+      "alsoCalled": [
+        "Keras"
+      ],
+      "evidence": "Python, PyTorch, scikit-learn, pandas, NumPy, TensorFlow, Git",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ],
+      "evidence": "Python, PyTorch, scikit-learn, pandas, NumPy, TensorFlow, Git",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Data Augmentation",
+      "alsoCalled": [
+        "Image Augmentation"
+      ],
+      "evidence": "enlarged the training set with small rotations and ink-thickness changes",
+      "source": "project"
+    },
+    {
+      "skill": "Data Labeling",
+      "alsoCalled": [
+        "Data Annotation",
+        "Dataset Labelling"
+      ],
+      "evidence": "Photographed and labelled 4,200 prescription lines with two pharmacy students",
+      "source": "project"
+    },
+    {
+      "skill": "Experiment Tracking",
+      "alsoCalled": [
+        "Weights & Biases",
+        "MLflow"
+      ],
+      "evidence": "tracked in Weights & Biases",
+      "source": "project"
+    },
+    {
+      "skill": "FastAPI",
+      "alsoCalled": [
+        "Python Web API"
+      ],
+      "evidence": "behind a small FastAPI service",
+      "source": "project"
+    },
+    {
+      "skill": "Optical Character Recognition",
+      "alsoCalled": [
+        "OCR",
+        "Handwriting Recognition"
+      ],
+      "evidence": "Reading handwritten Arabic prescriptions",
+      "source": "project"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Linear Algebra",
+      "alsoCalled": [
+        "Matrix Algebra"
+      ],
+      "evidence": "Linear Algebra for Computing",
+      "why": "Course title only."
+    },
+    {
+      "skill": "Information Retrieval",
+      "alsoCalled": [
+        "Search and Retrieval"
+      ],
+      "evidence": "Information Retrieval, Linear Algebra for Computing",
+      "why": "Course title only."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "MLOps",
+      "alsoCalled": [
+        "ML Pipelines",
+        "Model Lifecycle Management"
+      ],
+      "why": "Tracked experiments and served one demo, but no pipeline, retraining or monitoring.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Large Language Models",
+      "alsoCalled": [
+        "LLMs",
+        "Generative AI"
+      ],
+      "why": "Her text work uses classic bag-of-words classifiers, not language models.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "why": "Served the demo with FastAPI, but nothing about packaging it in a container.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Statistics",
+      "alsoCalled": [
+        "Statistical Analysis",
+        "Descriptive Statistics"
+      ],
+      "why": "Uses statistical models for classification and reports error rates, but no statistical analysis or statistics course is shown.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Microsoft Certified: Azure AI Engineer Associate",
+      "alsoCalled": [
+        "AI-102"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "AWS",
+      "alsoCalled": [
+        "Amazon Web Services"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Apache Spark",
+      "alsoCalled": [
+        "PySpark",
+        "Spark"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Retrieval-Augmented Generation",
+      "alsoCalled": [
+        "RAG"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Forecasting",
+      "alsoCalled": [
+        "Time Series Forecasting",
+        "Demand Forecasting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Recommender Systems",
+      "alsoCalled": [
+        "Recommendation Systems"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

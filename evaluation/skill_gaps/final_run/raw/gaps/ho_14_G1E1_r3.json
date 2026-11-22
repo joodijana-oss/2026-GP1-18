@@ -1,0 +1,65 @@
+{
+ "case": "ho_14",
+ "arm": "G1E1",
+ "run": 3,
+ "gaps": [
+  "QoS",
+  "MPLS",
+  "FortiGate",
+  "Palo Alto"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "LAN/WAN",
+   "status": "shown"
+  },
+  {
+   "skill": "Cisco Routers and Switches",
+   "status": "shown"
+  },
+  {
+   "skill": "VPN",
+   "status": "shown"
+  },
+  {
+   "skill": "VLAN",
+   "status": "shown"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "partly"
+  },
+  {
+   "skill": "CCNA",
+   "status": "partly"
+  },
+  {
+   "skill": "BGP",
+   "status": "shown"
+  },
+  {
+   "skill": "OSPF",
+   "status": "shown"
+  },
+  {
+   "skill": "QoS",
+   "status": "missing"
+  },
+  {
+   "skill": "MPLS",
+   "status": "missing"
+  },
+  {
+   "skill": "FortiGate",
+   "status": "missing"
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing"
+  }
+ ]
+}

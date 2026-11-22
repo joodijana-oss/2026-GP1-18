@@ -1,0 +1,56 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Experience working with a real product team using Java and Spring Boot with PostgreSQL",
+   "Implemented HTTP API endpoints and wrote request/response documentation for partner systems",
+   "Wrote automated tests that increased test coverage of the fee calculator module from 38% to 81%",
+   "Diagnosed and fixed a concurrency bug causing duplicate invoices by reproducing it, debugging with breakpoints, and applying a uniqueness constraint",
+   "Participated in code review by submitting merge requests and reviewing teammates' requests",
+   "Experience working in Agile sprints with daily stand-ups and sprint demos",
+   "Designed a class model using abstraction (Reservable type) to support extensibility in a team project",
+   "Organized a weekly study circle for first-year women students, showing initiative and community engagement"
+  ],
+  "currentSkills": [
+   "Java",
+   "Python",
+   "SQL",
+   "C++",
+   "HTML",
+   "CSS",
+   "Spring Boot",
+   "PostgreSQL",
+   "REST API Development",
+   "API Documentation",
+   "Unit Testing",
+   "Continuous Integration",
+   "Debugging",
+   "Concurrency",
+   "Git",
+   "Agile/Scrum",
+   "Object-Oriented Design"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "Imam Abdulrahman Bin Faisal University",
+    "year": "2021 - 2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Seat booking for the university library",
+    "description": "Team project (four members) to design a seat booking system for the university library. Designed the class model including Booking, Seat, and User, with a shared abstract Reservable type to allow future extension to study rooms. Wrote the booking rules and librarian-facing screens."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Software co-op trainee",
+    "organization": "A company that builds customs-clearance software for freight forwarders",
+    "duration": "January 2026 - July 2026",
+    "description": "Joined the team behind a shipment-tracking service built with Java, Spring Boot, and PostgreSQL. Added two HTTP endpoints for partner systems to query container status and wrote their documentation. Wrote automated tests for the fee calculator, raising tested coverage from 38% to 81%. Diagnosed and fixed a duplicate invoice bug caused by a race condition between two threads, resolving it with a uniqueness constraint. Submitted all changes through merge requests and reviewed teammates' code twice a week. Worked in two-week sprints with daily stand-ups and sprint demos to the product owner."
+   }
+  ]
+ }
+}

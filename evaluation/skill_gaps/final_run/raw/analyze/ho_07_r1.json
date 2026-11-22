@@ -1,0 +1,61 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Migrated backend services from manually configured virtual machines to a managed container cluster, increasing release frequency from biweekly to multiple times per day",
+   "Implemented autoscaling rules to handle traffic surges and reduce costs during off-peak hours",
+   "Established infrastructure as code using Terraform for networks, databases, and queues, reducing staging environment setup time to 20 minutes",
+   "Built an automated CI/CD pipeline with testing, security scanning, and automatic rollback on elevated error rates",
+   "Set up monitoring and alerting that reduced fault detection time from about 25 minutes to under 3 minutes",
+   "Redesigned network architecture into public/private subnets across multiple availability zones for improved security and resilience",
+   "Reduced monthly cloud costs by 31% through instance right-sizing and storage tier optimization",
+   "Shared operational lessons publicly through a talk on handling production outages"
+  ],
+  "currentSkills": [
+   "AWS",
+   "Terraform",
+   "Docker",
+   "Linux",
+   "Git",
+   "Kubernetes",
+   "EKS",
+   "CI/CD",
+   "GitHub Actions",
+   "Grafana",
+   "Prometheus",
+   "Shell Scripting",
+   "Networking",
+   "Load Balancing",
+   "Cloud Cost Optimization"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Engineering",
+    "institution": "Taibah University",
+    "year": "2024"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "AWS Certified Solutions Architect – Associate",
+    "issuer": "AWS",
+    "year": "October 2025"
+   }
+  ],
+  "projects": [],
+  "experience": [
+   {
+    "title": "Platform Engineer",
+    "organization": "an online grocery delivery start-up, Riyadh",
+    "duration": "Mar 2025 – Present",
+    "description": "Moved the ordering backend from manually configured virtual machines to a managed EKS cluster, increasing release frequency from fortnightly to multiple times a day. Wrote deployment manifests and autoscaling rules for evening traffic surges. Defined networks, databases, and queues as Terraform code deployed via pipeline, enabling 20-minute staging environment creation. Built a GitHub Actions release pipeline with tests, image build, security scan, and automatic rollback on rising error rates. Implemented Grafana and Prometheus dashboards and on-call alerts after an outage, reducing fault detection time from about 25 minutes to under 3. Split a flat network into public and private subnets across two availability zones behind a load balancer, isolating the database to the application tier. Reduced monthly AWS costs by 31% through instance right-sizing and cheaper storage tiers. Wrote shell scripts for nightly database dumps and log rotation."
+   },
+   {
+    "title": "IT Intern",
+    "organization": "data centre of Taibah University, Madinah",
+    "duration": "06/2023-08/2023",
+    "description": "Racked servers, installed Ubuntu on them, and kept cabling records."
+   }
+  ]
+ }
+}

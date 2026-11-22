@@ -1,0 +1,35 @@
+Mohammed Al-Zahrani
+Makkah  |  m.alzahrani@example.com  |  +966 50 000 0000
+
+Career Objective
+Computer Engineering graduate from Umm Al-Qura University with a CCNA and many hours in the networking lab, looking for a junior position in a network operations team.
+
+Education
+Umm Al-Qura University, Makkah
+Bachelor of Computer Engineering                                   2021-2026
+Graduation project (see below) graded Excellent
+
+Academic and Lab Projects
+Two-branch campus network (graduation project)                  Sep 2025 – May 2026
+o Planned the address space for 1,200 hosts over 14 departments, carving a /20 into right-sized blocks with room to grow
+o Kept departments apart at layer 2 with trunked links between the access and distribution layers, and routed between them on a layer-3 switch
+o Ran OSPF in two areas between the branches and checked failover by pulling links
+o Connected the two branches over an encrypted IPsec tunnel across a simulated ISP
+o Handed out addresses centrally with scopes on a server and a relay on each gateway
+o Drew the full topology and address plan in Visio and kept a change log
+Built first in Packet Tracer, then on six real Cisco 2960 and ISR devices in the college lab.
+
+Hajj season volunteer network 2025 (university team)
+o Helped install and aim 22 access points in two pilgrim guidance tents and tested coverage on foot with a phone survey app
+o Crimped and tested around 80 Cat6 runs to the temporary rack
+
+Faulty lab exercise series (Networks 2 course)
+o Each week the instructor broke a working topology; found causes such as a mismatched native VLAN, a wrong mask and a missing default route using show and debug commands, ping and traceroute
+
+Certification
+Cisco Certified Network Associate (CCNA 200-301) – 14/02/2026
+
+Technical Skills
+Cisco IOS, OSPF, VLANs, Wireshark, basic Python
+
+Languages: Arabic, English

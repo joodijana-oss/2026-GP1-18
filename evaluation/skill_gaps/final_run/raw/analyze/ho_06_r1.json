@@ -1,0 +1,58 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Strong competitive programming background with around 650 problems solved across three years",
+   "Proven ability in graphs, dynamic programming and segment trees",
+   "Successful competition results, including 14th of 96 teams nationally and 2nd in regional qualifier",
+   "Experience mentoring and coaching junior students in programming",
+   "Built and maintains a real-world application (Sallah bot) used by around 1,200 people",
+   "Capable of diagnosing and fixing production bugs (time-zone issue in Sallah bot)",
+   "Experience with server setup and maintenance over SSH",
+   "Hands-on experience designing database schemas and writing SQL queries",
+   "Experience building full-stack web applications (Tutor Match)",
+   "Follows good software engineering practices such as feature branching and testing before merging",
+   "Demonstrated initiative through independent personal projects",
+   "Recognized academic performance (Dean's list, Best first-year project award)"
+  ],
+  "currentSkills": [
+   "C++",
+   "Python",
+   "Java",
+   "SQL",
+   "SQLite",
+   "Flask",
+   "JavaScript",
+   "Linux Server Administration",
+   "Git",
+   "Debugging",
+   "Data Structures and Algorithms"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "University of Tabuk",
+    "year": "expected 2028"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Sallah bot",
+    "description": "A Telegram bot written in Python that sends prayer-time reminders for the user's city, used by about 1,200 people. Runs on a self-managed Ubuntu server accessed via SSH. Stores user data in SQLite with hand-written tables and queries. Fixed a time-zone bug causing late Fajr reminders and added a safeguard to prevent recurrence."
+   },
+   {
+    "name": "Tutor Match",
+    "description": "A website for University of Tabuk students to find peer tutors, built with plain JavaScript frontend and a Flask backend returning tutor data as JSON. Developed with about 140 commits using one branch per feature, tested before merging. Gained 85 student sign-ups in the first term."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Coach",
+    "organization": "First-year training group (competitive programming)",
+    "duration": "Weekly (Sundays)",
+    "description": "Coaches the first-year training group every Sunday evening and sets their practice problems."
+   }
+  ]
+ }
+}

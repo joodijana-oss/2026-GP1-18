@@ -1,0 +1,34 @@
+{
+ "goal": "it_support_specialist",
+ "extractor": "E1",
+ "run": 1,
+ "postings": 20,
+ "rawNames": [
+  "Hardware Troubleshooting",
+  "Windows",
+  "Active Directory",
+  "Network Troubleshooting",
+  "Ticketing Systems",
+  "TCP/IP",
+  "Microsoft 365",
+  "Printer Support",
+  "DHCP",
+  "DNS",
+  "CCNA",
+  "VPN"
+ ],
+ "names": [
+  "Hardware Troubleshooting",
+  "Windows",
+  "Active Directory",
+  "Network Troubleshooting",
+  "Ticketing Systems",
+  "TCP/IP",
+  "Microsoft 365",
+  "Printer Support",
+  "DHCP",
+  "DNS",
+  "CCNA",
+  "VPN"
+ ]
+}

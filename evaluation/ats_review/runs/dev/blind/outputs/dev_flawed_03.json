@@ -1,0 +1,52 @@
+{
+ "cvStructure": [
+  {
+   "issue": "There is no dedicated Skills section; tools such as Python, TensorFlow, PyTorch, scikit-learn, SQL, Pandas, Power BI, and Git are only mentioned inside long experience/project descriptions.",
+   "suggestion": "Add a short 'Technical Skills' section that lists these tools explicitly so ATS systems can match them to the AI/ML Engineer role."
+  },
+  {
+   "issue": "The CV has no link to a GitHub, portfolio, or LinkedIn profile, which is valuable evidence for an AI/ML Engineer applicant with several hands-on projects.",
+   "suggestion": "Add a GitHub or portfolio link near the contact details so recruiters can view the code for the Tweets Mood Checker and House Price Guesser projects."
+  }
+ ],
+ "sectionOrganization": [
+  {
+   "issue": "The experience section heading is spelled 'EXPERIANCE' instead of 'EXPERIENCE'.",
+   "suggestion": "Correct the heading to 'EXPERIENCE' so it is recognized consistently by ATS parsers."
+  },
+  {
+   "issue": "Experience entries are not ordered most recent first: Student Lab Assistant (09/2023-05/2024) is listed before Data Science Trainee (March-June 2025) and Machine Learning Intern (2025), which are more recent.",
+   "suggestion": "Reorder the experience section so Machine Learning Intern and Data Science Trainee appear before Student Lab Assistant."
+  }
+ ],
+ "keywordUsage": [
+  {
+   "issue": "Several project and internship descriptions use informal, everyday phrasing instead of standard ML/AI terms, for example 'says which kind it is' instead of 'image classification' and 'decides if the writer is happy, angry or neutral' instead of 'sentiment analysis'.",
+   "suggestion": "Replace these descriptions with the standard technical terms (e.g., image classification, sentiment analysis, text classification) so recruiters and ATS keyword scans recognize the relevant AI/ML skills."
+  }
+ ],
+ "readability": [
+  {
+   "issue": "Many bullet points are written as first-person narration ('I made...', 'I collected...', 'I gathered...') rather than starting with strong action verbs.",
+   "suggestion": "Rewrite these bullets to begin with action verbs, for example 'Developed a mobile app that classifies date fruit images' instead of 'I made a phone app that looks at a picture of dates and says which kind it is'."
+  },
+  {
+   "issue": "The graduation project result 'it got it right most of the time' is vague and lacks a specific metric, unlike the quantified result given for the Machine Learning Intern role.",
+   "suggestion": "State the actual model accuracy or evaluation metric if available, similar to the '35% reduction in response time' example used elsewhere."
+  },
+  {
+   "issue": "The Student Lab Assistant bullets are generic, such as 'Duties included various tasks given by the lab supervisor', which does not convey a clear skill or achievement.",
+   "suggestion": "Replace this line with a specific responsibility or outcome, such as the exact lab systems managed or number of students supported."
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "Dates are formatted inconsistently across the CV, mixing 'MM/YYYY' (09/2023), 'Month YYYY' (March 2025), and year-only (2025) formats.",
+   "suggestion": "Use one consistent date format, such as 'MM/YYYY', for all entries in Education, Experience, and Projects."
+  },
+  {
+   "issue": "The Machine Learning Intern role is dated '2025 - present' even though the description states the internship finished in September 2025, which contradicts today's date of 2026-11-22.",
+   "suggestion": "Change the date range to '06/2025 - 09/2025' (or the exact months) instead of 'present' since the internship has already ended."
+  }
+ ]
+}

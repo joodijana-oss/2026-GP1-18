@@ -1,0 +1,54 @@
+{
+ "targets": [
+  "REST APIs",
+  "React",
+  "Node.js",
+  "SQL",
+  "Spring Boot",
+  "Docker",
+  "Kubernetes",
+  "Microservices Architecture"
+ ],
+ "answer": [
+  {
+   "skill": "REST APIs",
+   "status": "partly",
+   "quote": "calls a public prayer-times web API and caches"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "SQL",
+   "status": "partly",
+   "quote": "Database Systems (this term)"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

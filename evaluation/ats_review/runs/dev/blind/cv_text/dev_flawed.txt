@@ -1,0 +1,53 @@
+Nora Al-Harbi
+Buraydah, Saudi Arabia  |  nora.alharbi (at) example dot com
+SUMMARY
+Computer Science graduate who likes working with data and smart systems. Looking for a first full-time role
+as an AI / Machine Learning Engineer.
+EDUCATION
+Bachelor of Science in Computer Science
+2022 - 2026
+Qassim University, Buraydah  |  GPA 4.45 / 5.00
+Graduation project: I made a phone app that looks at a picture of dates and says which kind it is. I collected
+around 4,000 pictures with my team and taught the computer to tell them apart using PYTHON and
+Tensorflow, and it got it right most of the time.
+EXPERIANCE
+Student Lab Assistant
+09/2023 - 05/2024
+College of Computer, Qassim University, Buraydah
+Responsible for the computer lab during evening hours.
+Responsible for helping first-year students with their python homework.
+Duties included various tasks given by the lab supervisor.
+Data Science Trainee (Co-op)
+March 2025 - June 2025
+Najd Logistics Company, Riyadh
+In this co-op I was part of the data team and I was given many different things to do during the four months,
+for example at the start I was looking at the delivery records in sql and fixing the wrong and empty values
+with Pandas, and after that my manager asked me to try to guess which deliveries will arrive late so I used
+sk-learn for that and I tried a few methods until one of them worked well enough, and I also made some
+charts in power bi for the weekly meeting and I wrote my code in jupyter and saved it with GIT so the rest of
+the team could use it after I left.
+Machine Learning Intern
+2025 - present
+Wadi Tech Solutions, Riyadh
+Ten-week summer internship that finished in September 2025.
+Worked on AI stuff with the research team.
+Reduced model response time by 35% (from 420 ms to 270 ms) by converting a Pytorch model to ONNX
+and batching requests.
+Helped with the thing that reads customer messages and sorts them into groups.
+THINGS I BUILT
+Arabic Tweets Mood Checker
+2025
+A program that reads Arabic tweets and decides if the writer is happy, angry or neutral. I gathered 12,000
+tweets, cleaned the words, and trained it in pytorch. Later I made it bigger with a ready-made language
+model that I adjusted on my own data.
+House Price Guesser
+11/2024
+Used Scikit learn and python to guess house prices in Riyadh from size, district and age. Compared a few
+methods and picked the best one.
+CERTIFICATIONS
+Machine Learning Specialization, Saudi Digital Academy, 2025
+Deep Learning Fundamentals, Saudi Digital Academy, 2025
+
+SQL for Data Analysis, Qassim University Continuing Education, 2024
+LANGUAGES
+Arabic (native), English (fluent)

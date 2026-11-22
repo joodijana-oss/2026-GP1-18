@@ -1,0 +1,69 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on experience supporting a multi-site user base of 300 users across four offices",
+   "Practical experience configuring and patching Cisco Catalyst access layer switches including VLAN assignment",
+   "Structured troubleshooting approach from cable to gateway to name resolution before escalation",
+   "Experience planning and deploying wireless infrastructure using site survey methodology",
+   "Experience with remote-access VPN client support and troubleshooting",
+   "Maintains documentation discipline through consistent port map and rack photo updates",
+   "Experience with network monitoring tools to detect and escalate link/device issues",
+   "Self-driven home lab practice demonstrating applied networking knowledge beyond job requirements",
+   "Holds a relevant industry certification (CCNA) supporting networking career goals"
+  ],
+  "currentSkills": [
+   "Cisco Switches",
+   "VLANs",
+   "OSPF",
+   "Wi-Fi",
+   "Windows 10/11",
+   "Active Directory",
+   "Network Troubleshooting",
+   "Structured Cabling",
+   "FortiClient VPN",
+   "PRTG Monitoring",
+   "UniFi Access Points",
+   "Site Survey",
+   "DHCP",
+   "GNS3",
+   "Packet Capture",
+   "Static Route Redistribution",
+   "VLAN Filtering"
+  ],
+  "education": [
+   {
+    "degree": "Diploma",
+    "major": "Computer Networks",
+    "institution": "Jubail Industrial College",
+    "year": "2024"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "CCNA (Cisco Certified Network Associate)",
+    "issuer": "Cisco",
+    "year": "2026"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Home lab network",
+    "description": "Built a three-router OSPF topology using two Cisco 1941 routers and a 3560 switch with GNS3, including redistribution of static routes, VLAN filtering, and a DHCP server on the router. Captured traffic on lab links to observe protocol behavior during neighbor formation."
+   }
+  ],
+  "experience": [
+   {
+    "title": "IT Support Technician",
+    "organization": "an industrial services contractor, Jubail",
+    "duration": "Oct 2024 - present",
+    "description": "First point of contact for 300 users across four site offices handling laptops, accounts, printers, and phones. Patched new desks to correct ports and assigned ports to voice or data segments on Cisco Catalyst access layer switches. Troubleshot connectivity issues from cable to gateway to name resolution before escalating to head-office network team. Replaced nine consumer access points with a controller-managed UniFi set based on a walk-through site survey. Enrolled staff laptops in FortiClient remote-access VPN and assisted with tunnel connectivity issues. Maintained port maps and rack photos in the team wiki. Monitored link and device status via PRTG and raised tickets for uplink drops. Pulled and terminated cable for a 24-desk office extension with a contractor."
+   },
+   {
+    "title": "Help Desk Agent (summer training)",
+    "organization": "a telecom reseller, Dammam",
+    "duration": "Jun - Aug 2023",
+    "description": "Logged and answered customer calls about home internet."
+   }
+  ]
+ }
+}

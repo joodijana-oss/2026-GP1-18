@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SQL",
+  "Power BI",
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Tableau",
+  "R",
+  "Machine Learning",
+  "Data Analysis",
+  "Pandas",
+  "NumPy",
+  "Stakeholder Management"
+ ],
+ "answer": [
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "Pulled three seasons of shipment records out of the order database with my own queries"
+  },
+  {
+   "skill": "Power BI",
+   "status": "shown",
+   "quote": "Power BI"
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Visualization",
+   "status": "shown",
+   "quote": "charts of late shipments by destination"
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "partly",
+   "quote": "Kept the cleaned data in an Excel workbook with lookup formulas"
+  },
+  {
+   "skill": "Tableau",
+   "status": "shown",
+   "quote": "Tableau"
+  },
+  {
+   "skill": "R",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Analysis",
+   "status": "shown",
+   "quote": "ran a t-test to check the gap was not down to chance"
+  },
+  {
+   "skill": "Pandas",
+   "status": "shown",
+   "quote": "Did the work in a notebook with pandas"
+  },
+  {
+   "skill": "NumPy",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "shown",
+   "quote": "Sat with the warehouse supervisor and the export manager to agree what \"late\" should mean"
+  }
+ ]
+}

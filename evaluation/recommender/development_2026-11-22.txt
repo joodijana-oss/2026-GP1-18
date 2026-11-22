@@ -1,0 +1,131 @@
+OPPORTUNITY RECOMMENDER EVALUATION
+Evaluation date : 2026-11-19 (fixed)
+Catalogue       : 430 opportunities, 420 open on that date
+Personas        : 8 (test/fixtures/opportunity_eval_personas.json)
+Note            : these personas are a development set. They were seen while the ranking was designed and reviewed, so the
+                  numbers are optimistic. Differences of about 0.02 between systems are noise at this sample size.
+
+persona_data_analyst  (Beginner, 7 gaps, 43 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.951     0.911    -0.040
+  GapCov@10                  1.000     1.000    +0.000
+  Ties@10                       10         0       -10
+  TopGapRank                     2         1        -1
+  Goal-only above gap            8         0        -8
+
+persona_cybersecurity_analyst  (Intermediate, 7 gaps, 23 labels, labels allow GapCov 0.86)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.735     0.840    +0.104
+  GapCov@10                  0.857     0.857    +0.000
+  Ties@10                        6         0        -6
+  TopGapRank                     1         1        +0
+  Goal-only above gap           17         0       -17
+
+persona_software_engineer  (Beginner, 8 gaps, 39 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.606     0.798    +0.192
+  GapCov@10                  0.500     1.000    +0.500
+  Ties@10                        8         0        -8
+  TopGapRank                     1         1        +0
+  Goal-only above gap           15         0       -15
+
+persona_cloud_devops_engineer  (Advanced, 7 gaps, 14 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.872     0.863    -0.009
+  GapCov@10                  1.000     1.000    +0.000
+  Ties@10                        6         0        -6
+  TopGapRank                     1         1        +0
+  Goal-only above gap           14         0       -14
+
+persona_ui_ux_designer  (No Experience, 7 gaps, 15 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.869     0.837    -0.031
+  GapCov@10                  1.000     1.000    +0.000
+  Ties@10                        9         0        -9
+  TopGapRank                     1         1        +0
+  Goal-only above gap            8         0        -8
+
+persona_network_engineer  (Intermediate, 7 gaps, 22 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        0.800     1.000    +0.200
+  nDCG@10                    0.420     0.746    +0.325
+  GapCov@10                  0.714     0.857    +0.143
+  Ties@10                        6         0        -6
+  TopGapRank                     5         1        -4
+  Goal-only above gap            4         0        -4
+
+persona_ai_ml_engineer  (Advanced, 7 gaps, 16 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.859     0.899    +0.040
+  GapCov@10                  1.000     1.000    +0.000
+  Ties@10                        6         0        -6
+  TopGapRank                     1         1        +0
+  Goal-only above gap           13         0       -13
+
+persona_database_administrator  (Beginner, 8 gaps, 14 labels, labels allow GapCov 0.75)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.817     0.805    -0.011
+  GapCov@10                  0.750     0.750    +0.000
+  Ties@10                        6         0        -6
+  TopGapRank                     2         3        +1
+  Goal-only above gap            9         0        -9
+
+NDCG@10 PER PERSONA
+  Persona                             Baseline       New    Change
+  persona_data_analyst                   0.951     0.911    -0.040
+  persona_cybersecurity_analyst          0.735     0.840    +0.104
+  persona_software_engineer              0.606     0.798    +0.192
+  persona_cloud_devops_engineer          0.872     0.863    -0.009
+  persona_ui_ux_designer                 0.869     0.837    -0.031
+  persona_network_engineer               0.420     0.746    +0.325
+  persona_ai_ml_engineer                 0.859     0.899    +0.040
+  persona_database_administrator         0.817     0.805    -0.011
+  Average                                0.766     0.837    +0.071
+  New is better for 4, the same for 0 and worse for 4 of 8 personas.
+
+GAPCOV@10 PER PERSONA
+  Persona                             Baseline       New    Change
+  persona_data_analyst                   1.000     1.000    +0.000
+  persona_cybersecurity_analyst          0.857     0.857    +0.000
+  persona_software_engineer              0.500     1.000    +0.500
+  persona_cloud_devops_engineer          1.000     1.000    +0.000
+  persona_ui_ux_designer                 1.000     1.000    +0.000
+  persona_network_engineer               0.714     0.857    +0.143
+  persona_ai_ml_engineer                 1.000     1.000    +0.000
+  persona_database_administrator         0.750     0.750    +0.000
+  Average                                0.853     0.933    +0.080
+  New is better for 2, the same for 6 and worse for 0 of 8 personas.
+
+AVERAGE OVER 8 PERSONAS
+                          Baseline       New    Change
+  nDCG@10                    0.766     0.837    +0.071
+  GapCov@10                  0.853     0.933    +0.080
+  TopGapRank                 1.750     1.250    -0.500
+  P@5 (sanity check)         0.975     1.000    +0.025
+  Ties@10                    7.125     0.000    -7.125
+  Goal-only above gap       11.000     0.000   -11.000
+  (TopGapRank: rank of the first result that teaches the most demanded gap; lower is better. Ties and
+   goal-only-above-gap: lower is better. P@5 is close to its maximum for both systems, so it says little.)
+
+Rankings identical to baseline: 0/8 personas
+
+TIMING (this computer; a JIT run of this script is slower than a release build, debug mode on an emulator is slower still)
+  Build the index once per opportunity list (median of 5)        : 9.9 ms
+  First recommend() on a new list, first persona (includes the build): 19.5 ms
+  First recommend() on a new list, realistic profile (12 gaps, 25 current skills, median of 5): 18.4 ms
+  recommend() for a new user, index already built (median)     : 1.84 ms
+  recommend() repeated, New      (median of 240 calls)        : 0.38 ms   (slowest 4.31 ms)
+  recommend() repeated, Baseline (median of 240 calls)        : 63.32 ms
+  The app calls recommendInBackground():
+    new list, builds the index on a background isolate, wall time (median of 3): 23.2 ms
+    same list, same user again, runs here on the kept index (median of 30): 0.38 ms   (slowest 0.75 ms)
+    same list, a user not seen before, runs here on the kept index (median of 24): 0.70 ms   (slowest 3.01 ms)
+    index built in the background kept and reused, never built again for the same list: yes
+  The index is built once per list: when the screen first opens, and once after each pull to refresh or retry, which loads a new list.

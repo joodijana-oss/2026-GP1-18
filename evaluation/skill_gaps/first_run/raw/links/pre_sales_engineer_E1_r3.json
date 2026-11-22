@@ -1,0 +1,133 @@
+{
+ "goal": "pre_sales_engineer",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "RFP Response",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "responding to RFPs",
+    "proposal development process",
+    "bid response writing"
+   ]
+  },
+  {
+   "gap": "BOQ Preparation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "bill of quantities",
+    "cost estimation documents",
+    "technical cost breakdown"
+   ]
+  },
+  {
+   "gap": "Technical Proposal Writing",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "writing technical proposals",
+    "structuring solution documents",
+    "proposal drafting skills"
+   ]
+  },
+  {
+   "gap": "Solution Architecture Design",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing technical solutions",
+    "architecting end-to-end systems",
+    "solution blueprint design"
+   ]
+  },
+  {
+   "gap": "Proof of Concept Development",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "building proof of concepts",
+    "validating solution feasibility",
+    "pilot solution testing"
+   ]
+  },
+  {
+   "gap": "Product Demonstration",
+   "kind": "skill",
+   "concepts": [
+    "Product Demonstrations"
+   ],
+   "phrases": [
+    "demonstrating product features",
+    "live product walkthroughs",
+    "showcasing solutions to clients"
+   ]
+  },
+  {
+   "gap": "Pre-Sales Support",
+   "kind": "skill",
+   "concepts": [
+    "Customer Engagement"
+   ],
+   "phrases": [
+    "supporting sales teams",
+    "technical pre-sales activities",
+    "customer solution consulting"
+   ]
+  },
+  {
+   "gap": "Customer Requirement Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Requirements Gathering"
+   ],
+   "phrases": [
+    "analyzing client needs",
+    "gathering business requirements",
+    "understanding customer needs"
+   ]
+  },
+  {
+   "gap": "Vendor Coordination",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "coordinating with vendors",
+    "managing supplier relationships",
+    "vendor communication skills"
+   ]
+  },
+  {
+   "gap": "Presentation Skills",
+   "kind": "soft",
+   "concepts": [
+    "Presentations"
+   ],
+   "phrases": [
+    "delivering effective presentations",
+    "public speaking techniques",
+    "structuring presentation content"
+   ]
+  },
+  {
+   "gap": "Cloud Computing",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Network Security",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": []
+  }
+ ]
+}

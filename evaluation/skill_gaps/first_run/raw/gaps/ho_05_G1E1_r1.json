@@ -1,0 +1,64 @@
+{
+ "case": "ho_05",
+ "arm": "G1E1",
+ "run": 1,
+ "gaps": [
+  "Node.js",
+  "Kubernetes",
+  "Python"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "REST APIs",
+   "status": "shown"
+  },
+  {
+   "skill": "Git",
+   "status": "shown"
+  },
+  {
+   "skill": "SQL",
+   "status": "shown"
+  },
+  {
+   "skill": "React",
+   "status": "shown"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing"
+  },
+  {
+   "skill": "Java",
+   "status": "shown"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "shown"
+  },
+  {
+   "skill": "Docker",
+   "status": "shown"
+  },
+  {
+   "skill": "Linux",
+   "status": "shown"
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "partly"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  },
+  {
+   "skill": "Python",
+   "status": "missing"
+  }
+ ]
+}

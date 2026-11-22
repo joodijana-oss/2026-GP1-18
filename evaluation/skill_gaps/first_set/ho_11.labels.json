@@ -1,0 +1,267 @@
+{
+  "id": "ho_11",
+  "careerGoalId": "it_support_specialist",
+  "shown": [
+    {
+      "skill": "Hardware Troubleshooting",
+      "alsoCalled": [
+        "PC Repair",
+        "Hardware Diagnostics",
+        "Hardware Maintenance"
+      ],
+      "evidence": "Diagnose laptops and desktops that will not start, overheat or run slowly; replace RAM, SSDs, screens, fans and power supplies",
+      "source": "experience"
+    },
+    {
+      "skill": "Operating System Imaging",
+      "alsoCalled": [
+        "OS Installation",
+        "OS Deployment",
+        "Device Imaging"
+      ],
+      "evidence": "Wipe and reinstall Windows 10 and 11 from a USB image",
+      "source": "experience"
+    },
+    {
+      "skill": "Windows",
+      "alsoCalled": [
+        "Windows 10",
+        "Windows 11",
+        "Windows Desktop Support"
+      ],
+      "evidence": "reinstall Windows 10 and 11 from a USB image, add drivers",
+      "source": "experience"
+    },
+    {
+      "skill": "Software Installation",
+      "alsoCalled": [
+        "Application Installation",
+        "Software Setup"
+      ],
+      "evidence": "add drivers and the customer's usual programs",
+      "source": "experience"
+    },
+    {
+      "skill": "Wireless Networking",
+      "alsoCalled": [
+        "Wi-Fi",
+        "WLAN",
+        "Wireless LAN"
+      ],
+      "evidence": "Set up home and small-office routers, extend Wi-Fi with mesh units",
+      "source": "experience"
+    },
+    {
+      "skill": "Network Troubleshooting",
+      "alsoCalled": [
+        "Connectivity Troubleshooting",
+        "Network Fault Diagnosis"
+      ],
+      "evidence": "Set up home and small-office routers, extend Wi-Fi with mesh units and sort out",
+      "source": "experience"
+    },
+    {
+      "skill": "Printer Support",
+      "alsoCalled": [
+        "Printer Troubleshooting",
+        "Peripheral Support"
+      ],
+      "evidence": "Get printers working again: drivers, paper-feed faults, sharing one printer between several PCs",
+      "source": "experience"
+    },
+    {
+      "skill": "Customer Service",
+      "alsoCalled": [
+        "User Communication",
+        "Client Service"
+      ],
+      "evidence": "Explain to customers in plain words what went wrong and what the repair will cost",
+      "source": "experience"
+    },
+    {
+      "skill": "Data Backup",
+      "alsoCalled": [
+        "Backup and Restore",
+        "Data Recovery",
+        "Backups"
+      ],
+      "evidence": "Copy customers' photos and documents to an external drive before any repair, and rescue files from failing disks when possible",
+      "source": "experience"
+    },
+    {
+      "skill": "Remote Support",
+      "alsoCalled": [
+        "Remote Desktop Support",
+        "Remote Assistance"
+      ],
+      "evidence": "Connect to regular customers' PCs with AnyDesk to fix small problems without a visit",
+      "source": "experience"
+    },
+    {
+      "skill": "Microsoft 365",
+      "alsoCalled": [
+        "Office 365",
+        "O365"
+      ],
+      "evidence": "Helped new students activate their university Microsoft 365 accounts",
+      "source": "other"
+    },
+    {
+      "skill": "Technical Support",
+      "alsoCalled": [
+        "Help Desk",
+        "Service Desk",
+        "IT Support",
+        "User Support"
+      ],
+      "evidence": "IT helper, university registration week (2025 and 2026)",
+      "source": "other"
+    },
+    {
+      "skill": "Multi-Factor Authentication",
+      "alsoCalled": [
+        "MFA",
+        "Two-Factor Authentication",
+        "2FA"
+      ],
+      "evidence": "set up two-step sign-in on their phones",
+      "source": "other"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "installed Ubuntu Server in VirtualBox, created users and groups, set file permissions",
+      "source": "education"
+    },
+    {
+      "skill": "Virtualization",
+      "alsoCalled": [
+        "Virtual Machines",
+        "VMware",
+        "VirtualBox"
+      ],
+      "evidence": "installed Ubuntu Server in VirtualBox",
+      "source": "education"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "TCP/IP Networking",
+      "alsoCalled": [
+        "Networking Fundamentals",
+        "Network Protocols",
+        "TCP/IP"
+      ],
+      "evidence": "Courses with labs: Computer Networks 1, Operating Systems, IT Fundamentals",
+      "why": "Course title only; the shop work is home routers."
+    },
+    {
+      "skill": "Bash Scripting",
+      "alsoCalled": [
+        "Shell Scripting",
+        "Bash"
+      ],
+      "evidence": "scheduled a backup script with cron",
+      "why": "One scheduled script in a course exercise."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Active Directory",
+      "alsoCalled": [
+        "AD",
+        "User Account Management"
+      ],
+      "why": "Created users and groups on a Linux machine, not in a company directory.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Ticket Management",
+      "alsoCalled": [
+        "Ticketing System",
+        "Service Requests",
+        "Ticket Handling"
+      ],
+      "why": "Logs repairs in a spreadsheet; has not worked with a ticketing system.",
+      "nearMiss": true
+    },
+    {
+      "skill": "IT Asset Management",
+      "alsoCalled": [
+        "Asset Inventory",
+        "Asset Tracking"
+      ],
+      "why": "The spreadsheet is a repair log for customers' devices, not an asset inventory.",
+      "nearMiss": true
+    },
+    {
+      "skill": "CompTIA A+",
+      "alsoCalled": [
+        "A+"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "PowerShell",
+      "alsoCalled": [
+        "PowerShell Scripting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "ITIL",
+      "alsoCalled": [
+        "ITIL 4",
+        "IT Service Management",
+        "ITSM"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Endpoint Security",
+      "alsoCalled": [
+        "Endpoint Protection",
+        "EDR",
+        "Endpoint Detection and Response",
+        "Antivirus Management"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "macOS",
+      "alsoCalled": [
+        "Mac Support",
+        "Apple Device Support"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Technical Documentation",
+      "alsoCalled": [
+        "Knowledge Base Articles",
+        "Runbooks",
+        "User Guides"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Mobile Device Management",
+      "alsoCalled": [
+        "MDM",
+        "Intune"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

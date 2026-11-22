@@ -1,0 +1,34 @@
+{
+ "goal": "cybersecurity_grc_specialist",
+ "extractor": "E1",
+ "run": 2,
+ "postings": 20,
+ "rawNames": [
+  "Cybersecurity Risk Assessment",
+  "ISO 27001",
+  "NCA ECC",
+  "SAMA CSF",
+  "Cybersecurity Risk Register Management",
+  "CISA",
+  "CISM",
+  "CRISC",
+  "NIST",
+  "PCI DSS",
+  "Third-Party Risk Management",
+  "CISSP"
+ ],
+ "names": [
+  "Cybersecurity Risk Assessment",
+  "ISO 27001",
+  "NCA ECC",
+  "SAMA CSF",
+  "Cybersecurity Risk Register Management",
+  "CISA",
+  "CISM",
+  "CRISC",
+  "NIST",
+  "PCI DSS",
+  "Third-Party Risk Management",
+  "CISSP"
+ ]
+}

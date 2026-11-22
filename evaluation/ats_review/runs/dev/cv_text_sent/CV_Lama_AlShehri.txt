@@ -1,0 +1,55 @@
+Lama Al-Shehri
+Jeddah, Saudi Arabia  |  lama.alshehri@example.com  |  +966 55 000 0000
+SUMMARY
+Computer Science graduate focused on machine learning and computer vision. I enjoy turning messy data
+into working models and want to start my career as a junior machine learning engineer.
+EDUCATION
+Bachelor of Science in Computer Science
+2022 - 2026
+King Abdulaziz University, Jeddah  |  GPA 4.30 / 5.00
+Relevant courses: Linear Algebra, Probability and Statistics, Calculus II, Data Structures, Introduction to
+Artificial Intelligence, Database Systems.
+EXPERIENCE
+Data Analyst Intern
+Jun 2025 - Aug 2025
+Red Sea Retail Group, Jeddah
+Cleaned and analysed about 50,000 rows of branch sales data with pandas and SQL, and found the
+three product lines behind most returns.
+Built weekly sales dashboards for the operations manager and explained the trends in short written
+reports.
+Trained a gradient-boosted model with scikit-learn to forecast weekly demand per branch, cutting the
+forecast error by 18% against the old spreadsheet method.
+PROJECTS
+Date-Palm Leaf Disease Classifier (graduation project)
+2026
+Fine-tuned a ResNet-50 convolutional network in PyTorch on 6,000 labelled leaf photos to recognise four
+diseases, reaching 92% accuracy on a held-out test set. Used data augmentation and early stopping to limit
+overfitting.
+Demand Forecast Service
+2026
+Wrapped the internship forecasting model in a FastAPI service and packaged it in a Docker container so the
+team could call it from their dashboard.
+College WhatsApp Help Menu
+2025
+Built a menu-based helper for the college WhatsApp group that answers common questions with fixed if-else
+replies (numbered options, no machine learning).
+Physics II Lab Project
+2023
+Designed and built a small step-down transformer circuit for a 12 V power supply and measured its
+efficiency.
+CERTIFICATIONS
+Machine Learning Specialization (online, three courses), 2025
+SKILLS
+Programming:
+ Python, SQL, Git
+Libraries:
+ pandas, NumPy, scikit-learn, PyTorch, Matplotlib
+Tools:
+ Jupyter, FastAPI, Docker, Power BI
+ACTIVITIES
+
+Attended a two-hour introductory webinar on generative AI hosted by the university innovation centre
+(2025).
+Peer tutor for the Data Structures course (2024 - 2025).
+LANGUAGES
+Arabic (native), English (fluent)

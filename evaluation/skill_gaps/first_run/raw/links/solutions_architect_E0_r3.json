@@ -1,0 +1,139 @@
+{
+ "goal": "solutions_architect",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Cloud Architecture (AWS/Azure/GCP)",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "designing cloud solutions",
+    "multi-cloud architecture",
+    "cloud infrastructure design"
+   ]
+  },
+  {
+   "gap": "Enterprise Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "enterprise-wide IT architecture",
+    "aligning business and IT architecture"
+   ]
+  },
+  {
+   "gap": "Solution Design",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing technical solutions",
+    "end-to-end solution design"
+   ]
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "managing stakeholder expectations",
+    "engaging key stakeholders"
+   ]
+  },
+  {
+   "gap": "TOGAF Certification",
+   "kind": "certification",
+   "concepts": [
+    "TOGAF"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "System Integration",
+   "kind": "skill",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [
+    "integrating multiple systems",
+    "connecting disparate platforms"
+   ]
+  },
+  {
+   "gap": "API Design",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [
+    "designing APIs",
+    "API architecture and standards"
+   ]
+  },
+  {
+   "gap": "Architecture Roadmaps & Blueprints",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "creating architecture roadmaps",
+    "technology blueprint planning"
+   ]
+  },
+  {
+   "gap": "Data Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Data Architecture"
+   ],
+   "phrases": [
+    "designing data systems",
+    "data architecture principles"
+   ]
+  },
+  {
+   "gap": "Presales / Technical Consulting",
+   "kind": "soft",
+   "concepts": [
+    "Product Demonstrations"
+   ],
+   "phrases": [
+    "technical sales support",
+    "client solution consulting",
+    "pre-sales engagements"
+   ]
+  },
+  {
+   "gap": "Security Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Information Security"
+   ],
+   "phrases": [
+    "designing secure systems",
+    "security by design principles"
+   ]
+  },
+  {
+   "gap": "DevOps / Agile Practices",
+   "kind": "skill",
+   "concepts": [
+    "DevOps",
+    "Agile"
+   ],
+   "phrases": [
+    "continuous integration and delivery",
+    "agile development practices"
+   ]
+  }
+ ]
+}

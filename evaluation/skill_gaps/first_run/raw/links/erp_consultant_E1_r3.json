@@ -1,0 +1,125 @@
+{
+ "goal": "erp_consultant",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "SAP S/4HANA",
+   "kind": "tool",
+   "concepts": [
+    "SAP S/4HANA"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "SAP MM",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "materials management configuration",
+    "procurement module setup",
+    "inventory management in SAP"
+   ]
+  },
+  {
+   "gap": "PL/SQL",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "writing stored procedures",
+    "database programming language",
+    "SQL scripting for Oracle"
+   ]
+  },
+  {
+   "gap": "SAP FI",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "financial accounting configuration",
+    "general ledger setup",
+    "SAP financial module"
+   ]
+  },
+  {
+   "gap": "SAP SD",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "sales and distribution configuration",
+    "order to cash process",
+    "SAP sales module"
+   ]
+  },
+  {
+   "gap": "ABAP",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "SAP programming language",
+    "custom report development",
+    "ABAP code development"
+   ]
+  },
+  {
+   "gap": "SAP QM",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "quality management configuration",
+    "inspection lot processing",
+    "SAP quality module"
+   ]
+  },
+  {
+   "gap": "SAP PP",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "production planning configuration",
+    "manufacturing process setup",
+    "SAP production module"
+   ]
+  },
+  {
+   "gap": "Oracle Integration Cloud",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "cloud integration platform",
+    "building integration flows",
+    "connecting cloud applications"
+   ]
+  },
+  {
+   "gap": "Power Automate",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "workflow automation tool",
+    "automating business processes",
+    "building automated flows"
+   ]
+  },
+  {
+   "gap": "BI Publisher",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "report generation tool",
+    "designing business reports",
+    "enterprise reporting tool"
+   ]
+  },
+  {
+   "gap": "Power Apps",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "low-code app development",
+    "building business applications",
+    "custom app creation tool"
+   ]
+  }
+ ]
+}

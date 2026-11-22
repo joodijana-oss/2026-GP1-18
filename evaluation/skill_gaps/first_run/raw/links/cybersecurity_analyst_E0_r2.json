@@ -1,0 +1,131 @@
+{
+ "goal": "cybersecurity_analyst",
+ "extractor": "E0",
+ "run": 2,
+ "links": [
+  {
+   "gap": "SIEM",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "security event monitoring",
+    "log correlation and alerts"
+   ]
+  },
+  {
+   "gap": "Vulnerability Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Risk Assessment"
+   ],
+   "phrases": [
+    "identifying system vulnerabilities",
+    "security weakness scanning"
+   ]
+  },
+  {
+   "gap": "Penetration Testing",
+   "kind": "skill",
+   "concepts": [
+    "Penetration Testing"
+   ],
+   "phrases": [
+    "simulated cyber attacks",
+    "ethical hacking techniques"
+   ]
+  },
+  {
+   "gap": "Incident Response",
+   "kind": "skill",
+   "concepts": [
+    "Incident Response"
+   ],
+   "phrases": [
+    "responding to security incidents",
+    "breach containment and recovery"
+   ]
+  },
+  {
+   "gap": "Firewalls",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring network firewalls",
+    "traffic filtering rules"
+   ]
+  },
+  {
+   "gap": "Network Security",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "protecting network infrastructure",
+    "securing network traffic"
+   ]
+  },
+  {
+   "gap": "SOC Operations",
+   "kind": "skill",
+   "concepts": [
+    "Security Operations"
+   ],
+   "phrases": [
+    "security operations center workflows",
+    "monitoring and triage"
+   ]
+  },
+  {
+   "gap": "IDS/IPS",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "intrusion detection systems",
+    "intrusion prevention systems"
+   ]
+  },
+  {
+   "gap": "Security Certifications (CISSP, CEH, Security+, OSCP)",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "preparing for security exams",
+    "industry recognized certifications"
+   ]
+  },
+  {
+   "gap": "Python Scripting",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": [
+    "automating tasks with scripts",
+    "writing python programs"
+   ]
+  },
+  {
+   "gap": "Cloud Security (AWS/GCP/Azure)",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Security"
+   ],
+   "phrases": [
+    "securing cloud environments",
+    "cloud platform security controls"
+   ]
+  },
+  {
+   "gap": "Log Analysis and Threat Detection",
+   "kind": "skill",
+   "concepts": [
+    "Threat Intelligence"
+   ],
+   "phrases": [
+    "analyzing security logs",
+    "detecting malicious activity"
+   ]
+  }
+ ]
+}

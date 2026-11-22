@@ -1,0 +1,128 @@
+{
+ "goal": "solutions_architect",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Enterprise Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "enterprise IT architecture",
+    "architecture frameworks",
+    "business-aligned IT structure"
+   ]
+  },
+  {
+   "gap": "Cloud Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "designing cloud solutions",
+    "cloud infrastructure design",
+    "scalable cloud systems"
+   ]
+  },
+  {
+   "gap": "AWS",
+   "kind": "tool",
+   "concepts": [
+    "AWS"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Azure",
+   "kind": "tool",
+   "concepts": [
+    "Azure"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Google Cloud Platform",
+   "kind": "tool",
+   "concepts": [
+    "Google Cloud"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "TOGAF",
+   "kind": "certification",
+   "concepts": [
+    "TOGAF"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Solution Design",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing technical solutions",
+    "solution blueprints",
+    "system solution design"
+   ]
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "API Integration",
+   "kind": "skill",
+   "concepts": [
+    "Integration",
+    "APIs"
+   ],
+   "phrases": [
+    "connecting systems via APIs",
+    "integrating services",
+    "API-based integration"
+   ]
+  },
+  {
+   "gap": "Data Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Data Architecture"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Architecture Governance",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "IT governance frameworks",
+    "architecture standards and policies",
+    "governing architecture decisions"
+   ]
+  },
+  {
+   "gap": "Agile Development",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "agile software development",
+    "iterative development practices",
+    "sprint-based delivery"
+   ]
+  }
+ ]
+}

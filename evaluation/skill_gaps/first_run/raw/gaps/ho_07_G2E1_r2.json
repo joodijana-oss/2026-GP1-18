@@ -1,0 +1,27 @@
+{
+ "case": "ho_07",
+ "arm": "G2E1",
+ "run": 2,
+ "gaps": [
+  "Ansible",
+  "Azure"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "CI/CD Pipeline Design",
+   "status": "shown"
+  },
+  {
+   "skill": "Ansible",
+   "status": "missing"
+  },
+  {
+   "skill": "Azure",
+   "status": "missing"
+  }
+ ]
+}

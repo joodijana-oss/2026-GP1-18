@@ -1,0 +1,68 @@
+{
+ "case": "ho_11",
+ "arm": "G1E1",
+ "run": 1,
+ "gaps": [
+  "Active Directory",
+  "TCP/IP",
+  "Microsoft 365",
+  "DHCP",
+  "DNS",
+  "CCNA",
+  "VPN"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Hardware Troubleshooting",
+   "status": "shown"
+  },
+  {
+   "skill": "Windows",
+   "status": "shown"
+  },
+  {
+   "skill": "Active Directory",
+   "status": "missing"
+  },
+  {
+   "skill": "Network Troubleshooting",
+   "status": "shown"
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "shown"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "missing"
+  },
+  {
+   "skill": "Microsoft 365",
+   "status": "missing"
+  },
+  {
+   "skill": "Printer Support",
+   "status": "shown"
+  },
+  {
+   "skill": "DHCP",
+   "status": "missing"
+  },
+  {
+   "skill": "DNS",
+   "status": "missing"
+  },
+  {
+   "skill": "CCNA",
+   "status": "missing"
+  },
+  {
+   "skill": "VPN",
+   "status": "missing"
+  }
+ ]
+}

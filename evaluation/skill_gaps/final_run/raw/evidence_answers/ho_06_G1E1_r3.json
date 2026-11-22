@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Git",
+  "REST API Design",
+  "SQL",
+  "React",
+  "Node.js",
+  "Java",
+  "Docker",
+  "Spring Boot",
+  "Python",
+  "Linux",
+  "Kubernetes",
+  "C++"
+ ],
+ "answer": [
+  {
+   "skill": "Git",
+   "status": "partly",
+   "quote": "about 140 commits, one branch per feature"
+  },
+  {
+   "skill": "REST API Design",
+   "status": "partly",
+   "quote": "a small Flask application answers the page's requests with the tutor list as JSON"
+  },
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "I wrote the tables and the queries by hand"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Java",
+   "status": "partly",
+   "quote": "Object-Oriented Programming (taught in Java)"
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "A Telegram bot written in Python that sends prayer-time reminders"
+  },
+  {
+   "skill": "Linux",
+   "status": "shown",
+   "quote": "Runs on a small rented Ubuntu server that I set up myself"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "shown",
+   "quote": "Around 650 problems solved on online judges over three years, almost all in C++"
+  }
+ ]
+}

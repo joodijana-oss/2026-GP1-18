@@ -1,0 +1,46 @@
+{
+ "case": "ho_11",
+ "arm": "G2E1",
+ "run": 1,
+ "gaps": [
+  "Active Directory",
+  "DHCP",
+  "DNS",
+  "CCNA",
+  "VPN"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Active Directory",
+   "status": "missing"
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "partly"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "partly"
+  },
+  {
+   "skill": "DHCP",
+   "status": "missing"
+  },
+  {
+   "skill": "DNS",
+   "status": "missing"
+  },
+  {
+   "skill": "CCNA",
+   "status": "missing"
+  },
+  {
+   "skill": "VPN",
+   "status": "missing"
+  }
+ ]
+}

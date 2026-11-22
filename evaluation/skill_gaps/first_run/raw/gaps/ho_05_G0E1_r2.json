@@ -1,0 +1,17 @@
+{
+ "case": "ho_05",
+ "arm": "G0E1",
+ "run": 2,
+ "gaps": [
+  "REST APIs",
+  "Node.js",
+  "Python",
+  "Kubernetes",
+  "Microservices Architecture"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

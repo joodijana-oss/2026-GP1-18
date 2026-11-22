@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Hardware Troubleshooting",
+  "Windows Operating System",
+  "Networking",
+  "Active Directory",
+  "Ticketing Systems",
+  "Microsoft 365",
+  "TCP/IP",
+  "Printer Support",
+  "IT Asset Management",
+  "Customer Service",
+  "DNS",
+  "DHCP"
+ ],
+ "answer": [
+  {
+   "skill": "Hardware Troubleshooting",
+   "status": "shown",
+   "quote": "Diagnose laptops and desktops that will not start, overheat or run slowly"
+  },
+  {
+   "skill": "Windows Operating System",
+   "status": "shown",
+   "quote": "Wipe and reinstall Windows 10 and 11 from a USB image"
+  },
+  {
+   "skill": "Networking",
+   "status": "shown",
+   "quote": "Set up home and small-office routers, extend Wi-Fi with mesh units"
+  },
+  {
+   "skill": "Active Directory",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Microsoft 365",
+   "status": "shown",
+   "quote": "activate their university Microsoft 365 accounts"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "partly",
+   "quote": "sort out \"connected but no internet\" calls"
+  },
+  {
+   "skill": "Printer Support",
+   "status": "shown",
+   "quote": "Get printers working again: drivers, paper-feed faults"
+  },
+  {
+   "skill": "IT Asset Management",
+   "status": "partly",
+   "quote": "Keep a spreadsheet of every device that comes in"
+  },
+  {
+   "skill": "Customer Service",
+   "status": "shown",
+   "quote": "Explain to customers in plain words what went wrong"
+  },
+  {
+   "skill": "DNS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "DHCP",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

@@ -1,0 +1,159 @@
+label,cv,area,n,verdict,credits,point,invented_facts,misquotes,notes
+ho_a_01,ho_a,cvStructure,1,PLANTED,A1,A1,0,0,"No phone: true. Says the block lists only email and GitHub; the city is there too (minor, core point true)."
+ho_a_01,ho_a,sectionOrganization,1,PLANTED,A3,A3,0,0,
+ho_a_01,ho_a,sectionOrganization,2,PLANTED,A4,A4,0,0,
+ho_a_01,ho_a,sectionOrganization,3,PLANTED,A7,A7,0,0,
+ho_a_01,ho_a,keywordUsage,1,PLANTED,A9,A9,0,0,
+ho_a_01,ho_a,readability,1,PLANTED,A2,A2,0,0,
+ho_a_01,ho_a,readability,2,PLANTED,A6,A6,0,0,"Example adds 'and staff' (embellishment, not a counted fact type)."
+ho_a_01,ho_a,readability,3,DUPLICATE,,A7,0,0,"Same Najm paragraph, same fix (bullets) as sectionOrganization 3. Mentions the automated code-check but not the standard CI term, so no A8."
+ho_a_01,ho_a,contentFormatting,1,PLANTED,A5,A5,0,0,
+ho_a_06,ho_a,cvStructure,1,PLANTED,A3,A3,0,0,
+ho_a_06,ho_a,cvStructure,2,PLANTED,A1,A1,0,0,
+ho_a_06,ho_a,sectionOrganization,1,PLANTED,A4,A4,0,0,
+ho_a_06,ho_a,keywordUsage,1,PLANTED,A9,A9,0,0,
+ho_a_06,ho_a,keywordUsage,2,PLANTED,A6,A6,0,0,"Help desk fragments name nothing specific; suggestion is conditional ('If applicable')."
+ho_a_06,ho_a,readability,1,PLANTED,A2,A2,0,0,
+ho_a_06,ho_a,readability,2,DUPLICATE,,A6,0,0,"Same help desk lines, same fix (rewrite them) as keywordUsage 2."
+ho_a_06,ho_a,readability,3,PLANTED,A7,A7,0,0,
+ho_a_06,ho_a,contentFormatting,1,PLANTED,A5,A5,0,0,
+ho_a_06,ho_a,contentFormatting,2,DUPLICATE,,A7,0,0,"Same Najm paragraph, same fix (bullets) as readability 3."
+ho_a_02,ho_a,cvStructure,1,PLANTED,A1,A1,0,0,
+ho_a_02,ho_a,sectionOrganization,1,NEUTRAL,,about-me-heading,0,0,"Key lists the About Me heading as neutral."
+ho_a_02,ho_a,sectionOrganization,2,PLANTED,A3,A3,0,0,
+ho_a_02,ho_a,sectionOrganization,3,PLANTED,A10,A10,0,0,
+ho_a_02,ho_a,keywordUsage,1,PLANTED,A9,A9,0,0,
+ho_a_02,ho_a,keywordUsage,2,PLANTED,A8,A8,0,0,"Conditional: 'if that is what you set up'."
+ho_a_02,ho_a,keywordUsage,3,NEUTRAL,,postgresql-missing-from-skills,0,0,"True; key lists it as neutral."
+ho_a_02,ho_a,readability,1,PLANTED,A7,A7,0,0,
+ho_a_02,ho_a,readability,2,PLANTED,A6,A6,0,0,"Example adds 'to the development team' (embellishment, not counted)."
+ho_a_02,ho_a,readability,3,PLANTED,A2,A2,0,0,
+ho_a_02,ho_a,contentFormatting,1,PLANTED,A5,A5,1,0,"BORDERLINE invented date: 'for example Jun 2025 - Aug 2025' with no placeholder or condition. The key accepts this correction for the hit; counted under the literal invented-fact rule."
+ho_a_04,ho_a,cvStructure,1,PLANTED,A1,A1,0,0,
+ho_a_04,ho_a,sectionOrganization,1,PLANTED,A3,A3,0,0,"About Me part is neutral; the My Journey So Far part earns A3."
+ho_a_04,ho_a,sectionOrganization,2,PLANTED,A10,A10,0,0,
+ho_a_04,ho_a,sectionOrganization,3,PLANTED,A4,A4,0,0,
+ho_a_04,ho_a,keywordUsage,1,PLANTED,A9,A9,0,0,"Maktabati stack spellings."
+ho_a_04,ho_a,keywordUsage,2,PLANTED,A9,A9,0,0,"Different text (JS in Skills, Souq Tracker) and different fix from keywordUsage 1: not a duplicate."
+ho_a_04,ho_a,keywordUsage,3,PLANTED,A8,A8,0,0,"Conditional suggestion."
+ho_a_04,ho_a,readability,1,PLANTED,A7,A7,0,0,
+ho_a_04,ho_a,readability,2,PLANTED,A2,A2,0,0,
+ho_a_04,ho_a,readability,3,PLANTED,A6,A6,0,0,"Example adds 'to the development team' (not counted)."
+ho_a_04,ho_a,contentFormatting,1,PLANTED,A5,A5,0,0,"'Jun 2024 - Aug 2024' given with 'if that was the real period': conditional, not counted."
+ho_a_03,ho_a,cvStructure,1,PLANTED,A10,A10,0,0,
+ho_a_03,ho_a,sectionOrganization,1,PLANTED,A3,A3,0,0,
+ho_a_03,ho_a,sectionOrganization,2,PLANTED,A4,A4,0,0,
+ho_a_03,ho_a,keywordUsage,1,PLANTED,A9,A9,0,0,
+ho_a_03,ho_a,readability,1,PLANTED,A2,A2,0,0,
+ho_a_03,ho_a,readability,2,PLANTED,A6,A6,0,0,"Example adds 'via email and in-person requests' (not counted)."
+ho_a_03,ho_a,readability,3,PLANTED,A7,A7,0,0,
+ho_a_03,ho_a,contentFormatting,1,PLANTED,A5,A5,0,0,
+ho_a_03,ho_a,contentFormatting,2,PLANTED,A9,A9,0,0,"java script / Postgress misspelling: different text and fix from keywordUsage 1 (React spellings)."
+ho_a_03,ho_a,contentFormatting,3,DUPLICATE,,A7,0,0,"Same Najm paragraph, same fix as readability 3."
+ho_a_05,ho_a,cvStructure,1,PLANTED,A1,A1,0,0,
+ho_a_05,ho_a,sectionOrganization,1,PLANTED,A3,A3,0,0,
+ho_a_05,ho_a,sectionOrganization,2,PLANTED,A10,A10,0,0,
+ho_a_05,ho_a,sectionOrganization,3,PLANTED,A4,A4,0,0,
+ho_a_05,ho_a,keywordUsage,1,PLANTED,A9,A9,0,0,
+ho_a_05,ho_a,keywordUsage,2,PLANTED,A8,A8,0,0,"Example 'run automated tests on every code change' restates the CV's own description; not counted."
+ho_a_05,ho_a,keywordUsage,3,WRONG,,rest-missing-from-skills,0,0,"BORDERLINE: says REST endpoints were built in both the Najm and Rimal Tech roles ('demonstrated in two roles'); the Najm text only says he worked with backend developers on some endpoints and never says REST. REST missing from Skills alone would be neutral."
+ho_a_05,ho_a,readability,1,PLANTED,A7,A7,0,0,
+ho_a_05,ho_a,readability,2,PLANTED,A2;A6,A2;A6,0,0,"Summary vague + help desk fragments in one issue."
+ho_a_05,ho_a,readability,3,PLANTED,A7,A7,0,0,"'loads faster' not quantified: separate fix from readability 1 (same area)."
+ho_a_05,ho_a,contentFormatting,1,PLANTED,A5,A5,0,0,
+ho_b_06,ho_b,(none),,EMPTY,,,0,0,"Output has no issues at all; counts as an output with no issues."
+ho_b_03,ho_b,cvStructure,1,PLANTED,B1,B1,0,0,"Example address 'hanan.alqahtani@example.com' is a format example (not counted)."
+ho_b_03,ho_b,cvStructure,2,NEUTRAL,,projects-move-higher,0,0,"Key lists moving Projects higher as neutral."
+ho_b_03,ho_b,sectionOrganization,1,PLANTED,B5,B5,0,0,
+ho_b_03,ho_b,sectionOrganization,2,NEUTRAL,,projects-order,0,0,"True (2024 project listed above the 2025 one), not in the key; judgement call NEUTRAL rather than PADDED."
+ho_b_03,ho_b,keywordUsage,1,NEUTRAL,,siem-missing-from-skills,0,0,"True: SIEM is in the SOC bullet, not in Technical Skills. Does not fault BF2."
+ho_b_03,ho_b,keywordUsage,2,NEUTRAL,,cvss-missing-from-skills,0,0,True.
+ho_b_03,ho_b,keywordUsage,3,NEUTRAL,,phishing-sim-missing-from-skills,0,0,"True: the CV has the phishing campaign project."
+ho_b_03,ho_b,readability,1,PLANTED,B7,B7,0,0,
+ho_b_03,ho_b,readability,2,PLANTED,B7,B7,0,0,"Lab assistant line: different text from readability 1."
+ho_b_03,ho_b,contentFormatting,1,PLANTED,B6,B6,1,0,"Invented months: 'Summer 2022' rewritten as 'Jun 2022 – Aug 2022' with no placeholder or condition."
+ho_b_03,ho_b,contentFormatting,2,PLANTED,B3,B3,0,0,"Bracketed placeholder for years."
+ho_b_03,ho_b,contentFormatting,3,PLANTED,B10,B10,0,0,
+ho_b_05,ho_b,cvStructure,1,PLANTED,B2,B2,0,0,
+ho_b_05,ho_b,cvStructure,2,PLANTED,B4,B4,0,0,"High-school block."
+ho_b_05,ho_b,cvStructure,3,NEUTRAL,,references-line,0,0,"Key: neutral."
+ho_b_05,ho_b,sectionOrganization,1,NEUTRAL,,projects-order,0,0,"Same judgement call as ho_b_03."
+ho_b_05,ho_b,keywordUsage,1,PLANTED,B10,B10,0,0,
+ho_b_05,ho_b,keywordUsage,2,PLANTED,B9,B9,0,0,
+ho_b_05,ho_b,readability,1,PLANTED,B7,B7,0,0,"Example 'configuring VirtualBox and Kali Linux environments' uses CV tools; embellished, not counted."
+ho_b_05,ho_b,contentFormatting,1,PLANTED,B1,B1,0,0,
+ho_b_05,ho_b,contentFormatting,2,PLANTED,B6,B6,0,0,
+ho_b_05,ho_b,contentFormatting,3,PLANTED,B8,B8,0,0,"Pairing example Wireshark - Advanced, Nmap - Intermediate is the natural reading of the scrambled row; not counted."
+ho_b_04,ho_b,cvStructure,1,PLANTED,B2,B2,0,0,
+ho_b_04,ho_b,cvStructure,2,PLANTED,B4,B4,0,0,"High-school block."
+ho_b_04,ho_b,cvStructure,3,PLANTED,B4,B4,0,0,"Course list: different text from cvStructure 2."
+ho_b_04,ho_b,sectionOrganization,1,NEUTRAL,,projects-order,0,0,
+ho_b_04,ho_b,sectionOrganization,2,PLANTED,B10,B10,0,0,
+ho_b_04,ho_b,keywordUsage,1,DUPLICATE,,B10,0,0,"Same two certificate lines, same fix as sectionOrganization 2."
+ho_b_04,ho_b,keywordUsage,2,PLANTED,B9,B9,0,0,"SIEM, IDS/IPS, firewall offered 'if applicable': conditional, not counted."
+ho_b_04,ho_b,readability,1,PLANTED,B7,B7,0,0,
+ho_b_04,ho_b,readability,2,PLANTED,B7,B7,0,0,"Example 'troubleshooting VM configuration issues' embellished, not counted."
+ho_b_04,ho_b,contentFormatting,1,PLANTED,B6,B6,0,0,
+ho_b_04,ho_b,contentFormatting,2,PLANTED,B1,B1,0,0,"Example address is a format example (not counted)."
+ho_b_04,ho_b,contentFormatting,3,PLANTED,B5,B5,0,0,
+ho_b_01,ho_b,cvStructure,1,PLANTED,B2,B2,0,0,
+ho_b_01,ho_b,cvStructure,2,NEUTRAL,,references-line,0,0,
+ho_b_01,ho_b,sectionOrganization,1,PLANTED,B10,B10,0,0,
+ho_b_01,ho_b,sectionOrganization,2,PLANTED,B8,B8,0,0,"Same pairing example as ho_b_05 (not counted)."
+ho_b_01,ho_b,keywordUsage,1,PLANTED,B9,B9,0,0,
+ho_b_01,ho_b,readability,1,PLANTED,B7,B7,0,0,
+ho_b_01,ho_b,readability,2,PLANTED,B7,B7,0,0,"Example adds 'summarizing triaged alerts and findings' (not counted)."
+ho_b_01,ho_b,contentFormatting,1,PLANTED,B3,B3,1,0,"Invented dates: 'for example 2021 – 2025' for a degree whose dates are not in the CV."
+ho_b_01,ho_b,contentFormatting,2,PLANTED,B6,B6,0,0,
+ho_b_01,ho_b,contentFormatting,3,PLANTED,B5,B5,0,0,
+ho_b_02,ho_b,cvStructure,1,NEUTRAL,,projects-move-higher,0,0,
+ho_b_02,ho_b,sectionOrganization,1,PLANTED,B5,B5,0,0,
+ho_b_02,ho_b,sectionOrganization,2,NEUTRAL,,projects-order,0,0,
+ho_b_02,ho_b,keywordUsage,1,PLANTED,B7,B7,0,0,"Phishing line in plain words; B7 acceptable area includes Skills/Keywords."
+ho_b_02,ho_b,keywordUsage,2,NEUTRAL,,cvss-missing-from-skills,0,0,
+ho_b_02,ho_b,readability,1,PLANTED,B7,B7,0,0,"Covers two more lines than keywordUsage 1: not a duplicate."
+ho_b_02,ho_b,contentFormatting,1,PLANTED,B6,B6,0,0,"Example dates are correct conversions of the CV dates."
+ho_b_02,ho_b,contentFormatting,2,PLANTED,B10,B10,0,0,
+ho_d_02,ho_d,cvStructure,1,PLANTED,D3,D3,0,0,
+ho_d_02,ho_d,keywordUsage,1,PLANTED,D4,D4,0,0,
+ho_d_02,ho_d,keywordUsage,2,PLANTED,D4,D4,0,0,
+ho_d_02,ho_d,keywordUsage,3,PLANTED,D4,D4,0,0,
+ho_d_02,ho_d,readability,1,PLANTED,D5,D5,0,0,
+ho_d_02,ho_d,readability,2,PLANTED,D6,D6,0,0,
+ho_d_02,ho_d,contentFormatting,1,PLANTED,D2,D2,0,0,
+ho_d_02,ho_d,contentFormatting,2,FINE_FLAGGED,,df3-date-month,0,0,"Faults the date '(2025)' of the home-lab project, which the key lists as fine (DF3)."
+ho_d_01,ho_d,cvStructure,1,PLANTED,D3,D3,0,0,
+ho_d_01,ho_d,keywordUsage,1,PLANTED,D4,D4,0,0,
+ho_d_01,ho_d,readability,1,PLANTED,D5,D5,0,0,"Example adds 'for production systems' (not counted)."
+ho_d_01,ho_d,readability,2,PLANTED,D6,D6,0,0,
+ho_d_01,ho_d,contentFormatting,1,PLANTED,D6,D6,0,0,"Asks for a date on the graduation project (D6: no year); separate fix from readability 2; DF3 used only as reference."
+ho_d_03,ho_d,cvStructure,1,PLANTED,D3,D3,0,0,"'mentioned only inside bullet points' is loose (AWS and Terraform also appear in summary and certifications); core point true."
+ho_d_03,ho_d,sectionOrganization,1,PLANTED,D6,D6,0,0,"Graduation project has no date."
+ho_d_03,ho_d,keywordUsage,1,PLANTED,D4,D4,0,0,
+ho_d_03,ho_d,keywordUsage,2,PLANTED,D6,D6,0,0,"No technologies in the graduation project."
+ho_d_03,ho_d,readability,1,PLANTED,D2,D2,0,0,
+ho_d_03,ho_d,readability,2,PLANTED,D5,D5,0,0,
+ho_d_03,ho_d,readability,3,PLANTED,D6,D6,0,0,"Broader than keywordUsage 2 (what was built, outcome): not a duplicate."
+ho_d_03,ho_d,contentFormatting,1,FINE_FLAGGED,,df3-date-month,0,0,"Faults DF3's year-only date. 'Mon YYYY' is a format pattern, not a misquote."
+ho_d_03,ho_d,contentFormatting,2,DUPLICATE,,D5,0,0,"Same intern fragments, same fix as readability 2."
+ho_d_04,ho_d,cvStructure,1,PLANTED,D3,D3,0,0,"Same loose 'only inside bullet points'; core point true."
+ho_d_04,ho_d,keywordUsage,1,PLANTED,D4,D4,0,0,
+ho_d_04,ho_d,keywordUsage,2,PLANTED,D4,D4,0,0,
+ho_d_04,ho_d,keywordUsage,3,PLANTED,D4,D4,0,0,
+ho_d_04,ho_d,readability,1,PLANTED,D2,D2,0,0,
+ho_d_04,ho_d,readability,2,PLANTED,D5,D5,0,0,
+ho_d_04,ho_d,readability,3,PLANTED,D6,D6,0,0,
+ho_d_04,ho_d,contentFormatting,1,PLANTED,D6,D6,0,0,"Graduation project has no date; DF3 used only as reference."
+ho_d_05,ho_d,cvStructure,1,PLANTED,D3,D3,0,0,
+ho_d_05,ho_d,keywordUsage,1,PLANTED,D4,D4,0,0,
+ho_d_05,ho_d,keywordUsage,2,PLANTED,D5,D5,0,0,"Conditional suggestion."
+ho_d_05,ho_d,readability,1,DUPLICATE,,D5,0,0,"Same intern fragments, same fix as keywordUsage 2."
+ho_d_05,ho_d,readability,2,PLANTED,D6,D6,0,0,
+ho_d_05,ho_d,contentFormatting,1,PLANTED,D2,D2,0,0,
+ho_d_05,ho_d,contentFormatting,2,FINE_FLAGGED,,df3-date-month,0,0,
+ho_d_06,ho_d,cvStructure,1,PLANTED,D3,D3,0,0,
+ho_d_06,ho_d,keywordUsage,1,PLANTED,D4,D4,0,0,
+ho_d_06,ho_d,readability,1,PLANTED,D5,D5,0,0,
+ho_d_06,ho_d,readability,2,PLANTED,D6,D6,0,0,
+ho_d_06,ho_d,contentFormatting,1,PLANTED,D2,D2,0,0,"Example summary rewrite only removes the year claim; nothing invented."
+ho_d_06,ho_d,contentFormatting,2,FINE_FLAGGED,,df3-date-month,0,0,"Placeholder '[Month] 2025'."

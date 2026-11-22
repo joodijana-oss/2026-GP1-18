@@ -1,0 +1,55 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Strong academic performance with GPA 3.9/5",
+   "Hands-on experience writing SQL queries with GROUP BY and subqueries",
+   "Completed a full statistics project involving data collection, cleaning, analysis, and visualization",
+   "Able to interpret regression results and communicate findings in a written report",
+   "Proactively pursuing data analytics certification beyond coursework",
+   "Demonstrates responsibility through treasurer role managing club budget",
+   "Clear interest and early engagement with data analysis field through hackathon workshops"
+  ],
+  "currentSkills": [
+   "Python",
+   "SQL",
+   "Database Fundamentals",
+   "Statistics",
+   "Excel",
+   "Data Analysis",
+   "Data Cleaning",
+   "Matplotlib",
+   "Data Visualization",
+   "Linear Regression",
+   "Jupyter Notebook"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Systems",
+    "institution": "King Khalid University",
+    "year": "2024 - present"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "Google Data Analytics Certificate (in progress, first two courses completed)",
+    "issuer": "Coursera",
+    "year": ""
+   }
+  ],
+  "projects": [
+   {
+    "name": "Used-car prices in the Southern Region",
+    "description": "Collected 640 used-car listings manually from a classifieds site into Excel, standardized mileage and model-year data, analyzed averages, medians, and spread by city and brand using groupby in a Jupyter notebook, created bar charts and scatter plots with Matplotlib comparing prices in Abha and Khamis Mushait, and fitted a linear regression of price on mileage and age, explaining the slope in a written report (grade: A)."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Treasurer",
+    "organization": "College student club",
+    "duration": "",
+    "description": "Keeps the budget sheet and reports spending to the club supervisor every month."
+   }
+  ]
+ }
+}

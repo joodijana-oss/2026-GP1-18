@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SIEM",
+  "Penetration Testing",
+  "Vulnerability Assessment",
+  "Incident Response",
+  "Firewall Administration",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Security+",
+  "Nmap",
+  "Metasploit",
+  "Python"
+ ],
+ "answer": [
+  {
+   "skill": "SIEM",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Incident Response",
+   "status": "shown",
+   "quote": "pulled it off the network, restored the share from the previous night's backup"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "shown",
+   "quote": "Maintain the rule base on the two perimeter FortiGate devices"
+  },
+  {
+   "skill": "CEH",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Security+",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Nmap",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

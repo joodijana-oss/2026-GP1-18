@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "LAN/WAN",
+  "Cisco Routers and Switches",
+  "VPN",
+  "VLAN",
+  "CCNA",
+  "Firewall Management",
+  "BGP",
+  "OSPF",
+  "MPLS",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto"
+ ],
+ "answer": [
+  {
+   "skill": "LAN/WAN",
+   "status": "shown",
+   "quote": "raise a ticket to head office when a site uplink drops"
+  },
+  {
+   "skill": "Cisco Routers and Switches",
+   "status": "shown",
+   "quote": "Two second-hand Cisco 1941 routers and a 3560 switch"
+  },
+  {
+   "skill": "VPN",
+   "status": "shown",
+   "quote": "Enrol staff laptops in the remote-access client (FortiClient)"
+  },
+  {
+   "skill": "VLAN",
+   "status": "shown",
+   "quote": "filtering between VLANs and a DHCP server on the router"
+  },
+  {
+   "skill": "CCNA",
+   "status": "shown",
+   "quote": "CCNA (Cisco Certified Network Associate), May 2026"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "BGP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSPF",
+   "status": "shown",
+   "quote": "three-router OSPF topology with redistribution of static routes"
+  },
+  {
+   "skill": "MPLS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CCNP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Fortinet",
+   "status": "partly",
+   "quote": "remote-access client (FortiClient) and help them when the tunnel"
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

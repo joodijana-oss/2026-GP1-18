@@ -1,0 +1,42 @@
+{
+ "targets": [
+  "Active Directory",
+  "Ticketing Systems",
+  "TCP/IP",
+  "IT Asset Management",
+  "DNS",
+  "DHCP"
+ ],
+ "answer": [
+  {
+   "skill": "Active Directory",
+   "status": "partly",
+   "quote": "activate their university Microsoft 365 accounts"
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "partly",
+   "quote": "Keep a spreadsheet of every device that comes in"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "partly",
+   "quote": "sort out \"connected but no internet\" calls"
+  },
+  {
+   "skill": "IT Asset Management",
+   "status": "partly",
+   "quote": "Keep a spreadsheet of every device that comes in, with the fault, parts used"
+  },
+  {
+   "skill": "DNS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "DHCP",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

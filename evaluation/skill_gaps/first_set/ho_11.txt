@@ -1,0 +1,29 @@
+Turki Al-Shammari
+Hail | turki.alshammari@example.com | +966 50 000 0000
+
+Final-year Information Technology student at the University of Hail who has worked evenings at a computer shop since 2024. Looking for a co-op or graduate place on an IT help desk.
+
+Education
+University of Hail, B.Sc. Information Technology, expected 2027
+Courses with labs: Computer Networks 1, Operating Systems, IT Fundamentals
+
+Part-time work
+Technician, a computer sales and repair shop, Hail (evenings and weekends, Oct 2024 - present)
+- Diagnose laptops and desktops that will not start, overheat or run slowly; replace RAM, SSDs, screens, fans and power supplies.
+- Wipe and reinstall Windows 10 and 11 from a USB image, add drivers and the customer's usual programs, and move their files back.
+- Set up home and small-office routers, extend Wi-Fi with mesh units and sort out "connected but no internet" calls.
+- Get printers working again: drivers, paper-feed faults, sharing one printer between several PCs.
+- Explain to customers in plain words what went wrong and what the repair will cost; most of them are not technical.
+- Copy customers' photos and documents to an external drive before any repair, and rescue files from failing disks when possible.
+- Keep a spreadsheet of every device that comes in, with the fault, parts used and hand-back date.
+- Connect to regular customers' PCs with AnyDesk to fix small problems without a visit.
+
+Volunteering
+IT helper, university registration week (2025 and 2026)
+- Helped new students activate their university Microsoft 365 accounts, set up two-step sign-in on their phones and connect to the campus eduroam network.
+
+Course project
+Operating Systems: installed Ubuntu Server in VirtualBox, created users and groups, set file permissions and scheduled a backup script with cron.
+
+Other
+Built my own PC and my brother's. Arabic (native), English (good, STEP 81). Driving licence.

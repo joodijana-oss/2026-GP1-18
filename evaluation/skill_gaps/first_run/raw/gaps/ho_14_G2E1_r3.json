@@ -1,0 +1,53 @@
+{
+ "case": "ho_14",
+ "arm": "G2E1",
+ "run": 3,
+ "gaps": [
+  "BGP",
+  "QoS",
+  "MPLS",
+  "Palo Alto"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "LAN/WAN",
+   "status": "shown"
+  },
+  {
+   "skill": "VPN",
+   "status": "shown"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "partly"
+  },
+  {
+   "skill": "CCNA",
+   "status": "shown"
+  },
+  {
+   "skill": "BGP",
+   "status": "missing"
+  },
+  {
+   "skill": "QoS",
+   "status": "missing"
+  },
+  {
+   "skill": "MPLS",
+   "status": "missing"
+  },
+  {
+   "skill": "FortiGate",
+   "status": "partly"
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing"
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "kind": "timing, rule 7.2 (d), amendment 1",
+ "label": "heldout",
+ "freezeFile": "tools/gap_eval/freeze_r2.json",
+ "freezeSha256": "50b50b1e7f4d90681e1c6c00907981df12255687f4c4470ef6764ab051a917c5",
+ "amendmentFile": "tools/gap_eval/freeze_r2_amendment_timing.json",
+ "amendmentSha256": "8cbd0e11ce14a2b8d8bea843ebeb35ea28ceadfb2e57c103412c60682ccb24eb",
+ "approach": "B/10/10/bt",
+ "source": "typed",
+ "opportunities": "typed|true|0.1|true|false|false|true|true|false",
+ "certifications": "typed|true|0.1|true|false|false|true|true|false",
+ "measured": {
+  "personas": {
+   "path": "test/fixtures/opportunity_eval_personas_heldout.json",
+   "sha256": "cb01d1c6531d32ac29c476356834619fb2d03c0b0aa7a574610cfcb40d359dcd"
+  },
+  "links": {
+   "path": "build/gap_eval/persona_links/heldout_typed.json",
+   "sha256": "9616f29218536ec3cc102db046853b5a46e38fa9657dec4a9c248cc965b8b1a8"
+  }
+ },
+ "guardFile": {
+  "path": "build/gap_eval/final_r3/guards/heldout.json",
+  "sha256": "ea37441de56507c403bf33e52a84db2a4e42ada8b322c226293e14d4645a5afa"
+ },
+ "startedAt": "2026-11-21T16:10:53.611984",
+ "finishedAt": "2026-11-21T16:14:37.700966",
+ "runs": [
+  {
+   "run": 1,
+   "file": "build/gap_eval/final_r3/guards/timing_runs/heldout_1/guard.json",
+   "sha256": "e2f51d3ad160355e4917291cd7ff7be4cb6dd040c33269d0826dea941e78e52d",
+   "output": "build/gap_eval/final_r3/guards/timing_runs/heldout_1/guard.txt",
+   "exitCode": 0,
+   "warmRatio": 1.035777273872512,
+   "firstRatio": 0.9975797840787756,
+   "startedAt": "2026-11-21T16:10:53.611984",
+   "finishedAt": "2026-11-21T16:11:39.605075"
+  },
+  {
+   "run": 2,
+   "file": "build/gap_eval/final_r3/guards/timing_runs/heldout_2/guard.json",
+   "sha256": "14d7c807a4e934b6b1aff4f8350205159be91435d869352e90174303c943acc4",
+   "output": "build/gap_eval/final_r3/guards/timing_runs/heldout_2/guard.txt",
+   "exitCode": 0,
+   "warmRatio": 1.08471871259476,
+   "firstRatio": 0.997194983971337,
+   "startedAt": "2026-11-21T16:11:39.605075",
+   "finishedAt": "2026-11-21T16:12:24.497976"
+  },
+  {
+   "run": 3,
+   "file": "build/gap_eval/final_r3/guards/timing_runs/heldout_3/guard.json",
+   "sha256": "84bd1b56b6215d0861dc57c5420d435ebdd3ce82118cf1e78fc6ae61652ab195",
+   "output": "build/gap_eval/final_r3/guards/timing_runs/heldout_3/guard.txt",
+   "exitCode": 0,
+   "warmRatio": 1.2263712426402231,
+   "firstRatio": 1.001699259011644,
+   "startedAt": "2026-11-21T16:12:24.497976",
+   "finishedAt": "2026-11-21T16:13:10.472808"
+  },
+  {
+   "run": 4,
+   "file": "build/gap_eval/final_r3/guards/timing_runs/heldout_4/guard.json",
+   "sha256": "5e0172bba7da600027d0b40ff6b95c1e2afe29964a3a9aa1801ccce4e1304c8b",
+   "output": "build/gap_eval/final_r3/guards/timing_runs/heldout_4/guard.txt",
+   "exitCode": 0,
+   "warmRatio": 1.1226765799256506,
+   "firstRatio": 1.0289877300613497,
+   "startedAt": "2026-11-21T16:13:10.472808",
+   "finishedAt": "2026-11-21T16:13:55.231637"
+  },
+  {
+   "run": 5,
+   "file": "build/gap_eval/final_r3/guards/timing_runs/heldout_5/guard.json",
+   "sha256": "100fd3ce98614e50389780ba2318a7ddce0ff8be7ac1b53cc20e4b703ecabbd5",
+   "output": "build/gap_eval/final_r3/guards/timing_runs/heldout_5/guard.txt",
+   "exitCode": 0,
+   "warmRatio": 1.0554336989032902,
+   "firstRatio": 1.0952062131762186,
+   "startedAt": "2026-11-21T16:13:55.231637",
+   "finishedAt": "2026-11-21T16:14:37.700966"
+  }
+ ],
+ "warmRatios": [
+  1.035777273872512,
+  1.08471871259476,
+  1.2263712426402231,
+  1.1226765799256506,
+  1.0554336989032902
+ ],
+ "firstRatios": [
+  0.9975797840787756,
+  0.997194983971337,
+  1.001699259011644,
+  1.0289877300613497,
+  1.0952062131762186
+ ],
+ "warmMedian": 1.08471871259476,
+ "firstMedian": 1.001699259011644,
+ "warmLimit": 2.0,
+ "firstLimit": 1.1,
+ "comparedAt": "full precision",
+ "personaSameAsGuard": true,
+ "stopReason": null,
+ "status": "pass"
+}

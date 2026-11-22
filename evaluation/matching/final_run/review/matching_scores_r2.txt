@@ -1,0 +1,756 @@
+MATCHING EVALUATION, SCORES
+Run folders: build/gap_eval/final_r3  (market lists E1, and the writers' names)
+Hole names: 61 over 13 career goals (59 holes for opportunities, 61 for certifications); 130 hole names left out as seen in development
+  market names: 21 (19 opp, 21 cert)  business_analyst 9, data_engineer 4, data_scientist 1, it_consultant 7
+  writers' names: 40 (40 opp, 40 cert)  ai_ml_engineer 4, cloud_devops_engineer 10, cybersecurity_analyst 5, cybersecurity_grc_specialist 5, data_analyst 3, it_support_specialist 3, network_engineer 5, qa_test_engineer 2, software_engineer 3
+  without a stored answer of the first link request: 61
+  without a stored answer of the typed link request: 0
+Grades: 618 graded pairs.
+
+ALL NAMES  (61 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.163  0.190  0.136             0.938     16  1.000      3           0.786  0.864         0
+  L1                    0.512  0.524  0.500             0.465    127  0.314     86           0.405  0.364         0
+  B/10/10/bt            0.457  0.496  0.417             0.691     71  0.661     32           0.433  0.568         0
+  B/10/10/bt-opp        0.316  0.496  0.136             0.691     71  1.000      3           0.433  0.864         0
+  L1g/10/10             0.557  0.524  0.591             0.644     90  0.600     45           0.429  0.409         0
+  L1g/10/05-opp         0.330  0.524  0.136             0.644     90  1.000      3           0.429  0.864         0
+  Teachable hole names: 42 for opportunities, 22 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+MARKET NAMES  (21 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.083  0.167  0.000             1.000      3    n/a      0           0.833  1.000         0
+  L1                    0.508  0.417  0.600             0.450     40  0.688     16           0.500  0.400         0
+  B/10/10/bt            0.494  0.487  0.500             0.826     25  0.955     11           0.460  0.500         0
+  B/10/10/bt-opp        0.244  0.487  0.000             0.826     25    n/a      0           0.460  1.000         0
+  L1g/10/10             0.450  0.500  0.400             0.517     29  1.000      6           0.500  0.600         0
+  L1g/10/05-opp         0.250  0.500  0.000             0.517     29    n/a      0           0.500  1.000         0
+  Teachable hole names: 12 for opportunities, 5 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+WRITERS' NAMES  (40 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.188  0.200  0.176             0.923     13  1.000      3           0.767  0.824         0
+  L1                    0.519  0.567  0.471             0.471     87  0.229     70           0.367  0.353         0
+  B/10/10/bt            0.446  0.500  0.392             0.619     46  0.508     21           0.422  0.588         0
+  B/10/10/bt-opp        0.338  0.500  0.176             0.619     46  1.000      3           0.422  0.824         0
+  L1g/10/10             0.590  0.533  0.647             0.705     61  0.538     39           0.400  0.353         0
+  L1g/10/05-opp         0.355  0.533  0.176             0.705     61  1.000      3           0.400  0.824         0
+  Teachable hole names: 30 for opportunities, 17 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL ai_ml_engineer  (4 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.125  0.250  0.000             0.800      5    n/a      0           0.500  1.000         0
+  L1                    0.125  0.250  0.000             0.800      5    n/a      0           0.500  1.000         0
+  B/10/10/bt            0.875  0.750  1.000             0.500     12  0.167      6           0.000  0.000         0
+  B/10/10/bt-opp        0.375  0.750  0.000             0.500     12    n/a      0           0.000  1.000         0
+  L1g/10/10             0.125  0.250  0.000             0.800      5    n/a      0           0.500  1.000         0
+  L1g/10/05-opp         0.125  0.250  0.000             0.800      5    n/a      0           0.500  1.000         0
+  Teachable hole names: 4 for opportunities, 1 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL business_analyst  (9 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.083  0.167  0.000             1.000      1    n/a      0           0.833  1.000         0
+  L1                    0.667  0.333  1.000             0.333     18  1.000      1           0.667  0.000         0
+  B/10/10/bt            0.438  0.375  0.500             0.824      9  0.500      1           0.625  0.500         0
+  B/10/10/bt-opp        0.188  0.375  0.000             0.824      9    n/a      0           0.625  1.000         0
+  L1g/10/10             0.167  0.333  0.000             0.375     16    n/a      0           0.667  1.000         0
+  L1g/10/05-opp         0.167  0.333  0.000             0.375     16    n/a      0           0.667  1.000         0
+  Teachable hole names: 6 for opportunities, 1 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL cloud_devops_engineer  (10 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.417  0.333  0.500             1.000      2  1.000      1           0.667  0.500         0
+  L1                    0.583  0.667  0.500             0.381     21  0.063     16           0.167  0.000         0
+  B/10/10/bt            0.472  0.444  0.500             0.476      7  1.000      1           0.333  0.500         0
+  B/10/10/bt-opp        0.472  0.444  0.500             0.476      7  1.000      1           0.333  0.500         0
+  L1g/10/10             0.833  0.667  1.000             0.647     17  0.750      4           0.167  0.000         0
+  L1g/10/05-opp         0.583  0.667  0.500             0.647     17  1.000      1           0.167  0.500         0
+  Teachable hole names: 6 for opportunities, 2 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL cybersecurity_analyst  (5 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.350  0.200  0.500             1.000      1  1.000      2           0.800  0.500         0
+  L1                    0.750  1.000  0.500             0.474     19  0.333     15           0.000  0.250         0
+  B/10/10/bt            0.383  0.267  0.500             0.889      3  0.857      2           0.733  0.500         0
+  B/10/10/bt-opp        0.383  0.267  0.500             0.889      3  1.000      2           0.733  0.500         0
+  L1g/10/10             0.775  0.800  0.750             0.857      7  0.556      9           0.200  0.250         0
+  L1g/10/05-opp         0.650  0.800  0.500             0.857      7  1.000      2           0.200  0.500         0
+  Teachable hole names: 5 for opportunities, 4 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL cybersecurity_grc_specialist  (5 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.000  0.000  0.000               n/a      0    n/a      0           1.000  1.000         0
+  L1                    0.750  0.500  1.000             1.000      8  0.444      9           0.500  0.000         0
+  B/10/10/bt            0.750  0.500  1.000             1.000      6  0.750      8           0.500  0.000         0
+  B/10/10/bt-opp        0.250  0.500  0.000             1.000      6    n/a      0           0.500  1.000         0
+  L1g/10/10             0.750  0.500  1.000             1.000      7  1.000      4           0.500  0.000         0
+  L1g/10/05-opp         0.250  0.500  0.000             1.000      7    n/a      0           0.500  1.000         0
+  Teachable hole names: 4 for opportunities, 2 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL data_analyst  (3 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.000  0.000  0.000               n/a      0    n/a      0           1.000  0.000         0
+  L1                    0.000  0.000  0.000             0.000      5  0.000      5           1.000  0.000         0
+  B/10/10/bt            0.500  1.000  0.000             0.667      3    n/a      0           0.000  0.000         0
+  B/10/10/bt-opp        0.500  1.000  0.000             0.667      3    n/a      0           0.000  0.000         0
+  L1g/10/10             0.000  0.000  0.000             0.000      5  0.000      5           1.000  0.000         0
+  L1g/10/05-opp         0.000  0.000  0.000             0.000      5    n/a      0           1.000  0.000         0
+  Teachable hole names: 1 for opportunities, 0 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL data_engineer  (4 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.167  0.333  0.000             1.000      2    n/a      0           0.667  1.000         0
+  L1                    0.833  1.000  0.667             0.706     17  0.667     15           0.000  0.333         0
+  B/10/10/bt            0.833  1.000  0.667             0.929     14  1.000     10           0.000  0.333         0
+  B/10/10/bt-opp        0.500  1.000  0.000             0.929     14    n/a      0           0.000  1.000         0
+  L1g/10/10             0.833  1.000  0.667             0.800     10  1.000      6           0.000  0.333         0
+  L1g/10/05-opp         0.500  1.000  0.000             0.800     10    n/a      0           0.000  1.000         0
+  Teachable hole names: 3 for opportunities, 3 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL data_scientist  (1 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.000  0.000  0.000               n/a      0    n/a      0           1.000  0.000         0
+  L1                    0.000  0.000  0.000               n/a      0    n/a      0           1.000  0.000         0
+  B/10/10/bt            0.000  0.000  0.000               n/a      0    n/a      0           1.000  0.000         0
+  B/10/10/bt-opp        0.000  0.000  0.000               n/a      0    n/a      0           1.000  0.000         0
+  L1g/10/10             0.000  0.000  0.000               n/a      0    n/a      0           1.000  0.000         0
+  L1g/10/05-opp         0.000  0.000  0.000               n/a      0    n/a      0           1.000  0.000         0
+  Teachable hole names: 1 for opportunities, 0 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL it_consultant  (7 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.000  0.000  0.000               n/a      0    n/a      0           1.000  1.000         0
+  L1                    0.000  0.000  0.000             0.000      5    n/a      0           0.500  1.000         0
+  B/10/10/bt            0.150  0.300  0.000             0.247      2    n/a      0           0.388  1.000         0
+  B/10/10/bt-opp        0.150  0.300  0.000             0.247      2    n/a      0           0.388  1.000         0
+  L1g/10/10             0.250  0.500  0.000             0.333      3    n/a      0           0.500  1.000         0
+  L1g/10/05-opp         0.250  0.500  0.000             0.333      3    n/a      0           0.500  1.000         0
+  Teachable hole names: 2 for opportunities, 1 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL it_support_specialist  (3 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.000  0.000  0.000               n/a      0    n/a      0           1.000  0.000         0
+  L1                    0.167  0.333  0.000             0.200      5  0.000      5           0.667  0.000         0
+  B/10/10/bt            0.333  0.667  0.000             0.333      6  0.000      2           0.333  0.000         0
+  B/10/10/bt-opp        0.333  0.667  0.000             0.333      6    n/a      0           0.333  0.000         0
+  L1g/10/10             0.167  0.333  0.000             0.200      5  0.000      2           0.667  0.000         0
+  L1g/10/05-opp         0.167  0.333  0.000             0.200      5    n/a      0           0.667  0.000         0
+  Teachable hole names: 3 for opportunities, 0 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL network_engineer  (5 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.125  0.250  0.000             1.000      1    n/a      0           0.750  1.000         0
+  L1                    0.550  0.500  0.600             0.333     15  0.400     15           0.500  0.400         0
+  B/10/10/bt            0.317  0.500  0.133             0.600      5  0.400      2           0.500  0.800         0
+  B/10/10/bt-opp        0.250  0.500  0.000             0.600      5    n/a      0           0.500  1.000         0
+  L1g/10/10             0.550  0.500  0.600             0.875      8  0.538     13           0.500  0.400         0
+  L1g/10/05-opp         0.250  0.500  0.000             0.875      8    n/a      0           0.500  1.000         0
+  Teachable hole names: 4 for opportunities, 5 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL qa_test_engineer  (2 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.000  0.000  0.000               n/a      0    n/a      0           1.000  1.000         0
+  L1                    0.000  0.000  0.000               n/a      0    n/a      0           1.000  1.000         0
+  B/10/10/bt            0.000  0.000  0.000               n/a      0    n/a      0           1.000  1.000         0
+  B/10/10/bt-opp        0.000  0.000  0.000               n/a      0    n/a      0           1.000  1.000         0
+  L1g/10/10             0.000  0.000  0.000               n/a      0    n/a      0           1.000  1.000         0
+  L1g/10/05-opp         0.000  0.000  0.000               n/a      0    n/a      0           1.000  1.000         0
+  Teachable hole names: 1 for opportunities, 1 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+GOAL software_engineer  (3 hole names)
+  Approach         TeachHit@5    opp   cert  AttribPrec@5 opp    (n)   cert    (n)  FalseUncov opp   cert  ungraded
+  A0                    0.250  0.500  0.000             1.000      4    n/a      0           0.500  1.000         0
+  L1                    0.500  1.000  0.000             0.667      9  0.000      5           0.000  0.500         0
+  B/10/10/bt            0.250  0.500  0.000             0.846      4    n/a      0           0.500  1.000         0
+  B/10/10/bt-opp        0.250  0.500  0.000             0.846      4    n/a      0           0.500  1.000         0
+  L1g/10/10             0.750  1.000  0.500             1.000      7  1.000      2           0.000  0.500         0
+  L1g/10/05-opp         0.500  1.000  0.000             1.000      7    n/a      0           0.000  1.000         0
+  Teachable hole names: 2 for opportunities, 2 for certifications. (n) = graded attributions in the first 5. A pair without a grade is in neither number.
+
+DECISION RULES (tools/gap_eval/decision_rule_r2.txt), on 61 decision names
+  B/10/10/bt: TeachHit@5 against A0 +0.293  [+0.172, +0.408]
+    AttribPrec@5 opportunities 0.691 on 71.3 graded attributions, 90% interval [0.576, 0.811]
+    AttribPrec@5 certifications 0.661 on 32.0 graded attributions, 90% interval [0.470, 0.856]
+    against the word control with the same gate: -0.101 (control TeachHit@5 0.557, AttribPrec 0.644 opp, 0.600 cert)
+    FalseUncovered 0.433 opp, 0.568 cert
+    guards, test/fixtures/opportunity_eval_personas.json: without links as today yes; persona guard pass (with links 0.837 / 0.933 / 1.000 / 1.250, today 0.837 / 0.933 / 1.000 / 1.250; at full precision NO); timing (rule 7.2 d, amendment 1) medians 1.2158 and 0.9969 of 5 runs pass; the single run of the guard file, 1.1033 and 1.1006, is reported only
+    guards, test/fixtures/opportunity_eval_personas_heldout.json: without links as today yes; persona guard pass (with links 0.812 / 0.776 / 0.975 / 1.500, today 0.806 / 0.750 / 0.975 / 1.500; at full precision yes); timing (rule 7.2 d, amendment 1) medians 1.0847 and 1.0017 of 5 runs pass; the single run of the guard file, 1.1852 and 0.9838, is reported only
+    pass  TeachHit@5 beats A0 by at least 0.10, 95% interval above 0
+    pass  not below A0 for opportunities
+    FAIL  AttribPrec@5 at least 0.70 for opportunities
+    pass  not below A0 for certifications
+    FAIL  AttribPrec@5 at least 0.70 for certifications
+    pass  7.2 (a) without links, the lists of today on both persona files
+    pass  7.2 (b) persona guard (precision 3, tolerance 0): pass
+    pass  7.2 (d) timing, amendment 1: medians of 5 separate runs at most 2.00 and 1.10, at full precision
+  B/10/10/bt-opp: TeachHit@5 against A0 +0.153  [+0.094, +0.212]
+    AttribPrec@5 opportunities 0.691 on 71.3 graded attributions, 90% interval [0.576, 0.811]
+    AttribPrec@5 certifications 1.000 on 3.0 graded attributions, 90% interval [1.000, 1.000]
+    against the word control with the same gate: -0.014 (control TeachHit@5 0.330, AttribPrec 0.644 opp, 1.000 cert)
+    FalseUncovered 0.433 opp, 0.864 cert
+    guards, test/fixtures/opportunity_eval_personas.json: without links as today yes; persona guard pass (with links 0.837 / 0.933 / 1.000 / 1.250, today 0.837 / 0.933 / 1.000 / 1.250; at full precision NO); timing (rule 7.2 d, amendment 1) medians 1.2158 and 0.9969 of 5 runs pass; the single run of the guard file, 1.1033 and 1.1006, is reported only
+    guards, test/fixtures/opportunity_eval_personas_heldout.json: without links as today yes; persona guard pass (with links 0.812 / 0.776 / 0.975 / 1.500, today 0.806 / 0.750 / 0.975 / 1.500; at full precision yes); timing (rule 7.2 d, amendment 1) medians 1.0847 and 1.0017 of 5 runs pass; the single run of the guard file, 1.1852 and 0.9838, is reported only
+    pass  TeachHit@5 beats A0 by at least 0.10, 95% interval above 0
+    pass  not below A0 for opportunities
+    FAIL  AttribPrec@5 at least 0.70 for opportunities
+    pass  not below A0 for certifications
+    pass  AttribPrec@5 at least 0.70 for certifications
+    pass  7.2 (a) without links, the lists of today on both persona files
+    pass  7.2 (b) persona guard (precision 3, tolerance 0): pass
+    pass  7.2 (d) timing, amendment 1: medians of 5 separate runs at most 2.00 and 1.10, at full precision
+
+DECISION: no candidate passes these rules. A0 stays.
+
+ATTRIBUTIONS OF B/10/10/bt (first 5 per link run; grade in brackets, ? = not graded)
+  business_analyst | Business Requirements Analysis | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+    run 7: (nothing)
+    run 8: (nothing)
+  business_analyst | ERP Systems | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+    run 7: Enterprise Systems [2]
+    run 8: Enterprise Systems [2]
+  business_analyst | ERP Systems | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+    run 7: (nothing)
+    run 8: (nothing)
+  business_analyst | SAP SuccessFactors | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+  business_analyst | SAP SuccessFactors | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+  business_analyst | Access Control Management | opportunity
+    run 1: API Development with ASP.NET Program [1]; Network Security [1]; Essential Aspects of Software, Hardware, and Data Backup [1]; Introduction to Cybersecurity Essentials [1]; Advanced Cloud Engineering with Google Cloud Bootcamp [1]
+    run 2: ISO 27001 Information Security Compliance Management [0]; Foundations of Cybersecurity [0]; Introduction to Cybersecurity Tools & Cyberattacks [0]; Introduction to Cybersecurity Essentials [1]; Essential Aspects of Software, Hardware, and Data Backup [1]
+    run 3: Network Security [1]; Essential Aspects of Software, Hardware, and Data Backup [1]; Introduction to Cybersecurity Essentials [1]; Advanced Cloud Engineering with Google Cloud Bootcamp [1]; Cloud Engineering and Cybersecurity on AWS Bootcamp [2]
+    run 4: ISO 27001 Information Security Compliance Management [0]; Foundations of Cybersecurity [0]; Introduction to Cybersecurity Tools & Cyberattacks [0]; Introduction to Cybersecurity Essentials [1]; Essential Aspects of Software, Hardware, and Data Backup [1]
+    run 5: Network Security [1]; Essential Aspects of Software, Hardware, and Data Backup [1]; Introduction to Cybersecurity Essentials [1]; Advanced Cloud Engineering with Google Cloud Bootcamp [1]; Cloud Engineering and Cybersecurity on AWS Bootcamp [2]
+    run 6: ISO 27001 Information Security Compliance Management [0]; Foundations of Cybersecurity [0]; Network Defense Essentials (NDE) [1]; Introduction to Cybersecurity Tools & Cyberattacks [0]; IT Security: Defense against the digital dark arts [1]
+    run 7: ISO 27001 Information Security Compliance Management [0]; Foundations of Cybersecurity [0]; Introduction to Cybersecurity Tools & Cyberattacks [0]; Introduction to Cybersecurity Essentials [1]; Essential Aspects of Software, Hardware, and Data Backup [1]
+    run 8: Network Security [1]; Essential Aspects of Software, Hardware, and Data Backup [1]; Introduction to Cybersecurity Essentials [1]
+  business_analyst | Access Control Management | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: Certified Information Systems Auditor [0]
+    run 3: (nothing)
+    run 4: Certified Information Systems Auditor [0]
+    run 5: (nothing)
+    run 6: Certified Information Systems Auditor [0]
+    run 7: Certified Information Systems Auditor [0]
+    run 8: (nothing)
+  business_analyst | Oracle NetSuite | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+  business_analyst | Oracle NetSuite | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+  business_analyst | Documentation | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+  business_analyst | Documentation | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+  business_analyst | SAP SuccessFactors Learning | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+  business_analyst | SAP SuccessFactors Learning | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+  business_analyst | Compliance Management | opportunity
+    run 1: Cybersecurity Management and Compliance [2]; ISO 27001 Information Security Compliance Management [2]; Cybersecurity Compliance Framework, Standards & Regulations [2]; The GRC Approach to Managing Cybersecurity [1]; Cyber Security: GRC Part 1 - Governance [1]
+    run 2: ISO 27001 Information Security Compliance Management [2]; Cybersecurity Management and Compliance [2]
+  business_analyst | Compliance Management | certification
+    run 1: (nothing)
+    run 2: Certified Information Systems Auditor [1]
+  business_analyst | ISO27001 Lead Implementer | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+  business_analyst | ISO27001 Lead Implementer | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+  data_engineer | ETL Development | opportunity
+    run 1: ETL and Data Pipelines with Shell, Airflow and Kafka [2]; Build Batch Data Pipelines on Google Cloud [2]; Introduction to Data Engineering [1]; Data Extract, Transform, and Load in Power BI [2]; Data Warehouse Fundamentals [1]
+    run 2: ETL and Data Pipelines with Shell, Airflow and Kafka [2]; Build Batch Data Pipelines on Google Cloud [2]; Introduction to Data Engineering [1]; Data Extract, Transform, and Load in Power BI [2]; Data Warehouse Fundamentals [1]
+    run 3: ETL and Data Pipelines with Shell, Airflow and Kafka [2]; Build Batch Data Pipelines on Google Cloud [2]; Introduction to Data Engineering [1]; Data Extract, Transform, and Load in Power BI [2]; Data Warehouse Fundamentals [1]
+    run 4: ETL and Data Pipelines with Shell, Airflow and Kafka [2]; Build Batch Data Pipelines on Google Cloud [2]; Introduction to Data Engineering [1]; Data Extract, Transform, and Load in Power BI [2]; Data Warehouse Fundamentals [1]
+  data_engineer | ETL Development | certification
+    run 1: Associate Data Practitioner [1]; AWS Certified Data Engineer - Associate [2]; Databricks Certified Associate Developer for Apache Spark [1]; Databricks Certified Data Engineer Associate [2]; Google Business Intelligence Professional Certificate [1]
+    run 2: Associate Data Practitioner [1]; AWS Certified Data Engineer - Associate [2]; Databricks Certified Associate Developer for Apache Spark [1]; Databricks Certified Data Engineer Associate [2]; Google Business Intelligence Professional Certificate [1]
+    run 3: Associate Data Practitioner [1]; AWS Certified Data Engineer - Associate [2]; Databricks Certified Associate Developer for Apache Spark [1]; Databricks Certified Data Engineer Associate [2]; Google Business Intelligence Professional Certificate [1]
+    run 4: Associate Data Practitioner [1]; AWS Certified Data Engineer - Associate [2]; Databricks Certified Associate Developer for Apache Spark [1]; Databricks Certified Data Engineer Associate [2]; Google Business Intelligence Professional Certificate [1]
+  data_engineer | Informatica PowerCenter | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+    run 7: (nothing)
+    run 8: (nothing)
+  data_engineer | Informatica PowerCenter | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+    run 7: (nothing)
+    run 8: (nothing)
+  data_engineer | Lakehouse Architecture | opportunity
+    run 1: Lakehouse Architecture for AI-Native Data Platforms [2]; Building Data Lakes and Lakehouses with Microsoft Fabric [2]; Build Data Lakes and Data Warehouses on Google Cloud [1]; Data Warehouse Fundamentals [0]
+    run 2: Lakehouse Architecture for AI-Native Data Platforms [2]; Building Data Lakes and Lakehouses with Microsoft Fabric [2]; Build Data Lakes and Data Warehouses on Google Cloud [1]; Data Warehouse Fundamentals [0]
+    run 3: Lakehouse Architecture for AI-Native Data Platforms [2]; Building Data Lakes and Lakehouses with Microsoft Fabric [2]; Build Data Lakes and Data Warehouses on Google Cloud [1]; Data Warehouse Fundamentals [0]
+    run 4: Lakehouse Architecture for AI-Native Data Platforms [2]; Building Data Lakes and Lakehouses with Microsoft Fabric [2]; Build Data Lakes and Data Warehouses on Google Cloud [1]; Data Warehouse Fundamentals [0]
+    run 5: Lakehouse Architecture for AI-Native Data Platforms [2]; Building Data Lakes and Lakehouses with Microsoft Fabric [2]; Build Data Lakes and Data Warehouses on Google Cloud [1]; Data Warehouse Fundamentals [0]
+    run 6: Lakehouse Architecture for AI-Native Data Platforms [2]; Building Data Lakes and Lakehouses with Microsoft Fabric [2]; Build Data Lakes and Data Warehouses on Google Cloud [1]; Data Warehouse Fundamentals [0]
+  data_engineer | Lakehouse Architecture | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+  data_engineer | ETL Pipeline Development | opportunity
+    run 1: ETL and Data Pipelines with Shell, Airflow and Kafka [2]; Build Batch Data Pipelines on Google Cloud [2]; Introduction to Data Engineering [1]; Data Extract, Transform, and Load in Power BI [2]; Data Warehouse Fundamentals [1]
+    run 2: ETL and Data Pipelines with Shell, Airflow and Kafka [2]; Build Batch Data Pipelines on Google Cloud [2]; Introduction to Data Engineering [1]; Data Extract, Transform, and Load in Power BI [2]; Data Warehouse Fundamentals [1]
+    run 3: ETL and Data Pipelines with Shell, Airflow and Kafka [2]; Build Batch Data Pipelines on Google Cloud [2]; Introduction to Data Engineering [1]; Data Extract, Transform, and Load in Power BI [2]; Data Warehouse Fundamentals [1]
+  data_engineer | ETL Pipeline Development | certification
+    run 1: Associate Data Practitioner [1]; AWS Certified Data Engineer - Associate [2]; Databricks Certified Associate Developer for Apache Spark [1]; Databricks Certified Data Engineer Associate [2]; Google Business Intelligence Professional Certificate [2]
+    run 2: Associate Data Practitioner [1]; AWS Certified Data Engineer - Associate [2]; Databricks Certified Associate Developer for Apache Spark [1]; Databricks Certified Data Engineer Associate [2]; Google Business Intelligence Professional Certificate [2]
+    run 3: Associate Data Practitioner [1]; AWS Certified Data Engineer - Associate [2]; Databricks Certified Associate Developer for Apache Spark [1]; Databricks Certified Data Engineer Associate [2]; Google Business Intelligence Professional Certificate [2]
+  data_scientist | Stakeholder Communication | opportunity
+    run 1: (nothing)
+  data_scientist | Stakeholder Communication | certification | no pooled item teaches it
+    run 1: (nothing)
+  it_consultant | Digital Transformation | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+    run 7: (nothing)
+    run 8: (nothing)
+  it_consultant | Oracle E-Business Suite | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+    run 7: (nothing)
+    run 8: (nothing)
+  it_consultant | Oracle E-Business Suite | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+    run 7: (nothing)
+    run 8: (nothing)
+  it_consultant | SOAP | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  it_consultant | SOAP | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  it_consultant | BPMN | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+  it_consultant | BPMN | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+  it_consultant | Business Process Automation | opportunity
+    run 1: (nothing)
+    run 2: Business Process Modelling, Gap & Benchmarking Analysis [0]
+    run 3: Business Process Modelling, Gap & Benchmarking Analysis [0]
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: Business Process Modelling, Gap & Benchmarking Analysis [0]
+    run 7: Business Process Modelling, Gap & Benchmarking Analysis [0]
+    run 8: Business Process Modelling, Gap & Benchmarking Analysis [0]
+  it_consultant | Business Process Automation | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+    run 6: (nothing)
+    run 7: (nothing)
+    run 8: (nothing)
+  it_consultant | Oracle BPM Suite | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+  it_consultant | Oracle BPM Suite | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+  it_consultant | SOAP Web Services | opportunity
+    run 1: APIs [0]; Service-Oriented Architecture [1]; Developing Back-End Apps with Node.js and Express [0]
+    run 2: Service-Oriented Architecture [1]; AWS Sales Foundations and Customer Engagement [0]; AWS Cloud Practitioner Essentials [0]
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: APIs [0]; Service-Oriented Architecture [1]; Developing Back-End Apps with Node.js and Express [0]
+  it_consultant | SOAP Web Services | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+    run 4: (nothing)
+    run 5: (nothing)
+  ai_ml_engineer | Data Collection | opportunity
+    run 1: Statistics for Data Science with Python [1]; SQL for Data Science [0]
+    run 2: Statistics for Data Science with Python [1]; SQL for Data Science [0]
+    run 3: Statistics for Data Science with Python [1]; SQL for Data Science [0]
+  ai_ml_engineer | Data Collection | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  ai_ml_engineer | Model Optimization for Mobile | opportunity
+    run 1: Supervised Machine Learning: Regression and Classification [0]; Machine Learning with Python [0]; Advanced Learning Algorithms [0]; Machine Learning in Production [0]; Data Science and Artificial Intelligence Bootcamp [0]
+    run 2: Supervised Machine Learning: Regression and Classification [0]; Machine Learning with Python [0]; Advanced Learning Algorithms [0]; Machine Learning in Production [0]; Data Science and Artificial Intelligence Bootcamp [0]
+    run 3: Supervised Machine Learning: Regression and Classification [0]; Machine Learning with Python [0]; Advanced Learning Algorithms [0]; Machine Learning in Production [0]; Data Science and Artificial Intelligence Bootcamp [0]
+  ai_ml_engineer | Model Optimization for Mobile | certification | no pooled item teaches it
+    run 1: Huawei Certified ICT Associate - AI [0]; NVIDIA-Certified Associate: AI Models and Application Development [0]; Databricks Certified Machine Learning Associate [0]; ISTQB Certified Tester AI Testing v2.0 [0]; Microsoft Certified: Machine Learning Operations Engineer Associate [0]
+    run 2: Huawei Certified ICT Associate - AI [0]; NVIDIA-Certified Associate: AI Models and Application Development [0]; Databricks Certified Machine Learning Associate [0]; ISTQB Certified Tester AI Testing v2.0 [0]; Microsoft Certified: Machine Learning Operations Engineer Associate [0]
+    run 3: Huawei Certified ICT Associate - AI [0]; NVIDIA-Certified Associate: AI Models and Application Development [0]; Databricks Certified Machine Learning Associate [0]; ISTQB Certified Tester AI Testing v2.0 [0]; Microsoft Certified: Machine Learning Operations Engineer Associate [0]
+  ai_ml_engineer | Transformers | opportunity
+    run 1: Natural Language Processing with Attention Models [2]
+    run 2: Natural Language Processing with Attention Models [2]
+    run 3: Natural Language Processing with Attention Models [2]
+  ai_ml_engineer | Transformers | certification
+    run 1: IBM AI Engineering Professional Certificate [1]
+    run 2: IBM AI Engineering Professional Certificate [1]
+    run 3: IBM AI Engineering Professional Certificate [1]
+  ai_ml_engineer | Research | opportunity
+    run 1: Conduct UX Research and Test Early Concepts [2]; UX/UI Design Bootcamp [1]; Introduction to User Experience Principles and Processes [2]; Principles of UX/UI Design [2]
+    run 2: Conduct UX Research and Test Early Concepts [2]; UX/UI Design Bootcamp [1]; Introduction to User Experience Principles and Processes [2]; Principles of UX/UI Design [2]
+    run 3: Conduct UX Research and Test Early Concepts [2]; UX/UI Design Bootcamp [1]; Introduction to User Experience Principles and Processes [2]; Principles of UX/UI Design [2]
+  ai_ml_engineer | Research | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Cloud Cost Optimization | opportunity
+    run 1: Value Selling, Demonstration and AI-Assisted Sales Execution [0]
+    run 2: Project Cost Management [0]; Value Selling, Demonstration and AI-Assisted Sales Execution [0]
+    run 3: Value Selling, Demonstration and AI-Assisted Sales Execution [0]
+  cloud_devops_engineer | Cloud Cost Optimization | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Amazon EKS | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Amazon EKS | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Server Hardware Installation | opportunity
+    run 1: Windows Server 2025 Administration Essentials [0]; Microsoft SQL Server Program [0]; Windows Server Management and Security [0]; Linux Server Management and Security [0]; Indexing, Performance Optimization & Functions in SQL Server [0]
+    run 2: Cisco Unified Computing System [1]
+    run 3: Cisco Unified Computing System [1]
+  cloud_devops_engineer | Server Hardware Installation | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Public Speaking | opportunity
+    run 1: Effective Business Presentations with Powerpoint [1]
+    run 2: Executive Secretarial Series: Practise Computer Applications [1]; Effective Business Presentations with Powerpoint [1]; Work Smarter with Microsoft PowerPoint [0]
+    run 3: Executive Secretarial Series: Practise Computer Applications [1]; Effective Business Presentations with Powerpoint [1]; Work Smarter with Microsoft PowerPoint [0]
+  cloud_devops_engineer | Public Speaking | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | HashiCorp Certified: Terraform Associate | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | HashiCorp Certified: Terraform Associate | certification
+    run 1: HashiCorp Certified: Terraform Associate [2]
+    run 2: HashiCorp Certified: Terraform Associate [2]
+    run 3: HashiCorp Certified: Terraform Associate [2]
+  cloud_devops_engineer | Technical Training | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Technical Training | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Static Website Hosting | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Static Website Hosting | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Amazon S3 | opportunity
+    run 1: Developing Solutions on AWS Cloud Program [1]
+    run 2: Developing Solutions on AWS Cloud Program [1]
+    run 3: Developing Solutions on AWS Cloud Program [1]
+  cloud_devops_engineer | Amazon S3 | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Content Delivery Network | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Content Delivery Network | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Distributed Systems | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cloud_devops_engineer | Distributed Systems | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_analyst | Cryptography | opportunity
+    run 1: Penetration Testing, Threat Hunting, and Cryptography [2]; Managing Storage and Networking [1]
+    run 2: Penetration Testing, Threat Hunting, and Cryptography [2]; Managing Storage and Networking [1]
+    run 3: Penetration Testing, Threat Hunting, and Cryptography [2]; Managing Storage and Networking [1]
+  cybersecurity_analyst | Cryptography | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_analyst | Certified Ethical Hacker | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_analyst | Certified Ethical Hacker | certification
+    run 1: Certified Ethical Hacker (CEH v13) [2]
+    run 2: Certified Ethical Hacker (CEH v13) [2]
+    run 3: Certified Ethical Hacker (CEH v13) [2]
+  cybersecurity_analyst | Intrusion Detection Systems | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: Computer Networks and Network Security [1]; Connect and Protect: Networks and Network Security [0]; Sound the Alarm: Detection and Response [1]
+  cybersecurity_analyst | Intrusion Detection Systems | certification
+    run 1: GIAC Certified Intrusion Analyst [2]
+    run 2: GIAC Certified Intrusion Analyst [2]
+    run 3: Certified SOC Analyst [0]; GIAC Certified Intrusion Analyst [2]
+  cybersecurity_analyst | VMware vSphere | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_analyst | VMware vSphere | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_analyst | Fortinet NSE 4 | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_analyst | Fortinet NSE 4 | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_grc_specialist | Compliance Auditing | opportunity
+    run 1: Foundations of Information Systems Auditing & IT Governance [1]; Information Systems Auditing, Controls and Assurance [1]; Planning, Auditing and Maintaining Enterprise Systems [1]
+    run 2: Foundations of Information Systems Auditing & IT Governance [1]; Information Systems Auditing, Controls and Assurance [1]; Planning, Auditing and Maintaining Enterprise Systems [1]
+    run 3: Foundations of Information Systems Auditing & IT Governance [1]; Information Systems Auditing, Controls and Assurance [1]; Planning, Auditing and Maintaining Enterprise Systems [1]
+  cybersecurity_grc_specialist | Compliance Auditing | certification
+    run 1: Certified in the Governance of Enterprise IT [0]; Certified Information Systems Auditor [2]; ISACA Advanced in AI Audit [1]; PECB Certified ISO/IEC 27001 Lead Auditor [2]
+    run 2: Certified in the Governance of Enterprise IT [0]; Certified Information Systems Auditor [2]; ISACA Advanced in AI Audit [1]; PECB Certified ISO/IEC 27001 Lead Auditor [2]
+    run 3: Certified in the Governance of Enterprise IT [0]; Certified Information Systems Auditor [2]; ISACA Advanced in AI Audit [1]; PECB Certified ISO/IEC 27001 Lead Auditor [2]
+  cybersecurity_grc_specialist | Report Writing | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_grc_specialist | Report Writing | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_grc_specialist | Audit Preparation | opportunity
+    run 1: Foundations of Information Systems Auditing & IT Governance [2]; Information Systems Auditing, Controls and Assurance [1]; Planning, Auditing and Maintaining Enterprise Systems [1]
+    run 2: Foundations of Information Systems Auditing & IT Governance [2]; Information Systems Auditing, Controls and Assurance [1]; Planning, Auditing and Maintaining Enterprise Systems [1]
+    run 3: Foundations of Information Systems Auditing & IT Governance [2]; Information Systems Auditing, Controls and Assurance [1]; Planning, Auditing and Maintaining Enterprise Systems [1]
+  cybersecurity_grc_specialist | Audit Preparation | certification
+    run 1: Certified in the Governance of Enterprise IT [0]; Certified Information Systems Auditor [1]; ISACA Advanced in AI Audit [1]; PECB Certified ISO/IEC 27001 Lead Auditor [2]
+    run 2: Certified in the Governance of Enterprise IT [0]; Certified Information Systems Auditor [1]; ISACA Advanced in AI Audit [1]; PECB Certified ISO/IEC 27001 Lead Auditor [2]
+    run 3: Certified in the Governance of Enterprise IT [0]; Certified Information Systems Auditor [1]; ISACA Advanced in AI Audit [1]; PECB Certified ISO/IEC 27001 Lead Auditor [2]
+  cybersecurity_grc_specialist | Stakeholder Communication | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_grc_specialist | Stakeholder Communication | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_grc_specialist | COBIT | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  cybersecurity_grc_specialist | COBIT | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  data_analyst | KPI Development | opportunity
+    run 1: Product Analytics and AI [1]; Product Launch and Post-Launch Management [0]; Technology and Value Creation: How Do Digital Solutions Turn into Real Impact? [1]
+    run 2: Product Analytics and AI [1]; Product Launch and Post-Launch Management [0]; Technology and Value Creation: How Do Digital Solutions Turn into Real Impact? [1]
+    run 3: Product Analytics and AI [1]; Product Launch and Post-Launch Management [0]; Technology and Value Creation: How Do Digital Solutions Turn into Real Impact? [1]
+  data_analyst | KPI Development | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  data_analyst | Google Analytics | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  data_analyst | Google Analytics | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  data_analyst | Budget Tracking | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  data_analyst | Budget Tracking | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  it_support_specialist | Operating System Installation | opportunity
+    run 1: Introduction to Hardware and Operating Systems [0]; Operating Systems and You: Becoming a Power User [0]; Core 2: OS, Software, Security and Operational Procedures [1]; Introduction to Computers and Operating Systems and Security [0]; Using Python to Interact with the Operating System [0]
+    run 2: Introduction to Hardware and Operating Systems [0]; Operating Systems and You: Becoming a Power User [0]; Core 2: OS, Software, Security and Operational Procedures [1]; Introduction to Computers and Operating Systems and Security [0]; Using Python to Interact with the Operating System [0]
+    run 3: Introduction to Hardware and Operating Systems [0]; Operating Systems and You: Becoming a Power User [0]; Core 2: OS, Software, Security and Operational Procedures [1]; Introduction to Computers and Operating Systems and Security [0]; Using Python to Interact with the Operating System [0]
+  it_support_specialist | Operating System Installation | certification | no pooled item teaches it
+    run 1: CompTIA A+ [0]; Google IT Support Professional Certificate [0]
+    run 2: CompTIA A+ [0]; Google IT Support Professional Certificate [0]
+    run 3: CompTIA A+ [0]; Google IT Support Professional Certificate [0]
+  it_support_specialist | IT Ticketing | opportunity
+    run 1: Introduction to Technical Support [1]
+    run 2: Introduction to Technical Support [1]
+    run 3: Introduction to Technical Support [1]
+  it_support_specialist | IT Ticketing | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  it_support_specialist | Asset Management | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  it_support_specialist | Asset Management | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  network_engineer | Cisco CCNA | opportunity
+    run 1: Advanced Networking Technology Bootcamp [2]
+    run 2: Advanced Networking Technology Bootcamp [2]
+    run 3: Advanced Networking Technology Bootcamp [2]
+  network_engineer | Cisco CCNA | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  network_engineer | Network Installation | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  network_engineer | Network Installation | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  network_engineer | Cisco CCNP | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  network_engineer | Cisco CCNP | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  network_engineer | Network Access Control | opportunity
+    run 1: Network Security [1]; Managing Security in Google Cloud [1]; Cloud Computing with Google Compute Engine Program [0]; Advanced Cybersecurity Diploma [0]
+    run 2: Network Security [1]; Managing Security in Google Cloud [1]; Cloud Computing with Google Compute Engine Program [0]; Advanced Cybersecurity Diploma [0]
+    run 3: Network Security [1]; Managing Security in Google Cloud [1]; Cloud Computing with Google Compute Engine Program [0]; Advanced Cybersecurity Diploma [0]
+  network_engineer | Network Access Control | certification
+    run 1: Systems Security Certified Practitioner [0]; Certified Wireless Security Professional [1]
+    run 2: Systems Security Certified Practitioner [0]; Certified Wireless Security Professional [1]
+    run 3: Systems Security Certified Practitioner [0]
+  network_engineer | Fortinet NSE 4 | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  network_engineer | Fortinet NSE 4 | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  qa_test_engineer | ISTQB Advanced Level Test Analyst | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  qa_test_engineer | ISTQB Advanced Level Test Analyst | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  qa_test_engineer | TestNG | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  qa_test_engineer | TestNG | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  software_engineer | Oracle Certified Professional: Java SE Developer | opportunity
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  software_engineer | Oracle Certified Professional: Java SE Developer | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  software_engineer | Mentoring | opportunity | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  software_engineer | Mentoring | certification | no pooled item teaches it
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+  software_engineer | Web Development | opportunity
+    run 1: Programming with JavaScript [2]; Developing Front-End Apps with React [2]; Introduction to Back-End Development [2]; Introduction to Front-End Development [2]
+    run 2: AI in Web Application Development with Python and Django Bootcamp [2]; Web Application Development [2]; Web Application Security [0]; Advanced Cybersecurity Diploma [0]; APIs [2]
+    run 3: Programming with JavaScript [2]; Developing Front-End Apps with React [2]; Introduction to Back-End Development [2]; Introduction to Front-End Development [2]
+  software_engineer | Web Development | certification
+    run 1: (nothing)
+    run 2: (nothing)
+    run 3: (nothing)
+
+RATER AGREEMENT on 124 pairs: Cohen's kappa 0.840 on "teaches it or not", 0.856 weighted on the grades 0, 1, 2.

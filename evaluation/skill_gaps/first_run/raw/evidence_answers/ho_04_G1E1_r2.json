@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SQL",
+  "Power BI",
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Data Analysis",
+  "Tableau",
+  "R",
+  "Machine Learning",
+  "Stakeholder Management",
+  "Pandas",
+  "Data Governance"
+ ],
+ "answer": [
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "wrote SELECT statements with GROUP BY and subqueries"
+  },
+  {
+   "skill": "Power BI",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Tools I use: Excel, Python"
+  },
+  {
+   "skill": "Data Visualization",
+   "status": "shown",
+   "quote": "Drew bar charts and a scatter plot of price against mileage"
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Analysis",
+   "status": "shown",
+   "quote": "worked out averages, medians and spread by city and brand"
+  },
+  {
+   "skill": "Tableau",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "R",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "partly",
+   "quote": "Fitted a straight line of price on mileage and age"
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "partly",
+   "quote": "report spending to the club supervisor every month"
+  },
+  {
+   "skill": "Pandas",
+   "status": "partly",
+   "quote": "Loaded the sheet in a Jupyter notebook and worked out averages"
+  },
+  {
+   "skill": "Data Governance",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

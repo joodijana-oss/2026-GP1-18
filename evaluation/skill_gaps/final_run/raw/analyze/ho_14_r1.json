@@ -1,0 +1,70 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Experienced in diagnosing and resolving network connectivity issues from wall socket to switch port",
+   "Hands-on experience replacing and configuring access switches using saved configurations",
+   "Practical skill in IP address management across multiple sites",
+   "Proactive in identifying and resolving Wi-Fi coverage issues using signal-strength mapping",
+   "Self-directed learner who built a home lab to deepen networking knowledge",
+   "Hands-on experience configuring VLANs, trunking, and access control lists",
+   "Practical experience setting up site-to-site VPN tunnels with automatic recovery",
+   "Exposure to dynamic routing protocols and BGP/OSPF configuration in simulated environments",
+   "High-volume customer support experience handling around 30 requests a day for 400 users"
+  ],
+  "currentSkills": [
+   "IT Support",
+   "Network Troubleshooting",
+   "Structured Cabling",
+   "Switch Configuration",
+   "Cisco IOS",
+   "IP Address Management",
+   "Wireless Site Survey",
+   "Access Point Configuration",
+   "VLAN Configuration",
+   "Trunking",
+   "Access Control Lists",
+   "Site-to-Site VPN",
+   "GNS3",
+   "OSPF",
+   "BGP",
+   "Network Design"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Technology",
+    "institution": "Saudi Electronic University",
+    "year": "2024"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "CCNA",
+    "issuer": "",
+    "year": "2027"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Home Lab Network Segmentation",
+    "description": "Split home flat into four networks (family, guests, cameras, lab) on one switch with a trunk to the router, and wrote access lists so cameras cannot reach other networks."
+   },
+   {
+    "name": "Site-to-Site VPN Tunnel",
+    "description": "Built an encrypted tunnel between flat in Riyadh and parents' house in Tabuk so both ends see each other's file shares as one network, with automatic recovery after power cuts."
+   },
+   {
+    "name": "GNS3 Routing Simulation",
+    "description": "Simulated two companies each running OSPF internally, exchanging prefixes with a simulated provider, with each side under its own AS number."
+   }
+  ],
+  "experience": [
+   {
+    "title": "IT Support Officer",
+    "organization": "A group of private schools with seven campuses, Riyadh",
+    "duration": "September 2024 - present",
+    "description": "First point of contact for about 400 teachers and staff handling password resets, replacement PCs, projectors and printers at roughly 30 requests a day. Traces classroom connectivity issues from wall socket to patch panel to switch port, testing and re-terminating cables as needed. Acts as on-site hands for the network contractor, replacing two failed access switches by loading saved configurations onto spares and moving uplinks. Assigns fixed addresses to printers and cameras and maintains address sheets per campus. Walked two campuses with a signal-strength app to map dead spots and relocated four access points, resolving complaints."
+   }
+  ]
+ }
+}

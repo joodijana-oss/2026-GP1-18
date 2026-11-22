@@ -1,0 +1,56 @@
+T U R K I   A L - H A R B I
+Riyadh, Saudi Arabia
++966 54 010 4455
+turki.alharbi@example.com
+linkedin.com/in/turki-alharbi
+github.com/turki-alharbi
+
+Summary
+DevOps Engineer with over 3 years of professional experience building
+and running cloud infrastructure on AWS, automating deployments and
+improving reliability for production web services.
+
+Experience
+Junior DevOps Engineer
+Sadeem Cloud Services, Riyadh
+Mar 2026 - Present
+Migrated 9 microservices from virtual machines to Kubernets on AWS EKS,
+reducing monthly hosting cost by 22%
+Built CI/CD pipelines in Git Hub Actions that cut the average release
+time from 45 minutes to 8 minutes
+Provisioned VPCs, subnets and RDS instances with Terrafrom modules
+reused by 3 product teams
+Set up Prometheus and Grafana alerting that lowered the mean time to
+detect incidents from 20 minutes to 4 minutes
+
+Cloud Operations Intern
+Qimam Digital, Riyadh
+Jun 2025 - Aug 2025
+Monitoring
+Server stuff and deployments
+Helping with tickets
+Wrote a Bash script that rotates application logs on 30 Linux servers,
+freeing 120 GB of disk space
+
+Education
+Bachelor of Science in Computer Engineering
+Central Region University, Riyadh
+Sep 2021 - Jun 2025
+GPA: 4.29 / 5.00
+
+Projects
+Graduation project
+A system for the university. I worked on the servers part with my team
+and it was successful.
+
+Self-hosted Git server on a home lab (2025)
+Deployed Gitea, a container registry and nightly backups on a 3-node
+K3s cluster using Ansible playbooks and Helm charts
+
+Certifications
+AWS Certified Solutions Architect - Associate (Amazon Web Services,
+Feb 2026)
+HashiCorp Certified: Terraform Associate (HashiCorp, Nov 2025)
+
+Languages
+Arabic (native), English (TOEFL iBT 92)

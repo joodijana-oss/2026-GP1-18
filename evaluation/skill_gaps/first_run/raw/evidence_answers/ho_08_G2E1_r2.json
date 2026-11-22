@@ -1,0 +1,42 @@
+{
+ "targets": [
+  "CCNA",
+  "Firewall Management",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto",
+  "BGP"
+ ],
+ "answer": [
+  {
+   "skill": "CCNA",
+   "status": "shown",
+   "quote": "Cisco Certified Network Associate (CCNA 200-301)"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CCNP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Fortinet",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "BGP",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

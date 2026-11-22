@@ -1,0 +1,51 @@
+{
+ "case": "ho_12",
+ "arm": "G2E1",
+ "run": 2,
+ "gaps": [
+  "CISA",
+  "CISM",
+  "CRISC",
+  "NIST",
+  "PCI DSS",
+  "CISSP"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Cybersecurity Risk Register Management",
+   "status": "partly"
+  },
+  {
+   "skill": "CISA",
+   "status": "missing"
+  },
+  {
+   "skill": "CISM",
+   "status": "missing"
+  },
+  {
+   "skill": "CRISC",
+   "status": "missing"
+  },
+  {
+   "skill": "NIST",
+   "status": "missing"
+  },
+  {
+   "skill": "PCI DSS",
+   "status": "missing"
+  },
+  {
+   "skill": "Third-Party Risk Management",
+   "status": "shown"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing"
+  }
+ ]
+}

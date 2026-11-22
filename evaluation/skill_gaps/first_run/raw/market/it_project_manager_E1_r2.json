@@ -1,0 +1,34 @@
+{
+ "goal": "it_project_manager",
+ "extractor": "E1",
+ "run": 2,
+ "postings": 18,
+ "rawNames": [
+  "Risk Management",
+  "Stakeholder Management",
+  "Agile",
+  "PMP",
+  "Scrum",
+  "Jira",
+  "Microsoft Project",
+  "Waterfall",
+  "Budget Management",
+  "PRINCE2",
+  "Change Management",
+  "Vendor Management"
+ ],
+ "names": [
+  "Risk Management",
+  "Stakeholder Management",
+  "Agile",
+  "PMP",
+  "Scrum",
+  "Jira",
+  "Microsoft Project",
+  "Waterfall",
+  "Budget Management",
+  "PRINCE2",
+  "Change Management",
+  "Vendor Management"
+ ]
+}

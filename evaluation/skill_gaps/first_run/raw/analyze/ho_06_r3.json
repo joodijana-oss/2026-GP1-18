@@ -1,0 +1,58 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Strong competitive programming skills with high Codeforces rating and 700+ problems solved",
+   "Performed well in a major collegiate programming contest, handling advanced algorithmic problems",
+   "Experience mentoring and teaching others through coaching and writing editorials",
+   "Able to design and build full personal projects from scratch, including backend logic, data storage, and deployment",
+   "Deploys and maintains live services, including server operations and troubleshooting",
+   "Uses version control with structured workflow (branching, changelog)",
+   "Applies object-oriented design principles for extensibility (entity/map/renderer separation)",
+   "Debugging skills demonstrated by diagnosing and fixing an off-by-one error in saved game loading"
+  ],
+  "currentSkills": [
+   "C++",
+   "Java",
+   "Python",
+   "SQLite",
+   "Git",
+   "GitHub",
+   "Systemd",
+   "Linux",
+   "A* Search",
+   "Data Structures",
+   "Algorithms",
+   "Object-Oriented Design",
+   "API Integration",
+   "Debugging",
+   "Swing"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "King Saud University",
+    "year": "2024 - 2028 (expected)"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Salati (prayer-time bot for Telegram)",
+    "description": "Python-based Telegram bot that calls a public prayer-times API, caches responses per city for a day, stores user city and reminder preferences in SQLite, and runs on a VPS under systemd with manual monitoring and restarts; used daily by 340 people. Maintained on GitHub with feature branches and changelog."
+   },
+   {
+    "name": "Maze Runner (2D game, Java)",
+    "description": "2D game built with Java and Swing where enemies chase the player using A* search. Designed with separate entity, map, and renderer classes behind a shared interface for extensibility. Fixed an off-by-one bug in the map reader after diagnosing a saved-game loading issue, and added checks for broken files."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Coach / Club Mentor",
+    "organization": "College programming club",
+    "duration": "",
+    "description": "Coaches two weekly practice sessions for first-year students and writes the editorial for each problem set."
+   }
+  ]
+ }
+}

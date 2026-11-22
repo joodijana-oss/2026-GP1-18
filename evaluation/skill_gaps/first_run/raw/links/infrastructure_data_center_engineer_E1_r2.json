@@ -1,0 +1,121 @@
+{
+ "goal": "infrastructure_data_center_engineer",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "managing linux systems",
+    "linux system administration",
+    "command line administration"
+   ]
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Networking Fundamentals",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Structured Cabling",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "cable installation standards",
+    "physical network wiring",
+    "cabling infrastructure design"
+   ]
+  },
+  {
+   "gap": "VMware",
+   "kind": "tool",
+   "concepts": [
+    "Virtualization"
+   ],
+   "phrases": [
+    "virtual machine management",
+    "hypervisor administration"
+   ]
+  },
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "CI/CD Pipelines",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Prometheus",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "monitoring and alerting",
+    "metrics collection tool",
+    "system performance monitoring"
+   ]
+  },
+  {
+   "gap": "Grafana",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "dashboard visualization tool",
+    "metrics dashboards",
+    "monitoring visualization"
+   ]
+  },
+  {
+   "gap": "Ansible",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuration management automation",
+    "infrastructure automation tool",
+    "playbook based automation"
+   ]
+  },
+  {
+   "gap": "Windows Server Administration",
+   "kind": "skill",
+   "concepts": [
+    "Windows Server"
+   ],
+   "phrases": [
+    "managing windows servers",
+    "server administration tasks"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "goal": "qa_test_engineer",
+ "extractor": "E0",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Manual Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "testing software by hand",
+    "manual test execution",
+    "exploratory testing techniques"
+   ]
+  },
+  {
+   "gap": "Test Case Design",
+   "kind": "skill",
+   "concepts": [
+    "Test Cases"
+   ],
+   "phrases": [
+    "writing test scenarios",
+    "designing test steps",
+    "creating test conditions"
+   ]
+  },
+  {
+   "gap": "Jira",
+   "kind": "tool",
+   "concepts": [
+    "Jira"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Functional Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "validating software functionality",
+    "verifying feature behavior",
+    "checking application requirements"
+   ]
+  },
+  {
+   "gap": "Regression Testing",
+   "kind": "skill",
+   "concepts": [
+    "Regression Testing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Defect Tracking and Reporting",
+   "kind": "skill",
+   "concepts": [
+    "Defect Tracking"
+   ],
+   "phrases": [
+    "logging software bugs",
+    "reporting issues found",
+    "tracking defect status"
+   ]
+  },
+  {
+   "gap": "API Testing",
+   "kind": "skill",
+   "concepts": [
+    "API Testing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Integration Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "testing combined components",
+    "verifying module interactions",
+    "end to end integration checks"
+   ]
+  },
+  {
+   "gap": "Test Automation",
+   "kind": "skill",
+   "concepts": [
+    "Test Automation"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Agile/Scrum Methodologies",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "sprint planning and execution",
+    "scrum ceremonies and roles",
+    "iterative software delivery"
+   ]
+  },
+  {
+   "gap": "Selenium",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "automating browser tests",
+    "writing automated test scripts"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "case": "ho_01",
+ "arm": "G1E1",
+ "run": 2,
+ "gaps": [
+  "Firewall Administration",
+  "CISSP",
+  "CEH",
+  "OSCP",
+  "Access Control"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "SIEM",
+   "status": "partly"
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "partly"
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "shown"
+  },
+  {
+   "skill": "Incident Response",
+   "status": "partly"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "missing"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing"
+  },
+  {
+   "skill": "Network Security",
+   "status": "shown"
+  },
+  {
+   "skill": "CEH",
+   "status": "missing"
+  },
+  {
+   "skill": "Security+",
+   "status": "shown"
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing"
+  },
+  {
+   "skill": "Python",
+   "status": "shown"
+  },
+  {
+   "skill": "Access Control",
+   "status": "missing"
+  }
+ ]
+}

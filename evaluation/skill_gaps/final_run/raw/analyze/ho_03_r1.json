@@ -1,0 +1,48 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Able to extract and join data from databases using SQL queries",
+   "Experience cleaning and deduplicating real-world data",
+   "Built reporting tools that replaced manual processes",
+   "Worked directly with stakeholders to define business metrics",
+   "Communicated findings through presentations to senior management",
+   "Applied statistical testing in a graduation project",
+   "Strong academic performance (GPA 4.31/5)",
+   "Demonstrated leadership and involvement through class representative role and volunteering"
+  ],
+  "currentSkills": [
+   "SQL",
+   "Data Cleaning",
+   "Data Analysis",
+   "Excel",
+   "Power BI",
+   "Tableau",
+   "Statistics",
+   "Pandas",
+   "Data Visualization"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Systems",
+    "institution": "Qassim University",
+    "year": "2022 - 2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Do coupons work?",
+    "description": "Used an open retail dataset to compare basket sizes of shoppers who received a coupon versus those who did not, and ran a t-test to check statistical significance. Worked in a notebook using pandas as part of a three-person team; authored the analysis chapter."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Operations Intern",
+    "organization": "A dates packing and export company, Buraydah",
+    "duration": "06/2026 - Aug 2026",
+    "description": "Queried shipment records from the order database and joined them to customer data to identify repeat buyers. Found and merged 412 duplicate customer records and filled in missing country codes. Maintained cleaned data in an Excel workbook with lookup formulas for self-service filtering by the warehouse supervisor. Built a weekly summary report with charts of late shipments by destination, replacing a manual report. Collaborated with the warehouse supervisor and export manager to define three tracked late-shipment measures. Answered ad hoc analysis requests from the sales team. Presented findings to the owner and four managers."
+   }
+  ]
+ }
+}

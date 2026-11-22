@@ -1,0 +1,66 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on experience building a home security monitoring lab with log aggregation and detection rules",
+   "Practical experience mapping detection rules to attacker techniques using the ATT&CK framework",
+   "Conducted authorized vulnerability scanning and reporting with measurable remediation outcomes",
+   "Demonstrated scripting ability for network traffic analysis",
+   "Strong competition performance in CTF challenges including memory forensics and web exploitation",
+   "Holds an industry certification (CompTIA Security+)",
+   "Leadership experience through running peer training sessions on log analysis",
+   "Strong academic performance with high GPA in Computer Science"
+  ],
+  "currentSkills": [
+   "Linux",
+   "Python",
+   "Wireshark",
+   "Nessus",
+   "Bash",
+   "Log Analysis",
+   "Security Information and Event Management",
+   "Vulnerability Assessment",
+   "Network Traffic Analysis",
+   "Memory Forensics",
+   "SQL Injection",
+   "MITRE ATT&CK Mapping",
+   "Incident Detection"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "Taif University",
+    "year": "expected June 2027"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "CompTIA Security+ (SY0-701)",
+    "issuer": "CompTIA",
+    "year": "March 2026"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Watchtower at home",
+    "description": "Set up three virtual machines and forwarded Windows event logs and Linux auth logs to a central console, wrote 11 detection rules, tested them by replaying a brute-force attack and a suspicious PowerShell download, tuned noisy rules, and mapped each rule to attacker techniques using the ATT&CK matrix."
+   },
+   {
+    "name": "Scan my campus club",
+    "description": "With supervisor permission, ran Nessus Essentials against two club servers, ranked 23 findings by severity, and handed over a fix list; four critical findings were patched within a week."
+   },
+   {
+    "name": "Packet diary",
+    "description": "Captured home network traffic for a week and wrote a Python script to read capture files and list devices communicating with addresses outside the country."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Vice-lead",
+    "organization": "Taif University Cybersecurity Club",
+    "duration": "",
+    "description": "Runs a weekly session where new members practice reading logs from a staged incident."
+   }
+  ]
+ }
+}

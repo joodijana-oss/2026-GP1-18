@@ -1,0 +1,60 @@
+{
+ "targets": [
+  "SIEM",
+  "Penetration Testing",
+  "Vulnerability Assessment",
+  "CISSP",
+  "Network Security",
+  "CEH",
+  "Security+",
+  "OSCP",
+  "Access Control"
+ ],
+ "answer": [
+  {
+   "skill": "SIEM",
+   "status": "partly",
+   "quote": "searching Splunk for signs of lateral movement"
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "partly",
+   "quote": "removed 40 unused any-any rules after last year's PCI assessment"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Network Security",
+   "status": "shown",
+   "quote": "Add, review and retire rules on the FortiGate firewalls"
+  },
+  {
+   "skill": "CEH",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Security+",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Access Control",
+   "status": "shown",
+   "quote": "own VLAN with access lists so that guest Wi-Fi can no longer reach them"
+  }
+ ]
+}

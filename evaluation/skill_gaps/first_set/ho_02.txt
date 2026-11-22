@@ -1,0 +1,32 @@
+Faisal Al-Harbi
+Jeddah | faisal.alharbi@example.com | +966 50 000 0000
+
+Summary
+Network and infrastructure support engineer with two years in a hotel group, now moving into security operations. A growing share of my week is already security work: firewall changes, keeping payment systems apart from guest traffic, and dealing with suspicious email.
+
+Experience
+Network and Infrastructure Support Engineer, a hotel group with 11 properties, Jeddah - Sep 2024 to present
+- Keep the guest and back-office networks running across the properties: 140 Cisco switches, 400 access points and a FortiGate pair at each site.
+- Add, review and retire rules on the FortiGate firewalls; removed 40 unused any-any rules after last year's PCI assessment.
+- Separated the card-payment terminals into their own VLAN with access lists so that guest Wi-Fi can no longer reach them.
+- Run the antivirus console (Trend Micro Apex One) for 900 back-office PCs: push policies, chase machines that stop reporting and isolate infected ones.
+- When staff report strange emails, I read the headers, open the links in a sandbox and block the sender domains on the mail gateway; handled a wave of 37 fake-invoice messages in March 2026.
+- Handle P1 outages under the group's ITIL major-incident process and write the post-incident summary for management.
+- Wrote Python scripts that back up every switch configuration nightly and flag ports where the configuration has changed.
+- Keep a central syslog server on Ubuntu for switch and firewall messages and check it when a link flaps.
+
+IT Help Desk Trainee (co-op), same employer - Jan 2024 to Jul 2024
+- Closed around 25 tickets a day: password resets, printers, guest Wi-Fi vouchers.
+
+Education
+B.Sc. Information Technology, King Abdulaziz University, Jeddah, 2024
+
+Training
+- Blue-team path on an online lab platform (ongoing): 30 rooms completed, including one on searching Splunk for signs of lateral movement.
+- Attended a two-day NCA ECC awareness workshop arranged by the employer.
+
+Skills
+FortiGate, Cisco switching, Python, Linux
+
+Languages
+Arabic (native), English (IELTS 6.5)

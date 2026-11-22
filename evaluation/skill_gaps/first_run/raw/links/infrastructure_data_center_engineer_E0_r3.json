@@ -1,0 +1,140 @@
+{
+ "goal": "infrastructure_data_center_engineer",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "managing Linux systems",
+    "command line administration",
+    "server administration tasks"
+   ]
+  },
+  {
+   "gap": "Networking (TCP/IP, LAN/WAN, VLAN, DNS, VPN, Firewalls)",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals",
+    "TCP/IP"
+   ],
+   "phrases": [
+    "configuring VLANs and DNS",
+    "setting up VPNs",
+    "firewall configuration basics"
+   ]
+  },
+  {
+   "gap": "Data Center Operations (Servers, Storage, Power, Cooling)",
+   "kind": "skill",
+   "concepts": [
+    "Data Center Operations"
+   ],
+   "phrases": [
+    "managing server rooms",
+    "power and cooling systems",
+    "storage infrastructure management"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Structured Cabling (Fiber Optic & Copper)",
+   "kind": "skill",
+   "concepts": [
+    "Fiber Optics"
+   ],
+   "phrases": [
+    "cable installation techniques",
+    "fiber optic termination",
+    "copper cabling standards"
+   ]
+  },
+  {
+   "gap": "Virtualization (VMware/Hyper-V)",
+   "kind": "skill",
+   "concepts": [
+    "Virtualization"
+   ],
+   "phrases": [
+    "creating virtual machines",
+    "hypervisor management",
+    "VMware and Hyper-V basics"
+   ]
+  },
+  {
+   "gap": "CI/CD Pipelines",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": [
+    "automating build pipelines",
+    "continuous integration workflows",
+    "deployment automation"
+   ]
+  },
+  {
+   "gap": "Monitoring & Observability Tools (Prometheus, Grafana)",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "system monitoring dashboards",
+    "setting up alerts",
+    "metrics visualization"
+   ]
+  },
+  {
+   "gap": "Windows Server Administration",
+   "kind": "skill",
+   "concepts": [
+    "Windows Server"
+   ],
+   "phrases": [
+    "managing Windows servers",
+    "server roles and features",
+    "Active Directory administration"
+   ]
+  },
+  {
+   "gap": "Cloud Platforms (AWS/Azure/GCP)",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "deploying cloud resources",
+    "multi-cloud environments",
+    "cloud infrastructure management"
+   ]
+  },
+  {
+   "gap": "Ansible",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuration management automation",
+    "writing playbooks",
+    "infrastructure automation"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "case": "ho_02",
+ "arm": "G2E1",
+ "run": 3,
+ "gaps": [
+  "Penetration Testing",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Security+",
+  "Nmap",
+  "Metasploit"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "SIEM",
+   "status": "partly"
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "missing"
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "partly"
+  },
+  {
+   "skill": "CEH",
+   "status": "missing"
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing"
+  },
+  {
+   "skill": "Security+",
+   "status": "missing"
+  },
+  {
+   "skill": "Nmap",
+   "status": "missing"
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing"
+  }
+ ]
+}

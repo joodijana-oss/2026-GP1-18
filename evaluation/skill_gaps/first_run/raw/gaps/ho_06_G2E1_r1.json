@@ -1,0 +1,51 @@
+{
+ "case": "ho_06",
+ "arm": "G2E1",
+ "run": 1,
+ "gaps": [
+  "React",
+  "Node.js",
+  "Spring Boot",
+  "Docker",
+  "Microservices Architecture",
+  "Kubernetes"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "REST APIs",
+   "status": "partly"
+  },
+  {
+   "skill": "SQL",
+   "status": "partly"
+  },
+  {
+   "skill": "React",
+   "status": "missing"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing"
+  },
+  {
+   "skill": "Docker",
+   "status": "missing"
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "missing"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "goal": "business_analyst",
+ "extractor": "E1",
+ "run": 7,
+ "postings": 3,
+ "rawNames": [
+  "Business Requirements Analysis",
+  "ERP Systems",
+  "System Integration",
+  "SAP SuccessFactors",
+  "Power BI",
+  "Risk Assessment",
+  "Access Control Management",
+  "Compliance Management",
+  "ISO 27001 Lead Implementer",
+  "Agile Development",
+  "DevOps",
+  "API Integration"
+ ],
+ "names": [
+  "Business Requirements Analysis",
+  "ERP Systems",
+  "System Integration",
+  "SAP SuccessFactors",
+  "Power BI",
+  "Risk Assessment",
+  "Access Control Management",
+  "Compliance Management",
+  "ISO 27001 Lead Implementer",
+  "Agile Development",
+  "DevOps",
+  "API Integration"
+ ]
+}

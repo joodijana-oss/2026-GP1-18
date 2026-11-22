@@ -1,0 +1,33 @@
+Reem Al-Anazi
+Riyadh | reem.alanazi@example.com | +966 50 000 0000
+
+Profile
+Software tester with 14 months on a government services mobile app and its web portal. ISTQB certified. Currently teaching myself to script the checks I repeat every release.
+
+Work experience
+QA Tester, an IT services contractor working for a government entity, Riyadh. Sep 2025 - now
+- Write step-by-step scenarios with expected results from user stories and acceptance criteria; maintain about 900 of them in TestRail.
+- Before each fortnightly release, re-run the 180 scenarios that cover existing features to make sure nothing that worked has broken.
+- Log every defect in Jira with steps, screenshots, device details and severity; 410 raised so far, 6% rejected.
+- Check the app by hand on 9 Android and iOS devices, including Arabic right-to-left layout and behaviour on a weak connection.
+- Send requests to the backend with Postman to confirm status codes and response bodies before the screens are ready.
+- Query the test database to verify that submitted applications are saved with the right status.
+- Take part in sprint planning, daily stand-ups and retrospectives with a team of 11.
+- Organised two rounds in which 15 employees of the client tried the licence-renewal journey before go-live and signed it off.
+- Started scripting the login and renewal smoke checks in Selenium with Java (23 scripts so far, run from my laptop).
+
+Training
+Software testing bootcamp at a national digital academy, 12 weeks, 2025
+- Capstone: wrote the test plan (scope, risks, entry and exit criteria) for a food-delivery app and led a team of four through it.
+
+Education
+B.Sc. Information Systems, Imam Mohammad Ibn Saud Islamic University, Riyadh, 2024
+
+Certifications
+ISTQB Certified Tester Foundation Level (CTFL), 2025
+
+Skills
+Manual testing, Jira, Postman, TestRail, SQL (basic), Selenium (beginner)
+
+Languages
+Arabic (native), English (good)

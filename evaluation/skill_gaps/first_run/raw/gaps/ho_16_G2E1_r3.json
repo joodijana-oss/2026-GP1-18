@@ -1,0 +1,42 @@
+{
+ "case": "ho_16",
+ "arm": "G2E1",
+ "run": 3,
+ "gaps": [
+  "React",
+  "Node.js",
+  "Spring Boot",
+  "Kubernetes",
+  "C++"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "React",
+   "status": "missing"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing"
+  },
+  {
+   "skill": "Linux",
+   "status": "partly"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  },
+  {
+   "skill": "C++",
+   "status": "missing"
+  }
+ ]
+}

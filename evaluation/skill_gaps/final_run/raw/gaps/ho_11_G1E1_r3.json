@@ -1,0 +1,67 @@
+{
+ "case": "ho_11",
+ "arm": "G1E1",
+ "run": 3,
+ "gaps": [
+  "Active Directory",
+  "Microsoft 365",
+  "TCP/IP",
+  "IT Asset Management",
+  "DNS",
+  "DHCP"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Hardware Troubleshooting",
+   "status": "shown"
+  },
+  {
+   "skill": "Windows Operating System",
+   "status": "shown"
+  },
+  {
+   "skill": "Networking",
+   "status": "shown"
+  },
+  {
+   "skill": "Active Directory",
+   "status": "missing"
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "partly"
+  },
+  {
+   "skill": "Microsoft 365",
+   "status": "missing"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "missing"
+  },
+  {
+   "skill": "Printer Support",
+   "status": "shown"
+  },
+  {
+   "skill": "IT Asset Management",
+   "status": "missing"
+  },
+  {
+   "skill": "Customer Service",
+   "status": "shown"
+  },
+  {
+   "skill": "DNS",
+   "status": "missing"
+  },
+  {
+   "skill": "DHCP",
+   "status": "missing"
+  }
+ ]
+}

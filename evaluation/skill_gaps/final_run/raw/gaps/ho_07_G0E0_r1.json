@@ -1,0 +1,16 @@
+{
+ "case": "ho_07",
+ "arm": "G0E0",
+ "run": 1,
+ "gaps": [
+  "Ansible",
+  "Python",
+  "Site Reliability Engineering (SLIs/SLOs)",
+  "GitOps (Argo CD)"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

@@ -1,0 +1,34 @@
+{
+ "goal": "business_analyst",
+ "extractor": "E1",
+ "run": 8,
+ "postings": 3,
+ "rawNames": [
+  "Business Requirements Analysis",
+  "ERP Systems",
+  "System Integration",
+  "SAP SuccessFactors",
+  "Power BI",
+  "Risk Assessment",
+  "Access Control Management",
+  "SAP",
+  "Oracle NetSuite",
+  "Agile Development",
+  "DevOps",
+  "ISO27001 Lead Implementer"
+ ],
+ "names": [
+  "Business Requirements Analysis",
+  "ERP Systems",
+  "System Integration",
+  "SAP SuccessFactors",
+  "Power BI",
+  "Risk Assessment",
+  "Access Control Management",
+  "SAP",
+  "Oracle NetSuite",
+  "Agile Development",
+  "DevOps",
+  "ISO27001 Lead Implementer"
+ ]
+}

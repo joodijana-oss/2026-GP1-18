@@ -1,0 +1,60 @@
+{
+ "targets": [
+  "Deep Learning",
+  "Kubernetes",
+  "C++",
+  "Computer Vision",
+  "Linux",
+  "MLOps",
+  "Terraform",
+  "LangChain",
+  "Docker"
+ ],
+ "answer": [
+  {
+   "skill": "Deep Learning",
+   "status": "shown",
+   "quote": "Trained a convolutional-recurrent network with CTC loss in PyTorch"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Computer Vision",
+   "status": "shown",
+   "quote": "Straightened, cropped and binarised each image, and enlarged the training set"
+  },
+  {
+   "skill": "Linux",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "MLOps",
+   "status": "partly",
+   "quote": "tracked in Weights & Biases"
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "LangChain",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

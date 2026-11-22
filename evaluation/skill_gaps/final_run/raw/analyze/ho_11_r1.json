@@ -1,0 +1,52 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on experience diagnosing and repairing laptops and desktops",
+   "Experience rebuilding systems and reinstalling drivers, programs and files",
+   "Careful data-handling practice, backing up customer files before repairs",
+   "Able to explain technical issues in plain language to non-technical customers",
+   "Experience configuring and troubleshooting home routers and networks",
+   "Created instructional documentation for new apprentices",
+   "Experience tracking and resolving IT requests in a structured system",
+   "Reliable, consistent work history balancing study and part-time work"
+  ],
+  "currentSkills": [
+   "PC Hardware Troubleshooting",
+   "Windows 10 and 11 Installation",
+   "Computer Repair",
+   "Home Networking",
+   "Router Configuration",
+   "Firmware Updates",
+   "Technical Documentation",
+   "Customer Service",
+   "Microsoft Office",
+   "IT Support",
+   "Printer Maintenance",
+   "Help Desk Ticketing"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Technology",
+    "institution": "Northern Border University, Arar",
+    "year": "2024 - expected 2028"
+   }
+  ],
+  "certifications": [],
+  "projects": [],
+  "experience": [
+   {
+    "title": "Evening Technician (part-time, 16 hours a week)",
+    "organization": "Computer and phone repair shop, Arar",
+    "duration": "September 2025 - present",
+    "description": "Diagnosed and repaired laptops and desktops including startup failures, overheating and crashes, replacing memory, drives, fans and screens for about 15 machines a week. Wiped and rebuilt customer machines from USB, reinstalling drivers, programs and files. Backed up customer photos and documents before repairs and restored them afterward. Explained issues and costs to walk-in customers in plain language. Reset, updated firmware, and configured home routers, resolving connectivity issues. Wrote 20 one-page how-to sheets with photos for new apprentices."
+   },
+   {
+    "title": "Student Helper",
+    "organization": "Computer labs, College of Computing",
+    "duration": "2025",
+    "description": "Walked four labs each morning, logged dead PCs and projectors into the college's request system and closed requests once faults were fixed. Cleared paper jams and replaced toner in lab printers."
+   }
+  ]
+ }
+}

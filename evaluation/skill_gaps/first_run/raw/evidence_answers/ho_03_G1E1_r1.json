@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SQL",
+  "Power BI",
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Tableau",
+  "R",
+  "Machine Learning",
+  "Data Analysis",
+  "Pandas",
+  "NumPy",
+  "Stakeholder Management"
+ ],
+ "answer": [
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "queries joining the orders, carriers and delivery tables"
+  },
+  {
+   "skill": "Power BI",
+   "status": "shown",
+   "quote": "refreshed every Monday in Power BI"
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Visualization",
+   "status": "shown",
+   "quote": "Built a one-page view for the operations manager showing late deliveries"
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "shown",
+   "quote": "Built a one-page view for the operations manager showing late deliveries by carrier and route"
+  },
+  {
+   "skill": "Tableau",
+   "status": "partly",
+   "quote": "Excel, SQL, Power BI, Tableau, R"
+  },
+  {
+   "skill": "R",
+   "status": "partly",
+   "quote": "Excel, SQL, Power BI, Tableau, R"
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Analysis",
+   "status": "shown",
+   "quote": "Summarised 14 months of delivery data with pivot tables and VLOOKUP"
+  },
+  {
+   "skill": "Pandas",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "NumPy",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "shown",
+   "quote": "Sat with dispatch supervisors to agree what \"late\" should mean"
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "case": "ho_01",
+ "arm": "G2E1",
+ "run": 3,
+ "gaps": [
+  "SIEM",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Metasploit"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "SIEM",
+   "status": "missing"
+  },
+  {
+   "skill": "Incident Response",
+   "status": "partly"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "partly"
+  },
+  {
+   "skill": "CEH",
+   "status": "missing"
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing"
+  },
+  {
+   "skill": "Security+",
+   "status": "shown"
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing"
+  }
+ ]
+}

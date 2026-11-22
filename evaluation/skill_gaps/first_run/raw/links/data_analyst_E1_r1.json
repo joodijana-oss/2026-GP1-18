@@ -1,0 +1,123 @@
+{
+ "goal": "data_analyst",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "writing SQL queries",
+    "querying relational databases"
+   ]
+  },
+  {
+   "gap": "Power BI",
+   "kind": "tool",
+   "concepts": [
+    "Power BI"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Data Visualization",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": [
+    "visualizing data",
+    "creating charts and graphs"
+   ]
+  },
+  {
+   "gap": "Dashboard Development",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": [
+    "building interactive dashboards",
+    "designing data dashboards"
+   ]
+  },
+  {
+   "gap": "Tableau",
+   "kind": "tool",
+   "concepts": [
+    "Tableau"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "R",
+   "kind": "tool",
+   "concepts": [
+    "R"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Machine Learning",
+   "kind": "skill",
+   "concepts": [
+    "Machine Learning"
+   ],
+   "phrases": [
+    "building predictive models",
+    "training ML algorithms"
+   ]
+  },
+  {
+   "gap": "Data Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Data Analysis"
+   ],
+   "phrases": [
+    "analyzing datasets",
+    "interpreting data trends"
+   ]
+  },
+  {
+   "gap": "Pandas",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "manipulating dataframes",
+    "data wrangling in Python"
+   ]
+  },
+  {
+   "gap": "NumPy",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "numerical computing in Python",
+    "array computations"
+   ]
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "managing stakeholder expectations",
+    "engaging key stakeholders"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Writes detailed test scenarios with expected results and maintains a large repository of them in TestRail",
+   "Thorough defect logging practice with detailed reproduction steps, screenshots, device details and severity",
+   "Hands-on manual testing across multiple Android and iOS devices, including Arabic right-to-left layout and weak connection scenarios",
+   "Experience validating backend behavior using Postman before UI readiness",
+   "Able to query test databases to verify application data integrity",
+   "Active participant in Agile ceremonies (sprint planning, stand-ups, retrospectives) within a sizeable team",
+   "Organized and led user acceptance testing rounds with real client employees before go-live",
+   "Proactively upskilling in test automation using Selenium with Java",
+   "Led a team through a structured capstone project involving test planning (scope, risks, entry/exit criteria)",
+   "ISTQB certified, demonstrating formalized testing knowledge"
+  ],
+  "currentSkills": [
+   "Manual Testing",
+   "Jira",
+   "Postman",
+   "TestRail",
+   "SQL",
+   "Selenium",
+   "Java",
+   "Test Case Design",
+   "Defect Tracking",
+   "Mobile Testing",
+   "Cross-browser/Cross-device Testing",
+   "Agile Methodologies",
+   "User Acceptance Testing",
+   "Test Planning"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Systems",
+    "institution": "Imam Mohammad Ibn Saud Islamic University, Riyadh",
+    "year": "2024"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "ISTQB Certified Tester Foundation Level (CTFL)",
+    "issuer": "",
+    "year": "2025"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Food-delivery app test plan (Capstone)",
+    "description": "Wrote the test plan covering scope, risks, entry and exit criteria for a food-delivery app, and led a team of four through it."
+   }
+  ],
+  "experience": [
+   {
+    "title": "QA Tester",
+    "organization": "an IT services contractor working for a government entity, Riyadh",
+    "duration": "Sep 2025 - now",
+    "description": "Wrote step-by-step scenarios with expected results from user stories and acceptance criteria; maintained about 900 of them in TestRail. Re-ran 180 regression scenarios before each fortnightly release. Logged 410 defects in Jira with steps, screenshots, device details and severity (6% rejected). Performed manual testing on 9 Android and iOS devices, including Arabic right-to-left layout and weak connection behavior. Used Postman to verify backend status codes and response bodies before screens were ready. Queried the test database to verify submitted applications were saved with correct status. Participated in sprint planning, daily stand-ups and retrospectives with a team of 11. Organized two rounds of user acceptance testing with 15 client employees for the licence-renewal journey before go-live. Started scripting login and renewal smoke checks in Selenium with Java (23 scripts so far)."
+   }
+  ]
+ }
+}

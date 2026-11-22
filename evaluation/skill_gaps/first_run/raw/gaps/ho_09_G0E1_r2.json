@@ -1,0 +1,21 @@
+{
+ "case": "ho_09",
+ "arm": "G0E1",
+ "run": 2,
+ "gaps": [
+  "Kubernetes",
+  "C++",
+  "Linux",
+  "Docker",
+  "MLOps",
+  "Computer Vision",
+  "LangChain",
+  "Terraform",
+  "Prometheus"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

@@ -1,0 +1,34 @@
+{
+ "goal": "solutions_architect",
+ "extractor": "E1",
+ "run": 1,
+ "postings": 20,
+ "rawNames": [
+  "Enterprise Architecture",
+  "AWS",
+  "Azure",
+  "Google Cloud Platform",
+  "TOGAF",
+  "Stakeholder Management",
+  "Solution Design",
+  "Architecture Roadmaps",
+  "API Design",
+  "System Integration",
+  "Cloud Architecture",
+  "DevSecOps"
+ ],
+ "names": [
+  "Enterprise Architecture",
+  "AWS",
+  "Azure",
+  "Google Cloud Platform",
+  "TOGAF",
+  "Stakeholder Management",
+  "Solution Design",
+  "Architecture Roadmaps",
+  "API Design",
+  "System Integration",
+  "Cloud Architecture",
+  "DevSecOps"
+ ]
+}

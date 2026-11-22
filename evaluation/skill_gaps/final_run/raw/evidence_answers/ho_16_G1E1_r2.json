@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "REST APIs",
+  "Git",
+  "React",
+  "Node.js",
+  "SQL",
+  "Java",
+  "Spring Boot",
+  "Docker",
+  "Python",
+  "Linux",
+  "Kubernetes",
+  "Microservices Architecture"
+ ],
+ "answer": [
+  {
+   "skill": "REST APIs",
+   "status": "shown",
+   "quote": "public interface that the mobile apps and partner sites call"
+  },
+  {
+   "skill": "Git",
+   "status": "shown",
+   "quote": "Python, Django, PostgreSQL, Docker, Git, Redis"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "Rewrote the three slowest queries and added indexes"
+  },
+  {
+   "skill": "Java",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "shown",
+   "quote": "each merge is built into a Docker image"
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "written in Python (Django) on PostgreSQL"
+  },
+  {
+   "skill": "Linux",
+   "status": "partly",
+   "quote": "rolled out to our two rented Ubuntu servers"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "shown",
+   "quote": "Pulled notifications (SMS, email, push) out of the main application into a separate small service"
+  }
+ ]
+}

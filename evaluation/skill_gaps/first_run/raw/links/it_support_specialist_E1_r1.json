@@ -1,0 +1,125 @@
+{
+ "goal": "it_support_specialist",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Hardware Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "diagnosing hardware issues",
+    "repairing computer components",
+    "device troubleshooting"
+   ]
+  },
+  {
+   "gap": "Windows",
+   "kind": "tool",
+   "concepts": [
+    "Windows"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Active Directory",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "managing user accounts and permissions",
+    "directory services administration",
+    "domain and group policy management"
+   ]
+  },
+  {
+   "gap": "Network Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Troubleshooting"
+   ],
+   "phrases": [
+    "diagnosing network issues",
+    "resolving connectivity problems",
+    "network fault finding"
+   ]
+  },
+  {
+   "gap": "Ticketing Systems",
+   "kind": "tool",
+   "concepts": [
+    "Ticketing Systems"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "TCP/IP",
+   "kind": "skill",
+   "concepts": [
+    "TCP/IP"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Microsoft 365",
+   "kind": "tool",
+   "concepts": [
+    "Microsoft 365"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Printer Support",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "printer setup and maintenance",
+    "resolving printing issues",
+    "peripheral device support"
+   ]
+  },
+  {
+   "gap": "DHCP",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "dynamic IP address assignment",
+    "network configuration protocols"
+   ]
+  },
+  {
+   "gap": "DNS",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "domain name resolution",
+    "name server configuration"
+   ]
+  },
+  {
+   "gap": "CCNA",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "VPN",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "secure remote access setup",
+    "virtual private network configuration",
+    "encrypted tunnel connections"
+   ]
+  }
+ ]
+}

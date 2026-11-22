@@ -1,0 +1,19 @@
+{
+ "case": "ho_06",
+ "arm": "G0E0",
+ "run": 1,
+ "gaps": [
+  "REST APIs",
+  "React",
+  "Node.js",
+  "Docker",
+  "Microservices Architecture",
+  "CI/CD",
+  "JavaScript/TypeScript"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

@@ -1,0 +1,127 @@
+{
+ "goal": "it_support_specialist",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Hardware Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "diagnosing hardware issues",
+    "repairing computer components",
+    "fixing device malfunctions"
+   ]
+  },
+  {
+   "gap": "Windows Operating System",
+   "kind": "tool",
+   "concepts": [
+    "Windows"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Networking",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "network concepts and protocols",
+    "connecting devices and systems"
+   ]
+  },
+  {
+   "gap": "Active Directory",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "managing user accounts and permissions",
+    "directory services administration"
+   ]
+  },
+  {
+   "gap": "Ticketing Systems",
+   "kind": "tool",
+   "concepts": [
+    "Ticketing Systems"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Microsoft 365",
+   "kind": "tool",
+   "concepts": [
+    "Microsoft 365"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "TCP/IP",
+   "kind": "skill",
+   "concepts": [
+    "TCP/IP"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Printer Support",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "setting up printers",
+    "resolving printing issues",
+    "peripheral device maintenance"
+   ]
+  },
+  {
+   "gap": "IT Asset Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "tracking hardware and software inventory",
+    "managing organizational IT equipment",
+    "lifecycle of IT assets"
+   ]
+  },
+  {
+   "gap": "Customer Service",
+   "kind": "soft",
+   "concepts": [
+    "Customer Engagement"
+   ],
+   "phrases": [
+    "handling customer inquiries",
+    "providing client support",
+    "building client relationships"
+   ]
+  },
+  {
+   "gap": "DNS",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "domain name resolution",
+    "configuring name servers"
+   ]
+  },
+  {
+   "gap": "DHCP",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "dynamic IP address allocation",
+    "configuring network address assignment"
+   ]
+  }
+ ]
+}

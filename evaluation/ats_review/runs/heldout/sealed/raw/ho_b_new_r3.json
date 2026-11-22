@@ -1,0 +1,133 @@
+{
+ "label": "ho_b_03",
+ "cv": "ho_b",
+ "version": "new",
+ "run": 3,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:06:16.591593",
+ "finishedAt": "2026-11-22T02:07:42.239224",
+ "seconds": 85.647,
+ "inputTokens": 4543,
+ "outputTokens": 8721,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "Your email address \"h4ck3r_queen99@example.com\" is in valid format but looks unprofessional for a Cybersecurity Analyst application.",
+    "suggestion": "Replace it with a professional email based on your name, such as hanan.alqahtani@example.com."
+   },
+   {
+    "issue": "The overall section order is not ideal: Projects currently sits after Certifications, separated from Work Experience.",
+    "suggestion": "Reorder your CV as Profile, Education, Work Experience, Projects, Technical Skills, Certifications, References so your hands-on work is grouped together before your skills list."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The heading \"Work Experiance\" is misspelled.",
+    "suggestion": "Rename it to \"Work Experience\"."
+   },
+   {
+    "issue": "Inside Projects, \"Home Network Vulnerability Assessment (2024)\" is listed before \"Phishing Awareness Campaign (graduation project, 2025)\", which is not most recent first.",
+    "suggestion": "List Phishing Awareness Campaign (2025) first, followed by Home Network Vulnerability Assessment (2024)."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "Your SOC Analyst Intern entry describes working with a SIEM in Splunk, but \"SIEM\" is not listed in your Technical Skills.",
+    "suggestion": "Add \"SIEM\" as a skill in your Technical Skills section since you already demonstrate it in your experience."
+   },
+   {
+    "issue": "Your Home Network Vulnerability Assessment project mentions mapping findings to CVSS scores, but CVSS or vulnerability risk scoring is not listed in your Skills section.",
+    "suggestion": "Add \"CVSS\" or \"Vulnerability Risk Assessment\" to your Technical Skills so this is searchable by ATS."
+   },
+   {
+    "issue": "Your Phishing Awareness Campaign project shows experience running a phishing simulation, but this skill is not reflected in your Skills section.",
+    "suggestion": "Add a keyword such as \"Phishing Simulation\" or \"Security Awareness Training\" to your Skills section."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "In the SOC Analyst Intern entry, points like \"I was helping my supervisor to look at the phishing emails...\" and \"I learned how the team writes the weekly report...\" are written as first-person narrative rather than clear achievements.",
+    "suggestion": "Rewrite these as short action-verb points, for example \"Assisted in triaging employee-reported phishing emails\" and \"Contributed to weekly SOC reports\"."
+   },
+   {
+    "issue": "In the Security Lab Assistant entry, \"I was answering the students questions during the lab\" is written as a first-person story instead of an achievement point.",
+    "suggestion": "Rewrite it as an action point, such as \"Supported students with lab troubleshooting during Ethical Hacking sessions\"."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are written inconsistently across Work Experience: \"03/2025 – 06/2025\", \"2023-09 to Dec 23\", and \"Summer 2022\" all use different formats.",
+    "suggestion": "Use one consistent format throughout, such as \"Mar 2025 – Jun 2025\", \"Sep 2023 – Dec 2023\", and \"Jun 2022 – Aug 2022\"."
+   },
+   {
+    "issue": "Your Bachelor of Science in Cybersecurity entry has no start or end date.",
+    "suggestion": "Add the years you studied, for example \"[start year] – [end year]\", so recruiters can see your graduation timeline."
+   },
+   {
+    "issue": "Certifications are listed with different levels of detail: CompTIA Security+ includes issuer and date, but \"Security course certificate\" and \"Networking certificate - completed\" do not.",
+    "suggestion": "Add the issuing organization and completion date for these two certificates, or remove them if the details are not available."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "Your email address \"h4ck3r_queen99@example.com\" is in valid format but looks unprofessional for a Cybersecurity Analyst application.",
+    "suggestion": "Replace it with a professional email based on your name, such as hanan.alqahtani@example.com."
+   },
+   {
+    "issue": "The overall section order is not ideal: Projects currently sits after Certifications, separated from Work Experience.",
+    "suggestion": "Reorder your CV as Profile, Education, Work Experience, Projects, Technical Skills, Certifications, References so your hands-on work is grouped together before your skills list."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The heading \"Work Experiance\" is misspelled.",
+    "suggestion": "Rename it to \"Work Experience\"."
+   },
+   {
+    "issue": "Inside Projects, \"Home Network Vulnerability Assessment (2024)\" is listed before \"Phishing Awareness Campaign (graduation project, 2025)\", which is not most recent first.",
+    "suggestion": "List Phishing Awareness Campaign (2025) first, followed by Home Network Vulnerability Assessment (2024)."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "Your SOC Analyst Intern entry describes working with a SIEM in Splunk, but \"SIEM\" is not listed in your Technical Skills.",
+    "suggestion": "Add \"SIEM\" as a skill in your Technical Skills section since you already demonstrate it in your experience."
+   },
+   {
+    "issue": "Your Home Network Vulnerability Assessment project mentions mapping findings to CVSS scores, but CVSS or vulnerability risk scoring is not listed in your Skills section.",
+    "suggestion": "Add \"CVSS\" or \"Vulnerability Risk Assessment\" to your Technical Skills so this is searchable by ATS."
+   },
+   {
+    "issue": "Your Phishing Awareness Campaign project shows experience running a phishing simulation, but this skill is not reflected in your Skills section.",
+    "suggestion": "Add a keyword such as \"Phishing Simulation\" or \"Security Awareness Training\" to your Skills section."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "In the SOC Analyst Intern entry, points like \"I was helping my supervisor to look at the phishing emails...\" and \"I learned how the team writes the weekly report...\" are written as first-person narrative rather than clear achievements.",
+    "suggestion": "Rewrite these as short action-verb points, for example \"Assisted in triaging employee-reported phishing emails\" and \"Contributed to weekly SOC reports\"."
+   },
+   {
+    "issue": "In the Security Lab Assistant entry, \"I was answering the students questions during the lab\" is written as a first-person story instead of an achievement point.",
+    "suggestion": "Rewrite it as an action point, such as \"Supported students with lab troubleshooting during Ethical Hacking sessions\"."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are written inconsistently across Work Experience: \"03/2025 – 06/2025\", \"2023-09 to Dec 23\", and \"Summer 2022\" all use different formats.",
+    "suggestion": "Use one consistent format throughout, such as \"Mar 2025 – Jun 2025\", \"Sep 2023 – Dec 2023\", and \"Jun 2022 – Aug 2022\"."
+   },
+   {
+    "issue": "Your Bachelor of Science in Cybersecurity entry has no start or end date.",
+    "suggestion": "Add the years you studied, for example \"[start year] – [end year]\", so recruiters can see your graduation timeline."
+   },
+   {
+    "issue": "Certifications are listed with different levels of detail: CompTIA Security+ includes issuer and date, but \"Security course certificate\" and \"Networking certificate - completed\" do not.",
+    "suggestion": "Add the issuing organization and completion date for these two certificates, or remove them if the details are not available."
+   }
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cvStructure": [],
+ "sectionOrganization": [
+  {
+   "issue": "In the Projects section, 'Riyadh Housing Prices Analysis (2024)' is listed before 'Student Attendance Dashboard (graduation project, 2025)', which is out of chronological order since 2025 is more recent than 2024.",
+   "suggestion": "Move the Student Attendance Dashboard project above the Riyadh Housing Prices Analysis so the most recent project appears first."
+  }
+ ],
+ "keywordUsage": [],
+ "readability": [
+  {
+   "issue": "The bullet 'Worked on data cleaning tasks for the team' under the Junior Data Analyst role is vague, starts with a weak verb, and includes no measurable outcome.",
+   "suggestion": "Rewrite this bullet with a stronger action verb and a specific result, for example describing how many records were cleaned or what data quality improvement was achieved."
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "Certification dates are formatted only as a year (e.g., '2025', '2024'), while Experience and Education dates use the 'Month Year' format, creating inconsistency across the CV.",
+   "suggestion": "Format certification dates the same way as other dates in the CV, for example 'Microsoft, Aug 2025', to keep the date style consistent throughout."
+  }
+ ]
+}

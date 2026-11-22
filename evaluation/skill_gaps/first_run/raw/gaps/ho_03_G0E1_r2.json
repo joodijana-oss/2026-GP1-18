@@ -1,0 +1,19 @@
+{
+ "case": "ho_03",
+ "arm": "G0E1",
+ "run": 2,
+ "gaps": [
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Machine Learning",
+  "Stakeholder Management",
+  "Pandas",
+  "Data Governance"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

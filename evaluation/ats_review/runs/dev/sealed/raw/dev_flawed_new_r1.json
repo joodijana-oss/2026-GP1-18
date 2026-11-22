@@ -1,0 +1,146 @@
+{
+ "label": "dev_flawed_04",
+ "cv": "dev_flawed",
+ "version": "new",
+ "run": 1,
+ "attempts": 2,
+ "failedAttempts": [
+  {
+   "status": null,
+   "kind": "cut_off"
+  }
+ ],
+ "startedAt": "2026-11-22T02:29:20.883818",
+ "finishedAt": "2026-11-22T02:32:22.018365",
+ "seconds": 181.134,
+ "inputTokens": 8510,
+ "outputTokens": 19438,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "Your CV has no dedicated Skills section, even though you use tools like Python, TensorFlow, PyTorch, scikit-learn, SQL, Pandas, Power BI, Jupyter and Git across your projects and experience.",
+    "suggestion": "Add a Skills (or Technical Skills) section listing these tools so an ATS scanning for them finds them quickly instead of only inside long descriptions."
+   },
+   {
+    "issue": "Several contact details are missing or not in standard form: your email is written as \"nora.alharbi (at) example dot com\" instead of the standard name@domain form, there is no phone number, and there is no LinkedIn, GitHub or portfolio link.",
+    "suggestion": "Write your email as nora.alharbi@example.com, add a phone number, and include a LinkedIn and/or GitHub link (with the full address visible as text) since these matter for an AI/ML role."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The heading \"EXPERIANCE\" is misspelled and may not be recognized as the standard Experience section.",
+    "suggestion": "Rename it to \"Experience\"."
+   },
+   {
+    "issue": "The heading \"THINGS I BUILT\" is a personal phrase instead of a standard section name.",
+    "suggestion": "Rename it to \"Projects\" so an ATS matches it correctly."
+   },
+   {
+    "issue": "Your Experience entries are not ordered most recent first: Student Lab Assistant (09/2023-05/2024) is listed before Data Science Trainee (March-June 2025) and Machine Learning Intern (finished September 2025).",
+    "suggestion": "Reorder the entries as: Machine Learning Intern, Data Science Trainee (Co-op), then Student Lab Assistant."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "\"scikit-learn\" is written inconsistently as \"sk-learn\" (Data Science Trainee) and \"Scikit learn\" (House Price Guesser).",
+    "suggestion": "Use the official form \"scikit-learn\" everywhere it appears."
+   },
+   {
+    "issue": "\"PyTorch\" is written inconsistently as \"Pytorch\" (Machine Learning Intern) and \"pytorch\" (Arabic Tweets Mood Checker), and \"TensorFlow\" and \"Python\" also appear in non-standard casing (\"Tensorflow\", \"PYTHON\").",
+    "suggestion": "Use the official forms \"PyTorch\", \"TensorFlow\" and \"Python\" consistently across the CV."
+   },
+   {
+    "issue": "Some work is described only in plain words, such as the graduation project (telling apart picture types), the late-delivery prediction, and the Arabic Tweets Mood Checker (happy, angry or neutral).",
+    "suggestion": "Add the matching standard terms, such as \"image classification\" for the graduation project, \"classification model\" for the delivery prediction, and \"sentiment analysis\" for the tweets project, if that is what you built."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Data Science Trainee entry is written as one long run-on sentence covering SQL cleaning, the late-delivery model, Power BI charts and Git all in a row.",
+    "suggestion": "Split it into separate short points, one for data cleaning, one for the delivery prediction model, one for the Power BI charts, and one for version control with Git."
+   },
+   {
+    "issue": "The Student Lab Assistant points start with \"Responsible for\" and \"Duties included\", which list duties instead of showing what you did.",
+    "suggestion": "Start each point with an action verb, such as \"Assisted first-year students with Python homework\" instead of \"Responsible for helping first-year students with their python homework\"."
+   },
+   {
+    "issue": "Two results are vague: the graduation project says \"it got it right most of the time\" and the Data Science Trainee entry says a method \"worked well enough\".",
+    "suggestion": "Replace both with a specific figure, such as \"achieved [percentage] accuracy\", once you know the number."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are written in several different formats across the CV: \"09/2023 - 05/2024\", \"March 2025 - June 2025\", \"2025 - present\" and \"11/2024\".",
+    "suggestion": "Pick one format, such as Month YYYY, and use it for every entry."
+   },
+   {
+    "issue": "The Machine Learning Intern entry is dated \"2025 - present\" but the text underneath says the internship \"finished in September 2025\", which contradicts today's date.",
+    "suggestion": "Change the date to the actual start and end months, such as \"[start month] 2025 - September 2025\", instead of \"present\"."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "Your CV has no dedicated Skills section, even though you use tools like Python, TensorFlow, PyTorch, scikit-learn, SQL, Pandas, Power BI, Jupyter and Git across your projects and experience.",
+    "suggestion": "Add a Skills (or Technical Skills) section listing these tools so an ATS scanning for them finds them quickly instead of only inside long descriptions."
+   },
+   {
+    "issue": "Several contact details are missing or not in standard form: your email is written as \"nora.alharbi (at) example dot com\" instead of the standard name@domain form, there is no phone number, and there is no LinkedIn, GitHub or portfolio link.",
+    "suggestion": "Write your email as nora.alharbi@example.com, add a phone number, and include a LinkedIn and/or GitHub link (with the full address visible as text) since these matter for an AI/ML role."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The heading \"EXPERIANCE\" is misspelled and may not be recognized as the standard Experience section.",
+    "suggestion": "Rename it to \"Experience\"."
+   },
+   {
+    "issue": "The heading \"THINGS I BUILT\" is a personal phrase instead of a standard section name.",
+    "suggestion": "Rename it to \"Projects\" so an ATS matches it correctly."
+   },
+   {
+    "issue": "Your Experience entries are not ordered most recent first: Student Lab Assistant (09/2023-05/2024) is listed before Data Science Trainee (March-June 2025) and Machine Learning Intern (finished September 2025).",
+    "suggestion": "Reorder the entries as: Machine Learning Intern, Data Science Trainee (Co-op), then Student Lab Assistant."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "\"scikit-learn\" is written inconsistently as \"sk-learn\" (Data Science Trainee) and \"Scikit learn\" (House Price Guesser).",
+    "suggestion": "Use the official form \"scikit-learn\" everywhere it appears."
+   },
+   {
+    "issue": "\"PyTorch\" is written inconsistently as \"Pytorch\" (Machine Learning Intern) and \"pytorch\" (Arabic Tweets Mood Checker), and \"TensorFlow\" and \"Python\" also appear in non-standard casing (\"Tensorflow\", \"PYTHON\").",
+    "suggestion": "Use the official forms \"PyTorch\", \"TensorFlow\" and \"Python\" consistently across the CV."
+   },
+   {
+    "issue": "Some work is described only in plain words, such as the graduation project (telling apart picture types), the late-delivery prediction, and the Arabic Tweets Mood Checker (happy, angry or neutral).",
+    "suggestion": "Add the matching standard terms, such as \"image classification\" for the graduation project, \"classification model\" for the delivery prediction, and \"sentiment analysis\" for the tweets project, if that is what you built."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Data Science Trainee entry is written as one long run-on sentence covering SQL cleaning, the late-delivery model, Power BI charts and Git all in a row.",
+    "suggestion": "Split it into separate short points, one for data cleaning, one for the delivery prediction model, one for the Power BI charts, and one for version control with Git."
+   },
+   {
+    "issue": "The Student Lab Assistant points start with \"Responsible for\" and \"Duties included\", which list duties instead of showing what you did.",
+    "suggestion": "Start each point with an action verb, such as \"Assisted first-year students with Python homework\" instead of \"Responsible for helping first-year students with their python homework\"."
+   },
+   {
+    "issue": "Two results are vague: the graduation project says \"it got it right most of the time\" and the Data Science Trainee entry says a method \"worked well enough\".",
+    "suggestion": "Replace both with a specific figure, such as \"achieved [percentage] accuracy\", once you know the number."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are written in several different formats across the CV: \"09/2023 - 05/2024\", \"March 2025 - June 2025\", \"2025 - present\" and \"11/2024\".",
+    "suggestion": "Pick one format, such as Month YYYY, and use it for every entry."
+   },
+   {
+    "issue": "The Machine Learning Intern entry is dated \"2025 - present\" but the text underneath says the internship \"finished in September 2025\", which contradicts today's date.",
+    "suggestion": "Change the date to the actual start and end months, such as \"[start month] 2025 - September 2025\", instead of \"present\"."
+   }
+  ]
+ }
+}

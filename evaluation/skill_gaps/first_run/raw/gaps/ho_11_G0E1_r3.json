@@ -1,0 +1,18 @@
+{
+ "case": "ho_11",
+ "arm": "G0E1",
+ "run": 3,
+ "gaps": [
+  "Active Directory",
+  "Ticketing Systems",
+  "TCP/IP",
+  "IT Asset Management",
+  "DNS",
+  "DHCP"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

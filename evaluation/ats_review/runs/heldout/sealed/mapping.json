@@ -1,0 +1,200 @@
+{
+ "seed": 20261122,
+ "runs": 3,
+ "versions": [
+  "old",
+  "new"
+ ],
+ "cvs": [
+  {
+   "id": "ho_a",
+   "role": "planted",
+   "goal": "software_engineer",
+   "careerName": "Software Engineer",
+   "date": "2026-11-22",
+   "cvTextSha256": "ddacef2fb2fe1da087db5b541f2158e501e5ddccb7c962d134c4180d731b1c04"
+  },
+  {
+   "id": "ho_b",
+   "role": "planted",
+   "goal": "cybersecurity_analyst",
+   "careerName": "Cybersecurity Analyst",
+   "date": "2026-11-22",
+   "cvTextSha256": "9a57086b4d4ea9e59b6dbbe22697aad99577e6b9a8b5f9c340594de776082a81"
+  },
+  {
+   "id": "ho_c",
+   "role": "clean",
+   "goal": "data_analyst",
+   "careerName": "Data Analyst",
+   "date": "2026-11-22",
+   "cvTextSha256": "f611442b1ef4e0dc4fdab41404bc6003771009f99d059a438f4b18e3f9a7676d"
+  },
+  {
+   "id": "ho_d",
+   "role": "planted",
+   "goal": "cloud_devops_engineer",
+   "careerName": "Cloud / DevOps Engineer",
+   "date": "2026-11-22",
+   "cvTextSha256": "a591d732de0369a70a870e68130d3525e2893ebe1ccb7ccdcf482df5a49237dd"
+  }
+ ],
+ "oldTemplateSha256": "61df986f8be2f4ebaad6784eb0388c8eb7784769f99de7fe873d1443355509bb",
+ "newTemplateSha256": "512c0968af9bf7b8000b30fd448d2151f7c760e93d4453080894b76ffd3c131e",
+ "textSha256": {
+  "ho_a_old": "00ce4997250c7fb1a28151cdf55a40e01b99a93dc0115111d2edf32592410dc5",
+  "ho_a_new": "45ec5b30cd19ce0e158753e31f940f39631a4874ad5edbed6596169d9f16f492",
+  "ho_b_old": "0aca4d66e1f50b65a35a65cc725335df8050ccbdb301d1429224cc473477e412",
+  "ho_b_new": "4b19357d74dcbd448e21e8892b54d4fdf67be8215514b07d4567b9f7e055878f",
+  "ho_c_old": "1c74c1a0e855354b516f8deb16d9e3990a769179ab2d80a3502a5ae68b9fb705",
+  "ho_c_new": "b0287a80290c30b0de806d2ad67f16fc52dd4943453f884a89635d0fda4e6f86",
+  "ho_d_old": "2ee20d543ab1dcb98dc935b97f842b35cb462cf3e46c9c840208dd019a2f9489",
+  "ho_d_new": "fdb1dbae6c51a72d10a72818bf56601f2d30347fc1bbe09498f2d615295111e5"
+ },
+ "slots": [
+  {
+   "label": "ho_a_01",
+   "cv": "ho_a",
+   "version": "old",
+   "run": 1
+  },
+  {
+   "label": "ho_a_02",
+   "cv": "ho_a",
+   "version": "new",
+   "run": 2
+  },
+  {
+   "label": "ho_a_03",
+   "cv": "ho_a",
+   "version": "old",
+   "run": 2
+  },
+  {
+   "label": "ho_a_04",
+   "cv": "ho_a",
+   "version": "new",
+   "run": 1
+  },
+  {
+   "label": "ho_a_05",
+   "cv": "ho_a",
+   "version": "new",
+   "run": 3
+  },
+  {
+   "label": "ho_a_06",
+   "cv": "ho_a",
+   "version": "old",
+   "run": 3
+  },
+  {
+   "label": "ho_b_01",
+   "cv": "ho_b",
+   "version": "old",
+   "run": 2
+  },
+  {
+   "label": "ho_b_02",
+   "cv": "ho_b",
+   "version": "new",
+   "run": 1
+  },
+  {
+   "label": "ho_b_03",
+   "cv": "ho_b",
+   "version": "new",
+   "run": 3
+  },
+  {
+   "label": "ho_b_04",
+   "cv": "ho_b",
+   "version": "old",
+   "run": 3
+  },
+  {
+   "label": "ho_b_05",
+   "cv": "ho_b",
+   "version": "old",
+   "run": 1
+  },
+  {
+   "label": "ho_b_06",
+   "cv": "ho_b",
+   "version": "new",
+   "run": 2
+  },
+  {
+   "label": "ho_c_01",
+   "cv": "ho_c",
+   "version": "new",
+   "run": 1
+  },
+  {
+   "label": "ho_c_02",
+   "cv": "ho_c",
+   "version": "old",
+   "run": 3
+  },
+  {
+   "label": "ho_c_03",
+   "cv": "ho_c",
+   "version": "old",
+   "run": 1
+  },
+  {
+   "label": "ho_c_04",
+   "cv": "ho_c",
+   "version": "new",
+   "run": 2
+  },
+  {
+   "label": "ho_c_05",
+   "cv": "ho_c",
+   "version": "old",
+   "run": 2
+  },
+  {
+   "label": "ho_c_06",
+   "cv": "ho_c",
+   "version": "new",
+   "run": 3
+  },
+  {
+   "label": "ho_d_01",
+   "cv": "ho_d",
+   "version": "old",
+   "run": 2
+  },
+  {
+   "label": "ho_d_02",
+   "cv": "ho_d",
+   "version": "new",
+   "run": 3
+  },
+  {
+   "label": "ho_d_03",
+   "cv": "ho_d",
+   "version": "old",
+   "run": 3
+  },
+  {
+   "label": "ho_d_04",
+   "cv": "ho_d",
+   "version": "old",
+   "run": 1
+  },
+  {
+   "label": "ho_d_05",
+   "cv": "ho_d",
+   "version": "new",
+   "run": 2
+  },
+  {
+   "label": "ho_d_06",
+   "cv": "ho_d",
+   "version": "new",
+   "run": 1
+  }
+ ]
+}

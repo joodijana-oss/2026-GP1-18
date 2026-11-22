@@ -1,0 +1,20 @@
+{
+ "case": "ho_04",
+ "arm": "G0E1",
+ "run": 2,
+ "gaps": [
+  "Power BI",
+  "Dashboard Development",
+  "Tableau",
+  "R",
+  "Machine Learning",
+  "Stakeholder Management",
+  "Pandas",
+  "Data Governance"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

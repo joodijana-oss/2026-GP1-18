@@ -1,0 +1,125 @@
+{
+ "label": "dev_flawed_01",
+ "cv": "dev_flawed",
+ "version": "old",
+ "run": 1,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:24:52.071606",
+ "finishedAt": "2026-11-22T02:25:35.777052",
+ "seconds": 43.705,
+ "inputTokens": 2177,
+ "outputTokens": 4333,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "The CV has no dedicated Skills section listing technical tools and languages, even though many skills (Python, TensorFlow, PyTorch, scikit-learn, SQL, Power BI, Git) are scattered inside experience and project descriptions.",
+    "suggestion": "Add a standalone 'Skills' section near the top (after Education) that lists these tools explicitly so ATS keyword scanners can match them directly to the AI/ML Engineer role."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "Experience entries are ordered oldest to newest (Student Lab Assistant 2023-2024, then Data Science Trainee 2025, then Machine Learning Intern 2025), instead of most recent first.",
+    "suggestion": "Reorder the Experience section so the Machine Learning Intern role appears first, followed by Data Science Trainee, then Student Lab Assistant."
+   },
+   {
+    "issue": "The projects section is titled 'THINGS I BUILT', which is not a standard heading recruiters or ATS parsers expect.",
+    "suggestion": "Rename this section to 'Projects' to improve ATS recognition and align with conventional CV structure."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "The late-delivery prediction work at Najd Logistics is described as 'guess which deliveries will arrive late' instead of using standard ML terminology.",
+    "suggestion": "Rephrase as 'built a classification model to predict late deliveries using scikit-learn' to match standard ATS keywords for the ML Engineer role."
+   },
+   {
+    "issue": "The customer message sorting task at Wadi Tech Solutions is described vaguely as 'the thing that reads customer messages and sorts them into groups'.",
+    "suggestion": "Rewrite using specific terms such as 'contributed to an NLP text classification system for customer support messages' to surface relevant keywords."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "Several bullet points are written in casual, first-person narrative style instead of concise action-verb statements, for example 'I made a phone app that looks at a picture of dates and says which kind it is.'",
+    "suggestion": "Rewrite as 'Developed a mobile app that classifies date fruit varieties from images using a CNN trained on ~4,000 labeled photos.'"
+   },
+   {
+    "issue": "The Student Lab Assistant bullets list duties without results, using passive phrasing like 'Responsible for...' and 'Duties included various tasks given by the lab supervisor.'",
+    "suggestion": "Start each line with an action verb and add a concrete detail, e.g., 'Assisted 30+ first-year students weekly with Python coursework during evening lab hours.'"
+   },
+   {
+    "issue": "The Data Science Trainee description is one long run-on sentence covering multiple tasks instead of separate bullet points.",
+    "suggestion": "Split this into 3-4 bullets (data cleaning with Pandas, late-delivery prediction with scikit-learn, Power BI reporting, version control with Git), each starting with an action verb."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Machine Learning Intern role is dated '2025 - present' in the heading, but the description states the internship finished in September 2025.",
+    "suggestion": "Update the date range to a fixed period such as 'Jun 2025 - Sep 2025' to remove the contradiction with the body text."
+   },
+   {
+    "issue": "Dates are formatted inconsistently across the CV, mixing styles like '09/2023 - 05/2024', 'March 2025 - June 2025', '2025', and '11/2024'.",
+    "suggestion": "Use one consistent date format throughout, such as 'MMM YYYY - MMM YYYY', for all education, experience, and project entries."
+   },
+   {
+    "issue": "The email is written as 'nora.alharbi (at) example dot com' instead of a standard email format.",
+    "suggestion": "Write the email in standard format (e.g., nora.alharbi@example.com) so ATS systems and recruiters can parse and use the contact information correctly."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "The CV has no dedicated Skills section listing technical tools and languages, even though many skills (Python, TensorFlow, PyTorch, scikit-learn, SQL, Power BI, Git) are scattered inside experience and project descriptions.",
+    "suggestion": "Add a standalone 'Skills' section near the top (after Education) that lists these tools explicitly so ATS keyword scanners can match them directly to the AI/ML Engineer role."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "Experience entries are ordered oldest to newest (Student Lab Assistant 2023-2024, then Data Science Trainee 2025, then Machine Learning Intern 2025), instead of most recent first.",
+    "suggestion": "Reorder the Experience section so the Machine Learning Intern role appears first, followed by Data Science Trainee, then Student Lab Assistant."
+   },
+   {
+    "issue": "The projects section is titled 'THINGS I BUILT', which is not a standard heading recruiters or ATS parsers expect.",
+    "suggestion": "Rename this section to 'Projects' to improve ATS recognition and align with conventional CV structure."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "The late-delivery prediction work at Najd Logistics is described as 'guess which deliveries will arrive late' instead of using standard ML terminology.",
+    "suggestion": "Rephrase as 'built a classification model to predict late deliveries using scikit-learn' to match standard ATS keywords for the ML Engineer role."
+   },
+   {
+    "issue": "The customer message sorting task at Wadi Tech Solutions is described vaguely as 'the thing that reads customer messages and sorts them into groups'.",
+    "suggestion": "Rewrite using specific terms such as 'contributed to an NLP text classification system for customer support messages' to surface relevant keywords."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "Several bullet points are written in casual, first-person narrative style instead of concise action-verb statements, for example 'I made a phone app that looks at a picture of dates and says which kind it is.'",
+    "suggestion": "Rewrite as 'Developed a mobile app that classifies date fruit varieties from images using a CNN trained on ~4,000 labeled photos.'"
+   },
+   {
+    "issue": "The Student Lab Assistant bullets list duties without results, using passive phrasing like 'Responsible for...' and 'Duties included various tasks given by the lab supervisor.'",
+    "suggestion": "Start each line with an action verb and add a concrete detail, e.g., 'Assisted 30+ first-year students weekly with Python coursework during evening lab hours.'"
+   },
+   {
+    "issue": "The Data Science Trainee description is one long run-on sentence covering multiple tasks instead of separate bullet points.",
+    "suggestion": "Split this into 3-4 bullets (data cleaning with Pandas, late-delivery prediction with scikit-learn, Power BI reporting, version control with Git), each starting with an action verb."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Machine Learning Intern role is dated '2025 - present' in the heading, but the description states the internship finished in September 2025.",
+    "suggestion": "Update the date range to a fixed period such as 'Jun 2025 - Sep 2025' to remove the contradiction with the body text."
+   },
+   {
+    "issue": "Dates are formatted inconsistently across the CV, mixing styles like '09/2023 - 05/2024', 'March 2025 - June 2025', '2025', and '11/2024'.",
+    "suggestion": "Use one consistent date format throughout, such as 'MMM YYYY - MMM YYYY', for all education, experience, and project entries."
+   },
+   {
+    "issue": "The email is written as 'nora.alharbi (at) example dot com' instead of a standard email format.",
+    "suggestion": "Write the email in standard format (e.g., nora.alharbi@example.com) so ATS systems and recruiters can parse and use the contact information correctly."
+   }
+  ]
+ }
+}

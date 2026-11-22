@@ -1,0 +1,19 @@
+{
+ "case": "ho_02",
+ "arm": "G0E0",
+ "run": 1,
+ "gaps": [
+  "SIEM",
+  "Vulnerability Assessment",
+  "Penetration Testing",
+  "SOC Operations",
+  "Endpoint Detection and Response (EDR)",
+  "Cloud Security (AWS/GCP/Azure)",
+  "IAM (Identity & Access Management)"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

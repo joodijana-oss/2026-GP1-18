@@ -1,0 +1,48 @@
+{
+ "targets": [
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Machine Learning",
+  "Stakeholder Management",
+  "Pandas",
+  "Data Governance"
+ ],
+ "answer": [
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Visualization",
+   "status": "shown",
+   "quote": "Power BI"
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "shown",
+   "quote": "refreshed every Monday in Power BI"
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "shown",
+   "quote": "Sat with dispatch supervisors to agree what \"late\" should mean"
+  },
+  {
+   "skill": "Pandas",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Governance",
+   "status": "partly",
+   "quote": "fixed inconsistent city names and filled missing delivery dates"
+  }
+ ]
+}

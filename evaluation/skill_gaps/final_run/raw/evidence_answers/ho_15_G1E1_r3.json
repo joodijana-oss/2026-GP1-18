@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Python",
+  "PyTorch",
+  "Deep Learning",
+  "Kubernetes",
+  "TensorFlow",
+  "C++",
+  "Computer Vision",
+  "Linux",
+  "MLOps",
+  "Terraform",
+  "LangChain",
+  "Docker"
+ ],
+ "answer": [
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Python, pandas, scikit-learn"
+  },
+  {
+   "skill": "PyTorch",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Deep Learning",
+   "status": "shown",
+   "quote": "Adapted a pretrained Arabic transformer encoder to sort complaints"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "TensorFlow",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Computer Vision",
+   "status": "partly",
+   "quote": "trained a model that counts mango fruit in tree photos"
+  },
+  {
+   "skill": "Linux",
+   "status": "partly",
+   "quote": "Ran every experiment on the lab's shared GPU machine over SSH"
+  },
+  {
+   "skill": "MLOps",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "LangChain",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

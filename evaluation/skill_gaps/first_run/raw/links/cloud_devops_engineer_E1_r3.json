@@ -1,0 +1,119 @@
+{
+ "goal": "cloud_devops_engineer",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": [
+    "container image management",
+    "building container images"
+   ]
+  },
+  {
+   "gap": "CI/CD",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Ansible",
+   "kind": "tool",
+   "concepts": [
+    "Infrastructure as Code"
+   ],
+   "phrases": [
+    "configuration management automation",
+    "automating server provisioning"
+   ]
+  },
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "managing linux systems",
+    "linux system administration"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "AWS",
+   "kind": "tool",
+   "concepts": [
+    "AWS"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Azure",
+   "kind": "tool",
+   "concepts": [
+    "Azure"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Prometheus",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "monitoring system metrics",
+    "setting up alerting rules",
+    "time series monitoring"
+   ]
+  },
+  {
+   "gap": "Grafana",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "building monitoring dashboards",
+    "visualizing system metrics",
+    "creating observability dashboards"
+   ]
+  },
+  {
+   "gap": "Bash",
+   "kind": "tool",
+   "concepts": [
+    "Scripting"
+   ],
+   "phrases": [
+    "writing shell scripts",
+    "automating tasks with scripts"
+   ]
+  }
+ ]
+}

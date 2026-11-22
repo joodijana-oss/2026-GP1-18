@@ -1,0 +1,51 @@
+{
+ "case": "ho_12",
+ "arm": "G2E1",
+ "run": 3,
+ "gaps": [
+  "CISSP",
+  "CISA",
+  "CISM",
+  "NIST Framework",
+  "PCI DSS",
+  "CRISC"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Risk Register Management",
+   "status": "partly"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing"
+  },
+  {
+   "skill": "CISA",
+   "status": "missing"
+  },
+  {
+   "skill": "CISM",
+   "status": "missing"
+  },
+  {
+   "skill": "NIST Framework",
+   "status": "missing"
+  },
+  {
+   "skill": "PCI DSS",
+   "status": "missing"
+  },
+  {
+   "skill": "CRISC",
+   "status": "missing"
+  },
+  {
+   "skill": "Audit Coordination",
+   "status": "shown"
+  }
+ ]
+}

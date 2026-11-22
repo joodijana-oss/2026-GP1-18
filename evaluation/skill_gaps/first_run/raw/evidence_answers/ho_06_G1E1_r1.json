@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "REST APIs",
+  "Git",
+  "SQL",
+  "React",
+  "Node.js",
+  "Java",
+  "Spring Boot",
+  "Docker",
+  "Linux",
+  "Microservices Architecture",
+  "Kubernetes",
+  "Python"
+ ],
+ "answer": [
+  {
+   "skill": "REST APIs",
+   "status": "partly",
+   "quote": "calls a public prayer-times web API"
+  },
+  {
+   "skill": "Git",
+   "status": "shown",
+   "quote": "Kept the code on GitHub from the first day, with a branch per feature"
+  },
+  {
+   "skill": "SQL",
+   "status": "partly",
+   "quote": "Database Systems (this term)"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Java",
+   "status": "shown",
+   "quote": "Built with plain Java and Swing"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux",
+   "status": "shown",
+   "quote": "Runs on a small rented VPS under systemd, where I read the journal"
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Wrote it in Python"
+  }
+ ]
+}

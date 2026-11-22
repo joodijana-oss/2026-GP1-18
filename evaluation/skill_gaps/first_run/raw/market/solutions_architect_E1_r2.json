@@ -1,0 +1,34 @@
+{
+ "goal": "solutions_architect",
+ "extractor": "E1",
+ "run": 2,
+ "postings": 20,
+ "rawNames": [
+  "Enterprise Architecture",
+  "Cloud Architecture",
+  "AWS",
+  "Azure",
+  "Google Cloud Platform",
+  "TOGAF",
+  "Solution Design",
+  "Stakeholder Management",
+  "API Integration",
+  "Data Architecture",
+  "Architecture Governance",
+  "Agile Development"
+ ],
+ "names": [
+  "Enterprise Architecture",
+  "Cloud Architecture",
+  "AWS",
+  "Azure",
+  "Google Cloud Platform",
+  "TOGAF",
+  "Solution Design",
+  "Stakeholder Management",
+  "API Integration",
+  "Data Architecture",
+  "Architecture Governance",
+  "Agile Development"
+ ]
+}

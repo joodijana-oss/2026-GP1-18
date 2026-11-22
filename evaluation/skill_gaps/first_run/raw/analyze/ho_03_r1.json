@@ -1,0 +1,62 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Experience turning operational data into actionable insights for managers",
+   "Hands-on experience cleaning and preparing data (removing duplicates, fixing inconsistent values, filling missing data)",
+   "Able to build reporting dashboards using Power BI for stakeholders",
+   "Applied statistical testing (chi-square) in academic research",
+   "Experience designing database schemas",
+   "Strong GPA indicating solid academic performance",
+   "Effective communication skills demonstrated through presenting findings to management and college council",
+   "Collaborated with stakeholders to define business metrics (e.g., working with dispatch supervisors to define 'late')",
+   "Bilingual in Arabic and English"
+  ],
+  "currentSkills": [
+   "Excel",
+   "SQL",
+   "Power BI",
+   "Tableau",
+   "R",
+   "Data Analysis",
+   "Data Cleaning",
+   "Statistics",
+   "Database Design",
+   "MySQL",
+   "VLOOKUP",
+   "Pivot Tables"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Management Information Systems",
+    "institution": "Imam Abdulrahman Bin Faisal University",
+    "year": "09/2021 – 06/2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Why do students drop elective courses?",
+    "description": "Surveyed 312 students and tested whether drop rates differed between colleges using a chi-square test; presented results to the college council."
+   },
+   {
+    "name": "Database Systems Course Project - Clinic Booking System",
+    "description": "Designed a 9-table schema for a clinic booking system and wrote its reports in MySQL."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Operations Intern",
+    "organization": "a Dammam-based freight and warehousing company",
+    "duration": "Jun 2025 - Aug 2025",
+    "description": "Pulled daily shipment records using queries joining orders, carriers and delivery tables. Removed duplicate waybills, fixed inconsistent city names and filled missing delivery dates before weekly reports. Built a one-page Power BI view for the operations manager showing late deliveries by carrier and route, refreshed weekly. Summarised 14 months of delivery data with pivot tables and VLOOKUP to identify the three routes causing 46% of delays. Worked with dispatch supervisors to define the on-time delivery measure. Presented findings to management in a 15-minute presentation, resulting in the renegotiation of one carrier contract."
+   },
+   {
+    "title": "Data volunteer",
+    "organization": "charity food-bank campaign",
+    "duration": "Ramadan 1446",
+    "description": "Kept the donor list in Google Sheets and sent a weekly count of parcels to the organisers."
+   }
+  ]
+ }
+}

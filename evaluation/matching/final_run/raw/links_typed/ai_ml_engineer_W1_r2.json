@@ -1,0 +1,58 @@
+{
+ "goal": "ai_ml_engineer",
+ "list": "W1",
+ "run": 2,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Data Collection",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "data collection",
+    "data gathering",
+    "survey data",
+    "data acquisition"
+   ]
+  },
+  {
+   "gap": "Model Optimization for Mobile",
+   "kind": "skill",
+   "concepts": [
+    "Machine Learning"
+   ],
+   "phrases": [],
+   "terms": [
+    "model optimization",
+    "mobile inference",
+    "model compression",
+    "quantization"
+   ]
+  },
+  {
+   "gap": "Transformers",
+   "kind": "skill",
+   "concepts": [
+    "Natural Language Processing"
+   ],
+   "phrases": [],
+   "terms": [
+    "transformers",
+    "attention mechanism",
+    "BERT",
+    "GPT"
+   ]
+  },
+  {
+   "gap": "Research",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "research methods",
+    "research methodology"
+   ]
+  }
+ ]
+}

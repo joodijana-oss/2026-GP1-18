@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "LAN/WAN",
+  "Cisco Routers and Switches",
+  "VPN",
+  "VLAN",
+  "Firewall Management",
+  "CCNA",
+  "BGP",
+  "OSPF",
+  "QoS",
+  "MPLS",
+  "FortiGate",
+  "Palo Alto"
+ ],
+ "answer": [
+  {
+   "skill": "LAN/WAN",
+   "status": "partly",
+   "quote": "work through it from the cable to the gateway"
+  },
+  {
+   "skill": "Cisco Routers and Switches",
+   "status": "shown",
+   "quote": "Two second-hand Cisco 1941 routers and a 3560 switch"
+  },
+  {
+   "skill": "VPN",
+   "status": "shown",
+   "quote": "Enrol staff laptops in the remote-access client (FortiClient)"
+  },
+  {
+   "skill": "VLAN",
+   "status": "shown",
+   "quote": "filtering between VLANs and a DHCP server on the router"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CCNA",
+   "status": "shown",
+   "quote": "CCNA (Cisco Certified Network Associate), May 2026"
+  },
+  {
+   "skill": "BGP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSPF",
+   "status": "shown",
+   "quote": "Built a three-router OSPF topology with redistribution of static routes"
+  },
+  {
+   "skill": "QoS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "MPLS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "FortiGate",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

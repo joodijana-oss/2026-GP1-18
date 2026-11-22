@@ -1,0 +1,32 @@
+Yazeed Al-Mutairi
+Riyadh | yazeed.almutairi@example.com | +966 50 000 0000
+
+About me
+Third-year Computer Science student at King Saud University who spends most free evenings on programming contests. I like problems where the first solution that comes to mind is too slow.
+
+Education
+King Saud University, B.Sc. Computer Science, 2024 - 2028 (expected). GPA 4.6/5.
+Courses so far: Programming 1 and 2 (Java), Data Structures, Discrete Mathematics, Computer Organization, Database Systems (this term)
+
+Competitive programming
+- Codeforces rating 1540 (Specialist); solved 700+ problems in C++, mostly graphs, dynamic programming and greedy.
+- Saudi Collegiate Programming Contest 2025: 9th of 110 teams. I handled the shortest-path and segment-tree problems.
+- Coach two weekly practice sessions for first-year students in the college programming club and write the editorial for each problem set.
+
+Personal projects
+Salati (prayer-time bot for Telegram)
+- Wrote it in Python; it calls a public prayer-times web API and caches each city's answer for a day so the service is not hammered.
+- Stores each user's city and reminder choices in SQLite.
+- Runs on a small rented VPS under systemd, where I read the journal and restart it myself when it falls over; 340 people use it daily.
+- Kept the code on GitHub from the first day, with a branch per feature and a short changelog.
+
+Maze Runner (2D game, Java)
+- Built with plain Java and Swing; enemies chase the player with A* search.
+- Split the game into entity, map and renderer classes behind a shared interface so that a new enemy type needs only one new class.
+- After a friend found that saved games would not load, stepped through the loader, found an off-by-one in the map reader and added checks for broken files.
+
+Skills
+C++, Java, Python
+
+Languages
+Arabic (native), English (good)

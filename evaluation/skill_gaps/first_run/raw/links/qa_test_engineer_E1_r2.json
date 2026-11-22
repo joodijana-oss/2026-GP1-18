@@ -1,0 +1,114 @@
+{
+ "goal": "qa_test_engineer",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Manual Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "testing software by hand",
+    "manual test execution",
+    "exploratory testing techniques"
+   ]
+  },
+  {
+   "gap": "Test Case Design",
+   "kind": "skill",
+   "concepts": [
+    "Test Cases"
+   ],
+   "phrases": [
+    "designing test scenarios",
+    "writing test cases",
+    "test case creation"
+   ]
+  },
+  {
+   "gap": "Jira",
+   "kind": "tool",
+   "concepts": [
+    "Jira"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Regression Testing",
+   "kind": "skill",
+   "concepts": [
+    "Regression Testing"
+   ],
+   "phrases": [
+    "re-testing after changes",
+    "verifying existing functionality"
+   ]
+  },
+  {
+   "gap": "Functional Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "validating functional requirements",
+    "testing application features"
+   ]
+  },
+  {
+   "gap": "API Testing",
+   "kind": "skill",
+   "concepts": [
+    "API Testing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Selenium",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Appium",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Postman",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Agile",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Scrum",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "scrum framework practices",
+    "sprint planning and ceremonies"
+   ]
+  }
+ ]
+}

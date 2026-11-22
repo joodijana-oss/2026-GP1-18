@@ -1,0 +1,60 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Strong competitive programming background with around 650 problems solved across three years",
+   "Proven performance in national-level programming contests (14th of 96 teams, 2nd in regional qualifier)",
+   "Experience mentoring and coaching less experienced programmers",
+   "Able to independently build and deploy real-world applications used by many users",
+   "Capable of diagnosing and fixing subtle bugs (time-zone issue) and adding safeguards against regression",
+   "Follows good software engineering practices such as feature branching and testing before merging",
+   "Consistent academic performance recognized by Dean's list awards",
+   "Recognized for project quality with a college-level award"
+  ],
+  "currentSkills": [
+   "C++",
+   "Python",
+   "Java",
+   "Object-Oriented Programming",
+   "Data Structures",
+   "Algorithms",
+   "Dynamic Programming",
+   "Graph Algorithms",
+   "Segment Trees",
+   "SQLite",
+   "SQL",
+   "Flask",
+   "JavaScript",
+   "Linux Server Administration",
+   "SSH",
+   "Git",
+   "Debugging"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "University of Tabuk",
+    "year": "third year, expected graduation 2028"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Sallah bot",
+    "description": "A Telegram bot written in Python that sends prayer-time reminders based on the user's city, used by about 1,200 people. Runs on a self-managed, patched Ubuntu server accessed via SSH. Stores user city and reminder preferences in SQLite with hand-written tables and queries. Identified and fixed a time-zone bug causing late Fajr reminders for users outside the Kingdom, and added a check to prevent recurrence."
+   },
+   {
+    "name": "Tutor Match",
+    "description": "A website for University of Tabuk students to find peer tutors for courses, built with a plain JavaScript frontend and a Flask backend returning tutor data as JSON. Development history is public with about 140 commits, using one branch per feature tested before merging. Gained 85 student sign-ups in the first term."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Coach",
+    "organization": "First-year training group (competitive programming)",
+    "duration": "Weekly (Sunday evenings)",
+    "description": "Coaches the first-year training group and sets their practice problems."
+   }
+  ]
+ }
+}

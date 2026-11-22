@@ -1,0 +1,54 @@
+{
+ "targets": [
+  "SIEM",
+  "Incident Response",
+  "Firewall Administration",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Security+",
+  "Metasploit"
+ ],
+ "answer": [
+  {
+   "skill": "SIEM",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Incident Response",
+   "status": "partly",
+   "quote": "Mapped the intruders' post-login behaviour to ATT&CK techniques"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "partly",
+   "quote": "locked the real management port down to our own addresses with iptables"
+  },
+  {
+   "skill": "CEH",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Security+",
+   "status": "shown",
+   "quote": "CompTIA Security+ (SY0-701), March 2026"
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

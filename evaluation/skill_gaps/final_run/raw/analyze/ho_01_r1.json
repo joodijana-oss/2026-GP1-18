@@ -1,0 +1,75 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Built a home SIEM-like lab by centralizing Windows and Linux logs and writing custom detection rules",
+   "Validated detection rules by simulating real attacks (brute-force, PowerShell download) and tuning false positives",
+   "Mapped detection rules to attacker techniques using the ATT&CK framework",
+   "Conducted authorized vulnerability scanning and delivered a prioritized remediation list that led to real fixes",
+   "Performed network traffic analysis and scripted automated parsing of packet captures",
+   "Strong competitive performance in CTFs, including memory forensics and web exploitation challenges",
+   "Holds industry certification (CompTIA Security+)",
+   "Demonstrates leadership and mentoring through running club training sessions",
+   "High academic performance with GPA 4.52/5"
+  ],
+  "currentSkills": [
+   "Linux",
+   "Ubuntu",
+   "Kali Linux",
+   "Python",
+   "Wireshark",
+   "Nessus",
+   "Bash",
+   "Log Analysis",
+   "SIEM",
+   "Detection Engineering",
+   "MITRE ATT&CK",
+   "Vulnerability Assessment",
+   "Network Traffic Analysis",
+   "Packet Capture Analysis",
+   "Memory Forensics",
+   "SQL Injection",
+   "Incident Response",
+   "Cryptography",
+   "Computer Networks",
+   "Operating Systems",
+   "Information Security"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "Taif University",
+    "year": "expected June 2027"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "CompTIA Security+ (SY0-701)",
+    "issuer": "CompTIA",
+    "year": "March 2026"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Watchtower at home",
+    "description": "Set up three virtual machines forwarding Windows event logs and Linux auth logs to a central console, wrote 11 detection rules, replayed brute-force and PowerShell download attacks to test and tune the rules, and mapped each rule to the corresponding ATT&CK technique."
+   },
+   {
+    "name": "Scan my campus club",
+    "description": "With supervisor permission, ran Nessus Essentials against two club servers, ranked 23 findings by severity, and provided a fix list; four critical issues were patched within a week."
+   },
+   {
+    "name": "Packet diary",
+    "description": "Captured a week of home network traffic and wrote a Python script to parse capture files and identify devices communicating with addresses outside the country."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Vice-lead",
+    "organization": "Taif University Cybersecurity Club",
+    "duration": "",
+    "description": "Runs a weekly session where new members practice reading logs from a staged incident."
+   }
+  ]
+ }
+}

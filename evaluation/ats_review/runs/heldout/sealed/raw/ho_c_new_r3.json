@@ -1,0 +1,57 @@
+{
+ "label": "ho_c_06",
+ "cv": "ho_c",
+ "version": "new",
+ "run": 3,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:11:14.844809",
+ "finishedAt": "2026-11-22T02:11:46.649545",
+ "seconds": 31.804,
+ "inputTokens": 4115,
+ "outputTokens": 3554,
+ "decoded": {
+  "cvStructure": [],
+  "sectionOrganization": [
+   {
+    "issue": "In Projects, \"Riyadh Housing Prices Analysis (2024)\" is listed before \"Student Attendance Dashboard (graduation project, 2025)\", but the 2025 project is more recent.",
+    "suggestion": "List Student Attendance Dashboard (2025) first, then Riyadh Housing Prices Analysis (2024)."
+   }
+  ],
+  "keywordUsage": [],
+  "readability": [
+   {
+    "issue": "The last point under Junior Data Analyst, \"Worked on data cleaning tasks for the team\", uses a weak verb and gives no detail or result.",
+    "suggestion": "Rewrite it with a strong action verb and a specific result, for example \"Cleaned [number] of records in [tool] to prepare them for the weekly dashboards.\""
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are written in two different formats: Month and year in Experience and Education (for example \"Sep 2025 - Present\"), but only the year in Projects and Certifications (for example \"(2024)\", \"(Microsoft, 2025)\").",
+    "suggestion": "Pick one date format and use it everywhere, for example adding the month to your Projects and Certifications dates if you remember them."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [],
+  "sectionOrganization": [
+   {
+    "issue": "In Projects, \"Riyadh Housing Prices Analysis (2024)\" is listed before \"Student Attendance Dashboard (graduation project, 2025)\", but the 2025 project is more recent.",
+    "suggestion": "List Student Attendance Dashboard (2025) first, then Riyadh Housing Prices Analysis (2024)."
+   }
+  ],
+  "keywordUsage": [],
+  "readability": [
+   {
+    "issue": "The last point under Junior Data Analyst, \"Worked on data cleaning tasks for the team\", uses a weak verb and gives no detail or result.",
+    "suggestion": "Rewrite it with a strong action verb and a specific result, for example \"Cleaned [number] of records in [tool] to prepare them for the weekly dashboards.\""
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are written in two different formats: Month and year in Experience and Education (for example \"Sep 2025 - Present\"), but only the year in Projects and Certifications (for example \"(2024)\", \"(Microsoft, 2025)\").",
+    "suggestion": "Pick one date format and use it everywhere, for example adding the month to your Projects and Certifications dates if you remember them."
+   }
+  ]
+ }
+}

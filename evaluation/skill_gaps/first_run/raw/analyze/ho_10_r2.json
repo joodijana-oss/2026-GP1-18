@@ -1,0 +1,63 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Writes detailed test scenarios with expected results derived from user stories and acceptance criteria",
+   "Maintains a large regression suite (180 scenarios) and runs it before every fortnightly release",
+   "Thorough defect logging practice with low rejection rate (410 defects logged, 6% rejected)",
+   "Experienced in manual testing across multiple real devices (9 Android and iOS devices) including RTL and weak-connection scenarios",
+   "Uses Postman to validate backend responses before UI is ready",
+   "Able to query databases to verify application data correctness",
+   "Active participant in Agile ceremonies (sprint planning, stand-ups, retrospectives) with a team of 11",
+   "Organized and led user acceptance testing sessions with real client employees before go-live",
+   "Self-driven learner, currently building test automation skills in Selenium with Java",
+   "ISTQB certified, showing formalized testing knowledge",
+   "Led a team of four through a complete test planning exercise during bootcamp capstone"
+  ],
+  "currentSkills": [
+   "Manual Testing",
+   "Jira",
+   "Postman",
+   "TestRail",
+   "SQL",
+   "Selenium",
+   "Java",
+   "Test Case Design",
+   "Defect Tracking",
+   "Regression Testing",
+   "User Acceptance Testing",
+   "Test Planning",
+   "Agile Methodology",
+   "Mobile Testing",
+   "API Testing"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Systems",
+    "institution": "Imam Mohammad Ibn Saud Islamic University, Riyadh",
+    "year": "2024"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "ISTQB Certified Tester Foundation Level (CTFL)",
+    "issuer": "ISTQB",
+    "year": "2025"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Food-delivery app test plan (Bootcamp Capstone)",
+    "description": "Wrote the test plan covering scope, risks, entry and exit criteria for a food-delivery app, and led a team of four through its execution."
+   }
+  ],
+  "experience": [
+   {
+    "title": "QA Tester",
+    "organization": "An IT services contractor working for a government entity, Riyadh",
+    "duration": "Sep 2025 - now",
+    "description": "Writes step-by-step test scenarios with expected results from user stories and acceptance criteria, maintaining about 900 in TestRail. Re-runs 180 regression scenarios before each fortnightly release. Logs defects in Jira with steps, screenshots, device details and severity (410 raised, 6% rejected). Manually tests the app on 9 Android and iOS devices including Arabic RTL layout and weak-connection behavior. Uses Postman to verify backend status codes and response bodies before UI readiness. Queries the test database to verify application status data. Participates in sprint planning, daily stand-ups and retrospectives with a team of 11. Organized two rounds of UAT with 15 client employees for the licence-renewal journey before go-live. Started scripting login and renewal smoke checks in Selenium with Java (23 scripts so far)."
+   }
+  ]
+ }
+}

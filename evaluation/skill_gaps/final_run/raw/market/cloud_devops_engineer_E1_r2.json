@@ -1,0 +1,34 @@
+{
+ "goal": "cloud_devops_engineer",
+ "extractor": "E1",
+ "run": 2,
+ "postings": 18,
+ "rawNames": [
+  "Kubernetes",
+  "Terraform",
+  "Docker",
+  "CI/CD Pipeline Design",
+  "Ansible",
+  "Linux Administration",
+  "Python",
+  "AWS",
+  "Azure",
+  "Prometheus",
+  "Grafana",
+  "Bash Scripting"
+ ],
+ "names": [
+  "Kubernetes",
+  "Terraform",
+  "Docker",
+  "CI/CD Pipeline Design",
+  "Ansible",
+  "Linux Administration",
+  "Python",
+  "AWS",
+  "Azure",
+  "Prometheus",
+  "Grafana",
+  "Bash Scripting"
+ ]
+}

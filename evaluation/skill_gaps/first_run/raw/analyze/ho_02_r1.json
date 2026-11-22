@@ -1,0 +1,58 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on experience managing firewall rules and reducing security risk (removed 40 unused any-any rules after PCI assessment)",
+   "Experience segmenting networks for compliance, including isolating payment systems from guest traffic",
+   "Practical experience administering antivirus/endpoint protection across a large fleet of 900 PCs",
+   "Experience investigating suspicious emails including header analysis, sandboxing, and blocking sender domains",
+   "Experience handling major incident (P1) processes and writing post-incident summaries",
+   "Automated infrastructure tasks using Python scripting for switch configuration backups and change detection",
+   "Maintains centralized logging (syslog) for network troubleshooting",
+   "Actively building security skills through blue-team training and Splunk-based threat hunting exercises",
+   "Progressed from help desk trainee to infrastructure and security-focused engineer role"
+  ],
+  "currentSkills": [
+   "FortiGate",
+   "Firewall Management",
+   "Cisco Switching",
+   "Network Segmentation",
+   "VLAN Configuration",
+   "Access Control Lists",
+   "Python",
+   "Linux",
+   "Antivirus Administration",
+   "Trend Micro Apex One",
+   "Email Security Analysis",
+   "Phishing Analysis",
+   "Incident Response",
+   "ITIL Major Incident Process",
+   "Syslog Management",
+   "Splunk",
+   "Network Troubleshooting"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Technology",
+    "institution": "King Abdulaziz University, Jeddah",
+    "year": "2024"
+   }
+  ],
+  "certifications": [],
+  "projects": [],
+  "experience": [
+   {
+    "title": "Network and Infrastructure Support Engineer",
+    "organization": "a hotel group with 11 properties, Jeddah",
+    "duration": "Sep 2024 to present",
+    "description": "Maintains guest and back-office networks across 11 properties including 140 Cisco switches, 400 access points, and FortiGate pairs at each site. Adds, reviews, and retires FortiGate firewall rules; removed 40 unused any-any rules after a PCI assessment. Separated card-payment terminals into their own VLAN with access lists to prevent guest Wi-Fi access. Runs Trend Micro Apex One antivirus console for 900 back-office PCs, pushing policies, tracking non-reporting machines, and isolating infected ones. Investigates suspicious emails by reading headers, using a sandbox for links, and blocking sender domains on the mail gateway; handled 37 fake-invoice emails in March 2026. Handles P1 outages under the group's ITIL major-incident process and writes post-incident summaries. Wrote Python scripts to back up switch configurations nightly and flag configuration changes. Maintains a central Ubuntu syslog server for switch and firewall messages, checked during link flaps."
+   },
+   {
+    "title": "IT Help Desk Trainee (co-op)",
+    "organization": "same employer",
+    "duration": "Jan 2024 to Jul 2024",
+    "description": "Closed around 25 tickets a day covering password resets, printers, and guest Wi-Fi vouchers."
+   }
+  ]
+ }
+}

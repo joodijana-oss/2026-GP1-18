@@ -1,0 +1,121 @@
+{
+ "goal": "cloud_devops_engineer",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": [
+    "container orchestration basics",
+    "building container images"
+   ]
+  },
+  {
+   "gap": "CI/CD Pipeline Design",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": [
+    "automated build and deploy",
+    "continuous integration workflows",
+    "pipeline automation design"
+   ]
+  },
+  {
+   "gap": "Ansible",
+   "kind": "tool",
+   "concepts": [
+    "Infrastructure as Code"
+   ],
+   "phrases": [
+    "configuration management automation",
+    "automated server provisioning"
+   ]
+  },
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "managing linux systems",
+    "system administration tasks"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "AWS",
+   "kind": "tool",
+   "concepts": [
+    "AWS"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Azure",
+   "kind": "tool",
+   "concepts": [
+    "Azure"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Prometheus",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "monitoring system metrics",
+    "alerting and time series data"
+   ]
+  },
+  {
+   "gap": "Grafana",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "building monitoring dashboards",
+    "visualizing system metrics"
+   ]
+  },
+  {
+   "gap": "Bash Scripting",
+   "kind": "tool",
+   "concepts": [
+    "Scripting"
+   ],
+   "phrases": [
+    "writing shell scripts",
+    "command line automation"
+   ]
+  }
+ ]
+}

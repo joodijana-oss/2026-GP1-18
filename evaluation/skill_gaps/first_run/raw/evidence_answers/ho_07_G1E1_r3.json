@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Kubernetes",
+  "Terraform",
+  "Docker",
+  "CI/CD",
+  "Ansible",
+  "Linux Administration",
+  "Python",
+  "AWS",
+  "Azure",
+  "Prometheus",
+  "Grafana",
+  "Bash"
+ ],
+ "answer": [
+  {
+   "skill": "Kubernetes",
+   "status": "shown",
+   "quote": "Run the production cluster on EKS (3 node groups, about 120 pods)"
+  },
+  {
+   "skill": "Terraform",
+   "status": "shown",
+   "quote": "Describe all networking, databases and compute as code in Terraform modules"
+  },
+  {
+   "skill": "Docker",
+   "status": "shown",
+   "quote": "Docker"
+  },
+  {
+   "skill": "CI/CD",
+   "status": "shown",
+   "quote": "GitLab jobs that build, test and roll out every merge"
+  },
+  {
+   "skill": "Ansible",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux Administration",
+   "status": "shown",
+   "quote": "Looked after 200 customer CentOS and Ubuntu servers: disks, users, updates"
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Wrote small Python and shell tools, for example one that rotates access keys"
+  },
+  {
+   "skill": "AWS",
+   "status": "shown",
+   "quote": "AWS Certified Solutions Architect - Associate (2025)"
+  },
+  {
+   "skill": "Azure",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Prometheus",
+   "status": "shown",
+   "quote": "Set up dashboards and on-call paging in Grafana and Prometheus"
+  },
+  {
+   "skill": "Grafana",
+   "status": "shown",
+   "quote": "Set up dashboards and on-call paging in Grafana and Prometheus"
+  },
+  {
+   "skill": "Bash",
+   "status": "shown",
+   "quote": "Wrote small Python and shell tools, for example one that rotates access keys"
+  }
+ ]
+}

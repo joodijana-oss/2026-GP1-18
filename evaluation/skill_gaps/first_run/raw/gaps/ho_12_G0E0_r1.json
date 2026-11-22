@@ -1,0 +1,19 @@
+{
+ "case": "ho_12",
+ "arm": "G0E0",
+ "run": 1,
+ "gaps": [
+  "Cybersecurity Risk Assessment",
+  "Risk Register Management",
+  "Cybersecurity Governance Frameworks",
+  "Compliance Audit Support",
+  "NIST Framework",
+  "KPI/KRI Reporting",
+  "GRC Platforms (e.g., Archer, ServiceNow GRC, OneTrust)"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

@@ -1,0 +1,30 @@
+{
+ "targets": [
+  "Terraform",
+  "Python",
+  "AWS",
+  "Azure"
+ ],
+ "answer": [
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "AWS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Azure",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

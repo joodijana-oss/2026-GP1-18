@@ -1,0 +1,18 @@
+{
+ "case": "ho_08",
+ "arm": "G0E0",
+ "run": 2,
+ "gaps": [
+  "LAN/WAN",
+  "Firewall Management (Palo Alto/Fortinet)",
+  "Network Monitoring and Performance Management",
+  "CCNA/CCNP Certification",
+  "Network Security",
+  "MPLS"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

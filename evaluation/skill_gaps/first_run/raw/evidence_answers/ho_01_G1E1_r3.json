@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SIEM",
+  "Penetration Testing",
+  "Vulnerability Assessment",
+  "Incident Response",
+  "Firewall Administration",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Security+",
+  "Nmap",
+  "Metasploit",
+  "Python"
+ ],
+ "answer": [
+  {
+   "skill": "SIEM",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "shown",
+   "quote": "Found and exploited SQL injection and stored XSS in a deliberately vulnerable shop application"
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "shown",
+   "quote": "Ran Nmap and Nessus against the lab subnet and ranked the 23 findings by CVSS score"
+  },
+  {
+   "skill": "Incident Response",
+   "status": "partly",
+   "quote": "Opened a macro-enabled Word document in an isolated VM, pulled out the hidden PowerShell downloader"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "partly",
+   "quote": "locked the real management port down to our own addresses with iptables"
+  },
+  {
+   "skill": "CEH",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Security+",
+   "status": "shown",
+   "quote": "CompTIA Security+ (SY0-701), March 2026"
+  },
+  {
+   "skill": "Nmap",
+   "status": "shown",
+   "quote": "Ran Nmap and Nessus against the lab subnet"
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Parsed 48,000 recorded login attempts from the JSON logs with a Python script"
+  }
+ ]
+}

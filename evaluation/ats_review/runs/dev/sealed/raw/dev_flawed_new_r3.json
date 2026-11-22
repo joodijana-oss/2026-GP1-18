@@ -1,0 +1,141 @@
+{
+ "label": "dev_flawed_05",
+ "cv": "dev_flawed",
+ "version": "new",
+ "run": 3,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:25:56.568223",
+ "finishedAt": "2026-11-22T02:27:25.212394",
+ "seconds": 88.644,
+ "inputTokens": 4255,
+ "outputTokens": 9882,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "Your CV has no dedicated Skills section, even though your projects and experience show tools like Python, TensorFlow, PyTorch, scikit-learn, SQL, Pandas and Power BI.",
+    "suggestion": "Add a Skills or Technical Skills section listing the languages, frameworks and tools you've used, such as Python, TensorFlow, PyTorch, scikit-learn and SQL."
+   },
+   {
+    "issue": "Your phone number is missing, your email is written as 'nora.alharbi (at) example dot com' instead of a standard name@domain address, and there is no LinkedIn, GitHub or portfolio link.",
+    "suggestion": "Add a phone number, write your email in the normal name@domain.com form, and add a LinkedIn or GitHub/portfolio link with the full address visible."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "Your Experience heading is spelled 'EXPERIANCE', and 'THINGS I BUILT' is a personal phrase rather than a standard heading.",
+    "suggestion": "Rename 'EXPERIANCE' to 'Experience' and 'THINGS I BUILT' to 'Projects' so ATS systems recognize them."
+   },
+   {
+    "issue": "The graduation project about classifying pictures of dates is described inside the Education section, but it is a project, not education content.",
+    "suggestion": "Move the date-classification project into your Projects section alongside Arabic Tweets Mood Checker and House Price Guesser, and keep only the degree and GPA under Education."
+   },
+   {
+    "issue": "Your Experience entries are listed oldest first: Student Lab Assistant, then Data Science Trainee, then Machine Learning Intern.",
+    "suggestion": "List Experience most recent first: Machine Learning Intern, then Data Science Trainee (Co-op), then Student Lab Assistant."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "Python, TensorFlow and PyTorch are written inconsistently across the CV (PYTHON/python, Tensorflow, Pytorch/pytorch).",
+    "suggestion": "Use the official spelling everywhere: Python, TensorFlow and PyTorch."
+   },
+   {
+    "issue": "scikit-learn is written two different ways: 'sk-learn' in the Data Science Trainee entry and 'Scikit learn' in House Price Guesser.",
+    "suggestion": "Use the official name 'scikit-learn' consistently in both places."
+   },
+   {
+    "issue": "Some work is described only in plain words, such as deciding if a tweet writer is 'happy, angry or neutral', guessing 'which deliveries will arrive late', and adjusting 'a ready-made language model' on your own data.",
+    "suggestion": "Add the matching technical terms recruiters search for, such as sentiment analysis, a classification model for the late-delivery prediction, and fine-tuning a pre-trained language model."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Data Science Trainee entry is one long continuous story covering SQL cleanup, late-delivery prediction, Power BI charts and Git, with no breaks between tasks.",
+    "suggestion": "Split it into short separate points, one for each task: cleaning data in SQL/Pandas, building the late-delivery model, creating Power BI charts, and handing off code with Jupyter/Git."
+   },
+   {
+    "issue": "Several entries are written in first person as a story instead of short action-driven points, for example Data Science Trainee and Arabic Tweets Mood Checker, and the Student Lab Assistant lines start with 'Responsible for' instead of an action verb.",
+    "suggestion": "Rewrite these as short bullet points starting with action verbs like 'Cleaned', 'Predicted', 'Built' or 'Assisted', and remove the first-person 'I'."
+   },
+   {
+    "issue": "Some results are vague, such as the graduation project saying 'it got it right most of the time' and the Data Science Trainee entry saying a method 'worked well enough'.",
+    "suggestion": "Replace these with actual figures, for example '[accuracy]% accuracy' for the date-classification project and a specific score for the late-delivery model."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Machine Learning Intern entry lists the dates as '2025 - present', but the same entry also says the internship 'finished in September 2025'.",
+    "suggestion": "Change the dates to the actual start and end months, for example 'June 2025 - September 2025', to match the text."
+   },
+   {
+    "issue": "Dates are written in several different formats across the CV: '09/2023 - 05/2024', 'March 2025 - June 2025', '2025 - present', '11/2024' and year-only entries like '2025'.",
+    "suggestion": "Pick one format, such as 'Mon YYYY', and use it for every date in Education, Experience and Projects."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "Your CV has no dedicated Skills section, even though your projects and experience show tools like Python, TensorFlow, PyTorch, scikit-learn, SQL, Pandas and Power BI.",
+    "suggestion": "Add a Skills or Technical Skills section listing the languages, frameworks and tools you've used, such as Python, TensorFlow, PyTorch, scikit-learn and SQL."
+   },
+   {
+    "issue": "Your phone number is missing, your email is written as 'nora.alharbi (at) example dot com' instead of a standard name@domain address, and there is no LinkedIn, GitHub or portfolio link.",
+    "suggestion": "Add a phone number, write your email in the normal name@domain.com form, and add a LinkedIn or GitHub/portfolio link with the full address visible."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "Your Experience heading is spelled 'EXPERIANCE', and 'THINGS I BUILT' is a personal phrase rather than a standard heading.",
+    "suggestion": "Rename 'EXPERIANCE' to 'Experience' and 'THINGS I BUILT' to 'Projects' so ATS systems recognize them."
+   },
+   {
+    "issue": "The graduation project about classifying pictures of dates is described inside the Education section, but it is a project, not education content.",
+    "suggestion": "Move the date-classification project into your Projects section alongside Arabic Tweets Mood Checker and House Price Guesser, and keep only the degree and GPA under Education."
+   },
+   {
+    "issue": "Your Experience entries are listed oldest first: Student Lab Assistant, then Data Science Trainee, then Machine Learning Intern.",
+    "suggestion": "List Experience most recent first: Machine Learning Intern, then Data Science Trainee (Co-op), then Student Lab Assistant."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "Python, TensorFlow and PyTorch are written inconsistently across the CV (PYTHON/python, Tensorflow, Pytorch/pytorch).",
+    "suggestion": "Use the official spelling everywhere: Python, TensorFlow and PyTorch."
+   },
+   {
+    "issue": "scikit-learn is written two different ways: 'sk-learn' in the Data Science Trainee entry and 'Scikit learn' in House Price Guesser.",
+    "suggestion": "Use the official name 'scikit-learn' consistently in both places."
+   },
+   {
+    "issue": "Some work is described only in plain words, such as deciding if a tweet writer is 'happy, angry or neutral', guessing 'which deliveries will arrive late', and adjusting 'a ready-made language model' on your own data.",
+    "suggestion": "Add the matching technical terms recruiters search for, such as sentiment analysis, a classification model for the late-delivery prediction, and fine-tuning a pre-trained language model."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Data Science Trainee entry is one long continuous story covering SQL cleanup, late-delivery prediction, Power BI charts and Git, with no breaks between tasks.",
+    "suggestion": "Split it into short separate points, one for each task: cleaning data in SQL/Pandas, building the late-delivery model, creating Power BI charts, and handing off code with Jupyter/Git."
+   },
+   {
+    "issue": "Several entries are written in first person as a story instead of short action-driven points, for example Data Science Trainee and Arabic Tweets Mood Checker, and the Student Lab Assistant lines start with 'Responsible for' instead of an action verb.",
+    "suggestion": "Rewrite these as short bullet points starting with action verbs like 'Cleaned', 'Predicted', 'Built' or 'Assisted', and remove the first-person 'I'."
+   },
+   {
+    "issue": "Some results are vague, such as the graduation project saying 'it got it right most of the time' and the Data Science Trainee entry saying a method 'worked well enough'.",
+    "suggestion": "Replace these with actual figures, for example '[accuracy]% accuracy' for the date-classification project and a specific score for the late-delivery model."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Machine Learning Intern entry lists the dates as '2025 - present', but the same entry also says the internship 'finished in September 2025'.",
+    "suggestion": "Change the dates to the actual start and end months, for example 'June 2025 - September 2025', to match the text."
+   },
+   {
+    "issue": "Dates are written in several different formats across the CV: '09/2023 - 05/2024', 'March 2025 - June 2025', '2025 - present', '11/2024' and year-only entries like '2025'.",
+    "suggestion": "Pick one format, such as 'Mon YYYY', and use it for every date in Education, Experience and Projects."
+   }
+  ]
+ }
+}

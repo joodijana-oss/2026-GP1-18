@@ -1,0 +1,64 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Built and trained a convolutional-recurrent network with CTC loss that reduced character error rate from 31% to 9.8%",
+   "Conducted systematic hyperparameter tuning across 36 configurations tracked with Weights & Biases",
+   "Evaluated models on held-out, unseen data using character and word error rate, with breakdown by drug-name length",
+   "Deployed a trained model behind a FastAPI service for real-world use by pharmacy students",
+   "Managed data labelling and quality control across 4,200 prescription lines with multiple annotators",
+   "Compared multiple machine learning algorithms (logistic regression, naive Bayes, linear SVM) achieving F1 0.96",
+   "Achieved high academic performance with GPA 4.7/5 and first-class honours",
+   "Research work recognized through acceptance as a poster at a student research conference"
+  ],
+  "currentSkills": [
+   "Python",
+   "PyTorch",
+   "scikit-learn",
+   "pandas",
+   "NumPy",
+   "TensorFlow",
+   "Git",
+   "Machine Learning",
+   "Image Processing",
+   "Data Labelling",
+   "Data Augmentation",
+   "Convolutional Neural Networks",
+   "Recurrent Neural Networks",
+   "Model Evaluation",
+   "Hyperparameter Tuning",
+   "Weights & Biases",
+   "FastAPI",
+   "TF-IDF",
+   "Natural Language Processing",
+   "SQL",
+   "Data Analysis"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "Princess Nourah bint Abdulrahman University",
+    "year": "2022-2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Reading handwritten Arabic prescriptions",
+    "description": "Team-based graduation project involving photographing and labelling 4,200 prescription lines, preprocessing images (straightening, cropping, binarising, augmenting with rotations and ink-thickness changes), training a convolutional-recurrent network with CTC loss in PyTorch, reducing character error rate from 31% to 9.8%, tuning hyperparameters across 36 configurations tracked in Weights & Biases, evaluating on unseen pharmacy data with character and word error rate broken down by drug-name length, and deploying the model via a FastAPI service for browser-based photo upload. Accepted as a poster at a Saudi student research conference (2026)."
+   },
+   {
+    "name": "Spam SMS filter in Arabic and English",
+    "description": "Converted 11,000 messages into TF-IDF and character n-gram vectors and compared logistic regression, naive Bayes, and linear SVM classifiers, achieving a best F1 score of 0.96."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Summer Trainee",
+    "organization": "Data office of a government entity, Riyadh",
+    "duration": "8 weeks, 2025",
+    "description": "Wrote queries on the entity's Oracle warehouse to prepare monthly service-usage tables for the analytics team."
+   }
+  ]
+ }
+}

@@ -1,0 +1,317 @@
+{
+  "id": "ho_07",
+  "careerGoalId": "cloud_devops_engineer",
+  "shown": [
+    {
+      "skill": "AWS",
+      "alsoCalled": [
+        "Amazon Web Services"
+      ],
+      "evidence": "responsible for the build and release path and the AWS accounts behind the storefront",
+      "source": "experience"
+    },
+    {
+      "skill": "Terraform",
+      "alsoCalled": [
+        "Infrastructure as Code",
+        "IaC"
+      ],
+      "evidence": "Describe all networking, databases and compute as code in Terraform modules",
+      "source": "experience"
+    },
+    {
+      "skill": "Kubernetes",
+      "alsoCalled": [
+        "K8s",
+        "Container Orchestration"
+      ],
+      "evidence": "Run the production cluster on EKS (3 node groups, about 120 pods)",
+      "source": "experience"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "Looked after 200 customer CentOS and Ubuntu servers",
+      "source": "experience"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ],
+      "evidence": "reviewed through merge requests before anything is applied",
+      "source": "experience"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "evidence": "Wrote small Python and shell tools",
+      "source": "experience"
+    },
+    {
+      "skill": "Bash Scripting",
+      "alsoCalled": [
+        "Shell Scripting",
+        "Bash"
+      ],
+      "evidence": "Wrote small Python and shell tools, for example one that rotates access keys older than 60 days",
+      "source": "experience"
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build Pipelines"
+      ],
+      "evidence": "Moved 14 services from manual SSH deployments to GitLab jobs that build, test and roll out every merge",
+      "source": "experience"
+    },
+    {
+      "skill": "Infrastructure Monitoring",
+      "alsoCalled": [
+        "Observability",
+        "System Monitoring",
+        "Alerting"
+      ],
+      "evidence": "Set up dashboards and on-call paging in Grafana and Prometheus",
+      "source": "experience"
+    },
+    {
+      "skill": "Cloud Networking",
+      "alsoCalled": [
+        "VPC",
+        "Virtual Networks"
+      ],
+      "evidence": "Split the single flat network into public and private subnets across two availability zones",
+      "source": "experience"
+    },
+    {
+      "skill": "Cost Optimization",
+      "alsoCalled": [
+        "Cloud Cost Management",
+        "FinOps"
+      ],
+      "evidence": "Cut the monthly bill by 23% by right-sizing instances, buying a savings plan and moving old images to cheaper storage",
+      "source": "experience"
+    },
+    {
+      "skill": "Disaster Recovery",
+      "alsoCalled": [
+        "DR",
+        "Backup and Restore",
+        "Recovery Drills"
+      ],
+      "evidence": "Practise restoring the orders database from snapshots into a second region every quarter",
+      "source": "experience"
+    },
+    {
+      "skill": "Web Server Administration",
+      "alsoCalled": [
+        "Nginx",
+        "Apache",
+        "Reverse Proxy"
+      ],
+      "evidence": "Apache and Nginx virtual hosts",
+      "source": "experience"
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "evidence": "AWS, Terraform, Kubernetes, Docker, Linux, Git, Python, Bash",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Helm",
+      "alsoCalled": [
+        "Helm Charts"
+      ],
+      "evidence": "wrote the Helm charts for each service",
+      "source": "experience"
+    },
+    {
+      "skill": "GitLab CI",
+      "alsoCalled": [
+        "GitLab Pipelines"
+      ],
+      "evidence": "GitLab jobs that build, test and roll out every merge",
+      "source": "experience"
+    },
+    {
+      "skill": "Grafana",
+      "alsoCalled": [
+        "Grafana Dashboards"
+      ],
+      "evidence": "dashboards and on-call paging in Grafana and Prometheus",
+      "source": "experience"
+    },
+    {
+      "skill": "Prometheus",
+      "alsoCalled": [
+        "Prometheus Monitoring"
+      ],
+      "evidence": "Grafana and Prometheus",
+      "source": "experience"
+    },
+    {
+      "skill": "Technical Documentation",
+      "alsoCalled": [
+        "Knowledge Base Articles",
+        "Runbooks",
+        "User Guides"
+      ],
+      "evidence": "wrote runbooks for the most common faults",
+      "source": "experience"
+    },
+    {
+      "skill": "Technical Support",
+      "alsoCalled": [
+        "Help Desk",
+        "Service Desk",
+        "IT Support",
+        "User Support"
+      ],
+      "evidence": "Answered second-line tickets",
+      "source": "experience"
+    },
+    {
+      "skill": "AWS Certified Solutions Architect - Associate",
+      "alsoCalled": [
+        "AWS SAA",
+        "SAA-C03"
+      ],
+      "evidence": "AWS Certified Solutions Architect - Associate (2025)",
+      "source": "certification"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Identity and Access Management",
+      "alsoCalled": [
+        "IAM",
+        "Access Control",
+        "Access Reviews"
+      ],
+      "evidence": "one that rotates access keys older than 60 days",
+      "why": "One key-rotation script; no roles, policies or access design described."
+    },
+    {
+      "skill": "High Availability",
+      "alsoCalled": [
+        "Load Balancing and Failover",
+        "Auto Scaling",
+        "Fault Tolerance"
+      ],
+      "evidence": "across two availability zones",
+      "why": "Two zones are mentioned, but nothing on load balancing, scaling or failover."
+    },
+    {
+      "skill": "Secrets Management",
+      "alsoCalled": [
+        "HashiCorp Vault",
+        "Secret Rotation"
+      ],
+      "evidence": "one that rotates access keys older than 60 days",
+      "why": "One key-rotation script; no secret store or vault is described."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Microsoft Azure",
+      "alsoCalled": [
+        "Azure"
+      ],
+      "why": "All cloud work is on AWS.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Jenkins",
+      "alsoCalled": [
+        "Jenkins Pipelines"
+      ],
+      "why": "Builds pipelines in GitLab, not Jenkins.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Certified Kubernetes Administrator",
+      "alsoCalled": [
+        "CKA"
+      ],
+      "why": "Runs Kubernetes at work but does not hold the certification.",
+      "nearMiss": true
+    },
+    {
+      "skill": "GitOps",
+      "alsoCalled": [
+        "Argo CD",
+        "Flux"
+      ],
+      "why": "Infrastructure changes go through merge requests and GitLab jobs roll out every merge, but no GitOps tool such as Argo CD or Flux is mentioned.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Google Cloud Platform",
+      "alsoCalled": [
+        "GCP",
+        "Google Cloud"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "DevSecOps",
+      "alsoCalled": [
+        "Pipeline Security Scanning",
+        "Secure CI/CD"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Windows Server",
+      "alsoCalled": [
+        "Windows Server Administration"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Red Hat Certified System Administrator",
+      "alsoCalled": [
+        "RHCSA"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Ansible",
+      "alsoCalled": [
+        "Configuration Management"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Log Management",
+      "alsoCalled": [
+        "Centralized Logging",
+        "Log Aggregation"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "AWS Certified Solutions Architect - Associate"
+  ]
+}

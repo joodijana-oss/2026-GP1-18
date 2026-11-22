@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Hardware Troubleshooting",
+  "Windows Operating System",
+  "Networking",
+  "Active Directory",
+  "Ticketing Systems",
+  "Microsoft 365",
+  "TCP/IP",
+  "Printer Support",
+  "IT Asset Management",
+  "Customer Service",
+  "DNS",
+  "DHCP"
+ ],
+ "answer": [
+  {
+   "skill": "Hardware Troubleshooting",
+   "status": "shown",
+   "quote": "laptops and desktops will not start, overheat or crash"
+  },
+  {
+   "skill": "Windows Operating System",
+   "status": "shown",
+   "quote": "Windows 10 and 11 installation"
+  },
+  {
+   "skill": "Networking",
+   "status": "shown",
+   "quote": "Sort out the home routers people bring in"
+  },
+  {
+   "skill": "Active Directory",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "partly",
+   "quote": "entered dead PCs and projectors in the college's request system"
+  },
+  {
+   "skill": "Microsoft 365",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Printer Support",
+   "status": "shown",
+   "quote": "Cleared paper jams and replaced toner in the lab printers"
+  },
+  {
+   "skill": "IT Asset Management",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Customer Service",
+   "status": "shown",
+   "quote": "Explain to walk-in customers, many of them elderly, what went wrong"
+  },
+  {
+   "skill": "DNS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "DHCP",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

@@ -1,0 +1,122 @@
+{
+ "goal": "it_project_manager",
+ "extractor": "E0",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Project Risk Management",
+   "kind": "skill",
+   "concepts": [
+    "Risk Management"
+   ],
+   "phrases": [
+    "identifying project risks",
+    "risk mitigation planning",
+    "managing project uncertainties"
+   ]
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "managing stakeholder expectations",
+    "stakeholder communication strategies"
+   ]
+  },
+  {
+   "gap": "Agile/Scrum Methodologies",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "scrum framework basics",
+    "sprint planning and execution",
+    "agile project delivery"
+   ]
+  },
+  {
+   "gap": "Project Planning and Scheduling",
+   "kind": "skill",
+   "concepts": [
+    "IT Project Management"
+   ],
+   "phrases": [
+    "creating project timelines",
+    "task scheduling techniques",
+    "work breakdown structures"
+   ]
+  },
+  {
+   "gap": "Budget and Resource Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "project budgeting techniques",
+    "allocating project resources",
+    "cost estimation and control"
+   ]
+  },
+  {
+   "gap": "PMP Certification",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Project Governance",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "project oversight structures",
+    "governance frameworks for projects"
+   ]
+  },
+  {
+   "gap": "Jira",
+   "kind": "tool",
+   "concepts": [
+    "Jira"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Microsoft Project",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Cloud Platforms (Azure/AWS/GCP)",
+   "kind": "tool",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Change Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "managing organizational change",
+    "change adoption strategies"
+   ]
+  },
+  {
+   "gap": "Executive Reporting and Presentation",
+   "kind": "soft",
+   "concepts": [
+    "Presentations"
+   ],
+   "phrases": [
+    "reporting to executives",
+    "creating executive summaries",
+    "presenting to leadership"
+   ]
+  }
+ ]
+}

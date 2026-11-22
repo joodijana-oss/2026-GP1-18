@@ -1,0 +1,152 @@
+{
+ "goal": "it_consultant",
+ "list": "E1",
+ "run": 2,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [],
+   "same": [
+    "Databases and SQL"
+   ],
+   "terms": [
+    "SQL",
+    "queries",
+    "relational database"
+   ]
+  },
+  {
+   "gap": "PL/SQL",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "PL/SQL",
+    "Oracle procedural SQL",
+    "stored procedures"
+   ]
+  },
+  {
+   "gap": "Oracle E-Business Suite",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Oracle E-Business Suite",
+    "EBS",
+    "Oracle applications"
+   ]
+  },
+  {
+   "gap": "Digital Transformation",
+   "kind": "skill",
+   "concepts": [
+    "Digital Transformation"
+   ],
+   "phrases": [],
+   "same": [
+    "Digital Transformation"
+   ]
+  },
+  {
+   "gap": "Java",
+   "kind": "tool",
+   "concepts": [
+    "Java"
+   ],
+   "phrases": [],
+   "same": [
+    "Java"
+   ]
+  },
+  {
+   "gap": "Oracle BPM Suite",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Oracle BPM",
+    "business process management suite",
+    "workflow automation"
+   ]
+  },
+  {
+   "gap": "REST",
+   "kind": "tool",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [],
+   "same": [
+    "APIs"
+   ],
+   "terms": [
+    "REST API",
+    "RESTful services",
+    "HTTP API"
+   ]
+  },
+  {
+   "gap": "SOAP",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "SOAP protocol",
+    "web services",
+    "XML messaging"
+   ]
+  },
+  {
+   "gap": "BI Publisher",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Oracle BI Publisher",
+    "report generation",
+    "Oracle reports"
+   ]
+  },
+  {
+   "gap": "Business Process Automation",
+   "kind": "skill",
+   "concepts": [
+    "Business Processes"
+   ],
+   "phrases": [],
+   "terms": [
+    "process automation",
+    "workflow automation",
+    "BPA"
+   ]
+  },
+  {
+   "gap": "Cloud Computing",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [],
+   "same": [
+    "Cloud Computing"
+   ]
+  },
+  {
+   "gap": "Technical Documentation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "technical writing",
+    "documentation",
+    "specifications"
+   ]
+  }
+ ]
+}

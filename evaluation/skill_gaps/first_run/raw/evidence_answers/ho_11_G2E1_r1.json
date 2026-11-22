@@ -1,0 +1,48 @@
+{
+ "targets": [
+  "Active Directory",
+  "Ticketing Systems",
+  "TCP/IP",
+  "DHCP",
+  "DNS",
+  "CCNA",
+  "VPN"
+ ],
+ "answer": [
+  {
+   "skill": "Active Directory",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "partly",
+   "quote": "Keep a spreadsheet of every device that comes in, with the fault, parts used"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "partly",
+   "quote": "sort out \"connected but no internet\" calls"
+  },
+  {
+   "skill": "DHCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "DNS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CCNA",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "VPN",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

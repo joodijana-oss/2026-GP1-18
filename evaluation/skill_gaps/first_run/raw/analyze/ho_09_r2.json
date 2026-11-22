@@ -1,0 +1,63 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Experience building and training deep learning models (convolutional-recurrent network with CTC loss) that significantly improved performance (character error rate reduced from 31% to 9.8%)",
+   "Hands-on experience with the full machine learning pipeline, from data collection and labelling to deployment",
+   "Systematic experimentation and hyperparameter tuning using tracked grid search (36 settings in Weights & Biases)",
+   "Ability to deploy trained models as usable services (FastAPI web service)",
+   "Experience handling real, messy data including image preprocessing and data augmentation",
+   "Strong academic performance with first-class honours (GPA 4.7/5)",
+   "Research recognition through acceptance as a poster at a student research conference",
+   "Experience comparing multiple machine learning models and evaluating with standard metrics (F1 score)",
+   "Practical experience writing SQL queries for real business reporting needs"
+  ],
+  "currentSkills": [
+   "Python",
+   "PyTorch",
+   "scikit-learn",
+   "pandas",
+   "NumPy",
+   "TensorFlow",
+   "Git",
+   "Machine Learning",
+   "Deep Learning",
+   "Image Processing",
+   "Data Labelling",
+   "Data Augmentation",
+   "Model Evaluation",
+   "FastAPI",
+   "SQL",
+   "Data Analysis",
+   "TF-IDF",
+   "Natural Language Processing",
+   "Weights & Biases"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "Princess Nourah bint Abdulrahman University",
+    "year": "2022-2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Reading handwritten Arabic prescriptions",
+    "description": "Graduation project (team of 3) involving photographing and labelling 4,200 prescription lines, resolving labeller disagreements, removing blurred images, preprocessing images (straightening, cropping, binarising), augmenting data with rotations and ink-thickness changes, training a convolutional-recurrent network with CTC loss in PyTorch, reducing character error rate from 31% to 9.8%, tuning hyperparameters across 36 configurations tracked in Weights & Biases, evaluating on held-out pharmacy data using character and word error rate broken down by drug-name length, and deploying the model via a FastAPI web service. Accepted as a poster at a Saudi student research conference (2026)."
+   },
+   {
+    "name": "Spam SMS filter in Arabic and English",
+    "description": "Converted 11,000 messages into TF-IDF and character n-gram vectors, compared logistic regression, naive Bayes, and linear SVM models, achieving a best F1 score of 0.96."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Summer Trainee",
+    "organization": "Data office of a government entity, Riyadh",
+    "duration": "8 weeks, 2025",
+    "description": "Wrote queries on the entity's Oracle warehouse to prepare monthly service-usage tables for the analytics team."
+   }
+  ]
+ }
+}

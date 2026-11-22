@@ -1,0 +1,114 @@
+{
+ "goal": "cybersecurity_grc_specialist",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Cybersecurity Risk Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Risk Assessment"
+   ],
+   "phrases": [
+    "assessing security risks",
+    "evaluating cyber threats",
+    "identifying security vulnerabilities"
+   ]
+  },
+  {
+   "gap": "ISO 27001",
+   "kind": "certification",
+   "concepts": [
+    "ISO 27001"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "NCA ECC",
+   "kind": "certification",
+   "concepts": [
+    "NCA ECC"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "SAMA CSF",
+   "kind": "certification",
+   "concepts": [
+    "SAMA Regulations"
+   ],
+   "phrases": [
+    "financial sector cybersecurity framework",
+    "regulatory compliance requirements"
+   ]
+  },
+  {
+   "gap": "Cybersecurity Governance Framework Development",
+   "kind": "skill",
+   "concepts": [
+    "Policies and Procedures"
+   ],
+   "phrases": [
+    "building security governance structures",
+    "developing security policies",
+    "establishing governance frameworks"
+   ]
+  },
+  {
+   "gap": "Risk Register Management",
+   "kind": "skill",
+   "concepts": [
+    "Risk Management"
+   ],
+   "phrases": [
+    "tracking organizational risks",
+    "maintaining risk logs",
+    "documenting identified risks"
+   ]
+  },
+  {
+   "gap": "CISA",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "CISM",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "NIST",
+   "kind": "tool",
+   "concepts": [
+    "NIST CSF"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Third-Party Risk Management",
+   "kind": "skill",
+   "concepts": [
+    "Risk Management"
+   ],
+   "phrases": [
+    "vendor risk evaluation",
+    "supplier risk oversight",
+    "managing external partner risk"
+   ]
+  },
+  {
+   "gap": "CRISC",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "PCI DSS",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  }
+ ]
+}

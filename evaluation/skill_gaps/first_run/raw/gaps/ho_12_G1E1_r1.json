@@ -1,0 +1,66 @@
+{
+ "case": "ho_12",
+ "arm": "G1E1",
+ "run": 1,
+ "gaps": [
+  "CISA",
+  "CISM",
+  "NIST",
+  "CRISC",
+  "PCI DSS"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Cybersecurity Risk Assessment",
+   "status": "shown"
+  },
+  {
+   "skill": "ISO 27001",
+   "status": "shown"
+  },
+  {
+   "skill": "NCA ECC",
+   "status": "shown"
+  },
+  {
+   "skill": "SAMA CSF",
+   "status": "shown"
+  },
+  {
+   "skill": "Cybersecurity Governance Framework Development",
+   "status": "partly"
+  },
+  {
+   "skill": "Risk Register Management",
+   "status": "partly"
+  },
+  {
+   "skill": "CISA",
+   "status": "missing"
+  },
+  {
+   "skill": "CISM",
+   "status": "missing"
+  },
+  {
+   "skill": "NIST",
+   "status": "missing"
+  },
+  {
+   "skill": "Third-Party Risk Management",
+   "status": "shown"
+  },
+  {
+   "skill": "CRISC",
+   "status": "missing"
+  },
+  {
+   "skill": "PCI DSS",
+   "status": "missing"
+  }
+ ]
+}

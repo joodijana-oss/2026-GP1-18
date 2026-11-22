@@ -1,0 +1,34 @@
+{
+ "goal": "cybersecurity_grc_specialist",
+ "extractor": "E0",
+ "run": 2,
+ "postings": 20,
+ "rawNames": [
+  "Cybersecurity Risk Assessment",
+  "ISO 27001",
+  "NCA ECC",
+  "SAMA CSF",
+  "Cybersecurity Governance Frameworks",
+  "Risk Register Management",
+  "Compliance Audits",
+  "Policy and Standards Development",
+  "NIST",
+  "Third-Party/Vendor Risk Management",
+  "KPI/KRI Reporting",
+  "GRC Platforms"
+ ],
+ "names": [
+  "Cybersecurity Risk Assessment",
+  "ISO 27001",
+  "NCA ECC",
+  "SAMA CSF",
+  "Cybersecurity Governance Frameworks",
+  "Risk Register Management",
+  "Compliance Audits",
+  "Policy and Standards Development",
+  "NIST",
+  "Third-Party/Vendor Risk Management",
+  "KPI/KRI Reporting",
+  "GRC Platforms"
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "goal": "cybersecurity_analyst",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "SIEM",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "security event monitoring",
+    "log correlation analysis",
+    "security information management"
+   ]
+  },
+  {
+   "gap": "Vulnerability Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Security Operations"
+   ],
+   "phrases": [
+    "identifying system vulnerabilities",
+    "vulnerability scanning techniques",
+    "weakness assessment methods"
+   ]
+  },
+  {
+   "gap": "Penetration Testing",
+   "kind": "skill",
+   "concepts": [
+    "Penetration Testing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Incident Response",
+   "kind": "skill",
+   "concepts": [
+    "Incident Response"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Firewall Administration",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "configuring firewall rules",
+    "managing network firewalls",
+    "firewall policy management"
+   ]
+  },
+  {
+   "gap": "CISSP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "OSCP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Nmap",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "network scanning tool",
+    "port scanning techniques"
+   ]
+  },
+  {
+   "gap": "Metasploit",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "exploitation framework usage",
+    "automated exploit development"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "CompTIA Security+",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Network Security",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": []
+  }
+ ]
+}

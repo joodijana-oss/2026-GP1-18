@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Python",
+  "PyTorch",
+  "Kubernetes",
+  "C++",
+  "TensorFlow",
+  "Linux",
+  "Docker",
+  "Terraform",
+  "Ansible",
+  "Computer Vision",
+  "Prometheus",
+  "LangChain"
+ ],
+ "answer": [
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Python, PyTorch, scikit-learn, pandas, NumPy, TensorFlow, Git"
+  },
+  {
+   "skill": "PyTorch",
+   "status": "shown",
+   "quote": "Trained a convolutional-recurrent network with CTC loss in PyTorch"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "TensorFlow",
+   "status": "shown",
+   "quote": "Python, PyTorch, scikit-learn, pandas, NumPy, TensorFlow, Git"
+  },
+  {
+   "skill": "Linux",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Ansible",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Computer Vision",
+   "status": "shown",
+   "quote": "Straightened, cropped and binarised each image"
+  },
+  {
+   "skill": "Prometheus",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "LangChain",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

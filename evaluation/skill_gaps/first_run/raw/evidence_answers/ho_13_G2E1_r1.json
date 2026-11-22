@@ -1,0 +1,36 @@
+{
+ "targets": [
+  "Terraform",
+  "Python",
+  "AWS",
+  "Azure",
+  "Prometheus"
+ ],
+ "answer": [
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "AWS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Azure",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Prometheus",
+   "status": "partly",
+   "quote": "Graphs of CPU, memory, disk and temperature in Grafana, fed by node exporters"
+  }
+ ]
+}

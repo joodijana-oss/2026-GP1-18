@@ -1,0 +1,123 @@
+{
+ "goal": "cloud_devops_engineer",
+ "list": "W1",
+ "run": 1,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Cloud Cost Optimization",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "cloud cost",
+    "cost optimization",
+    "FinOps"
+   ]
+  },
+  {
+   "gap": "Amazon EKS",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "EKS",
+    "Elastic Kubernetes Service",
+    "Kubernetes on AWS"
+   ]
+  },
+  {
+   "gap": "Server Hardware Installation",
+   "kind": "skill",
+   "concepts": [
+    "Servers"
+   ],
+   "phrases": [],
+   "terms": [
+    "server installation",
+    "hardware setup",
+    "rack server"
+   ]
+  },
+  {
+   "gap": "Public Speaking",
+   "kind": "soft",
+   "concepts": [
+    "Presentations"
+   ],
+   "phrases": [],
+   "terms": [
+    "public speaking",
+    "oral communication"
+   ]
+  },
+  {
+   "gap": "HashiCorp Certified: Terraform Associate",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Terraform Associate",
+    "HashiCorp certification",
+    "Terraform exam"
+   ]
+  },
+  {
+   "gap": "Technical Training",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "technical training",
+    "training delivery",
+    "instructional design"
+   ]
+  },
+  {
+   "gap": "Static Website Hosting",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "static website",
+    "website hosting",
+    "static site"
+   ]
+  },
+  {
+   "gap": "Amazon S3",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "S3",
+    "Simple Storage Service",
+    "object storage"
+   ]
+  },
+  {
+   "gap": "Content Delivery Network",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "CDN",
+    "content delivery",
+    "edge caching"
+   ]
+  },
+  {
+   "gap": "Distributed Systems",
+   "kind": "skill",
+   "concepts": [
+    "System Design"
+   ],
+   "phrases": [],
+   "terms": [
+    "distributed systems",
+    "distributed computing",
+    "consistency and replication"
+   ]
+  }
+ ]
+}

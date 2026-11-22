@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SQL",
+  "Power BI",
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Data Analysis",
+  "Tableau",
+  "R",
+  "Machine Learning",
+  "Stakeholder Management",
+  "Pandas",
+  "Data Governance"
+ ],
+ "answer": [
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "Pulled three seasons of shipment records out of the order database with my own queries"
+  },
+  {
+   "skill": "Power BI",
+   "status": "shown",
+   "quote": "Excel, SQL, Power BI, Tableau"
+  },
+  {
+   "skill": "Python",
+   "status": "partly",
+   "quote": "Did the work in a notebook with pandas"
+  },
+  {
+   "skill": "Data Visualization",
+   "status": "shown",
+   "quote": "charts of late shipments by destination"
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "partly",
+   "quote": "Excel workbook with lookup formulas so the warehouse supervisor could filter it himself"
+  },
+  {
+   "skill": "Data Analysis",
+   "status": "shown",
+   "quote": "joined them to the customer table to see which buyers reorder"
+  },
+  {
+   "skill": "Tableau",
+   "status": "shown",
+   "quote": "Excel, SQL, Power BI, Tableau"
+  },
+  {
+   "skill": "R",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "shown",
+   "quote": "Sat with the warehouse supervisor and the export manager to agree what \"late\" should mean"
+  },
+  {
+   "skill": "Pandas",
+   "status": "shown",
+   "quote": "Did the work in a notebook with pandas"
+  },
+  {
+   "skill": "Data Governance",
+   "status": "partly",
+   "quote": "merged 412 duplicate records and filled in missing country codes"
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "case": "ho_10",
+ "arm": "G1E1",
+ "run": 3,
+ "gaps": [
+  "Appium"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Manual Testing",
+   "status": "shown"
+  },
+  {
+   "skill": "Test Case Design",
+   "status": "shown"
+  },
+  {
+   "skill": "Jira",
+   "status": "shown"
+  },
+  {
+   "skill": "Regression Testing",
+   "status": "shown"
+  },
+  {
+   "skill": "API Testing",
+   "status": "shown"
+  },
+  {
+   "skill": "Functional Testing",
+   "status": "shown"
+  },
+  {
+   "skill": "Selenium",
+   "status": "partly"
+  },
+  {
+   "skill": "SQL",
+   "status": "shown"
+  },
+  {
+   "skill": "Appium",
+   "status": "missing"
+  },
+  {
+   "skill": "Agile",
+   "status": "shown"
+  },
+  {
+   "skill": "Scrum",
+   "status": "partly"
+  },
+  {
+   "skill": "Postman",
+   "status": "shown"
+  }
+ ]
+}

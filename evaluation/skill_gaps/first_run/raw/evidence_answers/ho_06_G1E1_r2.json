@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "REST APIs",
+  "Git",
+  "React",
+  "Node.js",
+  "SQL",
+  "Java",
+  "Spring Boot",
+  "Docker",
+  "Python",
+  "Linux",
+  "Kubernetes",
+  "Microservices Architecture"
+ ],
+ "answer": [
+  {
+   "skill": "REST APIs",
+   "status": "partly",
+   "quote": "calls a public prayer-times web API"
+  },
+  {
+   "skill": "Git",
+   "status": "shown",
+   "quote": "Kept the code on GitHub from the first day, with a branch per feature"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "SQL",
+   "status": "partly",
+   "quote": "Database Systems (this term)"
+  },
+  {
+   "skill": "Java",
+   "status": "shown",
+   "quote": "Built with plain Java and Swing"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Wrote it in Python"
+  },
+  {
+   "skill": "Linux",
+   "status": "shown",
+   "quote": "Runs on a small rented VPS under systemd"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

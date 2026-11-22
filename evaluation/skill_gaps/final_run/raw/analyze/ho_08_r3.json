@@ -1,0 +1,66 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on experience configuring real Cisco switches and routers in a multi-building campus network",
+   "Practical knowledge of VLAN segmentation to isolate broadcast domains for security and organizational purposes",
+   "Skilled in IP subnetting and address allocation planning for multiple departments",
+   "Experience implementing and verifying link-state routing protocol convergence",
+   "Able to troubleshoot network performance issues using packet capture analysis",
+   "Experience setting up wireless networks with channel optimization using site survey tools",
+   "Clear technical documentation skills, including topology diagrams and cabling sheets",
+   "Exposure to real-world field deployment practices through summer training",
+   "Active participation in community outreach through technical workshops"
+  ],
+  "currentSkills": [
+   "Cisco IOS",
+   "Wireshark",
+   "Packet Tracer",
+   "Python",
+   "Fortinet Firewalls",
+   "VLAN Configuration",
+   "Subnetting",
+   "Link-State Routing Protocols",
+   "Network Troubleshooting",
+   "Wireless Network Configuration",
+   "Network Documentation",
+   "Structured Cabling"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc. Computer Engineering",
+    "major": "Networks track",
+    "institution": "Prince Sattam bin Abdulaziz University",
+    "year": "2026"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "Cisco Certified Network Associate (CCNA)",
+    "issuer": "Cisco",
+    "year": "February 2026"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Campus in a rack (senior project)",
+    "description": "Built a three-building campus network using six real Cisco 2960 and 3560 switches and three ISR routers, configured via console. Segmented students, staff, and security cameras into separate broadcast domains connected through a distribution layer. Subnetted a /22 block into allocations for 11 departments with documented records. Configured a link-state routing protocol in a single backbone area and verified failover convergence under 10 seconds. Produced topology diagrams and a port-by-port cabling sheet still used by the lab."
+   },
+   {
+    "name": "Guest Wi-Fi for the college open day",
+    "description": "Set up two access points with a separate visitor network and selected non-overlapping channels using a phone-based Wi-Fi analyser."
+   },
+   {
+    "name": "Why is Lab 3 slow?",
+    "description": "Captured traffic on the lab uplink using packet analysis tools, identified a PC flooding the segment with broadcast frames due to a faulty network card, and disabled its port until replacement."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Trainee",
+    "organization": "A telecom contractor",
+    "duration": "June - August 2025",
+    "description": "Shadowed the field team installing branch routers for a bank; labelled cables and completed site-acceptance checklists."
+   }
+  ]
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Routing and Switching",
+  "VPN",
+  "LAN/WAN",
+  "VLAN",
+  "CCNA",
+  "Firewall Management",
+  "Cisco Networking",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto",
+  "BGP",
+  "Network Monitoring and Troubleshooting"
+ ],
+ "answer": [
+  {
+   "skill": "Routing and Switching",
+   "status": "shown",
+   "quote": "routed between them on a layer-3 switch"
+  },
+  {
+   "skill": "VPN",
+   "status": "shown",
+   "quote": "encrypted IPsec tunnel across a simulated ISP"
+  },
+  {
+   "skill": "LAN/WAN",
+   "status": "shown",
+   "quote": "Ran OSPF in two areas between the branches"
+  },
+  {
+   "skill": "VLAN",
+   "status": "shown",
+   "quote": "trunked links between the access and distribution layers"
+  },
+  {
+   "skill": "CCNA",
+   "status": "shown",
+   "quote": "Cisco Certified Network Associate (CCNA 200-301) – 14/02/2026"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Cisco Networking",
+   "status": "shown",
+   "quote": "six real Cisco 2960 and ISR devices in the college lab"
+  },
+  {
+   "skill": "CCNP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Fortinet",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "BGP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Network Monitoring and Troubleshooting",
+   "status": "shown",
+   "quote": "using show and debug commands, ping and traceroute"
+  }
+ ]
+}

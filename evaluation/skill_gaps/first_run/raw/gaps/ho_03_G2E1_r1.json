@@ -1,0 +1,45 @@
+{
+ "case": "ho_03",
+ "arm": "G2E1",
+ "run": 1,
+ "gaps": [
+  "Python",
+  "Machine Learning",
+  "Pandas",
+  "NumPy"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Python",
+   "status": "missing"
+  },
+  {
+   "skill": "Data Visualization",
+   "status": "shown"
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "shown"
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "missing"
+  },
+  {
+   "skill": "Pandas",
+   "status": "missing"
+  },
+  {
+   "skill": "NumPy",
+   "status": "missing"
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "shown"
+  }
+ ]
+}

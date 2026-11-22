@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Manual Testing",
+  "Test Case Design",
+  "Jira",
+  "Regression Testing",
+  "Functional Testing",
+  "Selenium",
+  "API Testing",
+  "Appium",
+  "SQL",
+  "Postman",
+  "Agile",
+  "Scrum"
+ ],
+ "answer": [
+  {
+   "skill": "Manual Testing",
+   "status": "shown",
+   "quote": "Manual testing, Jira, Postman, TestRail, SQL (basic)"
+  },
+  {
+   "skill": "Test Case Design",
+   "status": "shown",
+   "quote": "Write step-by-step scenarios with expected results from user stories"
+  },
+  {
+   "skill": "Jira",
+   "status": "shown",
+   "quote": "Log every defect in Jira with steps, screenshots"
+  },
+  {
+   "skill": "Regression Testing",
+   "status": "shown",
+   "quote": "re-run the 180 scenarios that cover existing features"
+  },
+  {
+   "skill": "Functional Testing",
+   "status": "shown",
+   "quote": "Check the app by hand on 9 Android and iOS devices"
+  },
+  {
+   "skill": "Selenium",
+   "status": "shown",
+   "quote": "scripting the login and renewal smoke checks in Selenium"
+  },
+  {
+   "skill": "API Testing",
+   "status": "shown",
+   "quote": "Send requests to the backend with Postman to confirm status codes"
+  },
+  {
+   "skill": "Appium",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "Query the test database to verify that submitted applications"
+  },
+  {
+   "skill": "Postman",
+   "status": "shown",
+   "quote": "Send requests to the backend with Postman"
+  },
+  {
+   "skill": "Agile",
+   "status": "shown",
+   "quote": "Take part in sprint planning, daily stand-ups and retrospectives"
+  },
+  {
+   "skill": "Scrum",
+   "status": "partly",
+   "quote": "sprint planning, daily stand-ups and retrospectives with a team of 11"
+  }
+ ]
+}

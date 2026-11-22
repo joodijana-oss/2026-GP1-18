@@ -1,0 +1,16 @@
+{
+ "case": "ho_14",
+ "arm": "G0E0",
+ "run": 3,
+ "gaps": [
+  "Firewall Management (Palo Alto/FortiGate/Fortinet)",
+  "Network Security",
+  "CCNA/CCNP Certification",
+  "MPLS/BGP/OSPF"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

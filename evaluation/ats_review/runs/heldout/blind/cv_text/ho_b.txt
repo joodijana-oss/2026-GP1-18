@@ -1,0 +1,96 @@
+Curriculum Vitae                                              Page 1 of 3
+
+Hanan Al-Qahtani
+Riyadh, Saudi Arabia
++966 55 010 2233
+h4ck3r_queen99@example.com
+linkedin.com/in/hanan-alqahtani-sec
+
+Personal Details
+Date of Birth: 14 March 2002
+Marital Status: Single
+Nationality: Saudi
+Gender: Female
+
+Profile
+Cybersecurity graduate with hands-on experience in security monitoring,
+log analysis and vulnerability assessment from a SOC internship and a
+university security lab. Seeking a Cybersecurity Analyst role.
+
+Education
+Bachelor of Science in Cybersecurity
+Najd University of Technology, Riyadh
+GPA: 4.38 / 5.00
+
+Courses Studied
+Introduction to Computing, Programming 1, Programming 2, Discrete
+Mathematics, Calculus 1, Calculus 2, Linear Algebra, Physics 1, Physics
+2, Islamic Culture 1, Islamic Culture 2, Arabic Writing Skills, English
+Composition, Statistics, Data Structures, Computer Organization,
+Operating Systems, Databases, Computer Networks, Web Development,
+Software Engineering, Network Security, Cryptography, Ethical Hacking,
+Digital Forensics, Secure Software Development, Risk Management,
+Graduation Project 1, Graduation Project 2
+
+High School
+Al-Noor Secondary School for Girls, Riyadh
+Science track, 97.4%
+Member of the school science club, winner of the school reading
+competition in grade 10
+
+Curriculum Vitae                                              Page 2 of 3
+
+Work Experiance
+SOC Analyst Intern
+Burj Cyber Defense, Riyadh
+03/2025 – 06/2025
+Triaged an average of 40 SIEM alerts per shift in Splunk and escalated
+confirmed incidents to Tier 2 within the 15-minute SLA
+I was helping my supervisor to look at the phishing emails that the
+employees reported
+I learned how the team writes the weekly report and I was sometimes
+writing parts of it
+Wrote 5 Splunk detection rules for brute-force logins, cutting false
+positives on that use case by 30%
+
+Security Lab Assistant
+Najd University of Technology
+2023-09 to Dec 23
+Set up 12 virtual machines for the Ethical Hacking course labs using
+VirtualBox and Kali Linux
+I was answering the students questions during the lab
+
+IT Support Trainee
+Wadi Retail Group, Riyadh
+Summer 2022
+Reset passwords and configured laptops for 25 new employees
+
+Technical Skills
+Tool            Level           Tool            Level
+Wireshark       Nmap            Advanced        Intermediate
+Splunk          Burp Suite      Intermediate    Beginner
+Metasploit      Nessus          Beginner        Intermediate
+Kali Linux      Python          Advanced        Intermediate
+
+Other Skills
+Microsoft Word, Typing (45 WPM), Internet browsing, Email, Windows XP,
+Printing and scanning
+
+Curriculum Vitae                                              Page 3 of 3
+
+Certifications
+CompTIA Security+ (CompTIA, issued May 2025)
+Security course certificate
+Networking certificate - completed
+
+Projects
+Home Network Vulnerability Assessment (2024)
+Scanned a 14-device test network with Nmap and Nessus, found 9 high
+severity findings and wrote a remediation report mapped to CVSS scores
+
+Phishing Awareness Campaign (graduation project, 2025)
+Sent simulated phishing emails to 200 volunteer students and lowered the
+click rate from 31% to 12% after two training rounds
+
+References
+References available upon request

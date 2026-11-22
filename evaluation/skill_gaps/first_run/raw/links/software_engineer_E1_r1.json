@@ -1,0 +1,139 @@
+{
+ "goal": "software_engineer",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "REST APIs",
+   "kind": "tool",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [
+    "building REST endpoints",
+    "designing web APIs"
+   ]
+  },
+  {
+   "gap": "Git",
+   "kind": "tool",
+   "concepts": [
+    "Git"
+   ],
+   "phrases": [
+    "version control systems",
+    "tracking code changes"
+   ]
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "querying relational databases",
+    "writing SQL queries"
+   ]
+  },
+  {
+   "gap": "React",
+   "kind": "tool",
+   "concepts": [
+    "Frontend Frameworks"
+   ],
+   "phrases": [
+    "building user interfaces",
+    "component-based UI development"
+   ]
+  },
+  {
+   "gap": "Node.js",
+   "kind": "tool",
+   "concepts": [
+    "Backend Development"
+   ],
+   "phrases": [
+    "server-side JavaScript",
+    "building backend services"
+   ]
+  },
+  {
+   "gap": "Java",
+   "kind": "tool",
+   "concepts": [
+    "Java"
+   ],
+   "phrases": [
+    "object-oriented programming in Java",
+    "writing Java applications"
+   ]
+  },
+  {
+   "gap": "Spring Boot",
+   "kind": "tool",
+   "concepts": [
+    "Spring Boot"
+   ],
+   "phrases": [
+    "building Java microservices",
+    "Spring framework applications"
+   ]
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": [
+    "containerizing applications",
+    "building container images"
+   ]
+  },
+  {
+   "gap": "Linux",
+   "kind": "tool",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "Linux system administration",
+    "command line fundamentals"
+   ]
+  },
+  {
+   "gap": "Microservices Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Backend Development"
+   ],
+   "phrases": [
+    "designing distributed services",
+    "service-oriented architecture patterns"
+   ]
+  },
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": [
+    "container orchestration",
+    "managing clusters"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": [
+    "writing Python scripts",
+    "Python programming fundamentals"
+   ]
+  }
+ ]
+}

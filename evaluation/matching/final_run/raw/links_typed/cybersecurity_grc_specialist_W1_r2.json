@@ -1,0 +1,71 @@
+{
+ "goal": "cybersecurity_grc_specialist",
+ "list": "W1",
+ "run": 2,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Compliance Auditing",
+   "kind": "skill",
+   "concepts": [
+    "Audit"
+   ],
+   "phrases": [],
+   "same": [
+    "Audit"
+   ],
+   "terms": [
+    "compliance audit",
+    "regulatory compliance",
+    "audit"
+   ]
+  },
+  {
+   "gap": "Report Writing",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "report writing",
+    "technical writing",
+    "audit reports"
+   ]
+  },
+  {
+   "gap": "Audit Preparation",
+   "kind": "skill",
+   "concepts": [
+    "Audit"
+   ],
+   "phrases": [],
+   "same": [
+    "Audit"
+   ],
+   "terms": [
+    "audit preparation",
+    "audit planning",
+    "audit readiness"
+   ]
+  },
+  {
+   "gap": "Stakeholder Communication",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "stakeholder communication",
+    "communication skills"
+   ]
+  },
+  {
+   "gap": "COBIT",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "COBIT",
+    "IT governance framework"
+   ]
+  }
+ ]
+}

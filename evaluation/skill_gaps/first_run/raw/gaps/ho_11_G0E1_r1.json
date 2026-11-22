@@ -1,0 +1,20 @@
+{
+ "case": "ho_11",
+ "arm": "G0E1",
+ "run": 1,
+ "gaps": [
+  "Active Directory",
+  "Network Troubleshooting",
+  "Ticketing Systems",
+  "TCP/IP",
+  "DHCP",
+  "DNS",
+  "CCNA",
+  "VPN"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

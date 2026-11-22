@@ -1,0 +1,129 @@
+{
+ "goal": "it_project_manager",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Risk Management",
+   "kind": "skill",
+   "concepts": [
+    "Risk Management"
+   ],
+   "phrases": [
+    "identifying project risks",
+    "mitigation planning",
+    "risk analysis techniques"
+   ]
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "skill",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "engaging project stakeholders",
+    "managing stakeholder expectations",
+    "communication with stakeholders"
+   ]
+  },
+  {
+   "gap": "Agile",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "agile methodology",
+    "iterative development practices",
+    "sprint planning"
+   ]
+  },
+  {
+   "gap": "PMP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "project management professional exam",
+    "pmp certification prep"
+   ]
+  },
+  {
+   "gap": "Scrum",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "scrum framework",
+    "sprint ceremonies",
+    "scrum master practices"
+   ]
+  },
+  {
+   "gap": "Jira",
+   "kind": "tool",
+   "concepts": [
+    "Jira"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Budget Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "project budgeting techniques",
+    "cost control methods",
+    "managing project finances"
+   ]
+  },
+  {
+   "gap": "Microsoft Project",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Change Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "managing organizational change",
+    "change control processes",
+    "transition planning"
+   ]
+  },
+  {
+   "gap": "Waterfall",
+   "kind": "skill",
+   "concepts": [
+    "Software Development Lifecycle"
+   ],
+   "phrases": [
+    "waterfall methodology",
+    "sequential project phases",
+    "traditional project lifecycle"
+   ]
+  },
+  {
+   "gap": "PRINCE2",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "prince2 certification prep",
+    "structured project management method"
+   ]
+  },
+  {
+   "gap": "Vendor Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "managing supplier relationships",
+    "vendor contract oversight",
+    "procurement coordination"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "goal": "software_engineer",
+ "list": "W1",
+ "run": 3,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Oracle Certified Professional: Java SE Developer",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Java SE",
+    "OCP Java",
+    "Java certification"
+   ]
+  },
+  {
+   "gap": "Mentoring",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "mentoring",
+    "coaching",
+    "guiding others"
+   ]
+  },
+  {
+   "gap": "Web Development",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "web development",
+    "frontend and backend",
+    "building websites"
+   ]
+  }
+ ]
+}

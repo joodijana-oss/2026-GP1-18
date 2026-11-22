@@ -1,0 +1,243 @@
+{
+  "id": "ho_04",
+  "careerGoalId": "data_analyst",
+  "shown": [
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "evidence": "Loaded the sheet in a Jupyter notebook",
+      "source": "project"
+    },
+    {
+      "skill": "Excel",
+      "alsoCalled": [
+        "Microsoft Excel",
+        "Spreadsheets"
+      ],
+      "evidence": "Copied 640 listings from a classifieds site into an Excel sheet by hand",
+      "source": "project"
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "I wrote SELECT statements with GROUP BY and subqueries against a sample bookstore database every week",
+      "source": "education"
+    },
+    {
+      "skill": "Pandas",
+      "alsoCalled": [
+        "Python Pandas"
+      ],
+      "evidence": "worked out averages, medians and spread by city and brand using groupby",
+      "source": "project"
+    },
+    {
+      "skill": "Data Cleaning",
+      "alsoCalled": [
+        "Data Wrangling",
+        "Data Cleansing"
+      ],
+      "evidence": "standardised the mileage and model-year columns",
+      "source": "project"
+    },
+    {
+      "skill": "Data Visualization",
+      "alsoCalled": [
+        "Data Visualisation",
+        "Charts and Graphs"
+      ],
+      "evidence": "Drew bar charts and a scatter plot of price against mileage with Matplotlib",
+      "source": "project"
+    },
+    {
+      "skill": "Statistics",
+      "alsoCalled": [
+        "Statistical Analysis",
+        "Descriptive Statistics"
+      ],
+      "evidence": "worked out averages, medians and spread by city and brand",
+      "source": "project"
+    },
+    {
+      "skill": "Regression Analysis",
+      "alsoCalled": [
+        "Linear Regression"
+      ],
+      "evidence": "Fitted a straight line of price on mileage and age",
+      "source": "project"
+    },
+    {
+      "skill": "Matplotlib",
+      "alsoCalled": [
+        "Python Plotting"
+      ],
+      "evidence": "a scatter plot of price against mileage with Matplotlib",
+      "source": "project"
+    },
+    {
+      "skill": "Jupyter Notebook",
+      "alsoCalled": [
+        "Jupyter",
+        "Notebooks"
+      ],
+      "evidence": "Loaded the sheet in a Jupyter notebook",
+      "source": "project"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Reporting",
+      "alsoCalled": [
+        "Business Reporting",
+        "Management Reports",
+        "Periodic Reports"
+      ],
+      "evidence": "report spending to the club supervisor every month",
+      "why": "A club budget report, not business reporting from data."
+    },
+    {
+      "skill": "Data Storytelling",
+      "alsoCalled": [
+        "Presenting Insights",
+        "Communicating Findings"
+      ],
+      "evidence": "explained what the slope meant in our written report",
+      "why": "One course report; no presenting of findings to decision makers."
+    },
+    {
+      "skill": "Google Data Analytics Certificate",
+      "alsoCalled": [
+        "Google Data Analytics Professional Certificate"
+      ],
+      "evidence": "Finished the first two courses of the Google Data Analytics certificate on Coursera (in progress)",
+      "why": "Not finished."
+    },
+    {
+      "skill": "Business Process Management",
+      "alsoCalled": [
+        "BPM",
+        "Process Modeling"
+      ],
+      "evidence": "Business Process Management, Discrete Mathematics",
+      "why": "Course title only."
+    },
+    {
+      "skill": "Data Quality",
+      "alsoCalled": [
+        "Data Validation",
+        "Data Accuracy Checks",
+        "Data Reconciliation"
+      ],
+      "evidence": "standardised the mileage and model-year columns",
+      "why": "Standardised two columns by hand; no validation or accuracy checks are described."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Dashboard Development",
+      "alsoCalled": [
+        "Dashboards",
+        "Dashboard Design",
+        "BI Dashboards"
+      ],
+      "why": "Drew static charts in a notebook; no dashboard.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Data Modeling",
+      "alsoCalled": [
+        "Data Modelling",
+        "Star Schema",
+        "Dimensional Modeling"
+      ],
+      "why": "Queried a ready-made sample database; did not design a model.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Microsoft Power BI Data Analyst Associate",
+      "alsoCalled": [
+        "PL-300"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Power BI",
+      "alsoCalled": [
+        "Microsoft Power BI"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Tableau",
+      "alsoCalled": [
+        "Tableau Desktop"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "ETL",
+      "alsoCalled": [
+        "Extract Transform Load",
+        "Data Pipelines"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "R",
+      "alsoCalled": [
+        "R Programming"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "KPI Tracking",
+      "alsoCalled": [
+        "KPIs",
+        "Key Performance Indicators",
+        "Performance Metrics"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Requirements Gathering",
+      "alsoCalled": [
+        "Business Requirements",
+        "Stakeholder Requirements",
+        "Requirements Elicitation"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "A/B Testing",
+      "alsoCalled": [
+        "Split Testing",
+        "Controlled Experiments",
+        "Experimentation"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "DAX",
+      "alsoCalled": [
+        "Data Analysis Expressions"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

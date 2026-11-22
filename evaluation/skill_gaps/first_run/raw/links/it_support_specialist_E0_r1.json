@@ -1,0 +1,130 @@
+{
+ "goal": "it_support_specialist",
+ "extractor": "E0",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Hardware Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "diagnosing hardware issues",
+    "repairing computer components",
+    "fixing device malfunctions"
+   ]
+  },
+  {
+   "gap": "Windows Operating System",
+   "kind": "tool",
+   "concepts": [
+    "Windows"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Networking (LAN/WAN/Wi-Fi/TCP-IP)",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals",
+    "TCP/IP"
+   ],
+   "phrases": [
+    "local and wide area networks",
+    "wireless connectivity setup",
+    "network protocols and addressing"
+   ]
+  },
+  {
+   "gap": "Active Directory",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "managing user directories",
+    "domain controller administration",
+    "group policy management"
+   ]
+  },
+  {
+   "gap": "Microsoft 365",
+   "kind": "tool",
+   "concepts": [
+    "Microsoft 365"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Ticketing Systems (ServiceNow/Remedy)",
+   "kind": "tool",
+   "concepts": [
+    "Ticketing Systems"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Printer/Peripheral Setup and Support",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "configuring peripheral devices",
+    "installing printers and scanners",
+    "device driver setup"
+   ]
+  },
+  {
+   "gap": "Routers, Switches, and Firewalls",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "configuring network devices",
+    "firewall configuration basics",
+    "switch and router setup"
+   ]
+  },
+  {
+   "gap": "User Account and Access Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "provisioning user accounts",
+    "managing access permissions",
+    "identity and access control"
+   ]
+  },
+  {
+   "gap": "IT Asset Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "tracking hardware inventory",
+    "lifecycle management of equipment",
+    "asset tagging and auditing"
+   ]
+  },
+  {
+   "gap": "Technical Documentation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "writing technical guides",
+    "creating knowledge base articles",
+    "documenting procedures and processes"
+   ]
+  },
+  {
+   "gap": "Customer Service and Communication Skills",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "effective client communication",
+    "handling customer inquiries",
+    "interpersonal communication skills"
+   ]
+  }
+ ]
+}

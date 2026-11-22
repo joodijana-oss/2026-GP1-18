@@ -1,0 +1,31 @@
+{
+ "cvStructure": [
+  {
+   "issue": "The Projects section includes a Physics II Lab Project about a transformer circuit, which is unrelated to the AI/Machine Learning target role and does not reinforce relevant technical skills.",
+   "suggestion": "Consider removing the Physics II Lab Project or replacing it with another ML-related project to keep the section focused on skills relevant to an AI/ML Engineer role."
+  }
+ ],
+ "sectionOrganization": [],
+ "keywordUsage": [
+  {
+   "issue": "Power BI is listed under Tools, but no experience or project bullet mentions using it, so an ATS or recruiter cannot verify this skill from the content.",
+   "suggestion": "Add a brief mention of how Power BI was used (for example, in the dashboard work during the internship) or remove it from the Tools list if it was not actually used."
+  },
+  {
+   "issue": "Core target keywords such as 'Machine Learning' and 'Deep Learning' are demonstrated through projects but not explicitly listed in the Skills section.",
+   "suggestion": "Add 'Machine Learning' and 'Deep Learning' as explicit skill keywords, since they are already shown through the ResNet-50 and scikit-learn work, to improve keyword matching for ML roles."
+  }
+ ],
+ "readability": [
+  {
+   "issue": "The summary is written in first person ('I enjoy...', 'I want to start...'), which is inconsistent with the more formal, achievement-focused tone used in the rest of the CV.",
+   "suggestion": "Rewrite the summary without personal pronouns, for example starting with 'Computer Science graduate with experience in...' to match the professional tone used in the Experience and Projects sections."
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "Dates are formatted inconsistently across sections: Education and most Projects show only a year, while Experience uses a full month-year range.",
+   "suggestion": "Use a consistent date format throughout, such as month and year for all entries, so Education, Experience, and Projects dates are easy for ATS systems to parse uniformly."
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "goal": "cybersecurity_grc_specialist",
+ "extractor": "E0",
+ "run": 3,
+ "postings": 20,
+ "rawNames": [
+  "Cybersecurity Risk Assessment",
+  "NCA Essential Cybersecurity Controls (ECC)",
+  "SAMA Cybersecurity Framework (CSF)",
+  "ISO 27001",
+  "Cybersecurity Governance Frameworks & Policy Development",
+  "Risk Register Management",
+  "Compliance Audits & Regulatory Assessments",
+  "Third-Party / Vendor Risk Management",
+  "KPI/KRI Development & Reporting",
+  "GRC Platforms (Archer, ServiceNow GRC, OneTrust, CyberArrow)",
+  "NIST Framework",
+  "PCI DSS"
+ ],
+ "names": [
+  "Cybersecurity Risk Assessment",
+  "NCA Essential Cybersecurity Controls (ECC)",
+  "SAMA Cybersecurity Framework (CSF)",
+  "ISO 27001",
+  "Cybersecurity Governance Frameworks & Policy Development",
+  "Risk Register Management",
+  "Compliance Audits & Regulatory Assessments",
+  "Third-Party / Vendor Risk Management",
+  "KPI/KRI Development & Reporting",
+  "GRC Platforms (Archer, ServiceNow GRC, OneTrust, CyberArrow)",
+  "NIST Framework",
+  "PCI DSS"
+ ]
+}

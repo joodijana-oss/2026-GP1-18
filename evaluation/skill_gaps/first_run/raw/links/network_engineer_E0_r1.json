@@ -1,0 +1,142 @@
+{
+ "goal": "network_engineer",
+ "extractor": "E0",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Routing and Switching",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "configuring routers and switches",
+    "static and dynamic routing",
+    "switching protocols"
+   ]
+  },
+  {
+   "gap": "LAN/WAN",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "local and wide area networks",
+    "network topologies",
+    "connecting remote sites"
+   ]
+  },
+  {
+   "gap": "Cisco Networking",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring Cisco devices",
+    "Cisco IOS",
+    "Cisco routers and switches"
+   ]
+  },
+  {
+   "gap": "Firewalls (Palo Alto/Fortinet)",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring firewall rules",
+    "perimeter security devices",
+    "traffic filtering appliances"
+   ]
+  },
+  {
+   "gap": "VPN",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "secure remote access",
+    "encrypted tunnels",
+    "site to site connections"
+   ]
+  },
+  {
+   "gap": "Network Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Troubleshooting"
+   ],
+   "phrases": [
+    "diagnosing network issues",
+    "resolving connectivity problems",
+    "network fault isolation"
+   ]
+  },
+  {
+   "gap": "CCNA/CCNP Certification",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "Cisco certified network associate",
+    "Cisco certified professional exam prep"
+   ]
+  },
+  {
+   "gap": "VLAN",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "virtual LAN segmentation",
+    "configuring VLANs",
+    "network segmentation"
+   ]
+  },
+  {
+   "gap": "Network Monitoring and Performance Management",
+   "kind": "skill",
+   "concepts": [
+    "Performance Tuning"
+   ],
+   "phrases": [
+    "monitoring network health",
+    "performance metrics tracking",
+    "bandwidth analysis"
+   ]
+  },
+  {
+   "gap": "Network Security",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "securing network infrastructure",
+    "access control lists",
+    "intrusion prevention"
+   ]
+  },
+  {
+   "gap": "TCP/IP",
+   "kind": "skill",
+   "concepts": [
+    "TCP/IP"
+   ],
+   "phrases": [
+    "IP addressing and subnetting",
+    "protocol stack fundamentals",
+    "packet transmission"
+   ]
+  },
+  {
+   "gap": "Network Documentation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "documenting network topology",
+    "network diagrams",
+    "maintaining technical records"
+   ]
+  }
+ ]
+}

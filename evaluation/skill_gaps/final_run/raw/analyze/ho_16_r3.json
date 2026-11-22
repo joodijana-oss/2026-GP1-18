@@ -1,0 +1,93 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Owns critical booking and payments services in production",
+   "Designed and built a versioned public API handling about 2 million calls a month",
+   "Solved a double-booking concurrency issue using database transactions and row locking",
+   "Improved performance significantly by rewriting slow queries and adding indexes (1.9s to 240ms)",
+   "Decoupled notifications into a separate service to improve checkout reliability",
+   "Integrated local payment gateways (mada, Apple Pay) including refunds and reconciliation",
+   "Strong focus on testing, writing over 300 automated tests around payments",
+   "Participates in code reviews and created a team review checklist",
+   "Set up CI/CD pipeline with Docker and zero-downtime deployment",
+   "Experience with on-call rotation and mentoring a co-op student"
+  ],
+  "currentSkills": [
+   "Python",
+   "Django",
+   "PostgreSQL",
+   "Docker",
+   "Git",
+   "Redis",
+   "REST API Design",
+   "OpenAPI",
+   "SQL",
+   "Database Transactions",
+   "Concurrency Control",
+   "Performance Optimization",
+   "Message Queues",
+   "Payment Gateway Integration",
+   "Automated Testing",
+   "Code Review",
+   "CI/CD",
+   "Linux Server Administration"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "Majmaah University",
+    "year": "2020 – 2024"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Booking and Payments Platform",
+    "description": "Owned backend services for booking and payments using Python (Django) and PostgreSQL; built a public API for searching, holding, and paying for slots, used by mobile apps and partner sites, handling about 2 million calls a month."
+   },
+   {
+    "name": "Concurrency Fix for Slot Booking",
+    "description": "Prevented double-selling of the same slot under load by moving the hold step into a single database transaction with a row lock."
+   },
+   {
+    "name": "Query Performance Optimization",
+    "description": "Rewrote the three slowest queries and added indexes, reducing slot search time from 1.9s to 240ms."
+   },
+   {
+    "name": "Notification Service Extraction",
+    "description": "Extracted SMS, email, and push notifications into a separate service using a message queue to prevent slow providers from blocking checkout."
+   },
+   {
+    "name": "Payment Gateway Integration",
+    "description": "Connected local payment gateway supporting mada cards and Apple Pay, including refunds and a nightly reconciliation job."
+   },
+   {
+    "name": "Automated Testing Framework",
+    "description": "Wrote more than 300 automated tests around payments as part of a required pull request review process."
+   },
+   {
+    "name": "CI/CD Pipeline Setup",
+    "description": "Set up a delivery pipeline where each merge is built into a Docker image and deployed to two rented Ubuntu servers with no downtime."
+   },
+   {
+    "name": "Meeting Room Booking Page",
+    "description": "Built an internal page for booking meeting rooms during summer internship."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Backend Developer",
+    "organization": "A company that makes booking software for football pitches and padel courts, Riyadh",
+    "duration": "09/2024 – present",
+    "description": "Owns booking and payments services in Python (Django) and PostgreSQL. Designed and built a public API used by mobile apps and partner sites to search, hold, and pay for slots, handling about 2 million calls a month. Prevented double-booking using database transactions with row locks. Improved slot search performance from 1.9s to 240ms by rewriting queries and adding indexes. Extracted notifications into a separate message-queue-based service. Integrated mada and Apple Pay payment gateways, including refunds and nightly reconciliation. Wrote over 300 automated tests for payments; reviews about ten pull requests a week and authored the team's review checklist. Set up CI/CD pipeline with Docker for zero-downtime deployment to two Ubuntu servers. On call one week in three; mentored a co-op student for six months in 2026."
+   },
+   {
+    "title": "Summer trainee",
+    "organization": "IT department of a cement company, Riyadh",
+    "duration": "Jun 2023 - Aug 2023",
+    "description": "Built an internal page for booking meeting rooms."
+   }
+  ]
+ }
+}

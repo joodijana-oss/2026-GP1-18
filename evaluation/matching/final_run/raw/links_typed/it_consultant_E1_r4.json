@@ -1,0 +1,170 @@
+{
+ "goal": "it_consultant",
+ "list": "E1",
+ "run": 4,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [],
+   "same": [
+    "Databases and SQL"
+   ],
+   "terms": [
+    "SQL",
+    "queries",
+    "SELECT statements"
+   ]
+  },
+  {
+   "gap": "PL/SQL",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "PL/SQL",
+    "Oracle procedural SQL",
+    "stored procedures"
+   ]
+  },
+  {
+   "gap": "Digital Transformation",
+   "kind": "skill",
+   "concepts": [
+    "Digital Transformation"
+   ],
+   "phrases": [],
+   "same": [
+    "Digital Transformation"
+   ],
+   "terms": [
+    "digital transformation",
+    "digitalization"
+   ]
+  },
+  {
+   "gap": "Oracle E-Business Suite",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Oracle EBS",
+    "E-Business Suite",
+    "Oracle ERP"
+   ]
+  },
+  {
+   "gap": "Java",
+   "kind": "tool",
+   "concepts": [
+    "Java"
+   ],
+   "phrases": [],
+   "same": [
+    "Java"
+   ],
+   "terms": [
+    "Java",
+    "Java programming"
+   ]
+  },
+  {
+   "gap": "REST",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [],
+   "same": [
+    "APIs"
+   ],
+   "terms": [
+    "REST API",
+    "RESTful",
+    "HTTP methods"
+   ]
+  },
+  {
+   "gap": "SOAP Web Services",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "SOAP",
+    "Web Services",
+    "XML messaging",
+    "WSDL"
+   ]
+  },
+  {
+   "gap": "BI Publisher",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "BI Publisher",
+    "Oracle BI Publisher",
+    "report templates"
+   ]
+  },
+  {
+   "gap": "Business Process Automation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "process automation",
+    "workflow automation",
+    "BPA"
+   ]
+  },
+  {
+   "gap": "Technical Documentation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "technical writing",
+    "documentation",
+    "specifications"
+   ]
+  },
+  {
+   "gap": "Cloud Computing",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [],
+   "same": [
+    "Cloud Computing"
+   ],
+   "terms": [
+    "cloud computing",
+    "IaaS",
+    "SaaS",
+    "PaaS"
+   ]
+  },
+  {
+   "gap": "Cybersecurity",
+   "kind": "skill",
+   "concepts": [
+    "Information Security"
+   ],
+   "phrases": [],
+   "same": [
+    "Information Security"
+   ],
+   "terms": [
+    "cybersecurity",
+    "security fundamentals",
+    "cyber threats"
+   ]
+  }
+ ]
+}

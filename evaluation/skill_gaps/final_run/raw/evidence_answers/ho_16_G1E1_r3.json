@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Git",
+  "REST API Design",
+  "SQL",
+  "React",
+  "Node.js",
+  "Java",
+  "Docker",
+  "Spring Boot",
+  "Python",
+  "Linux",
+  "Kubernetes",
+  "C++"
+ ],
+ "answer": [
+  {
+   "skill": "Git",
+   "status": "shown",
+   "quote": "Git"
+  },
+  {
+   "skill": "REST API Design",
+   "status": "shown",
+   "quote": "public interface that the mobile apps and partner sites call"
+  },
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "Rewrote the three slowest queries and added indexes"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Java",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "shown",
+   "quote": "each merge is built into a Docker image"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "written in Python (Django) on PostgreSQL"
+  },
+  {
+   "skill": "Linux",
+   "status": "shown",
+   "quote": "rolled out to our two rented Ubuntu servers"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

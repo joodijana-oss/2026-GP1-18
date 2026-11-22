@@ -1,0 +1,34 @@
+{
+ "goal": "data_analyst",
+ "extractor": "E1",
+ "run": 1,
+ "postings": 5,
+ "rawNames": [
+  "SQL",
+  "Power BI",
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Tableau",
+  "R",
+  "Machine Learning",
+  "Data Analysis",
+  "Pandas",
+  "NumPy",
+  "Stakeholder Management"
+ ],
+ "names": [
+  "SQL",
+  "Power BI",
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Tableau",
+  "R",
+  "Machine Learning",
+  "Data Analysis",
+  "Pandas",
+  "NumPy",
+  "Stakeholder Management"
+ ]
+}

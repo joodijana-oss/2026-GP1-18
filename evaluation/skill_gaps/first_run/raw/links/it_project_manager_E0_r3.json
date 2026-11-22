@@ -1,0 +1,132 @@
+{
+ "goal": "it_project_manager",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Project Risk Management",
+   "kind": "skill",
+   "concepts": [
+    "Risk Management"
+   ],
+   "phrases": [
+    "identifying project risks",
+    "risk mitigation planning",
+    "managing project uncertainty"
+   ]
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "engaging project stakeholders",
+    "managing stakeholder expectations"
+   ]
+  },
+  {
+   "gap": "Agile/Scrum Methodologies",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "scrum framework basics",
+    "sprint planning and execution",
+    "iterative project delivery"
+   ]
+  },
+  {
+   "gap": "Project Planning & Scheduling",
+   "kind": "skill",
+   "concepts": [
+    "IT Project Management"
+   ],
+   "phrases": [
+    "developing project schedules",
+    "work breakdown structures",
+    "timeline and milestone planning"
+   ]
+  },
+  {
+   "gap": "Budget & Resource Management",
+   "kind": "skill",
+   "concepts": [
+    "IT Project Management"
+   ],
+   "phrases": [
+    "project budgeting techniques",
+    "resource allocation planning",
+    "cost control methods"
+   ]
+  },
+  {
+   "gap": "PMP Certification",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "PMP exam preparation",
+    "project management professional credential"
+   ]
+  },
+  {
+   "gap": "Project Status Reporting & Executive Dashboards",
+   "kind": "skill",
+   "concepts": [
+    "KPIs"
+   ],
+   "phrases": [
+    "executive status reports",
+    "building project dashboards",
+    "communicating project progress"
+   ]
+  },
+  {
+   "gap": "Change Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "managing organizational change",
+    "change adoption strategies",
+    "transition planning"
+   ]
+  },
+  {
+   "gap": "Cloud Platforms (Azure, AWS, GCP)",
+   "kind": "tool",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "working with cloud providers",
+    "multi-cloud environments"
+   ]
+  },
+  {
+   "gap": "Vendor & Third-Party Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "managing supplier relationships",
+    "vendor contract oversight",
+    "third-party coordination"
+   ]
+  },
+  {
+   "gap": "Jira",
+   "kind": "tool",
+   "concepts": [
+    "Jira"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Microsoft Project",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  }
+ ]
+}

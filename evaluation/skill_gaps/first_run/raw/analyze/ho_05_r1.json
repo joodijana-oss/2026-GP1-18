@@ -1,0 +1,67 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Experience shipping production code in a fintech payments environment",
+   "Strong testing discipline, raising test coverage from 54% to 81%",
+   "Able to debug complex concurrency issues (race condition traced and fixed)",
+   "Experience with containerization and multi-service orchestration using Docker Compose",
+   "Performance optimization skills, improving query time from 9s to 0.4s",
+   "Active code reviewer and collaborator, with consistent pull request activity",
+   "Comfortable working in agile sprint-based teams with ticket estimation",
+   "Applies object-oriented design patterns in real projects (strategy pattern, inheritance, interfaces)",
+   "Consistent academic performance (Dean's list, 4 semesters)"
+  ],
+  "currentSkills": [
+   "Java",
+   "JavaScript",
+   "C++",
+   "Spring Boot",
+   "JUnit",
+   "Mockito",
+   "Unit Testing",
+   "SQL",
+   "PostgreSQL",
+   "Docker",
+   "Git",
+   "Linux",
+   "React",
+   "Jira",
+   "Agile/Scrum",
+   "Debugging",
+   "Multithreading",
+   "Database Indexing",
+   "Object-Oriented Design",
+   "Design Patterns",
+   "Data Structures",
+   "Hash Tables",
+   "Tries"
+  ],
+  "education": [
+   {
+    "degree": "BSc",
+    "major": "Software Engineering",
+    "institution": "Prince Mohammad Bin Fahd University, Al Khobar",
+    "year": "Sept 2021 – May 2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Maw'idi - clinic appointment system",
+    "description": "Designed the class model (patients, doctors, slots, bookings) using inheritance and interfaces, and applied the strategy pattern for different reminder channels. Built the booking screens in React and connected them to a custom backend. Developed as part of a team of 5 for the graduation project."
+   },
+   {
+    "name": "Library kiosk",
+    "description": "Implemented a hash table and a trie in Java for instant title search as part of a Data Structures course."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Software Engineer (Co-op)",
+    "organization": "A Khobar-based fintech start-up",
+    "duration": "01/2025 – 07/2025",
+    "description": "Added three endpoints to the refunds service (Java, Spring Boot) enabling merchants to request partial refunds, serving about 2,000 calls a day. Wrote JUnit and Mockito tests, raising coverage of the refunds module from 54% to 81%. Opened 46 pull requests and performed regular code reviews with teammates. Traced and fixed a double-refund fault caused by a race condition using logs, breakpoints, and a database-level lock. Packaged the service into a container image and ran it with PostgreSQL via a compose file for easy onboarding. Worked in two-week sprints with daily stand-ups, estimating own tickets in Jira. Rewrote a slow settlement report query and added an index, reducing runtime from 9s to 0.4s."
+   }
+  ]
+ }
+}

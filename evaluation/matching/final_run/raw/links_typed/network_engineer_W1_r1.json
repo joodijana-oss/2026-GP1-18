@@ -1,0 +1,69 @@
+{
+ "goal": "network_engineer",
+ "list": "W1",
+ "run": 1,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Cisco CCNA",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "CCNA",
+    "Cisco certification",
+    "Cisco routing switching"
+   ]
+  },
+  {
+   "gap": "Network Installation",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [],
+   "terms": [
+    "network installation",
+    "cabling",
+    "network setup",
+    "physical network"
+   ]
+  },
+  {
+   "gap": "Cisco CCNP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "CCNP",
+    "Cisco certification",
+    "advanced routing switching"
+   ]
+  },
+  {
+   "gap": "Network Access Control",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [],
+   "terms": [
+    "NAC",
+    "access control",
+    "network authentication",
+    "802.1X"
+   ]
+  },
+  {
+   "gap": "Fortinet NSE 4",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "NSE 4",
+    "Fortinet certification",
+    "FortiGate"
+   ]
+  }
+ ]
+}

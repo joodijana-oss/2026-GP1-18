@@ -1,0 +1,34 @@
+{
+ "goal": "cybersecurity_grc_specialist",
+ "extractor": "E1",
+ "run": 3,
+ "postings": 20,
+ "rawNames": [
+  "Cybersecurity Risk Assessment",
+  "ISO 27001",
+  "NCA Essential Cybersecurity Controls",
+  "SAMA Cybersecurity Framework",
+  "Risk Register Management",
+  "CISSP",
+  "CISA",
+  "CISM",
+  "NIST Framework",
+  "PCI DSS",
+  "CRISC",
+  "Audit Coordination"
+ ],
+ "names": [
+  "Cybersecurity Risk Assessment",
+  "ISO 27001",
+  "NCA Essential Cybersecurity Controls",
+  "SAMA Cybersecurity Framework",
+  "Risk Register Management",
+  "CISSP",
+  "CISA",
+  "CISM",
+  "NIST Framework",
+  "PCI DSS",
+  "CRISC",
+  "Audit Coordination"
+ ]
+}

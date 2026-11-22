@@ -1,0 +1,125 @@
+{
+ "label": "dev_flawed_06",
+ "cv": "dev_flawed",
+ "version": "old",
+ "run": 3,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:27:36.258980",
+ "finishedAt": "2026-11-22T02:28:13.102691",
+ "seconds": 36.843,
+ "inputTokens": 2177,
+ "outputTokens": 3877,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "There is no dedicated Skills section listing programming languages, frameworks, and tools, even though many relevant technologies are mentioned inside experience and project descriptions.",
+    "suggestion": "Add a 'Skills' section that lists Python, TensorFlow, PyTorch, scikit-learn, SQL, Pandas, Power BI, and Git so ATS systems can easily match these keywords to the target role."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The experience entries are ordered from oldest to newest (Student Lab Assistant, then Data Science Trainee, then Machine Learning Intern) instead of most recent first.",
+    "suggestion": "Reorder the experience section so the Machine Learning Intern role (2025) appears first, followed by Data Science Trainee, then Student Lab Assistant."
+   },
+   {
+    "issue": "The experience section heading is spelled 'EXPERIANCE' instead of 'EXPERIENCE'.",
+    "suggestion": "Correct the heading to 'EXPERIENCE' so ATS parsers reliably recognize the section."
+   },
+   {
+    "issue": "The projects section is labeled 'THINGS I BUILT', which is an informal, non-standard heading.",
+    "suggestion": "Rename this section to 'PROJECTS' so ATS systems and recruiters can clearly identify it as a standard CV section."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "Tool and technology names are written inconsistently (e.g., 'PYTHON', 'Tensorflow', 'sk-learn', 'pytorch', 'power bi', 'GIT', 'jupyter'), which can reduce keyword matching accuracy in ATS systems.",
+    "suggestion": "Use the official spelling and capitalization consistently throughout the CV, such as Python, TensorFlow, scikit-learn, PyTorch, Power BI, Git, and Jupyter."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The summary is vague and does not mention specific skills or technologies, stating only that the applicant 'likes working with data and smart systems'.",
+    "suggestion": "Rewrite the summary to mention concrete skills such as Python, machine learning, and the specific project experience that supports the AI/ML Engineer goal."
+   },
+   {
+    "issue": "The graduation project description is written as a casual first-person narrative ('I made a phone app that looks at a picture of dates...') rather than a concise, result-focused statement.",
+    "suggestion": "Rewrite it as an achievement-oriented statement, for example: 'Developed a mobile application that classifies date fruit varieties from images using Python and TensorFlow, trained on a dataset of 4,000 images.'"
+   },
+   {
+    "issue": "The Student Lab Assistant bullets repeat the weak phrase 'Responsible for' and do not start with strong action verbs.",
+    "suggestion": "Start each bullet with an action verb, for example 'Assisted first-year students with Python coursework' or 'Managed the evening computer lab schedule.'"
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are formatted inconsistently across sections, mixing MM/YYYY, 'Month YYYY', and year-only formats (e.g., '09/2023 - 05/2024', 'March 2025 - June 2025', '2025', '11/2024').",
+    "suggestion": "Use a single consistent date format throughout, such as 'Mon YYYY - Mon YYYY', for all education, experience, and project entries."
+   },
+   {
+    "issue": "The Machine Learning Intern role is listed as '2025 - present' even though the text states the internship finished in September 2025, which contradicts an ongoing status.",
+    "suggestion": "Update the dates to reflect the actual completed internship period, such as 'Jun 2025 - Sep 2025', instead of using 'present'."
+   },
+   {
+    "issue": "The email address is written as 'nora.alharbi (at) example dot com' instead of a standard email format.",
+    "suggestion": "Write the email in standard format, such as 'nora.alharbi@example.com', so ATS systems can correctly extract contact information."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "There is no dedicated Skills section listing programming languages, frameworks, and tools, even though many relevant technologies are mentioned inside experience and project descriptions.",
+    "suggestion": "Add a 'Skills' section that lists Python, TensorFlow, PyTorch, scikit-learn, SQL, Pandas, Power BI, and Git so ATS systems can easily match these keywords to the target role."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The experience entries are ordered from oldest to newest (Student Lab Assistant, then Data Science Trainee, then Machine Learning Intern) instead of most recent first.",
+    "suggestion": "Reorder the experience section so the Machine Learning Intern role (2025) appears first, followed by Data Science Trainee, then Student Lab Assistant."
+   },
+   {
+    "issue": "The experience section heading is spelled 'EXPERIANCE' instead of 'EXPERIENCE'.",
+    "suggestion": "Correct the heading to 'EXPERIENCE' so ATS parsers reliably recognize the section."
+   },
+   {
+    "issue": "The projects section is labeled 'THINGS I BUILT', which is an informal, non-standard heading.",
+    "suggestion": "Rename this section to 'PROJECTS' so ATS systems and recruiters can clearly identify it as a standard CV section."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "Tool and technology names are written inconsistently (e.g., 'PYTHON', 'Tensorflow', 'sk-learn', 'pytorch', 'power bi', 'GIT', 'jupyter'), which can reduce keyword matching accuracy in ATS systems.",
+    "suggestion": "Use the official spelling and capitalization consistently throughout the CV, such as Python, TensorFlow, scikit-learn, PyTorch, Power BI, Git, and Jupyter."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The summary is vague and does not mention specific skills or technologies, stating only that the applicant 'likes working with data and smart systems'.",
+    "suggestion": "Rewrite the summary to mention concrete skills such as Python, machine learning, and the specific project experience that supports the AI/ML Engineer goal."
+   },
+   {
+    "issue": "The graduation project description is written as a casual first-person narrative ('I made a phone app that looks at a picture of dates...') rather than a concise, result-focused statement.",
+    "suggestion": "Rewrite it as an achievement-oriented statement, for example: 'Developed a mobile application that classifies date fruit varieties from images using Python and TensorFlow, trained on a dataset of 4,000 images.'"
+   },
+   {
+    "issue": "The Student Lab Assistant bullets repeat the weak phrase 'Responsible for' and do not start with strong action verbs.",
+    "suggestion": "Start each bullet with an action verb, for example 'Assisted first-year students with Python coursework' or 'Managed the evening computer lab schedule.'"
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are formatted inconsistently across sections, mixing MM/YYYY, 'Month YYYY', and year-only formats (e.g., '09/2023 - 05/2024', 'March 2025 - June 2025', '2025', '11/2024').",
+    "suggestion": "Use a single consistent date format throughout, such as 'Mon YYYY - Mon YYYY', for all education, experience, and project entries."
+   },
+   {
+    "issue": "The Machine Learning Intern role is listed as '2025 - present' even though the text states the internship finished in September 2025, which contradicts an ongoing status.",
+    "suggestion": "Update the dates to reflect the actual completed internship period, such as 'Jun 2025 - Sep 2025', instead of using 'present'."
+   },
+   {
+    "issue": "The email address is written as 'nora.alharbi (at) example dot com' instead of a standard email format.",
+    "suggestion": "Write the email in standard format, such as 'nora.alharbi@example.com', so ATS systems can correctly extract contact information."
+   }
+  ]
+ }
+}

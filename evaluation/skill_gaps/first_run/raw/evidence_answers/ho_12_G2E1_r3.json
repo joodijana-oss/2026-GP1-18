@@ -1,0 +1,54 @@
+{
+ "targets": [
+  "Risk Register Management",
+  "CISSP",
+  "CISA",
+  "CISM",
+  "NIST Framework",
+  "PCI DSS",
+  "CRISC",
+  "Audit Coordination"
+ ],
+ "answer": [
+  {
+   "skill": "Risk Register Management",
+   "status": "partly",
+   "quote": "scored a fictional clinic's assets and threats for likelihood and impact on a 5x5 matrix"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CISA",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CISM",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "NIST Framework",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "PCI DSS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CRISC",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Audit Coordination",
+   "status": "shown",
+   "quote": "Shadowed internal audit during a two-day review of privileged accounts"
+  }
+ ]
+}

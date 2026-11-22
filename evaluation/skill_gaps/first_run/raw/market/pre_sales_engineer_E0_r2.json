@@ -1,0 +1,34 @@
+{
+ "goal": "pre_sales_engineer",
+ "extractor": "E0",
+ "run": 2,
+ "postings": 20,
+ "rawNames": [
+  "Technical Proposal Writing",
+  "RFP/RFQ/RFI Response Management",
+  "Solution Architecture Design",
+  "BOQ/BOM Preparation",
+  "Product Demonstrations & Proof of Concept (POC)",
+  "Customer Requirements Analysis",
+  "Presentation Skills",
+  "Vendor Coordination",
+  "Technical Presentations to C-level Stakeholders",
+  "Cloud Platforms (AWS/Azure/GCP)",
+  "Networking & Security Solutions",
+  "Cross-functional Collaboration with Sales and Technical Teams"
+ ],
+ "names": [
+  "Technical Proposal Writing",
+  "RFP/RFQ/RFI Response Management",
+  "Solution Architecture Design",
+  "BOQ/BOM Preparation",
+  "Product Demonstrations & Proof of Concept (POC)",
+  "Customer Requirements Analysis",
+  "Presentation Skills",
+  "Vendor Coordination",
+  "Technical Presentations to C-level Stakeholders",
+  "Cloud Platforms (AWS/Azure/GCP)",
+  "Networking & Security Solutions",
+  "Cross-functional Collaboration with Sales and Technical Teams"
+ ]
+}

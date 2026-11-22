@@ -1,0 +1,58 @@
+Lama Al-Shehri
+Jeddah, Saudi Arabia | +966 50 010 7788 | lama.alshehri@example.com
+linkedin.com/in/lama-alshehri
+
+Summary
+Data Analyst with one year of experience turning sales and operations
+data into dashboards and recommendations using SQL, Python and Power BI.
+Bachelor's degree in Information Systems.
+
+Experience
+Junior Data Analyst
+Sahel Retail Company, Jeddah
+Sep 2025 - Present
+Built 4 Power BI dashboards tracking weekly sales across 38 stores, now
+used by 12 regional managers
+Wrote SQL queries on a 6-million-row transactions table that cut the
+monthly sales report preparation time from 2 days to 3 hours
+Analyzed promotion results with Python (pandas) and recommended dropping
+2 low-margin offers, improving campaign margin by 4%
+Worked on data cleaning tasks for the team
+
+Data Analyst Intern (Co-op)
+Bahr Shipping Services, Jeddah
+Jan 2025 - Jun 2025
+Cleaned and merged 3 years of shipment records in Excel and Python,
+removing 8% duplicate entries
+Created a delay analysis report that identified the 5 routes causing 60%
+of late deliveries
+Presented findings to the operations manager; 2 of 3 recommendations
+were adopted
+
+Education
+Bachelor of Science in Information Systems
+Red Sea University, Jeddah
+Sep 2021 - Jun 2025
+GPA: 4.71 / 5.00
+
+Projects
+Riyadh Housing Prices Analysis (2024)
+Collected 9,000 property listings, cleaned them with pandas and built a
+regression model in scikit-learn with R-squared of 0.81
+Published an interactive Tableau dashboard of prices by district
+
+Student Attendance Dashboard (graduation project, 2025)
+Designed a star schema in PostgreSQL and a Power BI report used by 3
+departments to monitor absence rates
+
+Skills
+SQL (PostgreSQL, SQL Server), Python (pandas, NumPy, scikit-learn),
+Power BI (DAX), Tableau, Excel (PivotTables, Power Query), Statistics,
+Data Cleaning, Data Visualization
+
+Certifications
+Microsoft Certified: Power BI Data Analyst Associate (Microsoft, 2025)
+Google Data Analytics Professional Certificate (Coursera, 2024)
+
+Languages
+Arabic (native), English (fluent)

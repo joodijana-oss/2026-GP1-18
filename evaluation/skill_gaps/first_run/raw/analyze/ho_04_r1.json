@@ -1,0 +1,57 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Maintains a strong GPA (3.9/5) while pursuing Information Systems studies",
+   "Hands-on experience writing SQL queries with GROUP BY and subqueries in database coursework",
+   "Completed a statistics project involving data collection, cleaning, and analysis of 640 real listings",
+   "Able to create data visualizations (bar charts, scatter plots) to support analytical findings",
+   "Applied regression analysis (linear fit) and interpreted results in a written report, earning a grade of A",
+   "Proactively pursuing additional learning through the Google Data Analytics certificate",
+   "Demonstrates responsibility and financial tracking skills as club treasurer",
+   "Shows initiative in exploring the data analysis field by attending a hackathon as a visitor"
+  ],
+  "currentSkills": [
+   "Python",
+   "SQL",
+   "Database Querying",
+   "Statistics",
+   "Data Analysis",
+   "Data Cleaning",
+   "Excel",
+   "Jupyter Notebook",
+   "Matplotlib",
+   "Data Visualization",
+   "Linear Regression",
+   "Budget Management"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Systems",
+    "institution": "King Khalid University",
+    "year": "2024 - present (expected graduation 2028)"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "Google Data Analytics (first two courses completed, in progress)",
+    "issuer": "Coursera",
+    "year": ""
+   }
+  ],
+  "projects": [
+   {
+    "name": "Used-car prices in the Southern Region",
+    "description": "Probability and Statistics course project (2026, with one classmate) involving manual collection of 640 car listings from a classifieds site into Excel, standardizing mileage and model-year data, analyzing averages, medians, and spread by city and brand using groupby in a Jupyter notebook, creating bar charts and a scatter plot with Matplotlib to compare prices between Abha and Khamis Mushait, and fitting a linear regression of price on mileage and age with interpretation in a written report (grade: A)."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Treasurer",
+    "organization": "College student club",
+    "duration": "",
+    "description": "Keeps the budget sheet and reports spending to the club supervisor every month."
+   }
+  ]
+ }
+}

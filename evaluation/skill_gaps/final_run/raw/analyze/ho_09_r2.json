@@ -1,0 +1,53 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Built an image classification pipeline covering data collection, cleaning, class balancing, transfer learning, hyperparameter tuning, and evaluation",
+   "Evaluated models rigorously using held-out farm data and per-class precision/recall with confusion matrices instead of relying on a single accuracy metric",
+   "Optimized a deep learning model for on-device, offline inference on mid-range Android phones",
+   "Deployed a working application tested by real end users (eleven farmers over a month)",
+   "Applied and compared multiple machine learning algorithms (linear regression, random forest, gradient boosting) on a real-world dataset",
+   "Achieved strong academic performance with First Class Honours and an A+ on graduation project",
+   "Recognized externally for project work (2nd prize in university research day computing track)",
+   "Demonstrated teaching and community engagement through volunteering"
+  ],
+  "currentSkills": [
+   "Python",
+   "PyTorch",
+   "scikit-learn",
+   "NumPy",
+   "Git",
+   "Machine Learning",
+   "Transfer Learning",
+   "Image Processing",
+   "Data Cleaning",
+   "Data Augmentation",
+   "Model Evaluation",
+   "Hyperparameter Tuning",
+   "Model Deployment",
+   "Regression",
+   "Random Forest",
+   "Gradient Boosting",
+   "Statistics"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "King Khalid University, Abha",
+    "year": "Sep 2022 - 06/2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Asir Leaf",
+    "description": "Collected and labelled 6,400 coffee-plant leaf photos with two farmers' cooperatives and an agronomist; cleaned data by removing blurred shots and balanced rare disease classes via augmentation (rotating, flipping, cropping); used transfer learning in PyTorch by retraining the last layers of a pretrained network; evaluated on a held-out farm's photos never seen during training, reporting per-disease precision and recall with a confusion matrix; tuned 24 combinations of learning rate, batch size and frozen layers based on validation performance; compressed the model for under one-second inference on a mid-range offline Android phone; deployed it in an app used by eleven farmers for a month; achieved 93% correct classification across five disease classes."
+   },
+   {
+    "name": "Used-car prices",
+    "description": "Predicted asking prices from 18,000 Saudi classified adverts by comparing linear regression, random forest, and gradient boosting models; the boosted model achieved an average error of 9%."
+   }
+  ],
+  "experience": []
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Strong academic performance with GPA 4.8/5 in Artificial Intelligence program",
+   "Implemented machine learning algorithms (k-nearest neighbours and decision tree) from scratch and compared with library versions",
+   "Hands-on research experience fine-tuning a convolutional network for image classification, achieving 91% balanced accuracy",
+   "Demonstrated awareness of class imbalance issues and applied oversampling and weighted loss to address them",
+   "Used rigorous validation methodology (5-fold grouped cross-validation by dive site) to avoid data leakage",
+   "Experience with shared GPU cluster job submission and version control for experiment tracking",
+   "Active participant in online data science competitions (Kaggle, Zindi) with demonstrated iterative learning and improvement",
+   "Applied feature engineering techniques such as lag and rolling-window columns for time series/tabular forecasting",
+   "Experience blending multiple gradient boosting models (LightGBM and CatBoost)",
+   "Fine-tuned a multilingual transformer encoder for dialect identification task",
+   "Peer teaching and mentoring experience through tutoring and leading study sessions"
+  ],
+  "currentSkills": [
+   "Python",
+   "PyTorch",
+   "Pandas",
+   "LightGBM",
+   "CatBoost",
+   "NumPy",
+   "Machine Learning",
+   "Deep Learning",
+   "Convolutional Neural Networks",
+   "Transfer Learning",
+   "Transformers",
+   "Data Analysis",
+   "Feature Engineering",
+   "Cross-Validation",
+   "Statistics",
+   "Databases",
+   "Git",
+   "Slurm",
+   "Decision Trees",
+   "k-Nearest Neighbours"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Artificial Intelligence",
+    "institution": "King Abdulaziz University, Faculty of Computing and IT",
+    "year": "expected 06/2027"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Machine Learning I course project",
+    "description": "Implemented k-nearest neighbours and a decision tree from scratch with NumPy and compared them with library versions on a public heart-disease dataset."
+   },
+   {
+    "name": "Coral bleaching image classification",
+    "description": "Fine-tuned a pretrained convolutional network to sort 18,000 reef photos into healthy, pale and bleached categories, reaching 91% balanced accuracy. Addressed class imbalance using oversampling and weighted loss, and validated using 5-fold splits grouped by dive site."
+   },
+   {
+    "name": "Tabular sales forecasting (Kaggle)",
+    "description": "Built lag and rolling-window columns from raw sales history, then blended LightGBM and CatBoost models; placed top 12% of 2,300 teams."
+   },
+   {
+    "name": "House-price regression (Kaggle)",
+    "description": "First complete competition entry; learned to fill missing values and encode categories properly instead of dropping rows."
+   },
+   {
+    "name": "Arabic dialect identification challenge (Zindi)",
+    "description": "Fine-tuned a multilingual transformer encoder on tweets from five dialects, placing 31st of 280 participants."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Summer Research Assistant",
+    "organization": "visiting student programme at a research university on the Red Sea coast",
+    "duration": "June–August 2026",
+    "description": "Supported a PhD student studying coral bleaching from underwater photos. Fine-tuned a pretrained convolutional network to sort 18,000 reef photos into healthy, pale and bleached categories, reaching 91% balanced accuracy. Addressed class imbalance using oversampling and weighted loss after the first attempt ignored the rare 'pale' class. Validated experiments with 5-fold splits grouped by dive site. Submitted training jobs to the shared GPU cluster with Slurm scripts and tracked run configurations in the lab's Git repository."
+   },
+   {
+    "title": "Tutor",
+    "organization": "First-year programming labs",
+    "duration": "",
+    "description": "Tutored first-year programming labs in Python."
+   },
+   {
+    "title": "AI Club Member",
+    "organization": "AI club, KAU",
+    "duration": "",
+    "description": "Ran four Saturday study sessions on the maths behind gradient descent."
+   }
+  ]
+ }
+}

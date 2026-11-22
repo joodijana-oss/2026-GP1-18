@@ -1,0 +1,36 @@
+{
+ "case": "ho_05",
+ "arm": "G2E1",
+ "run": 1,
+ "gaps": [
+  "Node.js",
+  "Kubernetes",
+  "Python"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "REST APIs",
+   "status": "shown"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing"
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "partly"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  },
+  {
+   "skill": "Python",
+   "status": "missing"
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "goal": "it_project_manager",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Risk Management",
+   "kind": "skill",
+   "concepts": [
+    "Risk Management"
+   ],
+   "phrases": [
+    "identifying and mitigating risks",
+    "risk mitigation strategies",
+    "managing project risks"
+   ]
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "managing stakeholder expectations",
+    "engaging project stakeholders",
+    "stakeholder communication"
+   ]
+  },
+  {
+   "gap": "Agile",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "agile methodology",
+    "iterative project delivery",
+    "agile ways of working"
+   ]
+  },
+  {
+   "gap": "PMP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "project management professional certification",
+    "pmp exam preparation"
+   ]
+  },
+  {
+   "gap": "Scrum",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "scrum framework",
+    "sprint planning and execution",
+    "scrum roles and ceremonies"
+   ]
+  },
+  {
+   "gap": "Jira",
+   "kind": "tool",
+   "concepts": [
+    "Jira"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Microsoft Project",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Waterfall",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "waterfall project methodology",
+    "sequential project phases",
+    "traditional project lifecycle"
+   ]
+  },
+  {
+   "gap": "Budget Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "project budgeting and cost control",
+    "financial planning for projects",
+    "managing project costs"
+   ]
+  },
+  {
+   "gap": "PRINCE2",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "prince2 certification",
+    "prince2 project management method"
+   ]
+  },
+  {
+   "gap": "Change Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "managing organizational change",
+    "change management frameworks",
+    "leading change initiatives"
+   ]
+  },
+  {
+   "gap": "Vendor Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "managing supplier relationships",
+    "vendor contract oversight",
+    "third-party vendor coordination"
+   ]
+  }
+ ]
+}

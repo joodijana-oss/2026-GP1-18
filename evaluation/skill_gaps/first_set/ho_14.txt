@@ -1,0 +1,35 @@
+Saad Al-Dawsari
+Dammam | saad.aldawsari@example.com | +966 50 000 0000
+
+Summary
+IT support technician with two years in an industrial contractor's site offices, where I have gradually taken over the small-network jobs. CCNA certified in 2026 and now looking for a junior network role.
+
+Experience
+IT Support Technician, an industrial services contractor, Jubail (Oct 2024 - present)
+- First point of contact for 300 users in four site offices: laptops, accounts, printers, phones.
+- Patch new desks through to the right port and assign that port to the office's voice or data segment on the Cisco Catalyst access layer.
+- When users cannot reach shared drives or the ERP, work through it from the cable to the gateway to name resolution before escalating to the head-office network team.
+- Replaced nine consumer access points with a controller-managed UniFi set, choosing channels and placement from a walk-through survey.
+- Enrol staff laptops in the remote-access client (FortiClient) and help them when the tunnel will not come up.
+- Keep the port map and rack photos for each office up to date in the team wiki.
+- Watch link and device status on the PRTG screen and raise a ticket to head office when a site uplink drops.
+- Pulled and terminated cable for a 24-desk office extension together with a contractor.
+
+Help Desk Agent (summer training), a telecom reseller, Dammam (Jun - Aug 2023)
+- Logged and answered customer calls about home internet.
+
+Home lab
+- Two second-hand Cisco 1941 routers and a 3560 switch, plus GNS3. Built a three-router OSPF topology with redistribution of static routes, filtering between VLANs and a DHCP server on the router.
+- Capture traffic on the lab links to see what the protocols actually send while neighbours form.
+
+Education
+Diploma in Computer Networks, Jubail Industrial College, 2024
+
+Certification
+CCNA (Cisco Certified Network Associate), May 2026
+
+Skills
+Cisco switches, VLANs, OSPF, Wi-Fi, Windows 10/11, Active Directory users
+
+Languages
+Arabic (native), English (good)

@@ -1,0 +1,137 @@
+{
+ "goal": "solutions_architect",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Enterprise Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "aligning business and IT structure",
+    "architecture frameworks and models",
+    "enterprise-wide technology planning"
+   ]
+  },
+  {
+   "gap": "Cloud Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing",
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing cloud-based systems",
+    "cloud infrastructure design",
+    "scalable cloud solutions"
+   ]
+  },
+  {
+   "gap": "AWS",
+   "kind": "tool",
+   "concepts": [
+    "AWS"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Azure",
+   "kind": "tool",
+   "concepts": [
+    "Azure"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Google Cloud Platform",
+   "kind": "tool",
+   "concepts": [
+    "Google Cloud"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "TOGAF",
+   "kind": "certification",
+   "concepts": [
+    "TOGAF"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "managing stakeholder expectations",
+    "engaging business stakeholders",
+    "communication with stakeholders"
+   ]
+  },
+  {
+   "gap": "Solution Design",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing technical solutions",
+    "end-to-end solution planning",
+    "system design approach"
+   ]
+  },
+  {
+   "gap": "API Design",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [
+    "designing application interfaces",
+    "building RESTful services",
+    "API development best practices"
+   ]
+  },
+  {
+   "gap": "System Integration",
+   "kind": "skill",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [
+    "connecting multiple systems",
+    "integrating software components",
+    "cross-system data flow"
+   ]
+  },
+  {
+   "gap": "Architecture Governance",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "architecture compliance standards",
+    "governance of IT architecture",
+    "architecture review processes"
+   ]
+  },
+  {
+   "gap": "DevSecOps",
+   "kind": "skill",
+   "concepts": [
+    "DevOps",
+    "Cloud Security"
+   ],
+   "phrases": [
+    "security integrated into pipelines",
+    "secure software delivery",
+    "automated security testing"
+   ]
+  }
+ ]
+}

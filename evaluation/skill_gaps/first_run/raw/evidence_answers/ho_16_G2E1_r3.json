@@ -1,0 +1,42 @@
+{
+ "targets": [
+  "React",
+  "Node.js",
+  "Spring Boot",
+  "Linux",
+  "Kubernetes",
+  "C++"
+ ],
+ "answer": [
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux",
+   "status": "partly",
+   "quote": "rolls it out to the client's server"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

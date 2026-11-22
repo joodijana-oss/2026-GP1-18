@@ -1,0 +1,52 @@
+{
+ "cvStructure": [
+  {
+   "issue": "The experience section is labeled 'My Journey So Far', which is not a standard ATS-recognized heading like 'Experience' or 'Work Experience'.",
+   "suggestion": "Rename this section to 'Experience' or 'Professional Experience' so ATS parsers correctly identify the work history."
+  },
+  {
+   "issue": "The contact information only includes an email and a GitHub link, with no phone number listed.",
+   "suggestion": "Add a phone number to the contact section so recruiters and ATS systems can easily extract a way to reach Faisal."
+  }
+ ],
+ "sectionOrganization": [
+  {
+   "issue": "The experience entries are ordered oldest to newest (Campus IT Help Desk, then Najm Logistics, then Rimal Tech), instead of most recent first.",
+   "suggestion": "Reorder the experience section so Rimal Tech (current role) appears first, followed by Najm Logistics, then Campus IT Help Desk."
+  }
+ ],
+ "keywordUsage": [
+  {
+   "issue": "The Maktabati project's tech stack lists 'java script' and 'Postgress', which are misspelled versions of 'JavaScript' and 'PostgreSQL'.",
+   "suggestion": "Correct these to the standard spellings 'JavaScript' and 'PostgreSQL' so ATS systems can match them as recognized keywords."
+  },
+  {
+   "issue": "The Campus IT Help Desk bullets ('Responsible for bugs', 'Meetings with team', 'Tickets and emails from students') contain no specific tools, technologies, or systems used.",
+   "suggestion": "If applicable, mention specific ticketing systems, software, or technical tasks handled in this role to strengthen keyword relevance."
+  }
+ ],
+ "readability": [
+  {
+   "issue": "The About Me section relies on generic phrases like 'hard-working team player' and 'gives 100%' without any specific skills or achievements.",
+   "suggestion": "Replace this with a concise summary mentioning Faisal's actual technical skills, such as his Node.js and React experience, and a measurable achievement."
+  },
+  {
+   "issue": "The Campus IT Help Desk bullets are short vague phrases ('Responsible for bugs', 'Meetings with team') without action verbs or results.",
+   "suggestion": "Rewrite these as action-verb-led bullets with specifics, for example 'Resolved student-reported bugs' or 'Responded to X tickets per week'."
+  },
+  {
+   "issue": "The Najm Logistics Solutions internship is described as one long run-on paragraph instead of concise bullet points, making it hard to scan.",
+   "suggestion": "Break this description into 3-4 bullet points starting with action verbs, similar to the format used for the Rimal Tech role."
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "The Najm Logistics Solutions internship dates are listed as 'Jun 2025 - Aug 2024', which shows the end date before the start date.",
+   "suggestion": "Correct these dates to reflect the actual chronological start and end of the internship."
+  },
+  {
+   "issue": "The experience section mixes formatting styles, with bullet points used for Campus IT Help Desk and Rimal Tech but a full paragraph used for Najm Logistics Solutions.",
+   "suggestion": "Convert the Najm Logistics Solutions description into bullet points to match the consistent format of the other entries."
+  }
+ ]
+}

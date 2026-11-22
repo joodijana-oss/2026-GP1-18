@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Kubernetes",
+  "Terraform",
+  "Docker",
+  "CI/CD Pipeline Design",
+  "Linux Administration",
+  "Ansible",
+  "Python",
+  "AWS",
+  "Azure",
+  "Prometheus",
+  "Grafana",
+  "Bash Scripting"
+ ],
+ "answer": [
+  {
+   "skill": "Kubernetes",
+   "status": "shown",
+   "quote": "Run the production cluster on EKS (3 node groups, about 120 pods)"
+  },
+  {
+   "skill": "Terraform",
+   "status": "shown",
+   "quote": "Describe all networking, databases and compute as code in Terraform modules"
+  },
+  {
+   "skill": "Docker",
+   "status": "shown",
+   "quote": "Docker"
+  },
+  {
+   "skill": "CI/CD Pipeline Design",
+   "status": "shown",
+   "quote": "Moved 14 services from manual SSH deployments to GitLab jobs that build, test and roll out every merge"
+  },
+  {
+   "skill": "Linux Administration",
+   "status": "shown",
+   "quote": "Looked after 200 customer CentOS and Ubuntu servers: disks, users, updates"
+  },
+  {
+   "skill": "Ansible",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Wrote small Python and shell tools, for example one that rotates access keys older than 60 days"
+  },
+  {
+   "skill": "AWS",
+   "status": "shown",
+   "quote": "AWS Certified Solutions Architect - Associate (2025)"
+  },
+  {
+   "skill": "Azure",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Prometheus",
+   "status": "shown",
+   "quote": "Set up dashboards and on-call paging in Grafana and Prometheus"
+  },
+  {
+   "skill": "Grafana",
+   "status": "shown",
+   "quote": "Set up dashboards and on-call paging in Grafana and Prometheus"
+  },
+  {
+   "skill": "Bash Scripting",
+   "status": "shown",
+   "quote": "Wrote small Python and shell tools, for example one that rotates access keys"
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "goal": "erp_consultant",
+ "extractor": "E0",
+ "run": 3,
+ "postings": 20,
+ "rawNames": [
+  "SAP S/4HANA",
+  "SAP Functional Modules (MM/SD/FI)",
+  "Oracle Cloud ERP / Oracle E-Business Suite",
+  "ABAP",
+  "PL/SQL",
+  "SAP Implementation (Full Lifecycle)",
+  "Microsoft Dynamics 365",
+  "Power Platform (Power Apps/Power Automate/Power BI)",
+  "Data Migration (FBDI/HDL/ADFdi)",
+  "SAP Production Planning (PP) / Quality Management (QM)",
+  "System Integration (APIs/REST/SOAP/OIC)",
+  "Business Requirements Analysis & Functional Specifications"
+ ],
+ "names": [
+  "SAP S/4HANA",
+  "SAP Functional Modules (MM/SD/FI)",
+  "Oracle Cloud ERP / Oracle E-Business Suite",
+  "ABAP",
+  "PL/SQL",
+  "SAP Implementation (Full Lifecycle)",
+  "Microsoft Dynamics 365",
+  "Power Platform (Power Apps/Power Automate/Power BI)",
+  "Data Migration (FBDI/HDL/ADFdi)",
+  "SAP Production Planning (PP) / Quality Management (QM)",
+  "System Integration (APIs/REST/SOAP/OIC)",
+  "Business Requirements Analysis & Functional Specifications"
+ ]
+}

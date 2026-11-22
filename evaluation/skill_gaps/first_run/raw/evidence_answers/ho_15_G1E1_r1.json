@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Python",
+  "PyTorch",
+  "Kubernetes",
+  "C++",
+  "TensorFlow",
+  "Linux",
+  "Docker",
+  "Terraform",
+  "Ansible",
+  "Computer Vision",
+  "Prometheus",
+  "LangChain"
+ ],
+ "answer": [
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Python • PyTorch • pandas • LightGBM"
+  },
+  {
+   "skill": "PyTorch",
+   "status": "shown",
+   "quote": "Python • PyTorch • pandas • LightGBM"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "TensorFlow",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Ansible",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Computer Vision",
+   "status": "shown",
+   "quote": "sort 18,000 reef photos into healthy, pale and bleached"
+  },
+  {
+   "skill": "Prometheus",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "LangChain",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

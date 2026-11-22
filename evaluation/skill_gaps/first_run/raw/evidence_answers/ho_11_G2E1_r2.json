@@ -1,0 +1,36 @@
+{
+ "targets": [
+  "Active Directory",
+  "Ticketing Systems",
+  "LAN Administration",
+  "TCP/IP",
+  "IT Asset Management"
+ ],
+ "answer": [
+  {
+   "skill": "Active Directory",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "LAN Administration",
+   "status": "partly",
+   "quote": "Set up home and small-office routers, extend Wi-Fi with mesh units"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "partly",
+   "quote": "sort out \"connected but no internet\" calls"
+  },
+  {
+   "skill": "IT Asset Management",
+   "status": "partly",
+   "quote": "Keep a spreadsheet of every device that comes in, with the fault, parts used"
+  }
+ ]
+}

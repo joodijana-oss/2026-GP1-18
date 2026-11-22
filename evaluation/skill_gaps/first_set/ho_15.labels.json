@@ -1,0 +1,285 @@
+{
+  "id": "ho_15",
+  "careerGoalId": "ai_ml_engineer",
+  "shown": [
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "evidence": "Tutor for first-year programming labs (Python)",
+      "source": "other"
+    },
+    {
+      "skill": "Deep Learning",
+      "alsoCalled": [
+        "Neural Networks",
+        "DL"
+      ],
+      "evidence": "Fine-tuned a pretrained convolutional network",
+      "source": "experience"
+    },
+    {
+      "skill": "Computer Vision",
+      "alsoCalled": [
+        "Image Classification",
+        "Image Processing"
+      ],
+      "evidence": "to sort 18,000 reef photos into healthy, pale and bleached, reaching 91% balanced accuracy",
+      "source": "experience"
+    },
+    {
+      "skill": "Model Evaluation",
+      "alsoCalled": [
+        "Model Validation",
+        "Cross-Validation",
+        "Evaluation Metrics"
+      ],
+      "evidence": "Checked every experiment with 5-fold splits grouped by dive site so photos from one site never sat in both training and test",
+      "source": "experience"
+    },
+    {
+      "skill": "Feature Engineering",
+      "alsoCalled": [
+        "Feature Extraction",
+        "Feature Selection"
+      ],
+      "evidence": "Built lag and rolling-window columns from the raw sales history",
+      "source": "other"
+    },
+    {
+      "skill": "Data Preprocessing",
+      "alsoCalled": [
+        "Data Preparation",
+        "Data Cleaning for ML"
+      ],
+      "evidence": "learned to fill missing values and encode categories properly instead of dropping rows",
+      "source": "other"
+    },
+    {
+      "skill": "Natural Language Processing",
+      "alsoCalled": [
+        "NLP",
+        "Text Classification",
+        "Text Mining"
+      ],
+      "evidence": "fine-tuning a multilingual transformer encoder on tweets from five dialects",
+      "source": "other"
+    },
+    {
+      "skill": "Machine Learning",
+      "alsoCalled": [
+        "ML",
+        "Supervised Learning"
+      ],
+      "evidence": "implemented k-nearest neighbours and a decision tree from scratch with NumPy",
+      "source": "education"
+    },
+    {
+      "skill": "NumPy",
+      "alsoCalled": [
+        "Numerical Python"
+      ],
+      "evidence": "from scratch with NumPy",
+      "source": "education"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ],
+      "evidence": "kept each run's configuration in the lab's Git repository",
+      "source": "experience"
+    },
+    {
+      "skill": "LightGBM",
+      "alsoCalled": [
+        "Gradient Boosting",
+        "Gradient Boosted Trees"
+      ],
+      "evidence": "then blended LightGBM and CatBoost",
+      "source": "other"
+    },
+    {
+      "skill": "PyTorch",
+      "alsoCalled": [
+        "Torch"
+      ],
+      "evidence": "PyTorch",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Pandas",
+      "alsoCalled": [
+        "Python Pandas"
+      ],
+      "evidence": "pandas",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Transfer Learning",
+      "alsoCalled": [
+        "Fine-Tuning",
+        "Pretrained Models"
+      ],
+      "evidence": "Fine-tuned a pretrained convolutional network to sort 18,000 reef photos",
+      "source": "experience"
+    },
+    {
+      "skill": "Imbalanced Data Handling",
+      "alsoCalled": [
+        "Class Imbalance",
+        "Oversampling"
+      ],
+      "evidence": "Evened out the three classes by oversampling and a weighted loss",
+      "source": "experience"
+    },
+    {
+      "skill": "Slurm",
+      "alsoCalled": [
+        "HPC Job Scheduling",
+        "GPU Cluster"
+      ],
+      "evidence": "Submitted training jobs to the shared GPU cluster with Slurm scripts",
+      "source": "experience"
+    },
+    {
+      "skill": "Forecasting",
+      "alsoCalled": [
+        "Time Series Forecasting",
+        "Demand Forecasting"
+      ],
+      "evidence": "Tabular sales forecasting (2026): top 12% of 2,300 teams",
+      "source": "other"
+    },
+    {
+      "skill": "Ensemble Methods",
+      "alsoCalled": [
+        "Model Blending",
+        "Model Ensembling"
+      ],
+      "evidence": "blended LightGBM and CatBoost",
+      "source": "other"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Statistics",
+      "alsoCalled": [
+        "Statistical Analysis",
+        "Descriptive Statistics"
+      ],
+      "evidence": "Selected courses: Probability & Statistics, Machine Learning I, Algorithms, Databases",
+      "why": "Course title only."
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "Machine Learning I, Algorithms, Databases",
+      "why": "Course title only."
+    },
+    {
+      "skill": "Scikit-learn",
+      "alsoCalled": [
+        "sklearn"
+      ],
+      "evidence": "compared them with the library versions",
+      "why": "The library is not named."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Large Language Models",
+      "alsoCalled": [
+        "LLMs",
+        "Generative AI"
+      ],
+      "why": "Fine-tuned an encoder to classify tweets; no work with generative language models.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Model Deployment",
+      "alsoCalled": [
+        "Model Serving",
+        "ML Deployment"
+      ],
+      "why": "Trains on a cluster and submits predictions; has never served a model to users.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Hyperparameter Tuning",
+      "alsoCalled": [
+        "Hyperparameter Optimization",
+        "Model Tuning",
+        "Grid Search"
+      ],
+      "why": "Trains and blends models, but no search over settings is described.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Microsoft Certified: Azure AI Engineer Associate",
+      "alsoCalled": [
+        "AI-102"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "AWS",
+      "alsoCalled": [
+        "Amazon Web Services"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Apache Spark",
+      "alsoCalled": [
+        "PySpark",
+        "Spark"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Retrieval-Augmented Generation",
+      "alsoCalled": [
+        "RAG"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "TensorFlow",
+      "alsoCalled": [
+        "Keras"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "MLOps",
+      "alsoCalled": [
+        "ML Pipelines",
+        "Model Lifecycle Management"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

@@ -1,0 +1,134 @@
+{
+ "goal": "network_engineer",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Routing and Switching",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "configuring routers and switches",
+    "packet forwarding paths",
+    "switching network traffic"
+   ]
+  },
+  {
+   "gap": "LAN/WAN",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "local and wide area networks",
+    "connecting network segments",
+    "enterprise network design"
+   ]
+  },
+  {
+   "gap": "Cisco Networking",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring Cisco devices",
+    "Cisco IOS administration"
+   ]
+  },
+  {
+   "gap": "Firewall Management (Palo Alto/FortiGate/Fortinet)",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring firewall rules",
+    "managing perimeter security devices"
+   ]
+  },
+  {
+   "gap": "VPN",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "setting up secure tunnels",
+    "remote access connectivity",
+    "encrypted network connections"
+   ]
+  },
+  {
+   "gap": "Network Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Troubleshooting"
+   ],
+   "phrases": [
+    "diagnosing network issues",
+    "resolving connectivity problems",
+    "root cause analysis of outages"
+   ]
+  },
+  {
+   "gap": "VLAN",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "segmenting network traffic",
+    "virtual LAN configuration"
+   ]
+  },
+  {
+   "gap": "Network Security",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "securing network infrastructure",
+    "protecting against network threats"
+   ]
+  },
+  {
+   "gap": "CCNA/CCNP Certification",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Network Monitoring and Performance Management",
+   "kind": "skill",
+   "concepts": [
+    "Network Automation"
+   ],
+   "phrases": [
+    "monitoring network health",
+    "tracking network performance metrics",
+    "analyzing bandwidth usage"
+   ]
+  },
+  {
+   "gap": "Network Documentation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "documenting network topology",
+    "maintaining network diagrams"
+   ]
+  },
+  {
+   "gap": "MPLS/BGP/OSPF",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "configuring dynamic routing protocols",
+    "wide area network routing",
+    "advanced routing protocols"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "goal": "erp_consultant",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "SAP S/4HANA",
+   "kind": "tool",
+   "concepts": [
+    "SAP S/4HANA"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "SAP MM",
+   "kind": "tool",
+   "concepts": [
+    "ERP Module Configuration"
+   ],
+   "phrases": [
+    "materials management module",
+    "procurement and inventory setup"
+   ]
+  },
+  {
+   "gap": "SAP FI",
+   "kind": "tool",
+   "concepts": [
+    "ERP Module Configuration"
+   ],
+   "phrases": [
+    "financial accounting module",
+    "SAP finance configuration"
+   ]
+  },
+  {
+   "gap": "SAP SD",
+   "kind": "tool",
+   "concepts": [
+    "ERP Module Configuration"
+   ],
+   "phrases": [
+    "sales and distribution module",
+    "order to cash process"
+   ]
+  },
+  {
+   "gap": "PL/SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "stored procedures and triggers",
+    "Oracle database programming"
+   ]
+  },
+  {
+   "gap": "Oracle Integration Cloud",
+   "kind": "tool",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [
+    "cloud integration platform",
+    "connecting enterprise applications"
+   ]
+  },
+  {
+   "gap": "SAP ABAP",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "SAP programming language",
+    "custom report development",
+    "enhancement and customization"
+   ]
+  },
+  {
+   "gap": "SAP QM",
+   "kind": "tool",
+   "concepts": [
+    "ERP Module Configuration"
+   ],
+   "phrases": [
+    "quality management module",
+    "inspection and quality processes"
+   ]
+  },
+  {
+   "gap": "SAP PP",
+   "kind": "tool",
+   "concepts": [
+    "ERP Module Configuration"
+   ],
+   "phrases": [
+    "production planning module",
+    "manufacturing process setup"
+   ]
+  },
+  {
+   "gap": "Power Automate",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "workflow automation tool",
+    "automating business processes",
+    "Microsoft automation platform"
+   ]
+  },
+  {
+   "gap": "SAP Basis Administration",
+   "kind": "skill",
+   "concepts": [
+    "SAP"
+   ],
+   "phrases": [
+    "SAP system administration",
+    "technical SAP landscape management"
+   ]
+  },
+  {
+   "gap": "BI Publisher",
+   "kind": "tool",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": [
+    "report generation tool",
+    "enterprise reporting output",
+    "formatted business reports"
+   ]
+  }
+ ]
+}

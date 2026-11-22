@@ -1,0 +1,19 @@
+{
+ "case": "ho_12",
+ "arm": "G0E0",
+ "run": 2,
+ "gaps": [
+  "Cybersecurity Risk Assessment",
+  "SAMA CSF",
+  "Cybersecurity Governance Frameworks",
+  "Compliance Audits",
+  "NIST",
+  "KPI/KRI Reporting",
+  "GRC Platforms"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

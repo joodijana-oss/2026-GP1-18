@@ -1,0 +1,26 @@
+{
+ "case": "ho_10",
+ "arm": "G2E1",
+ "run": 2,
+ "gaps": [
+  "Appium"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Functional Testing",
+   "status": "shown"
+  },
+  {
+   "skill": "Appium",
+   "status": "missing"
+  },
+  {
+   "skill": "Scrum",
+   "status": "partly"
+  }
+ ]
+}

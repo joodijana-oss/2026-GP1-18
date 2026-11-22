@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SQL",
+  "Power BI",
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Tableau",
+  "R",
+  "Machine Learning",
+  "Data Analysis",
+  "Pandas",
+  "NumPy",
+  "Stakeholder Management"
+ ],
+ "answer": [
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "I wrote SELECT statements with joins and grouping"
+  },
+  {
+   "skill": "Power BI",
+   "status": "partly",
+   "quote": "free 10-hour online introduction to Power BI"
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Visualization",
+   "status": "shown",
+   "quote": "drew three charts showing that the worst delays"
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Tableau",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "R",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Analysis",
+   "status": "shown",
+   "quote": "Summarised delays by hour and by route with pivot tables"
+  },
+  {
+   "skill": "Pandas",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "NumPy",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

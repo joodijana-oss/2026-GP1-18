@@ -1,0 +1,21 @@
+{
+ "case": "ho_09",
+ "arm": "G0E0",
+ "run": 3,
+ "gaps": [
+  "Deep Learning",
+  "Computer Vision",
+  "Linux",
+  "MLOps",
+  "Kubernetes",
+  "C++",
+  "LLM/Generative AI",
+  "Model Deployment & Optimization",
+  "Docker"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

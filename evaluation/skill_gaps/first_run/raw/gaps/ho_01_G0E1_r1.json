@@ -1,0 +1,20 @@
+{
+ "case": "ho_01",
+ "arm": "G0E1",
+ "run": 1,
+ "gaps": [
+  "SIEM",
+  "Penetration Testing",
+  "Incident Response",
+  "Firewall Administration",
+  "CISSP",
+  "OSCP",
+  "Metasploit",
+  "CompTIA Security+"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

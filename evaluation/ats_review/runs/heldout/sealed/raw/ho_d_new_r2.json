@@ -1,0 +1,91 @@
+{
+ "label": "ho_d_05",
+ "cv": "ho_d",
+ "version": "new",
+ "run": 2,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:02:11.357376",
+ "finishedAt": "2026-11-22T02:02:57.864868",
+ "seconds": 46.507,
+ "inputTokens": 3994,
+ "outputTokens": 4759,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "Your CV has no Skills or Technical Skills section, even though you use many tools and platforms throughout Experience and Projects (AWS, Kubernetes, Terraform, GitHub Actions, Prometheus, Grafana, Ansible, Helm).",
+    "suggestion": "Add a Skills section near the top that lists these tools explicitly, so an ATS can match them easily."
+   }
+  ],
+  "sectionOrganization": [],
+  "keywordUsage": [
+   {
+    "issue": "Some tool names are not written in their official form: \"Kubernets\" should be \"Kubernetes\", \"Git Hub Actions\" should be \"GitHub Actions\", and \"Terrafrom\" should be \"Terraform\".",
+    "suggestion": "Correct these spellings in the Junior DevOps Engineer entry so the tool names match their official names exactly."
+   },
+   {
+    "issue": "In the Cloud Operations Intern entry, the points \"Monitoring\", \"Server stuff and deployments\" and \"Helping with tickets\" use vague everyday wording instead of standard technical terms.",
+    "suggestion": "Rewrite these as specific action-based points, for example using terms like \"server monitoring\" or \"incident ticket resolution\" if that matches what you actually did."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Cloud Operations Intern points \"Monitoring\", \"Server stuff and deployments\" and \"Helping with tickets\" are vague fragments rather than clear accomplishments starting with a strong action verb.",
+    "suggestion": "Rewrite each as a short specific point describing what you actually did, for example \"Monitored [systems] using [tool]\" or \"Resolved [type] support tickets\"."
+   },
+   {
+    "issue": "The Graduation project entry is written as a first-person story (\"I worked on the servers part with my team and it was successful\") and has no specific result.",
+    "suggestion": "Rewrite it as a short point starting with an action verb, and add a specific result such as [number] or [percentage] if you have one, for example \"Built the server infrastructure for [project name], achieving [result]\"."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Your summary states \"over 3 years of professional experience\", but your Experience section only shows the Cloud Operations Intern role (Jun 2025 - Aug 2025) and the Junior DevOps Engineer role starting Mar 2026, which together total about a year, not 3 years.",
+    "suggestion": "Update the summary to match your actual experience length, or remove the specific year count if it is not accurate yet."
+   },
+   {
+    "issue": "The Self-hosted Git server project only shows a year, \"(2025)\", while every other entry in your CV uses a Month Year format.",
+    "suggestion": "Add the specific month to this project's date so all dates in your CV follow the same Month Year format."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "Your CV has no Skills or Technical Skills section, even though you use many tools and platforms throughout Experience and Projects (AWS, Kubernetes, Terraform, GitHub Actions, Prometheus, Grafana, Ansible, Helm).",
+    "suggestion": "Add a Skills section near the top that lists these tools explicitly, so an ATS can match them easily."
+   }
+  ],
+  "sectionOrganization": [],
+  "keywordUsage": [
+   {
+    "issue": "Some tool names are not written in their official form: \"Kubernets\" should be \"Kubernetes\", \"Git Hub Actions\" should be \"GitHub Actions\", and \"Terrafrom\" should be \"Terraform\".",
+    "suggestion": "Correct these spellings in the Junior DevOps Engineer entry so the tool names match their official names exactly."
+   },
+   {
+    "issue": "In the Cloud Operations Intern entry, the points \"Monitoring\", \"Server stuff and deployments\" and \"Helping with tickets\" use vague everyday wording instead of standard technical terms.",
+    "suggestion": "Rewrite these as specific action-based points, for example using terms like \"server monitoring\" or \"incident ticket resolution\" if that matches what you actually did."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Cloud Operations Intern points \"Monitoring\", \"Server stuff and deployments\" and \"Helping with tickets\" are vague fragments rather than clear accomplishments starting with a strong action verb.",
+    "suggestion": "Rewrite each as a short specific point describing what you actually did, for example \"Monitored [systems] using [tool]\" or \"Resolved [type] support tickets\"."
+   },
+   {
+    "issue": "The Graduation project entry is written as a first-person story (\"I worked on the servers part with my team and it was successful\") and has no specific result.",
+    "suggestion": "Rewrite it as a short point starting with an action verb, and add a specific result such as [number] or [percentage] if you have one, for example \"Built the server infrastructure for [project name], achieving [result]\"."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Your summary states \"over 3 years of professional experience\", but your Experience section only shows the Cloud Operations Intern role (Jun 2025 - Aug 2025) and the Junior DevOps Engineer role starting Mar 2026, which together total about a year, not 3 years.",
+    "suggestion": "Update the summary to match your actual experience length, or remove the specific year count if it is not accurate yet."
+   },
+   {
+    "issue": "The Self-hosted Git server project only shows a year, \"(2025)\", while every other entry in your CV uses a Month Year format.",
+    "suggestion": "Add the specific month to this project's date so all dates in your CV follow the same Month Year format."
+   }
+  ]
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "goal": "erp_consultant",
+ "extractor": "E1",
+ "run": 1,
+ "postings": 20,
+ "rawNames": [
+  "SAP S/4HANA",
+  "SAP MM",
+  "SAP FI",
+  "SAP SD",
+  "PL/SQL",
+  "Oracle Integration Cloud",
+  "SAP ABAP",
+  "SAP QM",
+  "SAP PP",
+  "Power Automate",
+  "SAP Basis Administration",
+  "BI Publisher"
+ ],
+ "names": [
+  "SAP S/4HANA",
+  "SAP MM",
+  "SAP FI",
+  "SAP SD",
+  "PL/SQL",
+  "Oracle Integration Cloud",
+  "SAP ABAP",
+  "SAP QM",
+  "SAP PP",
+  "Power Automate",
+  "SAP Basis Administration",
+  "BI Publisher"
+ ]
+}

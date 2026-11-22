@@ -1,0 +1,54 @@
+{
+ "targets": [
+  "Power BI",
+  "Dashboard Development",
+  "Tableau",
+  "R",
+  "Machine Learning",
+  "Pandas",
+  "NumPy",
+  "Stakeholder Management"
+ ],
+ "answer": [
+  {
+   "skill": "Power BI",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Tableau",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "R",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Pandas",
+   "status": "partly",
+   "quote": "Loaded the sheet in a Jupyter notebook and worked out averages"
+  },
+  {
+   "skill": "NumPy",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "partly",
+   "quote": "report spending to the club supervisor every month"
+  }
+ ]
+}

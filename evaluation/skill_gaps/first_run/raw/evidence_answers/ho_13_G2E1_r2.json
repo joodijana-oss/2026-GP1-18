@@ -1,0 +1,36 @@
+{
+ "targets": [
+  "Terraform",
+  "CI/CD Pipeline Design",
+  "Python",
+  "AWS",
+  "Azure"
+ ],
+ "answer": [
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CI/CD Pipeline Design",
+   "status": "shown",
+   "quote": "runs the checks and publishes the site automatically with GitHub Actions"
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "AWS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Azure",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

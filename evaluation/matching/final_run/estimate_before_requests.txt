@@ -1,0 +1,28 @@
+Task 4, round 2: cost estimate written before any AI request of the final run
+(plan_round2_switch_final.md section 3, step 4)
+
+Prices: 2 USD per million input tokens, 10 USD per million output tokens.
+
+Checks before this estimate (no request):
+- freeze check: "The freeze matches (tools/gap_eval/freeze_r2.json)." and
+  "Amendment 1 of rule 7.2 (d) matches (..., sha256 8cbd0e11...)".
+- timing_amendment.dart --check: TIMING (rule 7.2 d, amendment 1): PASS (exit 0).
+- The 35 files of the final set hash exactly as final_run/final_set_sha256_at_start.txt.
+- Dry run: postings 14 / 3 / 6 / 6 (data_scientist, business_analyst,
+  it_consultant, data_engineer); writers' names per goal equal to
+  final_r2/raw/writer_names.json (34, 39, 37, 28, 27, 24, 31, 27, 42 over 9 goals);
+  size report W = 40 hole names (40 holes for opportunities, 40 for certifications).
+
+| Requests                                   | Number | Input   | Output | USD   |
+|--------------------------------------------|--------|---------|--------|-------|
+| Market lists, decision goals, 8 runs each  | 32     | 252,000 | 20,000 | 0.704 |
+| Typed links of the W hole names (9 chunks x 3 runs), tool estimate | 27 | 57,540 | 10,026 | 0.215 |
+| Typed links of the 32 market lists (2,100 in, 900 out each) | 32 | 67,200 | 28,800 | 0.422 |
+| Total                                      | 91     | 376,740 | 58,826 | 1.342 |
+
+With the plan's upper figure for the W links (0.44 USD) in place of the tool
+estimate, the total is 1.567 USD.
+
+Stop rule: stop before sending if the total is above 2.0 USD.
+Result: 1.342 USD (1.567 USD with the plan's W figure), below 2.0 USD: the run goes on
+with the smoke test (--limit 1: 1 market request and 1 link request).

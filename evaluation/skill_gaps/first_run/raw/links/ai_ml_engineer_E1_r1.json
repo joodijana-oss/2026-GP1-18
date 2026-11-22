@@ -1,0 +1,117 @@
+{
+ "goal": "ai_ml_engineer",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "PyTorch",
+   "kind": "tool",
+   "concepts": [
+    "PyTorch"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "C++",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "object oriented programming language",
+    "systems programming language"
+   ]
+  },
+  {
+   "gap": "TensorFlow",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "deep learning framework",
+    "building neural networks"
+   ]
+  },
+  {
+   "gap": "Linux",
+   "kind": "tool",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": [
+    "containerizing applications",
+    "building container images"
+   ]
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Ansible",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuration management automation",
+    "infrastructure automation tool"
+   ]
+  },
+  {
+   "gap": "Computer Vision",
+   "kind": "skill",
+   "concepts": [
+    "Deep Learning"
+   ],
+   "phrases": [
+    "image recognition techniques",
+    "visual data processing",
+    "object detection models"
+   ]
+  },
+  {
+   "gap": "Prometheus",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "monitoring and alerting tool",
+    "metrics collection system"
+   ]
+  },
+  {
+   "gap": "LangChain",
+   "kind": "tool",
+   "concepts": [
+    "Generative AI"
+   ],
+   "phrases": [
+    "building LLM applications",
+    "chaining language model calls"
+   ]
+  }
+ ]
+}

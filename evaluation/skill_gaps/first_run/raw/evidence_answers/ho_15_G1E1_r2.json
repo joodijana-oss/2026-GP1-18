@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Python",
+  "PyTorch",
+  "TensorFlow",
+  "Kubernetes",
+  "C++",
+  "Linux",
+  "Docker",
+  "MLOps",
+  "Computer Vision",
+  "LangChain",
+  "Terraform",
+  "Prometheus"
+ ],
+ "answer": [
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Python"
+  },
+  {
+   "skill": "PyTorch",
+   "status": "shown",
+   "quote": "PyTorch"
+  },
+  {
+   "skill": "TensorFlow",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "MLOps",
+   "status": "partly",
+   "quote": "Submitted training jobs to the shared GPU cluster with Slurm scripts"
+  },
+  {
+   "skill": "Computer Vision",
+   "status": "shown",
+   "quote": "sort 18,000 reef photos into healthy, pale and bleached"
+  },
+  {
+   "skill": "LangChain",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Prometheus",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

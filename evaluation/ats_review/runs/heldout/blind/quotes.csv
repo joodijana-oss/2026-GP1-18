@@ -1,0 +1,390 @@
+label,cv,area,n,field,quote,check
+ho_a_01,ho_a,sectionOrganization,1,issue,My Journey So Far,in CV
+ho_a_01,ho_a,sectionOrganization,1,issue,Experience,NOT in CV
+ho_a_01,ho_a,sectionOrganization,1,issue,Work Experience,NOT in CV
+ho_a_01,ho_a,sectionOrganization,1,suggestion,Experience,NOT in CV
+ho_a_01,ho_a,sectionOrganization,1,suggestion,Work Experience,NOT in CV
+ho_a_01,ho_a,keywordUsage,1,issue,Reactjs,in CV
+ho_a_01,ho_a,keywordUsage,1,issue,java script,in CV
+ho_a_01,ho_a,keywordUsage,1,issue,React.JS,in CV
+ho_a_01,ho_a,keywordUsage,1,issue,Javascript,in CV
+ho_a_01,ho_a,keywordUsage,1,issue,Postgress,in CV
+ho_a_01,ho_a,keywordUsage,1,issue,PostgreSQL,in CV
+ho_a_01,ho_a,keywordUsage,1,suggestion,React,in CV
+ho_a_01,ho_a,keywordUsage,1,suggestion,JavaScript,in CV
+ho_a_01,ho_a,keywordUsage,1,suggestion,PostgreSQL,in CV
+ho_a_01,ho_a,readability,1,issue,hard-working team player,in CV
+ho_a_01,ho_a,readability,1,issue,excellent skills,in CV
+ho_a_01,ho_a,readability,1,issue,always gives 100%,in CV
+ho_a_01,ho_a,readability,2,issue,Responsible for bugs,in CV
+ho_a_01,ho_a,readability,2,issue,Meetings with team,in CV
+ho_a_01,ho_a,readability,2,issue,Tickets and emails from students,in CV
+ho_a_01,ho_a,readability,2,suggestion,Resolved X technical support tickets per week for students and staff,NOT in CV
+ho_a_01,ho_a,contentFormatting,1,issue,Jun 2025 - Aug 2024,in CV
+ho_a_02,ho_a,sectionOrganization,1,issue,About Me,in CV
+ho_a_02,ho_a,sectionOrganization,1,suggestion,About Me,in CV
+ho_a_02,ho_a,sectionOrganization,1,suggestion,Summary,NOT in CV
+ho_a_02,ho_a,sectionOrganization,2,issue,My Journey So Far,in CV
+ho_a_02,ho_a,sectionOrganization,2,suggestion,My Journey So Far,in CV
+ho_a_02,ho_a,sectionOrganization,2,suggestion,Experience,NOT in CV
+ho_a_02,ho_a,sectionOrganization,2,suggestion,Work Experience,NOT in CV
+ho_a_02,ho_a,sectionOrganization,3,suggestion,Certifications,NOT in CV
+ho_a_02,ho_a,keywordUsage,1,issue,Reactjs,in CV
+ho_a_02,ho_a,keywordUsage,1,issue,React.JS,in CV
+ho_a_02,ho_a,keywordUsage,1,issue,React,in CV
+ho_a_02,ho_a,keywordUsage,1,issue,java script,in CV
+ho_a_02,ho_a,keywordUsage,1,issue,Javascript,in CV
+ho_a_02,ho_a,keywordUsage,1,issue,Postgress,in CV
+ho_a_02,ho_a,keywordUsage,1,suggestion,React,in CV
+ho_a_02,ho_a,keywordUsage,1,suggestion,JavaScript,in CV
+ho_a_02,ho_a,keywordUsage,1,suggestion,PostgreSQL,in CV
+ho_a_02,ho_a,keywordUsage,2,issue,check itself automatically every time someone saved new code so that mistakes are found early,in CV
+ho_a_02,ho_a,keywordUsage,2,suggestion,continuous integration (CI),NOT in CV
+ho_a_02,ho_a,readability,1,suggestion,Optimized,NOT in CV
+ho_a_02,ho_a,readability,1,suggestion,Collaborated,NOT in CV
+ho_a_02,ho_a,readability,1,suggestion,Implemented,NOT in CV
+ho_a_02,ho_a,readability,2,issue,Responsible for bugs,in CV
+ho_a_02,ho_a,readability,2,issue,Meetings with team,in CV
+ho_a_02,ho_a,readability,2,issue,Tickets and emails from students,in CV
+ho_a_02,ho_a,readability,2,suggestion,Resolved [number] student support tickets,NOT in CV
+ho_a_02,ho_a,readability,2,suggestion,Tracked and reported software bugs to the development team,NOT in CV
+ho_a_02,ho_a,readability,3,issue,excellent skills,in CV
+ho_a_02,ho_a,readability,3,issue,a great passion for technology,in CV
+ho_a_02,ho_a,contentFormatting,1,issue,Jun 2025 - Aug 2024,in CV
+ho_a_03,ho_a,cvStructure,1,suggestion,Certifications,NOT in CV
+ho_a_03,ho_a,sectionOrganization,1,issue,My Journey So Far,in CV
+ho_a_03,ho_a,sectionOrganization,1,issue,Experience,NOT in CV
+ho_a_03,ho_a,sectionOrganization,1,issue,Work Experience,NOT in CV
+ho_a_03,ho_a,sectionOrganization,1,suggestion,Experience,NOT in CV
+ho_a_03,ho_a,sectionOrganization,1,suggestion,Work Experience,NOT in CV
+ho_a_03,ho_a,keywordUsage,1,issue,React,in CV
+ho_a_03,ho_a,keywordUsage,1,issue,Reactjs,in CV
+ho_a_03,ho_a,keywordUsage,1,issue,React.JS,in CV
+ho_a_03,ho_a,keywordUsage,1,suggestion,React,in CV
+ho_a_03,ho_a,readability,1,issue,About Me,in CV
+ho_a_03,ho_a,readability,1,issue,excellent skills,in CV
+ho_a_03,ho_a,readability,1,issue,great passion for technology,in CV
+ho_a_03,ho_a,readability,1,issue,always gives 100%,in CV
+ho_a_03,ho_a,readability,2,issue,Responsible for bugs,in CV
+ho_a_03,ho_a,readability,2,issue,Meetings with team,in CV
+ho_a_03,ho_a,readability,2,issue,Tickets and emails from students,in CV
+ho_a_03,ho_a,readability,2,suggestion,Resolved X student support tickets per week via email and in-person requests,NOT in CV
+ho_a_03,ho_a,contentFormatting,1,issue,Jun 2025 - Aug 2024,in CV
+ho_a_03,ho_a,contentFormatting,2,issue,java script,in CV
+ho_a_03,ho_a,contentFormatting,2,issue,Postgress,in CV
+ho_a_03,ho_a,contentFormatting,2,issue,JavaScript,in CV
+ho_a_03,ho_a,contentFormatting,2,issue,PostgreSQL,in CV
+ho_a_03,ho_a,contentFormatting,2,suggestion,JavaScript,in CV
+ho_a_03,ho_a,contentFormatting,2,suggestion,PostgreSQL,in CV
+ho_a_04,ho_a,sectionOrganization,1,issue,About Me,in CV
+ho_a_04,ho_a,sectionOrganization,1,issue,My Journey So Far,in CV
+ho_a_04,ho_a,sectionOrganization,1,suggestion,About Me,in CV
+ho_a_04,ho_a,sectionOrganization,1,suggestion,Summary,NOT in CV
+ho_a_04,ho_a,sectionOrganization,1,suggestion,My Journey So Far,in CV
+ho_a_04,ho_a,sectionOrganization,1,suggestion,Experience,NOT in CV
+ho_a_04,ho_a,sectionOrganization,2,suggestion,Certifications,NOT in CV
+ho_a_04,ho_a,keywordUsage,1,issue,Reactjs,in CV
+ho_a_04,ho_a,keywordUsage,1,issue,java script,in CV
+ho_a_04,ho_a,keywordUsage,1,issue,Postgress,in CV
+ho_a_04,ho_a,keywordUsage,1,suggestion,React,in CV
+ho_a_04,ho_a,keywordUsage,1,suggestion,JavaScript,in CV
+ho_a_04,ho_a,keywordUsage,1,suggestion,PostgreSQL,in CV
+ho_a_04,ho_a,keywordUsage,2,issue,JS,in CV
+ho_a_04,ho_a,keywordUsage,2,issue,Javascript,in CV
+ho_a_04,ho_a,keywordUsage,2,issue,React.JS,in CV
+ho_a_04,ho_a,keywordUsage,2,issue,React,in CV
+ho_a_04,ho_a,keywordUsage,2,suggestion,JavaScript,in CV
+ho_a_04,ho_a,keywordUsage,2,suggestion,React,in CV
+ho_a_04,ho_a,keywordUsage,3,suggestion,continuous integration (CI),NOT in CV
+ho_a_04,ho_a,readability,2,issue,About Me,in CV
+ho_a_04,ho_a,readability,2,issue,Hard-working team player with excellent skills and a great passion for technology,in CV
+ho_a_04,ho_a,readability,2,issue,a fast learner who always gives 100%,in CV
+ho_a_04,ho_a,readability,3,issue,Responsible for bugs,in CV
+ho_a_04,ho_a,readability,3,issue,Meetings with team,in CV
+ho_a_04,ho_a,readability,3,issue,Tickets and emails from students,in CV
+ho_a_04,ho_a,readability,3,suggestion,Resolved [number] student support tickets,NOT in CV
+ho_a_04,ho_a,readability,3,suggestion,Tracked and reported software bugs to the development team,NOT in CV
+ho_a_04,ho_a,contentFormatting,1,issue,Jun 2025 - Aug 2024,in CV
+ho_a_04,ho_a,contentFormatting,1,suggestion,Jun 2024 - Aug 2024,NOT in CV
+ho_a_05,ho_a,sectionOrganization,1,issue,About Me,in CV
+ho_a_05,ho_a,sectionOrganization,1,issue,My Journey So Far,in CV
+ho_a_05,ho_a,sectionOrganization,1,suggestion,About Me,in CV
+ho_a_05,ho_a,sectionOrganization,1,suggestion,Summary,NOT in CV
+ho_a_05,ho_a,sectionOrganization,1,suggestion,My Journey So Far,in CV
+ho_a_05,ho_a,sectionOrganization,1,suggestion,Experience,NOT in CV
+ho_a_05,ho_a,sectionOrganization,2,suggestion,Certifications,NOT in CV
+ho_a_05,ho_a,keywordUsage,1,issue,Reactjs,in CV
+ho_a_05,ho_a,keywordUsage,1,issue,Postgress,in CV
+ho_a_05,ho_a,keywordUsage,1,issue,React.JS,in CV
+ho_a_05,ho_a,keywordUsage,1,issue,Javascript,in CV
+ho_a_05,ho_a,keywordUsage,1,issue,JS,in CV
+ho_a_05,ho_a,keywordUsage,1,suggestion,React,in CV
+ho_a_05,ho_a,keywordUsage,1,suggestion,JavaScript,in CV
+ho_a_05,ho_a,keywordUsage,1,suggestion,PostgreSQL,in CV
+ho_a_05,ho_a,keywordUsage,2,suggestion,set up continuous integration (CI) to run automated tests on every code change.,NOT in CV
+ho_a_05,ho_a,keywordUsage,3,issue,REST APIs,NOT in CV
+ho_a_05,ho_a,keywordUsage,3,suggestion,REST APIs,NOT in CV
+ho_a_05,ho_a,readability,1,suggestion,Learned,NOT in CV
+ho_a_05,ho_a,readability,1,suggestion,Optimized,NOT in CV
+ho_a_05,ho_a,readability,1,suggestion,Collaborated,NOT in CV
+ho_a_05,ho_a,readability,1,suggestion,Set up,NOT in CV
+ho_a_05,ho_a,readability,2,issue,Responsible for bugs,in CV
+ho_a_05,ho_a,readability,2,issue,Meetings with team,in CV
+ho_a_05,ho_a,readability,2,suggestion,Resolved student support tickets,NOT in CV
+ho_a_05,ho_a,readability,2,suggestion,Tracked and fixed reported bugs,NOT in CV
+ho_a_05,ho_a,readability,3,issue,it loads faster,in CV
+ho_a_05,ho_a,readability,3,suggestion,reduced load time by [percentage],NOT in CV
+ho_a_05,ho_a,contentFormatting,1,issue,Jun 2025 - Aug 2024,in CV
+ho_a_06,ho_a,cvStructure,1,issue,My Journey So Far,in CV
+ho_a_06,ho_a,cvStructure,1,issue,Experience,NOT in CV
+ho_a_06,ho_a,cvStructure,1,issue,Work Experience,NOT in CV
+ho_a_06,ho_a,cvStructure,1,suggestion,Experience,NOT in CV
+ho_a_06,ho_a,cvStructure,1,suggestion,Professional Experience,NOT in CV
+ho_a_06,ho_a,keywordUsage,1,issue,java script,in CV
+ho_a_06,ho_a,keywordUsage,1,issue,Postgress,in CV
+ho_a_06,ho_a,keywordUsage,1,issue,JavaScript,in CV
+ho_a_06,ho_a,keywordUsage,1,issue,PostgreSQL,in CV
+ho_a_06,ho_a,keywordUsage,1,suggestion,JavaScript,in CV
+ho_a_06,ho_a,keywordUsage,1,suggestion,PostgreSQL,in CV
+ho_a_06,ho_a,keywordUsage,2,issue,Responsible for bugs,in CV
+ho_a_06,ho_a,keywordUsage,2,issue,Meetings with team,in CV
+ho_a_06,ho_a,keywordUsage,2,issue,Tickets and emails from students,in CV
+ho_a_06,ho_a,readability,1,issue,hard-working team player,in CV
+ho_a_06,ho_a,readability,1,issue,gives 100%,in CV
+ho_a_06,ho_a,readability,2,issue,Responsible for bugs,in CV
+ho_a_06,ho_a,readability,2,issue,Meetings with team,in CV
+ho_a_06,ho_a,readability,2,suggestion,Resolved student-reported bugs,NOT in CV
+ho_a_06,ho_a,readability,2,suggestion,Responded to X tickets per week,NOT in CV
+ho_a_06,ho_a,contentFormatting,1,issue,Jun 2025 - Aug 2024,in CV
+ho_b_01,ho_b,cvStructure,2,issue,References available upon request,in CV
+ho_b_01,ho_b,sectionOrganization,1,issue,Security course certificate,in CV
+ho_b_01,ho_b,sectionOrganization,1,issue,Networking certificate - completed,in CV
+ho_b_01,ho_b,sectionOrganization,2,issue,Wireshark Nmap Advanced Intermediate,in CV
+ho_b_01,ho_b,sectionOrganization,2,suggestion,Wireshark – Advanced,NOT in CV
+ho_b_01,ho_b,sectionOrganization,2,suggestion,Nmap – Intermediate,NOT in CV
+ho_b_01,ho_b,keywordUsage,1,issue,Other Skills,in CV
+ho_b_01,ho_b,keywordUsage,1,issue,Windows XP,in CV
+ho_b_01,ho_b,keywordUsage,1,issue,Internet browsing,in CV
+ho_b_01,ho_b,keywordUsage,1,issue,Printing and scanning,in CV
+ho_b_01,ho_b,readability,1,issue,I was helping my supervisor to look at the phishing emails,in CV
+ho_b_01,ho_b,readability,1,issue,I was answering the students questions during the lab,in CV
+ho_b_01,ho_b,readability,1,suggestion,Reviewed reported phishing emails with the SOC team,NOT in CV
+ho_b_01,ho_b,readability,1,suggestion,Supported students with troubleshooting lab exercises,NOT in CV
+ho_b_01,ho_b,readability,2,issue,I learned how the team writes the weekly report and I was sometimes writing parts of it,in CV
+ho_b_01,ho_b,readability,2,suggestion,Contributed to weekly SOC incident reports summarizing triaged alerts and findings,NOT in CV
+ho_b_01,ho_b,contentFormatting,1,suggestion,2021 – 2025,NOT in CV
+ho_b_01,ho_b,contentFormatting,2,issue,03/2025 – 06/2025,in CV
+ho_b_01,ho_b,contentFormatting,2,issue,2023-09 to Dec 23,in CV
+ho_b_01,ho_b,contentFormatting,2,issue,Summer 2022,in CV
+ho_b_01,ho_b,contentFormatting,3,issue,Work Experiance,in CV
+ho_b_01,ho_b,contentFormatting,3,suggestion,Work Experience,NOT in CV
+ho_b_02,ho_b,sectionOrganization,1,issue,Work Experiance,in CV
+ho_b_02,ho_b,sectionOrganization,1,suggestion,Work Experience,NOT in CV
+ho_b_02,ho_b,sectionOrganization,2,issue,Home Network Vulnerability Assessment (2024),in CV
+ho_b_02,ho_b,sectionOrganization,2,issue,"Phishing Awareness Campaign (graduation project, 2025)",in CV
+ho_b_02,ho_b,keywordUsage,1,issue,helping my supervisor to look at the phishing emails that the employees reported,in CV
+ho_b_02,ho_b,keywordUsage,1,suggestion,Assisted with phishing email triage and analysis,NOT in CV
+ho_b_02,ho_b,keywordUsage,2,suggestion,CVSS,in CV
+ho_b_02,ho_b,readability,1,issue,I was helping my supervisor to look at the phishing emails,in CV
+ho_b_02,ho_b,readability,1,issue,I learned how the team writes the weekly report,in CV
+ho_b_02,ho_b,readability,1,issue,I was answering the students questions during the lab,in CV
+ho_b_02,ho_b,readability,1,suggestion,Reviewed reported phishing emails with the SOC team,NOT in CV
+ho_b_02,ho_b,readability,1,suggestion,Answered student questions during Ethical Hacking labs,NOT in CV
+ho_b_02,ho_b,contentFormatting,1,issue,03/2025 – 06/2025,in CV
+ho_b_02,ho_b,contentFormatting,1,issue,2023-09 to Dec 23,in CV
+ho_b_02,ho_b,contentFormatting,1,issue,Summer 2022,in CV
+ho_b_02,ho_b,contentFormatting,1,suggestion,March 2025 – June 2025,NOT in CV
+ho_b_02,ho_b,contentFormatting,1,suggestion,September 2023 – December 2023,NOT in CV
+ho_b_02,ho_b,contentFormatting,2,issue,"CompTIA Security+ (CompTIA, issued May 2025)",in CV
+ho_b_02,ho_b,contentFormatting,2,issue,Security course certificate,in CV
+ho_b_02,ho_b,contentFormatting,2,issue,Networking certificate - completed,in CV
+ho_b_03,ho_b,cvStructure,1,issue,h4ck3r_queen99@example.com,in CV
+ho_b_03,ho_b,sectionOrganization,1,issue,Work Experiance,in CV
+ho_b_03,ho_b,sectionOrganization,1,suggestion,Work Experience,NOT in CV
+ho_b_03,ho_b,sectionOrganization,2,issue,Home Network Vulnerability Assessment (2024),in CV
+ho_b_03,ho_b,sectionOrganization,2,issue,"Phishing Awareness Campaign (graduation project, 2025)",in CV
+ho_b_03,ho_b,keywordUsage,1,issue,SIEM,in CV
+ho_b_03,ho_b,keywordUsage,1,suggestion,SIEM,in CV
+ho_b_03,ho_b,keywordUsage,2,suggestion,CVSS,in CV
+ho_b_03,ho_b,keywordUsage,2,suggestion,Vulnerability Risk Assessment,NOT in CV
+ho_b_03,ho_b,keywordUsage,3,suggestion,Phishing Simulation,NOT in CV
+ho_b_03,ho_b,keywordUsage,3,suggestion,Security Awareness Training,NOT in CV
+ho_b_03,ho_b,readability,1,issue,I was helping my supervisor to look at the phishing emails...,in CV
+ho_b_03,ho_b,readability,1,issue,I learned how the team writes the weekly report...,in CV
+ho_b_03,ho_b,readability,1,suggestion,Assisted in triaging employee-reported phishing emails,NOT in CV
+ho_b_03,ho_b,readability,1,suggestion,Contributed to weekly SOC reports,NOT in CV
+ho_b_03,ho_b,readability,2,issue,I was answering the students questions during the lab,in CV
+ho_b_03,ho_b,readability,2,suggestion,Supported students with lab troubleshooting during Ethical Hacking sessions,NOT in CV
+ho_b_03,ho_b,contentFormatting,1,issue,03/2025 – 06/2025,in CV
+ho_b_03,ho_b,contentFormatting,1,issue,2023-09 to Dec 23,in CV
+ho_b_03,ho_b,contentFormatting,1,issue,Summer 2022,in CV
+ho_b_03,ho_b,contentFormatting,1,suggestion,Mar 2025 – Jun 2025,NOT in CV
+ho_b_03,ho_b,contentFormatting,1,suggestion,Sep 2023 – Dec 2023,NOT in CV
+ho_b_03,ho_b,contentFormatting,1,suggestion,Jun 2022 – Aug 2022,NOT in CV
+ho_b_03,ho_b,contentFormatting,2,suggestion,[start year] – [end year],NOT in CV
+ho_b_03,ho_b,contentFormatting,3,issue,Security course certificate,in CV
+ho_b_03,ho_b,contentFormatting,3,issue,Networking certificate - completed,in CV
+ho_b_04,ho_b,sectionOrganization,2,issue,Security course certificate,in CV
+ho_b_04,ho_b,sectionOrganization,2,issue,Networking certificate - completed,in CV
+ho_b_04,ho_b,keywordUsage,1,issue,Security course certificate,in CV
+ho_b_04,ho_b,keywordUsage,1,issue,Networking certificate - completed,in CV
+ho_b_04,ho_b,keywordUsage,2,issue,Windows XP,in CV
+ho_b_04,ho_b,keywordUsage,2,issue,Internet browsing,in CV
+ho_b_04,ho_b,keywordUsage,2,issue,Email,in CV
+ho_b_04,ho_b,keywordUsage,2,issue,Printing and scanning,in CV
+ho_b_04,ho_b,readability,1,issue,I was helping my supervisor to look at the phishing emails,in CV
+ho_b_04,ho_b,readability,1,issue,I learned how the team writes the weekly report,in CV
+ho_b_04,ho_b,readability,1,suggestion,Reviewed and triaged employee-reported phishing emails alongside the SOC team.,NOT in CV
+ho_b_04,ho_b,readability,2,issue,I was answering the students questions during the lab,in CV
+ho_b_04,ho_b,readability,2,suggestion,Supported students by troubleshooting VM configuration issues during Ethical Hacking lab sessions.,NOT in CV
+ho_b_04,ho_b,contentFormatting,1,issue,03/2025 – 06/2025,in CV
+ho_b_04,ho_b,contentFormatting,1,issue,2023-09 to Dec 23,in CV
+ho_b_04,ho_b,contentFormatting,1,issue,Summer 2022,in CV
+ho_b_04,ho_b,contentFormatting,2,issue,h4ck3r_queen99@example.com,in CV
+ho_b_04,ho_b,contentFormatting,3,issue,Work Experiance,in CV
+ho_b_04,ho_b,contentFormatting,3,suggestion,Work Experience,NOT in CV
+ho_b_05,ho_b,cvStructure,1,issue,Personal Details,in CV
+ho_b_05,ho_b,cvStructure,3,issue,References available upon request,in CV
+ho_b_05,ho_b,sectionOrganization,1,issue,Home Network Vulnerability Assessment (2024),in CV
+ho_b_05,ho_b,sectionOrganization,1,issue,"Phishing Awareness Campaign (graduation project, 2025)",in CV
+ho_b_05,ho_b,keywordUsage,1,issue,Security course certificate,in CV
+ho_b_05,ho_b,keywordUsage,1,issue,Networking certificate - completed,in CV
+ho_b_05,ho_b,keywordUsage,2,issue,Other Skills,in CV
+ho_b_05,ho_b,keywordUsage,2,issue,Windows XP,in CV
+ho_b_05,ho_b,readability,1,issue,I was helping my supervisor to look at the phishing emails,in CV
+ho_b_05,ho_b,readability,1,issue,I was answering the students questions during the lab,in CV
+ho_b_05,ho_b,readability,1,suggestion,Reviewed employee-reported phishing emails to support incident triage,NOT in CV
+ho_b_05,ho_b,readability,1,suggestion,Supported students in configuring VirtualBox and Kali Linux environments during lab sessions,NOT in CV
+ho_b_05,ho_b,contentFormatting,1,issue,h4ck3r_queen99@example.com,in CV
+ho_b_05,ho_b,contentFormatting,2,issue,03/2025 – 06/2025,in CV
+ho_b_05,ho_b,contentFormatting,2,issue,2023-09 to Dec 23,in CV
+ho_b_05,ho_b,contentFormatting,2,issue,Summer 2022,in CV
+ho_b_05,ho_b,contentFormatting,3,issue,Wireshark Nmap Advanced Intermediate,in CV
+ho_b_05,ho_b,contentFormatting,3,suggestion,"Wireshark – Advanced, Nmap – Intermediate",NOT in CV
+ho_c_01,ho_c,readability,1,issue,Worked on data cleaning tasks for the team,in CV
+ho_c_01,ho_c,readability,1,suggestion,"Cleaned and standardized [dataset/type] data, reducing errors by [percentage]",NOT in CV
+ho_c_02,ho_c,sectionOrganization,1,issue,Riyadh Housing Prices Analysis (2024),in CV
+ho_c_02,ho_c,sectionOrganization,1,issue,"Student Attendance Dashboard (graduation project, 2025)",in CV
+ho_c_02,ho_c,readability,1,issue,Worked on data cleaning tasks for the team,in CV
+ho_c_02,ho_c,contentFormatting,1,issue,2025,in CV
+ho_c_02,ho_c,contentFormatting,1,issue,2024,in CV
+ho_c_02,ho_c,contentFormatting,1,issue,Month Year,NOT in CV
+ho_c_02,ho_c,contentFormatting,1,suggestion,"Microsoft, Aug 2025",NOT in CV
+ho_c_03,ho_c,sectionOrganization,1,issue,Riyadh Housing Prices Analysis (2024),in CV
+ho_c_03,ho_c,sectionOrganization,1,issue,"Student Attendance Dashboard (graduation project, 2025)",in CV
+ho_c_03,ho_c,readability,1,issue,Worked on data cleaning tasks for the team,in CV
+ho_c_03,ho_c,readability,1,suggestion,Cleaned and standardized sales records across 38 stores to improve dashboard accuracy.,NOT in CV
+ho_c_04,ho_c,readability,1,issue,"Worked on data cleaning tasks for the team,",in CV
+ho_c_04,ho_c,readability,1,suggestion,"Cleaned and standardized [dataset/type] records, reducing [error type] by [percentage]",NOT in CV
+ho_c_05,ho_c,keywordUsage,1,issue,Data Modeling,NOT in CV
+ho_c_05,ho_c,keywordUsage,1,suggestion,Data Modeling,NOT in CV
+ho_c_05,ho_c,keywordUsage,2,issue,Statistics,in CV
+ho_c_05,ho_c,keywordUsage,2,suggestion,Statistics (Regression Analysis),NOT in CV
+ho_c_05,ho_c,readability,1,issue,Worked on data cleaning tasks for the team,in CV
+ho_c_05,ho_c,contentFormatting,1,issue,Sep 2025 - Present,in CV
+ho_c_05,ho_c,contentFormatting,1,issue,2024,in CV
+ho_c_05,ho_c,contentFormatting,1,issue,2025,in CV
+ho_c_06,ho_c,sectionOrganization,1,issue,Riyadh Housing Prices Analysis (2024),in CV
+ho_c_06,ho_c,sectionOrganization,1,issue,"Student Attendance Dashboard (graduation project, 2025)",in CV
+ho_c_06,ho_c,readability,1,issue,Worked on data cleaning tasks for the team,in CV
+ho_c_06,ho_c,readability,1,suggestion,Cleaned [number] of records in [tool] to prepare them for the weekly dashboards.,NOT in CV
+ho_c_06,ho_c,contentFormatting,1,issue,Sep 2025 - Present,in CV
+ho_c_06,ho_c,contentFormatting,1,issue,(2024),in CV
+ho_c_06,ho_c,contentFormatting,1,issue,"(Microsoft, 2025)",in CV
+ho_d_01,ho_d,keywordUsage,1,issue,Kubernets,in CV
+ho_d_01,ho_d,keywordUsage,1,issue,Kubernetes,NOT in CV
+ho_d_01,ho_d,keywordUsage,1,issue,Terrafrom,in CV
+ho_d_01,ho_d,keywordUsage,1,issue,Terraform,in CV
+ho_d_01,ho_d,keywordUsage,1,issue,Git Hub Actions,in CV
+ho_d_01,ho_d,keywordUsage,1,issue,GitHub Actions,in CV
+ho_d_01,ho_d,readability,1,issue,Monitoring,in CV
+ho_d_01,ho_d,readability,1,issue,Server stuff and deployments,in CV
+ho_d_01,ho_d,readability,1,issue,Helping with tickets,in CV
+ho_d_01,ho_d,readability,1,suggestion,"Monitored server health and resolved support tickets for production systems,",NOT in CV
+ho_d_01,ho_d,readability,2,issue,I worked on the servers part with my team and it was successful,in CV
+ho_d_02,ho_d,keywordUsage,1,issue,Kubernets,in CV
+ho_d_02,ho_d,keywordUsage,1,suggestion,Kubernets,in CV
+ho_d_02,ho_d,keywordUsage,1,suggestion,Kubernetes,NOT in CV
+ho_d_02,ho_d,keywordUsage,2,issue,Git Hub Actions,in CV
+ho_d_02,ho_d,keywordUsage,2,suggestion,Git Hub Actions,in CV
+ho_d_02,ho_d,keywordUsage,2,suggestion,GitHub Actions,in CV
+ho_d_02,ho_d,keywordUsage,3,issue,Terrafrom,in CV
+ho_d_02,ho_d,keywordUsage,3,issue,Terraform,in CV
+ho_d_02,ho_d,keywordUsage,3,suggestion,Terrafrom,in CV
+ho_d_02,ho_d,keywordUsage,3,suggestion,Terraform,in CV
+ho_d_02,ho_d,readability,1,issue,Monitoring,in CV
+ho_d_02,ho_d,readability,1,issue,Server stuff and deployments,in CV
+ho_d_02,ho_d,readability,1,issue,Helping with tickets,in CV
+ho_d_02,ho_d,readability,1,suggestion,Monitored [systems] for [issue type],NOT in CV
+ho_d_02,ho_d,readability,1,suggestion,Resolved [number] support tickets related to [topic],NOT in CV
+ho_d_02,ho_d,readability,2,issue,A system for the university. I worked on the servers part with my team and it was successful.,in CV
+ho_d_02,ho_d,readability,2,suggestion,"Configured [number] servers for [purpose], achieving [result]",NOT in CV
+ho_d_02,ho_d,contentFormatting,1,issue,over 3 years of professional experience,in CV
+ho_d_02,ho_d,contentFormatting,2,issue,(2025),in CV
+ho_d_03,ho_d,cvStructure,1,suggestion,Technical Skills,NOT in CV
+ho_d_03,ho_d,sectionOrganization,1,issue,(2025),in CV
+ho_d_03,ho_d,keywordUsage,1,issue,Kubernets,in CV
+ho_d_03,ho_d,keywordUsage,1,issue,Git Hub Actions,in CV
+ho_d_03,ho_d,keywordUsage,1,issue,Terrafrom,in CV
+ho_d_03,ho_d,keywordUsage,1,suggestion,Kubernetes,NOT in CV
+ho_d_03,ho_d,keywordUsage,1,suggestion,GitHub Actions,in CV
+ho_d_03,ho_d,keywordUsage,1,suggestion,Terraform,in CV
+ho_d_03,ho_d,readability,1,issue,over 3 years of professional experience,in CV
+ho_d_03,ho_d,readability,2,issue,Monitoring,in CV
+ho_d_03,ho_d,readability,2,issue,Server stuff and deployments,in CV
+ho_d_03,ho_d,readability,2,issue,Helping with tickets,in CV
+ho_d_03,ho_d,readability,3,issue,I worked on the servers part with my team and it was successful,in CV
+ho_d_03,ho_d,contentFormatting,1,issue,Mon YYYY - Mon YYYY,NOT in CV
+ho_d_03,ho_d,contentFormatting,1,issue,(2025),in CV
+ho_d_03,ho_d,contentFormatting,1,suggestion,Mon YYYY,NOT in CV
+ho_d_03,ho_d,contentFormatting,1,suggestion,Mon YYYY - Mon YYYY,NOT in CV
+ho_d_04,ho_d,cvStructure,1,suggestion,Technical Skills,NOT in CV
+ho_d_04,ho_d,keywordUsage,1,issue,Kubernets,in CV
+ho_d_04,ho_d,keywordUsage,1,suggestion,Kubernetes,NOT in CV
+ho_d_04,ho_d,keywordUsage,2,issue,Terrafrom,in CV
+ho_d_04,ho_d,keywordUsage,2,suggestion,Terraform,in CV
+ho_d_04,ho_d,keywordUsage,3,issue,Git Hub Actions,in CV
+ho_d_04,ho_d,keywordUsage,3,issue,GitHub Actions,in CV
+ho_d_04,ho_d,keywordUsage,3,suggestion,GitHub Actions,in CV
+ho_d_04,ho_d,readability,1,issue,over 3 years of professional experience,in CV
+ho_d_04,ho_d,readability,2,issue,Monitoring,in CV
+ho_d_04,ho_d,readability,2,issue,Server stuff and deployments,in CV
+ho_d_04,ho_d,readability,2,issue,Helping with tickets,in CV
+ho_d_04,ho_d,readability,2,suggestion,Wrote a Bash script...,in CV
+ho_d_04,ho_d,readability,3,issue,I worked on the servers part with my team and it was successful,in CV
+ho_d_04,ho_d,contentFormatting,1,issue,Graduation project,in CV
+ho_d_04,ho_d,contentFormatting,1,issue,Self-hosted Git server... 2025,in CV
+ho_d_05,ho_d,keywordUsage,1,issue,Kubernets,in CV
+ho_d_05,ho_d,keywordUsage,1,issue,Kubernetes,NOT in CV
+ho_d_05,ho_d,keywordUsage,1,issue,Git Hub Actions,in CV
+ho_d_05,ho_d,keywordUsage,1,issue,GitHub Actions,in CV
+ho_d_05,ho_d,keywordUsage,1,issue,Terrafrom,in CV
+ho_d_05,ho_d,keywordUsage,1,issue,Terraform,in CV
+ho_d_05,ho_d,keywordUsage,2,issue,Monitoring,in CV
+ho_d_05,ho_d,keywordUsage,2,issue,Server stuff and deployments,in CV
+ho_d_05,ho_d,keywordUsage,2,issue,Helping with tickets,in CV
+ho_d_05,ho_d,keywordUsage,2,suggestion,server monitoring,NOT in CV
+ho_d_05,ho_d,keywordUsage,2,suggestion,incident ticket resolution,NOT in CV
+ho_d_05,ho_d,readability,1,issue,Monitoring,in CV
+ho_d_05,ho_d,readability,1,issue,Server stuff and deployments,in CV
+ho_d_05,ho_d,readability,1,issue,Helping with tickets,in CV
+ho_d_05,ho_d,readability,1,suggestion,Monitored [systems] using [tool],NOT in CV
+ho_d_05,ho_d,readability,1,suggestion,Resolved [type] support tickets,NOT in CV
+ho_d_05,ho_d,readability,2,issue,I worked on the servers part with my team and it was successful,in CV
+ho_d_05,ho_d,readability,2,suggestion,"Built the server infrastructure for [project name], achieving [result]",NOT in CV
+ho_d_05,ho_d,contentFormatting,1,issue,over 3 years of professional experience,in CV
+ho_d_05,ho_d,contentFormatting,2,issue,(2025),in CV
+ho_d_06,ho_d,keywordUsage,1,issue,Kubernets,in CV
+ho_d_06,ho_d,keywordUsage,1,issue,Git Hub Actions,in CV
+ho_d_06,ho_d,keywordUsage,1,issue,Terrafrom,in CV
+ho_d_06,ho_d,readability,1,issue,Monitoring,in CV
+ho_d_06,ho_d,readability,1,issue,Server stuff and deployments,in CV
+ho_d_06,ho_d,readability,1,issue,Helping with tickets,in CV
+ho_d_06,ho_d,readability,1,suggestion,Monitored [systems] to catch [type of issue],NOT in CV
+ho_d_06,ho_d,readability,1,suggestion,Resolved [number] support tickets related to [topic],NOT in CV
+ho_d_06,ho_d,readability,2,issue,I worked on the servers part with my team and it was successful,in CV
+ho_d_06,ho_d,readability,2,suggestion,"Configured the server infrastructure for [project name], achieving [result or metric]",NOT in CV
+ho_d_06,ho_d,contentFormatting,1,issue,over 3 years of professional experience,in CV
+ho_d_06,ho_d,contentFormatting,1,suggestion,DevOps Engineer with hands-on experience building and running cloud infrastructure on AWS,NOT in CV
+ho_d_06,ho_d,contentFormatting,2,issue,(2025),in CV
+ho_d_06,ho_d,contentFormatting,2,suggestion,[Month] 2025,NOT in CV

@@ -1,0 +1,59 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Built an end-to-end image classification project from data collection to deployment",
+   "Applied rigorous evaluation practices, holding out an entire farm's data and reporting precision/recall with a confusion matrix instead of relying on a single accuracy metric",
+   "Performed systematic hyperparameter tuning across 24 combinations of learning rate, batch size and frozen layers",
+   "Addressed class imbalance and data quality issues through filtering and augmentation",
+   "Optimized a deep learning model for on-device, offline inference on mid-range hardware",
+   "Validated the solution with real users by deploying it to eleven farmers for a month",
+   "Compared multiple machine learning models (linear regression, random forest, gradient boosting) for a regression task",
+   "Recognized with 2nd prize in a university research day computing track",
+   "Achieved First Class Honours academic standing",
+   "Demonstrated teaching and community engagement through volunteering"
+  ],
+  "currentSkills": [
+   "Python",
+   "PyTorch",
+   "scikit-learn",
+   "NumPy",
+   "Git",
+   "Machine Learning",
+   "Image Classification",
+   "Data Augmentation",
+   "Data Cleaning",
+   "Model Evaluation",
+   "Hyperparameter Tuning",
+   "Model Deployment",
+   "Regression Analysis",
+   "Statistics"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "King Khalid University, Abha",
+    "year": "Sep 2022 - 06/2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Asir Leaf",
+    "description": "Collected and labelled 6,400 coffee-plant leaf photos with farmers' cooperatives and an agronomist; cleaned and balanced the dataset via filtering and augmentation; fine-tuned a pretrained image classification model using PyTorch; evaluated using a held-out farm's data with precision, recall and confusion matrix per disease; tuned 24 hyperparameter combinations; compressed the model for fast offline inference on a mid-range Android phone; deployed an app used by eleven farmers for a month; achieved 93% test accuracy across five disease classes."
+   },
+   {
+    "name": "Used-car prices",
+    "description": "Predicted asking prices from 18,000 Saudi classified adverts by comparing linear regression, random forest and gradient boosting models; the gradient boosting model achieved an average error of 9%."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Volunteer Coding Teacher",
+    "organization": "Neighbourhood centre in Abha",
+    "duration": "Summer 2024",
+    "description": "Taught a four-week 'first steps in coding' class for girls aged 12 to 14."
+   }
+  ]
+ }
+}

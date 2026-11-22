@@ -1,0 +1,107 @@
+{
+ "kind": "timing, rule 7.2 (d), amendment 1",
+ "label": "dev",
+ "freezeFile": "tools/gap_eval/freeze_r2.json",
+ "freezeSha256": "50b50b1e7f4d90681e1c6c00907981df12255687f4c4470ef6764ab051a917c5",
+ "amendmentFile": "tools/gap_eval/freeze_r2_amendment_timing.json",
+ "amendmentSha256": "8cbd0e11ce14a2b8d8bea843ebeb35ea28ceadfb2e57c103412c60682ccb24eb",
+ "approach": "B/10/10/bt",
+ "source": "typed",
+ "opportunities": "typed|true|0.1|true|false|false|true|true|false",
+ "certifications": "typed|true|0.1|true|false|false|true|true|false",
+ "measured": {
+  "personas": {
+   "path": "test/fixtures/opportunity_eval_personas.json",
+   "sha256": "d941236f0f9b4a102ccca2a61e90b98bf665eb484ef55009029099ffb98a53e1"
+  },
+  "links": {
+   "path": "build/gap_eval/persona_links/dev_typed.json",
+   "sha256": "1e292cbce6c5705548146e6189b5c72217fc67ed6ea5494a14d6ae1820d0748a"
+  }
+ },
+ "guardFile": {
+  "path": "build/gap_eval/final_r3/guards/dev.json",
+  "sha256": "38bad4eef108753aa5de678b11f59e8042bcb084a3e58e1dba9e90222985672b"
+ },
+ "startedAt": "2026-11-21T16:06:38.337445",
+ "finishedAt": "2026-11-21T16:10:27.309093",
+ "runs": [
+  {
+   "run": 1,
+   "file": "build/gap_eval/final_r3/guards/timing_runs/dev_1/guard.json",
+   "sha256": "0e3f3d28eaccba303f335bfae4dacbbf7a9187dee9b5053ea513b40d29d2aa9d",
+   "output": "build/gap_eval/final_r3/guards/timing_runs/dev_1/guard.txt",
+   "exitCode": 0,
+   "warmRatio": 1.2629099133056916,
+   "firstRatio": 0.9728796213381092,
+   "startedAt": "2026-11-21T16:06:38.338454",
+   "finishedAt": "2026-11-21T16:07:24.930642"
+  },
+  {
+   "run": 2,
+   "file": "build/gap_eval/final_r3/guards/timing_runs/dev_2/guard.json",
+   "sha256": "96c0df1b49819963f86183acb3bfac314c3a13c1314f85cdece91a378280d2a7",
+   "output": "build/gap_eval/final_r3/guards/timing_runs/dev_2/guard.txt",
+   "exitCode": 0,
+   "warmRatio": 1.4262125902992777,
+   "firstRatio": 0.9968571174429983,
+   "startedAt": "2026-11-21T16:07:24.930642",
+   "finishedAt": "2026-11-21T16:08:10.400262"
+  },
+  {
+   "run": 3,
+   "file": "build/gap_eval/final_r3/guards/timing_runs/dev_3/guard.json",
+   "sha256": "56da4ae7e8fe131e8b412b49f266b4fb0a3b459f2ba58064055a3965aa9055f0",
+   "output": "build/gap_eval/final_r3/guards/timing_runs/dev_3/guard.txt",
+   "exitCode": 0,
+   "warmRatio": 1.0980707395498392,
+   "firstRatio": 0.9542693734785999,
+   "startedAt": "2026-11-21T16:08:10.400262",
+   "finishedAt": "2026-11-21T16:08:56.330922"
+  },
+  {
+   "run": 4,
+   "file": "build/gap_eval/final_r3/guards/timing_runs/dev_4/guard.json",
+   "sha256": "4cb79db59a43766be0ffc8563a84bb6010dbf80cf2bc1f7e1f3e7556dad65851",
+   "output": "build/gap_eval/final_r3/guards/timing_runs/dev_4/guard.txt",
+   "exitCode": 0,
+   "warmRatio": 1.1130298273155417,
+   "firstRatio": 1.0423846540360004,
+   "startedAt": "2026-11-21T16:08:56.330922",
+   "finishedAt": "2026-11-21T16:09:42.683152"
+  },
+  {
+   "run": 5,
+   "file": "build/gap_eval/final_r3/guards/timing_runs/dev_5/guard.json",
+   "sha256": "b5a39c8996e6b87b4c56fe309e019700315968016a1dd03032559ed37cc3204a",
+   "output": "build/gap_eval/final_r3/guards/timing_runs/dev_5/guard.txt",
+   "exitCode": 0,
+   "warmRatio": 1.2157905502147677,
+   "firstRatio": 1.0917823722637812,
+   "startedAt": "2026-11-21T16:09:42.683152",
+   "finishedAt": "2026-11-21T16:10:27.309093"
+  }
+ ],
+ "warmRatios": [
+  1.2629099133056916,
+  1.4262125902992777,
+  1.0980707395498392,
+  1.1130298273155417,
+  1.2157905502147677
+ ],
+ "firstRatios": [
+  0.9728796213381092,
+  0.9968571174429983,
+  0.9542693734785999,
+  1.0423846540360004,
+  1.0917823722637812
+ ],
+ "warmMedian": 1.2157905502147677,
+ "firstMedian": 0.9968571174429983,
+ "warmLimit": 2.0,
+ "firstLimit": 1.1,
+ "comparedAt": "full precision",
+ "personaSameAsGuard": true,
+ "stopReason": null,
+ "status": "pass"
+}

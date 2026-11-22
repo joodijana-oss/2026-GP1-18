@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "REST APIs",
+  "Git",
+  "SQL",
+  "React",
+  "Node.js",
+  "Java",
+  "Spring Boot",
+  "Docker",
+  "Linux",
+  "Microservices Architecture",
+  "Kubernetes",
+  "Python"
+ ],
+ "answer": [
+  {
+   "skill": "REST APIs",
+   "status": "shown",
+   "quote": "public interface that the mobile apps and partner sites call"
+  },
+  {
+   "skill": "Git",
+   "status": "shown",
+   "quote": "Python, Django, PostgreSQL, Docker, Git, Redis"
+  },
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "Rewrote the three slowest queries and added indexes"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Java",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "shown",
+   "quote": "each merge is built into a Docker image"
+  },
+  {
+   "skill": "Linux",
+   "status": "shown",
+   "quote": "rolled out to our two rented Ubuntu servers with no downtime"
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "partly",
+   "quote": "separate small service that listens on a message queue"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "written in Python (Django) on PostgreSQL"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "case": "ho_07",
+ "arm": "G0E1",
+ "run": 3,
+ "gaps": [
+  "Ansible",
+  "Linux Administration",
+  "Azure"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

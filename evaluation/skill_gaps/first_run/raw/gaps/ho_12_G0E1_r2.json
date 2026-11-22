@@ -1,0 +1,20 @@
+{
+ "case": "ho_12",
+ "arm": "G0E1",
+ "run": 2,
+ "gaps": [
+  "Cybersecurity Risk Register Management",
+  "CISA",
+  "CISM",
+  "CRISC",
+  "NIST",
+  "PCI DSS",
+  "Third-Party Risk Management",
+  "CISSP"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

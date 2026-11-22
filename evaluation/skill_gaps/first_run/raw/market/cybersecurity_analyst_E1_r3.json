@@ -1,0 +1,34 @@
+{
+ "goal": "cybersecurity_analyst",
+ "extractor": "E1",
+ "run": 3,
+ "postings": 20,
+ "rawNames": [
+  "SIEM",
+  "Penetration Testing",
+  "Vulnerability Assessment",
+  "Incident Response",
+  "Firewall Administration",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Security+",
+  "Nmap",
+  "Metasploit",
+  "Python"
+ ],
+ "names": [
+  "SIEM",
+  "Penetration Testing",
+  "Vulnerability Assessment",
+  "Incident Response",
+  "Firewall Administration",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Security+",
+  "Nmap",
+  "Metasploit",
+  "Python"
+ ]
+}

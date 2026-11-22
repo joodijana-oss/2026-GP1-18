@@ -1,0 +1,201 @@
+OPPORTUNITY RECOMMENDER EVALUATION
+Evaluation date : 2026-11-19 (fixed)
+Catalogue       : 430 opportunities, 420 open on that date
+Personas        : 8 (test/fixtures/opportunity_eval_personas.json)
+Note            : these personas are a development set. They were seen while the ranking was designed and reviewed, so the
+                  numbers are optimistic. Differences of about 0.02 between systems are noise at this sample size.
+
+persona_data_analyst  (Beginner, 7 gaps, 43 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.951     0.911    -0.040
+  GapCov@10                  1.000     1.000    +0.000
+  Ties@10                       10         0       -10
+  TopGapRank                     2         1        -1
+  Goal-only above gap            8         0        -8
+
+persona_cybersecurity_analyst  (Intermediate, 7 gaps, 23 labels, labels allow GapCov 0.86)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.735     0.840    +0.104
+  GapCov@10                  0.857     0.857    +0.000
+  Ties@10                        6         0        -6
+  TopGapRank                     1         1        +0
+  Goal-only above gap           17         0       -17
+
+persona_software_engineer  (Beginner, 8 gaps, 39 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.606     0.798    +0.192
+  GapCov@10                  0.500     1.000    +0.500
+  Ties@10                        8         0        -8
+  TopGapRank                     1         1        +0
+  Goal-only above gap           15         0       -15
+
+persona_cloud_devops_engineer  (Advanced, 7 gaps, 14 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.872     0.863    -0.009
+  GapCov@10                  1.000     1.000    +0.000
+  Ties@10                        6         0        -6
+  TopGapRank                     1         1        +0
+  Goal-only above gap           14         0       -14
+
+persona_ui_ux_designer  (No Experience, 7 gaps, 15 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.869     0.837    -0.031
+  GapCov@10                  1.000     1.000    +0.000
+  Ties@10                        9         0        -9
+  TopGapRank                     1         1        +0
+  Goal-only above gap            8         0        -8
+
+persona_network_engineer  (Intermediate, 7 gaps, 22 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        0.800     1.000    +0.200
+  nDCG@10                    0.420     0.746    +0.325
+  GapCov@10                  0.714     0.857    +0.143
+  Ties@10                        6         0        -6
+  TopGapRank                     5         1        -4
+  Goal-only above gap            4         0        -4
+
+persona_ai_ml_engineer  (Advanced, 7 gaps, 16 labels, labels allow GapCov 1.00)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.859     0.899    +0.040
+  GapCov@10                  1.000     1.000    +0.000
+  Ties@10                        6         0        -6
+  TopGapRank                     1         1        +0
+  Goal-only above gap           13         0       -13
+
+persona_database_administrator  (Beginner, 8 gaps, 14 labels, labels allow GapCov 0.75)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.817     0.805    -0.011
+  GapCov@10                  0.750     0.750    +0.000
+  Ties@10                        6         0        -6
+  TopGapRank                     2         3        +1
+  Goal-only above gap            9         0        -9
+
+NDCG@10 PER PERSONA
+  Persona                             Baseline       New    Change
+  persona_data_analyst                   0.951     0.911    -0.040
+  persona_cybersecurity_analyst          0.735     0.840    +0.104
+  persona_software_engineer              0.606     0.798    +0.192
+  persona_cloud_devops_engineer          0.872     0.863    -0.009
+  persona_ui_ux_designer                 0.869     0.837    -0.031
+  persona_network_engineer               0.420     0.746    +0.325
+  persona_ai_ml_engineer                 0.859     0.899    +0.040
+  persona_database_administrator         0.817     0.805    -0.011
+  Average                                0.766     0.837    +0.071
+  New is better for 4, the same for 0 and worse for 4 of 8 personas.
+
+GAPCOV@10 PER PERSONA
+  Persona                             Baseline       New    Change
+  persona_data_analyst                   1.000     1.000    +0.000
+  persona_cybersecurity_analyst          0.857     0.857    +0.000
+  persona_software_engineer              0.500     1.000    +0.500
+  persona_cloud_devops_engineer          1.000     1.000    +0.000
+  persona_ui_ux_designer                 1.000     1.000    +0.000
+  persona_network_engineer               0.714     0.857    +0.143
+  persona_ai_ml_engineer                 1.000     1.000    +0.000
+  persona_database_administrator         0.750     0.750    +0.000
+  Average                                0.853     0.933    +0.080
+  New is better for 2, the same for 6 and worse for 0 of 8 personas.
+
+AVERAGE OVER 8 PERSONAS
+                          Baseline       New    Change
+  nDCG@10                    0.766     0.837    +0.071
+  GapCov@10                  0.853     0.933    +0.080
+  TopGapRank                 1.750     1.250    -0.500
+  P@5 (sanity check)         0.975     1.000    +0.025
+  Ties@10                    7.125     0.000    -7.125
+  Goal-only above gap       11.000     0.000   -11.000
+  (TopGapRank: rank of the first result that teaches the most demanded gap; lower is better. Ties and
+   goal-only-above-gap: lower is better. P@5 is close to its maximum for both systems, so it says little.)
+
+Rankings identical to baseline: 0/8 personas
+
+TIMING (this computer; a JIT run of this script is slower than a release build, debug mode on an emulator is slower still)
+  Build the index once per opportunity list (median of 5)        : 28.0 ms
+  First recommend() on a new list, first persona (includes the build): 64.6 ms
+  First recommend() on a new list, realistic profile (12 gaps, 25 current skills, median of 5): 57.6 ms
+  recommend() for a new user, index already built (median)     : 7.11 ms
+  recommend() repeated, New      (median of 240 calls)        : 0.79 ms   (slowest 8.50 ms)
+  recommend() repeated, Baseline (median of 240 calls)        : 155.03 ms
+  The app calls recommendInBackground():
+    new list, builds the index on a background isolate, wall time (median of 3): 46.0 ms
+    same list, same user again, runs here on the kept index (median of 30): 0.84 ms   (slowest 2.70 ms)
+    same list, a user not seen before, runs here on the kept index (median of 24): 1.86 ms   (slowest 6.53 ms)
+    index built in the background kept and reused, never built again for the same list: yes
+  The index is built once per list: when the screen first opens, and once after each pull to refresh or retry, which loads a new list.
+
+MEANING LINKS, PERSONA GUARD, approach B/10/10/bt (average over 8 personas)
+                              nDCG@10  GapCov@10     P@5  TopGapRank  Changed  New, no label
+  Without links (New above)     0.837      0.933   1.000        1.25
+  links run 1                   0.837      0.933   1.000        1.25      2/8              0
+  links run 2                   0.837      0.933   1.000        1.25      2/8              0
+  links run 3                   0.837      0.933   1.000        1.25      2/8              0
+  links, mean of 3 runs         0.837      0.933   1.000        1.25
+  An analysis without links gives the ranking above with this setting: yes
+  links (mean of the runs), not worse than without links on all four numbers:
+    at full precision, tolerance 0 : NO
+    at 3 decimals, tolerance 0     : yes
+    with the best labels for the 0 unlabelled new items, precision 3 decimals, tolerance 0: yes
+    with a tolerance of 0.02, full precision (not in force): yes
+  Differences to without links (mean of the runs): nDCG@10 -0.0005, GapCov@10 0.0000, P@5 0.0000, TopGapRank 0.0000
+  (Changed: personas whose ranking differs from the one without links. New, no label: opportunities that
+   entered the first 10 and that no tester labelled; they count as not relevant until they are labelled.)
+  Compared at 3 decimals (nDCG@10 / GapCov@10 / P@5 / TopGapRank): links 0.837 / 0.933 / 1.000 / 1.250, without links 0.837 / 0.933 / 1.000 / 1.250
+  PERSONA GUARD (precision 3 decimals, tolerance 0): pass
+
+CERTIFICATIONS PER PERSONA, without and with links
+  persona_data_analyst
+    without links : ibm_coursera_ibm_data_analyst, google_coursera_google_business_intelligence, google_coursera_google_data_analytics, ibm_coursera_ibm_data_science, freecodecamp_fcc_data_analysis_python, python_institute_pced, google_cloud_adp, databricks_databricks_data_analyst, microsoft_dp_600, microsoft_dp_700, microsoft_pl_300, python_institute_pcad, tableau_salesforce_tableau_data_analyst, comptia_data, freecodecamp_fcc_data_visualization, freecodecamp_fcc_scientific_computing_python, microsoft_dp_900, nvidia_nca_ads, python_institute_pcep, aws_aws_data_engineer_associate, google_coursera_google_advanced_data_analytics, oracle_oracle_sql_associate, snowflake_snowpro_core, google_cloud_pde
+    links run 1   : ibm_coursera_ibm_data_analyst, google_coursera_google_business_intelligence, google_coursera_google_data_analytics, ibm_coursera_ibm_data_science, freecodecamp_fcc_data_analysis_python, python_institute_pced, google_cloud_adp, databricks_databricks_data_analyst, microsoft_dp_600, microsoft_dp_700, microsoft_pl_300, python_institute_pcad, tableau_salesforce_tableau_data_analyst, comptia_data, freecodecamp_fcc_data_visualization, freecodecamp_fcc_scientific_computing_python, microsoft_dp_900, nvidia_nca_ads, python_institute_pcep, aws_aws_data_engineer_associate, google_coursera_google_advanced_data_analytics, oracle_oracle_sql_associate, snowflake_snowpro_core, google_cloud_pde
+    links run 2   : ibm_coursera_ibm_data_analyst, google_coursera_google_business_intelligence, google_coursera_google_data_analytics, ibm_coursera_ibm_data_science, freecodecamp_fcc_data_analysis_python, python_institute_pced, google_cloud_adp, databricks_databricks_data_analyst, microsoft_dp_600, microsoft_dp_700, microsoft_pl_300, python_institute_pcad, tableau_salesforce_tableau_data_analyst, comptia_data, freecodecamp_fcc_data_visualization, freecodecamp_fcc_scientific_computing_python, microsoft_dp_900, nvidia_nca_ads, python_institute_pcep, aws_aws_data_engineer_associate, google_coursera_google_advanced_data_analytics, oracle_oracle_sql_associate, snowflake_snowpro_core, google_cloud_pde
+    links run 3   : ibm_coursera_ibm_data_analyst, google_coursera_google_business_intelligence, google_coursera_google_data_analytics, ibm_coursera_ibm_data_science, freecodecamp_fcc_data_analysis_python, python_institute_pced, google_cloud_adp, databricks_databricks_data_analyst, microsoft_dp_600, microsoft_dp_700, microsoft_pl_300, python_institute_pcad, tableau_salesforce_tableau_data_analyst, comptia_data, freecodecamp_fcc_data_visualization, freecodecamp_fcc_scientific_computing_python, microsoft_dp_900, nvidia_nca_ads, python_institute_pcep, aws_aws_data_engineer_associate, google_coursera_google_advanced_data_analytics, oracle_oracle_sql_associate, snowflake_snowpro_core, google_cloud_pde
+  persona_cybersecurity_analyst
+    without links : isaca_ccoa, ec_council_csa, comptia_cysa, giac_gced, giac_gcia, ec_council_ceh, ec_council_cnd, ec_council_ctia, comptia_pentest, ec_council_ecih, giac_gcih, giac_gpen, giac_gsec, microsoft_sc_200, offsec_osda, offsec_oswp, isc2_sscp, ec_council_cpent, giac_grtp, google_coursera_google_cybersecurity_certificate, offsec_oscp, offsec_osep, offsec_osth, comptia_security, ec_council_chfi, giac_gwapt, offsec_oswa, ec_council_cct, cisco_ccnp_cybersecurity, giac_gcfa, isc2_cc, offsec_osed, offsec_osee, offsec_osir, offsec_oswe, google_cloud_psoe, cisco_ccna_cybersecurity, fortinet_fcp_network_security, fortinet_fcp_public_cloud_security, fortinet_fcp_security_operations, giac_gcfe, giac_gcld, giac_gicsp, hashicorp_ibm_vault_associate, huawei_hcip_security, juniper_networks_hpe_jncia_sec, juniper_networks_hpe_jncis_sec, palo_alto_networks_network_security_professional, aws_aws_security_specialty, isaca_cism, isc2_cissp, linux_foundation_cncf_cks, cwnp_cwsp, cisco_ccie_security, cisco_ccnp_security, cisco_ccst_cybersecurity, comptia_securityx, fortinet_fca, fortinet_fcf, fortinet_fcss_network_security, fortinet_fcss_security_operations, huawei_hcia_security, isc2_issap, juniper_networks_hpe_jncip_sec, linux_foundation_cncf_kcsa, linux_professional_institute_lpi_lpic_3_303, palo_alto_networks_ngfw_engineer
+    links run 1   : isaca_ccoa, ec_council_csa, comptia_cysa, giac_gced, giac_gcia, ec_council_ceh, ec_council_cnd, ec_council_ctia, comptia_pentest, ec_council_ecih, giac_gcih, giac_gpen, giac_gsec, microsoft_sc_200, offsec_osda, offsec_oswp, isc2_sscp, ec_council_cpent, giac_grtp, google_coursera_google_cybersecurity_certificate, offsec_oscp, offsec_osep, offsec_osth, comptia_security, ec_council_chfi, giac_gwapt, offsec_oswa, ec_council_cct, cisco_ccnp_cybersecurity, giac_gcfa, isc2_cc, offsec_osed, offsec_osee, offsec_osir, offsec_oswe, google_cloud_psoe, cisco_ccna_cybersecurity, fortinet_fcp_network_security, fortinet_fcp_public_cloud_security, fortinet_fcp_security_operations, giac_gcfe, giac_gcld, giac_gicsp, hashicorp_ibm_vault_associate, huawei_hcip_security, juniper_networks_hpe_jncia_sec, juniper_networks_hpe_jncis_sec, palo_alto_networks_network_security_professional, aws_aws_security_specialty, isaca_cism, isc2_cissp, linux_foundation_cncf_cks, cwnp_cwsp, cisco_ccie_security, cisco_ccnp_security, cisco_ccst_cybersecurity, comptia_securityx, fortinet_fca, fortinet_fcf, fortinet_fcss_network_security, fortinet_fcss_security_operations, huawei_hcia_security, isc2_issap, juniper_networks_hpe_jncip_sec, linux_foundation_cncf_kcsa, linux_professional_institute_lpi_lpic_3_303, palo_alto_networks_ngfw_engineer
+    links run 2   : isaca_ccoa, ec_council_csa, comptia_cysa, giac_gced, giac_gcia, ec_council_ceh, ec_council_cnd, ec_council_ctia, comptia_pentest, ec_council_ecih, giac_gcih, giac_gpen, giac_gsec, microsoft_sc_200, offsec_osda, offsec_oswp, isc2_sscp, ec_council_cpent, giac_grtp, google_coursera_google_cybersecurity_certificate, offsec_oscp, offsec_osep, offsec_osth, comptia_security, ec_council_chfi, giac_gwapt, offsec_oswa, ec_council_cct, cisco_ccnp_cybersecurity, giac_gcfa, isc2_cc, offsec_osed, offsec_osee, offsec_osir, offsec_oswe, google_cloud_psoe, cisco_ccna_cybersecurity, fortinet_fcp_network_security, fortinet_fcp_public_cloud_security, fortinet_fcp_security_operations, giac_gcfe, giac_gcld, giac_gicsp, hashicorp_ibm_vault_associate, huawei_hcip_security, juniper_networks_hpe_jncia_sec, juniper_networks_hpe_jncis_sec, palo_alto_networks_network_security_professional, aws_aws_security_specialty, isaca_cism, isc2_cissp, linux_foundation_cncf_cks, cwnp_cwsp, cisco_ccie_security, cisco_ccnp_security, cisco_ccst_cybersecurity, comptia_securityx, fortinet_fca, fortinet_fcf, fortinet_fcss_network_security, fortinet_fcss_security_operations, huawei_hcia_security, isc2_issap, juniper_networks_hpe_jncip_sec, linux_foundation_cncf_kcsa, linux_professional_institute_lpi_lpic_3_303, palo_alto_networks_ngfw_engineer
+    links run 3   : isaca_ccoa, ec_council_csa, comptia_cysa, giac_gced, giac_gcia, ec_council_ceh, ec_council_cnd, ec_council_ctia, comptia_pentest, ec_council_ecih, giac_gcih, giac_gpen, giac_gsec, microsoft_sc_200, offsec_osda, offsec_oswp, isc2_sscp, ec_council_cpent, giac_grtp, google_coursera_google_cybersecurity_certificate, offsec_oscp, offsec_osep, offsec_osth, comptia_security, ec_council_chfi, giac_gwapt, offsec_oswa, ec_council_cct, cisco_ccnp_cybersecurity, giac_gcfa, isc2_cc, offsec_osed, offsec_osee, offsec_osir, offsec_oswe, google_cloud_psoe, cisco_ccna_cybersecurity, fortinet_fcp_network_security, fortinet_fcp_public_cloud_security, fortinet_fcp_security_operations, giac_gcfe, giac_gcld, giac_gicsp, hashicorp_ibm_vault_associate, huawei_hcip_security, juniper_networks_hpe_jncia_sec, juniper_networks_hpe_jncis_sec, palo_alto_networks_network_security_professional, aws_aws_security_specialty, isaca_cism, isc2_cissp, linux_foundation_cncf_cks, cwnp_cwsp, cisco_ccie_security, cisco_ccnp_security, cisco_ccst_cybersecurity, comptia_securityx, fortinet_fca, fortinet_fcf, fortinet_fcss_network_security, fortinet_fcss_security_operations, huawei_hcia_security, isc2_issap, juniper_networks_hpe_jncip_sec, linux_foundation_cncf_kcsa, linux_professional_institute_lpi_lpic_3_303, palo_alto_networks_ngfw_engineer
+  persona_software_engineer
+    without links : ibm_coursera_ibm_devops_and_swe, aws_aws_devops_engineer_professional, istqb_ctal_tae, oracle_oci_developer_professional, google_cloud_pcd, github_microsoft_github_foundations, ibm_coursera_ibm_full_stack, istqb_ctfl, meta_coursera_meta_android, meta_coursera_meta_back_end, meta_coursera_meta_ios, nvidia_nca_amad, python_institute_pcet, freecodecamp_fcc_back_end_and_apis, aws_aws_developer_associate, linux_foundation_cncf_ckad, cisco_ccna_automation, databricks_databricks_context_engineering, databricks_databricks_genai_associate, github_microsoft_github_actions, github_microsoft_github_advanced_security, microsoft_ai_103, microsoft_ai_200, mongodb_mongodb_associate_developer, oracle_ocp_java_se_17, sap_sap_integration_developer, aws_aws_genai_developer_professional, cisco_ccnp_automation, istqb_ctal_tta, microsoft_az_400, nvidia_ncp_aai, python_institute_pcpp1
+    links run 1   : ibm_coursera_ibm_devops_and_swe, aws_aws_devops_engineer_professional, istqb_ctal_tae, oracle_oci_developer_professional, google_cloud_pcd, github_microsoft_github_foundations, ibm_coursera_ibm_full_stack, istqb_ctfl, meta_coursera_meta_android, meta_coursera_meta_back_end, meta_coursera_meta_ios, nvidia_nca_amad, python_institute_pcet, freecodecamp_fcc_back_end_and_apis, aws_aws_developer_associate, linux_foundation_cncf_ckad, cisco_ccna_automation, databricks_databricks_context_engineering, databricks_databricks_genai_associate, github_microsoft_github_actions, github_microsoft_github_advanced_security, microsoft_ai_103, microsoft_ai_200, mongodb_mongodb_associate_developer, oracle_ocp_java_se_17, sap_sap_integration_developer, aws_aws_genai_developer_professional, cisco_ccnp_automation, istqb_ctal_tta, microsoft_az_400, nvidia_ncp_aai, python_institute_pcpp1
+    links run 2   : ibm_coursera_ibm_devops_and_swe, aws_aws_devops_engineer_professional, istqb_ctal_tae, oracle_oci_developer_professional, google_cloud_pcd, github_microsoft_github_foundations, ibm_coursera_ibm_full_stack, istqb_ctfl, meta_coursera_meta_android, meta_coursera_meta_back_end, meta_coursera_meta_ios, nvidia_nca_amad, python_institute_pcet, freecodecamp_fcc_back_end_and_apis, aws_aws_developer_associate, linux_foundation_cncf_ckad, cisco_ccna_automation, databricks_databricks_context_engineering, databricks_databricks_genai_associate, github_microsoft_github_actions, github_microsoft_github_advanced_security, microsoft_ai_103, microsoft_ai_200, mongodb_mongodb_associate_developer, oracle_ocp_java_se_17, sap_sap_integration_developer, aws_aws_genai_developer_professional, cisco_ccnp_automation, istqb_ctal_tta, microsoft_az_400, nvidia_ncp_aai, python_institute_pcpp1
+    links run 3   : ibm_coursera_ibm_devops_and_swe, aws_aws_devops_engineer_professional, istqb_ctal_tae, oracle_oci_developer_professional, google_cloud_pcd, github_microsoft_github_foundations, ibm_coursera_ibm_full_stack, istqb_ctfl, meta_coursera_meta_android, meta_coursera_meta_back_end, meta_coursera_meta_ios, nvidia_nca_amad, python_institute_pcet, freecodecamp_fcc_back_end_and_apis, aws_aws_developer_associate, linux_foundation_cncf_ckad, cisco_ccna_automation, databricks_databricks_context_engineering, databricks_databricks_genai_associate, github_microsoft_github_actions, github_microsoft_github_advanced_security, microsoft_ai_103, microsoft_ai_200, mongodb_mongodb_associate_developer, oracle_ocp_java_se_17, sap_sap_integration_developer, aws_aws_genai_developer_professional, cisco_ccnp_automation, istqb_ctal_tta, microsoft_az_400, nvidia_ncp_aai, python_institute_pcpp1
+  persona_cloud_devops_engineer
+    without links : aws_aws_devops_engineer_professional, linux_foundation_cncf_cks, microsoft_az_400, google_cloud_pcde, red_hat_openshift_administration, linux_foundation_cncf_cka, linux_foundation_cncf_ckad, linux_professional_institute_lpi_devops_tools_engineer, linux_foundation_cncf_kcna, linux_foundation_cncf_kcsa, cisco_ccie_automation, cisco_ccnp_automation, hashicorp_ibm_terraform_professional, linux_professional_institute_lpi_lpic_3_305, microsoft_az_120, microsoft_az_305, microsoft_az_140, oracle_oci_developer_professional, google_cloud_pcd, red_hat_rhce, google_cloud_google_associate_cloud_engineer, cisco_ccna_automation, comptia_linux, github_microsoft_github_actions, github_microsoft_github_advanced_security, hashicorp_ibm_terraform_associate, huawei_hcip_cloud_service, microsoft_az_104, microsoft_ai_200, microsoft_dp_300, microsoft_azure_network_engineer, microsoft_cloud_and_ai_security_engineer, microsoft_ai_300, huawei_hcia_cloud_service, ibm_coursera_ibm_devops_and_swe, microsoft_az_900
+    links run 1   : aws_aws_devops_engineer_professional, linux_foundation_cncf_cks, microsoft_az_400, google_cloud_pcde, red_hat_openshift_administration, linux_foundation_cncf_cka, linux_foundation_cncf_ckad, linux_professional_institute_lpi_devops_tools_engineer, linux_foundation_cncf_kcna, linux_foundation_cncf_kcsa, cisco_ccie_automation, cisco_ccnp_automation, hashicorp_ibm_terraform_professional, linux_professional_institute_lpi_lpic_3_305, microsoft_az_120, microsoft_az_305, microsoft_az_140, oracle_oci_developer_professional, google_cloud_pcd, red_hat_rhce, google_cloud_google_associate_cloud_engineer, cisco_ccna_automation, comptia_linux, github_microsoft_github_actions, github_microsoft_github_advanced_security, hashicorp_ibm_terraform_associate, huawei_hcip_cloud_service, microsoft_az_104, microsoft_ai_200, microsoft_dp_300, microsoft_azure_network_engineer, microsoft_cloud_and_ai_security_engineer, microsoft_ai_300, huawei_hcia_cloud_service, ibm_coursera_ibm_devops_and_swe, microsoft_az_900
+    links run 2   : aws_aws_devops_engineer_professional, linux_foundation_cncf_cks, microsoft_az_400, google_cloud_pcde, red_hat_openshift_administration, linux_foundation_cncf_cka, linux_foundation_cncf_ckad, linux_professional_institute_lpi_devops_tools_engineer, linux_foundation_cncf_kcna, linux_foundation_cncf_kcsa, cisco_ccie_automation, cisco_ccnp_automation, hashicorp_ibm_terraform_professional, linux_professional_institute_lpi_lpic_3_305, microsoft_az_120, microsoft_az_305, microsoft_az_140, oracle_oci_developer_professional, google_cloud_pcd, red_hat_rhce, google_cloud_google_associate_cloud_engineer, cisco_ccna_automation, comptia_linux, github_microsoft_github_actions, github_microsoft_github_advanced_security, hashicorp_ibm_terraform_associate, huawei_hcip_cloud_service, microsoft_az_104, microsoft_ai_200, microsoft_dp_300, microsoft_azure_network_engineer, microsoft_cloud_and_ai_security_engineer, microsoft_ai_300, huawei_hcia_cloud_service, ibm_coursera_ibm_devops_and_swe, microsoft_az_900
+    links run 3   : aws_aws_devops_engineer_professional, linux_foundation_cncf_cks, microsoft_az_400, google_cloud_pcde, red_hat_openshift_administration, linux_foundation_cncf_cka, linux_foundation_cncf_ckad, linux_professional_institute_lpi_devops_tools_engineer, linux_foundation_cncf_kcna, linux_foundation_cncf_kcsa, cisco_ccie_automation, cisco_ccnp_automation, hashicorp_ibm_terraform_professional, linux_professional_institute_lpi_lpic_3_305, microsoft_az_120, microsoft_az_305, microsoft_az_140, oracle_oci_developer_professional, google_cloud_pcd, red_hat_rhce, google_cloud_google_associate_cloud_engineer, cisco_ccna_automation, comptia_linux, github_microsoft_github_actions, github_microsoft_github_advanced_security, hashicorp_ibm_terraform_associate, huawei_hcip_cloud_service, microsoft_az_104, microsoft_ai_200, microsoft_dp_300, microsoft_azure_network_engineer, microsoft_cloud_and_ai_security_engineer, microsoft_ai_300, huawei_hcia_cloud_service, ibm_coursera_ibm_devops_and_swe, microsoft_az_900
+  persona_ui_ux_designer
+    without links : google_coursera_google_ux_design, istqb_ct_ut, nielsen_norman_group_nn_g_ux_certification, adobe_certiport_acp_visual_design
+    links run 1   : google_coursera_google_ux_design, istqb_ct_ut, nielsen_norman_group_nn_g_ux_certification, adobe_certiport_acp_visual_design
+    links run 2   : google_coursera_google_ux_design, istqb_ct_ut, nielsen_norman_group_nn_g_ux_certification, adobe_certiport_acp_visual_design
+    links run 3   : google_coursera_google_ux_design, istqb_ct_ut, nielsen_norman_group_nn_g_ux_certification, adobe_certiport_acp_visual_design
+  persona_network_engineer
+    without links : cisco_ccna, cisco_ccnp_enterprise, cisco_ccie_security, cisco_ccie_enterprise_wireless, cisco_ccna_cybersecurity, comptia_network, fortinet_fcp_network_security, huawei_hcip_security, juniper_networks_hpe_jncis_sec, palo_alto_networks_network_security_professional, cwnp_cwsp, cisco_ccnp_security, fortinet_fcss_network_security, juniper_networks_hpe_jncip_sec, palo_alto_networks_ngfw_engineer, ec_council_cnd, comptia_security, juniper_networks_hpe_jncia_sec, offsec_oswp, isc2_sscp, ec_council_cct, cisco_ccie_enterprise_infrastructure, fortinet_fca, giac_gcia, huawei_hcia_security, huawei_hcie_datacom, cwnp_cwna, cwnp_cwap, cwnp_cwdp, cisco_cct_r_s, cisco_ccie_service_provider, cisco_ccnp_collaboration, cisco_ccnp_service_provider, juniper_networks_hpe_jncip_ent, cisco_ccna_automation, juniper_networks_hpe_jncia_junos, juniper_networks_hpe_jncis_ent, microsoft_azure_network_engineer, cisco_ccie_automation, cisco_ccnp_automation, cisco_ccnp_data_center, cisco_ccst_networking, huawei_hcia_datacom
+    links run 1   : cisco_ccna, cisco_ccnp_enterprise, cisco_ccie_security, cisco_ccie_enterprise_wireless, cisco_ccna_cybersecurity, comptia_network, fortinet_fcp_network_security, huawei_hcip_security, juniper_networks_hpe_jncis_sec, palo_alto_networks_network_security_professional, cwnp_cwsp, cisco_ccnp_security, fortinet_fcss_network_security, juniper_networks_hpe_jncip_sec, palo_alto_networks_ngfw_engineer, ec_council_cnd, comptia_security, juniper_networks_hpe_jncia_sec, offsec_oswp, isc2_sscp, ec_council_cct, cisco_ccie_enterprise_infrastructure, fortinet_fca, giac_gcia, huawei_hcia_security, huawei_hcie_datacom, cwnp_cwna, cwnp_cwap, cwnp_cwdp, cisco_cct_r_s, cisco_ccie_service_provider, cisco_ccnp_collaboration, cisco_ccnp_service_provider, juniper_networks_hpe_jncip_ent, cisco_ccna_automation, juniper_networks_hpe_jncia_junos, juniper_networks_hpe_jncis_ent, microsoft_azure_network_engineer, cisco_ccie_automation, cisco_ccnp_automation, cisco_ccnp_data_center, cisco_ccst_networking, huawei_hcia_datacom
+    links run 2   : cisco_ccna, cisco_ccnp_enterprise, cisco_ccie_security, cisco_ccie_enterprise_wireless, cisco_ccna_cybersecurity, comptia_network, fortinet_fcp_network_security, huawei_hcip_security, juniper_networks_hpe_jncis_sec, palo_alto_networks_network_security_professional, cwnp_cwsp, cisco_ccnp_security, fortinet_fcss_network_security, juniper_networks_hpe_jncip_sec, palo_alto_networks_ngfw_engineer, ec_council_cnd, comptia_security, juniper_networks_hpe_jncia_sec, offsec_oswp, isc2_sscp, ec_council_cct, cisco_ccie_enterprise_infrastructure, fortinet_fca, giac_gcia, huawei_hcia_security, huawei_hcie_datacom, cwnp_cwna, cwnp_cwap, cwnp_cwdp, cisco_cct_r_s, cisco_ccie_service_provider, cisco_ccnp_collaboration, cisco_ccnp_service_provider, juniper_networks_hpe_jncip_ent, cisco_ccna_automation, juniper_networks_hpe_jncia_junos, juniper_networks_hpe_jncis_ent, microsoft_azure_network_engineer, cisco_ccie_automation, cisco_ccnp_automation, cisco_ccnp_data_center, cisco_ccst_networking, huawei_hcia_datacom
+    links run 3   : cisco_ccna, cisco_ccnp_enterprise, cisco_ccie_security, cisco_ccie_enterprise_wireless, cisco_ccna_cybersecurity, comptia_network, fortinet_fcp_network_security, huawei_hcip_security, juniper_networks_hpe_jncis_sec, palo_alto_networks_network_security_professional, cwnp_cwsp, cisco_ccnp_security, fortinet_fcss_network_security, juniper_networks_hpe_jncip_sec, palo_alto_networks_ngfw_engineer, ec_council_cnd, comptia_security, juniper_networks_hpe_jncia_sec, offsec_oswp, isc2_sscp, ec_council_cct, cisco_ccie_enterprise_infrastructure, fortinet_fca, giac_gcia, huawei_hcia_security, huawei_hcie_datacom, cwnp_cwna, cwnp_cwap, cwnp_cwdp, cisco_cct_r_s, cisco_ccie_service_provider, cisco_ccnp_collaboration, cisco_ccnp_service_provider, juniper_networks_hpe_jncip_ent, cisco_ccna_automation, juniper_networks_hpe_jncia_junos, juniper_networks_hpe_jncis_ent, microsoft_azure_network_engineer, cisco_ccie_automation, cisco_ccnp_automation, cisco_ccnp_data_center, cisco_ccst_networking, huawei_hcia_datacom
+  persona_ai_ml_engineer
+    without links : nvidia_ncp_genl, ibm_coursera_ibm_ai_engineering, nvidia_nca_genl, nvidia_nca_genm, oracle_oci_ai_foundations, huawei_hcia_ai, aws_aws_genai_developer_professional, databricks_databricks_ml_professional, nvidia_ncp_aii, google_cloud_pmle, freecodecamp_fcc_machine_learning_python, nvidia_nca_aiio, microsoft_ai_500, nvidia_ncp_aai, databricks_databricks_context_engineering, databricks_databricks_genai_associate, github_microsoft_github_copilot, microsoft_ai_103, microsoft_ai_200, microsoft_cosmos_db_ai_developer, microsoft_ai_300, aws_aws_ai_practitioner, google_cloud_google_generative_ai_leader, microsoft_ai_901, nvidia_nca_amad, oracle_oci_data_science_professional, aws_aws_ml_engineer_associate, istqb_ct_ai
+    links run 1   : nvidia_ncp_genl, ibm_coursera_ibm_ai_engineering, nvidia_nca_genl, nvidia_nca_genm, oracle_oci_ai_foundations, huawei_hcia_ai, aws_aws_genai_developer_professional, databricks_databricks_ml_professional, nvidia_ncp_aii, google_cloud_pmle, freecodecamp_fcc_machine_learning_python, nvidia_nca_aiio, microsoft_ai_500, nvidia_ncp_aai, databricks_databricks_context_engineering, databricks_databricks_genai_associate, github_microsoft_github_copilot, microsoft_ai_103, microsoft_ai_200, microsoft_cosmos_db_ai_developer, microsoft_ai_300, aws_aws_ai_practitioner, google_cloud_google_generative_ai_leader, microsoft_ai_901, nvidia_nca_amad, oracle_oci_data_science_professional, aws_aws_ml_engineer_associate, istqb_ct_ai
+    links run 2   : nvidia_ncp_genl, ibm_coursera_ibm_ai_engineering, nvidia_nca_genl, nvidia_nca_genm, oracle_oci_ai_foundations, huawei_hcia_ai, aws_aws_genai_developer_professional, databricks_databricks_ml_professional, nvidia_ncp_aii, google_cloud_pmle, freecodecamp_fcc_machine_learning_python, nvidia_nca_aiio, microsoft_ai_500, nvidia_ncp_aai, databricks_databricks_context_engineering, databricks_databricks_genai_associate, github_microsoft_github_copilot, microsoft_ai_103, microsoft_ai_200, microsoft_cosmos_db_ai_developer, microsoft_ai_300, aws_aws_ai_practitioner, google_cloud_google_generative_ai_leader, microsoft_ai_901, nvidia_nca_amad, oracle_oci_data_science_professional, aws_aws_ml_engineer_associate, istqb_ct_ai
+    links run 3   : nvidia_ncp_genl, ibm_coursera_ibm_ai_engineering, nvidia_nca_genl, nvidia_nca_genm, oracle_oci_ai_foundations, huawei_hcia_ai, aws_aws_genai_developer_professional, databricks_databricks_ml_professional, nvidia_ncp_aii, google_cloud_pmle, freecodecamp_fcc_machine_learning_python, nvidia_nca_aiio, microsoft_ai_500, nvidia_ncp_aai, databricks_databricks_context_engineering, databricks_databricks_genai_associate, github_microsoft_github_copilot, microsoft_ai_103, microsoft_ai_200, microsoft_cosmos_db_ai_developer, microsoft_ai_300, aws_aws_ai_practitioner, google_cloud_google_generative_ai_leader, microsoft_ai_901, nvidia_nca_amad, oracle_oci_data_science_professional, aws_aws_ml_engineer_associate, istqb_ct_ai
+  persona_database_administrator
+    without links : microsoft_dp_300, oracle_ocp_dba_19c, mongodb_mongodb_associate_dba, google_cloud_pcdbe, snowflake_snowpro_advanced_administrator, freecodecamp_fcc_relational_database, comptia_datasys, microsoft_sql_ai_developer
+    links run 1   : microsoft_dp_300, oracle_ocp_dba_19c, mongodb_mongodb_associate_dba, google_cloud_pcdbe, snowflake_snowpro_advanced_administrator, freecodecamp_fcc_relational_database, comptia_datasys, microsoft_sql_ai_developer
+    links run 2   : microsoft_dp_300, oracle_ocp_dba_19c, mongodb_mongodb_associate_dba, google_cloud_pcdbe, snowflake_snowpro_advanced_administrator, freecodecamp_fcc_relational_database, comptia_datasys, microsoft_sql_ai_developer
+    links run 3   : microsoft_dp_300, oracle_ocp_dba_19c, mongodb_mongodb_associate_dba, google_cloud_pcdbe, snowflake_snowpro_advanced_administrator, freecodecamp_fcc_relational_database, comptia_datasys, microsoft_sql_ai_developer
+  Lists without links equal the lists of this setting on personas without links: yes
+  (Skill gap, certification) pairs that only links attribute: 0
+
+TIMING GUARD (same process, 21 repetitions taking turns in ABBA order, medians; links run 1)
+  recommend() for all 8 personas, index built: today 5.31 ms, with links 6.70 ms, ratio 1.26 (limit 2.00): pass
+  first recommend() on a new list (builds the index): today 39.1 ms, with links 38.0 ms, ratio 0.97 (limit 1.10): pass
+  The ratios are compared at full precision: 1.2629 and 0.9729.
+
+Guard results written to build/gap_eval/final_r3/guards/timing_runs/dev_1/guard.json. It serves the frozen candidates B/10/10/bt, B/10/10/bt-opp.

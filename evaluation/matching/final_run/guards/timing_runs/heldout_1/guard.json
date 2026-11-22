@@ -1,0 +1,62 @@
+{
+ "freezeFile": "tools/gap_eval/freeze_r2.json",
+ "freezeSha256": "50b50b1e7f4d90681e1c6c00907981df12255687f4c4470ef6764ab051a917c5",
+ "approach": "B/10/10/bt",
+ "source": "typed",
+ "opportunities": "typed|true|0.1|true|false|false|true|true|false",
+ "certifications": "typed|true|0.1|true|false|false|true|true|false",
+ "personas": {
+  "path": "test/fixtures/opportunity_eval_personas_heldout.json",
+  "sha256": "cb01d1c6531d32ac29c476356834619fb2d03c0b0aa7a574610cfcb40d359dcd"
+ },
+ "links": {
+  "path": "build/gap_eval/persona_links/heldout_typed.json",
+  "sha256": "9616f29218536ec3cc102db046853b5a46e38fa9657dec4a9c248cc965b8b1a8"
+ },
+ "precision": 3,
+ "tolerance": 0,
+ "metrics": [
+  "nDCG@10",
+  "GapCov@10",
+  "P@5",
+  "TopGapRank"
+ ],
+ "today": [
+  0.8063412017282907,
+  0.75,
+  0.975,
+  1.5
+ ],
+ "withLinks": [
+  0.8115415856778451,
+  0.7760416666666666,
+  0.975,
+  1.5
+ ],
+ "todayWithBestLabels": [
+  0.8063412017282907,
+  0.75,
+  0.975,
+  1.5
+ ],
+ "withBestLabels": [
+  0.8207120759402651,
+  0.8229166666666666,
+  0.975,
+  1.5
+ ],
+ "linkRuns": 3,
+ "passesFullPrecision": true,
+ "passesThreeDecimals": true,
+ "unlabelled": 1,
+ "unlabelledItems": [
+  "heldout_it_project_manager: Introduction to Project Management (coursera_8EzOy7xZEe2oxw5qVgw_VQ)"
+ ],
+ "passesWithBestLabels": true,
+ "guardStatus": "pass",
+ "sameWithoutLinks": true,
+ "certificationListsSame": true,
+ "warmRatio": 1.035777273872512,
+ "firstRatio": 0.9975797840787756,
+ "timingPass": true
+}

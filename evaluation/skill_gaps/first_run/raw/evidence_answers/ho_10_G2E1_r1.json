@@ -1,0 +1,36 @@
+{
+ "targets": [
+  "Regression Testing",
+  "Functional Testing",
+  "API Testing",
+  "Appium",
+  "Scrum"
+ ],
+ "answer": [
+  {
+   "skill": "Regression Testing",
+   "status": "shown",
+   "quote": "re-run the 180 scenarios that cover existing features to make sure nothing that worked has broken"
+  },
+  {
+   "skill": "Functional Testing",
+   "status": "shown",
+   "quote": "Write step-by-step scenarios with expected results from user stories and acceptance criteria"
+  },
+  {
+   "skill": "API Testing",
+   "status": "shown",
+   "quote": "Send requests to the backend with Postman to confirm status codes and response bodies"
+  },
+  {
+   "skill": "Appium",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Scrum",
+   "status": "partly",
+   "quote": "Take part in sprint planning, daily stand-ups and retrospectives with a team of 11"
+  }
+ ]
+}

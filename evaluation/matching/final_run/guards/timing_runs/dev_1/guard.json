@@ -1,0 +1,60 @@
+{
+ "freezeFile": "tools/gap_eval/freeze_r2.json",
+ "freezeSha256": "50b50b1e7f4d90681e1c6c00907981df12255687f4c4470ef6764ab051a917c5",
+ "approach": "B/10/10/bt",
+ "source": "typed",
+ "opportunities": "typed|true|0.1|true|false|false|true|true|false",
+ "certifications": "typed|true|0.1|true|false|false|true|true|false",
+ "personas": {
+  "path": "test/fixtures/opportunity_eval_personas.json",
+  "sha256": "d941236f0f9b4a102ccca2a61e90b98bf665eb484ef55009029099ffb98a53e1"
+ },
+ "links": {
+  "path": "build/gap_eval/persona_links/dev_typed.json",
+  "sha256": "1e292cbce6c5705548146e6189b5c72217fc67ed6ea5494a14d6ae1820d0748a"
+ },
+ "precision": 3,
+ "tolerance": 0,
+ "metrics": [
+  "nDCG@10",
+  "GapCov@10",
+  "P@5",
+  "TopGapRank"
+ ],
+ "today": [
+  0.8373178393372219,
+  0.9330357142857143,
+  1.0,
+  1.25
+ ],
+ "withLinks": [
+  0.8368635686788582,
+  0.9330357142857143,
+  1.0,
+  1.25
+ ],
+ "todayWithBestLabels": [
+  0.8373178393372219,
+  0.9330357142857143,
+  1.0,
+  1.25
+ ],
+ "withBestLabels": [
+  0.8368635686788582,
+  0.9330357142857143,
+  1.0,
+  1.25
+ ],
+ "linkRuns": 3,
+ "passesFullPrecision": false,
+ "passesThreeDecimals": true,
+ "unlabelled": 0,
+ "unlabelledItems": [],
+ "passesWithBestLabels": true,
+ "guardStatus": "pass",
+ "sameWithoutLinks": true,
+ "certificationListsSame": true,
+ "warmRatio": 1.2629099133056916,
+ "firstRatio": 0.9728796213381092,
+ "timingPass": true
+}

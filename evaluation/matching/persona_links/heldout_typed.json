@@ -1,0 +1,2571 @@
+{
+ "personas": "test/fixtures/opportunity_eval_personas_heldout.json",
+ "request": "typed",
+ "runs": 3,
+ "generatedOn": "2026-11-21",
+ "links": [
+  {
+   "heldout_web_developer": [
+    {
+     "gap": "REST API",
+     "kind": "skill",
+     "concepts": [
+      "APIs"
+     ],
+     "phrases": [],
+     "same": [
+      "APIs"
+     ],
+     "terms": [
+      "REST",
+      "RESTful API",
+      "API design"
+     ]
+    },
+    {
+     "gap": "React",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "React",
+      "React.js",
+      "JSX"
+     ]
+    },
+    {
+     "gap": "TypeScript",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "TypeScript",
+      "TS"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "continuous integration",
+      "continuous deployment",
+      "pipelines"
+     ]
+    },
+    {
+     "gap": "Node.js",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Node.js",
+      "NodeJS",
+      "Node"
+     ]
+    },
+    {
+     "gap": "Angular",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Angular",
+      "AngularJS"
+     ]
+    },
+    {
+     "gap": "Docker",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Docker",
+      "containerization"
+     ]
+    },
+    {
+     "gap": "Vue",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Vue",
+      "Vue.js",
+      "VueJS"
+     ]
+    }
+   ],
+   "heldout_mobile_developer": [
+    {
+     "gap": "REST API",
+     "kind": "skill",
+     "concepts": [
+      "APIs"
+     ],
+     "phrases": [],
+     "same": [
+      "APIs"
+     ],
+     "terms": [
+      "REST",
+      "RESTful API",
+      "API design"
+     ]
+    },
+    {
+     "gap": "Android",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Android",
+      "Android SDK",
+      "Android development"
+     ]
+    },
+    {
+     "gap": "Flutter",
+     "kind": "tool",
+     "concepts": [
+      "Flutter"
+     ],
+     "phrases": [],
+     "same": [
+      "Flutter"
+     ],
+     "terms": [
+      "Flutter",
+      "Dart"
+     ]
+    },
+    {
+     "gap": "iOS",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "iOS",
+      "iOS development",
+      "Xcode"
+     ]
+    },
+    {
+     "gap": "Kotlin",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Kotlin"
+     ]
+    },
+    {
+     "gap": "React Native",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "React Native"
+     ]
+    },
+    {
+     "gap": "Swift",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Swift",
+      "SwiftUI"
+     ]
+    },
+    {
+     "gap": "Firebase",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Firebase",
+      "Firestore",
+      "Firebase Auth"
+     ]
+    }
+   ],
+   "heldout_data_scientist": [
+    {
+     "gap": "Machine Learning",
+     "kind": "skill",
+     "concepts": [
+      "Machine Learning"
+     ],
+     "phrases": [],
+     "same": [
+      "Machine Learning"
+     ],
+     "terms": [
+      "machine learning",
+      "ML",
+      "supervised learning",
+      "predictive models"
+     ]
+    },
+    {
+     "gap": "LLM",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "terms": [
+      "large language model",
+      "LLM",
+      "transformer models",
+      "GPT"
+     ]
+    },
+    {
+     "gap": "Generative AI",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "same": [
+      "Generative AI"
+     ],
+     "terms": [
+      "generative AI",
+      "GenAI",
+      "diffusion models",
+      "text generation"
+     ]
+    },
+    {
+     "gap": "PyTorch",
+     "kind": "tool",
+     "concepts": [
+      "PyTorch"
+     ],
+     "phrases": [],
+     "same": [
+      "PyTorch"
+     ],
+     "terms": [
+      "PyTorch",
+      "torch",
+      "tensors"
+     ]
+    },
+    {
+     "gap": "MLOps",
+     "kind": "skill",
+     "concepts": [
+      "MLOps"
+     ],
+     "phrases": [],
+     "same": [
+      "MLOps"
+     ],
+     "terms": [
+      "MLOps",
+      "model deployment",
+      "model monitoring",
+      "ML pipelines"
+     ]
+    },
+    {
+     "gap": "Deep Learning",
+     "kind": "skill",
+     "concepts": [
+      "Deep Learning"
+     ],
+     "phrases": [],
+     "same": [
+      "Deep Learning"
+     ],
+     "terms": [
+      "deep learning",
+      "neural networks",
+      "CNN",
+      "RNN"
+     ]
+    },
+    {
+     "gap": "SQL",
+     "kind": "tool",
+     "concepts": [
+      "Databases and SQL"
+     ],
+     "phrases": [],
+     "same": [
+      "Databases and SQL"
+     ],
+     "terms": [
+      "SQL",
+      "queries",
+      "relational database"
+     ]
+    },
+    {
+     "gap": "Hugging Face",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Hugging Face",
+      "transformers library",
+      "model hub"
+     ]
+    }
+   ],
+   "heldout_data_engineer": [
+    {
+     "gap": "Spark",
+     "kind": "tool",
+     "concepts": [
+      "Spark"
+     ],
+     "phrases": [],
+     "same": [
+      "Spark"
+     ],
+     "terms": [
+      "Apache Spark",
+      "Spark SQL",
+      "PySpark"
+     ]
+    },
+    {
+     "gap": "AWS",
+     "kind": "tool",
+     "concepts": [
+      "AWS"
+     ],
+     "phrases": [],
+     "same": [
+      "AWS"
+     ],
+     "terms": [
+      "Amazon Web Services",
+      "AWS"
+     ]
+    },
+    {
+     "gap": "Azure",
+     "kind": "tool",
+     "concepts": [
+      "Azure"
+     ],
+     "phrases": [],
+     "same": [
+      "Azure"
+     ],
+     "terms": [
+      "Microsoft Azure",
+      "Azure"
+     ]
+    },
+    {
+     "gap": "Kafka",
+     "kind": "tool",
+     "concepts": [
+      "Kafka"
+     ],
+     "phrases": [],
+     "same": [
+      "Kafka"
+     ],
+     "terms": [
+      "Apache Kafka",
+      "Kafka",
+      "event streaming"
+     ]
+    },
+    {
+     "gap": "Airflow",
+     "kind": "tool",
+     "concepts": [
+      "Airflow"
+     ],
+     "phrases": [],
+     "same": [
+      "Airflow"
+     ],
+     "terms": [
+      "Apache Airflow",
+      "Airflow",
+      "DAG"
+     ]
+    },
+    {
+     "gap": "Snowflake",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Snowflake",
+      "data warehouse",
+      "cloud data warehouse"
+     ]
+    },
+    {
+     "gap": "Databricks",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Databricks",
+      "lakehouse platform",
+      "Databricks notebooks"
+     ]
+    },
+    {
+     "gap": "dbt",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "dbt",
+      "data build tool",
+      "transformation pipeline"
+     ]
+    }
+   ],
+   "heldout_systems_administrator": [
+    {
+     "gap": "Cybersecurity",
+     "kind": "skill",
+     "concepts": [
+      "Information Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Information Security"
+     ],
+     "terms": [
+      "cybersecurity",
+      "information security",
+      "cyber threats",
+      "security fundamentals"
+     ]
+    },
+    {
+     "gap": "Azure",
+     "kind": "tool",
+     "concepts": [
+      "Azure"
+     ],
+     "phrases": [],
+     "same": [
+      "Azure"
+     ],
+     "terms": [
+      "Azure",
+      "Microsoft Azure"
+     ]
+    },
+    {
+     "gap": "AWS",
+     "kind": "tool",
+     "concepts": [
+      "AWS"
+     ],
+     "phrases": [],
+     "same": [
+      "AWS"
+     ],
+     "terms": [
+      "AWS",
+      "Amazon Web Services"
+     ]
+    },
+    {
+     "gap": "Kubernetes",
+     "kind": "tool",
+     "concepts": [
+      "Kubernetes"
+     ],
+     "phrases": [],
+     "same": [
+      "Kubernetes"
+     ],
+     "terms": [
+      "Kubernetes",
+      "K8s"
+     ]
+    },
+    {
+     "gap": "Python",
+     "kind": "tool",
+     "concepts": [
+      "Python"
+     ],
+     "phrases": [],
+     "same": [
+      "Python"
+     ],
+     "terms": [
+      "Python",
+      "Python programming"
+     ]
+    },
+    {
+     "gap": "VMware",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "VMware",
+      "vSphere",
+      "ESXi"
+     ]
+    },
+    {
+     "gap": "Terraform",
+     "kind": "tool",
+     "concepts": [
+      "Terraform"
+     ],
+     "phrases": [],
+     "same": [
+      "Terraform"
+     ],
+     "terms": [
+      "Terraform",
+      "IaC"
+     ]
+    },
+    {
+     "gap": "Grafana",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Grafana",
+      "dashboards",
+      "monitoring"
+     ]
+    }
+   ],
+   "heldout_qa_test_engineer": [
+    {
+     "gap": "Test Automation",
+     "kind": "skill",
+     "concepts": [
+      "Test Automation"
+     ],
+     "phrases": [],
+     "same": [
+      "Test Automation"
+     ],
+     "terms": [
+      "test automation",
+      "automated testing",
+      "automation framework"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "continuous integration",
+      "continuous delivery",
+      "CI/CD pipeline"
+     ]
+    },
+    {
+     "gap": "Postman",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Postman",
+      "API testing tool",
+      "REST client"
+     ]
+    },
+    {
+     "gap": "Selenium",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Selenium",
+      "WebDriver",
+      "browser automation"
+     ]
+    },
+    {
+     "gap": "ISTQB",
+     "kind": "certification",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "ISTQB",
+      "certified tester",
+      "software testing certification"
+     ]
+    },
+    {
+     "gap": "Appium",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Appium",
+      "mobile test automation",
+      "mobile UI automation"
+     ]
+    },
+    {
+     "gap": "Security Testing",
+     "kind": "skill",
+     "concepts": [
+      "Penetration Testing"
+     ],
+     "phrases": [],
+     "terms": [
+      "security testing",
+      "vulnerability testing",
+      "application security testing"
+     ]
+    },
+    {
+     "gap": "JMeter",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "JMeter",
+      "load testing",
+      "performance testing tool"
+     ]
+    }
+   ],
+   "heldout_business_analyst": [
+    {
+     "gap": "ERP",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "ERP",
+      "enterprise resource planning",
+      "SAP",
+      "Oracle ERP"
+     ]
+    },
+    {
+     "gap": "Data Analysis",
+     "kind": "skill",
+     "concepts": [
+      "Data Analysis"
+     ],
+     "phrases": [],
+     "same": [
+      "Data Analysis"
+     ]
+    },
+    {
+     "gap": "Power BI",
+     "kind": "tool",
+     "concepts": [
+      "Power BI"
+     ],
+     "phrases": [],
+     "same": [
+      "Power BI"
+     ]
+    },
+    {
+     "gap": "SQL",
+     "kind": "tool",
+     "concepts": [
+      "Databases and SQL"
+     ],
+     "phrases": [],
+     "same": [
+      "Databases and SQL"
+     ],
+     "terms": [
+      "SQL",
+      "queries",
+      "relational database"
+     ]
+    },
+    {
+     "gap": "Agile",
+     "kind": "skill",
+     "concepts": [
+      "Agile"
+     ],
+     "phrases": [],
+     "same": [
+      "Agile"
+     ]
+    },
+    {
+     "gap": "Tableau",
+     "kind": "tool",
+     "concepts": [
+      "Tableau"
+     ],
+     "phrases": [],
+     "same": [
+      "Tableau"
+     ]
+    },
+    {
+     "gap": "User Stories",
+     "kind": "skill",
+     "concepts": [
+      "User Stories"
+     ],
+     "phrases": [],
+     "same": [
+      "User Stories"
+     ]
+    },
+    {
+     "gap": "Confluence",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Confluence",
+      "wiki documentation",
+      "Atlassian"
+     ]
+    }
+   ],
+   "heldout_it_project_manager": [
+    {
+     "gap": "Agile",
+     "kind": "skill",
+     "concepts": [
+      "Agile"
+     ],
+     "phrases": [],
+     "same": [
+      "Agile"
+     ],
+     "terms": [
+      "Agile",
+      "Scrum",
+      "Kanban",
+      "Sprint"
+     ]
+    },
+    {
+     "gap": "PMP",
+     "kind": "certification",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "PMP",
+      "Project Management Professional",
+      "PMI"
+     ]
+    },
+    {
+     "gap": "Cloud Computing",
+     "kind": "skill",
+     "concepts": [
+      "Cloud Computing"
+     ],
+     "phrases": [],
+     "same": [
+      "Cloud Computing"
+     ],
+     "terms": [
+      "Cloud Computing",
+      "Cloud Fundamentals",
+      "IaaS PaaS SaaS"
+     ]
+    },
+    {
+     "gap": "Scrum",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Scrum",
+      "Sprint",
+      "Scrum Master",
+      "Product Backlog"
+     ]
+    },
+    {
+     "gap": "PRINCE2",
+     "kind": "certification",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "PRINCE2",
+      "Projects in Controlled Environments"
+     ]
+    },
+    {
+     "gap": "Change Management",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Change Management",
+      "Organizational Change",
+      "Change Control"
+     ]
+    },
+    {
+     "gap": "Jira",
+     "kind": "tool",
+     "concepts": [
+      "Jira"
+     ],
+     "phrases": [],
+     "same": [
+      "Jira"
+     ],
+     "terms": [
+      "Jira"
+     ]
+    },
+    {
+     "gap": "Cybersecurity",
+     "kind": "skill",
+     "concepts": [
+      "Information Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Information Security"
+     ],
+     "terms": [
+      "Cybersecurity",
+      "Information Security",
+      "Security"
+     ]
+    }
+   ]
+  },
+  {
+   "heldout_web_developer": [
+    {
+     "gap": "REST API",
+     "kind": "tool",
+     "concepts": [
+      "APIs"
+     ],
+     "phrases": [],
+     "same": [
+      "APIs"
+     ],
+     "terms": [
+      "REST",
+      "RESTful API",
+      "API design"
+     ]
+    },
+    {
+     "gap": "React",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "React",
+      "React.js",
+      "JSX"
+     ]
+    },
+    {
+     "gap": "TypeScript",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "TypeScript",
+      "TS"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "continuous integration",
+      "continuous delivery",
+      "continuous deployment"
+     ]
+    },
+    {
+     "gap": "Node.js",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Node.js",
+      "NodeJS",
+      "Node"
+     ]
+    },
+    {
+     "gap": "Angular",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Angular",
+      "AngularJS"
+     ]
+    },
+    {
+     "gap": "Docker",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Docker",
+      "Dockerfile",
+      "docker container"
+     ]
+    },
+    {
+     "gap": "Vue",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Vue",
+      "Vue.js",
+      "VueJS"
+     ]
+    }
+   ],
+   "heldout_mobile_developer": [
+    {
+     "gap": "REST API",
+     "kind": "skill",
+     "concepts": [
+      "APIs"
+     ],
+     "phrases": [],
+     "same": [
+      "APIs"
+     ],
+     "terms": [
+      "REST",
+      "RESTful API",
+      "API design"
+     ]
+    },
+    {
+     "gap": "Android",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Android development",
+      "Android SDK",
+      "Android Studio"
+     ]
+    },
+    {
+     "gap": "Flutter",
+     "kind": "tool",
+     "concepts": [
+      "Flutter"
+     ],
+     "phrases": [],
+     "same": [
+      "Flutter"
+     ],
+     "terms": [
+      "Flutter",
+      "Dart"
+     ]
+    },
+    {
+     "gap": "iOS",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "iOS development",
+      "Xcode",
+      "iOS SDK"
+     ]
+    },
+    {
+     "gap": "Kotlin",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Kotlin"
+     ]
+    },
+    {
+     "gap": "React Native",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "React Native"
+     ]
+    },
+    {
+     "gap": "Swift",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Swift",
+      "SwiftUI"
+     ]
+    },
+    {
+     "gap": "Firebase",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Firebase",
+      "Firestore",
+      "Firebase Authentication"
+     ]
+    }
+   ],
+   "heldout_data_scientist": [
+    {
+     "gap": "Machine Learning",
+     "kind": "skill",
+     "concepts": [
+      "Machine Learning"
+     ],
+     "phrases": [],
+     "same": [
+      "Machine Learning"
+     ],
+     "terms": [
+      "machine learning",
+      "ML",
+      "supervised learning",
+      "unsupervised learning"
+     ]
+    },
+    {
+     "gap": "LLM",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "terms": [
+      "large language model",
+      "LLM",
+      "transformer",
+      "GPT"
+     ]
+    },
+    {
+     "gap": "Generative AI",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "same": [
+      "Generative AI"
+     ],
+     "terms": [
+      "generative AI",
+      "GenAI",
+      "diffusion models",
+      "text generation"
+     ]
+    },
+    {
+     "gap": "PyTorch",
+     "kind": "tool",
+     "concepts": [
+      "PyTorch"
+     ],
+     "phrases": [],
+     "same": [
+      "PyTorch"
+     ],
+     "terms": [
+      "PyTorch",
+      "torch",
+      "tensor"
+     ]
+    },
+    {
+     "gap": "MLOps",
+     "kind": "skill",
+     "concepts": [
+      "MLOps"
+     ],
+     "phrases": [],
+     "same": [
+      "MLOps"
+     ],
+     "terms": [
+      "MLOps",
+      "model deployment",
+      "model monitoring",
+      "ML pipeline"
+     ]
+    },
+    {
+     "gap": "Deep Learning",
+     "kind": "skill",
+     "concepts": [
+      "Deep Learning"
+     ],
+     "phrases": [],
+     "same": [
+      "Deep Learning"
+     ],
+     "terms": [
+      "deep learning",
+      "neural networks",
+      "CNN",
+      "RNN"
+     ]
+    },
+    {
+     "gap": "SQL",
+     "kind": "tool",
+     "concepts": [
+      "Databases and SQL"
+     ],
+     "phrases": [],
+     "same": [
+      "Databases and SQL"
+     ],
+     "terms": [
+      "SQL",
+      "queries",
+      "joins",
+      "relational database"
+     ]
+    },
+    {
+     "gap": "Hugging Face",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Hugging Face",
+      "transformers library",
+      "model hub"
+     ]
+    }
+   ],
+   "heldout_data_engineer": [
+    {
+     "gap": "Spark",
+     "kind": "tool",
+     "concepts": [
+      "Spark"
+     ],
+     "phrases": [],
+     "same": [
+      "Spark"
+     ],
+     "terms": [
+      "Apache Spark",
+      "Spark"
+     ]
+    },
+    {
+     "gap": "AWS",
+     "kind": "tool",
+     "concepts": [
+      "AWS"
+     ],
+     "phrases": [],
+     "same": [
+      "AWS"
+     ],
+     "terms": [
+      "AWS",
+      "Amazon Web Services"
+     ]
+    },
+    {
+     "gap": "Azure",
+     "kind": "tool",
+     "concepts": [
+      "Azure"
+     ],
+     "phrases": [],
+     "same": [
+      "Azure"
+     ],
+     "terms": [
+      "Azure",
+      "Microsoft Azure"
+     ]
+    },
+    {
+     "gap": "Kafka",
+     "kind": "tool",
+     "concepts": [
+      "Kafka"
+     ],
+     "phrases": [],
+     "same": [
+      "Kafka"
+     ],
+     "terms": [
+      "Kafka",
+      "Apache Kafka"
+     ]
+    },
+    {
+     "gap": "Airflow",
+     "kind": "tool",
+     "concepts": [
+      "Airflow"
+     ],
+     "phrases": [],
+     "same": [
+      "Airflow"
+     ],
+     "terms": [
+      "Airflow",
+      "Apache Airflow"
+     ]
+    },
+    {
+     "gap": "Snowflake",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Snowflake",
+      "data warehouse",
+      "cloud data platform"
+     ]
+    },
+    {
+     "gap": "Databricks",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Databricks",
+      "Lakehouse platform"
+     ]
+    },
+    {
+     "gap": "dbt",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "dbt",
+      "data build tool",
+      "transformation"
+     ]
+    }
+   ],
+   "heldout_qa_test_engineer": [
+    {
+     "gap": "Test Automation",
+     "kind": "skill",
+     "concepts": [
+      "Test Automation"
+     ],
+     "phrases": [],
+     "same": [
+      "Test Automation"
+     ],
+     "terms": [
+      "test automation",
+      "automated testing",
+      "automation framework"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "continuous integration",
+      "continuous deployment",
+      "pipeline"
+     ]
+    },
+    {
+     "gap": "Postman",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Postman",
+      "API testing tool",
+      "REST client"
+     ]
+    },
+    {
+     "gap": "Selenium",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Selenium",
+      "WebDriver",
+      "browser automation"
+     ]
+    },
+    {
+     "gap": "ISTQB",
+     "kind": "certification",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "ISTQB",
+      "software testing certification",
+      "test certification"
+     ]
+    },
+    {
+     "gap": "Appium",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Appium",
+      "mobile test automation",
+      "mobile automation"
+     ]
+    },
+    {
+     "gap": "Security Testing",
+     "kind": "skill",
+     "concepts": [
+      "Penetration Testing"
+     ],
+     "phrases": [],
+     "terms": [
+      "security testing",
+      "vulnerability testing",
+      "pen test"
+     ]
+    },
+    {
+     "gap": "JMeter",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "JMeter",
+      "performance testing tool",
+      "load testing"
+     ]
+    }
+   ],
+   "heldout_business_analyst": [
+    {
+     "gap": "ERP",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "ERP",
+      "SAP",
+      "Oracle ERP",
+      "enterprise resource planning"
+     ]
+    },
+    {
+     "gap": "Data Analysis",
+     "kind": "skill",
+     "concepts": [
+      "Data Analysis"
+     ],
+     "phrases": [],
+     "same": [
+      "Data Analysis"
+     ]
+    },
+    {
+     "gap": "Power BI",
+     "kind": "tool",
+     "concepts": [
+      "Power BI"
+     ],
+     "phrases": [],
+     "same": [
+      "Power BI"
+     ]
+    },
+    {
+     "gap": "SQL",
+     "kind": "tool",
+     "concepts": [
+      "Databases and SQL"
+     ],
+     "phrases": [],
+     "same": [
+      "Databases and SQL"
+     ],
+     "terms": [
+      "SQL",
+      "queries"
+     ]
+    },
+    {
+     "gap": "Agile",
+     "kind": "skill",
+     "concepts": [
+      "Agile"
+     ],
+     "phrases": [],
+     "same": [
+      "Agile"
+     ]
+    },
+    {
+     "gap": "Tableau",
+     "kind": "tool",
+     "concepts": [
+      "Tableau"
+     ],
+     "phrases": [],
+     "same": [
+      "Tableau"
+     ]
+    },
+    {
+     "gap": "User Stories",
+     "kind": "skill",
+     "concepts": [
+      "User Stories"
+     ],
+     "phrases": [],
+     "same": [
+      "User Stories"
+     ]
+    },
+    {
+     "gap": "Confluence",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Confluence",
+      "documentation tool",
+      "wiki"
+     ]
+    }
+   ],
+   "heldout_systems_administrator": [
+    {
+     "gap": "Cybersecurity",
+     "kind": "skill",
+     "concepts": [
+      "Information Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Information Security"
+     ],
+     "terms": [
+      "cybersecurity",
+      "information security",
+      "cyber threats",
+      "security fundamentals"
+     ]
+    },
+    {
+     "gap": "Azure",
+     "kind": "tool",
+     "concepts": [
+      "Azure"
+     ],
+     "phrases": [],
+     "same": [
+      "Azure"
+     ],
+     "terms": [
+      "Azure",
+      "Microsoft Azure"
+     ]
+    },
+    {
+     "gap": "AWS",
+     "kind": "tool",
+     "concepts": [
+      "AWS"
+     ],
+     "phrases": [],
+     "same": [
+      "AWS"
+     ],
+     "terms": [
+      "AWS",
+      "Amazon Web Services"
+     ]
+    },
+    {
+     "gap": "Kubernetes",
+     "kind": "tool",
+     "concepts": [
+      "Kubernetes"
+     ],
+     "phrases": [],
+     "same": [
+      "Kubernetes"
+     ],
+     "terms": [
+      "Kubernetes",
+      "K8s"
+     ]
+    },
+    {
+     "gap": "Python",
+     "kind": "tool",
+     "concepts": [
+      "Python"
+     ],
+     "phrases": [],
+     "same": [
+      "Python"
+     ],
+     "terms": [
+      "Python",
+      "Python programming"
+     ]
+    },
+    {
+     "gap": "VMware",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "VMware",
+      "ESXi",
+      "vSphere"
+     ]
+    },
+    {
+     "gap": "Terraform",
+     "kind": "tool",
+     "concepts": [
+      "Terraform"
+     ],
+     "phrases": [],
+     "same": [
+      "Terraform"
+     ],
+     "terms": [
+      "Terraform",
+      "HCL"
+     ]
+    },
+    {
+     "gap": "Grafana",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Grafana",
+      "dashboards",
+      "monitoring visualization"
+     ]
+    }
+   ],
+   "heldout_it_project_manager": [
+    {
+     "gap": "Agile",
+     "kind": "skill",
+     "concepts": [
+      "Agile"
+     ],
+     "phrases": [],
+     "same": [
+      "Agile"
+     ],
+     "terms": [
+      "Agile",
+      "Scrum",
+      "Kanban",
+      "Sprint"
+     ]
+    },
+    {
+     "gap": "PMP",
+     "kind": "certification",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "PMP",
+      "Project Management Professional",
+      "PMI"
+     ]
+    },
+    {
+     "gap": "Cloud Computing",
+     "kind": "skill",
+     "concepts": [
+      "Cloud Computing"
+     ],
+     "phrases": [],
+     "same": [
+      "Cloud Computing"
+     ],
+     "terms": [
+      "Cloud Computing",
+      "Cloud Services",
+      "IaaS",
+      "PaaS"
+     ]
+    },
+    {
+     "gap": "Scrum",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Scrum",
+      "Sprint",
+      "Scrum Master",
+      "Product Backlog"
+     ]
+    },
+    {
+     "gap": "PRINCE2",
+     "kind": "certification",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "PRINCE2",
+      "Projects in Controlled Environments"
+     ]
+    },
+    {
+     "gap": "Change Management",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Change Management",
+      "Organizational Change",
+      "Change Control"
+     ]
+    },
+    {
+     "gap": "Jira",
+     "kind": "tool",
+     "concepts": [
+      "Jira"
+     ],
+     "phrases": [],
+     "same": [
+      "Jira"
+     ],
+     "terms": [
+      "Jira"
+     ]
+    },
+    {
+     "gap": "Cybersecurity",
+     "kind": "skill",
+     "concepts": [
+      "Information Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Information Security"
+     ],
+     "terms": [
+      "Cybersecurity",
+      "Information Security",
+      "Security"
+     ]
+    }
+   ]
+  },
+  {
+   "heldout_web_developer": [
+    {
+     "gap": "REST API",
+     "kind": "tool",
+     "concepts": [
+      "APIs"
+     ],
+     "phrases": [],
+     "same": [
+      "APIs"
+     ],
+     "terms": [
+      "REST",
+      "RESTful API",
+      "API design",
+      "HTTP methods"
+     ]
+    },
+    {
+     "gap": "React",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "React",
+      "React.js",
+      "JSX",
+      "React components"
+     ]
+    },
+    {
+     "gap": "TypeScript",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "TypeScript",
+      "typed JavaScript"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "continuous integration",
+      "continuous deployment",
+      "pipelines",
+      "build automation"
+     ]
+    },
+    {
+     "gap": "Node.js",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Node.js",
+      "NodeJS",
+      "server-side JavaScript"
+     ]
+    },
+    {
+     "gap": "Angular",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Angular",
+      "AngularJS",
+      "Angular framework"
+     ]
+    },
+    {
+     "gap": "Docker",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Docker",
+      "containerization",
+      "Dockerfile"
+     ]
+    },
+    {
+     "gap": "Vue",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Vue.js",
+      "Vue",
+      "VueJS"
+     ]
+    }
+   ],
+   "heldout_mobile_developer": [
+    {
+     "gap": "REST API",
+     "kind": "skill",
+     "concepts": [
+      "APIs"
+     ],
+     "phrases": [],
+     "same": [
+      "APIs"
+     ],
+     "terms": [
+      "REST",
+      "RESTful API",
+      "API design",
+      "HTTP methods"
+     ]
+    },
+    {
+     "gap": "Android",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Android development",
+      "Android SDK",
+      "Android Studio"
+     ]
+    },
+    {
+     "gap": "Flutter",
+     "kind": "tool",
+     "concepts": [
+      "Flutter"
+     ],
+     "phrases": [],
+     "same": [
+      "Flutter"
+     ],
+     "terms": [
+      "Flutter",
+      "Dart"
+     ]
+    },
+    {
+     "gap": "iOS",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "iOS development",
+      "Xcode",
+      "iPhone app"
+     ]
+    },
+    {
+     "gap": "Kotlin",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Kotlin"
+     ]
+    },
+    {
+     "gap": "React Native",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "React Native"
+     ]
+    },
+    {
+     "gap": "Swift",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Swift",
+      "SwiftUI"
+     ]
+    },
+    {
+     "gap": "Firebase",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Firebase",
+      "Firestore",
+      "Firebase Auth"
+     ]
+    }
+   ],
+   "heldout_data_scientist": [
+    {
+     "gap": "Machine Learning",
+     "kind": "skill",
+     "concepts": [
+      "Machine Learning"
+     ],
+     "phrases": [],
+     "same": [
+      "Machine Learning"
+     ],
+     "terms": [
+      "machine learning",
+      "ML",
+      "supervised learning",
+      "unsupervised learning"
+     ]
+    },
+    {
+     "gap": "LLM",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "terms": [
+      "large language model",
+      "LLM",
+      "transformer models"
+     ]
+    },
+    {
+     "gap": "Generative AI",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "same": [
+      "Generative AI"
+     ],
+     "terms": [
+      "generative AI",
+      "GenAI",
+      "diffusion models",
+      "text generation"
+     ]
+    },
+    {
+     "gap": "PyTorch",
+     "kind": "tool",
+     "concepts": [
+      "PyTorch"
+     ],
+     "phrases": [],
+     "same": [
+      "PyTorch"
+     ],
+     "terms": [
+      "PyTorch"
+     ]
+    },
+    {
+     "gap": "MLOps",
+     "kind": "skill",
+     "concepts": [
+      "MLOps"
+     ],
+     "phrases": [],
+     "same": [
+      "MLOps"
+     ],
+     "terms": [
+      "MLOps",
+      "model deployment",
+      "model monitoring"
+     ]
+    },
+    {
+     "gap": "Deep Learning",
+     "kind": "skill",
+     "concepts": [
+      "Deep Learning"
+     ],
+     "phrases": [],
+     "same": [
+      "Deep Learning"
+     ],
+     "terms": [
+      "deep learning",
+      "neural networks",
+      "CNN",
+      "RNN"
+     ]
+    },
+    {
+     "gap": "SQL",
+     "kind": "tool",
+     "concepts": [
+      "Databases and SQL"
+     ],
+     "phrases": [],
+     "same": [
+      "Databases and SQL"
+     ],
+     "terms": [
+      "SQL",
+      "queries",
+      "joins"
+     ]
+    },
+    {
+     "gap": "Hugging Face",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Hugging Face",
+      "transformers library"
+     ]
+    }
+   ],
+   "heldout_data_engineer": [
+    {
+     "gap": "Spark",
+     "kind": "tool",
+     "concepts": [
+      "Spark"
+     ],
+     "phrases": [],
+     "same": [
+      "Spark"
+     ],
+     "terms": [
+      "Spark",
+      "PySpark",
+      "Apache Spark"
+     ]
+    },
+    {
+     "gap": "AWS",
+     "kind": "tool",
+     "concepts": [
+      "AWS"
+     ],
+     "phrases": [],
+     "same": [
+      "AWS"
+     ],
+     "terms": [
+      "AWS",
+      "Amazon Web Services"
+     ]
+    },
+    {
+     "gap": "Azure",
+     "kind": "tool",
+     "concepts": [
+      "Azure"
+     ],
+     "phrases": [],
+     "same": [
+      "Azure"
+     ],
+     "terms": [
+      "Azure",
+      "Microsoft Azure"
+     ]
+    },
+    {
+     "gap": "Kafka",
+     "kind": "tool",
+     "concepts": [
+      "Kafka"
+     ],
+     "phrases": [],
+     "same": [
+      "Kafka"
+     ],
+     "terms": [
+      "Kafka",
+      "Apache Kafka",
+      "streaming"
+     ]
+    },
+    {
+     "gap": "Airflow",
+     "kind": "tool",
+     "concepts": [
+      "Airflow"
+     ],
+     "phrases": [],
+     "same": [
+      "Airflow"
+     ],
+     "terms": [
+      "Airflow",
+      "Apache Airflow",
+      "workflow orchestration"
+     ]
+    },
+    {
+     "gap": "Snowflake",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Snowflake",
+      "data warehouse",
+      "cloud data platform"
+     ]
+    },
+    {
+     "gap": "Databricks",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Databricks",
+      "lakehouse platform"
+     ]
+    },
+    {
+     "gap": "dbt",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "dbt",
+      "data build tool",
+      "data transformation"
+     ]
+    }
+   ],
+   "heldout_qa_test_engineer": [
+    {
+     "gap": "Test Automation",
+     "kind": "skill",
+     "concepts": [
+      "Test Automation"
+     ],
+     "phrases": [],
+     "same": [
+      "Test Automation"
+     ],
+     "terms": [
+      "test automation",
+      "automated testing",
+      "automation framework"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "continuous integration",
+      "continuous deployment",
+      "CI/CD pipeline"
+     ]
+    },
+    {
+     "gap": "Postman",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Postman",
+      "API testing tool",
+      "REST client"
+     ]
+    },
+    {
+     "gap": "Selenium",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Selenium",
+      "WebDriver",
+      "browser automation"
+     ]
+    },
+    {
+     "gap": "ISTQB",
+     "kind": "certification",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "ISTQB",
+      "certified tester",
+      "software testing certification"
+     ]
+    },
+    {
+     "gap": "Appium",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Appium",
+      "mobile test automation",
+      "mobile automation framework"
+     ]
+    },
+    {
+     "gap": "Security Testing",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "security testing",
+      "vulnerability testing",
+      "security assessment"
+     ]
+    },
+    {
+     "gap": "JMeter",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "JMeter",
+      "load testing",
+      "performance testing tool"
+     ]
+    }
+   ],
+   "heldout_systems_administrator": [
+    {
+     "gap": "Cybersecurity",
+     "kind": "skill",
+     "concepts": [
+      "Information Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Information Security"
+     ],
+     "terms": [
+      "cybersecurity",
+      "information security",
+      "security fundamentals"
+     ]
+    },
+    {
+     "gap": "Azure",
+     "kind": "tool",
+     "concepts": [
+      "Azure"
+     ],
+     "phrases": [],
+     "same": [
+      "Azure"
+     ],
+     "terms": [
+      "Azure",
+      "Microsoft Azure"
+     ]
+    },
+    {
+     "gap": "AWS",
+     "kind": "tool",
+     "concepts": [
+      "AWS"
+     ],
+     "phrases": [],
+     "same": [
+      "AWS"
+     ],
+     "terms": [
+      "AWS",
+      "Amazon Web Services"
+     ]
+    },
+    {
+     "gap": "Kubernetes",
+     "kind": "tool",
+     "concepts": [
+      "Kubernetes"
+     ],
+     "phrases": [],
+     "same": [
+      "Kubernetes"
+     ],
+     "terms": [
+      "Kubernetes",
+      "K8s"
+     ]
+    },
+    {
+     "gap": "Python",
+     "kind": "tool",
+     "concepts": [
+      "Python"
+     ],
+     "phrases": [],
+     "same": [
+      "Python"
+     ],
+     "terms": [
+      "Python",
+      "Python programming"
+     ]
+    },
+    {
+     "gap": "VMware",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "VMware",
+      "vSphere",
+      "ESXi"
+     ]
+    },
+    {
+     "gap": "Terraform",
+     "kind": "tool",
+     "concepts": [
+      "Terraform"
+     ],
+     "phrases": [],
+     "same": [
+      "Terraform"
+     ],
+     "terms": [
+      "Terraform",
+      "Infrastructure as Code"
+     ]
+    },
+    {
+     "gap": "Grafana",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Grafana",
+      "monitoring dashboards"
+     ]
+    }
+   ],
+   "heldout_business_analyst": [
+    {
+     "gap": "ERP",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "ERP",
+      "enterprise resource planning",
+      "SAP",
+      "Oracle ERP"
+     ]
+    },
+    {
+     "gap": "Data Analysis",
+     "kind": "skill",
+     "concepts": [
+      "Data Analysis"
+     ],
+     "phrases": [],
+     "same": [
+      "Data Analysis"
+     ]
+    },
+    {
+     "gap": "Power BI",
+     "kind": "tool",
+     "concepts": [
+      "Power BI"
+     ],
+     "phrases": [],
+     "same": [
+      "Power BI"
+     ]
+    },
+    {
+     "gap": "SQL",
+     "kind": "tool",
+     "concepts": [
+      "Databases and SQL"
+     ],
+     "phrases": [],
+     "same": [
+      "Databases and SQL"
+     ],
+     "terms": [
+      "SQL",
+      "queries",
+      "structured query language"
+     ]
+    },
+    {
+     "gap": "Agile",
+     "kind": "skill",
+     "concepts": [
+      "Agile"
+     ],
+     "phrases": [],
+     "same": [
+      "Agile"
+     ]
+    },
+    {
+     "gap": "Tableau",
+     "kind": "tool",
+     "concepts": [
+      "Tableau"
+     ],
+     "phrases": [],
+     "same": [
+      "Tableau"
+     ]
+    },
+    {
+     "gap": "User Stories",
+     "kind": "skill",
+     "concepts": [
+      "User Stories"
+     ],
+     "phrases": [],
+     "same": [
+      "User Stories"
+     ]
+    },
+    {
+     "gap": "Confluence",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Confluence",
+      "wiki",
+      "documentation tool"
+     ]
+    }
+   ],
+   "heldout_it_project_manager": [
+    {
+     "gap": "Agile",
+     "kind": "skill",
+     "concepts": [
+      "Agile"
+     ],
+     "phrases": [],
+     "same": [
+      "Agile"
+     ],
+     "terms": [
+      "Agile",
+      "Scrum",
+      "Sprint",
+      "Kanban"
+     ]
+    },
+    {
+     "gap": "PMP",
+     "kind": "certification",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "PMP",
+      "Project Management Professional",
+      "PMI"
+     ]
+    },
+    {
+     "gap": "Cloud Computing",
+     "kind": "skill",
+     "concepts": [
+      "Cloud Computing"
+     ],
+     "phrases": [],
+     "same": [
+      "Cloud Computing"
+     ],
+     "terms": [
+      "cloud computing",
+      "IaaS",
+      "PaaS",
+      "SaaS"
+     ]
+    },
+    {
+     "gap": "Scrum",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Scrum",
+      "Sprint",
+      "Scrum Master",
+      "Product Backlog"
+     ]
+    },
+    {
+     "gap": "PRINCE2",
+     "kind": "certification",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "PRINCE2",
+      "Projects in Controlled Environments"
+     ]
+    },
+    {
+     "gap": "Change Management",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "change management",
+      "organizational change",
+      "change readiness"
+     ]
+    },
+    {
+     "gap": "Jira",
+     "kind": "tool",
+     "concepts": [
+      "Jira"
+     ],
+     "phrases": [],
+     "same": [
+      "Jira"
+     ],
+     "terms": [
+      "Jira"
+     ]
+    },
+    {
+     "gap": "Cybersecurity",
+     "kind": "skill",
+     "concepts": [
+      "Information Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Information Security"
+     ],
+     "terms": [
+      "cybersecurity",
+      "information security",
+      "security"
+     ]
+    }
+   ]
+  }
+ ]
+}

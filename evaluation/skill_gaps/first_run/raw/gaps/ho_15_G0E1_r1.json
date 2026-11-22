@@ -1,0 +1,22 @@
+{
+ "case": "ho_15",
+ "arm": "G0E1",
+ "run": 1,
+ "gaps": [
+  "Kubernetes",
+  "C++",
+  "TensorFlow",
+  "Linux",
+  "Docker",
+  "Terraform",
+  "Ansible",
+  "Computer Vision",
+  "Prometheus",
+  "LangChain"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

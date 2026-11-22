@@ -1,0 +1,70 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on experience deploying and analyzing a honeypot to study real-world attacker behavior",
+   "Able to parse and analyze large log datasets (48,000 login attempts) using Python",
+   "Experience mapping attacker behavior to the MITRE ATT&CK framework",
+   "Practical web application security testing skills including SQL injection and XSS exploitation",
+   "Experience with vulnerability scanning and ranking findings by CVSS score",
+   "Malware analysis skills demonstrated through isolated VM teardown of a malicious document",
+   "Strong competitive performance in Capture the Flag competitions (3rd place of 60 teams)",
+   "Digital forensics skills using Autopsy and Volatility",
+   "Network traffic analysis skills using Wireshark",
+   "Holds a recognized industry certification (CompTIA Security+)",
+   "High academic performance (GPA 4.5/5)",
+   "Communication and outreach experience through cybersecurity awareness talk"
+  ],
+  "currentSkills": [
+   "Python",
+   "Linux",
+   "Wireshark",
+   "Burp Suite",
+   "Bash",
+   "Network Security",
+   "Digital Forensics",
+   "Malware Analysis",
+   "Penetration Testing",
+   "SQL Injection",
+   "Cross-Site Scripting (XSS)",
+   "Vulnerability Assessment",
+   "Nmap",
+   "Nessus",
+   "Autopsy",
+   "Volatility",
+   "Iptables",
+   "MITRE ATT&CK Mapping",
+   "Cloud Deployment",
+   "JSON Parsing"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Cybersecurity",
+    "institution": "King Saud University",
+    "year": "expected June 2027"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "CompTIA Security+ (SY0-701)",
+    "issuer": "CompTIA",
+    "year": "March 2026"
+   }
+  ],
+  "projects": [
+   {
+    "name": "SSH Honeypot (Graduation Project)",
+    "description": "Deployed a Cowrie honeypot on an Ubuntu cloud VM, secured management access with iptables, parsed 48,000 login attempts using Python to identify common credentials and post-login commands, cross-referenced top 500 source IPs with reputation feeds (71% identified as scanners), mapped attacker behavior to ATT&CK techniques, and presented a 40-page report to the department committee."
+   },
+   {
+    "name": "Web Application Weaknesses Lab",
+    "description": "Identified and exploited SQL injection and stored XSS vulnerabilities in a vulnerable shop application using Burp Suite, documented fixes, and ran Nmap and Nessus scans against a lab subnet, ranking 23 findings by CVSS score."
+   },
+   {
+    "name": "Suspicious Attachment Teardown",
+    "description": "Analyzed a macro-enabled Word document in an isolated VM, extracted a hidden PowerShell downloader, and listed the domains it contacted."
+   }
+  ],
+  "experience": []
+ }
+}

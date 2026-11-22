@@ -1,0 +1,139 @@
+{
+ "goal": "pre_sales_engineer",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Technical Proposal Writing",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "writing technical proposals",
+    "structuring solution proposals",
+    "proposal documentation skills"
+   ]
+  },
+  {
+   "gap": "RFP Response",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "responding to RFPs",
+    "preparing proposal responses",
+    "bid response writing"
+   ]
+  },
+  {
+   "gap": "Bill of Quantities Preparation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "preparing bill of quantities",
+    "cost and quantity estimation",
+    "BOQ documentation"
+   ]
+  },
+  {
+   "gap": "Solution Architecture Design",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing end to end solutions",
+    "architecting technical solutions",
+    "solution design principles"
+   ]
+  },
+  {
+   "gap": "Proof of Concept Delivery",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "delivering proof of concept",
+    "piloting proposed solutions",
+    "validating solution feasibility"
+   ]
+  },
+  {
+   "gap": "Product Demonstration",
+   "kind": "skill",
+   "concepts": [
+    "Product Demonstrations"
+   ],
+   "phrases": [
+    "demonstrating product capabilities",
+    "presenting product features",
+    "live product demos"
+   ]
+  },
+  {
+   "gap": "Customer Requirements Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Requirements Gathering"
+   ],
+   "phrases": [
+    "analyzing customer needs",
+    "gathering client requirements",
+    "understanding stakeholder needs"
+   ]
+  },
+  {
+   "gap": "Vendor Coordination",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "coordinating with vendors",
+    "managing supplier relationships",
+    "liaising with third parties"
+   ]
+  },
+  {
+   "gap": "Technical Presentation",
+   "kind": "soft",
+   "concepts": [
+    "Presentations"
+   ],
+   "phrases": [
+    "presenting technical content",
+    "delivering technical talks",
+    "communicating technical solutions"
+   ]
+  },
+  {
+   "gap": "RFQ Response",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "responding to RFQs",
+    "preparing quotation responses",
+    "quote submission process"
+   ]
+  },
+  {
+   "gap": "System Architecture Diagrams",
+   "kind": "skill",
+   "concepts": [
+    "System Design"
+   ],
+   "phrases": [
+    "creating architecture diagrams",
+    "visualizing system design",
+    "documenting system structure"
+   ]
+  },
+  {
+   "gap": "Cloud Computing",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "cloud computing fundamentals",
+    "cloud service models",
+    "understanding cloud infrastructure"
+   ]
+  }
+ ]
+}

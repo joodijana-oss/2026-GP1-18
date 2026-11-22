@@ -1,0 +1,177 @@
+{
+ "goal": "data_scientist",
+ "list": "E1",
+ "run": 7,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": [],
+   "same": [
+    "Python"
+   ],
+   "terms": [
+    "Python"
+   ]
+  },
+  {
+   "gap": "Machine Learning",
+   "kind": "skill",
+   "concepts": [
+    "Machine Learning"
+   ],
+   "phrases": [],
+   "same": [
+    "Machine Learning"
+   ],
+   "terms": [
+    "machine learning",
+    "ML"
+   ]
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [],
+   "same": [
+    "Databases and SQL"
+   ],
+   "terms": [
+    "SQL",
+    "queries"
+   ]
+  },
+  {
+   "gap": "Generative AI",
+   "kind": "skill",
+   "concepts": [
+    "Generative AI"
+   ],
+   "phrases": [],
+   "same": [
+    "Generative AI"
+   ],
+   "terms": [
+    "generative AI",
+    "GenAI"
+   ]
+  },
+  {
+   "gap": "Large Language Models",
+   "kind": "skill",
+   "concepts": [
+    "Generative AI"
+   ],
+   "phrases": [],
+   "terms": [
+    "LLM",
+    "large language models",
+    "transformers"
+   ]
+  },
+  {
+   "gap": "Data Visualization",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": [],
+   "same": [
+    "Data Visualization"
+   ],
+   "terms": [
+    "data visualization",
+    "charts",
+    "dashboards"
+   ]
+  },
+  {
+   "gap": "Retrieval-Augmented Generation",
+   "kind": "skill",
+   "concepts": [
+    "Generative AI"
+   ],
+   "phrases": [],
+   "terms": [
+    "RAG",
+    "retrieval augmented generation",
+    "vector search"
+   ]
+  },
+  {
+   "gap": "Prompt Engineering",
+   "kind": "skill",
+   "concepts": [
+    "Generative AI"
+   ],
+   "phrases": [],
+   "terms": [
+    "prompt engineering",
+    "prompting",
+    "LLM prompts"
+   ]
+  },
+  {
+   "gap": "TensorFlow",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "TensorFlow",
+    "Keras"
+   ]
+  },
+  {
+   "gap": "PyTorch",
+   "kind": "tool",
+   "concepts": [
+    "PyTorch"
+   ],
+   "phrases": [],
+   "same": [
+    "PyTorch"
+   ],
+   "terms": [
+    "PyTorch"
+   ]
+  },
+  {
+   "gap": "AWS",
+   "kind": "tool",
+   "concepts": [
+    "AWS"
+   ],
+   "phrases": [],
+   "same": [
+    "AWS"
+   ],
+   "terms": [
+    "AWS",
+    "Amazon Web Services"
+   ]
+  },
+  {
+   "gap": "MLOps",
+   "kind": "skill",
+   "concepts": [
+    "MLOps"
+   ],
+   "phrases": [],
+   "same": [
+    "MLOps"
+   ],
+   "terms": [
+    "MLOps",
+    "model deployment",
+    "ML pipelines"
+   ]
+  }
+ ]
+}

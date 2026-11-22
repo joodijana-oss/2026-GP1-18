@@ -1,0 +1,42 @@
+{
+ "case": "ho_16",
+ "arm": "G2E1",
+ "run": 1,
+ "gaps": [
+  "React",
+  "Node.js",
+  "Spring Boot",
+  "Linux",
+  "Kubernetes"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "React",
+   "status": "missing"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing"
+  },
+  {
+   "skill": "Linux",
+   "status": "missing"
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "partly"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  }
+ ]
+}

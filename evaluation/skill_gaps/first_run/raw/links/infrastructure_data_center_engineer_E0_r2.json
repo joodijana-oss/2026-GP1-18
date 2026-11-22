@@ -1,0 +1,142 @@
+{
+ "goal": "infrastructure_data_center_engineer",
+ "extractor": "E0",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "managing Linux systems",
+    "Linux server administration",
+    "command line administration"
+   ]
+  },
+  {
+   "gap": "Networking (LAN/WAN, VLAN, TCP/IP)",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals",
+    "TCP/IP"
+   ],
+   "phrases": [
+    "configuring LANs and WANs",
+    "VLAN setup and management",
+    "IP addressing and subnetting"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Data Center Operations (power, cooling, UPS, HVAC monitoring)",
+   "kind": "skill",
+   "concepts": [
+    "Data Center Operations"
+   ],
+   "phrases": [
+    "power and cooling systems",
+    "UPS and HVAC monitoring",
+    "facility infrastructure management"
+   ]
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Virtualization (VMware/Hyper-V)",
+   "kind": "skill",
+   "concepts": [
+    "Virtualization"
+   ],
+   "phrases": [
+    "VMware virtual machines",
+    "Hyper-V management",
+    "hypervisor configuration"
+   ]
+  },
+  {
+   "gap": "Structured Cabling (Fiber/Copper)",
+   "kind": "skill",
+   "concepts": [
+    "Fiber Optics"
+   ],
+   "phrases": [
+    "fiber and copper cabling",
+    "cable installation standards",
+    "physical network wiring"
+   ]
+  },
+  {
+   "gap": "CI/CD Pipelines",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": [
+    "building deployment pipelines",
+    "continuous integration workflows",
+    "automated release pipelines"
+   ]
+  },
+  {
+   "gap": "Windows Server Administration",
+   "kind": "skill",
+   "concepts": [
+    "Windows Server"
+   ],
+   "phrases": [
+    "managing Windows servers",
+    "Active Directory administration",
+    "server configuration and maintenance"
+   ]
+  },
+  {
+   "gap": "Monitoring Tools (Prometheus/Grafana)",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "system performance monitoring",
+    "dashboard and alerting setup",
+    "metrics visualization tools"
+   ]
+  },
+  {
+   "gap": "Cloud Platforms (AWS/Azure/GCP)",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "public cloud platforms",
+    "multi-cloud environments",
+    "cloud infrastructure services"
+   ]
+  },
+  {
+   "gap": "Firewall/VPN Security Management",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "firewall configuration and management",
+    "VPN setup and security",
+    "perimeter security controls"
+   ]
+  }
+ ]
+}

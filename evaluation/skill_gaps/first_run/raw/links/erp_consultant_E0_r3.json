@@ -1,0 +1,135 @@
+{
+ "goal": "erp_consultant",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "SAP S/4HANA",
+   "kind": "tool",
+   "concepts": [
+    "SAP S/4HANA"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "SAP Functional Modules (MM/SD/FI)",
+   "kind": "skill",
+   "concepts": [
+    "ERP Module Configuration"
+   ],
+   "phrases": [
+    "configuring SAP modules",
+    "materials management and finance setup",
+    "sales and distribution configuration"
+   ]
+  },
+  {
+   "gap": "Oracle Cloud ERP / Oracle E-Business Suite",
+   "kind": "tool",
+   "concepts": [
+    "Oracle ERP"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "ABAP",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "SAP programming language",
+    "custom SAP development"
+   ]
+  },
+  {
+   "gap": "PL/SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "writing stored procedures",
+    "database programming language"
+   ]
+  },
+  {
+   "gap": "SAP Implementation (Full Lifecycle)",
+   "kind": "skill",
+   "concepts": [
+    "ERP Module Configuration"
+   ],
+   "phrases": [
+    "end to end ERP rollout",
+    "implementation lifecycle phases",
+    "go-live and support"
+   ]
+  },
+  {
+   "gap": "Microsoft Dynamics 365",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "business applications platform",
+    "CRM and ERP suite"
+   ]
+  },
+  {
+   "gap": "Power Platform (Power Apps/Power Automate/Power BI)",
+   "kind": "tool",
+   "concepts": [
+    "Power BI"
+   ],
+   "phrases": [
+    "low code app building",
+    "workflow automation tools"
+   ]
+  },
+  {
+   "gap": "Data Migration (FBDI/HDL/ADFdi)",
+   "kind": "skill",
+   "concepts": [
+    "Data Migration"
+   ],
+   "phrases": [
+    "moving data between systems",
+    "loading data into cloud ERP"
+   ]
+  },
+  {
+   "gap": "SAP Production Planning (PP) / Quality Management (QM)",
+   "kind": "skill",
+   "concepts": [
+    "ERP Module Configuration"
+   ],
+   "phrases": [
+    "manufacturing planning module",
+    "quality control processes"
+   ]
+  },
+  {
+   "gap": "System Integration (APIs/REST/SOAP/OIC)",
+   "kind": "skill",
+   "concepts": [
+    "Integration",
+    "APIs"
+   ],
+   "phrases": [
+    "connecting systems via APIs",
+    "web service integration",
+    "cloud integration platforms"
+   ]
+  },
+  {
+   "gap": "Business Requirements Analysis & Functional Specifications",
+   "kind": "skill",
+   "concepts": [
+    "Requirements Gathering",
+    "Business Analysis"
+   ],
+   "phrases": [
+    "gathering stakeholder requirements",
+    "writing functional specifications",
+    "translating needs into specs"
+   ]
+  }
+ ]
+}

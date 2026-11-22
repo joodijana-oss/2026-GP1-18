@@ -1,0 +1,34 @@
+{
+ "goal": "cybersecurity_analyst",
+ "extractor": "E0",
+ "run": 2,
+ "postings": 20,
+ "rawNames": [
+  "SIEM",
+  "Vulnerability Assessment",
+  "Penetration Testing",
+  "Incident Response",
+  "Firewalls",
+  "Network Security",
+  "SOC Operations",
+  "IDS/IPS",
+  "Security Certifications (CISSP, CEH, Security+, OSCP)",
+  "Python Scripting",
+  "Cloud Security (AWS/GCP/Azure)",
+  "Log Analysis and Threat Detection"
+ ],
+ "names": [
+  "SIEM",
+  "Vulnerability Assessment",
+  "Penetration Testing",
+  "Incident Response",
+  "Firewalls",
+  "Network Security",
+  "SOC Operations",
+  "IDS/IPS",
+  "Security Certifications (CISSP, CEH, Security+, OSCP)",
+  "Python Scripting",
+  "Cloud Security (AWS/GCP/Azure)",
+  "Log Analysis and Threat Detection"
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "targets": [
+  "REST API Design",
+  "Node.js",
+  "Python",
+  "Kubernetes"
+ ],
+ "answer": [
+  {
+   "skill": "REST API Design",
+   "status": "shown",
+   "quote": "Added three endpoints to the refunds service (Java, Spring Boot)"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

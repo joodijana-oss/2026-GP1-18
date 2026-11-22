@@ -1,0 +1,291 @@
+{
+  "id": "ho_14",
+  "careerGoalId": "network_engineer",
+  "shown": [
+    {
+      "skill": "VLANs",
+      "alsoCalled": [
+        "Virtual LANs",
+        "VLAN Configuration"
+      ],
+      "evidence": "assign that port to the office's voice or data segment on the Cisco Catalyst access layer",
+      "source": "experience"
+    },
+    {
+      "skill": "Switching",
+      "alsoCalled": [
+        "LAN Switching",
+        "Layer 2 Switching"
+      ],
+      "evidence": "Patch new desks through to the right port and assign that port to the office's voice or data segment",
+      "source": "experience"
+    },
+    {
+      "skill": "Network Troubleshooting",
+      "alsoCalled": [
+        "Connectivity Troubleshooting",
+        "Network Fault Diagnosis"
+      ],
+      "evidence": "work through it from the cable to the gateway to name resolution before escalating to the head-office network team",
+      "source": "experience"
+    },
+    {
+      "skill": "Wireless Networking",
+      "alsoCalled": [
+        "Wi-Fi",
+        "WLAN",
+        "Wireless LAN"
+      ],
+      "evidence": "Replaced nine consumer access points with a controller-managed UniFi set, choosing channels and placement from a walk-through survey",
+      "source": "experience"
+    },
+    {
+      "skill": "Network Documentation",
+      "alsoCalled": [
+        "Network Diagrams",
+        "Topology Documentation"
+      ],
+      "evidence": "Keep the port map and rack photos for each office up to date in the team wiki",
+      "source": "experience"
+    },
+    {
+      "skill": "Network Monitoring",
+      "alsoCalled": [
+        "NMS",
+        "SNMP Monitoring"
+      ],
+      "evidence": "Watch link and device status on the PRTG screen and raise a ticket to head office when a site uplink drops",
+      "source": "experience"
+    },
+    {
+      "skill": "Structured Cabling",
+      "alsoCalled": [
+        "Cabling",
+        "Cable Termination"
+      ],
+      "evidence": "Pulled and terminated cable for a 24-desk office extension",
+      "source": "experience"
+    },
+    {
+      "skill": "OSPF",
+      "alsoCalled": [
+        "Open Shortest Path First",
+        "Dynamic Routing"
+      ],
+      "evidence": "Built a three-router OSPF topology with redistribution of static routes",
+      "source": "project"
+    },
+    {
+      "skill": "DHCP",
+      "alsoCalled": [
+        "Dynamic Host Configuration Protocol"
+      ],
+      "evidence": "a DHCP server on the router",
+      "source": "project"
+    },
+    {
+      "skill": "Packet Analysis",
+      "alsoCalled": [
+        "Wireshark",
+        "Packet Capture"
+      ],
+      "evidence": "Capture traffic on the lab links to see what the protocols actually send while neighbours form",
+      "source": "project"
+    },
+    {
+      "skill": "Cisco IOS",
+      "alsoCalled": [
+        "Cisco CLI",
+        "Cisco Device Configuration"
+      ],
+      "evidence": "Two second-hand Cisco 1941 routers and a 3560 switch, plus GNS3",
+      "source": "project"
+    },
+    {
+      "skill": "TCP/IP Networking",
+      "alsoCalled": [
+        "Networking Fundamentals",
+        "Network Protocols",
+        "TCP/IP"
+      ],
+      "evidence": "CCNA (Cisco Certified Network Associate), May 2026",
+      "source": "certification"
+    },
+    {
+      "skill": "Subnetting",
+      "alsoCalled": [
+        "IP Addressing",
+        "IP Address Planning"
+      ],
+      "evidence": "CCNA (Cisco Certified Network Associate), May 2026",
+      "source": "certification"
+    },
+    {
+      "skill": "Technical Support",
+      "alsoCalled": [
+        "Help Desk",
+        "Service Desk",
+        "IT Support",
+        "User Support"
+      ],
+      "evidence": "First point of contact for 300 users in four site offices: laptops, accounts, printers, phones",
+      "source": "experience"
+    },
+    {
+      "skill": "Customer Service",
+      "alsoCalled": [
+        "User Communication",
+        "Client Service"
+      ],
+      "evidence": "Logged and answered customer calls about home internet",
+      "source": "experience"
+    },
+    {
+      "skill": "GNS3",
+      "alsoCalled": [
+        "Network Emulation"
+      ],
+      "evidence": "plus GNS3",
+      "source": "project"
+    },
+    {
+      "skill": "Active Directory",
+      "alsoCalled": [
+        "AD",
+        "User Account Management"
+      ],
+      "evidence": "Cisco switches, VLANs, OSPF, Wi-Fi, Windows 10/11, Active Directory users",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Windows",
+      "alsoCalled": [
+        "Windows 10",
+        "Windows 11",
+        "Windows Desktop Support"
+      ],
+      "evidence": "Cisco switches, VLANs, OSPF, Wi-Fi, Windows 10/11, Active Directory users",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Cisco Certified Network Associate",
+      "alsoCalled": [
+        "CCNA"
+      ],
+      "evidence": "CCNA (Cisco Certified Network Associate), May 2026",
+      "source": "certification"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Network Security",
+      "alsoCalled": [
+        "Network Defense",
+        "Network Segmentation",
+        "Access Control Lists"
+      ],
+      "evidence": "filtering between VLANs",
+      "why": "One filtering exercise in a home lab."
+    },
+    {
+      "skill": "DNS",
+      "alsoCalled": [
+        "Domain Name System"
+      ],
+      "evidence": "from the cable to the gateway to name resolution",
+      "why": "Checks name resolution when fixing faults; does not run DNS."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "VPN",
+      "alsoCalled": [
+        "IPsec VPN",
+        "Site-to-Site VPN",
+        "Remote Access VPN"
+      ],
+      "why": "Enrols users in the remote-access client; has not configured a VPN gateway or tunnel.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Firewall Management",
+      "alsoCalled": [
+        "Firewall Administration",
+        "Firewall Configuration",
+        "Firewall Rules"
+      ],
+      "why": "Uses the firewall vendor's client on laptops; no firewall rules or policies.",
+      "nearMiss": true
+    },
+    {
+      "skill": "BGP",
+      "alsoCalled": [
+        "Border Gateway Protocol"
+      ],
+      "why": "Home lab covers OSPF and static routes only.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Cisco Certified Network Professional",
+      "alsoCalled": [
+        "CCNP",
+        "CCNP Enterprise"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "MPLS",
+      "alsoCalled": [
+        "Multiprotocol Label Switching"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "QoS",
+      "alsoCalled": [
+        "Quality of Service"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Load Balancing",
+      "alsoCalled": [
+        "Load Balancers",
+        "F5"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "IPv6",
+      "alsoCalled": [
+        "IPv6 Addressing"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Network Automation",
+      "alsoCalled": [
+        "Python for Networking",
+        "Network Scripting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "SD-WAN",
+      "alsoCalled": [
+        "Software-Defined WAN"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "CCNA (Cisco Certified Network Associate)"
+  ]
+}

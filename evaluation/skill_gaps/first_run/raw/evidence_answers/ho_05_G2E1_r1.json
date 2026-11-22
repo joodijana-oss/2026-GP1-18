@@ -1,0 +1,36 @@
+{
+ "targets": [
+  "REST APIs",
+  "Node.js",
+  "Microservices Architecture",
+  "Kubernetes",
+  "Python"
+ ],
+ "answer": [
+  {
+   "skill": "REST APIs",
+   "status": "shown",
+   "quote": "Added three endpoints to the refunds service (Java, Spring Boot)"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "partly",
+   "quote": "Added three endpoints to the refunds service (Java, Spring Boot)"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

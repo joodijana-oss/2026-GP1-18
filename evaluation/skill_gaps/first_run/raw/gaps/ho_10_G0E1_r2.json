@@ -1,0 +1,15 @@
+{
+ "case": "ho_10",
+ "arm": "G0E1",
+ "run": 2,
+ "gaps": [
+  "Functional Testing",
+  "Appium",
+  "Scrum"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

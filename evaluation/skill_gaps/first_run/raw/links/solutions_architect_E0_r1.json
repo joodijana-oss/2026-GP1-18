@@ -1,0 +1,140 @@
+{
+ "goal": "solutions_architect",
+ "extractor": "E0",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Cloud Architecture (AWS/Azure/GCP)",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "designing cloud infrastructure",
+    "multi-cloud architecture design",
+    "cloud platform solutions"
+   ]
+  },
+  {
+   "gap": "Enterprise Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "enterprise-wide IT architecture",
+    "aligning business and IT structures"
+   ]
+  },
+  {
+   "gap": "Solution Design",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing technical solutions",
+    "end-to-end solution planning"
+   ]
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "managing stakeholder expectations",
+    "engaging business stakeholders"
+   ]
+  },
+  {
+   "gap": "System Integration",
+   "kind": "skill",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [
+    "connecting systems and applications",
+    "integrating software components"
+   ]
+  },
+  {
+   "gap": "TOGAF Certification",
+   "kind": "certification",
+   "concepts": [
+    "TOGAF"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Architecture Roadmaps & Blueprints",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "creating architecture roadmaps",
+    "technology blueprint planning"
+   ]
+  },
+  {
+   "gap": "API Design",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [
+    "designing application interfaces",
+    "building RESTful APIs"
+   ]
+  },
+  {
+   "gap": "Data Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Data Architecture"
+   ],
+   "phrases": [
+    "designing data structures",
+    "enterprise data modeling"
+   ]
+  },
+  {
+   "gap": "Presales / Technical Consulting",
+   "kind": "soft",
+   "concepts": [
+    "Product Demonstrations"
+   ],
+   "phrases": [
+    "advising clients on solutions",
+    "technical pre-sales support",
+    "consulting on customer requirements"
+   ]
+  },
+  {
+   "gap": "DevSecOps / Agile Practices",
+   "kind": "skill",
+   "concepts": [
+    "DevOps",
+    "Agile"
+   ],
+   "phrases": [
+    "secure software delivery pipelines",
+    "agile development practices"
+   ]
+  },
+  {
+   "gap": "AI/ML & GenAI Solutions",
+   "kind": "skill",
+   "concepts": [
+    "Machine Learning",
+    "Generative AI"
+   ],
+   "phrases": [
+    "building AI-powered solutions",
+    "applying machine learning models"
+   ]
+  }
+ ]
+}

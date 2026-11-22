@@ -1,0 +1,67 @@
+{
+ "case": "ho_16",
+ "arm": "G1E1",
+ "run": 3,
+ "gaps": [
+  "React",
+  "Node.js",
+  "Java",
+  "Spring Boot",
+  "Kubernetes",
+  "C++"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Git",
+   "status": "shown"
+  },
+  {
+   "skill": "REST API Design",
+   "status": "shown"
+  },
+  {
+   "skill": "SQL",
+   "status": "shown"
+  },
+  {
+   "skill": "React",
+   "status": "missing"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing"
+  },
+  {
+   "skill": "Java",
+   "status": "missing"
+  },
+  {
+   "skill": "Docker",
+   "status": "shown"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing"
+  },
+  {
+   "skill": "Python",
+   "status": "shown"
+  },
+  {
+   "skill": "Linux",
+   "status": "shown"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  },
+  {
+   "skill": "C++",
+   "status": "missing"
+  }
+ ]
+}

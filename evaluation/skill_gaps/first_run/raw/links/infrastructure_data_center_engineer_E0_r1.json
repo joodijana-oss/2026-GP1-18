@@ -1,0 +1,129 @@
+{
+ "goal": "infrastructure_data_center_engineer",
+ "extractor": "E0",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "managing Linux systems",
+    "Linux system administration",
+    "command line administration"
+   ]
+  },
+  {
+   "gap": "Networking (LAN/WAN, TCP/IP, VLAN, Firewalls, VPN)",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals",
+    "TCP/IP"
+   ],
+   "phrases": [
+    "configuring VLANs and firewalls",
+    "setting up VPNs",
+    "LAN and WAN design"
+   ]
+  },
+  {
+   "gap": "Data Center Operations",
+   "kind": "skill",
+   "concepts": [
+    "Data Center Operations"
+   ],
+   "phrases": [
+    "managing data center facilities",
+    "server room operations"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Structured Cabling (Fiber/Copper)",
+   "kind": "skill",
+   "concepts": [
+    "Fiber Optics"
+   ],
+   "phrases": [
+    "installing fiber and copper cabling",
+    "cable termination techniques",
+    "physical network wiring"
+   ]
+  },
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "VMware",
+   "kind": "tool",
+   "concepts": [
+    "Virtualization"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "CI/CD Pipelines",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": [
+    "building deployment pipelines",
+    "automated build and release",
+    "continuous integration workflows"
+   ]
+  },
+  {
+   "gap": "Monitoring Tools (Prometheus/Grafana)",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "setting up monitoring dashboards",
+    "tracking system metrics",
+    "alerting and observability"
+   ]
+  },
+  {
+   "gap": "Ansible",
+   "kind": "tool",
+   "concepts": [
+    "Infrastructure as Code"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Windows Server Administration",
+   "kind": "skill",
+   "concepts": [
+    "Windows Server"
+   ],
+   "phrases": [
+    "managing Windows servers",
+    "server role configuration",
+    "Active Directory administration"
+   ]
+  }
+ ]
+}

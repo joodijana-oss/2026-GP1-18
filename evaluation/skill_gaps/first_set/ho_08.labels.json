@@ -1,0 +1,253 @@
+{
+  "id": "ho_08",
+  "careerGoalId": "network_engineer",
+  "shown": [
+    {
+      "skill": "Subnetting",
+      "alsoCalled": [
+        "IP Addressing",
+        "IP Address Planning"
+      ],
+      "evidence": "Planned the address space for 1,200 hosts over 14 departments, carving a /20 into right-sized blocks with room to grow",
+      "source": "project"
+    },
+    {
+      "skill": "VLANs",
+      "alsoCalled": [
+        "Virtual LANs",
+        "VLAN Configuration"
+      ],
+      "evidence": "Kept departments apart at layer 2 with trunked links between the access and distribution layers",
+      "source": "project"
+    },
+    {
+      "skill": "Switching",
+      "alsoCalled": [
+        "LAN Switching",
+        "Layer 2 Switching"
+      ],
+      "evidence": "routed between them on a layer-3 switch",
+      "source": "project"
+    },
+    {
+      "skill": "OSPF",
+      "alsoCalled": [
+        "Open Shortest Path First",
+        "Dynamic Routing"
+      ],
+      "evidence": "Ran OSPF in two areas between the branches and checked failover by pulling links",
+      "source": "project"
+    },
+    {
+      "skill": "VPN",
+      "alsoCalled": [
+        "IPsec VPN",
+        "Site-to-Site VPN",
+        "Remote Access VPN"
+      ],
+      "evidence": "Connected the two branches over an encrypted IPsec tunnel across a simulated ISP",
+      "source": "project"
+    },
+    {
+      "skill": "DHCP",
+      "alsoCalled": [
+        "Dynamic Host Configuration Protocol"
+      ],
+      "evidence": "Handed out addresses centrally with scopes on a server and a relay on each gateway",
+      "source": "project"
+    },
+    {
+      "skill": "Network Documentation",
+      "alsoCalled": [
+        "Network Diagrams",
+        "Topology Documentation"
+      ],
+      "evidence": "Drew the full topology and address plan in Visio and kept a change log",
+      "source": "project"
+    },
+    {
+      "skill": "Wireless Networking",
+      "alsoCalled": [
+        "Wi-Fi",
+        "WLAN",
+        "Wireless LAN"
+      ],
+      "evidence": "Helped install and aim 22 access points in two pilgrim guidance tents",
+      "source": "other"
+    },
+    {
+      "skill": "Structured Cabling",
+      "alsoCalled": [
+        "Cabling",
+        "Cable Termination"
+      ],
+      "evidence": "Crimped and tested around 80 Cat6 runs to the temporary rack",
+      "source": "other"
+    },
+    {
+      "skill": "Network Troubleshooting",
+      "alsoCalled": [
+        "Connectivity Troubleshooting",
+        "Network Fault Diagnosis"
+      ],
+      "evidence": "found causes such as a mismatched native VLAN, a wrong mask and a missing default route",
+      "source": "education"
+    },
+    {
+      "skill": "Cisco IOS",
+      "alsoCalled": [
+        "Cisco CLI",
+        "Cisco Device Configuration"
+      ],
+      "evidence": "then on six real Cisco 2960 and ISR devices in the college lab",
+      "source": "project"
+    },
+    {
+      "skill": "TCP/IP Networking",
+      "alsoCalled": [
+        "Networking Fundamentals",
+        "Network Protocols",
+        "TCP/IP"
+      ],
+      "evidence": "Cisco Certified Network Associate (CCNA 200-301)",
+      "source": "certification"
+    },
+    {
+      "skill": "Packet Analysis",
+      "alsoCalled": [
+        "Wireshark",
+        "Packet Capture"
+      ],
+      "evidence": "Cisco IOS, OSPF, VLANs, Wireshark, basic Python",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "evidence": "Cisco IOS, OSPF, VLANs, Wireshark, basic Python",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Cisco Packet Tracer",
+      "alsoCalled": [
+        "Packet Tracer"
+      ],
+      "evidence": "Built first in Packet Tracer",
+      "source": "project"
+    },
+    {
+      "skill": "Cisco Certified Network Associate",
+      "alsoCalled": [
+        "CCNA"
+      ],
+      "evidence": "Cisco Certified Network Associate (CCNA 200-301)",
+      "source": "certification"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Network Security",
+      "alsoCalled": [
+        "Network Defense",
+        "Network Segmentation",
+        "Access Control Lists"
+      ],
+      "evidence": "an encrypted IPsec tunnel",
+      "why": "One encrypted tunnel; no access lists, port security or hardening described."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "BGP",
+      "alsoCalled": [
+        "Border Gateway Protocol"
+      ],
+      "why": "Used OSPF only; no routing between autonomous systems.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Network Automation",
+      "alsoCalled": [
+        "Python for Networking",
+        "Network Scripting"
+      ],
+      "why": "Lists basic Python, but automated nothing on the network.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Cisco Certified Network Professional",
+      "alsoCalled": [
+        "CCNP",
+        "CCNP Enterprise"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "MPLS",
+      "alsoCalled": [
+        "Multiprotocol Label Switching"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "QoS",
+      "alsoCalled": [
+        "Quality of Service"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Load Balancing",
+      "alsoCalled": [
+        "Load Balancers",
+        "F5"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Firewall Management",
+      "alsoCalled": [
+        "Firewall Administration",
+        "Firewall Configuration",
+        "Firewall Rules"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Network Monitoring",
+      "alsoCalled": [
+        "NMS",
+        "SNMP Monitoring"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "DNS",
+      "alsoCalled": [
+        "Domain Name System"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "SD-WAN",
+      "alsoCalled": [
+        "Software-Defined WAN"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "Cisco Certified Network Associate (CCNA 200-301)"
+  ]
+}

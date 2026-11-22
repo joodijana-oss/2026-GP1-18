@@ -1,0 +1,40 @@
+{
+ "case": "ho_14",
+ "arm": "G2E1",
+ "run": 2,
+ "gaps": [
+  "CCNP",
+  "Palo Alto",
+  "BGP"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "CCNA",
+   "status": "shown"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "partly"
+  },
+  {
+   "skill": "CCNP",
+   "status": "missing"
+  },
+  {
+   "skill": "Fortinet",
+   "status": "partly"
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing"
+  },
+  {
+   "skill": "BGP",
+   "status": "missing"
+  }
+ ]
+}

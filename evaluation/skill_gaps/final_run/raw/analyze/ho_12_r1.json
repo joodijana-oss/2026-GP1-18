@@ -1,0 +1,59 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Experience performing control-by-control gap assessment against a regulatory cyber framework",
+   "Experience collecting and validating audit evidence for a large number of controls ahead of external audits",
+   "Experience conducting third-party/supplier risk assessments",
+   "Experience rewriting policy documents into clear, staff-readable form that gained committee approval",
+   "Experience running security awareness exercises (phishing simulation) and delivering training",
+   "Experience maintaining risk/threat registers with ownership, likelihood and impact",
+   "Experience producing regular compliance reporting for senior stakeholders",
+   "Experience applying ISO/IEC 27001 Annex A in a capstone project (scope definition and statement of applicability)",
+   "Holds ISO/IEC 27001:2022 Lead Implementer certification",
+   "Fluent in English (IELTS 7.5) and native Arabic"
+  ],
+  "currentSkills": [
+   "ISO/IEC 27001",
+   "NCA ECC",
+   "Risk Registers",
+   "Excel",
+   "IT Audit",
+   "Compliance Management",
+   "Security Awareness Training",
+   "Vendor Risk Assessment",
+   "Policy Writing",
+   "Reporting",
+   "Information Security Management",
+   "Cyber Law"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Cybersecurity",
+    "institution": "Princess Nourah bint Abdulrahman University, Riyadh",
+    "year": "2022 – 2026"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "ISO/IEC 27001:2022 Lead Implementer",
+    "issuer": "PECB",
+    "year": "Aug 2026"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Capstone Project",
+    "description": "Defined the scope and wrote the statement of applicability for an invented dental clinic chain, following ISO/IEC 27001 Annex A."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Governance and compliance co-op trainee",
+    "organization": "A cooperative insurance company, Riyadh",
+    "duration": "02/2026 – Jul 2026",
+    "description": "Assessed the regulator's cyber framework control by control with each department, identifying met and unmet controls and compiling a tracked action list of 46 items. Collected screenshots, configurations and signed records as evidence for 120 controls ahead of external audits and checked each against control requirements. Sent questionnaires to nine suppliers handling policyholder data, scored responses and flagged two for follow-up. Rewrote acceptable-use and password policies into two short documents approved by the committee in June. Ran a quarterly phishing simulation for 600 staff and gave a 20-minute talk to the 48 who clicked. Maintained the department's open threats list including owner, likelihood, impact and mitigation status. Wrote the monthly compliance status summary for the head of cybersecurity."
+   }
+  ]
+ }
+}

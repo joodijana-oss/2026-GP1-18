@@ -1,0 +1,64 @@
+{
+ "case": "ho_11",
+ "arm": "G1E1",
+ "run": 2,
+ "gaps": [
+  "Active Directory",
+  "TCP/IP",
+  "IT Asset Management"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Hardware Troubleshooting",
+   "status": "shown"
+  },
+  {
+   "skill": "Windows Operating System",
+   "status": "shown"
+  },
+  {
+   "skill": "Networking",
+   "status": "shown"
+  },
+  {
+   "skill": "Active Directory",
+   "status": "missing"
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "partly"
+  },
+  {
+   "skill": "Microsoft 365",
+   "status": "partly"
+  },
+  {
+   "skill": "LAN Administration",
+   "status": "partly"
+  },
+  {
+   "skill": "Wi-Fi Troubleshooting",
+   "status": "shown"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "missing"
+  },
+  {
+   "skill": "Printer Support",
+   "status": "shown"
+  },
+  {
+   "skill": "IT Asset Management",
+   "status": "missing"
+  },
+  {
+   "skill": "Customer Service",
+   "status": "shown"
+  }
+ ]
+}

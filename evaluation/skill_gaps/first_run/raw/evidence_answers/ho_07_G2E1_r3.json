@@ -1,0 +1,24 @@
+{
+ "targets": [
+  "Ansible",
+  "Linux Administration",
+  "Azure"
+ ],
+ "answer": [
+  {
+   "skill": "Ansible",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux Administration",
+   "status": "shown",
+   "quote": "Looked after 200 customer CentOS and Ubuntu servers: disks, users, updates"
+  },
+  {
+   "skill": "Azure",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

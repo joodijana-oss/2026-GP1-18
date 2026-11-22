@@ -1,0 +1,169 @@
+{
+ "goal": "business_analyst",
+ "list": "E1",
+ "run": 2,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Business Requirements Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Requirements Gathering"
+   ],
+   "phrases": [],
+   "same": [
+    "Requirements Gathering"
+   ],
+   "terms": [
+    "requirements analysis",
+    "business requirements",
+    "requirements elicitation"
+   ]
+  },
+  {
+   "gap": "System Integration",
+   "kind": "skill",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [],
+   "same": [
+    "Integration"
+   ],
+   "terms": [
+    "system integration",
+    "integration testing",
+    "interoperability"
+   ]
+  },
+  {
+   "gap": "ERP Systems",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "ERP",
+    "enterprise resource planning",
+    "ERP system"
+   ]
+  },
+  {
+   "gap": "SAP SuccessFactors",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "SuccessFactors",
+    "SAP HR",
+    "SAP HCM"
+   ]
+  },
+  {
+   "gap": "Power BI",
+   "kind": "tool",
+   "concepts": [
+    "Power BI"
+   ],
+   "phrases": [],
+   "same": [
+    "Power BI"
+   ],
+   "terms": [
+    "Power BI"
+   ]
+  },
+  {
+   "gap": "Risk Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Risk Assessment"
+   ],
+   "phrases": [],
+   "same": [
+    "Risk Assessment"
+   ],
+   "terms": [
+    "risk assessment"
+   ]
+  },
+  {
+   "gap": "ISO 27001 Lead Implementer",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "ISO 27001 Lead Implementer",
+    "ISO 27001 implementation",
+    "lead implementer"
+   ]
+  },
+  {
+   "gap": "Access Control Management",
+   "kind": "skill",
+   "concepts": [
+    "Information Security"
+   ],
+   "phrases": [],
+   "terms": [
+    "access control",
+    "identity and access management",
+    "IAM"
+   ]
+  },
+  {
+   "gap": "APIs",
+   "kind": "tool",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [],
+   "same": [
+    "APIs"
+   ],
+   "terms": [
+    "API"
+   ]
+  },
+  {
+   "gap": "Agile Development",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [],
+   "same": [
+    "Agile"
+   ],
+   "terms": [
+    "agile",
+    "scrum",
+    "sprint"
+   ]
+  },
+  {
+   "gap": "DevOps",
+   "kind": "skill",
+   "concepts": [
+    "DevOps"
+   ],
+   "phrases": [],
+   "same": [
+    "DevOps"
+   ],
+   "terms": [
+    "DevOps"
+   ]
+  },
+  {
+   "gap": "Documentation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "documentation",
+    "technical writing",
+    "requirements documentation"
+   ]
+  }
+ ]
+}

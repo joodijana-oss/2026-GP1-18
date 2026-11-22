@@ -1,0 +1,206 @@
+OPPORTUNITY RECOMMENDER EVALUATION
+Evaluation date : 2026-11-19 (fixed)
+Catalogue       : 430 opportunities, 420 open on that date
+Personas        : 8 (test/fixtures/opportunity_eval_personas_heldout.json)
+Note            : these personas are the held-out set. Nothing in the ranking was designed or tuned on them,
+                  so these are the numbers to report. Differences of about 0.02 between systems are noise.
+
+heldout_web_developer  (No Experience, 8 gaps, 14 labels, labels allow GapCov 0.63)
+                          Baseline       New    Change
+  P@5                        0.800     1.000    +0.200
+  nDCG@10                    0.767     0.891    +0.124
+  GapCov@10                  0.375     0.625    +0.250
+  Ties@10                        5         0        -5
+  TopGapRank                     1         1        +0
+  Goal-only above gap           12         0       -12
+
+heldout_mobile_developer  (Beginner, 8 gaps, 15 labels, labels allow GapCov 0.88)
+                          Baseline       New    Change
+  P@5                        0.800     1.000    +0.200
+  nDCG@10                    0.813     0.877    +0.065
+  GapCov@10                  0.750     0.875    +0.125
+  Ties@10                        8         0        -8
+  TopGapRank                     6         2        -4
+  Goal-only above gap            3         0        -3
+
+heldout_data_scientist  (Intermediate, 8 gaps, 31 labels, labels allow GapCov 0.88)
+                          Baseline       New    Change
+  P@5                        0.800     1.000    +0.200
+  nDCG@10                    0.721     0.958    +0.237
+  GapCov@10                  0.750     0.875    +0.125
+  Ties@10                        6         0        -6
+  TopGapRank                     1         1        +0
+  Goal-only above gap           18         0       -18
+
+heldout_data_engineer  (Advanced, 8 gaps, 14 labels, labels allow GapCov 0.88)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.742     0.878    +0.136
+  GapCov@10                  0.625     0.875    +0.250
+  Ties@10                        7         0        -7
+  TopGapRank                     1         1        +0
+  Goal-only above gap           14         0       -14
+
+heldout_qa_test_engineer  (Intermediate, 8 gaps, 13 labels, labels allow GapCov 0.75)
+                          Baseline       New    Change
+  P@5                        0.800     1.000    +0.200
+  nDCG@10                    0.862     0.947    +0.085
+  GapCov@10                  0.625     0.625    +0.000
+  Ties@10                        8         0        -8
+  TopGapRank                     1         1        +0
+  Goal-only above gap            6         0        -6
+
+heldout_systems_administrator  (Advanced, 8 gaps, 33 labels, labels allow GapCov 0.88)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.381     0.612    +0.230
+  GapCov@10                  0.625     0.750    +0.125
+  Ties@10                        7         0        -7
+  TopGapRank                     3         1        -2
+  Goal-only above gap           14         0       -14
+
+heldout_business_analyst  (Beginner, 8 gaps, 36 labels, labels allow GapCov 0.88)
+                          Baseline       New    Change
+  P@5                        1.000     1.000    +0.000
+  nDCG@10                    0.802     0.790    -0.012
+  GapCov@10                  0.750     0.875    +0.125
+  Ties@10                        8         0        -8
+  TopGapRank                    94         4       -90
+  Goal-only above gap           16         0       -16
+
+heldout_it_project_manager  (Advanced, 8 gaps, 33 labels, labels allow GapCov 0.75)
+                          Baseline       New    Change
+  P@5                        0.600     0.800    +0.200
+  nDCG@10                    0.480     0.498    +0.018
+  GapCov@10                  0.375     0.500    +0.125
+  Ties@10                        9         0        -9
+  TopGapRank                     1         1        +0
+  Goal-only above gap           23         0       -23
+
+NDCG@10 PER PERSONA
+  Persona                             Baseline       New    Change
+  heldout_web_developer                  0.767     0.891    +0.124
+  heldout_mobile_developer               0.813     0.877    +0.065
+  heldout_data_scientist                 0.721     0.958    +0.237
+  heldout_data_engineer                  0.742     0.878    +0.136
+  heldout_qa_test_engineer               0.862     0.947    +0.085
+  heldout_systems_administrator          0.381     0.612    +0.230
+  heldout_business_analyst               0.802     0.790    -0.012
+  heldout_it_project_manager             0.480     0.498    +0.018
+  Average                                0.696     0.806    +0.110
+  New is better for 7, the same for 0 and worse for 1 of 8 personas.
+
+GAPCOV@10 PER PERSONA
+  Persona                             Baseline       New    Change
+  heldout_web_developer                  0.375     0.625    +0.250
+  heldout_mobile_developer               0.750     0.875    +0.125
+  heldout_data_scientist                 0.750     0.875    +0.125
+  heldout_data_engineer                  0.625     0.875    +0.250
+  heldout_qa_test_engineer               0.625     0.625    +0.000
+  heldout_systems_administrator          0.625     0.750    +0.125
+  heldout_business_analyst               0.750     0.875    +0.125
+  heldout_it_project_manager             0.375     0.500    +0.125
+  Average                                0.609     0.750    +0.141
+  New is better for 7, the same for 1 and worse for 0 of 8 personas.
+
+AVERAGE OVER 8 PERSONAS
+                          Baseline       New    Change
+  nDCG@10                    0.696     0.806    +0.110
+  GapCov@10                  0.609     0.750    +0.141
+  TopGapRank                13.500     1.500   -12.000
+  P@5 (sanity check)         0.850     0.975    +0.125
+  Ties@10                    7.250     0.000    -7.250
+  Goal-only above gap       13.250     0.000   -13.250
+  (TopGapRank: rank of the first result that teaches the most demanded gap; lower is better. Ties and
+   goal-only-above-gap: lower is better. P@5 is close to its maximum for both systems, so it says little.)
+
+Rankings identical to baseline: 0/8 personas
+
+TIMING (this computer; a JIT run of this script is slower than a release build, debug mode on an emulator is slower still)
+  Build the index once per opportunity list (median of 5)        : 25.1 ms
+  First recommend() on a new list, first persona (includes the build): 31.2 ms
+  First recommend() on a new list, realistic profile (12 gaps, 25 current skills, median of 5): 39.9 ms
+  recommend() for a new user, index already built (median)     : 5.54 ms
+  recommend() repeated, New      (median of 240 calls)        : 0.79 ms   (slowest 6.14 ms)
+  recommend() repeated, Baseline (median of 240 calls)        : 143.50 ms
+  The app calls recommendInBackground():
+    new list, builds the index on a background isolate, wall time (median of 3): 56.1 ms
+    same list, same user again, runs here on the kept index (median of 30): 0.81 ms   (slowest 1.43 ms)
+    same list, a user not seen before, runs here on the kept index (median of 24): 2.02 ms   (slowest 4.38 ms)
+    index built in the background kept and reused, never built again for the same list: yes
+  The index is built once per list: when the screen first opens, and once after each pull to refresh or retry, which loads a new list.
+
+MEANING LINKS, PERSONA GUARD, approach B/10/10/bt (average over 8 personas)
+                              nDCG@10  GapCov@10     P@5  TopGapRank  Changed  New, no label
+  Without links (New above)     0.806      0.750   0.975        1.50
+  links run 1                   0.812      0.781   0.975        1.50      2/8              1
+  links run 2                   0.812      0.781   0.975        1.50      2/8              1
+  links run 3                   0.811      0.766   0.975        1.50      1/8              1
+  links, mean of 3 runs         0.812      0.776   0.975        1.50
+    no links, best labels       0.806      0.750   0.975        1.50
+    links, best labels          0.821      0.823   0.975        1.50
+  An analysis without links gives the ranking above with this setting: yes
+  links (mean of the runs), not worse than without links on all four numbers:
+    at full precision, tolerance 0 : yes
+    at 3 decimals, tolerance 0     : yes
+    with the best labels for the 1 unlabelled new items, precision 3 decimals, tolerance 0: yes
+      (both sides scored with those labels, in every link run, as the guard would be run after blind labelling)
+    with a tolerance of 0.02, full precision (not in force): yes
+  Differences to without links (mean of the runs): nDCG@10 0.0052, GapCov@10 0.0260, P@5 0.0000, TopGapRank 0.0000
+  (Changed: personas whose ranking differs from the one without links. New, no label: opportunities that
+   entered the first 10 and that no tester labelled; they count as not relevant until they are labelled.)
+  To label:
+    heldout_it_project_manager: Introduction to Project Management (coursera_8EzOy7xZEe2oxw5qVgw_VQ)
+  Compared at 3 decimals (nDCG@10 / GapCov@10 / P@5 / TopGapRank): links 0.812 / 0.776 / 0.975 / 1.500, without links 0.806 / 0.750 / 0.975 / 1.500
+  PERSONA GUARD (precision 3 decimals, tolerance 0): pass
+
+CERTIFICATIONS PER PERSONA, without and with links
+  heldout_web_developer
+    without links : ibm_coursera_ibm_full_stack, freecodecamp_fcc_back_end_and_apis, google_cloud_pcd, freecodecamp_fcc_quality_assurance, meta_coursera_meta_back_end, meta_coursera_meta_front_end, meta_coursera_meta_full_stack, freecodecamp_fcc_front_end_libraries, aws_aws_developer_associate, mongodb_mongodb_associate_developer
+    links run 1   : ibm_coursera_ibm_full_stack, freecodecamp_fcc_back_end_and_apis, google_cloud_pcd, freecodecamp_fcc_quality_assurance, meta_coursera_meta_back_end, meta_coursera_meta_front_end, meta_coursera_meta_full_stack, freecodecamp_fcc_front_end_libraries, aws_aws_developer_associate, mongodb_mongodb_associate_developer
+    links run 2   : ibm_coursera_ibm_full_stack, freecodecamp_fcc_back_end_and_apis, google_cloud_pcd, freecodecamp_fcc_quality_assurance, meta_coursera_meta_back_end, meta_coursera_meta_front_end, meta_coursera_meta_full_stack, freecodecamp_fcc_front_end_libraries, aws_aws_developer_associate, mongodb_mongodb_associate_developer
+    links run 3   : ibm_coursera_ibm_full_stack, freecodecamp_fcc_back_end_and_apis, google_cloud_pcd, freecodecamp_fcc_quality_assurance, meta_coursera_meta_back_end, meta_coursera_meta_front_end, meta_coursera_meta_full_stack, freecodecamp_fcc_front_end_libraries, aws_aws_developer_associate, mongodb_mongodb_associate_developer
+  heldout_mobile_developer
+    without links : meta_coursera_meta_android, meta_coursera_meta_ios, oracle_ocp_java_se_17
+    links run 1   : meta_coursera_meta_android, meta_coursera_meta_ios, oracle_ocp_java_se_17
+    links run 2   : meta_coursera_meta_android, meta_coursera_meta_ios, oracle_ocp_java_se_17
+    links run 3   : meta_coursera_meta_android, meta_coursera_meta_ios, oracle_ocp_java_se_17
+  heldout_data_scientist
+    without links : ibm_coursera_ibm_ai_engineering, nvidia_nca_genl, google_cloud_pmle, oracle_oci_ai_foundations, microsoft_ai_300, aws_aws_ai_practitioner, huawei_hcia_ai, microsoft_ai_901, aws_aws_ml_engineer_associate, databricks_databricks_ml_professional, freecodecamp_fcc_machine_learning_python, ibm_coursera_ibm_data_science, oracle_oci_data_science_professional, databricks_databricks_ml_associate, google_coursera_google_advanced_data_analytics, nvidia_nca_ads, nvidia_ncp_ads, google_cloud_pde
+    links run 1   : ibm_coursera_ibm_ai_engineering, nvidia_nca_genl, google_cloud_pmle, oracle_oci_ai_foundations, microsoft_ai_300, aws_aws_ai_practitioner, huawei_hcia_ai, microsoft_ai_901, aws_aws_ml_engineer_associate, databricks_databricks_ml_professional, freecodecamp_fcc_machine_learning_python, ibm_coursera_ibm_data_science, oracle_oci_data_science_professional, databricks_databricks_ml_associate, google_coursera_google_advanced_data_analytics, nvidia_nca_ads, nvidia_ncp_ads, google_cloud_pde
+    links run 2   : ibm_coursera_ibm_ai_engineering, nvidia_nca_genl, google_cloud_pmle, oracle_oci_ai_foundations, microsoft_ai_300, aws_aws_ai_practitioner, huawei_hcia_ai, microsoft_ai_901, aws_aws_ml_engineer_associate, databricks_databricks_ml_professional, freecodecamp_fcc_machine_learning_python, ibm_coursera_ibm_data_science, oracle_oci_data_science_professional, databricks_databricks_ml_associate, google_coursera_google_advanced_data_analytics, nvidia_nca_ads, nvidia_ncp_ads, google_cloud_pde
+    links run 3   : ibm_coursera_ibm_ai_engineering, nvidia_nca_genl, google_cloud_pmle, oracle_oci_ai_foundations, microsoft_ai_300, aws_aws_ai_practitioner, huawei_hcia_ai, microsoft_ai_901, aws_aws_ml_engineer_associate, databricks_databricks_ml_professional, freecodecamp_fcc_machine_learning_python, ibm_coursera_ibm_data_science, oracle_oci_data_science_professional, databricks_databricks_ml_associate, google_coursera_google_advanced_data_analytics, nvidia_nca_ads, nvidia_ncp_ads, google_cloud_pde
+  heldout_data_engineer
+    without links : databricks_databricks_de_professional, snowflake_snowpro_advanced_administrator, snowflake_snowpro_advanced_architect, snowflake_snowpro_advanced_data_engineer, aws_aws_data_engineer_associate, aws_aws_ml_engineer_associate, databricks_databricks_spark_developer, databricks_databricks_de_associate, microsoft_dp_300, microsoft_azure_databricks_data_engineer, microsoft_sql_ai_developer, snowflake_snowpro_core, microsoft_dp_900
+    links run 1   : databricks_databricks_de_professional, snowflake_snowpro_advanced_administrator, snowflake_snowpro_advanced_architect, snowflake_snowpro_advanced_data_engineer, aws_aws_data_engineer_associate, aws_aws_ml_engineer_associate, databricks_databricks_spark_developer, databricks_databricks_de_associate, microsoft_dp_300, microsoft_azure_databricks_data_engineer, microsoft_sql_ai_developer, snowflake_snowpro_core, microsoft_dp_900
+    links run 2   : databricks_databricks_de_professional, snowflake_snowpro_advanced_administrator, snowflake_snowpro_advanced_architect, snowflake_snowpro_advanced_data_engineer, aws_aws_data_engineer_associate, aws_aws_ml_engineer_associate, databricks_databricks_spark_developer, databricks_databricks_de_associate, microsoft_dp_300, microsoft_azure_databricks_data_engineer, microsoft_sql_ai_developer, snowflake_snowpro_core, microsoft_dp_900
+    links run 3   : databricks_databricks_de_professional, snowflake_snowpro_advanced_administrator, snowflake_snowpro_advanced_architect, snowflake_snowpro_advanced_data_engineer, aws_aws_data_engineer_associate, aws_aws_ml_engineer_associate, databricks_databricks_spark_developer, databricks_databricks_de_associate, microsoft_dp_300, microsoft_azure_databricks_data_engineer, microsoft_sql_ai_developer, snowflake_snowpro_core, microsoft_dp_900
+  heldout_qa_test_engineer
+    without links : istqb_ctal_tae, python_institute_pcat, istqb_ctal_tta, istqb_ct_tas
+    links run 1   : istqb_ctal_tae, python_institute_pcat, istqb_ctal_tta, istqb_ct_tas
+    links run 2   : istqb_ctal_tae, python_institute_pcat, istqb_ctal_tta, istqb_ct_tas
+    links run 3   : istqb_ctal_tae, python_institute_pcat, istqb_ctal_tta, istqb_ct_tas
+  heldout_systems_administrator
+    without links : aws_aws_devops_engineer_professional, microsoft_az_140, microsoft_az_400, red_hat_openshift_administration, aws_aws_cloudops_engineer_associate, linux_foundation_cncf_cka, comptia_security, giac_gsec, github_microsoft_github_administration, microsoft_az_104, microsoft_sc_300, microsoft_az_802, isc2_sscp, vmware_by_broadcom_vcp_vvf_administrator, vmware_by_broadcom_vcp_vcf_administrator, google_coursera_google_it_automation_python, microsoft_az_900
+    links run 1   : aws_aws_devops_engineer_professional, microsoft_az_140, microsoft_az_400, red_hat_openshift_administration, aws_aws_cloudops_engineer_associate, linux_foundation_cncf_cka, comptia_security, giac_gsec, github_microsoft_github_administration, microsoft_az_104, microsoft_sc_300, microsoft_az_802, isc2_sscp, vmware_by_broadcom_vcp_vvf_administrator, vmware_by_broadcom_vcp_vcf_administrator, google_coursera_google_it_automation_python, microsoft_az_900
+    links run 2   : aws_aws_devops_engineer_professional, microsoft_az_140, microsoft_az_400, red_hat_openshift_administration, aws_aws_cloudops_engineer_associate, linux_foundation_cncf_cka, comptia_security, giac_gsec, github_microsoft_github_administration, microsoft_az_104, microsoft_sc_300, microsoft_az_802, isc2_sscp, vmware_by_broadcom_vcp_vvf_administrator, vmware_by_broadcom_vcp_vcf_administrator, google_coursera_google_it_automation_python, microsoft_az_900
+    links run 3   : aws_aws_devops_engineer_professional, microsoft_az_140, microsoft_az_400, red_hat_openshift_administration, aws_aws_cloudops_engineer_associate, linux_foundation_cncf_cka, comptia_security, giac_gsec, github_microsoft_github_administration, microsoft_az_104, microsoft_sc_300, microsoft_az_802, isc2_sscp, vmware_by_broadcom_vcp_vvf_administrator, vmware_by_broadcom_vcp_vcf_administrator, google_coursera_google_it_automation_python, microsoft_az_900
+  heldout_business_analyst
+    without links : google_coursera_google_data_analytics, google_coursera_google_business_intelligence, microsoft_pl_300, tableau_salesforce_tableau_data_analyst, comptia_data
+    links run 1   : google_coursera_google_data_analytics, google_coursera_google_business_intelligence, microsoft_pl_300, tableau_salesforce_tableau_data_analyst, comptia_data
+    links run 2   : google_coursera_google_data_analytics, google_coursera_google_business_intelligence, microsoft_pl_300, tableau_salesforce_tableau_data_analyst, comptia_data
+    links run 3   : google_coursera_google_data_analytics, google_coursera_google_business_intelligence, microsoft_pl_300, tableau_salesforce_tableau_data_analyst, comptia_data
+  heldout_it_project_manager
+    without links : isaca_cgeit, giac_gstrt, isc2_issmp
+    links run 1   : isaca_cgeit, giac_gstrt, isc2_issmp
+    links run 2   : isaca_cgeit, giac_gstrt, isc2_issmp
+    links run 3   : isaca_cgeit, giac_gstrt, isc2_issmp
+  Lists without links equal the lists of this setting on personas without links: yes
+  (Skill gap, certification) pairs that only links attribute: 0
+
+TIMING GUARD (same process, 21 repetitions taking turns in ABBA order, medians; links run 1)
+  recommend() for all 8 personas, index built: today 5.01 ms, with links 5.29 ms, ratio 1.06 (limit 2.00): pass
+  first recommend() on a new list (builds the index): today 29.9 ms, with links 32.7 ms, ratio 1.10 (limit 1.10): pass
+  The ratios are compared at full precision: 1.0554 and 1.0952.
+
+Guard results written to build/gap_eval/final_r3/guards/timing_runs/heldout_5/guard.json. It serves the frozen candidates B/10/10/bt, B/10/10/bt-opp.

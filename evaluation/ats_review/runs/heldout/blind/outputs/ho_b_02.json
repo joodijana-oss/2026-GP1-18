@@ -1,0 +1,44 @@
+{
+ "cvStructure": [
+  {
+   "issue": "Your Projects section sits at the very end, after Certifications and far from Education and Work Experience, even though your projects are strong evidence of hands-on cybersecurity skill.",
+   "suggestion": "Move Projects right after Work Experience so the order reads: Personal Details, Profile, Education, Technical Skills and Other Skills, Work Experience, Projects, Certifications, References."
+  }
+ ],
+ "sectionOrganization": [
+  {
+   "issue": "The heading \"Work Experiance\" is misspelled.",
+   "suggestion": "Change the heading to \"Work Experience\"."
+  },
+  {
+   "issue": "Inside Projects, \"Home Network Vulnerability Assessment (2024)\" is listed before \"Phishing Awareness Campaign (graduation project, 2025)\", so the entries are not most recent first.",
+   "suggestion": "List Phishing Awareness Campaign (2025) first, then Home Network Vulnerability Assessment (2024)."
+  }
+ ],
+ "keywordUsage": [
+  {
+   "issue": "In the SOC Analyst Intern entry, you describe \"helping my supervisor to look at the phishing emails that the employees reported\" in plain words rather than the standard term for this task.",
+   "suggestion": "Rephrase this as something like \"Assisted with phishing email triage and analysis\" so it matches how recruiters and ATS search for this skill."
+  },
+  {
+   "issue": "Your Home Network Vulnerability Assessment project uses CVSS scoring, but CVSS is not listed anywhere in your Technical Skills section.",
+   "suggestion": "Add \"CVSS\" to your Technical Skills so this demonstrated skill is easy for an ATS to find."
+  }
+ ],
+ "readability": [
+  {
+   "issue": "Several lines under SOC Analyst Intern and Security Lab Assistant are written as first-person stories instead of short achievement points, for example \"I was helping my supervisor to look at the phishing emails\", \"I learned how the team writes the weekly report\", and \"I was answering the students questions during the lab\".",
+   "suggestion": "Rewrite these as short points starting with action verbs, for example \"Reviewed reported phishing emails with the SOC team\" and \"Answered student questions during Ethical Hacking labs\"."
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "Your work experience dates use different formats: \"03/2025 – 06/2025\", \"2023-09 to Dec 23\", and \"Summer 2022\".",
+   "suggestion": "Pick one format, such as Month YYYY, and use it for all entries, for example \"March 2025 – June 2025\" and \"September 2023 – December 2023\"."
+  },
+  {
+   "issue": "Your Certifications section lists \"CompTIA Security+ (CompTIA, issued May 2025)\" with full detail, but \"Security course certificate\" and \"Networking certificate - completed\" give no issuer or date.",
+   "suggestion": "Add the actual certificate name, issuer, and completion date for these two entries so they match the detail level of your CompTIA Security+ entry."
+  }
+ ]
+}

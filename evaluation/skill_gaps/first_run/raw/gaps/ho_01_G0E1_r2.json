@@ -1,0 +1,18 @@
+{
+ "case": "ho_01",
+ "arm": "G0E1",
+ "run": 2,
+ "gaps": [
+  "SIEM",
+  "CISSP",
+  "CEH",
+  "Security+",
+  "OSCP",
+  "Access Control"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

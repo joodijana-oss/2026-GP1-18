@@ -1,0 +1,273 @@
+{
+  "id": "ho_02",
+  "careerGoalId": "cybersecurity_analyst",
+  "shown": [
+    {
+      "skill": "Firewall Management",
+      "alsoCalled": [
+        "Firewall Administration",
+        "Firewall Configuration",
+        "Firewall Rules"
+      ],
+      "evidence": "Add, review and retire rules on the FortiGate firewalls",
+      "source": "experience"
+    },
+    {
+      "skill": "Network Security",
+      "alsoCalled": [
+        "Network Defense",
+        "Network Segmentation",
+        "Access Control Lists"
+      ],
+      "evidence": "Separated the card-payment terminals into their own VLAN with access lists so that guest Wi-Fi can no longer reach them",
+      "source": "experience"
+    },
+    {
+      "skill": "Endpoint Security",
+      "alsoCalled": [
+        "Endpoint Protection",
+        "EDR",
+        "Endpoint Detection and Response",
+        "Antivirus Management"
+      ],
+      "evidence": "Run the antivirus console (Trend Micro Apex One) for 900 back-office PCs",
+      "source": "experience"
+    },
+    {
+      "skill": "Phishing Analysis",
+      "alsoCalled": [
+        "Phishing Investigation",
+        "Email Security Analysis"
+      ],
+      "evidence": "I read the headers, open the links in a sandbox and block the sender domains on the mail gateway",
+      "source": "experience"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "evidence": "Wrote Python scripts that back up every switch configuration nightly",
+      "source": "experience"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "Keep a central syslog server on Ubuntu",
+      "source": "experience"
+    },
+    {
+      "skill": "TCP/IP Networking",
+      "alsoCalled": [
+        "Networking Fundamentals",
+        "Network Protocols",
+        "TCP/IP"
+      ],
+      "evidence": "Keep the guest and back-office networks running across the properties",
+      "source": "experience"
+    },
+    {
+      "skill": "Switching",
+      "alsoCalled": [
+        "LAN Switching",
+        "Layer 2 Switching"
+      ],
+      "evidence": "140 Cisco switches, 400 access points and a FortiGate pair at each site",
+      "source": "experience"
+    },
+    {
+      "skill": "VLANs",
+      "alsoCalled": [
+        "Virtual LANs",
+        "VLAN Configuration"
+      ],
+      "evidence": "into their own VLAN with access lists",
+      "source": "experience"
+    },
+    {
+      "skill": "Network Automation",
+      "alsoCalled": [
+        "Python for Networking",
+        "Network Scripting"
+      ],
+      "evidence": "back up every switch configuration nightly and flag ports where the configuration has changed",
+      "source": "experience"
+    },
+    {
+      "skill": "ITIL",
+      "alsoCalled": [
+        "ITIL 4",
+        "IT Service Management",
+        "ITSM"
+      ],
+      "evidence": "Handle P1 outages under the group's ITIL major-incident process",
+      "source": "experience"
+    },
+    {
+      "skill": "Technical Support",
+      "alsoCalled": [
+        "Help Desk",
+        "Service Desk",
+        "IT Support",
+        "User Support"
+      ],
+      "evidence": "Closed around 25 tickets a day: password resets, printers, guest Wi-Fi vouchers",
+      "source": "experience"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "SIEM Monitoring",
+      "alsoCalled": [
+        "SIEM",
+        "Security Information and Event Management",
+        "Security Monitoring"
+      ],
+      "evidence": "including one on searching Splunk for signs of lateral movement",
+      "why": "One training exercise; no SIEM use at work."
+    },
+    {
+      "skill": "NCA Essential Cybersecurity Controls",
+      "alsoCalled": [
+        "NCA ECC",
+        "ECC"
+      ],
+      "evidence": "Attended a two-day NCA ECC awareness workshop arranged by the employer",
+      "why": "Attended a workshop; did not apply the controls."
+    },
+    {
+      "skill": "Incident Response",
+      "alsoCalled": [
+        "Security Incident Handling",
+        "Incident Handling",
+        "IR"
+      ],
+      "evidence": "push policies, chase machines that stop reporting and isolate infected ones",
+      "why": "Isolates infected machines and blocks phishing, but the only incident process he names is for IT outages."
+    },
+    {
+      "skill": "Log Analysis",
+      "alsoCalled": [
+        "Log Review",
+        "Event Log Analysis"
+      ],
+      "evidence": "check it when a link flaps",
+      "why": "Reads device logs for network faults, not for security events."
+    },
+    {
+      "skill": "PCI DSS",
+      "alsoCalled": [
+        "Payment Card Industry Data Security Standard"
+      ],
+      "evidence": "after last year's PCI assessment",
+      "why": "Mentions the assessment in passing; his part in it is not described."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Security Reporting",
+      "alsoCalled": [
+        "Incident Reporting",
+        "Security Documentation"
+      ],
+      "why": "Writes outage summaries for management, not security or incident reports.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Intrusion Detection",
+      "alsoCalled": [
+        "IDS",
+        "IPS",
+        "Intrusion Detection and Prevention"
+      ],
+      "why": "Runs the firewalls, but nothing about IDS or IPS alerts or signatures.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Vulnerability Assessment",
+      "alsoCalled": [
+        "Vulnerability Scanning",
+        "Vulnerability Management"
+      ],
+      "why": "Cleans up firewall rules, but no scanning or assessment of weaknesses.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Active Directory",
+      "alsoCalled": [
+        "AD",
+        "User Account Management"
+      ],
+      "why": "Did password resets as a help-desk trainee, but no directory administration is described.",
+      "nearMiss": true
+    },
+    {
+      "skill": "CompTIA Security+",
+      "alsoCalled": [
+        "Security+",
+        "SY0-701"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Penetration Testing",
+      "alsoCalled": [
+        "Ethical Hacking",
+        "Pentesting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Threat Intelligence",
+      "alsoCalled": [
+        "Cyber Threat Intelligence",
+        "CTI"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Malware Analysis",
+      "alsoCalled": [
+        "Malware Investigation",
+        "Reverse Engineering Malware"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Digital Forensics",
+      "alsoCalled": [
+        "Computer Forensics",
+        "DFIR",
+        "Forensic Analysis"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "MITRE ATT&CK",
+      "alsoCalled": [
+        "ATT&CK Framework"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Cloud Security",
+      "alsoCalled": [
+        "Cloud Security Fundamentals",
+        "Securing Cloud Workloads"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

@@ -1,0 +1,6 @@
+runs/heldout/out new slots 11 seconds median 64.4 max 201.1 | first-try outputTokens n 10 median 6604 max 8721 >=9000: 0
+runs/heldout/out old slots 12 seconds median 38.7 max 67.3 | first-try outputTokens n 12 median 4154 max 6622 >=9000: 0
+runs/dev/out new slots 6 seconds median 88.6 max 181.1 | first-try outputTokens n 5 median 8160 max 9914 >=9000: 2
+runs/dev/out old slots 6 seconds median 37.7 max 43.7 | first-try outputTokens n 6 median 3877 max 4333 >=9000: 0
+new first-try slots 15 seconds median 67.3 max 90.4 over90 1
+old first-try slots 18 seconds median 37.3 max 67.3 over90 0

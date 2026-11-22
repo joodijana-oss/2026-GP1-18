@@ -1,0 +1,60 @@
+{
+ "targets": [
+  "Kubernetes",
+  "C++",
+  "Linux",
+  "Docker",
+  "Terraform",
+  "Ansible",
+  "Computer Vision",
+  "Prometheus",
+  "LangChain"
+ ],
+ "answer": [
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Ansible",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Computer Vision",
+   "status": "shown",
+   "quote": "Straightened, cropped and binarised each image, and enlarged the training set"
+  },
+  {
+   "skill": "Prometheus",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "LangChain",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

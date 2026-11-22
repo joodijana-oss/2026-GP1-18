@@ -1,0 +1,19 @@
+{
+ "case": "ho_03",
+ "arm": "G0E1",
+ "run": 3,
+ "gaps": [
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Machine Learning",
+  "Pandas",
+  "NumPy",
+  "Stakeholder Management"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

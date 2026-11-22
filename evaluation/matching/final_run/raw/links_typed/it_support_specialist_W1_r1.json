@@ -1,0 +1,51 @@
+{
+ "goal": "it_support_specialist",
+ "list": "W1",
+ "run": 1,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Operating System Installation",
+   "kind": "skill",
+   "concepts": [
+    "Operating Systems"
+   ],
+   "phrases": [],
+   "terms": [
+    "OS installation",
+    "system imaging",
+    "OS deployment",
+    "clean install"
+   ]
+  },
+  {
+   "gap": "IT Ticketing",
+   "kind": "skill",
+   "concepts": [
+    "Ticketing Systems"
+   ],
+   "phrases": [],
+   "same": [
+    "Ticketing Systems"
+   ],
+   "terms": [
+    "ticketing system",
+    "help desk tickets",
+    "service desk",
+    "incident tickets"
+   ]
+  },
+  {
+   "gap": "Asset Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "IT asset management",
+    "asset tracking",
+    "inventory management",
+    "asset lifecycle"
+   ]
+  }
+ ]
+}

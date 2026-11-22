@@ -1,0 +1,133 @@
+{
+ "goal": "network_engineer",
+ "extractor": "E0",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Routing and Switching",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "configuring routers and switches",
+    "network packet forwarding",
+    "switching protocols"
+   ]
+  },
+  {
+   "gap": "LAN/WAN",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "local and wide area networks",
+    "network topology design",
+    "connecting distributed sites"
+   ]
+  },
+  {
+   "gap": "Cisco Networking",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring cisco devices",
+    "cisco ios command line"
+   ]
+  },
+  {
+   "gap": "Firewall Management (Palo Alto/Fortinet)",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring firewall rules",
+    "managing security appliances"
+   ]
+  },
+  {
+   "gap": "VPN Configuration",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "setting up secure tunnels",
+    "remote access connectivity",
+    "encrypted network connections"
+   ]
+  },
+  {
+   "gap": "Network Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Troubleshooting"
+   ],
+   "phrases": [
+    "diagnosing connectivity issues",
+    "resolving network faults",
+    "identifying network bottlenecks"
+   ]
+  },
+  {
+   "gap": "VLAN",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "segmenting network traffic",
+    "virtual local area networks",
+    "logical network segmentation"
+   ]
+  },
+  {
+   "gap": "Network Monitoring and Performance Management",
+   "kind": "skill",
+   "concepts": [
+    "Performance Tuning"
+   ],
+   "phrases": [
+    "tracking network health",
+    "analyzing bandwidth usage",
+    "monitoring network performance"
+   ]
+  },
+  {
+   "gap": "CCNA/CCNP Certification",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Network Security",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "protecting network infrastructure",
+    "securing data in transit"
+   ]
+  },
+  {
+   "gap": "MPLS",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "multiprotocol label switching",
+    "wan traffic engineering"
+   ]
+  },
+  {
+   "gap": "Technical Documentation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "writing technical reports",
+    "documenting system configurations",
+    "creating network diagrams"
+   ]
+  }
+ ]
+}

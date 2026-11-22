@@ -1,0 +1,121 @@
+{
+ "goal": "cloud_devops_engineer",
+ "list": "W1",
+ "run": 2,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Cloud Cost Optimization",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "cost optimization",
+    "cloud cost",
+    "FinOps",
+    "cost management"
+   ]
+  },
+  {
+   "gap": "Amazon EKS",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "EKS",
+    "Elastic Kubernetes Service",
+    "Kubernetes on AWS"
+   ]
+  },
+  {
+   "gap": "Server Hardware Installation",
+   "kind": "skill",
+   "concepts": [
+    "Data Center Operations"
+   ],
+   "phrases": [],
+   "terms": [
+    "server hardware",
+    "hardware installation",
+    "rack and stack"
+   ]
+  },
+  {
+   "gap": "Public Speaking",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "public speaking",
+    "presentation skills",
+    "oral communication"
+   ]
+  },
+  {
+   "gap": "HashiCorp Certified: Terraform Associate",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Terraform Associate",
+    "HashiCorp certification",
+    "Terraform certification"
+   ]
+  },
+  {
+   "gap": "Technical Training",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "technical training",
+    "training delivery",
+    "instructional skills"
+   ]
+  },
+  {
+   "gap": "Static Website Hosting",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "static website",
+    "static hosting",
+    "web hosting"
+   ]
+  },
+  {
+   "gap": "Amazon S3",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "S3",
+    "object storage",
+    "Amazon Simple Storage Service"
+   ]
+  },
+  {
+   "gap": "Content Delivery Network",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "CDN",
+    "content delivery",
+    "edge caching"
+   ]
+  },
+  {
+   "gap": "Distributed Systems",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "distributed systems",
+    "distributed computing",
+    "system design"
+   ]
+  }
+ ]
+}

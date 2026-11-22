@@ -1,0 +1,128 @@
+{
+ "goal": "pre_sales_engineer",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Technical Proposal Writing",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "writing technical proposals",
+    "structuring solution proposals",
+    "business writing skills"
+   ]
+  },
+  {
+   "gap": "RFP Response",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "responding to RFPs",
+    "proposal development process",
+    "bid response writing"
+   ]
+  },
+  {
+   "gap": "Bill of Quantities Preparation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "preparing bill of quantities",
+    "cost estimation documents",
+    "quantity takeoff methods"
+   ]
+  },
+  {
+   "gap": "Solution Architecture Design",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing end to end solutions",
+    "architecting technical solutions"
+   ]
+  },
+  {
+   "gap": "Proof of Concept Delivery",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "delivering proof of concepts",
+    "piloting technical solutions",
+    "validating solution feasibility"
+   ]
+  },
+  {
+   "gap": "Product Demonstration",
+   "kind": "soft",
+   "concepts": [
+    "Product Demonstrations"
+   ],
+   "phrases": [
+    "demonstrating product capabilities",
+    "presenting solutions to clients"
+   ]
+  },
+  {
+   "gap": "Vendor Coordination",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "coordinating with vendors",
+    "managing supplier relationships",
+    "vendor communication skills"
+   ]
+  },
+  {
+   "gap": "Customer Presentation",
+   "kind": "soft",
+   "concepts": [
+    "Presentations"
+   ],
+   "phrases": [
+    "presenting to customers",
+    "delivering client presentations"
+   ]
+  },
+  {
+   "gap": "Cloud Security",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Security"
+   ],
+   "phrases": [
+    "securing cloud environments",
+    "cloud security best practices"
+   ]
+  },
+  {
+   "gap": "AWS",
+   "kind": "tool",
+   "concepts": [
+    "AWS"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "VMware",
+   "kind": "tool",
+   "concepts": [
+    "Virtualization"
+   ],
+   "phrases": [
+    "vmware virtualization platform",
+    "configuring vmware environments"
+   ]
+  },
+  {
+   "gap": "SAP S/4HANA",
+   "kind": "tool",
+   "concepts": [
+    "SAP S/4HANA"
+   ],
+   "phrases": []
+  }
+ ]
+}

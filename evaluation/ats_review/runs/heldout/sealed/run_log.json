@@ -1,0 +1,98 @@
+[
+ {
+  "startedAt": "2026-11-22T02:02:11.356377",
+  "finishedAt": "2026-11-22T02:14:14.976599",
+  "sent": 24,
+  "succeeded": 23,
+  "failed": 1,
+  "perVersion": {
+   "old": {
+    "succeeded": 12,
+    "failed": 0
+   },
+   "new": {
+    "succeeded": 11,
+    "failed": 1
+   }
+  },
+  "stop": null,
+  "requests": 26,
+  "inputTokens": 85322,
+  "outputTokens": 145759,
+  "costUsd": 1.628234,
+  "inputPrice": 2.0,
+  "outputPrice": 10.0
+ },
+ {
+  "startedAt": "2026-11-22T02:14:17.602473",
+  "finishedAt": "2026-11-22T02:17:46.666881",
+  "sent": 1,
+  "succeeded": 0,
+  "failed": 1,
+  "perVersion": {
+   "old": {
+    "succeeded": 0,
+    "failed": 0
+   },
+   "new": {
+    "succeeded": 0,
+    "failed": 1
+   }
+  },
+  "stop": null,
+  "requests": 2,
+  "inputTokens": 9086,
+  "outputTokens": 20000,
+  "costUsd": 0.218172,
+  "inputPrice": 2.0,
+  "outputPrice": 10.0
+ },
+ {
+  "startedAt": "2026-11-22T02:17:49.330114",
+  "finishedAt": "2026-11-22T02:21:14.822311",
+  "sent": 1,
+  "succeeded": 0,
+  "failed": 1,
+  "perVersion": {
+   "old": {
+    "succeeded": 0,
+    "failed": 0
+   },
+   "new": {
+    "succeeded": 0,
+    "failed": 1
+   }
+  },
+  "stop": null,
+  "requests": 2,
+  "inputTokens": 9086,
+  "outputTokens": 20000,
+  "costUsd": 0.218172,
+  "inputPrice": 2.0,
+  "outputPrice": 10.0
+ },
+ {
+  "startedAt": "2026-11-22T02:21:17.424624",
+  "finishedAt": "2026-11-22T02:24:49.394812",
+  "sent": 1,
+  "succeeded": 0,
+  "failed": 1,
+  "perVersion": {
+   "old": {
+    "succeeded": 0,
+    "failed": 0
+   },
+   "new": {
+    "succeeded": 0,
+    "failed": 1
+   }
+  },
+  "stop": null,
+  "requests": 2,
+  "inputTokens": 9086,
+  "outputTokens": 20000,
+  "costUsd": 0.218172,
+  "inputPrice": 2.0,
+  "outputPrice": 10.0
+ }
+]

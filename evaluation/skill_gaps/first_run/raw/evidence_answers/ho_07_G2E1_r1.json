@@ -1,0 +1,24 @@
+{
+ "targets": [
+  "CI/CD Pipeline Design",
+  "Ansible",
+  "Azure"
+ ],
+ "answer": [
+  {
+   "skill": "CI/CD Pipeline Design",
+   "status": "shown",
+   "quote": "GitLab jobs that build, test and roll out every merge"
+  },
+  {
+   "skill": "Ansible",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Azure",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

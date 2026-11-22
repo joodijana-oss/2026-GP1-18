@@ -1,0 +1,140 @@
+{
+ "goal": "network_engineer",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "LAN/WAN",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "local and wide area networks",
+    "network connectivity basics",
+    "enterprise network design"
+   ]
+  },
+  {
+   "gap": "Cisco Routers and Switches",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring routers and switches",
+    "Cisco device configuration",
+    "hands-on router switch labs"
+   ]
+  },
+  {
+   "gap": "VPN",
+   "kind": "tool",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "secure remote access",
+    "virtual private networks",
+    "tunneling protocols"
+   ]
+  },
+  {
+   "gap": "VLAN",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "virtual LAN segmentation",
+    "network segmentation design",
+    "switch port configuration"
+   ]
+  },
+  {
+   "gap": "Firewall Management",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "configuring firewall rules",
+    "perimeter security management",
+    "traffic filtering policies"
+   ]
+  },
+  {
+   "gap": "CCNA",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "Cisco certified network associate",
+    "networking certification exam prep"
+   ]
+  },
+  {
+   "gap": "BGP",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "border gateway protocol",
+    "inter-domain routing",
+    "dynamic routing protocols"
+   ]
+  },
+  {
+   "gap": "OSPF",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "open shortest path first",
+    "link-state routing protocol",
+    "interior gateway routing"
+   ]
+  },
+  {
+   "gap": "QoS",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "quality of service tuning",
+    "traffic prioritization",
+    "bandwidth management"
+   ]
+  },
+  {
+   "gap": "MPLS",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "multiprotocol label switching",
+    "label switched paths",
+    "WAN traffic engineering"
+   ]
+  },
+  {
+   "gap": "FortiGate",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "Fortinet firewall configuration",
+    "FortiGate appliance management"
+   ]
+  },
+  {
+   "gap": "Palo Alto",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "Palo Alto firewall configuration",
+    "next-generation firewall management"
+   ]
+  }
+ ]
+}

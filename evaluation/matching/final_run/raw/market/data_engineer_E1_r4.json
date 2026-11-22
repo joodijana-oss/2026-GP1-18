@@ -1,0 +1,34 @@
+{
+ "goal": "data_engineer",
+ "extractor": "E1",
+ "run": 4,
+ "postings": 6,
+ "rawNames": [
+  "SQL",
+  "Python",
+  "Apache Airflow",
+  "ETL Pipeline Development",
+  "Apache Spark",
+  "PySpark",
+  "Informatica PowerCenter",
+  "CI/CD",
+  "Data Warehousing",
+  "Lakehouse Architecture",
+  "Hadoop",
+  "AWS"
+ ],
+ "names": [
+  "SQL",
+  "Python",
+  "Apache Airflow",
+  "ETL Pipeline Development",
+  "Apache Spark",
+  "PySpark",
+  "Informatica PowerCenter",
+  "CI/CD",
+  "Data Warehousing",
+  "Lakehouse Architecture",
+  "Hadoop",
+  "AWS"
+ ]
+}

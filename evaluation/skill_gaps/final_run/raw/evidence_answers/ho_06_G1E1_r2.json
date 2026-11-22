@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "REST APIs",
+  "Git",
+  "React",
+  "Node.js",
+  "SQL",
+  "Java",
+  "Spring Boot",
+  "Docker",
+  "Python",
+  "Linux",
+  "Kubernetes",
+  "Microservices Architecture"
+ ],
+ "answer": [
+  {
+   "skill": "REST APIs",
+   "status": "partly",
+   "quote": "Flask application answers the page's requests with the tutor list as JSON"
+  },
+  {
+   "skill": "Git",
+   "status": "shown",
+   "quote": "140 commits, one branch per feature, merged only after"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "I wrote the tables and the queries by hand"
+  },
+  {
+   "skill": "Java",
+   "status": "shown",
+   "quote": "Object-Oriented Programming (taught in Java)"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Telegram bot written in Python that sends prayer-time reminders"
+  },
+  {
+   "skill": "Linux",
+   "status": "shown",
+   "quote": "Runs on a small rented Ubuntu server that I set up myself"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

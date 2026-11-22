@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Routing and Switching",
+  "VPN",
+  "LAN/WAN",
+  "VLAN",
+  "CCNA",
+  "Firewall Management",
+  "Cisco Networking",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto",
+  "BGP",
+  "Network Monitoring and Troubleshooting"
+ ],
+ "answer": [
+  {
+   "skill": "Routing and Switching",
+   "status": "shown",
+   "quote": "three-router OSPF topology with redistribution of static routes"
+  },
+  {
+   "skill": "VPN",
+   "status": "shown",
+   "quote": "Enrol staff laptops in the remote-access client (FortiClient)"
+  },
+  {
+   "skill": "LAN/WAN",
+   "status": "shown",
+   "quote": "raise a ticket to head office when a site uplink drops"
+  },
+  {
+   "skill": "VLAN",
+   "status": "shown",
+   "quote": "filtering between VLANs and a DHCP server on the router"
+  },
+  {
+   "skill": "CCNA",
+   "status": "shown",
+   "quote": "CCNA (Cisco Certified Network Associate), May 2026"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Cisco Networking",
+   "status": "shown",
+   "quote": "assign that port to the office's voice or data segment on the Cisco Catalyst access layer"
+  },
+  {
+   "skill": "CCNP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Fortinet",
+   "status": "shown",
+   "quote": "Enrol staff laptops in the remote-access client (FortiClient)"
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "BGP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Network Monitoring and Troubleshooting",
+   "status": "shown",
+   "quote": "Watch link and device status on the PRTG screen"
+  }
+ ]
+}

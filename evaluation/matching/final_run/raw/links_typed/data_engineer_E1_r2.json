@@ -1,0 +1,181 @@
+{
+ "goal": "data_engineer",
+ "list": "E1",
+ "run": 2,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [],
+   "same": [
+    "Databases and SQL"
+   ],
+   "terms": [
+    "SQL",
+    "queries",
+    "relational database"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": [],
+   "same": [
+    "Python"
+   ],
+   "terms": [
+    "Python",
+    "programming"
+   ]
+  },
+  {
+   "gap": "Apache Airflow",
+   "kind": "tool",
+   "concepts": [
+    "Airflow"
+   ],
+   "phrases": [],
+   "same": [
+    "Airflow"
+   ],
+   "terms": [
+    "Airflow",
+    "DAG",
+    "workflow orchestration"
+   ]
+  },
+  {
+   "gap": "ETL Development",
+   "kind": "skill",
+   "concepts": [
+    "ETL"
+   ],
+   "phrases": [],
+   "same": [
+    "ETL"
+   ],
+   "terms": [
+    "ETL",
+    "extract transform load",
+    "data pipelines"
+   ]
+  },
+  {
+   "gap": "Apache Spark",
+   "kind": "tool",
+   "concepts": [
+    "Spark"
+   ],
+   "phrases": [],
+   "same": [
+    "Spark"
+   ],
+   "terms": [
+    "Spark",
+    "distributed computing",
+    "big data processing"
+   ]
+  },
+  {
+   "gap": "Informatica PowerCenter",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Informatica",
+    "PowerCenter",
+    "ETL tool"
+   ]
+  },
+  {
+   "gap": "PySpark",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "PySpark",
+    "Spark Python API"
+   ]
+  },
+  {
+   "gap": "Data Warehousing",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "data warehouse",
+    "data warehousing",
+    "star schema"
+   ]
+  },
+  {
+   "gap": "Lakehouse Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Data Lakehouse"
+   ],
+   "phrases": [],
+   "same": [
+    "Data Lakehouse"
+   ],
+   "terms": [
+    "lakehouse",
+    "data lakehouse architecture"
+   ]
+  },
+  {
+   "gap": "AWS",
+   "kind": "tool",
+   "concepts": [
+    "AWS"
+   ],
+   "phrases": [],
+   "same": [
+    "AWS"
+   ],
+   "terms": [
+    "AWS",
+    "Amazon Web Services"
+   ]
+  },
+  {
+   "gap": "Hadoop",
+   "kind": "tool",
+   "concepts": [
+    "Big Data"
+   ],
+   "phrases": [],
+   "same": [
+    "Big Data"
+   ],
+   "terms": [
+    "Hadoop",
+    "HDFS",
+    "MapReduce"
+   ]
+  },
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [],
+   "same": [
+    "Linux"
+   ],
+   "terms": [
+    "Linux admin",
+    "system administration",
+    "shell"
+   ]
+  }
+ ]
+}

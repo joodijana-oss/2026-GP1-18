@@ -1,0 +1,29 @@
+Omar Al-Tamimi
+Riyadh | omar.altamimi@example.com | +966 50 000 0000
+
+Summary
+Backend developer with two years at a 12-person software house building booking and billing systems for clinics and gyms. I own features from the first conversation with the client to production support.
+
+Experience
+Backend Developer, a small Riyadh software house, Jul 2024 - present
+- Build and maintain the server side of three client products in Python (Django REST Framework) and PostgreSQL; the largest handles 60,000 bookings a month.
+- Designed the JSON interface used by the mobile and web teams, with versioned routes, token authentication and an OpenAPI description they generate their clients from.
+- Integrated two local payment gateways and the national e-invoicing format, including retry and reconciliation jobs run by Celery workers on a Redis queue.
+- Every push runs linting and the test suite in GitHub Actions, and a tagged commit builds a container image and rolls it out to the client's server.
+- Wrote pytest suites for the billing rules (about 600 cases) after an invoicing fault reached a customer; no billing regression since.
+- Found that the timetable page fired 400 queries per request, rewrote it with joins and prefetching, and brought response time from 3.2 s to 280 ms.
+- Proposed and led the split of the shared "core" app into separate billing and scheduling modules with clear boundaries, written up in a short design note.
+- Read every merge request from the two junior developers before it goes in, and pair with them weekly.
+- On call one week in four; chase production errors from Sentry traces and server logs back to the line that caused them.
+
+Freelance (2023 - 2024)
+- Built a stock-keeping web app for a family perfume business using Django templates and a little JavaScript.
+
+Education
+B.Sc. Computer Science, Imam Mohammad Ibn Saud Islamic University, Riyadh, 2024
+
+Skills
+Python, Django, PostgreSQL, Redis, Docker, Git, Java, MongoDB, AWS
+
+Languages
+Arabic (native), English (fluent)

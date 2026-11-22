@@ -1,0 +1,63 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Improved model performance significantly, raising Macro-F1 from 0.71 to 0.86 on Arabic complaint classification",
+   "Experience handling large-scale text data (180,000 tweets) for NLP preprocessing",
+   "Maintains reproducible experiment tracking and documentation",
+   "Demonstrated competitive success in tabular data competitions with validated modeling approach",
+   "Achieved strong academic performance with high GPA",
+   "Took initiative in founding and leading a peer learning community",
+   "Experience presenting research findings to an academic audience",
+   "Strong English proficiency supported by TOEFL score"
+  ],
+  "currentSkills": [
+   "Python",
+   "Pandas",
+   "Scikit-learn",
+   "Natural Language Processing",
+   "Data Cleaning",
+   "Text Preprocessing",
+   "Tokenization",
+   "Machine Learning",
+   "Transformers",
+   "Gradient Boosting",
+   "Feature Engineering",
+   "Cross-Validation",
+   "Statistics",
+   "Linear Algebra",
+   "SSH",
+   "Experiment Tracking"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "Jazan University",
+    "year": "fourth year (expected June 2027)"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Arabic Customer-Complaint Classification",
+    "description": "Prepared 180,000 Arabic customer-complaint tweets by stripping diacritics and elongation, removing duplicates, and tokenizing into sub-word pieces. Labelled 3,000 tweets by dialect with team members and measured inter-annotator agreement. Adapted a pretrained Arabic transformer encoder to classify complaints into nine topics, improving Macro-F1 from 0.71 (bag-of-words baseline) to 0.86. Ran experiments on a shared GPU machine via SSH and logged settings and results in a spreadsheet for reproducibility."
+   },
+   {
+    "name": "Tabular Data Competitions",
+    "description": "Built gradient-boosted tree models with engineered features from dates and locations, validated using five-fold cross-validation. Achieved two bronze medals (top 9% and top 8% among ~2,000 teams)."
+   },
+   {
+    "name": "Jazan AI Challenge 2025 - Mango Counting",
+    "description": "Trained a model to count mango fruit in drone-captured tree photos for a local farm cooperative, achieving 2nd place."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Summer Research Assistant",
+    "organization": "Arabic language technology lab of a research university on the Red Sea coast",
+    "duration": "June 2026 - August 2026",
+    "description": "Prepared and preprocessed 180,000 Arabic customer-complaint tweets, labelled dialect data with peers, adapted a pretrained Arabic transformer to classify complaints into nine topics improving Macro-F1 from 0.71 to 0.86, ran experiments on shared GPU infrastructure via SSH, maintained reproducible experiment logs, and presented results at the lab's end-of-summer meeting; findings to be included in a workshop paper by supervisor."
+   }
+  ]
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "targets": [
+  "SIEM",
+  "Penetration Testing",
+  "Incident Response",
+  "Firewall Administration",
+  "CISSP",
+  "OSCP",
+  "Metasploit",
+  "CompTIA Security+"
+ ],
+ "answer": [
+  {
+   "skill": "SIEM",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "shown",
+   "quote": "Found and exploited SQL injection and stored XSS in a deliberately vulnerable shop application"
+  },
+  {
+   "skill": "Incident Response",
+   "status": "partly",
+   "quote": "Mapped the intruders' post-login behaviour to ATT&CK techniques"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "partly",
+   "quote": "locked the real management port down to our own addresses with iptables"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CompTIA Security+",
+   "status": "shown",
+   "quote": "CompTIA Security+ (SY0-701), March 2026"
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Python",
+  "PyTorch",
+  "TensorFlow",
+  "Kubernetes",
+  "C++",
+  "Linux",
+  "Docker",
+  "MLOps",
+  "Computer Vision",
+  "LangChain",
+  "Terraform",
+  "Prometheus"
+ ],
+ "answer": [
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Python, PyTorch, scikit-learn, pandas, NumPy, TensorFlow, Git"
+  },
+  {
+   "skill": "PyTorch",
+   "status": "shown",
+   "quote": "Trained a convolutional-recurrent network with CTC loss in PyTorch"
+  },
+  {
+   "skill": "TensorFlow",
+   "status": "shown",
+   "quote": "Python, PyTorch, scikit-learn, pandas, NumPy, TensorFlow, Git"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "MLOps",
+   "status": "partly",
+   "quote": "Compared runs over learning rate, batch size and dropout using a grid of 36 settings"
+  },
+  {
+   "skill": "Computer Vision",
+   "status": "shown",
+   "quote": "Straightened, cropped and binarised each image"
+  },
+  {
+   "skill": "LangChain",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Prometheus",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

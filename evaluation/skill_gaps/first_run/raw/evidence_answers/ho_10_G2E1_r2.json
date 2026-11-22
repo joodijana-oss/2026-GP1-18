@@ -1,0 +1,24 @@
+{
+ "targets": [
+  "Functional Testing",
+  "Appium",
+  "Scrum"
+ ],
+ "answer": [
+  {
+   "skill": "Functional Testing",
+   "status": "shown",
+   "quote": "re-run the 180 scenarios that cover existing features to make sure nothing that worked has broken"
+  },
+  {
+   "skill": "Appium",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Scrum",
+   "status": "partly",
+   "quote": "Take part in sprint planning, daily stand-ups and retrospectives with a team of 11"
+  }
+ ]
+}

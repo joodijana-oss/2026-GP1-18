@@ -1,0 +1,34 @@
+{
+ "goal": "software_engineer",
+ "extractor": "E1",
+ "run": 3,
+ "postings": 20,
+ "rawNames": [
+  "Git",
+  "REST API Design",
+  "SQL",
+  "React",
+  "Node.js",
+  "Java",
+  "Docker",
+  "Spring Boot",
+  "Python",
+  "Linux",
+  "Kubernetes",
+  "C++"
+ ],
+ "names": [
+  "Git",
+  "REST API Design",
+  "SQL",
+  "React",
+  "Node.js",
+  "Java",
+  "Docker",
+  "Spring Boot",
+  "Python",
+  "Linux",
+  "Kubernetes",
+  "C++"
+ ]
+}

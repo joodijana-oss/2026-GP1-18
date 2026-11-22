@@ -1,0 +1,151 @@
+{
+ "goal": "business_analyst",
+ "list": "E1",
+ "run": 1,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Business Requirements Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Requirements Gathering"
+   ],
+   "phrases": [],
+   "same": [
+    "Requirements Gathering"
+   ],
+   "terms": [
+    "business requirements",
+    "requirements analysis",
+    "requirements elicitation"
+   ]
+  },
+  {
+   "gap": "ERP Systems",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "ERP",
+    "enterprise resource planning"
+   ]
+  },
+  {
+   "gap": "System Integration",
+   "kind": "skill",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [],
+   "same": [
+    "Integration"
+   ],
+   "terms": [
+    "system integration",
+    "integration testing",
+    "interface integration"
+   ]
+  },
+  {
+   "gap": "SAP SuccessFactors",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "SuccessFactors",
+    "SAP HCM"
+   ]
+  },
+  {
+   "gap": "Power BI",
+   "kind": "tool",
+   "concepts": [
+    "Power BI"
+   ],
+   "phrases": [],
+   "same": [
+    "Power BI"
+   ]
+  },
+  {
+   "gap": "Risk Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Risk Assessment"
+   ],
+   "phrases": [],
+   "same": [
+    "Risk Assessment"
+   ]
+  },
+  {
+   "gap": "Access Control Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "access control",
+    "identity and access management",
+    "IAM",
+    "permissions management"
+   ]
+  },
+  {
+   "gap": "Oracle NetSuite",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "NetSuite"
+   ]
+  },
+  {
+   "gap": "Agile Development",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [],
+   "same": [
+    "Agile"
+   ]
+  },
+  {
+   "gap": "DevOps",
+   "kind": "skill",
+   "concepts": [
+    "DevOps"
+   ],
+   "phrases": [],
+   "same": [
+    "DevOps"
+   ]
+  },
+  {
+   "gap": "ISO 27001 Lead Implementer",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "ISO 27001 Lead Implementer",
+    "ISMS implementer"
+   ]
+  },
+  {
+   "gap": "API Integration",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [],
+   "same": [
+    "APIs"
+   ],
+   "terms": [
+    "API integration",
+    "integrating APIs",
+    "web services integration"
+   ]
+  }
+ ]
+}

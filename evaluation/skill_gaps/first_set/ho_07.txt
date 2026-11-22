@@ -1,0 +1,32 @@
+Abdullah Al-Ghamdi
+Riyadh, Saudi Arabia · abdullah.alghamdi@example.com · +966 50 000 0000
+
+PROFESSIONAL SUMMARY
+DevOps engineer with a year and a half at an online grocery company, responsible for the build and release path and the AWS accounts behind the storefront. Earlier I looked after customer servers at a hosting provider.
+
+EXPERIENCE
+DevOps Engineer, a Riyadh-based online grocery company (May 2025 - present)
+- Moved 14 services from manual SSH deployments to GitLab jobs that build, test and roll out every merge; releases went from weekly to several a day.
+- Describe all networking, databases and compute as code in Terraform modules, reviewed through merge requests before anything is applied.
+- Run the production cluster on EKS (3 node groups, about 120 pods) and wrote the Helm charts for each service.
+- Set up dashboards and on-call paging in Grafana and Prometheus; pages dropped from 30 to 8 a week after tuning thresholds.
+- Split the single flat network into public and private subnets across two availability zones, with NAT gateways and security groups per tier.
+- Cut the monthly bill by 23% by right-sizing instances, buying a savings plan and moving old images to cheaper storage.
+- Practise restoring the orders database from snapshots into a second region every quarter; the last drill took 38 minutes.
+- Wrote small Python and shell tools, for example one that rotates access keys older than 60 days.
+
+Junior System Engineer, a managed hosting provider, Riyadh (Aug 2024 - Apr 2025)
+- Looked after 200 customer CentOS and Ubuntu servers: disks, users, updates, Apache and Nginx virtual hosts.
+- Answered second-line tickets and wrote runbooks for the most common faults.
+
+EDUCATION
+B.Sc. Computer Engineering, King Fahd University of Petroleum and Minerals, Dhahran, 2024
+
+CERTIFICATIONS
+AWS Certified Solutions Architect - Associate (2025)
+
+SKILLS
+AWS, Terraform, Kubernetes, Docker, Linux, Git, Python, Bash
+
+LANGUAGES
+Arabic (native), English (professional)

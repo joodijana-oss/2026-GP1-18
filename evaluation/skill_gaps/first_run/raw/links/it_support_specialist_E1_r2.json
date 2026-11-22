@@ -1,0 +1,129 @@
+{
+ "goal": "it_support_specialist",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Hardware Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "diagnosing hardware issues",
+    "repairing computer components",
+    "fixing device faults"
+   ]
+  },
+  {
+   "gap": "Windows Operating System",
+   "kind": "tool",
+   "concepts": [
+    "Windows"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Networking",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "network concepts",
+    "connecting devices",
+    "data communication basics"
+   ]
+  },
+  {
+   "gap": "Active Directory",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "managing user accounts",
+    "directory services administration",
+    "domain management"
+   ]
+  },
+  {
+   "gap": "Ticketing Systems",
+   "kind": "tool",
+   "concepts": [
+    "Ticketing Systems"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Microsoft 365",
+   "kind": "tool",
+   "concepts": [
+    "Microsoft 365"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "LAN Administration",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "managing local networks",
+    "configuring switches",
+    "local area network setup"
+   ]
+  },
+  {
+   "gap": "Wi-Fi Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Wireless Networks"
+   ],
+   "phrases": [
+    "resolving wireless issues",
+    "fixing connectivity problems",
+    "wireless network diagnostics"
+   ]
+  },
+  {
+   "gap": "TCP/IP",
+   "kind": "skill",
+   "concepts": [
+    "TCP/IP"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Printer Support",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "printer setup and repair",
+    "resolving printing issues",
+    "peripheral device support"
+   ]
+  },
+  {
+   "gap": "IT Asset Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "tracking hardware inventory",
+    "managing IT equipment lifecycle",
+    "asset tracking systems"
+   ]
+  },
+  {
+   "gap": "Customer Service",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "handling customer inquiries",
+    "client support skills",
+    "service orientation"
+   ]
+  }
+ ]
+}

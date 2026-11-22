@@ -1,0 +1,18 @@
+{
+ "case": "ho_13",
+ "arm": "G0E0",
+ "run": 3,
+ "gaps": [
+  "CI/CD Pipeline Design",
+  "Terraform",
+  "Cloud Platforms (AWS/Azure/GCP)",
+  "Python",
+  "Infrastructure as Code",
+  "Site Reliability Engineering (SLIs/SLOs/Incident Management)"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

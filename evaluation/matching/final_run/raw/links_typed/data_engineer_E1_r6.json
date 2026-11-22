@@ -1,0 +1,177 @@
+{
+ "goal": "data_engineer",
+ "list": "E1",
+ "run": 6,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [],
+   "same": [
+    "Databases and SQL"
+   ],
+   "terms": [
+    "SQL",
+    "queries",
+    "relational database"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": [],
+   "same": [
+    "Python"
+   ],
+   "terms": [
+    "Python"
+   ]
+  },
+  {
+   "gap": "Apache Airflow",
+   "kind": "tool",
+   "concepts": [
+    "Airflow"
+   ],
+   "phrases": [],
+   "same": [
+    "Airflow"
+   ],
+   "terms": [
+    "Airflow",
+    "workflow orchestration"
+   ]
+  },
+  {
+   "gap": "ETL Development",
+   "kind": "skill",
+   "concepts": [
+    "ETL"
+   ],
+   "phrases": [],
+   "same": [
+    "ETL"
+   ],
+   "terms": [
+    "ETL",
+    "extract transform load",
+    "data pipelines"
+   ]
+  },
+  {
+   "gap": "Apache Spark",
+   "kind": "tool",
+   "concepts": [
+    "Spark"
+   ],
+   "phrases": [],
+   "same": [
+    "Spark"
+   ],
+   "terms": [
+    "Spark",
+    "Apache Spark"
+   ]
+  },
+  {
+   "gap": "PySpark",
+   "kind": "tool",
+   "concepts": [
+    "Spark"
+   ],
+   "phrases": [],
+   "terms": [
+    "PySpark",
+    "Spark Python API"
+   ]
+  },
+  {
+   "gap": "Informatica PowerCenter",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Informatica",
+    "PowerCenter",
+    "ETL tool"
+   ]
+  },
+  {
+   "gap": "Data Warehousing",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "data warehouse",
+    "data warehousing",
+    "dimensional modeling"
+   ]
+  },
+  {
+   "gap": "Lakehouse Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Data Lakehouse"
+   ],
+   "phrases": [],
+   "same": [
+    "Data Lakehouse"
+   ],
+   "terms": [
+    "lakehouse",
+    "data lakehouse architecture"
+   ]
+  },
+  {
+   "gap": "AWS",
+   "kind": "tool",
+   "concepts": [
+    "AWS"
+   ],
+   "phrases": [],
+   "same": [
+    "AWS"
+   ],
+   "terms": [
+    "AWS",
+    "Amazon Web Services"
+   ]
+  },
+  {
+   "gap": "CI/CD",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": [],
+   "same": [
+    "CI/CD"
+   ],
+   "terms": [
+    "CI/CD",
+    "continuous integration",
+    "continuous delivery"
+   ]
+  },
+  {
+   "gap": "Hadoop",
+   "kind": "tool",
+   "concepts": [
+    "Big Data"
+   ],
+   "phrases": [],
+   "terms": [
+    "Hadoop",
+    "HDFS",
+    "MapReduce"
+   ]
+  }
+ ]
+}

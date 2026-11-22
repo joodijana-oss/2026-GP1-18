@@ -1,0 +1,8 @@
+--- start 2026-11-21 06:16:14.465680 stage all, cases 1, runs 1
+after stage 1: 1 requests, 1845 input and 1015 output tokens, about 0.014 USD
+after stage 2: 3 requests, 4705 input and 1743 output tokens, about 0.027 USD
+--- end 2026-11-21 06:16:28.237994: 3 requests, 4705 input and 1743 output tokens, about 0.027 USD
+--- start 2026-11-21 06:16:48.406223 stage all, cases 16, runs 3
+after stage 1: 47 requests, 84324 input and 47794 output tokens, about 0.647 USD
+after stage 2: 141 requests, 209217 input and 78804 output tokens, about 1.206 USD
+--- end 2026-11-21 06:20:40.473147: 141 requests, 209217 input and 78804 output tokens, about 1.206 USD

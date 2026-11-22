@@ -1,0 +1,141 @@
+{
+ "label": "dev_flawed_02",
+ "cv": "dev_flawed",
+ "version": "new",
+ "run": 2,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:27:25.213897",
+ "finishedAt": "2026-11-22T02:28:55.581312",
+ "seconds": 90.367,
+ "inputTokens": 4255,
+ "outputTokens": 9914,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "Your CV doesn't have a Skills or Technical Skills section, so recruiters and ATS systems can't quickly see the tools you know in one place.",
+    "suggestion": "Add a Skills section listing tools you already show elsewhere in your CV, such as Python, TensorFlow, PyTorch, scikit-learn, SQL and Power BI."
+   },
+   {
+    "issue": "Your contact details are missing a phone number and a LinkedIn, GitHub or portfolio link, and your email 'nora.alharbi (at) example dot com' is not written in the standard name@domain form.",
+    "suggestion": "Add a phone number and a link to your LinkedIn or GitHub, and write your email as nora.alharbi@example.com so ATS systems can read it."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The heading 'EXPERIANCE' is misspelled.",
+    "suggestion": "Rename it to 'Experience' so ATS systems recognize the section."
+   },
+   {
+    "issue": "The heading 'THINGS I BUILT' is a personal phrase instead of a standard section name.",
+    "suggestion": "Rename it to 'Projects' so ATS systems and recruiters can find this work easily."
+   },
+   {
+    "issue": "Your Experience entries are not ordered most recent first: Student Lab Assistant appears before Data Science Trainee and Machine Learning Intern, even though the Machine Learning Intern role, which 'finished in September 2025', ended more recently.",
+    "suggestion": "Reorder them as Machine Learning Intern, then Data Science Trainee (Co-op), then Student Lab Assistant."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "Some tool names are written inconsistently: 'PYTHON' and 'python', 'Tensorflow', 'Pytorch' and 'pytorch', and 'sk-learn' and 'Scikit learn'.",
+    "suggestion": "Use the official forms everywhere: Python, TensorFlow, PyTorch and scikit-learn."
+   },
+   {
+    "issue": "The Arabic Tweets Mood Checker project describes deciding if a writer is happy, angry or neutral, which is sentiment analysis, but that term isn't used anywhere.",
+    "suggestion": "Add the term 'sentiment analysis' to this project so recruiters and ATS systems searching for that skill can find it."
+   },
+   {
+    "issue": "Your graduation project describes telling apart kinds of dates from pictures, which is image classification, but that term isn't used.",
+    "suggestion": "Add the term 'image classification' to your graduation project description."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Data Science Trainee entry is written as one long run-on story covering the whole co-op in a single sentence joined with 'and' and 'so'.",
+    "suggestion": "Split it into short points, for example one for cleaning delivery data with Pandas, one for predicting late deliveries with scikit-learn, one for building Power BI charts, and one for sharing code with Git."
+   },
+   {
+    "issue": "Several entries are written as first-person stories instead of short points starting with action verbs, including your graduation project and the Arabic Tweets Mood Checker.",
+    "suggestion": "Rewrite them starting with verbs like 'Built', 'Collected' or 'Trained' instead of 'I made' or 'I gathered'."
+   },
+   {
+    "issue": "Several achievements don't give a specific result, including the late-delivery prediction in Data Science Trainee, the Arabic Tweets Mood Checker, and the House Price Guesser.",
+    "suggestion": "Add a specific number for each, such as [accuracy percentage] for the late-delivery model and [percentage] for the mood checker."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Machine Learning Intern entry lists dates as '2025 - present' but also says the internship 'finished in September 2025', which contradicts an ongoing role.",
+    "suggestion": "Change the dates to the actual start and end months, for example 'July 2025 - September 2025', to match the text."
+   },
+   {
+    "issue": "Dates are written in different formats across your CV, such as '09/2023 - 05/2024', 'March 2025 - June 2025', and just '2025'.",
+    "suggestion": "Pick one format, such as 'Month YYYY', and use it consistently for every entry."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "Your CV doesn't have a Skills or Technical Skills section, so recruiters and ATS systems can't quickly see the tools you know in one place.",
+    "suggestion": "Add a Skills section listing tools you already show elsewhere in your CV, such as Python, TensorFlow, PyTorch, scikit-learn, SQL and Power BI."
+   },
+   {
+    "issue": "Your contact details are missing a phone number and a LinkedIn, GitHub or portfolio link, and your email 'nora.alharbi (at) example dot com' is not written in the standard name@domain form.",
+    "suggestion": "Add a phone number and a link to your LinkedIn or GitHub, and write your email as nora.alharbi@example.com so ATS systems can read it."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The heading 'EXPERIANCE' is misspelled.",
+    "suggestion": "Rename it to 'Experience' so ATS systems recognize the section."
+   },
+   {
+    "issue": "The heading 'THINGS I BUILT' is a personal phrase instead of a standard section name.",
+    "suggestion": "Rename it to 'Projects' so ATS systems and recruiters can find this work easily."
+   },
+   {
+    "issue": "Your Experience entries are not ordered most recent first: Student Lab Assistant appears before Data Science Trainee and Machine Learning Intern, even though the Machine Learning Intern role, which 'finished in September 2025', ended more recently.",
+    "suggestion": "Reorder them as Machine Learning Intern, then Data Science Trainee (Co-op), then Student Lab Assistant."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "Some tool names are written inconsistently: 'PYTHON' and 'python', 'Tensorflow', 'Pytorch' and 'pytorch', and 'sk-learn' and 'Scikit learn'.",
+    "suggestion": "Use the official forms everywhere: Python, TensorFlow, PyTorch and scikit-learn."
+   },
+   {
+    "issue": "The Arabic Tweets Mood Checker project describes deciding if a writer is happy, angry or neutral, which is sentiment analysis, but that term isn't used anywhere.",
+    "suggestion": "Add the term 'sentiment analysis' to this project so recruiters and ATS systems searching for that skill can find it."
+   },
+   {
+    "issue": "Your graduation project describes telling apart kinds of dates from pictures, which is image classification, but that term isn't used.",
+    "suggestion": "Add the term 'image classification' to your graduation project description."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Data Science Trainee entry is written as one long run-on story covering the whole co-op in a single sentence joined with 'and' and 'so'.",
+    "suggestion": "Split it into short points, for example one for cleaning delivery data with Pandas, one for predicting late deliveries with scikit-learn, one for building Power BI charts, and one for sharing code with Git."
+   },
+   {
+    "issue": "Several entries are written as first-person stories instead of short points starting with action verbs, including your graduation project and the Arabic Tweets Mood Checker.",
+    "suggestion": "Rewrite them starting with verbs like 'Built', 'Collected' or 'Trained' instead of 'I made' or 'I gathered'."
+   },
+   {
+    "issue": "Several achievements don't give a specific result, including the late-delivery prediction in Data Science Trainee, the Arabic Tweets Mood Checker, and the House Price Guesser.",
+    "suggestion": "Add a specific number for each, such as [accuracy percentage] for the late-delivery model and [percentage] for the mood checker."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Machine Learning Intern entry lists dates as '2025 - present' but also says the internship 'finished in September 2025', which contradicts an ongoing role.",
+    "suggestion": "Change the dates to the actual start and end months, for example 'July 2025 - September 2025', to match the text."
+   },
+   {
+    "issue": "Dates are written in different formats across your CV, such as '09/2023 - 05/2024', 'March 2025 - June 2025', and just '2025'.",
+    "suggestion": "Pick one format, such as 'Month YYYY', and use it consistently for every entry."
+   }
+  ]
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "goal": "cybersecurity_analyst",
+ "extractor": "E0",
+ "run": 1,
+ "links": [
+  {
+   "gap": "SIEM",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "security event monitoring",
+    "log correlation tools",
+    "alert triage"
+   ]
+  },
+  {
+   "gap": "Vulnerability Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Risk Assessment"
+   ],
+   "phrases": [
+    "identifying system weaknesses",
+    "vulnerability scanning",
+    "security gap analysis"
+   ]
+  },
+  {
+   "gap": "Penetration Testing",
+   "kind": "skill",
+   "concepts": [
+    "Penetration Testing"
+   ],
+   "phrases": [
+    "simulated cyber attacks",
+    "ethical hacking techniques",
+    "exploiting system vulnerabilities"
+   ]
+  },
+  {
+   "gap": "Incident Response",
+   "kind": "skill",
+   "concepts": [
+    "Incident Response"
+   ],
+   "phrases": [
+    "responding to security breaches",
+    "handling security incidents",
+    "containment and recovery"
+   ]
+  },
+  {
+   "gap": "Network Security",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "protecting network infrastructure",
+    "securing network traffic"
+   ]
+  },
+  {
+   "gap": "Firewalls (Palo Alto/Fortinet)",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring firewall rules",
+    "perimeter defense devices",
+    "network traffic filtering"
+   ]
+  },
+  {
+   "gap": "Security Monitoring & Log Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Security Operations"
+   ],
+   "phrases": [
+    "analyzing security logs",
+    "monitoring for threats",
+    "log review techniques"
+   ]
+  },
+  {
+   "gap": "SOC Operations",
+   "kind": "skill",
+   "concepts": [
+    "Security Operations"
+   ],
+   "phrases": [
+    "security operations center workflows",
+    "threat monitoring and triage",
+    "SOC analyst duties"
+   ]
+  },
+  {
+   "gap": "Endpoint Detection and Response (EDR)",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "endpoint threat detection",
+    "monitoring endpoint activity",
+    "automated threat response"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Cloud Security (AWS/GCP/Azure)",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Security"
+   ],
+   "phrases": [
+    "securing cloud environments",
+    "cloud provider security controls",
+    "cloud compliance and hardening"
+   ]
+  },
+  {
+   "gap": "IAM (Identity & Access Management)",
+   "kind": "skill",
+   "concepts": [
+    "Information Security"
+   ],
+   "phrases": [
+    "managing user access",
+    "identity governance",
+    "access control policies"
+   ]
+  }
+ ]
+}

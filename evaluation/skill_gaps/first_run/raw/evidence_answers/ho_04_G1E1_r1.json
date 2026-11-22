@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SQL",
+  "Power BI",
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Tableau",
+  "R",
+  "Machine Learning",
+  "Data Analysis",
+  "Pandas",
+  "NumPy",
+  "Stakeholder Management"
+ ],
+ "answer": [
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "wrote SELECT statements with GROUP BY and subqueries"
+  },
+  {
+   "skill": "Power BI",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Tools I use: Excel, Python"
+  },
+  {
+   "skill": "Data Visualization",
+   "status": "shown",
+   "quote": "Drew bar charts and a scatter plot of price against mileage with Matplotlib"
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Tableau",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "R",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Analysis",
+   "status": "shown",
+   "quote": "worked out averages, medians and spread by city and brand"
+  },
+  {
+   "skill": "Pandas",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "NumPy",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

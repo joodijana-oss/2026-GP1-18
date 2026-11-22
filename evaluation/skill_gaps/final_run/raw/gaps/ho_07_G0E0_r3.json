@@ -1,0 +1,18 @@
+{
+ "case": "ho_07",
+ "arm": "G0E0",
+ "run": 3,
+ "gaps": [
+  "CI/CD Pipeline Design",
+  "Ansible",
+  "Cloud Platforms (AWS/Azure/GCP)",
+  "Python",
+  "Site Reliability Engineering (SLIs/SLOs/Incident Management)",
+  "Bash Scripting"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

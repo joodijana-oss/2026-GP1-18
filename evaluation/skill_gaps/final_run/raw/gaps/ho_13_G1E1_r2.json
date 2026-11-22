@@ -1,0 +1,67 @@
+{
+ "case": "ho_13",
+ "arm": "G1E1",
+ "run": 2,
+ "gaps": [
+  "Kubernetes",
+  "Terraform",
+  "Python",
+  "Azure",
+  "Prometheus",
+  "Grafana"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing"
+  },
+  {
+   "skill": "Docker",
+   "status": "shown"
+  },
+  {
+   "skill": "CI/CD Pipeline Design",
+   "status": "shown"
+  },
+  {
+   "skill": "Ansible",
+   "status": "partly"
+  },
+  {
+   "skill": "Linux Administration",
+   "status": "shown"
+  },
+  {
+   "skill": "Python",
+   "status": "missing"
+  },
+  {
+   "skill": "AWS",
+   "status": "shown"
+  },
+  {
+   "skill": "Azure",
+   "status": "missing"
+  },
+  {
+   "skill": "Prometheus",
+   "status": "missing"
+  },
+  {
+   "skill": "Grafana",
+   "status": "missing"
+  },
+  {
+   "skill": "Bash Scripting",
+   "status": "shown"
+  }
+ ]
+}

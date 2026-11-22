@@ -1,0 +1,34 @@
+{
+ "goal": "it_support_specialist",
+ "extractor": "E0",
+ "run": 3,
+ "postings": 20,
+ "rawNames": [
+  "Hardware Troubleshooting",
+  "Windows Operating System",
+  "Networking (LAN/WAN/Wi-Fi/TCP-IP)",
+  "Active Directory",
+  "Ticketing Systems (ServiceNow/Remedy)",
+  "Microsoft 365",
+  "Printer/Peripheral Support",
+  "Desktop/Laptop Support",
+  "Routers and Switches Configuration",
+  "IT Asset Management",
+  "Customer Service and Communication",
+  "Software Installation and Configuration"
+ ],
+ "names": [
+  "Hardware Troubleshooting",
+  "Windows Operating System",
+  "Networking (LAN/WAN/Wi-Fi/TCP-IP)",
+  "Active Directory",
+  "Ticketing Systems (ServiceNow/Remedy)",
+  "Microsoft 365",
+  "Printer/Peripheral Support",
+  "Desktop/Laptop Support",
+  "Routers and Switches Configuration",
+  "IT Asset Management",
+  "Customer Service and Communication",
+  "Software Installation and Configuration"
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "goal": "data_analyst",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Power BI",
+   "kind": "tool",
+   "concepts": [
+    "Power BI"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Data Visualization",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Dashboard Development",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": [
+    "building interactive dashboards",
+    "visual reporting design"
+   ]
+  },
+  {
+   "gap": "Data Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Data Analysis"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Tableau",
+   "kind": "tool",
+   "concepts": [
+    "Tableau"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "R",
+   "kind": "tool",
+   "concepts": [
+    "R"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Machine Learning",
+   "kind": "skill",
+   "concepts": [
+    "Machine Learning"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Pandas",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "data manipulation in Python",
+    "dataframe analysis library"
+   ]
+  },
+  {
+   "gap": "Data Governance",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "data policies and standards",
+    "managing data quality",
+    "data stewardship practices"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "label": "ho_d_02",
+ "cv": "ho_d",
+ "version": "new",
+ "run": 3,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:12:34.854610",
+ "finishedAt": "2026-11-22T02:13:32.720445",
+ "seconds": 57.865,
+ "inputTokens": 3994,
+ "outputTokens": 6185,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "Your CV has no Skills section, even though tools like AWS, Kubernetes, Terraform, GitHub Actions, Prometheus, Grafana, Ansible and Helm appear in your Experience and Projects entries.",
+    "suggestion": "Add a Skills or Technical Skills section listing these tools so an ATS scanning for keywords can find them easily."
+   }
+  ],
+  "sectionOrganization": [],
+  "keywordUsage": [
+   {
+    "issue": "In the Junior DevOps Engineer entry you wrote \"Kubernets\" instead of the official product name.",
+    "suggestion": "Change \"Kubernets\" to \"Kubernetes\" in that bullet point."
+   },
+   {
+    "issue": "In the Junior DevOps Engineer entry you wrote \"Git Hub Actions\" with a space, which is not the official product name.",
+    "suggestion": "Change \"Git Hub Actions\" to \"GitHub Actions\" to match the official spelling."
+   },
+   {
+    "issue": "You wrote \"Terrafrom\" in the Junior DevOps Engineer entry, but later correctly spelled it \"Terraform\" in your HashiCorp Certified: Terraform Associate certification, so the spelling is inconsistent.",
+    "suggestion": "Correct \"Terrafrom\" to \"Terraform\" so it matches the spelling used in your certification."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "In the Cloud Operations Intern entry, the points \"Monitoring\", \"Server stuff and deployments\" and \"Helping with tickets\" are vague duty labels without action verbs or specific details.",
+    "suggestion": "Rewrite each as a short point starting with an action verb, for example \"Monitored [systems] for [issue type]\" or \"Resolved [number] support tickets related to [topic]\"."
+   },
+   {
+    "issue": "The Graduation project description is written as a first-person story: \"A system for the university. I worked on the servers part with my team and it was successful.\"",
+    "suggestion": "Rewrite it as short points starting with an action verb, naming what you built on the server side and adding a specific result, for example \"Configured [number] servers for [purpose], achieving [result]\"."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Your Summary says \"over 3 years of professional experience\", but your Experience section only lists the Cloud Operations Intern role (Jun 2025 - Aug 2025) and the Junior DevOps Engineer role (Mar 2026 - Present), which together are under 1 year.",
+    "suggestion": "Update the Summary to match your actual experience length, or adjust it once your total professional experience reaches 3 years."
+   },
+   {
+    "issue": "The Self-hosted Git server project is dated only \"(2025)\", while every other entry uses a Month YYYY format or a Month YYYY to Month YYYY range.",
+    "suggestion": "Add a specific month to the Self-hosted Git server project date so it matches the format used elsewhere in your CV."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "Your CV has no Skills section, even though tools like AWS, Kubernetes, Terraform, GitHub Actions, Prometheus, Grafana, Ansible and Helm appear in your Experience and Projects entries.",
+    "suggestion": "Add a Skills or Technical Skills section listing these tools so an ATS scanning for keywords can find them easily."
+   }
+  ],
+  "sectionOrganization": [],
+  "keywordUsage": [
+   {
+    "issue": "In the Junior DevOps Engineer entry you wrote \"Kubernets\" instead of the official product name.",
+    "suggestion": "Change \"Kubernets\" to \"Kubernetes\" in that bullet point."
+   },
+   {
+    "issue": "In the Junior DevOps Engineer entry you wrote \"Git Hub Actions\" with a space, which is not the official product name.",
+    "suggestion": "Change \"Git Hub Actions\" to \"GitHub Actions\" to match the official spelling."
+   },
+   {
+    "issue": "You wrote \"Terrafrom\" in the Junior DevOps Engineer entry, but later correctly spelled it \"Terraform\" in your HashiCorp Certified: Terraform Associate certification, so the spelling is inconsistent.",
+    "suggestion": "Correct \"Terrafrom\" to \"Terraform\" so it matches the spelling used in your certification."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "In the Cloud Operations Intern entry, the points \"Monitoring\", \"Server stuff and deployments\" and \"Helping with tickets\" are vague duty labels without action verbs or specific details.",
+    "suggestion": "Rewrite each as a short point starting with an action verb, for example \"Monitored [systems] for [issue type]\" or \"Resolved [number] support tickets related to [topic]\"."
+   },
+   {
+    "issue": "The Graduation project description is written as a first-person story: \"A system for the university. I worked on the servers part with my team and it was successful.\"",
+    "suggestion": "Rewrite it as short points starting with an action verb, naming what you built on the server side and adding a specific result, for example \"Configured [number] servers for [purpose], achieving [result]\"."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Your Summary says \"over 3 years of professional experience\", but your Experience section only lists the Cloud Operations Intern role (Jun 2025 - Aug 2025) and the Junior DevOps Engineer role (Mar 2026 - Present), which together are under 1 year.",
+    "suggestion": "Update the Summary to match your actual experience length, or adjust it once your total professional experience reaches 3 years."
+   },
+   {
+    "issue": "The Self-hosted Git server project is dated only \"(2025)\", while every other entry uses a Month YYYY format or a Month YYYY to Month YYYY range.",
+    "suggestion": "Add a specific month to the Self-hosted Git server project date so it matches the format used elsewhere in your CV."
+   }
+  ]
+ }
+}

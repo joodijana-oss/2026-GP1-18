@@ -1,0 +1,226 @@
+label,cv,area,n,field,quote,check
+dev_clean_01,dev_clean,keywordUsage,1,issue,machine learning and computer vision,in CV
+dev_clean_01,dev_clean,keywordUsage,1,issue,deep learning,NOT in CV
+dev_clean_01,dev_clean,keywordUsage,1,issue,neural networks,NOT in CV
+dev_clean_01,dev_clean,keywordUsage,1,suggestion,deep learning,NOT in CV
+dev_clean_01,dev_clean,keywordUsage,1,suggestion,convolutional neural networks,NOT in CV
+dev_clean_01,dev_clean,readability,1,issue,I enjoy turning messy data...,in CV
+dev_clean_01,dev_clean,readability,1,suggestion,"Computer Science graduate focused on machine learning and computer vision, experienced in turning messy data into working models.",NOT in CV
+dev_clean_01,dev_clean,contentFormatting,1,issue,Jun 2025 - Aug 2025,in CV
+dev_clean_01,dev_clean,contentFormatting,1,issue,2026,in CV
+dev_clean_01,dev_clean,contentFormatting,1,issue,2024 - 2025,in CV
+dev_clean_01,dev_clean,contentFormatting,1,suggestion,Month YYYY - Month YYYY,NOT in CV
+dev_clean_01,dev_clean,contentFormatting,1,suggestion,YYYY,NOT in CV
+dev_clean_02,dev_clean,readability,1,issue,I enjoy turning messy data into working models and want to start my career...,in CV
+dev_clean_02,dev_clean,readability,1,suggestion,I,in CV
+dev_clean_02,dev_clean,readability,1,suggestion,Computer Science graduate with experience in machine learning and computer vision,NOT in CV
+dev_clean_02,dev_clean,readability,2,issue,Built weekly sales dashboards for the operations manager and explained the trends in short written reports,in CV
+dev_clean_03,dev_clean,keywordUsage,1,suggestion,time series forecasting,NOT in CV
+dev_clean_03,dev_clean,keywordUsage,2,suggestion,image classification,NOT in CV
+dev_clean_03,dev_clean,readability,1,issue,I enjoy turning messy data... and want to start my career,in CV
+dev_clean_03,dev_clean,readability,1,suggestion,I,in CV
+dev_clean_03,dev_clean,readability,1,suggestion,Computer Science graduate with experience in...,NOT in CV
+dev_clean_03,dev_clean,contentFormatting,1,issue,Jun 2025 - Aug 2025,in CV
+dev_clean_03,dev_clean,contentFormatting,1,issue,2026,in CV
+dev_clean_03,dev_clean,contentFormatting,1,issue,2025,in CV
+dev_clean_04,dev_clean,keywordUsage,2,issue,Machine Learning,in CV
+dev_clean_04,dev_clean,keywordUsage,2,issue,Deep Learning,NOT in CV
+dev_clean_04,dev_clean,keywordUsage,2,suggestion,Machine Learning,in CV
+dev_clean_04,dev_clean,keywordUsage,2,suggestion,Deep Learning,NOT in CV
+dev_clean_04,dev_clean,readability,1,issue,I enjoy...,in CV
+dev_clean_04,dev_clean,readability,1,issue,I want to start...,NOT in CV
+dev_clean_04,dev_clean,readability,1,suggestion,Computer Science graduate with experience in...,NOT in CV
+dev_clean_05,dev_clean,keywordUsage,1,issue,Machine Learning,in CV
+dev_clean_05,dev_clean,keywordUsage,1,issue,Deep Learning,NOT in CV
+dev_clean_05,dev_clean,keywordUsage,1,issue,Computer Vision,in CV
+dev_clean_05,dev_clean,keywordUsage,1,suggestion,"Machine Learning: Deep Learning, Computer Vision, Model Deployment",NOT in CV
+dev_clean_05,dev_clean,readability,1,issue,I enjoy turning messy data...,in CV
+dev_clean_05,dev_clean,readability,1,suggestion,"Computer Science graduate focused on machine learning and computer vision, experienced in turning messy data into working models.",NOT in CV
+dev_clean_05,dev_clean,contentFormatting,1,issue,Mon YYYY - Mon YYYY,NOT in CV
+dev_clean_05,dev_clean,contentFormatting,1,issue,YYYY,NOT in CV
+dev_clean_05,dev_clean,contentFormatting,1,issue,(YYYY),NOT in CV
+dev_clean_05,dev_clean,contentFormatting,1,suggestion,Mon YYYY - Mon YYYY,NOT in CV
+dev_clean_05,dev_clean,contentFormatting,1,suggestion,Mon YYYY,NOT in CV
+dev_clean_06,dev_clean,keywordUsage,1,suggestion,Machine Learning,in CV
+dev_clean_06,dev_clean,keywordUsage,1,suggestion,Deep Learning,NOT in CV
+dev_clean_06,dev_clean,keywordUsage,2,issue,Computer Vision,in CV
+dev_clean_06,dev_clean,keywordUsage,2,suggestion,Computer Vision,in CV
+dev_clean_06,dev_clean,keywordUsage,3,suggestion,model deployment,NOT in CV
+dev_clean_06,dev_clean,keywordUsage,3,suggestion,deployed the model as a REST API with FastAPI and Docker,NOT in CV
+dev_clean_06,dev_clean,readability,1,issue,I enjoy turning messy data into working models...,in CV
+dev_clean_06,dev_clean,readability,1,suggestion,I,in CV
+dev_clean_06,dev_clean,readability,1,suggestion,"Computer Science graduate focused on machine learning and computer vision, with hands-on experience building and deploying models.",NOT in CV
+dev_clean_06,dev_clean,contentFormatting,1,issue,Jun 2025 - Aug 2025,in CV
+dev_clean_06,dev_clean,contentFormatting,1,issue,2026,in CV
+dev_clean_06,dev_clean,contentFormatting,1,issue,(2024 - 2025),in CV
+dev_clean_06,dev_clean,contentFormatting,1,suggestion,Mon YYYY - Mon YYYY,NOT in CV
+dev_clean_06,dev_clean,contentFormatting,1,suggestion,YYYY,NOT in CV
+dev_flawed_01,dev_flawed,cvStructure,1,suggestion,Skills,NOT in CV
+dev_flawed_01,dev_flawed,sectionOrganization,2,issue,THINGS I BUILT,in CV
+dev_flawed_01,dev_flawed,sectionOrganization,2,suggestion,Projects,NOT in CV
+dev_flawed_01,dev_flawed,keywordUsage,1,issue,guess which deliveries will arrive late,in CV
+dev_flawed_01,dev_flawed,keywordUsage,1,suggestion,built a classification model to predict late deliveries using scikit-learn,NOT in CV
+dev_flawed_01,dev_flawed,keywordUsage,2,issue,the thing that reads customer messages and sorts them into groups,in CV
+dev_flawed_01,dev_flawed,keywordUsage,2,suggestion,contributed to an NLP text classification system for customer support messages,NOT in CV
+dev_flawed_01,dev_flawed,readability,1,issue,I made a phone app that looks at a picture of dates and says which kind it is.,in CV
+dev_flawed_01,dev_flawed,readability,1,suggestion,"Developed a mobile app that classifies date fruit varieties from images using a CNN trained on ~4,000 labeled photos.",NOT in CV
+dev_flawed_01,dev_flawed,readability,2,issue,Responsible for...,in CV
+dev_flawed_01,dev_flawed,readability,2,issue,Duties included various tasks given by the lab supervisor.,in CV
+dev_flawed_01,dev_flawed,readability,2,suggestion,Assisted 30+ first-year students weekly with Python coursework during evening lab hours.,NOT in CV
+dev_flawed_01,dev_flawed,contentFormatting,1,issue,2025 - present,in CV
+dev_flawed_01,dev_flawed,contentFormatting,1,suggestion,Jun 2025 - Sep 2025,NOT in CV
+dev_flawed_01,dev_flawed,contentFormatting,2,issue,09/2023 - 05/2024,in CV
+dev_flawed_01,dev_flawed,contentFormatting,2,issue,March 2025 - June 2025,in CV
+dev_flawed_01,dev_flawed,contentFormatting,2,issue,2025,in CV
+dev_flawed_01,dev_flawed,contentFormatting,2,issue,11/2024,in CV
+dev_flawed_01,dev_flawed,contentFormatting,2,suggestion,MMM YYYY - MMM YYYY,NOT in CV
+dev_flawed_01,dev_flawed,contentFormatting,3,issue,nora.alharbi (at) example dot com,in CV
+dev_flawed_02,dev_flawed,cvStructure,2,issue,nora.alharbi (at) example dot com,in CV
+dev_flawed_02,dev_flawed,sectionOrganization,1,issue,EXPERIANCE,in CV
+dev_flawed_02,dev_flawed,sectionOrganization,1,suggestion,Experience,NOT in CV
+dev_flawed_02,dev_flawed,sectionOrganization,2,issue,THINGS I BUILT,in CV
+dev_flawed_02,dev_flawed,sectionOrganization,2,suggestion,Projects,NOT in CV
+dev_flawed_02,dev_flawed,sectionOrganization,3,issue,finished in September 2025,in CV
+dev_flawed_02,dev_flawed,keywordUsage,1,issue,PYTHON,in CV
+dev_flawed_02,dev_flawed,keywordUsage,1,issue,python,in CV
+dev_flawed_02,dev_flawed,keywordUsage,1,issue,Tensorflow,in CV
+dev_flawed_02,dev_flawed,keywordUsage,1,issue,Pytorch,in CV
+dev_flawed_02,dev_flawed,keywordUsage,1,issue,pytorch,in CV
+dev_flawed_02,dev_flawed,keywordUsage,1,issue,sk-learn,in CV
+dev_flawed_02,dev_flawed,keywordUsage,1,issue,Scikit learn,in CV
+dev_flawed_02,dev_flawed,keywordUsage,2,suggestion,sentiment analysis,NOT in CV
+dev_flawed_02,dev_flawed,keywordUsage,3,suggestion,image classification,NOT in CV
+dev_flawed_02,dev_flawed,readability,1,issue,and,in CV
+dev_flawed_02,dev_flawed,readability,1,issue,so,in CV
+dev_flawed_02,dev_flawed,readability,2,suggestion,Built,in CV
+dev_flawed_02,dev_flawed,readability,2,suggestion,Collected,in CV
+dev_flawed_02,dev_flawed,readability,2,suggestion,Trained,in CV
+dev_flawed_02,dev_flawed,readability,2,suggestion,I made,in CV
+dev_flawed_02,dev_flawed,readability,2,suggestion,I gathered,in CV
+dev_flawed_02,dev_flawed,contentFormatting,1,issue,2025 - present,in CV
+dev_flawed_02,dev_flawed,contentFormatting,1,issue,finished in September 2025,in CV
+dev_flawed_02,dev_flawed,contentFormatting,1,suggestion,July 2025 - September 2025,NOT in CV
+dev_flawed_02,dev_flawed,contentFormatting,2,issue,09/2023 - 05/2024,in CV
+dev_flawed_02,dev_flawed,contentFormatting,2,issue,March 2025 - June 2025,in CV
+dev_flawed_02,dev_flawed,contentFormatting,2,issue,2025,in CV
+dev_flawed_02,dev_flawed,contentFormatting,2,suggestion,Month YYYY,NOT in CV
+dev_flawed_03,dev_flawed,cvStructure,1,suggestion,Technical Skills,NOT in CV
+dev_flawed_03,dev_flawed,sectionOrganization,1,issue,EXPERIANCE,in CV
+dev_flawed_03,dev_flawed,sectionOrganization,1,issue,EXPERIENCE,NOT in CV
+dev_flawed_03,dev_flawed,sectionOrganization,1,suggestion,EXPERIENCE,NOT in CV
+dev_flawed_03,dev_flawed,keywordUsage,1,issue,says which kind it is,in CV
+dev_flawed_03,dev_flawed,keywordUsage,1,issue,image classification,NOT in CV
+dev_flawed_03,dev_flawed,keywordUsage,1,issue,"decides if the writer is happy, angry or neutral",in CV
+dev_flawed_03,dev_flawed,keywordUsage,1,issue,sentiment analysis,NOT in CV
+dev_flawed_03,dev_flawed,readability,1,issue,I made...,in CV
+dev_flawed_03,dev_flawed,readability,1,issue,I collected...,in CV
+dev_flawed_03,dev_flawed,readability,1,issue,I gathered...,in CV
+dev_flawed_03,dev_flawed,readability,1,suggestion,Developed a mobile app that classifies date fruit images,NOT in CV
+dev_flawed_03,dev_flawed,readability,1,suggestion,I made a phone app that looks at a picture of dates and says which kind it is,in CV
+dev_flawed_03,dev_flawed,readability,2,issue,it got it right most of the time,in CV
+dev_flawed_03,dev_flawed,readability,2,suggestion,35% reduction in response time,NOT in CV
+dev_flawed_03,dev_flawed,readability,3,issue,Duties included various tasks given by the lab supervisor,in CV
+dev_flawed_03,dev_flawed,contentFormatting,1,issue,MM/YYYY,NOT in CV
+dev_flawed_03,dev_flawed,contentFormatting,1,issue,Month YYYY,NOT in CV
+dev_flawed_03,dev_flawed,contentFormatting,1,suggestion,MM/YYYY,NOT in CV
+dev_flawed_03,dev_flawed,contentFormatting,2,issue,2025 - present,in CV
+dev_flawed_03,dev_flawed,contentFormatting,2,suggestion,06/2025 - 09/2025,NOT in CV
+dev_flawed_03,dev_flawed,contentFormatting,2,suggestion,present,in CV
+dev_flawed_04,dev_flawed,cvStructure,2,issue,nora.alharbi (at) example dot com,in CV
+dev_flawed_04,dev_flawed,sectionOrganization,1,issue,EXPERIANCE,in CV
+dev_flawed_04,dev_flawed,sectionOrganization,1,suggestion,Experience,NOT in CV
+dev_flawed_04,dev_flawed,sectionOrganization,2,issue,THINGS I BUILT,in CV
+dev_flawed_04,dev_flawed,sectionOrganization,2,suggestion,Projects,NOT in CV
+dev_flawed_04,dev_flawed,keywordUsage,1,issue,scikit-learn,NOT in CV
+dev_flawed_04,dev_flawed,keywordUsage,1,issue,sk-learn,in CV
+dev_flawed_04,dev_flawed,keywordUsage,1,issue,Scikit learn,in CV
+dev_flawed_04,dev_flawed,keywordUsage,1,suggestion,scikit-learn,NOT in CV
+dev_flawed_04,dev_flawed,keywordUsage,2,issue,PyTorch,in CV
+dev_flawed_04,dev_flawed,keywordUsage,2,issue,Pytorch,in CV
+dev_flawed_04,dev_flawed,keywordUsage,2,issue,pytorch,in CV
+dev_flawed_04,dev_flawed,keywordUsage,2,issue,TensorFlow,in CV
+dev_flawed_04,dev_flawed,keywordUsage,2,issue,Python,in CV
+dev_flawed_04,dev_flawed,keywordUsage,2,issue,Tensorflow,in CV
+dev_flawed_04,dev_flawed,keywordUsage,2,issue,PYTHON,in CV
+dev_flawed_04,dev_flawed,keywordUsage,2,suggestion,PyTorch,in CV
+dev_flawed_04,dev_flawed,keywordUsage,2,suggestion,TensorFlow,in CV
+dev_flawed_04,dev_flawed,keywordUsage,2,suggestion,Python,in CV
+dev_flawed_04,dev_flawed,keywordUsage,3,suggestion,image classification,NOT in CV
+dev_flawed_04,dev_flawed,keywordUsage,3,suggestion,classification model,NOT in CV
+dev_flawed_04,dev_flawed,keywordUsage,3,suggestion,sentiment analysis,NOT in CV
+dev_flawed_04,dev_flawed,readability,2,issue,Responsible for,in CV
+dev_flawed_04,dev_flawed,readability,2,issue,Duties included,in CV
+dev_flawed_04,dev_flawed,readability,2,suggestion,Assisted first-year students with Python homework,NOT in CV
+dev_flawed_04,dev_flawed,readability,2,suggestion,Responsible for helping first-year students with their python homework,in CV
+dev_flawed_04,dev_flawed,readability,3,issue,it got it right most of the time,in CV
+dev_flawed_04,dev_flawed,readability,3,issue,worked well enough,in CV
+dev_flawed_04,dev_flawed,readability,3,suggestion,achieved [percentage] accuracy,NOT in CV
+dev_flawed_04,dev_flawed,contentFormatting,1,issue,09/2023 - 05/2024,in CV
+dev_flawed_04,dev_flawed,contentFormatting,1,issue,March 2025 - June 2025,in CV
+dev_flawed_04,dev_flawed,contentFormatting,1,issue,2025 - present,in CV
+dev_flawed_04,dev_flawed,contentFormatting,1,issue,11/2024,in CV
+dev_flawed_04,dev_flawed,contentFormatting,2,issue,2025 - present,in CV
+dev_flawed_04,dev_flawed,contentFormatting,2,issue,finished in September 2025,in CV
+dev_flawed_04,dev_flawed,contentFormatting,2,suggestion,[start month] 2025 - September 2025,NOT in CV
+dev_flawed_04,dev_flawed,contentFormatting,2,suggestion,present,in CV
+dev_flawed_05,dev_flawed,cvStructure,2,issue,nora.alharbi (at) example dot com,in CV
+dev_flawed_05,dev_flawed,sectionOrganization,1,issue,EXPERIANCE,in CV
+dev_flawed_05,dev_flawed,sectionOrganization,1,issue,THINGS I BUILT,in CV
+dev_flawed_05,dev_flawed,sectionOrganization,1,suggestion,EXPERIANCE,in CV
+dev_flawed_05,dev_flawed,sectionOrganization,1,suggestion,Experience,NOT in CV
+dev_flawed_05,dev_flawed,sectionOrganization,1,suggestion,THINGS I BUILT,in CV
+dev_flawed_05,dev_flawed,sectionOrganization,1,suggestion,Projects,NOT in CV
+dev_flawed_05,dev_flawed,keywordUsage,2,issue,sk-learn,in CV
+dev_flawed_05,dev_flawed,keywordUsage,2,issue,Scikit learn,in CV
+dev_flawed_05,dev_flawed,keywordUsage,2,suggestion,scikit-learn,NOT in CV
+dev_flawed_05,dev_flawed,keywordUsage,3,issue,"happy, angry or neutral",in CV
+dev_flawed_05,dev_flawed,keywordUsage,3,issue,which deliveries will arrive late,in CV
+dev_flawed_05,dev_flawed,keywordUsage,3,issue,a ready-made language model,in CV
+dev_flawed_05,dev_flawed,readability,2,issue,Responsible for,in CV
+dev_flawed_05,dev_flawed,readability,2,suggestion,Cleaned,in CV
+dev_flawed_05,dev_flawed,readability,2,suggestion,Predicted,NOT in CV
+dev_flawed_05,dev_flawed,readability,2,suggestion,Built,in CV
+dev_flawed_05,dev_flawed,readability,2,suggestion,Assisted,NOT in CV
+dev_flawed_05,dev_flawed,readability,2,suggestion,I,in CV
+dev_flawed_05,dev_flawed,readability,3,issue,it got it right most of the time,in CV
+dev_flawed_05,dev_flawed,readability,3,issue,worked well enough,in CV
+dev_flawed_05,dev_flawed,readability,3,suggestion,[accuracy]% accuracy,NOT in CV
+dev_flawed_05,dev_flawed,contentFormatting,1,issue,2025 - present,in CV
+dev_flawed_05,dev_flawed,contentFormatting,1,issue,finished in September 2025,in CV
+dev_flawed_05,dev_flawed,contentFormatting,1,suggestion,June 2025 - September 2025,NOT in CV
+dev_flawed_05,dev_flawed,contentFormatting,2,issue,09/2023 - 05/2024,in CV
+dev_flawed_05,dev_flawed,contentFormatting,2,issue,March 2025 - June 2025,in CV
+dev_flawed_05,dev_flawed,contentFormatting,2,issue,2025 - present,in CV
+dev_flawed_05,dev_flawed,contentFormatting,2,issue,11/2024,in CV
+dev_flawed_05,dev_flawed,contentFormatting,2,issue,2025,in CV
+dev_flawed_05,dev_flawed,contentFormatting,2,suggestion,Mon YYYY,NOT in CV
+dev_flawed_06,dev_flawed,cvStructure,1,suggestion,Skills,NOT in CV
+dev_flawed_06,dev_flawed,sectionOrganization,2,issue,EXPERIANCE,in CV
+dev_flawed_06,dev_flawed,sectionOrganization,2,issue,EXPERIENCE,NOT in CV
+dev_flawed_06,dev_flawed,sectionOrganization,2,suggestion,EXPERIENCE,NOT in CV
+dev_flawed_06,dev_flawed,sectionOrganization,3,issue,THINGS I BUILT,in CV
+dev_flawed_06,dev_flawed,sectionOrganization,3,suggestion,PROJECTS,NOT in CV
+dev_flawed_06,dev_flawed,keywordUsage,1,issue,PYTHON,in CV
+dev_flawed_06,dev_flawed,keywordUsage,1,issue,Tensorflow,in CV
+dev_flawed_06,dev_flawed,keywordUsage,1,issue,sk-learn,in CV
+dev_flawed_06,dev_flawed,keywordUsage,1,issue,pytorch,in CV
+dev_flawed_06,dev_flawed,keywordUsage,1,issue,power bi,in CV
+dev_flawed_06,dev_flawed,keywordUsage,1,issue,GIT,in CV
+dev_flawed_06,dev_flawed,keywordUsage,1,issue,jupyter,in CV
+dev_flawed_06,dev_flawed,readability,1,issue,likes working with data and smart systems,in CV
+dev_flawed_06,dev_flawed,readability,2,issue,I made a phone app that looks at a picture of dates...,in CV
+dev_flawed_06,dev_flawed,readability,2,suggestion,"Developed a mobile application that classifies date fruit varieties from images using Python and TensorFlow, trained on a dataset of 4,000 images.",NOT in CV
+dev_flawed_06,dev_flawed,readability,3,issue,Responsible for,in CV
+dev_flawed_06,dev_flawed,readability,3,suggestion,Assisted first-year students with Python coursework,NOT in CV
+dev_flawed_06,dev_flawed,readability,3,suggestion,Managed the evening computer lab schedule.,NOT in CV
+dev_flawed_06,dev_flawed,contentFormatting,1,issue,Month YYYY,NOT in CV
+dev_flawed_06,dev_flawed,contentFormatting,1,issue,09/2023 - 05/2024,in CV
+dev_flawed_06,dev_flawed,contentFormatting,1,issue,March 2025 - June 2025,in CV
+dev_flawed_06,dev_flawed,contentFormatting,1,issue,2025,in CV
+dev_flawed_06,dev_flawed,contentFormatting,1,issue,11/2024,in CV
+dev_flawed_06,dev_flawed,contentFormatting,1,suggestion,Mon YYYY - Mon YYYY,NOT in CV
+dev_flawed_06,dev_flawed,contentFormatting,2,issue,2025 - present,in CV
+dev_flawed_06,dev_flawed,contentFormatting,2,suggestion,Jun 2025 - Sep 2025,NOT in CV
+dev_flawed_06,dev_flawed,contentFormatting,2,suggestion,present,in CV
+dev_flawed_06,dev_flawed,contentFormatting,3,issue,nora.alharbi (at) example dot com,in CV
+dev_flawed_06,dev_flawed,contentFormatting,3,suggestion,nora.alharbi@example.com,NOT in CV

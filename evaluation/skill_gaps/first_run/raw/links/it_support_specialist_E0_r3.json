@@ -1,0 +1,130 @@
+{
+ "goal": "it_support_specialist",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Hardware Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "diagnosing hardware issues",
+    "repairing computer components",
+    "fixing device malfunctions"
+   ]
+  },
+  {
+   "gap": "Windows Operating System",
+   "kind": "tool",
+   "concepts": [
+    "Windows"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Networking (LAN/WAN/Wi-Fi/TCP-IP)",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals",
+    "TCP/IP"
+   ],
+   "phrases": [
+    "wireless network setup",
+    "network protocols and addressing"
+   ]
+  },
+  {
+   "gap": "Active Directory",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "managing user accounts and permissions",
+    "directory services administration"
+   ]
+  },
+  {
+   "gap": "Ticketing Systems (ServiceNow/Remedy)",
+   "kind": "tool",
+   "concepts": [
+    "Ticketing Systems"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Microsoft 365",
+   "kind": "tool",
+   "concepts": [
+    "Microsoft 365"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Printer/Peripheral Support",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "setting up printers and peripherals",
+    "resolving peripheral device issues"
+   ]
+  },
+  {
+   "gap": "Desktop/Laptop Support",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "supporting end-user devices",
+    "maintaining desktops and laptops",
+    "resolving workstation issues"
+   ]
+  },
+  {
+   "gap": "Routers and Switches Configuration",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching"
+   ],
+   "phrases": [
+    "configuring network devices",
+    "setting up routers and switches"
+   ]
+  },
+  {
+   "gap": "IT Asset Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "tracking hardware and software inventory",
+    "managing IT equipment lifecycle"
+   ]
+  },
+  {
+   "gap": "Customer Service and Communication",
+   "kind": "soft",
+   "concepts": [
+    "Customer Engagement"
+   ],
+   "phrases": [
+    "interacting with clients professionally",
+    "handling customer inquiries",
+    "effective communication skills"
+   ]
+  },
+  {
+   "gap": "Software Installation and Configuration",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "installing and setting up applications",
+    "configuring software systems"
+   ]
+  }
+ ]
+}

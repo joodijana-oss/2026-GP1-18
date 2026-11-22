@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "REST APIs",
+  "Git",
+  "React",
+  "Node.js",
+  "SQL",
+  "Java",
+  "Spring Boot",
+  "Docker",
+  "Python",
+  "Linux",
+  "Kubernetes",
+  "Microservices Architecture"
+ ],
+ "answer": [
+  {
+   "skill": "REST APIs",
+   "status": "partly",
+   "quote": "Added three endpoints to the refunds service"
+  },
+  {
+   "skill": "Git",
+   "status": "shown",
+   "quote": "Git, Linux"
+  },
+  {
+   "skill": "React",
+   "status": "shown",
+   "quote": "Built the booking screens in React"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "Rewrote a slow settlement report query, adding an index"
+  },
+  {
+   "skill": "Java",
+   "status": "shown",
+   "quote": "Java, Spring Boot"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "shown",
+   "quote": "refunds service (Java, Spring Boot)"
+  },
+  {
+   "skill": "Docker",
+   "status": "shown",
+   "quote": "Packaged the service into an image"
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux",
+   "status": "shown",
+   "quote": "Git, Linux"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "partly",
+   "quote": "Added three endpoints to the refunds service"
+  }
+ ]
+}

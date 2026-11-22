@@ -1,0 +1,34 @@
+{
+ "goal": "it_project_manager",
+ "extractor": "E0",
+ "run": 2,
+ "postings": 18,
+ "rawNames": [
+  "Project Risk Management",
+  "Stakeholder Management",
+  "Agile/Scrum Methodologies",
+  "Project Planning and Scheduling",
+  "Budget and Resource Management",
+  "PMP Certification",
+  "Project Governance",
+  "Jira",
+  "Microsoft Project",
+  "Cloud Platforms (Azure/AWS/GCP)",
+  "Change Management",
+  "Executive Reporting and Presentation"
+ ],
+ "names": [
+  "Project Risk Management",
+  "Stakeholder Management",
+  "Agile/Scrum Methodologies",
+  "Project Planning and Scheduling",
+  "Budget and Resource Management",
+  "PMP Certification",
+  "Project Governance",
+  "Jira",
+  "Microsoft Project",
+  "Cloud Platforms (Azure/AWS/GCP)",
+  "Change Management",
+  "Executive Reporting and Presentation"
+ ]
+}

@@ -1,0 +1,261 @@
+{
+  "id": "ho_13",
+  "careerGoalId": "cloud_devops_engineer",
+  "shown": [
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "An old office PC running Debian that hosts my family's photo library, a media server and an ad-blocking DNS resolver",
+      "source": "project"
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "evidence": "each isolated in its own image and started from one compose file",
+      "source": "project"
+    },
+    {
+      "skill": "Web Server Administration",
+      "alsoCalled": [
+        "Nginx",
+        "Apache",
+        "Reverse Proxy"
+      ],
+      "evidence": "Put everything behind Caddy with automatic TLS certificates so that each service is reachable by name",
+      "source": "project"
+    },
+    {
+      "skill": "Bash Scripting",
+      "alsoCalled": [
+        "Shell Scripting",
+        "Bash"
+      ],
+      "evidence": "A nightly cron job written as a shell script copies the photo volume to an external disk and to object storage",
+      "source": "project"
+    },
+    {
+      "skill": "Infrastructure Monitoring",
+      "alsoCalled": [
+        "Observability",
+        "System Monitoring",
+        "Alerting"
+      ],
+      "evidence": "Graphs of CPU, memory, disk and temperature in Grafana, fed by node exporters; my phone buzzes when the disk passes 85%",
+      "source": "project"
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build Pipelines"
+      ],
+      "evidence": "every push to the main branch runs the checks and publishes the site automatically with GitHub Actions",
+      "source": "project"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ],
+      "evidence": "every push to the main branch runs the checks",
+      "source": "project"
+    },
+    {
+      "skill": "Kubernetes",
+      "alsoCalled": [
+        "K8s",
+        "Container Orchestration"
+      ],
+      "evidence": "Three Raspberry Pi boards running k3s; redeployed the photo library there to learn deployments, services and ingress",
+      "source": "project"
+    },
+    {
+      "skill": "Data Backup",
+      "alsoCalled": [
+        "Backups",
+        "Data Recovery"
+      ],
+      "evidence": "copies the photo volume to an external disk and to object storage",
+      "source": "project"
+    },
+    {
+      "skill": "DNS",
+      "alsoCalled": [
+        "Domain Name System"
+      ],
+      "evidence": "an ad-blocking DNS resolver",
+      "source": "project"
+    },
+    {
+      "skill": "GitHub Actions",
+      "alsoCalled": [
+        "GitHub Workflows"
+      ],
+      "evidence": "publishes the site automatically with GitHub Actions",
+      "source": "project"
+    },
+    {
+      "skill": "Grafana",
+      "alsoCalled": [
+        "Grafana Dashboards"
+      ],
+      "evidence": "Graphs of CPU, memory, disk and temperature in Grafana",
+      "source": "project"
+    },
+    {
+      "skill": "Oracle Cloud Infrastructure",
+      "alsoCalled": [
+        "OCI",
+        "Oracle Cloud"
+      ],
+      "evidence": "The site runs on a free-tier virtual machine on Oracle Cloud",
+      "source": "project"
+    },
+    {
+      "skill": "TLS",
+      "alsoCalled": [
+        "SSL",
+        "HTTPS Certificates"
+      ],
+      "evidence": "automatic TLS certificates",
+      "source": "project"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Ansible",
+      "alsoCalled": [
+        "Configuration Management"
+      ],
+      "evidence": "that I configure from a playbook",
+      "why": "A playbook suggests Ansible, but the tool is not named and no detail is given."
+    },
+    {
+      "skill": "Disaster Recovery",
+      "alsoCalled": [
+        "DR",
+        "Backup and Restore",
+        "Recovery Drills"
+      ],
+      "evidence": "so it can be rebuilt from nothing in ten minutes",
+      "why": "Backups and a rebuildable server, but no tested recovery of a real service."
+    },
+    {
+      "skill": "Cloud Computing",
+      "alsoCalled": [
+        "Cloud Fundamentals"
+      ],
+      "evidence": "Cloud Computing Fundamentals (elective, in progress)",
+      "why": "Course in progress."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "AWS",
+      "alsoCalled": [
+        "Amazon Web Services"
+      ],
+      "why": "Uses one free virtual machine on another provider; no AWS.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Terraform",
+      "alsoCalled": [
+        "Infrastructure as Code",
+        "IaC"
+      ],
+      "why": "Configures a server from a playbook, but does not create infrastructure from code.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Cloud Networking",
+      "alsoCalled": [
+        "VPC",
+        "Virtual Networks"
+      ],
+      "why": "One public virtual machine; no virtual networks or subnets.",
+      "nearMiss": false
+    },
+    {
+      "skill": "AWS Certified Solutions Architect - Associate",
+      "alsoCalled": [
+        "AWS SAA",
+        "SAA-C03"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Microsoft Azure",
+      "alsoCalled": [
+        "Azure"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Jenkins",
+      "alsoCalled": [
+        "Jenkins Pipelines"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Identity and Access Management",
+      "alsoCalled": [
+        "IAM",
+        "Access Control",
+        "Access Reviews"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Log Management",
+      "alsoCalled": [
+        "Centralized Logging",
+        "Log Aggregation"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "High Availability",
+      "alsoCalled": [
+        "Load Balancing and Failover",
+        "Auto Scaling",
+        "Fault Tolerance"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Cost Optimization",
+      "alsoCalled": [
+        "Cloud Cost Management",
+        "FinOps"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

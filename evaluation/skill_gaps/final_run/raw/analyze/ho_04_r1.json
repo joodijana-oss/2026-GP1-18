@@ -1,0 +1,61 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Able to clean and prepare messy real-world data (removing duplicates, fixing inconsistent formats)",
+   "Can summarize and analyze data using pivot tables and descriptive statistics",
+   "Capable of creating visualizations to communicate findings",
+   "Experience writing SQL queries with joins and grouping",
+   "Able to design database tables for a given scenario",
+   "Experience managing budgets and tracking finances using spreadsheet formulas",
+   "Comfortable presenting findings in both written reports and oral presentations",
+   "Self-motivated to pursue learning beyond coursework (Power BI introduction)"
+  ],
+  "currentSkills": [
+   "SQL",
+   "Database Design",
+   "Data Cleaning",
+   "Data Analysis",
+   "Statistics",
+   "Pivot Tables",
+   "Data Visualization",
+   "Excel",
+   "Report Writing",
+   "Presentation Skills"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Systems",
+    "institution": "Umm Al-Qura University",
+    "year": "2024 - expected 2028"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "Introduction to Power BI (10-hour online course, videos only)",
+    "issuer": "",
+    "year": "2026"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Shuttle delays in the Hajj season",
+    "description": "Downloaded two months of shuttle-bus trip records from a government open data portal, cleaned the data by removing blank and duplicate rows and fixing inconsistent time formats, summarized delays by hour and route using pivot tables, created three charts showing that the worst delays occur in the two hours after Isha prayer, calculated average and median delay per route and explained the difference, and wrote a four-page report presented to the class in ten minutes."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Treasurer",
+    "organization": "Information Systems Students Club",
+    "duration": "2025 - 2026",
+    "description": "Maintained the club budget in a shared spreadsheet using formulas to total spending per event and reported the balance to members each month."
+   },
+   {
+    "title": "Hajj season volunteer",
+    "organization": "",
+    "duration": "2025",
+    "description": "Guided pilgrims at a shuttle station in Mina for twelve days, which inspired the course project on shuttle delays."
+   }
+  ]
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "case": "ho_15",
+ "arm": "G1E1",
+ "run": 3,
+ "gaps": [
+  "PyTorch",
+  "Kubernetes",
+  "TensorFlow",
+  "C++",
+  "MLOps",
+  "Terraform",
+  "LangChain",
+  "Docker"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Python",
+   "status": "shown"
+  },
+  {
+   "skill": "PyTorch",
+   "status": "missing"
+  },
+  {
+   "skill": "Deep Learning",
+   "status": "shown"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  },
+  {
+   "skill": "TensorFlow",
+   "status": "missing"
+  },
+  {
+   "skill": "C++",
+   "status": "missing"
+  },
+  {
+   "skill": "Computer Vision",
+   "status": "partly"
+  },
+  {
+   "skill": "Linux",
+   "status": "partly"
+  },
+  {
+   "skill": "MLOps",
+   "status": "missing"
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing"
+  },
+  {
+   "skill": "LangChain",
+   "status": "missing"
+  },
+  {
+   "skill": "Docker",
+   "status": "missing"
+  }
+ ]
+}

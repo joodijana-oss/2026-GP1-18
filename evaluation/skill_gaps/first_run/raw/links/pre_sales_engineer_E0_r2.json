@@ -1,0 +1,137 @@
+{
+ "goal": "pre_sales_engineer",
+ "extractor": "E0",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Technical Proposal Writing",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "writing technical proposals",
+    "structuring solution proposals",
+    "proposal documentation skills"
+   ]
+  },
+  {
+   "gap": "RFP/RFQ/RFI Response Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "responding to tenders",
+    "managing procurement requests",
+    "bid response process"
+   ]
+  },
+  {
+   "gap": "Solution Architecture Design",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing end-to-end solutions",
+    "architecting technical solutions",
+    "system design approach"
+   ]
+  },
+  {
+   "gap": "BOQ/BOM Preparation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "preparing bills of quantities",
+    "bill of materials creation",
+    "costing technical components"
+   ]
+  },
+  {
+   "gap": "Product Demonstrations & Proof of Concept (POC)",
+   "kind": "skill",
+   "concepts": [
+    "Product Demonstrations"
+   ],
+   "phrases": [
+    "conducting product demos",
+    "building proof of concepts",
+    "showcasing solution capabilities"
+   ]
+  },
+  {
+   "gap": "Customer Requirements Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Requirements Gathering"
+   ],
+   "phrases": [
+    "analyzing client needs",
+    "gathering business requirements",
+    "understanding customer needs"
+   ]
+  },
+  {
+   "gap": "Presentation Skills",
+   "kind": "soft",
+   "concepts": [
+    "Presentations"
+   ],
+   "phrases": [
+    "delivering effective presentations",
+    "public speaking techniques",
+    "communicating ideas clearly"
+   ]
+  },
+  {
+   "gap": "Vendor Coordination",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "coordinating with vendors",
+    "managing supplier relationships",
+    "liaising with partners"
+   ]
+  },
+  {
+   "gap": "Technical Presentations to C-level Stakeholders",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "presenting to executives",
+    "engaging senior stakeholders",
+    "communicating with leadership"
+   ]
+  },
+  {
+   "gap": "Cloud Platforms (AWS/Azure/GCP)",
+   "kind": "tool",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Networking & Security Solutions",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "securing network infrastructure",
+    "designing network solutions",
+    "network protection techniques"
+   ]
+  },
+  {
+   "gap": "Cross-functional Collaboration with Sales and Technical Teams",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "working across teams",
+    "collaborating with sales",
+    "team coordination skills"
+   ]
+  }
+ ]
+}

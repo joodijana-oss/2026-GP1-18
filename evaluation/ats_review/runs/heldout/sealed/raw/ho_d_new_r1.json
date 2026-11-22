@@ -1,0 +1,83 @@
+{
+ "label": "ho_d_06",
+ "cv": "ho_d",
+ "version": "new",
+ "run": 1,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:09:21.130130",
+ "finishedAt": "2026-11-22T02:10:28.478839",
+ "seconds": 67.348,
+ "inputTokens": 3994,
+ "outputTokens": 6916,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "Your CV has no dedicated Skills section, even though you use tools like Kubernetes, Terraform, GitHub Actions, Prometheus, Grafana, Ansible and Helm throughout your experience and projects.",
+    "suggestion": "Add a Skills section (for example after your Summary) that lists these tools directly, so an ATS scanning for cloud and DevOps keywords can find them."
+   }
+  ],
+  "sectionOrganization": [],
+  "keywordUsage": [
+   {
+    "issue": "In the Junior DevOps Engineer entry, \"Kubernets\" is misspelled and \"Git Hub Actions\" and \"Terrafrom\" are not written in their official forms.",
+    "suggestion": "Write these as Kubernetes, GitHub Actions, and Terraform to match their official names."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Cloud Operations Intern bullets \"Monitoring\", \"Server stuff and deployments\" and \"Helping with tickets\" are vague duty labels rather than action statements, and none show a result.",
+    "suggestion": "Rewrite each as a short point starting with a strong verb, such as \"Monitored [systems] to catch [type of issue]\" or \"Resolved [number] support tickets related to [topic]\", adding a result where you can."
+   },
+   {
+    "issue": "The Graduation project entry is written as a first-person story (\"I worked on the servers part with my team and it was successful\") with no specific result.",
+    "suggestion": "Rewrite it as a short point starting with a verb, for example \"Configured the server infrastructure for [project name], achieving [result or metric]\"."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Your Summary states \"over 3 years of professional experience\", but your listed roles (Jun 2025 - Aug 2025 internship and Mar 2026 - Present job) add up to under a year.",
+    "suggestion": "Update the Summary to match your actual experience length, for example \"DevOps Engineer with hands-on experience building and running cloud infrastructure on AWS\"."
+   },
+   {
+    "issue": "The Self-hosted Git server project shows only a year, \"(2025)\", while every other date in your CV uses a month and year format.",
+    "suggestion": "Add the month, for example \"[Month] 2025\", so all dates follow the same Mon YYYY format."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "Your CV has no dedicated Skills section, even though you use tools like Kubernetes, Terraform, GitHub Actions, Prometheus, Grafana, Ansible and Helm throughout your experience and projects.",
+    "suggestion": "Add a Skills section (for example after your Summary) that lists these tools directly, so an ATS scanning for cloud and DevOps keywords can find them."
+   }
+  ],
+  "sectionOrganization": [],
+  "keywordUsage": [
+   {
+    "issue": "In the Junior DevOps Engineer entry, \"Kubernets\" is misspelled and \"Git Hub Actions\" and \"Terrafrom\" are not written in their official forms.",
+    "suggestion": "Write these as Kubernetes, GitHub Actions, and Terraform to match their official names."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Cloud Operations Intern bullets \"Monitoring\", \"Server stuff and deployments\" and \"Helping with tickets\" are vague duty labels rather than action statements, and none show a result.",
+    "suggestion": "Rewrite each as a short point starting with a strong verb, such as \"Monitored [systems] to catch [type of issue]\" or \"Resolved [number] support tickets related to [topic]\", adding a result where you can."
+   },
+   {
+    "issue": "The Graduation project entry is written as a first-person story (\"I worked on the servers part with my team and it was successful\") with no specific result.",
+    "suggestion": "Rewrite it as a short point starting with a verb, for example \"Configured the server infrastructure for [project name], achieving [result or metric]\"."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Your Summary states \"over 3 years of professional experience\", but your listed roles (Jun 2025 - Aug 2025 internship and Mar 2026 - Present job) add up to under a year.",
+    "suggestion": "Update the Summary to match your actual experience length, for example \"DevOps Engineer with hands-on experience building and running cloud infrastructure on AWS\"."
+   },
+   {
+    "issue": "The Self-hosted Git server project shows only a year, \"(2025)\", while every other date in your CV uses a month and year format.",
+    "suggestion": "Add the month, for example \"[Month] 2025\", so all dates follow the same Mon YYYY format."
+   }
+  ]
+ }
+}

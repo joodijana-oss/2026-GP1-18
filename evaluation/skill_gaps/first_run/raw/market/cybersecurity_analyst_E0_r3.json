@@ -1,0 +1,34 @@
+{
+ "goal": "cybersecurity_analyst",
+ "extractor": "E0",
+ "run": 3,
+ "postings": 20,
+ "rawNames": [
+  "SIEM",
+  "Vulnerability Assessment",
+  "Penetration Testing",
+  "Incident Response",
+  "Firewalls",
+  "Network Security",
+  "SOC Operations",
+  "IAM",
+  "EDR",
+  "Security Risk Assessment",
+  "Python",
+  "Cloud Security"
+ ],
+ "names": [
+  "SIEM",
+  "Vulnerability Assessment",
+  "Penetration Testing",
+  "Incident Response",
+  "Firewalls",
+  "Network Security",
+  "SOC Operations",
+  "IAM",
+  "EDR",
+  "Security Risk Assessment",
+  "Python",
+  "Cloud Security"
+ ]
+}

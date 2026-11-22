@@ -1,0 +1,129 @@
+{
+ "goal": "cloud_devops_engineer",
+ "extractor": "E0",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "CI/CD Pipeline Design",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": [
+    "building deployment pipelines",
+    "automating software delivery",
+    "continuous integration workflows"
+   ]
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": [
+    "containerizing applications",
+    "building container images"
+   ]
+  },
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "managing linux servers",
+    "system administration tasks"
+   ]
+  },
+  {
+   "gap": "Ansible",
+   "kind": "tool",
+   "concepts": [
+    "Infrastructure as Code"
+   ],
+   "phrases": [
+    "configuration management",
+    "automating server provisioning"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Cloud Platforms (AWS/Azure/GCP)",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "working with cloud providers",
+    "deploying cloud infrastructure"
+   ]
+  },
+  {
+   "gap": "Site Reliability Engineering (SLIs/SLOs)",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "defining service level objectives",
+    "measuring system reliability",
+    "managing production reliability"
+   ]
+  },
+  {
+   "gap": "Monitoring & Observability (Prometheus/Grafana)",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "monitoring system metrics",
+    "building observability dashboards",
+    "tracking application performance"
+   ]
+  },
+  {
+   "gap": "Bash Scripting",
+   "kind": "tool",
+   "concepts": [
+    "Scripting"
+   ],
+   "phrases": [
+    "writing shell scripts",
+    "automating command line tasks"
+   ]
+  },
+  {
+   "gap": "GitOps (Argo CD)",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": [
+    "declarative deployment workflows",
+    "git based continuous delivery"
+   ]
+  }
+ ]
+}

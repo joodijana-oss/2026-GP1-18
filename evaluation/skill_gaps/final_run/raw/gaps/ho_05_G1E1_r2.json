@@ -1,0 +1,67 @@
+{
+ "case": "ho_05",
+ "arm": "G1E1",
+ "run": 2,
+ "gaps": [
+  "React",
+  "Node.js",
+  "Docker",
+  "Linux",
+  "Kubernetes",
+  "Microservices Architecture"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "REST APIs",
+   "status": "shown"
+  },
+  {
+   "skill": "Git",
+   "status": "shown"
+  },
+  {
+   "skill": "React",
+   "status": "missing"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing"
+  },
+  {
+   "skill": "SQL",
+   "status": "shown"
+  },
+  {
+   "skill": "Java",
+   "status": "shown"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "shown"
+  },
+  {
+   "skill": "Docker",
+   "status": "missing"
+  },
+  {
+   "skill": "Python",
+   "status": "shown"
+  },
+  {
+   "skill": "Linux",
+   "status": "missing"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "missing"
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Strong academic performance with GPA 4.8/5 in Artificial Intelligence program",
+   "Hands-on experience implementing machine learning algorithms from scratch (KNN, decision tree)",
+   "Research experience fine-tuning convolutional networks for image classification with high accuracy (91% balanced accuracy)",
+   "Demonstrates awareness of class imbalance issues and applies corrective techniques (oversampling, weighted loss)",
+   "Uses rigorous evaluation methodology to avoid data leakage (grouped k-fold cross-validation by dive site)",
+   "Experience with reproducible research practices using version control and job scheduling (Git, Slurm)",
+   "Active participant in competitive data science (Kaggle, Zindi) with demonstrated top-tier rankings",
+   "Applies feature engineering techniques in tabular forecasting (lag and rolling-window features)",
+   "Experience fine-tuning transformer models for NLP tasks (dialect identification)",
+   "Engages in peer teaching and knowledge-sharing (AI club sessions, programming tutoring)"
+  ],
+  "currentSkills": [
+   "Python",
+   "NumPy",
+   "Machine Learning",
+   "K-Nearest Neighbours",
+   "Decision Trees",
+   "PyTorch",
+   "Convolutional Neural Networks",
+   "Transfer Learning",
+   "Image Classification",
+   "Class Imbalance Handling",
+   "Cross-Validation",
+   "Git",
+   "Slurm",
+   "pandas",
+   "LightGBM",
+   "CatBoost",
+   "Feature Engineering",
+   "Data Cleaning",
+   "Regression",
+   "Transformers",
+   "Natural Language Processing",
+   "Statistics"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Artificial Intelligence",
+    "institution": "King Abdulaziz University, Faculty of Computing and IT",
+    "year": "expected 06/2027"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "KNN and Decision Tree from Scratch",
+    "description": "Implemented k-nearest neighbours and a decision tree from scratch using NumPy and compared them with library versions on a public heart-disease dataset, as part of Machine Learning I coursework."
+   },
+   {
+    "name": "Tabular Sales Forecasting (Kaggle)",
+    "description": "Built lag and rolling-window features from raw sales history and blended LightGBM and CatBoost models, achieving top 12% of 2,300 teams in a 2026 competition."
+   },
+   {
+    "name": "House-Price Regression (Kaggle)",
+    "description": "First complete Kaggle entry in 2025; learned to fill missing values and properly encode categorical variables instead of dropping rows."
+   },
+   {
+    "name": "Arabic Dialect Identification (Zindi)",
+    "description": "Fine-tuned a multilingual transformer encoder on tweets from five dialects, finishing 31st of 280 in a 2026 competition."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Summer Research Assistant",
+    "organization": "Visiting student programme at a research university on the Red Sea coast",
+    "duration": "June–August 2026",
+    "description": "Supported a PhD student studying coral bleaching from underwater photos. Fine-tuned a pretrained convolutional network to classify 18,000 reef photos into healthy, pale, and bleached categories, reaching 91% balanced accuracy. Addressed class imbalance using oversampling and weighted loss after an initial attempt ignored the rare 'pale' class. Validated experiments with 5-fold splits grouped by dive site to prevent data leakage. Submitted training jobs to a shared GPU cluster using Slurm scripts and tracked run configurations in the lab's Git repository."
+   },
+   {
+    "title": "Tutor",
+    "organization": "First-year programming labs (Python)",
+    "duration": "",
+    "description": "Tutored first-year students in Python programming labs."
+   },
+   {
+    "title": "Member/Organizer",
+    "organization": "AI club, KAU",
+    "duration": "",
+    "description": "Ran four Saturday study sessions on the mathematics behind gradient descent."
+   }
+  ]
+ }
+}

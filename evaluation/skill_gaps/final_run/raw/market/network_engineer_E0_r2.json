@@ -1,0 +1,34 @@
+{
+ "goal": "network_engineer",
+ "extractor": "E0",
+ "run": 2,
+ "postings": 12,
+ "rawNames": [
+  "Routing and Switching",
+  "LAN/WAN",
+  "Cisco Networking",
+  "Firewall Management (Palo Alto/Fortinet)",
+  "VPN Configuration",
+  "Network Troubleshooting",
+  "VLAN",
+  "Network Monitoring and Performance Management",
+  "CCNA/CCNP Certification",
+  "Network Security",
+  "MPLS",
+  "Technical Documentation"
+ ],
+ "names": [
+  "Routing and Switching",
+  "LAN/WAN",
+  "Cisco Networking",
+  "Firewall Management (Palo Alto/Fortinet)",
+  "VPN Configuration",
+  "Network Troubleshooting",
+  "VLAN",
+  "Network Monitoring and Performance Management",
+  "CCNA/CCNP Certification",
+  "Network Security",
+  "MPLS",
+  "Technical Documentation"
+ ]
+}

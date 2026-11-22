@@ -1,0 +1,108 @@
+{
+ "seed": 20261122,
+ "runs": 3,
+ "versions": [
+  "old",
+  "new"
+ ],
+ "cvs": [
+  {
+   "id": "dev_flawed",
+   "role": "planted",
+   "goal": "ai_ml_engineer",
+   "careerName": "AI / Machine Learning Engineer",
+   "date": "2026-11-22",
+   "cvTextSha256": "3fa2ca6bca481239033498140b3103ba3a57bade53addde3c4bfd95b14a66ab0"
+  },
+  {
+   "id": "dev_clean",
+   "role": "clean",
+   "goal": "ai_ml_engineer",
+   "careerName": "AI / Machine Learning Engineer",
+   "date": "2026-11-22",
+   "cvTextSha256": "ee16017dab7efa5f13b2128498fb6c026b6db02e3ec7e886fdc5ea9718f4942c"
+  }
+ ],
+ "oldTemplateSha256": "61df986f8be2f4ebaad6784eb0388c8eb7784769f99de7fe873d1443355509bb",
+ "newTemplateSha256": "512c0968af9bf7b8000b30fd448d2151f7c760e93d4453080894b76ffd3c131e",
+ "textSha256": {
+  "dev_flawed_old": "ec2993bfd16d577c6afedc9499c58e476c98d46137307b55247549d7e3559092",
+  "dev_flawed_new": "7fe8c7cc2602bc2f4b7664e7e8e49305e82cddfabfc988ee08acbaba5cbf4973",
+  "dev_clean_old": "421eabdde98af82a2b41344c4347e3a94900f8169554344328245efdefebc665",
+  "dev_clean_new": "fab5e234cba1f0aa6bd522c96a158612e06d18e56e8509856dd383703e953c54"
+ },
+ "slots": [
+  {
+   "label": "dev_flawed_01",
+   "cv": "dev_flawed",
+   "version": "old",
+   "run": 1
+  },
+  {
+   "label": "dev_flawed_02",
+   "cv": "dev_flawed",
+   "version": "new",
+   "run": 2
+  },
+  {
+   "label": "dev_flawed_03",
+   "cv": "dev_flawed",
+   "version": "old",
+   "run": 2
+  },
+  {
+   "label": "dev_flawed_04",
+   "cv": "dev_flawed",
+   "version": "new",
+   "run": 1
+  },
+  {
+   "label": "dev_flawed_05",
+   "cv": "dev_flawed",
+   "version": "new",
+   "run": 3
+  },
+  {
+   "label": "dev_flawed_06",
+   "cv": "dev_flawed",
+   "version": "old",
+   "run": 3
+  },
+  {
+   "label": "dev_clean_01",
+   "cv": "dev_clean",
+   "version": "old",
+   "run": 2
+  },
+  {
+   "label": "dev_clean_02",
+   "cv": "dev_clean",
+   "version": "new",
+   "run": 1
+  },
+  {
+   "label": "dev_clean_03",
+   "cv": "dev_clean",
+   "version": "new",
+   "run": 3
+  },
+  {
+   "label": "dev_clean_04",
+   "cv": "dev_clean",
+   "version": "old",
+   "run": 3
+  },
+  {
+   "label": "dev_clean_05",
+   "cv": "dev_clean",
+   "version": "old",
+   "run": 1
+  },
+  {
+   "label": "dev_clean_06",
+   "cv": "dev_clean",
+   "version": "new",
+   "run": 2
+  }
+ ]
+}

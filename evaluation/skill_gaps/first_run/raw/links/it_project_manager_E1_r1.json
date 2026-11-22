@@ -1,0 +1,137 @@
+{
+ "goal": "it_project_manager",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Risk Management",
+   "kind": "skill",
+   "concepts": [
+    "Risk Management"
+   ],
+   "phrases": [
+    "identifying and mitigating risks",
+    "risk analysis techniques",
+    "managing project risks"
+   ]
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "engaging project stakeholders",
+    "managing stakeholder expectations",
+    "stakeholder communication strategies"
+   ]
+  },
+  {
+   "gap": "Agile",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "agile project delivery",
+    "iterative development methods",
+    "sprint planning practices"
+   ]
+  },
+  {
+   "gap": "PMP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "project management professional exam",
+    "pmp certification prep"
+   ]
+  },
+  {
+   "gap": "Scrum",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "scrum framework practices",
+    "sprint ceremonies",
+    "scrum master responsibilities"
+   ]
+  },
+  {
+   "gap": "Jira",
+   "kind": "tool",
+   "concepts": [
+    "Jira"
+   ],
+   "phrases": [
+    "tracking tasks in jira",
+    "managing backlogs with jira"
+   ]
+  },
+  {
+   "gap": "Microsoft Project",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "scheduling tasks in ms project",
+    "project timeline management tool"
+   ]
+  },
+  {
+   "gap": "Budget Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "managing project budgets",
+    "cost estimation and control",
+    "financial planning for projects"
+   ]
+  },
+  {
+   "gap": "Waterfall",
+   "kind": "skill",
+   "concepts": [
+    "Software Development Lifecycle"
+   ],
+   "phrases": [
+    "waterfall project methodology",
+    "sequential project phases",
+    "traditional development lifecycle"
+   ]
+  },
+  {
+   "gap": "Change Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "managing organizational change",
+    "change adoption strategies",
+    "transition planning"
+   ]
+  },
+  {
+   "gap": "PRINCE2",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "prince2 certification exam",
+    "structured project management method"
+   ]
+  },
+  {
+   "gap": "Cloud Platforms",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "working with cloud providers",
+    "cloud service models",
+    "deploying on cloud platforms"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "case": "ho_16",
+ "arm": "G0E1",
+ "run": 2,
+ "gaps": [
+  "React",
+  "Node.js",
+  "Spring Boot",
+  "Linux",
+  "Kubernetes",
+  "Microservices Architecture"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

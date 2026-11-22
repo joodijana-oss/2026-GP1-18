@@ -1,0 +1,318 @@
+{
+  "id": "ho_16",
+  "careerGoalId": "software_engineer",
+  "shown": [
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "evidence": "Build and maintain the server side of three client products in Python (Django REST Framework) and PostgreSQL",
+      "source": "experience"
+    },
+    {
+      "skill": "REST APIs",
+      "alsoCalled": [
+        "RESTful APIs",
+        "API Development",
+        "Web Services"
+      ],
+      "evidence": "Designed the JSON interface used by the mobile and web teams, with versioned routes, token authentication",
+      "source": "experience"
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build Pipelines"
+      ],
+      "evidence": "Every push runs linting and the test suite in GitHub Actions, and a tagged commit builds a container image and rolls it out to the client's server",
+      "source": "experience"
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "evidence": "a tagged commit builds a container image",
+      "source": "experience"
+    },
+    {
+      "skill": "Unit Testing",
+      "alsoCalled": [
+        "Unit Tests",
+        "Automated Tests",
+        "Test-Driven Development"
+      ],
+      "evidence": "Wrote pytest suites for the billing rules (about 600 cases)",
+      "source": "experience"
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "Found that the timetable page fired 400 queries per request, rewrote it with joins and prefetching",
+      "source": "experience"
+    },
+    {
+      "skill": "Code Review",
+      "alsoCalled": [
+        "Peer Review",
+        "Pull Request Review"
+      ],
+      "evidence": "Read every merge request from the two junior developers before it goes in",
+      "source": "experience"
+    },
+    {
+      "skill": "Debugging",
+      "alsoCalled": [
+        "Troubleshooting Code",
+        "Bug Fixing",
+        "Root Cause Analysis"
+      ],
+      "evidence": "chase production errors from Sentry traces and server logs back to the line that caused them",
+      "source": "experience"
+    },
+    {
+      "skill": "System Design",
+      "alsoCalled": [
+        "Software Architecture",
+        "Architecture Design"
+      ],
+      "evidence": "Proposed and led the split of the shared",
+      "source": "experience"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ],
+      "evidence": "Read every merge request from the two junior developers",
+      "source": "experience"
+    },
+    {
+      "skill": "Django",
+      "alsoCalled": [
+        "Django REST Framework",
+        "DRF"
+      ],
+      "evidence": "Python (Django REST Framework)",
+      "source": "experience"
+    },
+    {
+      "skill": "PostgreSQL",
+      "alsoCalled": [
+        "Postgres"
+      ],
+      "evidence": "in Python (Django REST Framework) and PostgreSQL",
+      "source": "experience"
+    },
+    {
+      "skill": "Redis",
+      "alsoCalled": [
+        "Redis Cache"
+      ],
+      "evidence": "Celery workers on a Redis queue",
+      "source": "experience"
+    },
+    {
+      "skill": "Message Queues",
+      "alsoCalled": [
+        "Task Queues",
+        "Background Jobs",
+        "Celery"
+      ],
+      "evidence": "retry and reconciliation jobs run by Celery workers on a Redis queue",
+      "source": "experience"
+    },
+    {
+      "skill": "Payment Gateway Integration",
+      "alsoCalled": [
+        "Payment Integration",
+        "Online Payments"
+      ],
+      "evidence": "Integrated two local payment gateways and the national e-invoicing format",
+      "source": "experience"
+    },
+    {
+      "skill": "API Documentation",
+      "alsoCalled": [
+        "OpenAPI",
+        "Swagger"
+      ],
+      "evidence": "an OpenAPI description they generate their clients from",
+      "source": "experience"
+    },
+    {
+      "skill": "Query Optimization",
+      "alsoCalled": [
+        "SQL Tuning",
+        "Query Tuning",
+        "Indexing"
+      ],
+      "evidence": "brought response time from 3.2 s to 280 ms",
+      "source": "experience"
+    },
+    {
+      "skill": "GitHub Actions",
+      "alsoCalled": [
+        "GitHub Workflows"
+      ],
+      "evidence": "runs linting and the test suite in GitHub Actions",
+      "source": "experience"
+    },
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java Programming",
+        "Core Java"
+      ],
+      "evidence": "Python, Django, PostgreSQL, Redis, Docker, Git, Java, MongoDB, AWS",
+      "source": "skills_section"
+    },
+    {
+      "skill": "NoSQL",
+      "alsoCalled": [
+        "MongoDB",
+        "Document Databases"
+      ],
+      "evidence": "Python, Django, PostgreSQL, Redis, Docker, Git, Java, MongoDB, AWS",
+      "source": "skills_section"
+    },
+    {
+      "skill": "AWS",
+      "alsoCalled": [
+        "Amazon Web Services"
+      ],
+      "evidence": "Python, Django, PostgreSQL, Redis, Docker, Git, Java, MongoDB, AWS",
+      "source": "skills_section"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "JavaScript",
+      "alsoCalled": [
+        "JS",
+        "ECMAScript"
+      ],
+      "evidence": "a little JavaScript",
+      "why": "By his own words, a little."
+    },
+    {
+      "skill": "Requirements Gathering",
+      "alsoCalled": [
+        "Business Requirements",
+        "Stakeholder Requirements",
+        "Requirements Elicitation"
+      ],
+      "evidence": "from the first conversation with the client to production support",
+      "why": "Claimed in the summary; no example given."
+    },
+    {
+      "skill": "Object-Oriented Programming",
+      "alsoCalled": [
+        "OOP",
+        "Object-Oriented Design"
+      ],
+      "evidence": "Python (Django REST Framework)",
+      "why": "Builds daily with a class-based framework and lists Java, but never shows or names object-oriented design."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "Microservices",
+      "alsoCalled": [
+        "Microservice Architecture"
+      ],
+      "why": "Split one application into modules; it is still a single deployed application.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Spring Boot",
+      "alsoCalled": [
+        "Spring Framework",
+        "Spring"
+      ],
+      "why": "His framework experience is Django; Java appears only in the skills list.",
+      "nearMiss": true
+    },
+    {
+      "skill": "AWS Certified Developer - Associate",
+      "alsoCalled": [
+        "AWS Developer Associate",
+        "DVA-C02"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Kubernetes",
+      "alsoCalled": [
+        "K8s",
+        "Container Orchestration"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "TypeScript",
+      "alsoCalled": [
+        "TS"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "C#",
+      "alsoCalled": [
+        "C Sharp",
+        ".NET"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Node.js",
+      "alsoCalled": [
+        "Node",
+        "NodeJS"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Data Structures and Algorithms",
+      "alsoCalled": [
+        "DSA",
+        "Algorithms",
+        "Problem Solving"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Agile",
+      "alsoCalled": [
+        "Scrum",
+        "Agile Methodology"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Design Patterns",
+      "alsoCalled": [
+        "Software Design Patterns"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

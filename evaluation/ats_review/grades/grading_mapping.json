@@ -1,0 +1,283 @@
+{
+  "note": "Graders must not read this file. It maps each anonymous label of the grading sheets to its version and run.",
+  "createdAt": "2026-11-22T02:33:03.390624",
+  "labelsAreTheToolsLabels": true,
+  "cvs": {
+    "ho_a": {
+      "set": "evaluation/ats_review/runs/heldout",
+      "role": "planted",
+      "goal": "Software Engineer",
+      "sheet": "evaluation/ats_review/grading_sheets/ho_a.md",
+      "presentationOrder": [
+        "ho_a_01",
+        "ho_a_06",
+        "ho_a_02",
+        "ho_a_04",
+        "ho_a_03",
+        "ho_a_05"
+      ],
+      "labels": {
+        "ho_a_01": {
+          "version": "old",
+          "run": 1,
+          "answered": true
+        },
+        "ho_a_02": {
+          "version": "new",
+          "run": 2,
+          "answered": true
+        },
+        "ho_a_03": {
+          "version": "old",
+          "run": 2,
+          "answered": true
+        },
+        "ho_a_04": {
+          "version": "new",
+          "run": 1,
+          "answered": true
+        },
+        "ho_a_05": {
+          "version": "new",
+          "run": 3,
+          "answered": true
+        },
+        "ho_a_06": {
+          "version": "old",
+          "run": 3,
+          "answered": true
+        }
+      }
+    },
+    "ho_b": {
+      "set": "evaluation/ats_review/runs/heldout",
+      "role": "planted",
+      "goal": "Cybersecurity Analyst",
+      "sheet": "evaluation/ats_review/grading_sheets/ho_b.md",
+      "presentationOrder": [
+        "ho_b_06",
+        "ho_b_03",
+        "ho_b_05",
+        "ho_b_04",
+        "ho_b_01",
+        "ho_b_02"
+      ],
+      "labels": {
+        "ho_b_01": {
+          "version": "old",
+          "run": 2,
+          "answered": true
+        },
+        "ho_b_02": {
+          "version": "new",
+          "run": 1,
+          "answered": true
+        },
+        "ho_b_03": {
+          "version": "new",
+          "run": 3,
+          "answered": true
+        },
+        "ho_b_04": {
+          "version": "old",
+          "run": 3,
+          "answered": true
+        },
+        "ho_b_05": {
+          "version": "old",
+          "run": 1,
+          "answered": true
+        },
+        "ho_b_06": {
+          "version": "new",
+          "run": 2,
+          "answered": false
+        }
+      }
+    },
+    "ho_c": {
+      "set": "evaluation/ats_review/runs/heldout",
+      "role": "clean",
+      "goal": "Data Analyst",
+      "sheet": "evaluation/ats_review/grading_sheets/ho_c.md",
+      "presentationOrder": [
+        "ho_c_01",
+        "ho_c_05",
+        "ho_c_06",
+        "ho_c_02",
+        "ho_c_03",
+        "ho_c_04"
+      ],
+      "labels": {
+        "ho_c_01": {
+          "version": "new",
+          "run": 1,
+          "answered": true
+        },
+        "ho_c_02": {
+          "version": "old",
+          "run": 3,
+          "answered": true
+        },
+        "ho_c_03": {
+          "version": "old",
+          "run": 1,
+          "answered": true
+        },
+        "ho_c_04": {
+          "version": "new",
+          "run": 2,
+          "answered": true
+        },
+        "ho_c_05": {
+          "version": "old",
+          "run": 2,
+          "answered": true
+        },
+        "ho_c_06": {
+          "version": "new",
+          "run": 3,
+          "answered": true
+        }
+      }
+    },
+    "ho_d": {
+      "set": "evaluation/ats_review/runs/heldout",
+      "role": "planted",
+      "goal": "Cloud / DevOps Engineer",
+      "sheet": "evaluation/ats_review/grading_sheets/ho_d.md",
+      "presentationOrder": [
+        "ho_d_02",
+        "ho_d_01",
+        "ho_d_03",
+        "ho_d_04",
+        "ho_d_05",
+        "ho_d_06"
+      ],
+      "labels": {
+        "ho_d_01": {
+          "version": "old",
+          "run": 2,
+          "answered": true
+        },
+        "ho_d_02": {
+          "version": "new",
+          "run": 3,
+          "answered": true
+        },
+        "ho_d_03": {
+          "version": "old",
+          "run": 3,
+          "answered": true
+        },
+        "ho_d_04": {
+          "version": "old",
+          "run": 1,
+          "answered": true
+        },
+        "ho_d_05": {
+          "version": "new",
+          "run": 2,
+          "answered": true
+        },
+        "ho_d_06": {
+          "version": "new",
+          "run": 1,
+          "answered": true
+        }
+      }
+    },
+    "dev_flawed": {
+      "set": "evaluation/ats_review/runs/dev",
+      "role": "planted",
+      "goal": "AI / Machine Learning Engineer",
+      "sheet": "evaluation/ats_review/grading_sheets/dev_flawed.md",
+      "presentationOrder": [
+        "dev_flawed_03",
+        "dev_flawed_05",
+        "dev_flawed_02",
+        "dev_flawed_06",
+        "dev_flawed_01",
+        "dev_flawed_04"
+      ],
+      "labels": {
+        "dev_flawed_01": {
+          "version": "old",
+          "run": 1,
+          "answered": true
+        },
+        "dev_flawed_02": {
+          "version": "new",
+          "run": 2,
+          "answered": true
+        },
+        "dev_flawed_03": {
+          "version": "old",
+          "run": 2,
+          "answered": true
+        },
+        "dev_flawed_04": {
+          "version": "new",
+          "run": 1,
+          "answered": true
+        },
+        "dev_flawed_05": {
+          "version": "new",
+          "run": 3,
+          "answered": true
+        },
+        "dev_flawed_06": {
+          "version": "old",
+          "run": 3,
+          "answered": true
+        }
+      }
+    },
+    "dev_clean": {
+      "set": "evaluation/ats_review/runs/dev",
+      "role": "clean",
+      "goal": "AI / Machine Learning Engineer",
+      "sheet": "evaluation/ats_review/grading_sheets/dev_clean.md",
+      "presentationOrder": [
+        "dev_clean_06",
+        "dev_clean_01",
+        "dev_clean_02",
+        "dev_clean_04",
+        "dev_clean_05",
+        "dev_clean_03"
+      ],
+      "labels": {
+        "dev_clean_01": {
+          "version": "old",
+          "run": 2,
+          "answered": true
+        },
+        "dev_clean_02": {
+          "version": "new",
+          "run": 1,
+          "answered": true
+        },
+        "dev_clean_03": {
+          "version": "new",
+          "run": 3,
+          "answered": true
+        },
+        "dev_clean_04": {
+          "version": "old",
+          "run": 3,
+          "answered": true
+        },
+        "dev_clean_05": {
+          "version": "old",
+          "run": 1,
+          "answered": true
+        },
+        "dev_clean_06": {
+          "version": "new",
+          "run": 2,
+          "answered": true
+        }
+      }
+    }
+  }
+}

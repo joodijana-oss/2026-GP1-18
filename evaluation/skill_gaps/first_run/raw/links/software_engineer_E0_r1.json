@@ -1,0 +1,126 @@
+{
+ "goal": "software_engineer",
+ "extractor": "E0",
+ "run": 1,
+ "links": [
+  {
+   "gap": "REST APIs",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [
+    "building RESTful services",
+    "API design principles",
+    "consuming web APIs"
+   ]
+  },
+  {
+   "gap": "Git",
+   "kind": "tool",
+   "concepts": [
+    "Git"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "writing SQL queries",
+    "querying relational databases"
+   ]
+  },
+  {
+   "gap": "Java",
+   "kind": "tool",
+   "concepts": [
+    "Java"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "React",
+   "kind": "tool",
+   "concepts": [
+    "Frontend Frameworks"
+   ],
+   "phrases": [
+    "building user interfaces",
+    "component based UI development"
+   ]
+  },
+  {
+   "gap": "Node.js",
+   "kind": "tool",
+   "concepts": [
+    "Backend Development"
+   ],
+   "phrases": [
+    "server side JavaScript",
+    "building backend services"
+   ]
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": [
+    "containerizing applications",
+    "building container images"
+   ]
+  },
+  {
+   "gap": "Microservices Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing microservices",
+    "distributed systems design",
+    "service decomposition"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Linux",
+   "kind": "tool",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "CI/CD",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "JavaScript/TypeScript",
+   "kind": "tool",
+   "concepts": [
+    "JavaScript"
+   ],
+   "phrases": [
+    "typed JavaScript development",
+    "static typing in JavaScript"
+   ]
+  }
+ ]
+}

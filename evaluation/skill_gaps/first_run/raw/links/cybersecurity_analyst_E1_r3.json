@@ -1,0 +1,120 @@
+{
+ "goal": "cybersecurity_analyst",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "SIEM",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "security event monitoring",
+    "log correlation analysis",
+    "security information management"
+   ]
+  },
+  {
+   "gap": "Penetration Testing",
+   "kind": "skill",
+   "concepts": [
+    "Penetration Testing"
+   ],
+   "phrases": [
+    "simulated cyber attacks",
+    "exploiting system weaknesses"
+   ]
+  },
+  {
+   "gap": "Vulnerability Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Risk Assessment"
+   ],
+   "phrases": [
+    "identifying security weaknesses",
+    "scanning for vulnerabilities",
+    "evaluating system risks"
+   ]
+  },
+  {
+   "gap": "Incident Response",
+   "kind": "skill",
+   "concepts": [
+    "Incident Response"
+   ],
+   "phrases": [
+    "handling security breaches",
+    "responding to cyber incidents"
+   ]
+  },
+  {
+   "gap": "Firewall Administration",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "configuring firewalls",
+    "managing network perimeter defenses"
+   ]
+  },
+  {
+   "gap": "CEH",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "certified ethical hacker exam prep"
+   ]
+  },
+  {
+   "gap": "OSCP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "offensive security certification prep"
+   ]
+  },
+  {
+   "gap": "CISSP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "information security certification prep"
+   ]
+  },
+  {
+   "gap": "Security+",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [
+    "comptia security certification prep"
+   ]
+  },
+  {
+   "gap": "Nmap",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "network scanning tool",
+    "port scanning utility"
+   ]
+  },
+  {
+   "gap": "Metasploit",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "exploitation framework",
+    "penetration testing toolkit"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  }
+ ]
+}

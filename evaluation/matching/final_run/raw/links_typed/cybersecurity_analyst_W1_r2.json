@@ -1,0 +1,69 @@
+{
+ "goal": "cybersecurity_analyst",
+ "list": "W1",
+ "run": 2,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Cryptography",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "cryptography",
+    "encryption",
+    "cipher",
+    "public key infrastructure"
+   ]
+  },
+  {
+   "gap": "Certified Ethical Hacker",
+   "kind": "certification",
+   "concepts": [
+    "Ethical Hacking"
+   ],
+   "phrases": [],
+   "same": [
+    "Ethical Hacking"
+   ],
+   "terms": [
+    "CEH",
+    "certified ethical hacker"
+   ]
+  },
+  {
+   "gap": "Intrusion Detection Systems",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "IDS",
+    "intrusion detection",
+    "IPS",
+    "intrusion prevention"
+   ]
+  },
+  {
+   "gap": "VMware vSphere",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "vSphere",
+    "VMware",
+    "ESXi"
+   ]
+  },
+  {
+   "gap": "Fortinet NSE 4",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "NSE 4",
+    "Fortinet",
+    "FortiGate"
+   ]
+  }
+ ]
+}

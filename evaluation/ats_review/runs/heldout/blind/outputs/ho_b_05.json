@@ -1,0 +1,52 @@
+{
+ "cvStructure": [
+  {
+   "issue": "The 'Personal Details' section lists date of birth, marital status, nationality, and gender, which are not standard for a Computing/IT CV and can cause ATS parsing issues or bias concerns.",
+   "suggestion": "Remove the Personal Details section entirely and keep only job-relevant information such as contact details and LinkedIn."
+  },
+  {
+   "issue": "The High School section highlights grade-10 science club membership and a reading competition win, which add little value for a university graduate applying to a Cybersecurity Analyst role.",
+   "suggestion": "Shorten the High School entry to just the institution, track, and percentage, or remove it since the Bachelor's degree is already listed."
+  },
+  {
+   "issue": "The CV ends with 'References available upon request', which is unnecessary filler that does not add value for ATS or recruiters.",
+   "suggestion": "Remove the References line since it provides no useful information and can simply be stated verbally if requested."
+  }
+ ],
+ "sectionOrganization": [
+  {
+   "issue": "In the Projects section, 'Home Network Vulnerability Assessment (2024)' appears before the more recent 'Phishing Awareness Campaign (graduation project, 2025)', breaking the most-recent-first ordering used elsewhere.",
+   "suggestion": "Move the Phishing Awareness Campaign (2025) above the Home Network Vulnerability Assessment (2024) so projects are listed with the most recent first."
+  }
+ ],
+ "keywordUsage": [
+  {
+   "issue": "Two certification entries, 'Security course certificate' and 'Networking certificate - completed', lack specific certification names, issuing bodies, and dates, so ATS systems cannot recognize them as recognized credentials.",
+   "suggestion": "Replace these entries with the full official certificate names, the issuing organization, and the completion date, similar to the CompTIA Security+ entry."
+  },
+  {
+   "issue": "The 'Other Skills' list includes outdated items such as 'Windows XP', which is irrelevant to a Cybersecurity Analyst role and dilutes the relevance of the skills section.",
+   "suggestion": "Remove outdated entries like Windows XP and keep only current skills relevant to cybersecurity and IT support."
+  }
+ ],
+ "readability": [
+  {
+   "issue": "Several experience bullets use informal, first-person phrasing without clear results, such as 'I was helping my supervisor to look at the phishing emails' and 'I was answering the students questions during the lab'.",
+   "suggestion": "Rewrite these bullets starting with strong action verbs and include a measurable outcome, for example 'Reviewed employee-reported phishing emails to support incident triage' or 'Supported students in configuring VirtualBox and Kali Linux environments during lab sessions'."
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "The email address 'h4ck3r_queen99@example.com' is informal and unprofessional for a job application targeting a Cybersecurity Analyst role.",
+   "suggestion": "Replace it with a professional email address, such as one based on the applicant's first and last name."
+  },
+  {
+   "issue": "Work experience dates use inconsistent formats, including '03/2025 – 06/2025', '2023-09 to Dec 23', and 'Summer 2022'.",
+   "suggestion": "Standardize all employment dates to a single format, such as MM/YYYY – MM/YYYY, throughout the Work Experience section."
+  },
+  {
+   "issue": "The Technical Skills table appears misaligned, with tool names and proficiency levels listed in separate rows that do not clearly correspond (e.g., 'Wireshark Nmap Advanced Intermediate'), making it hard for ATS and readers to match each tool to its correct level.",
+   "suggestion": "Replace the table with a simple list format such as 'Wireshark – Advanced, Nmap – Intermediate' to ensure each tool and level pairing is unambiguous."
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "goal": "cloud_devops_engineer",
+ "extractor": "E0",
+ "run": 3,
+ "postings": 18,
+ "rawNames": [
+  "Kubernetes",
+  "CI/CD Pipeline Design",
+  "Terraform",
+  "Docker",
+  "Linux Administration",
+  "Ansible",
+  "Cloud Platforms (AWS/Azure/GCP)",
+  "Python",
+  "Monitoring & Observability (Prometheus/Grafana)",
+  "Infrastructure as Code",
+  "Site Reliability Engineering (SLIs/SLOs/Incident Management)",
+  "Bash Scripting"
+ ],
+ "names": [
+  "Kubernetes",
+  "CI/CD Pipeline Design",
+  "Terraform",
+  "Docker",
+  "Linux Administration",
+  "Ansible",
+  "Cloud Platforms (AWS/Azure/GCP)",
+  "Python",
+  "Monitoring & Observability (Prometheus/Grafana)",
+  "Infrastructure as Code",
+  "Site Reliability Engineering (SLIs/SLOs/Incident Management)",
+  "Bash Scripting"
+ ]
+}

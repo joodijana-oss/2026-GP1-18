@@ -1,0 +1,18 @@
+{
+ "case": "ho_08",
+ "arm": "G0E0",
+ "run": 3,
+ "gaps": [
+  "LAN/WAN",
+  "VPN",
+  "Network Security",
+  "CCNA/CCNP Certification",
+  "Network Monitoring and Performance Management",
+  "MPLS/BGP/OSPF"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

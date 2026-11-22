@@ -1,0 +1,71 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on hardware diagnostics and repair experience (laptops and desktops)",
+   "Practical experience with OS installation and reimaging (Windows 10/11)",
+   "Experience setting up and troubleshooting home/small-office networks and Wi-Fi",
+   "Customer service skills, explaining technical issues in plain language to non-technical clients",
+   "Experience with data backup and file recovery from failing disks",
+   "Organized record-keeping of devices, faults and repairs",
+   "Remote support experience using AnyDesk",
+   "Volunteering experience helping others with account setup and authentication",
+   "Practical Linux server administration experience from coursework",
+   "Good English proficiency (STEP 81) alongside native Arabic"
+  ],
+  "currentSkills": [
+   "Hardware Diagnostics",
+   "Hardware Repair",
+   "Windows Installation",
+   "Driver Installation",
+   "Router Configuration",
+   "Wi-Fi Troubleshooting",
+   "Mesh Networking",
+   "Printer Troubleshooting",
+   "Customer Service",
+   "Data Backup",
+   "File Recovery",
+   "Technical Documentation",
+   "Remote Desktop Support",
+   "AnyDesk",
+   "Microsoft 365 Administration",
+   "Two-Step Verification Setup",
+   "Eduroam Network Configuration",
+   "Linux Server Administration",
+   "Ubuntu Server",
+   "VirtualBox",
+   "User and Group Management",
+   "File Permissions",
+   "Cron Job Scheduling",
+   "PC Building"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Technology",
+    "institution": "University of Hail",
+    "year": "expected 2027"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Operating Systems Course Project",
+    "description": "Installed Ubuntu Server in VirtualBox, created users and groups, set file permissions and scheduled a backup script with cron."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Technician",
+    "organization": "a computer sales and repair shop, Hail",
+    "duration": "Oct 2024 - present (evenings and weekends)",
+    "description": "Diagnosed and repaired laptops and desktops including replacing RAM, SSDs, screens, fans and power supplies; wiped and reinstalled Windows 10 and 11 from USB images, added drivers and customer programs, and restored files; set up home and small-office routers and mesh Wi-Fi, resolved connectivity issues; fixed printer driver and paper-feed issues and set up printer sharing; explained repairs and costs to non-technical customers; backed up customer files before repairs and recovered data from failing disks; maintained a spreadsheet tracking devices, faults, parts used and hand-back dates; provided remote support via AnyDesk."
+   },
+   {
+    "title": "IT Helper",
+    "organization": "University of Hail, registration week",
+    "duration": "2025 and 2026",
+    "description": "Helped new students activate university Microsoft 365 accounts, set up two-step sign-in on their phones, and connect to the campus eduroam network."
+   }
+  ]
+ }
+}

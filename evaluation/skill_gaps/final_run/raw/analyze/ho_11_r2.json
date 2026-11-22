@@ -1,0 +1,46 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Diagnoses and repairs hardware faults in laptops and desktops, handling about 15 machines a week",
+   "Maintains strict data-handling discipline by backing up customer files before repairs and restoring them afterward",
+   "Communicates technical issues clearly to non-technical, including elderly, customers",
+   "Experienced in troubleshooting home networking and router issues",
+   "Created instructional documentation (20 how-to sheets) to train new apprentices",
+   "Reliable in tracking and closing maintenance requests in a structured system"
+  ],
+  "currentSkills": [
+   "Windows 10 and 11 installation",
+   "PC hardware troubleshooting",
+   "Home networking",
+   "Router configuration",
+   "Microsoft Office",
+   "Technical documentation",
+   "Customer service",
+   "Printer maintenance"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Technology",
+    "institution": "Northern Border University, Arar",
+    "year": "2024 - expected 2028"
+   }
+  ],
+  "certifications": [],
+  "projects": [],
+  "experience": [
+   {
+    "title": "Evening technician (part-time, 16 hours a week)",
+    "organization": "Computer and phone repair shop, Arar",
+    "duration": "September 2025 - present",
+    "description": "Diagnosed laptop and desktop issues such as failure to start, overheating, or crashing; replaced memory, drives, fans, and screens for about 15 machines a week. Wiped and rebuilt machines from USB drives, reinstalling drivers, programs, and files. Backed up customer files before repairs and restored them afterward. Explained issues and costs to walk-in customers in plain language. Reset and configured home routers, updated firmware, and resolved connectivity issues. Wrote 20 one-page how-to sheets with photos to train new apprentices."
+   },
+   {
+    "title": "Student helper",
+    "organization": "Computer labs of the College of Computing",
+    "duration": "2025",
+    "description": "Checked four labs each morning, logged faulty PCs and projectors in the college's request system, and closed requests once resolved. Cleared paper jams and replaced toner in lab printers."
+   }
+  ]
+ }
+}

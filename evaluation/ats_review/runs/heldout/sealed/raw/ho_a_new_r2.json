@@ -1,0 +1,125 @@
+{
+ "label": "ho_a_02",
+ "cv": "ho_a",
+ "version": "new",
+ "run": 2,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:12:43.286498",
+ "finishedAt": "2026-11-22T02:13:59.778241",
+ "seconds": 76.491,
+ "inputTokens": 4210,
+ "outputTokens": 7493,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "Your CV is missing a phone number, which recruiters and ATS forms often expect alongside your email and location.",
+    "suggestion": "Add a phone number near your email and location at the top of your CV."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The heading \"About Me\" is a personal label rather than a standard section name.",
+    "suggestion": "Rename \"About Me\" to \"Summary\" so ATS systems recognize it correctly."
+   },
+   {
+    "issue": "The heading \"My Journey So Far\" is a creative label instead of a standard section name for your work history.",
+    "suggestion": "Rename \"My Journey So Far\" to \"Experience\" or \"Work Experience\"."
+   },
+   {
+    "issue": "Your AWS Certified Cloud Practitioner and Scrum Fundamentals Certified credentials are listed inside the Skills section instead of their own section.",
+    "suggestion": "Move these two certifications into a separate \"Certifications\" section so recruiters and ATS can find them easily."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "React and JavaScript are written inconsistently across your CV: \"Reactjs\", \"React.JS\" and \"React\" all appear, and \"java script\" and \"Javascript\" both appear; also \"Postgress\" in the Maktabati stack is a misspelling of PostgreSQL.",
+    "suggestion": "Use the official forms consistently everywhere: \"React\", \"JavaScript\", and \"PostgreSQL\"."
+   },
+   {
+    "issue": "In the Najm Logistics Solutions entry, making the app \"check itself automatically every time someone saved new code so that mistakes are found early\" describes continuous integration but doesn't name it.",
+    "suggestion": "Add the term \"continuous integration (CI)\" to that bullet so it matches what recruiters search for, if that is what you set up."
+   },
+   {
+    "issue": "PostgreSQL is used in both the Maktabati and Souq Tracker projects but is not listed in your Skills section.",
+    "suggestion": "Add PostgreSQL to the Skills section under a database tools category."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Najm Logistics Solutions entry is written as one long first-person story covering many tasks in a single block of text.",
+    "suggestion": "Split it into short bullet points, each starting with an action verb like \"Optimized\", \"Collaborated\" or \"Implemented\", and add a specific result such as [percentage] where you can."
+   },
+   {
+    "issue": "The Campus IT Help Desk bullets (\"Responsible for bugs\", \"Meetings with team\", \"Tickets and emails from students\") list duties instead of describing what you did.",
+    "suggestion": "Rewrite each line starting with an action verb, for example \"Resolved [number] student support tickets\" or \"Tracked and reported software bugs to the development team\"."
+   },
+   {
+    "issue": "The About Me section uses vague, generic phrases like \"excellent skills\" and \"a great passion for technology\" instead of concrete information.",
+    "suggestion": "Rewrite it as a short, specific summary mentioning your degree, your key skills such as React or Node.js, and your target role as Software Engineer."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Najm Logistics Solutions dates read \"Jun 2025 - Aug 2024\", which means the end date comes before the start date.",
+    "suggestion": "Correct the dates for this internship so the end date matches when it actually ended, for example Jun 2025 - Aug 2025."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "Your CV is missing a phone number, which recruiters and ATS forms often expect alongside your email and location.",
+    "suggestion": "Add a phone number near your email and location at the top of your CV."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The heading \"About Me\" is a personal label rather than a standard section name.",
+    "suggestion": "Rename \"About Me\" to \"Summary\" so ATS systems recognize it correctly."
+   },
+   {
+    "issue": "The heading \"My Journey So Far\" is a creative label instead of a standard section name for your work history.",
+    "suggestion": "Rename \"My Journey So Far\" to \"Experience\" or \"Work Experience\"."
+   },
+   {
+    "issue": "Your AWS Certified Cloud Practitioner and Scrum Fundamentals Certified credentials are listed inside the Skills section instead of their own section.",
+    "suggestion": "Move these two certifications into a separate \"Certifications\" section so recruiters and ATS can find them easily."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "React and JavaScript are written inconsistently across your CV: \"Reactjs\", \"React.JS\" and \"React\" all appear, and \"java script\" and \"Javascript\" both appear; also \"Postgress\" in the Maktabati stack is a misspelling of PostgreSQL.",
+    "suggestion": "Use the official forms consistently everywhere: \"React\", \"JavaScript\", and \"PostgreSQL\"."
+   },
+   {
+    "issue": "In the Najm Logistics Solutions entry, making the app \"check itself automatically every time someone saved new code so that mistakes are found early\" describes continuous integration but doesn't name it.",
+    "suggestion": "Add the term \"continuous integration (CI)\" to that bullet so it matches what recruiters search for, if that is what you set up."
+   },
+   {
+    "issue": "PostgreSQL is used in both the Maktabati and Souq Tracker projects but is not listed in your Skills section.",
+    "suggestion": "Add PostgreSQL to the Skills section under a database tools category."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Najm Logistics Solutions entry is written as one long first-person story covering many tasks in a single block of text.",
+    "suggestion": "Split it into short bullet points, each starting with an action verb like \"Optimized\", \"Collaborated\" or \"Implemented\", and add a specific result such as [percentage] where you can."
+   },
+   {
+    "issue": "The Campus IT Help Desk bullets (\"Responsible for bugs\", \"Meetings with team\", \"Tickets and emails from students\") list duties instead of describing what you did.",
+    "suggestion": "Rewrite each line starting with an action verb, for example \"Resolved [number] student support tickets\" or \"Tracked and reported software bugs to the development team\"."
+   },
+   {
+    "issue": "The About Me section uses vague, generic phrases like \"excellent skills\" and \"a great passion for technology\" instead of concrete information.",
+    "suggestion": "Rewrite it as a short, specific summary mentioning your degree, your key skills such as React or Node.js, and your target role as Software Engineer."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Najm Logistics Solutions dates read \"Jun 2025 - Aug 2024\", which means the end date comes before the start date.",
+    "suggestion": "Correct the dates for this internship so the end date matches when it actually ended, for example Jun 2025 - Aug 2025."
+   }
+  ]
+ }
+}

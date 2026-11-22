@@ -1,0 +1,32 @@
+LAMA  AL-QAHTANI
+Dammam, Eastern Province • lama.alqahtani@example.com • +966 50 000 0000
+
+OBJECTIVE
+Recent Management Information Systems graduate who enjoys turning messy operational records into numbers that managers can act on. Seeking an entry-level analyst
+role in logistics, retail or the public sector.
+
+EDUCATION
+Imam Abdulrahman Bin Faisal University – B.Sc. Management Information Systems 09/2021 – 06/2026
+GPA 4.41 / 5.00
+Senior project: Why do students drop elective courses? Surveyed 312 students, tested whether drop rates differed between colleges with a chi-square test, and presented the results to the
+college council.
+Course project (Database Systems): designed a 9-table schema for a clinic booking system and wrote its reports in MySQL.
+
+INTERNSHIP
+Operations Intern, a Dammam-based freight and warehousing company Jun 2025 - Aug 2025
+• Pulled daily shipment records from the warehouse database with queries joining the orders, carriers and delivery tables
+• Removed duplicate waybills, fixed inconsistent city names and filled missing delivery dates before each weekly report
+• Built a one-page view for the operations manager showing late deliveries by carrier and route, refreshed every Monday in Power BI
+• Summarised 14 months of delivery data with pivot tables and VLOOKUP to find the three routes causing 46% of delays
+• Sat with dispatch supervisors to agree what "late" should mean before defining the on-time delivery measure
+• Walked the management team through the findings in a 15-minute presentation; one carrier contract was renegotiated afterwards
+
+VOLUNTEERING
+Data volunteer, charity food-bank campaign  (Ramadan 1446)
+▪ Kept the donor list in Google Sheets and sent a weekly count of parcels to the organisers
+
+SKILLS
+Excel, SQL, Power BI, Tableau, R
+
+LANGUAGES
+Arabic – native    English – fluent (STEP 92)

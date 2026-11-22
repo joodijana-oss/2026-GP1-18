@@ -1,0 +1,34 @@
+{
+ "goal": "ai_ml_engineer",
+ "extractor": "E1",
+ "run": 3,
+ "postings": 16,
+ "rawNames": [
+  "Python",
+  "PyTorch",
+  "Deep Learning",
+  "Kubernetes",
+  "TensorFlow",
+  "C++",
+  "Computer Vision",
+  "Linux",
+  "MLOps",
+  "Terraform",
+  "LangChain",
+  "Docker"
+ ],
+ "names": [
+  "Python",
+  "PyTorch",
+  "Deep Learning",
+  "Kubernetes",
+  "TensorFlow",
+  "C++",
+  "Computer Vision",
+  "Linux",
+  "MLOps",
+  "Terraform",
+  "LangChain",
+  "Docker"
+ ]
+}

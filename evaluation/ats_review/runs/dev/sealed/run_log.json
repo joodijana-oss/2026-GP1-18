@@ -1,0 +1,26 @@
+[
+ {
+  "startedAt": "2026-11-22T02:24:52.070102",
+  "finishedAt": "2026-11-22T02:32:22.020364",
+  "sent": 12,
+  "succeeded": 12,
+  "failed": 0,
+  "perVersion": {
+   "old": {
+    "succeeded": 6,
+    "failed": 0
+   },
+   "new": {
+    "succeeded": 6,
+    "failed": 0
+   }
+  },
+  "stop": null,
+  "requests": 13,
+  "inputTokens": 42475,
+  "outputTokens": 82515,
+  "costUsd": 0.9101,
+  "inputPrice": 2.0,
+  "outputPrice": 10.0
+ }
+]

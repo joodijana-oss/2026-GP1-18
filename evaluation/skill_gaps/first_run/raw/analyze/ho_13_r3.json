@@ -1,0 +1,78 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on experience self-hosting and managing multiple services on a home server",
+   "Practical knowledge of containerization using Docker Compose with isolated service images",
+   "Experience setting up reverse proxy with automatic TLS certificates using Caddy",
+   "Automated backup solution with scripting and failure notifications",
+   "Experience with monitoring and alerting using Grafana and node exporters",
+   "Led infrastructure modernization for club website, moving from manual FTP uploads to automated CI/CD",
+   "Experience with Infrastructure as Code using playbooks for reproducible cloud VM setup",
+   "Teaching experience, delivered a multi-session Linux workshop to a large group",
+   "Early hands-on experience with Kubernetes concepts (deployments, services, ingress) using k3s on Raspberry Pi cluster",
+   "Strong academic performance with high GPA in Computer Science",
+   "Bilingual in Arabic and English"
+  ],
+  "currentSkills": [
+   "Linux",
+   "Debian",
+   "Docker",
+   "Docker Compose",
+   "Caddy",
+   "TLS Configuration",
+   "Shell Scripting",
+   "Cron",
+   "Object Storage",
+   "Grafana",
+   "Prometheus Node Exporter",
+   "System Monitoring",
+   "GitHub Actions",
+   "CI/CD",
+   "Oracle Cloud",
+   "Ansible",
+   "Kubernetes",
+   "k3s",
+   "Networking",
+   "DNS",
+   "Raspberry Pi",
+   "Teaching"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "University of Jeddah",
+    "year": "2023 - 2027 (expected)"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Home server",
+    "description": "Set up an old office PC running Debian to host a family photo library, media server, and ad-blocking DNS resolver, each isolated in its own container image and started from one compose file. Configured Caddy as a reverse proxy with automatic TLS certificates. Wrote a nightly cron job shell script to back up photos to an external disk and object storage, with Telegram failure notifications. Set up Grafana dashboards fed by node exporters to monitor CPU, memory, disk, and temperature, with alerts when disk usage passes 85%."
+   },
+   {
+    "name": "Club website",
+    "description": "Acted as infrastructure lead for the university computing club, migrating the club website from manual FTP uploads to an automated setup using GitHub Actions to run checks and publish the site on every push to main branch. Hosted the site on a free-tier Oracle Cloud virtual machine configured via a playbook, enabling full rebuild from scratch in ten minutes."
+   },
+   {
+    "name": "Kubernetes at home",
+    "description": "Built a cluster of three Raspberry Pi boards running k3s and redeployed the photo library on it to learn Kubernetes deployments, services, and ingress."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Infrastructure Lead",
+    "organization": "University computing club",
+    "duration": "2025 - now",
+    "description": "Led infrastructure for the club website, migrating from FTP uploads to automated CI/CD publishing with GitHub Actions. Managed hosting on an Oracle Cloud free-tier VM configured via a playbook. Taught a three-evening 'Linux for beginners' workshop to 45 members."
+   },
+   {
+    "title": "Private tutor",
+    "organization": "",
+    "duration": "",
+    "description": "Private tutor for high-school mathematics at weekends."
+   }
+  ]
+ }
+}

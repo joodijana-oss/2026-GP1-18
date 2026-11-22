@@ -1,0 +1,18 @@
+{
+ "case": "ho_14",
+ "arm": "G0E1",
+ "run": 2,
+ "gaps": [
+  "CCNA",
+  "Firewall Management",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto",
+  "BGP"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

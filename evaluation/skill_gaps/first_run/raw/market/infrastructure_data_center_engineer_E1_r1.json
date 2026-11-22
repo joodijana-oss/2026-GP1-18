@@ -1,0 +1,34 @@
+{
+ "goal": "infrastructure_data_center_engineer",
+ "extractor": "E1",
+ "run": 1,
+ "postings": 20,
+ "rawNames": [
+  "Linux Administration",
+  "Terraform",
+  "Python",
+  "Networking",
+  "Structured Cabling",
+  "VMware",
+  "Windows Server",
+  "Prometheus",
+  "Grafana",
+  "Ansible",
+  "Kubernetes",
+  "Disaster Recovery"
+ ],
+ "names": [
+  "Linux Administration",
+  "Terraform",
+  "Python",
+  "Networking",
+  "Structured Cabling",
+  "VMware",
+  "Windows Server",
+  "Prometheus",
+  "Grafana",
+  "Ansible",
+  "Kubernetes",
+  "Disaster Recovery"
+ ]
+}

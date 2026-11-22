@@ -1,0 +1,1310 @@
+{
+  "cybersecurity_analyst": [
+    {
+      "skill": "SIEM Monitoring",
+      "alsoCalled": [
+        "SIEM",
+        "Security Information and Event Management",
+        "Security Monitoring"
+      ]
+    },
+    {
+      "skill": "Incident Response",
+      "alsoCalled": [
+        "Security Incident Handling",
+        "Incident Handling",
+        "IR"
+      ]
+    },
+    {
+      "skill": "Log Analysis",
+      "alsoCalled": [
+        "Log Review",
+        "Event Log Analysis"
+      ]
+    },
+    {
+      "skill": "Vulnerability Assessment",
+      "alsoCalled": [
+        "Vulnerability Scanning",
+        "Vulnerability Management"
+      ]
+    },
+    {
+      "skill": "Penetration Testing",
+      "alsoCalled": [
+        "Ethical Hacking",
+        "Pentesting"
+      ]
+    },
+    {
+      "skill": "Network Security",
+      "alsoCalled": [
+        "Network Defense",
+        "Network Segmentation",
+        "Access Control Lists"
+      ]
+    },
+    {
+      "skill": "Firewall Management",
+      "alsoCalled": [
+        "Firewall Administration",
+        "Firewall Configuration",
+        "Firewall Rules"
+      ]
+    },
+    {
+      "skill": "Intrusion Detection",
+      "alsoCalled": [
+        "IDS",
+        "IPS",
+        "Intrusion Detection and Prevention"
+      ]
+    },
+    {
+      "skill": "Threat Intelligence",
+      "alsoCalled": [
+        "Cyber Threat Intelligence",
+        "CTI"
+      ]
+    },
+    {
+      "skill": "Malware Analysis",
+      "alsoCalled": [
+        "Malware Investigation",
+        "Reverse Engineering Malware"
+      ]
+    },
+    {
+      "skill": "Digital Forensics",
+      "alsoCalled": [
+        "Computer Forensics",
+        "DFIR",
+        "Forensic Analysis"
+      ]
+    },
+    {
+      "skill": "Endpoint Security",
+      "alsoCalled": [
+        "Endpoint Protection",
+        "EDR",
+        "Endpoint Detection and Response",
+        "Antivirus Management"
+      ]
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ]
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ]
+    },
+    {
+      "skill": "TCP/IP Networking",
+      "alsoCalled": [
+        "Networking Fundamentals",
+        "Network Protocols",
+        "TCP/IP"
+      ]
+    },
+    {
+      "skill": "MITRE ATT&CK",
+      "alsoCalled": [
+        "ATT&CK Framework"
+      ]
+    },
+    {
+      "skill": "NCA Essential Cybersecurity Controls",
+      "alsoCalled": [
+        "NCA ECC",
+        "ECC"
+      ]
+    },
+    {
+      "skill": "Cloud Security",
+      "alsoCalled": [
+        "Cloud Security Fundamentals",
+        "Securing Cloud Workloads"
+      ]
+    },
+    {
+      "skill": "Phishing Analysis",
+      "alsoCalled": [
+        "Phishing Investigation",
+        "Email Security Analysis"
+      ]
+    },
+    {
+      "skill": "Security Reporting",
+      "alsoCalled": [
+        "Incident Reporting",
+        "Security Documentation"
+      ]
+    }
+  ],
+  "data_analyst": [
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ]
+    },
+    {
+      "skill": "Excel",
+      "alsoCalled": [
+        "Microsoft Excel",
+        "Spreadsheets"
+      ]
+    },
+    {
+      "skill": "Power BI",
+      "alsoCalled": [
+        "Microsoft Power BI"
+      ]
+    },
+    {
+      "skill": "Tableau",
+      "alsoCalled": [
+        "Tableau Desktop"
+      ]
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ]
+    },
+    {
+      "skill": "Data Cleaning",
+      "alsoCalled": [
+        "Data Wrangling",
+        "Data Cleansing"
+      ]
+    },
+    {
+      "skill": "Data Visualization",
+      "alsoCalled": [
+        "Data Visualisation",
+        "Charts and Graphs"
+      ]
+    },
+    {
+      "skill": "Statistics",
+      "alsoCalled": [
+        "Statistical Analysis",
+        "Descriptive Statistics"
+      ]
+    },
+    {
+      "skill": "Dashboard Development",
+      "alsoCalled": [
+        "Dashboards",
+        "Dashboard Design",
+        "BI Dashboards"
+      ]
+    },
+    {
+      "skill": "Reporting",
+      "alsoCalled": [
+        "Business Reporting",
+        "Management Reports",
+        "Periodic Reports"
+      ]
+    },
+    {
+      "skill": "Data Modeling",
+      "alsoCalled": [
+        "Data Modelling",
+        "Star Schema",
+        "Dimensional Modeling"
+      ]
+    },
+    {
+      "skill": "ETL",
+      "alsoCalled": [
+        "Extract Transform Load",
+        "Data Pipelines"
+      ]
+    },
+    {
+      "skill": "Pandas",
+      "alsoCalled": [
+        "Python Pandas"
+      ]
+    },
+    {
+      "skill": "R",
+      "alsoCalled": [
+        "R Programming"
+      ]
+    },
+    {
+      "skill": "KPI Tracking",
+      "alsoCalled": [
+        "KPIs",
+        "Key Performance Indicators",
+        "Performance Metrics"
+      ]
+    },
+    {
+      "skill": "Requirements Gathering",
+      "alsoCalled": [
+        "Business Requirements",
+        "Stakeholder Requirements",
+        "Requirements Elicitation"
+      ]
+    },
+    {
+      "skill": "Data Storytelling",
+      "alsoCalled": [
+        "Presenting Insights",
+        "Communicating Findings"
+      ]
+    },
+    {
+      "skill": "A/B Testing",
+      "alsoCalled": [
+        "Split Testing",
+        "Controlled Experiments",
+        "Experimentation"
+      ]
+    },
+    {
+      "skill": "DAX",
+      "alsoCalled": [
+        "Data Analysis Expressions"
+      ]
+    },
+    {
+      "skill": "Data Quality",
+      "alsoCalled": [
+        "Data Validation",
+        "Data Accuracy Checks",
+        "Data Reconciliation"
+      ]
+    }
+  ],
+  "software_engineer": [
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java Programming",
+        "Core Java"
+      ]
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ]
+    },
+    {
+      "skill": "JavaScript",
+      "alsoCalled": [
+        "JS",
+        "ECMAScript"
+      ]
+    },
+    {
+      "skill": "Object-Oriented Programming",
+      "alsoCalled": [
+        "OOP",
+        "Object-Oriented Design"
+      ]
+    },
+    {
+      "skill": "Data Structures and Algorithms",
+      "alsoCalled": [
+        "DSA",
+        "Algorithms",
+        "Problem Solving"
+      ]
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ]
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ]
+    },
+    {
+      "skill": "REST APIs",
+      "alsoCalled": [
+        "RESTful APIs",
+        "API Development",
+        "Web Services"
+      ]
+    },
+    {
+      "skill": "Unit Testing",
+      "alsoCalled": [
+        "Unit Tests",
+        "Automated Tests",
+        "Test-Driven Development"
+      ]
+    },
+    {
+      "skill": "Spring Boot",
+      "alsoCalled": [
+        "Spring Framework",
+        "Spring"
+      ]
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ]
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build Pipelines"
+      ]
+    },
+    {
+      "skill": "Agile",
+      "alsoCalled": [
+        "Scrum",
+        "Agile Methodology"
+      ]
+    },
+    {
+      "skill": "Code Review",
+      "alsoCalled": [
+        "Peer Review",
+        "Pull Request Review"
+      ]
+    },
+    {
+      "skill": "Design Patterns",
+      "alsoCalled": [
+        "Software Design Patterns"
+      ]
+    },
+    {
+      "skill": "System Design",
+      "alsoCalled": [
+        "Software Architecture",
+        "Architecture Design"
+      ]
+    },
+    {
+      "skill": "Microservices",
+      "alsoCalled": [
+        "Microservice Architecture"
+      ]
+    },
+    {
+      "skill": "AWS",
+      "alsoCalled": [
+        "Amazon Web Services"
+      ]
+    },
+    {
+      "skill": "Debugging",
+      "alsoCalled": [
+        "Troubleshooting Code",
+        "Bug Fixing",
+        "Root Cause Analysis"
+      ]
+    },
+    {
+      "skill": "NoSQL",
+      "alsoCalled": [
+        "MongoDB",
+        "Document Databases"
+      ]
+    }
+  ],
+  "cloud_devops_engineer": [
+    {
+      "skill": "AWS",
+      "alsoCalled": [
+        "Amazon Web Services"
+      ]
+    },
+    {
+      "skill": "Microsoft Azure",
+      "alsoCalled": [
+        "Azure"
+      ]
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ]
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ]
+    },
+    {
+      "skill": "Kubernetes",
+      "alsoCalled": [
+        "K8s",
+        "Container Orchestration"
+      ]
+    },
+    {
+      "skill": "Terraform",
+      "alsoCalled": [
+        "Infrastructure as Code",
+        "IaC"
+      ]
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build Pipelines"
+      ]
+    },
+    {
+      "skill": "Jenkins",
+      "alsoCalled": [
+        "Jenkins Pipelines"
+      ]
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ]
+    },
+    {
+      "skill": "Bash Scripting",
+      "alsoCalled": [
+        "Shell Scripting",
+        "Bash"
+      ]
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ]
+    },
+    {
+      "skill": "Ansible",
+      "alsoCalled": [
+        "Configuration Management"
+      ]
+    },
+    {
+      "skill": "Infrastructure Monitoring",
+      "alsoCalled": [
+        "Observability",
+        "System Monitoring",
+        "Alerting"
+      ]
+    },
+    {
+      "skill": "Cloud Networking",
+      "alsoCalled": [
+        "VPC",
+        "Virtual Networks"
+      ]
+    },
+    {
+      "skill": "Identity and Access Management",
+      "alsoCalled": [
+        "IAM",
+        "Access Control",
+        "Access Reviews"
+      ]
+    },
+    {
+      "skill": "Log Management",
+      "alsoCalled": [
+        "Centralized Logging",
+        "Log Aggregation"
+      ]
+    },
+    {
+      "skill": "Web Server Administration",
+      "alsoCalled": [
+        "Nginx",
+        "Apache",
+        "Reverse Proxy"
+      ]
+    },
+    {
+      "skill": "High Availability",
+      "alsoCalled": [
+        "Load Balancing and Failover",
+        "Auto Scaling",
+        "Fault Tolerance"
+      ]
+    },
+    {
+      "skill": "Disaster Recovery",
+      "alsoCalled": [
+        "DR",
+        "Backup and Restore",
+        "Recovery Drills"
+      ]
+    },
+    {
+      "skill": "Cost Optimization",
+      "alsoCalled": [
+        "Cloud Cost Management",
+        "FinOps"
+      ]
+    }
+  ],
+  "network_engineer": [
+    {
+      "skill": "OSPF",
+      "alsoCalled": [
+        "Open Shortest Path First",
+        "Dynamic Routing"
+      ]
+    },
+    {
+      "skill": "BGP",
+      "alsoCalled": [
+        "Border Gateway Protocol"
+      ]
+    },
+    {
+      "skill": "Switching",
+      "alsoCalled": [
+        "LAN Switching",
+        "Layer 2 Switching"
+      ]
+    },
+    {
+      "skill": "VLANs",
+      "alsoCalled": [
+        "Virtual LANs",
+        "VLAN Configuration"
+      ]
+    },
+    {
+      "skill": "TCP/IP Networking",
+      "alsoCalled": [
+        "Networking Fundamentals",
+        "Network Protocols",
+        "TCP/IP"
+      ]
+    },
+    {
+      "skill": "Subnetting",
+      "alsoCalled": [
+        "IP Addressing",
+        "IP Address Planning"
+      ]
+    },
+    {
+      "skill": "Firewall Management",
+      "alsoCalled": [
+        "Firewall Administration",
+        "Firewall Configuration",
+        "Firewall Rules"
+      ]
+    },
+    {
+      "skill": "VPN",
+      "alsoCalled": [
+        "IPsec VPN",
+        "Site-to-Site VPN",
+        "Remote Access VPN"
+      ]
+    },
+    {
+      "skill": "Wireless Networking",
+      "alsoCalled": [
+        "Wi-Fi",
+        "WLAN",
+        "Wireless LAN"
+      ]
+    },
+    {
+      "skill": "Network Troubleshooting",
+      "alsoCalled": [
+        "Connectivity Troubleshooting",
+        "Network Fault Diagnosis"
+      ]
+    },
+    {
+      "skill": "Network Monitoring",
+      "alsoCalled": [
+        "NMS",
+        "SNMP Monitoring"
+      ]
+    },
+    {
+      "skill": "Cisco IOS",
+      "alsoCalled": [
+        "Cisco CLI",
+        "Cisco Device Configuration"
+      ]
+    },
+    {
+      "skill": "Network Security",
+      "alsoCalled": [
+        "Network Defense",
+        "Network Segmentation",
+        "Access Control Lists"
+      ]
+    },
+    {
+      "skill": "DNS",
+      "alsoCalled": [
+        "Domain Name System"
+      ]
+    },
+    {
+      "skill": "DHCP",
+      "alsoCalled": [
+        "Dynamic Host Configuration Protocol"
+      ]
+    },
+    {
+      "skill": "Packet Analysis",
+      "alsoCalled": [
+        "Wireshark",
+        "Packet Capture"
+      ]
+    },
+    {
+      "skill": "Network Automation",
+      "alsoCalled": [
+        "Python for Networking",
+        "Network Scripting"
+      ]
+    },
+    {
+      "skill": "SD-WAN",
+      "alsoCalled": [
+        "Software-Defined WAN"
+      ]
+    },
+    {
+      "skill": "Network Documentation",
+      "alsoCalled": [
+        "Network Diagrams",
+        "Topology Documentation"
+      ]
+    },
+    {
+      "skill": "Structured Cabling",
+      "alsoCalled": [
+        "Cabling",
+        "Cable Termination"
+      ]
+    }
+  ],
+  "ai_ml_engineer": [
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ]
+    },
+    {
+      "skill": "Machine Learning",
+      "alsoCalled": [
+        "ML",
+        "Supervised Learning"
+      ]
+    },
+    {
+      "skill": "Deep Learning",
+      "alsoCalled": [
+        "Neural Networks",
+        "DL"
+      ]
+    },
+    {
+      "skill": "PyTorch",
+      "alsoCalled": [
+        "Torch"
+      ]
+    },
+    {
+      "skill": "TensorFlow",
+      "alsoCalled": [
+        "Keras"
+      ]
+    },
+    {
+      "skill": "Scikit-learn",
+      "alsoCalled": [
+        "sklearn"
+      ]
+    },
+    {
+      "skill": "Natural Language Processing",
+      "alsoCalled": [
+        "NLP",
+        "Text Classification",
+        "Text Mining"
+      ]
+    },
+    {
+      "skill": "Computer Vision",
+      "alsoCalled": [
+        "Image Classification",
+        "Image Processing"
+      ]
+    },
+    {
+      "skill": "Data Preprocessing",
+      "alsoCalled": [
+        "Data Preparation",
+        "Data Cleaning for ML"
+      ]
+    },
+    {
+      "skill": "Feature Engineering",
+      "alsoCalled": [
+        "Feature Extraction",
+        "Feature Selection"
+      ]
+    },
+    {
+      "skill": "Model Evaluation",
+      "alsoCalled": [
+        "Model Validation",
+        "Cross-Validation",
+        "Evaluation Metrics"
+      ]
+    },
+    {
+      "skill": "Model Deployment",
+      "alsoCalled": [
+        "Model Serving",
+        "ML Deployment"
+      ]
+    },
+    {
+      "skill": "MLOps",
+      "alsoCalled": [
+        "ML Pipelines",
+        "Model Lifecycle Management"
+      ]
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ]
+    },
+    {
+      "skill": "Pandas",
+      "alsoCalled": [
+        "Python Pandas"
+      ]
+    },
+    {
+      "skill": "NumPy",
+      "alsoCalled": [
+        "Numerical Python"
+      ]
+    },
+    {
+      "skill": "Large Language Models",
+      "alsoCalled": [
+        "LLMs",
+        "Generative AI"
+      ]
+    },
+    {
+      "skill": "Hyperparameter Tuning",
+      "alsoCalled": [
+        "Hyperparameter Optimization",
+        "Model Tuning",
+        "Grid Search"
+      ]
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ]
+    },
+    {
+      "skill": "Statistics",
+      "alsoCalled": [
+        "Statistical Analysis",
+        "Descriptive Statistics"
+      ]
+    }
+  ],
+  "qa_test_engineer": [
+    {
+      "skill": "Manual Testing",
+      "alsoCalled": [
+        "Functional Testing",
+        "Manual QA"
+      ]
+    },
+    {
+      "skill": "Test Case Design",
+      "alsoCalled": [
+        "Test Cases",
+        "Test Scenarios",
+        "Writing Test Cases"
+      ]
+    },
+    {
+      "skill": "Test Planning",
+      "alsoCalled": [
+        "Test Plans",
+        "Test Strategy"
+      ]
+    },
+    {
+      "skill": "Bug Reporting",
+      "alsoCalled": [
+        "Defect Reporting",
+        "Defect Tracking",
+        "Bug Tracking"
+      ]
+    },
+    {
+      "skill": "Jira",
+      "alsoCalled": [
+        "Atlassian Jira"
+      ]
+    },
+    {
+      "skill": "Test Automation",
+      "alsoCalled": [
+        "Automated Testing",
+        "Automation Testing"
+      ]
+    },
+    {
+      "skill": "Selenium",
+      "alsoCalled": [
+        "Selenium WebDriver"
+      ]
+    },
+    {
+      "skill": "API Testing",
+      "alsoCalled": [
+        "REST API Testing",
+        "Web Service Testing"
+      ]
+    },
+    {
+      "skill": "Postman",
+      "alsoCalled": [
+        "Postman Collections"
+      ]
+    },
+    {
+      "skill": "Regression Testing",
+      "alsoCalled": [
+        "Regression Suites"
+      ]
+    },
+    {
+      "skill": "Performance Testing",
+      "alsoCalled": [
+        "Load Testing",
+        "Stress Testing"
+      ]
+    },
+    {
+      "skill": "JMeter",
+      "alsoCalled": [
+        "Apache JMeter"
+      ]
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ]
+    },
+    {
+      "skill": "Agile",
+      "alsoCalled": [
+        "Scrum",
+        "Agile Methodology"
+      ]
+    },
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java Programming",
+        "Core Java"
+      ]
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ]
+    },
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build Pipelines"
+      ]
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ]
+    },
+    {
+      "skill": "Mobile Testing",
+      "alsoCalled": [
+        "Mobile App Testing",
+        "Device Testing"
+      ]
+    },
+    {
+      "skill": "User Acceptance Testing",
+      "alsoCalled": [
+        "UAT",
+        "Acceptance Testing"
+      ]
+    }
+  ],
+  "it_support_specialist": [
+    {
+      "skill": "Technical Support",
+      "alsoCalled": [
+        "Help Desk",
+        "Service Desk",
+        "IT Support",
+        "User Support"
+      ]
+    },
+    {
+      "skill": "Hardware Troubleshooting",
+      "alsoCalled": [
+        "PC Repair",
+        "Hardware Diagnostics",
+        "Hardware Maintenance"
+      ]
+    },
+    {
+      "skill": "Windows",
+      "alsoCalled": [
+        "Windows 10",
+        "Windows 11",
+        "Windows Desktop Support"
+      ]
+    },
+    {
+      "skill": "Active Directory",
+      "alsoCalled": [
+        "AD",
+        "User Account Management"
+      ]
+    },
+    {
+      "skill": "Microsoft 365",
+      "alsoCalled": [
+        "Office 365",
+        "O365"
+      ]
+    },
+    {
+      "skill": "Ticket Management",
+      "alsoCalled": [
+        "Ticketing System",
+        "Service Requests",
+        "Ticket Handling"
+      ]
+    },
+    {
+      "skill": "Network Troubleshooting",
+      "alsoCalled": [
+        "Connectivity Troubleshooting",
+        "Network Fault Diagnosis"
+      ]
+    },
+    {
+      "skill": "Printer Support",
+      "alsoCalled": [
+        "Printer Troubleshooting",
+        "Peripheral Support"
+      ]
+    },
+    {
+      "skill": "Software Installation",
+      "alsoCalled": [
+        "Application Installation",
+        "Software Setup"
+      ]
+    },
+    {
+      "skill": "Operating System Imaging",
+      "alsoCalled": [
+        "OS Installation",
+        "OS Deployment",
+        "Device Imaging"
+      ]
+    },
+    {
+      "skill": "Remote Support",
+      "alsoCalled": [
+        "Remote Desktop Support",
+        "Remote Assistance"
+      ]
+    },
+    {
+      "skill": "Customer Service",
+      "alsoCalled": [
+        "User Communication",
+        "Client Service"
+      ]
+    },
+    {
+      "skill": "ITIL",
+      "alsoCalled": [
+        "ITIL 4",
+        "IT Service Management",
+        "ITSM"
+      ]
+    },
+    {
+      "skill": "IT Asset Management",
+      "alsoCalled": [
+        "Asset Inventory",
+        "Asset Tracking"
+      ]
+    },
+    {
+      "skill": "Data Backup",
+      "alsoCalled": [
+        "Backup and Restore",
+        "Data Recovery",
+        "Backups"
+      ]
+    },
+    {
+      "skill": "Endpoint Security",
+      "alsoCalled": [
+        "Endpoint Protection",
+        "EDR",
+        "Endpoint Detection and Response",
+        "Antivirus Management"
+      ]
+    },
+    {
+      "skill": "macOS",
+      "alsoCalled": [
+        "Mac Support",
+        "Apple Device Support"
+      ]
+    },
+    {
+      "skill": "Wireless Networking",
+      "alsoCalled": [
+        "Wi-Fi",
+        "WLAN",
+        "Wireless LAN"
+      ]
+    },
+    {
+      "skill": "Technical Documentation",
+      "alsoCalled": [
+        "Knowledge Base Articles",
+        "Runbooks",
+        "User Guides"
+      ]
+    },
+    {
+      "skill": "Mobile Device Management",
+      "alsoCalled": [
+        "MDM",
+        "Intune"
+      ]
+    }
+  ],
+  "cybersecurity_grc_specialist": [
+    {
+      "skill": "Risk Assessment",
+      "alsoCalled": [
+        "Cybersecurity Risk Assessment",
+        "Risk Analysis"
+      ]
+    },
+    {
+      "skill": "Risk Management",
+      "alsoCalled": [
+        "Risk Register",
+        "Risk Treatment"
+      ]
+    },
+    {
+      "skill": "ISO 27001",
+      "alsoCalled": [
+        "ISO/IEC 27001",
+        "ISMS"
+      ]
+    },
+    {
+      "skill": "NCA Essential Cybersecurity Controls",
+      "alsoCalled": [
+        "NCA ECC",
+        "ECC"
+      ]
+    },
+    {
+      "skill": "SAMA Cybersecurity Framework",
+      "alsoCalled": [
+        "SAMA CSF",
+        "SAMA Cyber Security Framework"
+      ]
+    },
+    {
+      "skill": "NIST Cybersecurity Framework",
+      "alsoCalled": [
+        "NIST CSF"
+      ]
+    },
+    {
+      "skill": "Compliance Assessment",
+      "alsoCalled": [
+        "Gap Assessment",
+        "Gap Analysis",
+        "Compliance Review"
+      ]
+    },
+    {
+      "skill": "Security Policy Development",
+      "alsoCalled": [
+        "Policy Writing",
+        "Policy Drafting",
+        "Security Policies"
+      ]
+    },
+    {
+      "skill": "Security Auditing",
+      "alsoCalled": [
+        "IT Audit",
+        "Internal Audit",
+        "Audit Support"
+      ]
+    },
+    {
+      "skill": "Security Awareness",
+      "alsoCalled": [
+        "Awareness Training",
+        "Security Awareness Programs"
+      ]
+    },
+    {
+      "skill": "Third-Party Risk Management",
+      "alsoCalled": [
+        "Vendor Risk Assessment",
+        "Supplier Security"
+      ]
+    },
+    {
+      "skill": "Business Continuity Management",
+      "alsoCalled": [
+        "BCM",
+        "Business Continuity Planning",
+        "BCP"
+      ]
+    },
+    {
+      "skill": "Personal Data Protection Law",
+      "alsoCalled": [
+        "PDPL",
+        "Data Privacy",
+        "Data Protection"
+      ]
+    },
+    {
+      "skill": "Cybersecurity Governance",
+      "alsoCalled": [
+        "Security Governance",
+        "Information Security Governance"
+      ]
+    },
+    {
+      "skill": "Control Testing",
+      "alsoCalled": [
+        "Control Assessment",
+        "Evidence Review",
+        "Controls Review"
+      ]
+    },
+    {
+      "skill": "Data Classification",
+      "alsoCalled": [
+        "Information Classification"
+      ]
+    },
+    {
+      "skill": "Compliance Reporting",
+      "alsoCalled": [
+        "Compliance Dashboards",
+        "Status Reporting",
+        "Committee Reporting"
+      ]
+    },
+    {
+      "skill": "GRC Platform Administration",
+      "alsoCalled": [
+        "GRC Tool",
+        "eGRC",
+        "RSA Archer"
+      ]
+    },
+    {
+      "skill": "Vulnerability Assessment",
+      "alsoCalled": [
+        "Vulnerability Scanning",
+        "Vulnerability Management"
+      ]
+    },
+    {
+      "skill": "Identity and Access Management",
+      "alsoCalled": [
+        "IAM",
+        "Access Control",
+        "Access Reviews"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+ "case": "ho_01",
+ "arm": "G0E0",
+ "run": 2,
+ "gaps": [
+  "SIEM",
+  "Penetration Testing",
+  "Incident Response",
+  "Firewalls",
+  "SOC Operations",
+  "IDS/IPS",
+  "Security Certifications (CISSP, CEH, Security+, OSCP)",
+  "Cloud Security (AWS/GCP/Azure)"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

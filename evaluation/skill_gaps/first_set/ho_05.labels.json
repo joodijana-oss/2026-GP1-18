@@ -1,0 +1,299 @@
+{
+  "id": "ho_05",
+  "careerGoalId": "software_engineer",
+  "shown": [
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java Programming",
+        "Core Java"
+      ],
+      "evidence": "implemented a hash table and a trie in Java for instant title search",
+      "source": "project"
+    },
+    {
+      "skill": "Spring Boot",
+      "alsoCalled": [
+        "Spring Framework",
+        "Spring"
+      ],
+      "evidence": "Added three endpoints to the refunds service (Java, Spring Boot)",
+      "source": "experience"
+    },
+    {
+      "skill": "REST APIs",
+      "alsoCalled": [
+        "RESTful APIs",
+        "API Development",
+        "Web Services"
+      ],
+      "evidence": "Added three endpoints to the refunds service",
+      "source": "experience"
+    },
+    {
+      "skill": "Unit Testing",
+      "alsoCalled": [
+        "Unit Tests",
+        "Automated Tests",
+        "Test-Driven Development"
+      ],
+      "evidence": "Wrote JUnit and Mockito tests for every change and raised coverage of the refunds module from 54% to 81%",
+      "source": "experience"
+    },
+    {
+      "skill": "Code Review",
+      "alsoCalled": [
+        "Peer Review",
+        "Pull Request Review"
+      ],
+      "evidence": "read and commented on teammates' changes twice a week and had my own checked before merging",
+      "source": "experience"
+    },
+    {
+      "skill": "Debugging",
+      "alsoCalled": [
+        "Troubleshooting Code",
+        "Bug Fixing",
+        "Root Cause Analysis"
+      ],
+      "evidence": "Traced a double-refund fault to a race between two threads using logs and breakpoints",
+      "source": "experience"
+    },
+    {
+      "skill": "Docker",
+      "alsoCalled": [
+        "Containers",
+        "Containerization"
+      ],
+      "evidence": "Packaged the service into an image and ran it together with PostgreSQL through a compose file",
+      "source": "experience"
+    },
+    {
+      "skill": "Agile",
+      "alsoCalled": [
+        "Scrum",
+        "Agile Methodology"
+      ],
+      "evidence": "Worked in two-week sprints with daily stand-ups",
+      "source": "experience"
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "Rewrote a slow settlement report query, adding an index that cut it from 9 s to",
+      "source": "experience"
+    },
+    {
+      "skill": "Design Patterns",
+      "alsoCalled": [
+        "Software Design Patterns"
+      ],
+      "evidence": "used the strategy pattern for the different reminder channels",
+      "source": "project"
+    },
+    {
+      "skill": "Object-Oriented Programming",
+      "alsoCalled": [
+        "OOP",
+        "Object-Oriented Design"
+      ],
+      "evidence": "Designed the class model (patients, doctors, slots, bookings) with inheritance and interfaces",
+      "source": "project"
+    },
+    {
+      "skill": "Data Structures and Algorithms",
+      "alsoCalled": [
+        "DSA",
+        "Algorithms",
+        "Problem Solving"
+      ],
+      "evidence": "implemented a hash table and a trie in Java",
+      "source": "project"
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ],
+      "evidence": "Opened 46 pull requests",
+      "source": "experience"
+    },
+    {
+      "skill": "JavaScript",
+      "alsoCalled": [
+        "JS",
+        "ECMAScript"
+      ],
+      "evidence": "Built the booking screens in React",
+      "source": "project"
+    },
+    {
+      "skill": "React",
+      "alsoCalled": [
+        "React.js",
+        "ReactJS"
+      ],
+      "evidence": "Built the booking screens in React and connected them to our own backend",
+      "source": "project"
+    },
+    {
+      "skill": "PostgreSQL",
+      "alsoCalled": [
+        "Postgres"
+      ],
+      "evidence": "ran it together with PostgreSQL through a compose file",
+      "source": "experience"
+    },
+    {
+      "skill": "Jira",
+      "alsoCalled": [
+        "Atlassian Jira"
+      ],
+      "evidence": "estimating my own tickets in Jira",
+      "source": "experience"
+    },
+    {
+      "skill": "Query Optimization",
+      "alsoCalled": [
+        "SQL Tuning",
+        "Query Tuning",
+        "Indexing"
+      ],
+      "evidence": "Rewrote a slow settlement report query, adding an index",
+      "source": "experience"
+    },
+    {
+      "skill": "C++",
+      "alsoCalled": [
+        "CPP"
+      ],
+      "evidence": "Languages: Java, JavaScript, C++",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "Other: Git, Linux",
+      "source": "skills_section"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Microservices",
+      "alsoCalled": [
+        "Microservice Architecture"
+      ],
+      "evidence": "Added three endpoints to the refunds service",
+      "why": "Works on one service among others, but the architecture is not described."
+    },
+    {
+      "skill": "Multithreading",
+      "alsoCalled": [
+        "Concurrency",
+        "Thread Safety"
+      ],
+      "evidence": "a race between two threads",
+      "why": "Fixed one threading fault; no concurrent code of her own shown."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build Pipelines"
+      ],
+      "why": "Packaged the service as an image, but no build or release pipeline is mentioned.",
+      "nearMiss": true
+    },
+    {
+      "skill": "NoSQL",
+      "alsoCalled": [
+        "MongoDB",
+        "Document Databases"
+      ],
+      "why": "Used PostgreSQL only, a relational database.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Kubernetes",
+      "alsoCalled": [
+        "K8s",
+        "Container Orchestration"
+      ],
+      "why": "Ran containers locally with a compose file; no orchestration.",
+      "nearMiss": true
+    },
+    {
+      "skill": "AWS Certified Developer - Associate",
+      "alsoCalled": [
+        "AWS Developer Associate",
+        "DVA-C02"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "C#",
+      "alsoCalled": [
+        "C Sharp",
+        ".NET"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Message Queues",
+      "alsoCalled": [
+        "Task Queues",
+        "Background Jobs",
+        "Celery"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "TypeScript",
+      "alsoCalled": [
+        "TS"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "System Design",
+      "alsoCalled": [
+        "Software Architecture",
+        "Architecture Design"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "AWS",
+      "alsoCalled": [
+        "Amazon Web Services"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

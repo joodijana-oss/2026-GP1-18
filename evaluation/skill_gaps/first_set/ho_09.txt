@@ -1,0 +1,31 @@
+Noura Al-Subaie
+Riyadh | noura.alsubaie@example.com | +966 50 000 0000
+
+Summary
+Computer Science graduate (Princess Nourah bint Abdulrahman University, 2026) whose final-year work was on reading Arabic handwriting on medical prescriptions. Looking for a junior machine learning position where models have to work on real, untidy data.
+
+Education
+B.Sc. Computer Science, Princess Nourah bint Abdulrahman University, Riyadh, 2022-2026. GPA 4.7/5, first-class honours.
+Electives: Machine Learning, Image Processing, Information Retrieval, Linear Algebra for Computing
+
+Graduation project: Reading handwritten Arabic prescriptions (team of 3, supervised research)
+- Photographed and labelled 4,200 prescription lines with two pharmacy students, settled disagreements between labellers and removed blurred images.
+- Straightened, cropped and binarised each image, and enlarged the training set with small rotations and ink-thickness changes.
+- Trained a convolutional-recurrent network with CTC loss in PyTorch on the university GPU server; character error rate fell from 31% (off-the-shelf OCR) to 9.8%.
+- Compared runs over learning rate, batch size and dropout using a grid of 36 settings tracked in Weights & Biases.
+- Measured results with character and word error rate on a held-out set of prescriptions from pharmacies the network never saw, and broke the errors down by drug-name length.
+- Wrapped the trained network behind a small FastAPI service so the pharmacy students could upload a photo from a browser.
+- Accepted as a poster at a Saudi student research conference (2026).
+
+Course project: Spam SMS filter in Arabic and English
+- Turned 11,000 messages into TF-IDF and character n-gram vectors and compared logistic regression, naive Bayes and a linear SVM; best F1 0.96.
+
+Summer training
+Data office of a government entity, Riyadh (8 weeks, 2025)
+- Wrote queries on the entity's Oracle warehouse to prepare monthly service-usage tables for the analytics team.
+
+Skills
+Python, PyTorch, scikit-learn, pandas, NumPy, TensorFlow, Git
+
+Languages
+Arabic (native), English (IELTS 7.0)

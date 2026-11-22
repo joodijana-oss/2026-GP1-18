@@ -1,0 +1,123 @@
+{
+ "goal": "qa_test_engineer",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Manual Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "testing without automation",
+    "exploratory testing techniques",
+    "manual test execution"
+   ]
+  },
+  {
+   "gap": "Test Case Design and Execution",
+   "kind": "skill",
+   "concepts": [
+    "Test Cases"
+   ],
+   "phrases": [
+    "writing test cases",
+    "designing test scenarios",
+    "executing test plans"
+   ]
+  },
+  {
+   "gap": "Defect Tracking and Management",
+   "kind": "skill",
+   "concepts": [
+    "Defect Tracking"
+   ],
+   "phrases": [
+    "logging and tracking bugs",
+    "managing defect lifecycle",
+    "bug triage process"
+   ]
+  },
+  {
+   "gap": "Jira",
+   "kind": "tool",
+   "concepts": [
+    "Jira"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Regression Testing",
+   "kind": "skill",
+   "concepts": [
+    "Regression Testing"
+   ],
+   "phrases": [
+    "retesting after changes",
+    "ensuring no new bugs",
+    "verifying existing functionality"
+   ]
+  },
+  {
+   "gap": "Functional Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "verifying feature behavior",
+    "testing application functionality",
+    "validating requirements"
+   ]
+  },
+  {
+   "gap": "API Testing",
+   "kind": "skill",
+   "concepts": [
+    "API Testing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Test Automation",
+   "kind": "skill",
+   "concepts": [
+    "Test Automation"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Selenium",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Agile/Scrum Methodologies",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [
+    "sprint planning and reviews",
+    "scrum ceremonies and roles",
+    "iterative development process"
+   ]
+  },
+  {
+   "gap": "Appium",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  }
+ ]
+}

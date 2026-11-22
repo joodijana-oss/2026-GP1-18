@@ -1,0 +1,209 @@
+RERUN OF THE SECTION 5.1 EVALUATIONS (2026-11-22)
+No request is sent to the AI service. Saved files are copied to build/rerun before use.
+
+1. SKILL GAPS OF THE AI CAREER ANALYSIS (Section 5.1.1)
+$ dart run tools/gap_eval/evaluate_gaps.dart --score build/rerun/skill_gaps_final_run --details
+SAME       skill gaps, final_run: scores.txt
+
+    ALL CVS  (16 CVs)
+      Arm    FalseGap  CVs>0  Recall   Prec     F1  Bundled (detector)  Stable  Fallback  BadQuote  Gaps  Errors
+      G0E0      0.185  0.750   0.990  0.750  0.853    0.166      0.164   0.581     0.000     0.000   7.0       0
+      G1E1      0.005  0.021   0.956  0.995  0.975    0.000      0.000   0.765     0.000     0.000   5.6       0
+    
+    UNSEEN GOALS  (12 CVs)
+      Arm    FalseGap  CVs>0  Recall   Prec     F1  Bundled (detector)  Stable  Fallback  BadQuote  Gaps  Errors
+      G0E0      0.188  0.778   0.991  0.746  0.851    0.183      0.186   0.603     0.000     0.000   6.6       0
+      G1E1      0.000  0.000   0.965  1.000  0.982    0.000      0.000   0.788     0.000     0.000   5.4       0
+    
+    SEEN GOALS  (4 CVs)
+      Arm    FalseGap  CVs>0  Recall   Prec     F1  Bundled (detector)  Stable  Fallback  BadQuote  Gaps  Errors
+      G0E0      0.173  0.667   0.986  0.763  0.861    0.116      0.099   0.516     0.000     0.000   8.3       0
+      G1E1      0.021  0.083   0.932  0.979  0.955    0.000      0.000   0.698     0.000     0.000   6.3       0
+    
+      FalseGap: share of the gaps that the CV clearly shows (lower is better). CVs>0: share of the analyses with at least one such gap.
+      Recall: share of the skills the CV does not show that were returned as gaps. Bundled: share of the gap names a reviewer marked
+      as several things in one name; (detector) is the same by the shape of the name. Stable: how alike the runs of one CV are.
+      Fallback: share of the runs where the wanted gap step failed and the fallback answered. BadQuote: answers dropped because their
+      quote is not in the CV. Errors: runs without any result.
+    
+
+    AGAINST G0E0 (the original analysis), paired over CVs, 95% bootstrap interval
+      G1E1
+        FalseGap, all CVs     : -0.179  [-0.240, -0.121]  (16 CVs)
+        FalseGap, unseen goals: -0.188  [-0.251, -0.126]  (12 CVs)
+        Recall, all CVs       : -0.033  [-0.074, +0.000]
+        pass  every run gave a result
+        pass  recall not more than 0.05 below G0E0
+        pass  bundled gap names at most 2% (reviewers)
+        pass  fallback in at most 10% of the runs
+        pass  FalseGap at least 0.05 lower on all CVs, interval excludes 0
+        pass  FalseGap at least 0.05 lower on unseen goals (point estimate)
+    
+    DECISION: arms that pass every rule, lowest FalseGap first: G1E1
+      This is not the held-out set: use it to develop, not to decide.
+    
+$ dart run tools/gap_eval/evaluate_gaps.dart --score build/rerun/skill_gaps_first_run --details
+SAME       skill gaps, first_run: scores.txt
+
+    ALL CVS  (16 CVs)
+      Arm    FalseGap  CVs>0  Recall   Prec     F1  Bundled (detector)  Stable  Fallback  BadQuote  Gaps  Errors
+      G0E0      0.184  0.729   0.973  0.761  0.854    0.189      0.200   0.580     0.000     0.000   6.4       0
+      G0E1      0.193  0.792   0.992  0.794  0.882    0.000      0.000   0.673     0.000     0.000   7.0       0
+      G1E1      0.005  0.042   0.932  0.995  0.962    0.000      0.000   0.755     0.000     0.000   4.9       0
+      G2E1      0.000  0.000   0.905  1.000  0.950    0.000      0.000   0.755     0.000     0.000   4.6       0
+    
+    UNSEEN GOALS  (12 CVs)
+      Arm    FalseGap  CVs>0  Recall   Prec     F1  Bundled (detector)  Stable  Fallback  BadQuote  Gaps  Errors
+      G0E0      0.193  0.694   0.964  0.742  0.839    0.216      0.234   0.596     0.000     0.000   6.1       0
+      G0E1      0.198  0.750   0.994  0.792  0.882    0.000      0.000   0.668     0.000     0.000   6.7       0
+      G1E1      0.000  0.000   0.944  1.000  0.971    0.000      0.000   0.785     0.000     0.000   4.8       0
+      G2E1      0.000  0.000   0.916  1.000  0.956    0.000      0.000   0.772     0.000     0.000   4.4       0
+    
+    SEEN GOALS  (4 CVs)
+      Arm    FalseGap  CVs>0  Recall   Prec     F1  Bundled (detector)  Stable  Fallback  BadQuote  Gaps  Errors
+      G0E0      0.158  0.833   1.000  0.816  0.899    0.109      0.099   0.535     0.000     0.000   7.4       0
+      G0E1      0.176  0.917   0.983  0.802  0.883    0.000      0.000   0.688     0.000     0.000   7.8       0
+      G1E1      0.021  0.167   0.894  0.979  0.935    0.000      0.000   0.665     0.000     0.000   5.5       0
+      G2E1      0.000  0.000   0.872  1.000  0.932    0.000      0.000   0.703     0.000     0.000   5.2       0
+    
+      FalseGap: share of the gaps that the CV clearly shows (lower is better). CVs>0: share of the analyses with at least one such gap.
+      Recall: share of the skills the CV does not show that were returned as gaps. Bundled: share of the gap names a reviewer marked
+      as several things in one name; (detector) is the same by the shape of the name. Stable: how alike the runs of one CV are.
+      Fallback: share of the runs where the wanted gap step failed and the fallback answered. BadQuote: answers dropped because their
+      quote is not in the CV. Errors: runs without any result.
+    
+
+    AGAINST G0E0 (the original analysis), paired over CVs, 95% bootstrap interval
+      G0E1
+        FalseGap, all CVs     : +0.008  [-0.035, +0.053]  (16 CVs)
+        FalseGap, unseen goals: +0.005  [-0.049, +0.064]  (12 CVs)
+        Recall, all CVs       : +0.018  [-0.008, +0.054]
+        pass  every run gave a result
+        pass  recall not more than 0.05 below G0E0
+        pass  bundled gap names at most 2% (reviewers)
+        pass  fallback in at most 10% of the runs
+        FAIL  FalseGap at least 0.05 lower on all CVs, interval excludes 0
+        FAIL  FalseGap at least 0.05 lower on unseen goals (point estimate)
+      G1E1
+        FalseGap, all CVs     : -0.179  [-0.255, -0.111]  (16 CVs)
+        FalseGap, unseen goals: -0.193  [-0.284, -0.112]  (12 CVs)
+        Recall, all CVs       : -0.041  [-0.074, -0.008]
+        pass  every run gave a result
+        pass  recall not more than 0.05 below G0E0
+        pass  bundled gap names at most 2% (reviewers)
+        pass  fallback in at most 10% of the runs
+        pass  FalseGap at least 0.05 lower on all CVs, interval excludes 0
+        pass  FalseGap at least 0.05 lower on unseen goals (point estimate)
+      G2E1
+        FalseGap, all CVs     : -0.184  [-0.257, -0.117]  (16 CVs)
+        FalseGap, unseen goals: -0.193  [-0.284, -0.112]  (12 CVs)
+        Recall, all CVs       : -0.068  [-0.105, -0.035]
+        pass  every run gave a result
+        FAIL  recall not more than 0.05 below G0E0
+        pass  bundled gap names at most 2% (reviewers)
+        pass  fallback in at most 10% of the runs
+        pass  FalseGap at least 0.05 lower on all CVs, interval excludes 0
+        pass  FalseGap at least 0.05 lower on unseen goals (point estimate)
+    
+    DECISION: arms that pass every rule, lowest FalseGap first: G1E1
+    
+
+2. RANKING OF THE OPPORTUNITY RECOMMENDER (Section 5.1.2)
+$ dart run tools/recommender_eval/evaluate_recommender.dart
+SAME       recommender, development test users (without TIMING)
+
+    AVERAGE OVER 8 PERSONAS
+                              Baseline       New    Change
+      nDCG@10                    0.766     0.837    +0.071
+      GapCov@10                  0.853     0.933    +0.080
+      TopGapRank                 1.750     1.250    -0.500
+      P@5 (sanity check)         0.975     1.000    +0.025
+      Ties@10                    7.125     0.000    -7.125
+      Goal-only above gap       11.000     0.000   -11.000
+      (TopGapRank: rank of the first result that teaches the most demanded gap; lower is better. Ties and
+       goal-only-above-gap: lower is better. P@5 is close to its maximum for both systems, so it says little.)
+    
+$ dart run tools/recommender_eval/evaluate_recommender.dart --personas test/fixtures/opportunity_eval_personas_heldout.json --ablation
+SAME       recommender, held-out test users (without TIMING)
+
+    AVERAGE OVER 8 PERSONAS
+                              Baseline       New    Change
+      nDCG@10                    0.696     0.806    +0.110
+      GapCov@10                  0.609     0.750    +0.141
+      TopGapRank                13.500     1.500   -12.000
+      P@5 (sanity check)         0.850     0.975    +0.125
+      Ties@10                    7.250     0.000    -7.250
+      Goal-only above gap       13.250     0.000   -13.250
+      (TopGapRank: rank of the first result that teaches the most demanded gap; lower is better. Ties and
+       goal-only-above-gap: lower is better. P@5 is close to its maximum for both systems, so it says little.)
+    
+
+3. REVIEW INSTRUCTIONS OF THE CV IMPROVEMENT ASSISTANT (Section 5.1.4)
+$ py evaluation/ats_review/score_heldout.py evaluation/ats_review/grades
+SAME       ATS held-out scorer
+
+    OLD {'ho_a': ['ho_a_01', 'ho_a_03', 'ho_a_06'], 'ho_b': ['ho_b_01', 'ho_b_04', 'ho_b_05'], 'ho_c': ['ho_c_02', 'ho_c_03', 'ho_c_05'], 'ho_d': ['ho_d_01', 'ho_d_03', 'ho_d_04']}
+      recall 62 / 78 = 0.7949 {'ho_a': [8, 8, 8], 'ho_b': [8, 8, 8], 'ho_d': [4, 5, 5]}
+      precision 82 / 93 = 0.8817
+      invented 3 misquotes 0 ho_c bad 4
+      consistency per CV {'ho_a': 0.8519, 'ho_b': 0.6035, 'ho_c': 0.5556, 'ho_d': 0.7667} mean 0.6944 -> 0.69
+    NEW {'ho_a': ['ho_a_02', 'ho_a_04', 'ho_a_05'], 'ho_b': ['ho_b_02', 'ho_b_03', 'ho_b_06'], 'ho_c': ['ho_c_01', 'ho_c_04', 'ho_c_06'], 'ho_d': ['ho_d_02', 'ho_d_05', 'ho_d_06']}
+      recall 54 / 78 = 0.6923 {'ho_a': [9, 10, 10], 'ho_b': [4, 6, 0], 'ho_d': [5, 5, 5]}
+      precision 75 / 81 = 0.9259
+      invented 2 misquotes 0 ho_c bad 1
+      consistency per CV {'ho_a': 0.7838, 'ho_b': 0.2121, 'ho_c': 0.7778, 'ho_d': 1.0} mean 0.6934 -> 0.69
+    (a) recall gain -8 / 78 = -0.1026 FAIL
+    (b) precision PASS
+    (c) invented/misquotes PASS
+    (d) ho_c false/padded PASS
+    (e) consistency PASS
+    DECISION: KEEP OLD
+$ py evaluation/ats_review/score_dev.py
+SAME       ATS development scorer
+
+    old flawed found 22 /36 clean weaknesses 10 /27 cons flawed 0.5704 clean 0.4917 mean 0.531
+    new flawed found 33 /36 clean weaknesses 14 /27 cons flawed 0.8864 clean 0.8889 mean 0.8876
+    
+
+4. MATCHING SKILL GAPS BY MEANING (Section 5.1.3)
+SAME       SHA-256 of evaluation/matching/final_run/judgements/teaching.csv
+SAME       SHA-256 of evaluation/matching/final_run/judgements/teaching_second.csv
+SAME       SHA-256 of evaluation/matching/final_run/review/matching_scores_r2.txt
+SKIPPED    matching scores: not scored again: the scoring tool checks the freeze in tools/gap_eval/freeze_r2.json and refuses to run on later code (see evaluation/README.md, "Matching by meaning").
+
+    DECISION RULES (tools/gap_eval/decision_rule_r2.txt), on 61 decision names
+      B/10/10/bt: TeachHit@5 against A0 +0.293  [+0.172, +0.408]
+        AttribPrec@5 opportunities 0.691 on 71.3 graded attributions, 90% interval [0.576, 0.811]
+        AttribPrec@5 certifications 0.661 on 32.0 graded attributions, 90% interval [0.470, 0.856]
+        against the word control with the same gate: -0.101 (control TeachHit@5 0.557, AttribPrec 0.644 opp, 0.600 cert)
+        FalseUncovered 0.433 opp, 0.568 cert
+        guards, test/fixtures/opportunity_eval_personas.json: without links as today yes; persona guard pass (with links 0.837 / 0.933 / 1.000 / 1.250, today 0.837 / 0.933 / 1.000 / 1.250; at full precision NO); timing (rule 7.2 d, amendment 1) medians 1.2158 and 0.9969 of 5 runs pass; the single run of the guard file, 1.1033 and 1.1006, is reported only
+        guards, test/fixtures/opportunity_eval_personas_heldout.json: without links as today yes; persona guard pass (with links 0.812 / 0.776 / 0.975 / 1.500, today 0.806 / 0.750 / 0.975 / 1.500; at full precision yes); timing (rule 7.2 d, amendment 1) medians 1.0847 and 1.0017 of 5 runs pass; the single run of the guard file, 1.1852 and 0.9838, is reported only
+        pass  TeachHit@5 beats A0 by at least 0.10, 95% interval above 0
+        pass  not below A0 for opportunities
+        FAIL  AttribPrec@5 at least 0.70 for opportunities
+        pass  not below A0 for certifications
+        FAIL  AttribPrec@5 at least 0.70 for certifications
+        pass  7.2 (a) without links, the lists of today on both persona files
+        pass  7.2 (b) persona guard (precision 3, tolerance 0): pass
+        pass  7.2 (d) timing, amendment 1: medians of 5 separate runs at most 2.00 and 1.10, at full precision
+      B/10/10/bt-opp: TeachHit@5 against A0 +0.153  [+0.094, +0.212]
+        AttribPrec@5 opportunities 0.691 on 71.3 graded attributions, 90% interval [0.576, 0.811]
+        AttribPrec@5 certifications 1.000 on 3.0 graded attributions, 90% interval [1.000, 1.000]
+        against the word control with the same gate: -0.014 (control TeachHit@5 0.330, AttribPrec 0.644 opp, 1.000 cert)
+        FalseUncovered 0.433 opp, 0.864 cert
+        guards, test/fixtures/opportunity_eval_personas.json: without links as today yes; persona guard pass (with links 0.837 / 0.933 / 1.000 / 1.250, today 0.837 / 0.933 / 1.000 / 1.250; at full precision NO); timing (rule 7.2 d, amendment 1) medians 1.2158 and 0.9969 of 5 runs pass; the single run of the guard file, 1.1033 and 1.1006, is reported only
+        guards, test/fixtures/opportunity_eval_personas_heldout.json: without links as today yes; persona guard pass (with links 0.812 / 0.776 / 0.975 / 1.500, today 0.806 / 0.750 / 0.975 / 1.500; at full precision yes); timing (rule 7.2 d, amendment 1) medians 1.0847 and 1.0017 of 5 runs pass; the single run of the guard file, 1.1852 and 0.9838, is reported only
+        pass  TeachHit@5 beats A0 by at least 0.10, 95% interval above 0
+        pass  not below A0 for opportunities
+        FAIL  AttribPrec@5 at least 0.70 for opportunities
+        pass  not below A0 for certifications
+        pass  AttribPrec@5 at least 0.70 for certifications
+        pass  7.2 (a) without links, the lists of today on both persona files
+        pass  7.2 (b) persona guard (precision 3, tolerance 0): pass
+        pass  7.2 (d) timing, amendment 1: medians of 5 separate runs at most 2.00 and 1.10, at full precision
+    
+    DECISION: no candidate passes these rules. A0 stays.
+    
+
+SUMMARY: 9 same, 0 different, 1 skipped.

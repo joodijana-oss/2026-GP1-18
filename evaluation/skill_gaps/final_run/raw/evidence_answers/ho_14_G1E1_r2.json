@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Routing and Switching",
+  "VPN",
+  "LAN/WAN",
+  "VLAN",
+  "CCNA",
+  "Firewall Management",
+  "Cisco Networking",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto",
+  "BGP",
+  "Network Monitoring and Troubleshooting"
+ ],
+ "answer": [
+  {
+   "skill": "Routing and Switching",
+   "status": "shown",
+   "quote": "run OSPF inside each of two pretend companies"
+  },
+  {
+   "skill": "VPN",
+   "status": "shown",
+   "quote": "Built an encrypted tunnel between my flat and my parents' house"
+  },
+  {
+   "skill": "LAN/WAN",
+   "status": "shown",
+   "quote": "exchange prefixes with a pretend provider, each side under its own AS number"
+  },
+  {
+   "skill": "VLAN",
+   "status": "shown",
+   "quote": "Split my flat into four networks (family, guests, cameras, lab) on the one switch"
+  },
+  {
+   "skill": "CCNA",
+   "status": "partly",
+   "quote": "Studying for the CCNA; exam booked for January 2027"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Cisco Networking",
+   "status": "shown",
+   "quote": "Two used Cisco routers and a managed switch bought second-hand"
+  },
+  {
+   "skill": "CCNP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Fortinet",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "BGP",
+   "status": "shown",
+   "quote": "exchange prefixes with a pretend provider, each side under its own AS number"
+  },
+  {
+   "skill": "Network Monitoring and Troubleshooting",
+   "status": "shown",
+   "quote": "I trace it from the wall socket to the patch panel to the switch port"
+  }
+ ]
+}

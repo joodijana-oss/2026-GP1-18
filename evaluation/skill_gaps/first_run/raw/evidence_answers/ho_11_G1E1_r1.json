@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Hardware Troubleshooting",
+  "Windows",
+  "Active Directory",
+  "Network Troubleshooting",
+  "Ticketing Systems",
+  "TCP/IP",
+  "Microsoft 365",
+  "Printer Support",
+  "DHCP",
+  "DNS",
+  "CCNA",
+  "VPN"
+ ],
+ "answer": [
+  {
+   "skill": "Hardware Troubleshooting",
+   "status": "shown",
+   "quote": "Diagnose laptops and desktops that will not start, overheat or run slowly"
+  },
+  {
+   "skill": "Windows",
+   "status": "shown",
+   "quote": "Wipe and reinstall Windows 10 and 11 from a USB image"
+  },
+  {
+   "skill": "Active Directory",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Network Troubleshooting",
+   "status": "shown",
+   "quote": "sort out \"connected but no internet\" calls"
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "partly",
+   "quote": "Keep a spreadsheet of every device that comes in"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Microsoft 365",
+   "status": "shown",
+   "quote": "activate their university Microsoft 365 accounts"
+  },
+  {
+   "skill": "Printer Support",
+   "status": "shown",
+   "quote": "Get printers working again: drivers, paper-feed faults, sharing one printer"
+  },
+  {
+   "skill": "DHCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "DNS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CCNA",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "VPN",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

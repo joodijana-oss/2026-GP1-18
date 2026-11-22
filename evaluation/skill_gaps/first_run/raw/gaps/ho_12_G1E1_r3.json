@@ -1,0 +1,67 @@
+{
+ "case": "ho_12",
+ "arm": "G1E1",
+ "run": 3,
+ "gaps": [
+  "CISSP",
+  "CISA",
+  "CISM",
+  "NIST Framework",
+  "PCI DSS",
+  "CRISC"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Cybersecurity Risk Assessment",
+   "status": "shown"
+  },
+  {
+   "skill": "ISO 27001",
+   "status": "shown"
+  },
+  {
+   "skill": "NCA Essential Cybersecurity Controls",
+   "status": "partly"
+  },
+  {
+   "skill": "SAMA Cybersecurity Framework",
+   "status": "shown"
+  },
+  {
+   "skill": "Risk Register Management",
+   "status": "partly"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing"
+  },
+  {
+   "skill": "CISA",
+   "status": "missing"
+  },
+  {
+   "skill": "CISM",
+   "status": "missing"
+  },
+  {
+   "skill": "NIST Framework",
+   "status": "missing"
+  },
+  {
+   "skill": "PCI DSS",
+   "status": "missing"
+  },
+  {
+   "skill": "CRISC",
+   "status": "missing"
+  },
+  {
+   "skill": "Audit Coordination",
+   "status": "shown"
+  }
+ ]
+}

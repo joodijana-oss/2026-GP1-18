@@ -1,0 +1,113 @@
+{
+ "goal": "ai_ml_engineer",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "PyTorch",
+   "kind": "tool",
+   "concepts": [
+    "PyTorch"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "TensorFlow",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "building neural networks",
+    "deep learning framework"
+   ]
+  },
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "C++",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "object-oriented programming language",
+    "systems programming language"
+   ]
+  },
+  {
+   "gap": "Linux",
+   "kind": "tool",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": [
+    "containerizing applications",
+    "building container images"
+   ]
+  },
+  {
+   "gap": "MLOps",
+   "kind": "skill",
+   "concepts": [
+    "MLOps"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Computer Vision",
+   "kind": "skill",
+   "concepts": [
+    "Deep Learning"
+   ],
+   "phrases": [
+    "image recognition models",
+    "visual data analysis"
+   ]
+  },
+  {
+   "gap": "LangChain",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "building LLM applications",
+    "chaining language model calls"
+   ]
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Prometheus",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "monitoring system metrics",
+    "infrastructure monitoring tool"
+   ]
+  }
+ ]
+}

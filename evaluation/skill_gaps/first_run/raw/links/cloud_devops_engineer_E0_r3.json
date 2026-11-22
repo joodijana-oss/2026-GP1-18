@@ -1,0 +1,127 @@
+{
+ "goal": "cloud_devops_engineer",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "CI/CD Pipeline Design",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": [
+    "building deployment pipelines",
+    "automating release workflows",
+    "continuous integration and delivery"
+   ]
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": [
+    "containerizing applications",
+    "building container images"
+   ]
+  },
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "managing linux systems",
+    "server administration tasks",
+    "command line administration"
+   ]
+  },
+  {
+   "gap": "Ansible",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "automating configuration management",
+    "infrastructure automation tool"
+   ]
+  },
+  {
+   "gap": "Cloud Platforms (AWS/Azure/GCP)",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "working with cloud providers",
+    "deploying cloud resources"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Monitoring & Observability (Prometheus/Grafana)",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "tracking system metrics",
+    "building monitoring dashboards",
+    "observability tools and practices"
+   ]
+  },
+  {
+   "gap": "Infrastructure as Code",
+   "kind": "skill",
+   "concepts": [
+    "Infrastructure as Code"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Site Reliability Engineering (SLIs/SLOs/Incident Management)",
+   "kind": "skill",
+   "concepts": [
+    "Incident Response"
+   ],
+   "phrases": [
+    "defining service level objectives",
+    "managing production incidents",
+    "reliability engineering practices"
+   ]
+  },
+  {
+   "gap": "Bash Scripting",
+   "kind": "tool",
+   "concepts": [
+    "Scripting"
+   ],
+   "phrases": [
+    "writing shell scripts",
+    "automating command line tasks"
+   ]
+  }
+ ]
+}

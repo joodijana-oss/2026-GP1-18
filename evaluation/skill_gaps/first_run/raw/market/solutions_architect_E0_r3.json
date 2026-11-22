@@ -1,0 +1,34 @@
+{
+ "goal": "solutions_architect",
+ "extractor": "E0",
+ "run": 3,
+ "postings": 20,
+ "rawNames": [
+  "Cloud Architecture (AWS/Azure/GCP)",
+  "Enterprise Architecture",
+  "Solution Design",
+  "Stakeholder Management",
+  "TOGAF Certification",
+  "System Integration",
+  "API Design",
+  "Architecture Roadmaps & Blueprints",
+  "Data Architecture",
+  "Presales / Technical Consulting",
+  "Security Architecture",
+  "DevOps / Agile Practices"
+ ],
+ "names": [
+  "Cloud Architecture (AWS/Azure/GCP)",
+  "Enterprise Architecture",
+  "Solution Design",
+  "Stakeholder Management",
+  "TOGAF Certification",
+  "System Integration",
+  "API Design",
+  "Architecture Roadmaps & Blueprints",
+  "Data Architecture",
+  "Presales / Technical Consulting",
+  "Security Architecture",
+  "DevOps / Agile Practices"
+ ]
+}

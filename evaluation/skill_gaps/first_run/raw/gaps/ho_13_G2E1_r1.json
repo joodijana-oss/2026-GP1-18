@@ -1,0 +1,37 @@
+{
+ "case": "ho_13",
+ "arm": "G2E1",
+ "run": 1,
+ "gaps": [
+  "Terraform",
+  "Python",
+  "AWS",
+  "Azure"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Terraform",
+   "status": "missing"
+  },
+  {
+   "skill": "Python",
+   "status": "missing"
+  },
+  {
+   "skill": "AWS",
+   "status": "missing"
+  },
+  {
+   "skill": "Azure",
+   "status": "missing"
+  },
+  {
+   "skill": "Prometheus",
+   "status": "partly"
+  }
+ ]
+}

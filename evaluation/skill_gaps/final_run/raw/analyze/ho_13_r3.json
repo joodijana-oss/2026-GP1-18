@@ -1,0 +1,59 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on experience self-hosting and managing multiple containerized services",
+   "Demonstrated infrastructure automation using configuration management and tested disaster recovery",
+   "Built monitoring and alerting for service uptime",
+   "Implemented automated backup strategy including offsite backup",
+   "Experience deploying static sites using cloud storage and CDN",
+   "Set up CI/CD pipeline for automated build and deployment",
+   "Documentation skills shown by writing a guide for successors",
+   "Public speaking and teaching experience through workshop delivery",
+   "Leadership experience managing shared infrastructure accounts for a student club"
+  ],
+  "currentSkills": [
+   "Linux",
+   "Debian",
+   "Docker",
+   "Docker Compose",
+   "Ansible",
+   "Shell Scripting",
+   "Monitoring",
+   "Networking",
+   "AWS",
+   "Amazon S3",
+   "CloudFront",
+   "CI/CD",
+   "Cloud Computing",
+   "Technical Documentation",
+   "Public Speaking"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science and Software Engineering",
+    "institution": "University of Hail",
+    "year": "2023 - expected 2027"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "The majlis server",
+    "description": "Self-hosted a home server on Debian running multiple containerized services (photo library, recipe site, ad blocker) defined in a single compose file; automated full machine rebuilds using playbooks, verified by wiping the disk twice; implemented a shell script to monitor service health every five minutes with Telegram alerts; set up nightly local and weekly offsite backups."
+   },
+   {
+    "name": "Publishing the club website without FTP",
+    "description": "Migrated the Hail Tech Club website to AWS free tier using a storage bucket and content delivery network; set up automatic build and publish on merge to main branch, preventing broken builds from being published; wrote a two-page guide for future maintenance."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Infrastructure lead",
+    "organization": "Hail Tech Club",
+    "duration": "2025 - now",
+    "description": "Gave a hands-on workshop, 'Your first virtual machine in the cloud,' to 35 students; manages the club's shared accounts and hands them over each year."
+   }
+  ]
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Hardware Troubleshooting",
+  "Windows",
+  "Active Directory",
+  "Network Troubleshooting",
+  "Ticketing Systems",
+  "TCP/IP",
+  "Microsoft 365",
+  "Printer Support",
+  "DHCP",
+  "DNS",
+  "CCNA",
+  "VPN"
+ ],
+ "answer": [
+  {
+   "skill": "Hardware Troubleshooting",
+   "status": "shown",
+   "quote": "Work out why laptops and desktops will not start, overheat or crash"
+  },
+  {
+   "skill": "Windows",
+   "status": "shown",
+   "quote": "Windows 10 and 11 installation, PC hardware, home networking"
+  },
+  {
+   "skill": "Active Directory",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Network Troubleshooting",
+   "status": "shown",
+   "quote": "fix \"connected but no internet\" cases"
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "shown",
+   "quote": "entered dead PCs and projectors in the college's request system"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Microsoft 365",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Printer Support",
+   "status": "shown",
+   "quote": "Cleared paper jams and replaced toner in the lab printers"
+  },
+  {
+   "skill": "DHCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "DNS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CCNA",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "VPN",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

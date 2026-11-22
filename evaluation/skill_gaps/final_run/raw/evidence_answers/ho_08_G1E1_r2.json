@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Routing and Switching",
+  "VPN",
+  "LAN/WAN",
+  "VLAN",
+  "CCNA",
+  "Firewall Management",
+  "Cisco Networking",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto",
+  "BGP",
+  "Network Monitoring and Troubleshooting"
+ ],
+ "answer": [
+  {
+   "skill": "Routing and Switching",
+   "status": "shown",
+   "quote": "Ran a link-state routing protocol in a single backbone area between the three routers"
+  },
+  {
+   "skill": "VPN",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "LAN/WAN",
+   "status": "shown",
+   "quote": "Built a three-building campus network on six real Cisco 2960 and 3560 switches"
+  },
+  {
+   "skill": "VLAN",
+   "status": "shown",
+   "quote": "Kept students, staff and security cameras in separate broadcast domains"
+  },
+  {
+   "skill": "CCNA",
+   "status": "shown",
+   "quote": "Cisco Certified Network Associate (CCNA), February 2026"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "partly",
+   "quote": "Fortinet firewalls (basic)"
+  },
+  {
+   "skill": "Cisco Networking",
+   "status": "shown",
+   "quote": "six real Cisco 2960 and 3560 switches and three ISR routers"
+  },
+  {
+   "skill": "CCNP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Fortinet",
+   "status": "shown",
+   "quote": "Fortinet firewalls (basic)"
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "BGP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Network Monitoring and Troubleshooting",
+   "status": "shown",
+   "quote": "found one PC flooding the segment with broadcast frames from a faulty network card"
+  }
+ ]
+}

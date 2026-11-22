@@ -1,0 +1,111 @@
+{
+ "goal": "qa_test_engineer",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Manual Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "testing software manually",
+    "executing test cases by hand",
+    "verifying functionality without automation"
+   ]
+  },
+  {
+   "gap": "Test Case Design",
+   "kind": "skill",
+   "concepts": [
+    "Test Cases"
+   ],
+   "phrases": [
+    "designing test scenarios",
+    "writing test steps",
+    "creating test coverage"
+   ]
+  },
+  {
+   "gap": "Jira",
+   "kind": "tool",
+   "concepts": [
+    "Jira"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Regression Testing",
+   "kind": "skill",
+   "concepts": [
+    "Regression Testing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "API Testing",
+   "kind": "skill",
+   "concepts": [
+    "API Testing"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Functional Testing",
+   "kind": "skill",
+   "concepts": [
+    "Software Testing"
+   ],
+   "phrases": [
+    "validating feature behavior",
+    "testing application functions",
+    "verifying expected outcomes"
+   ]
+  },
+  {
+   "gap": "Selenium",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Appium",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Agile",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Scrum",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "sprint planning and reviews",
+    "scrum roles and ceremonies",
+    "iterative team collaboration"
+   ]
+  },
+  {
+   "gap": "Postman",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  }
+ ]
+}

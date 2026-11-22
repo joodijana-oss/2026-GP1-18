@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Kubernetes",
+  "Terraform",
+  "Docker",
+  "CI/CD Pipeline Design",
+  "Ansible",
+  "Linux Administration",
+  "Python",
+  "AWS",
+  "Azure",
+  "Prometheus",
+  "Grafana",
+  "Bash Scripting"
+ ],
+ "answer": [
+  {
+   "skill": "Kubernetes",
+   "status": "shown",
+   "quote": "now run them all on a managed cluster (EKS)"
+  },
+  {
+   "skill": "Terraform",
+   "status": "shown",
+   "quote": "described in Terraform files kept in the repository"
+  },
+  {
+   "skill": "Docker",
+   "status": "shown",
+   "quote": "packaged each service as an image"
+  },
+  {
+   "skill": "CI/CD Pipeline Design",
+   "status": "shown",
+   "quote": "Built the release pipeline in GitHub Actions: tests, image build, security scan"
+  },
+  {
+   "skill": "Ansible",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Linux Administration",
+   "status": "shown",
+   "quote": "Racked servers, installed Ubuntu on them and kept the cabling records"
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "AWS",
+   "status": "shown",
+   "quote": "AWS Certified Solutions Architect – Associate (October 2025)"
+  },
+  {
+   "skill": "Azure",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Prometheus",
+   "status": "shown",
+   "quote": "Grafana on top of Prometheus"
+  },
+  {
+   "skill": "Grafana",
+   "status": "shown",
+   "quote": "put dashboards and on-call alerts in place (Grafana on top of Prometheus)"
+  },
+  {
+   "skill": "Bash Scripting",
+   "status": "shown",
+   "quote": "Wrote small shell scripts for the nightly database dumps"
+  }
+ ]
+}

@@ -1,0 +1,181 @@
+{
+ "goal": "data_scientist",
+ "list": "E1",
+ "run": 6,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": [],
+   "same": [
+    "Python"
+   ],
+   "terms": [
+    "Python",
+    "programming"
+   ]
+  },
+  {
+   "gap": "Machine Learning",
+   "kind": "skill",
+   "concepts": [
+    "Machine Learning"
+   ],
+   "phrases": [],
+   "same": [
+    "Machine Learning"
+   ],
+   "terms": [
+    "machine learning",
+    "ML",
+    "supervised learning",
+    "model training"
+   ]
+  },
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [],
+   "same": [
+    "Databases and SQL"
+   ],
+   "terms": [
+    "SQL",
+    "queries",
+    "database query"
+   ]
+  },
+  {
+   "gap": "Generative AI",
+   "kind": "skill",
+   "concepts": [
+    "Generative AI"
+   ],
+   "phrases": [],
+   "same": [
+    "Generative AI"
+   ],
+   "terms": [
+    "generative AI",
+    "GenAI",
+    "diffusion models"
+   ]
+  },
+  {
+   "gap": "Large Language Models",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "large language models",
+    "LLM",
+    "transformer models",
+    "foundation models"
+   ]
+  },
+  {
+   "gap": "Data Visualization",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": [],
+   "same": [
+    "Data Visualization"
+   ],
+   "terms": [
+    "data visualization",
+    "charts",
+    "dashboards"
+   ]
+  },
+  {
+   "gap": "MLOps",
+   "kind": "skill",
+   "concepts": [
+    "MLOps"
+   ],
+   "phrases": [],
+   "same": [
+    "MLOps"
+   ],
+   "terms": [
+    "MLOps",
+    "model deployment",
+    "ML pipelines"
+   ]
+  },
+  {
+   "gap": "Retrieval-Augmented Generation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "RAG",
+    "retrieval augmented generation",
+    "vector search",
+    "embedding retrieval"
+   ]
+  },
+  {
+   "gap": "Prompt Engineering",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "prompt engineering",
+    "prompt design",
+    "LLM prompting"
+   ]
+  },
+  {
+   "gap": "Statistical Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Mathematics and Statistics"
+   ],
+   "phrases": [],
+   "same": [
+    "Mathematics and Statistics"
+   ],
+   "terms": [
+    "statistics",
+    "statistical analysis",
+    "hypothesis testing"
+   ]
+  },
+  {
+   "gap": "AWS",
+   "kind": "tool",
+   "concepts": [
+    "AWS"
+   ],
+   "phrases": [],
+   "same": [
+    "AWS"
+   ],
+   "terms": [
+    "AWS",
+    "Amazon Web Services"
+   ]
+  },
+  {
+   "gap": "Stakeholder Communication",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "stakeholder communication",
+    "communication skills",
+    "presenting to stakeholders"
+   ]
+  }
+ ]
+}

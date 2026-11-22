@@ -1,0 +1,53 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Hands-on experience diagnosing and repairing hardware faults such as laptops and desktops that will not start, overheat, or crash",
+   "Practical experience with OS reinstallation and system rebuilding from USB",
+   "Demonstrates customer trust and responsibility by safeguarding customer data before repairs",
+   "Strong communication skills, able to explain technical issues in plain language to non-technical, including elderly, customers",
+   "Experience troubleshooting and configuring home networking equipment",
+   "Created instructional documentation (how-to sheets) for new apprentices, showing ability to train and mentor others",
+   "Reliable and consistent work ethic, balancing part-time work with studies",
+   "Experience supporting IT infrastructure in an institutional setting (computer labs)"
+  ],
+  "currentSkills": [
+   "PC Hardware Troubleshooting",
+   "Computer Repair",
+   "Windows 10 Installation",
+   "Windows 11 Installation",
+   "Operating System Reinstallation",
+   "Home Networking",
+   "Router Configuration",
+   "Firmware Updates",
+   "Technical Documentation",
+   "Customer Service",
+   "Microsoft Office",
+   "Printer Maintenance",
+   "IT Support"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Information Technology",
+    "institution": "Northern Border University, Arar",
+    "year": "2024 - expected 2028"
+   }
+  ],
+  "certifications": [],
+  "projects": [],
+  "experience": [
+   {
+    "title": "Evening Technician (part-time, 16 hours a week)",
+    "organization": "Computer and phone repair shop, Arar",
+    "duration": "September 2025 - present",
+    "description": "Diagnosed and repaired laptops and desktops with issues such as failure to start, overheating, or crashing; replaced memory, drives, fans, and screens on about 15 machines a week. Wiped and rebuilt customer machines from USB, restoring drivers, programs, and files. Backed up customer photos and documents before repairs and restored them afterward. Explained repair issues and costs to walk-in customers, including elderly clients, in plain language. Troubleshot home routers including resets, firmware updates, wireless name/password changes, and connectivity issues. Wrote 20 one-page how-to sheets with photos for new apprentices."
+   },
+   {
+    "title": "Student Helper",
+    "organization": "Computer labs of the College of Computing",
+    "duration": "2025",
+    "description": "Walked four labs each morning, logged dead PCs and projectors into the college's request system, and closed requests once faults were fixed. Cleared paper jams and replaced toner in lab printers."
+   }
+  ]
+ }
+}

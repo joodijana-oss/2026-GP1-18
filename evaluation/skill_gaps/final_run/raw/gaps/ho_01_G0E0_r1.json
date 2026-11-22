@@ -1,0 +1,19 @@
+{
+ "case": "ho_01",
+ "arm": "G0E0",
+ "run": 1,
+ "gaps": [
+  "Penetration Testing",
+  "Network Security",
+  "Firewalls (Palo Alto/Fortinet)",
+  "SOC Operations",
+  "Endpoint Detection and Response (EDR)",
+  "Cloud Security (AWS/GCP/Azure)",
+  "IAM (Identity & Access Management)"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

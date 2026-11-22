@@ -1,0 +1,15 @@
+== evaluation/ats_review/runs/heldout
+  run 2026-11-22T02:02:11.356377..2026-11-22T02:14:14.976599 sent 24 ok 23 failed 1 stop null requests 26 in 85322 out 145759 cost 1.628 perVersion {"old":{"succeeded":12,"failed":0},"new":{"succeeded":11,"failed":1}}
+  run 2026-11-22T02:14:17.602473..2026-11-22T02:17:46.666881 sent 1 ok 0 failed 1 stop null requests 2 in 9086 out 20000 cost 0.218 perVersion {"old":{"succeeded":0,"failed":0},"new":{"succeeded":0,"failed":1}}
+  run 2026-11-22T02:17:49.330114..2026-11-22T02:21:14.822311 sent 1 ok 0 failed 1 stop null requests 2 in 9086 out 20000 cost 0.218 perVersion {"old":{"succeeded":0,"failed":0},"new":{"succeeded":0,"failed":1}}
+  run 2026-11-22T02:21:17.424624..2026-11-22T02:24:49.394812 sent 1 ok 0 failed 1 stop null requests 2 in 9086 out 20000 cost 0.218 perVersion {"old":{"succeeded":0,"failed":0},"new":{"succeeded":0,"failed":1}}
+  total requests 32 input 112580 output 205759 cost 2.283
+  SEALED new answered 11 outputTokens mean 7243 median 6604 max 19932 retried 1 failedAttempts {"cut_off":9}
+  SEALED old answered 12 outputTokens mean 3841 median 4154 max 6622 retried 0 failedAttempts {}
+  SEALED failed file ho_b_new_r2.json failedRuns 4 answered later: false
+== evaluation/ats_review/runs/dev
+  run 2026-11-22T02:24:52.070102..2026-11-22T02:32:22.020364 sent 12 ok 12 failed 0 stop null requests 13 in 42475 out 82515 cost 0.910 perVersion {"old":{"succeeded":6,"failed":0},"new":{"succeeded":6,"failed":0}}
+  total requests 13 input 42475 output 82515 cost 0.910
+  SEALED new answered 6 outputTokens mean 10205 median 9882 max 19438 retried 1 failedAttempts {"cut_off":1}
+  SEALED old answered 6 outputTokens mean 3548 median 3877 max 4333 retried 0 failedAttempts {}
+ALL requests 45 input 155055 output 288274 cost 3.193

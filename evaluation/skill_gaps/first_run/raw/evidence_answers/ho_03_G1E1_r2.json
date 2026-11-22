@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SQL",
+  "Power BI",
+  "Python",
+  "Data Visualization",
+  "Dashboard Development",
+  "Data Analysis",
+  "Tableau",
+  "R",
+  "Machine Learning",
+  "Stakeholder Management",
+  "Pandas",
+  "Data Governance"
+ ],
+ "answer": [
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "queries joining the orders, carriers and delivery tables"
+  },
+  {
+   "skill": "Power BI",
+   "status": "shown",
+   "quote": "refreshed every Monday in Power BI"
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Visualization",
+   "status": "shown",
+   "quote": "showing late deliveries by carrier and route"
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "shown",
+   "quote": "Built a one-page view for the operations manager"
+  },
+  {
+   "skill": "Data Analysis",
+   "status": "shown",
+   "quote": "Summarised 14 months of delivery data with pivot tables"
+  },
+  {
+   "skill": "Tableau",
+   "status": "shown",
+   "quote": "Excel, SQL, Power BI, Tableau, R"
+  },
+  {
+   "skill": "R",
+   "status": "shown",
+   "quote": "Excel, SQL, Power BI, Tableau, R"
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "shown",
+   "quote": "Sat with dispatch supervisors to agree what \"late\" should mean"
+  },
+  {
+   "skill": "Pandas",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Data Governance",
+   "status": "partly",
+   "quote": "fixed inconsistent city names and filled missing delivery dates"
+  }
+ ]
+}

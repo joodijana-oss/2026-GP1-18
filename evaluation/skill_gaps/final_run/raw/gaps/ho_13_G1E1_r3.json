@@ -1,0 +1,67 @@
+{
+ "case": "ho_13",
+ "arm": "G1E1",
+ "run": 3,
+ "gaps": [
+  "Kubernetes",
+  "Terraform",
+  "Python",
+  "Azure",
+  "Prometheus",
+  "Grafana"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing"
+  },
+  {
+   "skill": "Docker",
+   "status": "shown"
+  },
+  {
+   "skill": "CI/CD",
+   "status": "shown"
+  },
+  {
+   "skill": "Ansible",
+   "status": "shown"
+  },
+  {
+   "skill": "Linux Administration",
+   "status": "shown"
+  },
+  {
+   "skill": "Python",
+   "status": "missing"
+  },
+  {
+   "skill": "AWS",
+   "status": "shown"
+  },
+  {
+   "skill": "Azure",
+   "status": "missing"
+  },
+  {
+   "skill": "Prometheus",
+   "status": "missing"
+  },
+  {
+   "skill": "Grafana",
+   "status": "missing"
+  },
+  {
+   "skill": "Bash",
+   "status": "shown"
+  }
+ ]
+}

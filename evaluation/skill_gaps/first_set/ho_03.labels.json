@@ -1,0 +1,269 @@
+{
+  "id": "ho_03",
+  "careerGoalId": "data_analyst",
+  "shown": [
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "Pulled daily shipment records from the warehouse database with queries joining the orders, carriers and delivery tables",
+      "source": "experience"
+    },
+    {
+      "skill": "Excel",
+      "alsoCalled": [
+        "Microsoft Excel",
+        "Spreadsheets"
+      ],
+      "evidence": "Summarised 14 months of delivery data with pivot tables and VLOOKUP",
+      "source": "experience"
+    },
+    {
+      "skill": "Power BI",
+      "alsoCalled": [
+        "Microsoft Power BI"
+      ],
+      "evidence": "refreshed every Monday in Power BI",
+      "source": "experience"
+    },
+    {
+      "skill": "Data Cleaning",
+      "alsoCalled": [
+        "Data Wrangling",
+        "Data Cleansing"
+      ],
+      "evidence": "Removed duplicate waybills, fixed inconsistent city names and filled missing delivery dates",
+      "source": "experience"
+    },
+    {
+      "skill": "Dashboard Development",
+      "alsoCalled": [
+        "Dashboards",
+        "Dashboard Design",
+        "BI Dashboards"
+      ],
+      "evidence": "Built a one-page view for the operations manager",
+      "source": "experience"
+    },
+    {
+      "skill": "Data Visualization",
+      "alsoCalled": [
+        "Data Visualisation",
+        "Charts and Graphs"
+      ],
+      "evidence": "showing late deliveries by carrier and route",
+      "source": "experience"
+    },
+    {
+      "skill": "Statistics",
+      "alsoCalled": [
+        "Statistical Analysis",
+        "Descriptive Statistics"
+      ],
+      "evidence": "tested whether drop rates differed between colleges with a chi-square test",
+      "source": "education"
+    },
+    {
+      "skill": "Requirements Gathering",
+      "alsoCalled": [
+        "Business Requirements",
+        "Stakeholder Requirements",
+        "Requirements Elicitation"
+      ],
+      "evidence": "Sat with dispatch supervisors to agree what",
+      "source": "experience"
+    },
+    {
+      "skill": "KPI Tracking",
+      "alsoCalled": [
+        "KPIs",
+        "Key Performance Indicators",
+        "Performance Metrics"
+      ],
+      "evidence": "defining the on-time delivery measure",
+      "source": "experience"
+    },
+    {
+      "skill": "Data Storytelling",
+      "alsoCalled": [
+        "Presenting Insights",
+        "Communicating Findings"
+      ],
+      "evidence": "Walked the management team through the findings in a 15-minute presentation",
+      "source": "experience"
+    },
+    {
+      "skill": "Reporting",
+      "alsoCalled": [
+        "Business Reporting",
+        "Management Reports",
+        "Periodic Reports"
+      ],
+      "evidence": "sent a weekly count of parcels to the organisers",
+      "source": "other"
+    },
+    {
+      "skill": "Tableau",
+      "alsoCalled": [
+        "Tableau Desktop"
+      ],
+      "evidence": "Excel, SQL, Power BI, Tableau, R",
+      "source": "skills_section"
+    },
+    {
+      "skill": "R",
+      "alsoCalled": [
+        "R Programming"
+      ],
+      "evidence": "Excel, SQL, Power BI, Tableau, R",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Survey Research",
+      "alsoCalled": [
+        "Survey Design",
+        "Questionnaires"
+      ],
+      "evidence": "Surveyed 312 students",
+      "source": "education"
+    },
+    {
+      "skill": "MySQL",
+      "alsoCalled": [
+        "MySQL Database"
+      ],
+      "evidence": "wrote its reports in MySQL",
+      "source": "education"
+    },
+    {
+      "skill": "Database Design",
+      "alsoCalled": [
+        "Schema Design",
+        "Relational Database Design"
+      ],
+      "evidence": "designed a 9-table schema for a clinic booking system",
+      "source": "education"
+    },
+    {
+      "skill": "Google Sheets",
+      "alsoCalled": [
+        "Google Spreadsheets"
+      ],
+      "evidence": "Kept the donor list in Google Sheets",
+      "source": "other"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Data Modeling",
+      "alsoCalled": [
+        "Data Modelling",
+        "Star Schema",
+        "Dimensional Modeling"
+      ],
+      "evidence": "designed a 9-table schema for a clinic booking system",
+      "why": "A course database design, not a model built for analysis or reporting."
+    },
+    {
+      "skill": "Data Quality",
+      "alsoCalled": [
+        "Data Validation",
+        "Data Accuracy Checks",
+        "Data Reconciliation"
+      ],
+      "evidence": "before each weekly report",
+      "why": "Cleaning implies some care for quality, but no validation checks or rules are described."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "ETL",
+      "alsoCalled": [
+        "Extract Transform Load",
+        "Data Pipelines"
+      ],
+      "why": "Pulled and cleaned the data by hand each week; no automated pipeline.",
+      "nearMiss": true
+    },
+    {
+      "skill": "A/B Testing",
+      "alsoCalled": [
+        "Split Testing",
+        "Controlled Experiments",
+        "Experimentation"
+      ],
+      "why": "Ran a chi-square test on survey answers, not a controlled experiment.",
+      "nearMiss": true
+    },
+    {
+      "skill": "DAX",
+      "alsoCalled": [
+        "Data Analysis Expressions"
+      ],
+      "why": "Built a Power BI view, but no measures or formulas are mentioned.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Pandas",
+      "alsoCalled": [
+        "Python Pandas"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Microsoft Power BI Data Analyst Associate",
+      "alsoCalled": [
+        "PL-300"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Data Warehousing",
+      "alsoCalled": [
+        "Data Warehouse",
+        "DWH"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Forecasting",
+      "alsoCalled": [
+        "Time Series Forecasting",
+        "Demand Forecasting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Power Query",
+      "alsoCalled": [
+        "M Query"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Data Governance",
+      "alsoCalled": [
+        "Data Stewardship"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": []
+}

@@ -1,0 +1,20 @@
+{
+ "case": "ho_02",
+ "arm": "G0E0",
+ "run": 3,
+ "gaps": [
+  "SIEM",
+  "Vulnerability Assessment",
+  "Penetration Testing",
+  "SOC Operations",
+  "IAM",
+  "Security Risk Assessment",
+  "Python",
+  "Cloud Security"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

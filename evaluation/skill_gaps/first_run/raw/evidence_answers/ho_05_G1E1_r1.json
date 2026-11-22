@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "REST APIs",
+  "Git",
+  "SQL",
+  "React",
+  "Node.js",
+  "Java",
+  "Spring Boot",
+  "Docker",
+  "Linux",
+  "Microservices Architecture",
+  "Kubernetes",
+  "Python"
+ ],
+ "answer": [
+  {
+   "skill": "REST APIs",
+   "status": "shown",
+   "quote": "Added three endpoints to the refunds service (Java, Spring Boot)"
+  },
+  {
+   "skill": "Git",
+   "status": "shown",
+   "quote": "Opened 46 pull requests"
+  },
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "Rewrote a slow settlement report query, adding an index"
+  },
+  {
+   "skill": "React",
+   "status": "shown",
+   "quote": "Built the booking screens in React and connected them to our own backend"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Java",
+   "status": "shown",
+   "quote": "Added three endpoints to the refunds service (Java, Spring Boot)"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "shown",
+   "quote": "Added three endpoints to the refunds service (Java, Spring Boot)"
+  },
+  {
+   "skill": "Docker",
+   "status": "shown",
+   "quote": "Packaged the service into an image and ran it together with PostgreSQL through a compose file"
+  },
+  {
+   "skill": "Linux",
+   "status": "shown",
+   "quote": "Other: Git, Linux"
+  },
+  {
+   "skill": "Microservices Architecture",
+   "status": "partly",
+   "quote": "Added three endpoints to the refunds service (Java, Spring Boot)"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

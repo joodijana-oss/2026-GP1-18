@@ -1,0 +1,63 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Improved model performance significantly, raising Macro-F1 from 0.71 to 0.86 by adapting a pretrained Arabic transformer encoder",
+   "Experience processing large-scale Arabic NLP datasets (180,000 tweets)",
+   "Demonstrated reproducible experimentation practices by tracking run settings and scores systematically",
+   "Achieved strong competitive results in multiple data science competitions (two bronze medals, 2nd place in Jazan AI Challenge)",
+   "High academic performance with GPA 4.78/5 in Computer Science",
+   "Presented research findings to an academic audience, with results being included in a workshop paper",
+   "Demonstrated leadership by founding and sustaining a weekly paper-reading circle",
+   "Strong English proficiency supported by TOEFL iBT score of 101"
+  ],
+  "currentSkills": [
+   "Python",
+   "Pandas",
+   "Scikit-learn",
+   "Data Cleaning",
+   "Data Analysis",
+   "Text Preprocessing",
+   "Tokenization",
+   "Machine Learning",
+   "Natural Language Processing",
+   "Transformer Models",
+   "Gradient Boosting",
+   "Feature Engineering",
+   "Cross-Validation",
+   "SSH",
+   "Statistics",
+   "Linear Algebra"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "Jazan University",
+    "year": "fourth year (expected June 2027)"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Arabic Customer-Complaint Classification",
+    "description": "Prepared 180,000 Arabic customer-complaint tweets by stripping diacritics and elongation, removing duplicates, and tokenizing into sub-word pieces. Labelled 3,000 tweets by dialect with two other assistants and measured inter-annotator agreement. Adapted a pretrained Arabic transformer encoder to classify complaints into nine topics, improving Macro-F1 from 0.71 (bag-of-words baseline) to 0.86. Tracked experiment settings and results in a spreadsheet for reproducibility."
+   },
+   {
+    "name": "Tabular-Data Competitions",
+    "description": "Built a gradient-boosted trees model with engineered date and location features, validated using five-fold cross-validation; achieved top 9% and top 8% rankings among about 2,000 teams, earning two bronze medals."
+   },
+   {
+    "name": "Mango Fruit Counting from Drone Imagery",
+    "description": "Trained a model to count mango fruit in tree photos taken from a drone for a local farm cooperative, placing 2nd in the Jazan AI Challenge 2025."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Summer Research Assistant",
+    "organization": "Arabic language technology lab of a research university on the Red Sea coast",
+    "duration": "June 2026 - August 2026",
+    "description": "Prepared and labelled large-scale Arabic tweet data, adapted a pretrained transformer model for complaint classification into nine topics, ran experiments on a shared GPU machine via SSH, maintained reproducible records of experiments, and presented results at the lab's end-of-summer meeting."
+   }
+  ]
+ }
+}

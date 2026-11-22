@@ -1,0 +1,125 @@
+{
+ "goal": "erp_consultant",
+ "extractor": "E0",
+ "run": 2,
+ "links": [
+  {
+   "gap": "SAP S/4HANA",
+   "kind": "tool",
+   "concepts": [
+    "SAP S/4HANA"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "SAP MM/SD/FI Modules",
+   "kind": "tool",
+   "concepts": [
+    "ERP Module Configuration"
+   ],
+   "phrases": [
+    "configuring SAP modules",
+    "materials management and finance modules",
+    "sales and distribution setup"
+   ]
+  },
+  {
+   "gap": "Oracle Cloud ERP",
+   "kind": "tool",
+   "concepts": [
+    "Oracle ERP"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "ABAP",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "SAP programming language",
+    "custom SAP development",
+    "ABAP coding"
+   ]
+  },
+  {
+   "gap": "PL/SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "writing stored procedures",
+    "Oracle database programming"
+   ]
+  },
+  {
+   "gap": "SAP Implementation (Full Lifecycle)",
+   "kind": "skill",
+   "concepts": [
+    "Software Development Lifecycle"
+   ],
+   "phrases": [
+    "end-to-end ERP rollout",
+    "implementation project phases",
+    "go-live and deployment"
+   ]
+  },
+  {
+   "gap": "Oracle Integration Cloud (OIC)",
+   "kind": "tool",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [
+    "cloud integration platform",
+    "connecting enterprise applications"
+   ]
+  },
+  {
+   "gap": "Microsoft Dynamics 365",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "Dynamics 365 configuration",
+    "Microsoft business applications platform"
+   ]
+  },
+  {
+   "gap": "SAP Fiori",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "SAP user interface design",
+    "Fiori app development"
+   ]
+  },
+  {
+   "gap": "Functional/Technical Specification Documentation",
+   "kind": "skill",
+   "concepts": [
+    "Requirements Gathering"
+   ],
+   "phrases": [
+    "writing functional specs",
+    "documenting technical requirements",
+    "specification document creation"
+   ]
+  },
+  {
+   "gap": "Data Migration",
+   "kind": "skill",
+   "concepts": [
+    "Data Migration"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": []
+  }
+ ]
+}

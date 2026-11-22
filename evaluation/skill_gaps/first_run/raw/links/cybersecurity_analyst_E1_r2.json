@@ -1,0 +1,118 @@
+{
+ "goal": "cybersecurity_analyst",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "SIEM",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "security event monitoring",
+    "log correlation and alerts",
+    "security information management"
+   ]
+  },
+  {
+   "gap": "Penetration Testing",
+   "kind": "skill",
+   "concepts": [
+    "Penetration Testing"
+   ],
+   "phrases": [
+    "simulated cyberattacks",
+    "exploiting vulnerabilities",
+    "ethical hacking techniques"
+   ]
+  },
+  {
+   "gap": "Vulnerability Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Security Operations"
+   ],
+   "phrases": [
+    "identifying system weaknesses",
+    "vulnerability scanning",
+    "security gap analysis"
+   ]
+  },
+  {
+   "gap": "Incident Response",
+   "kind": "skill",
+   "concepts": [
+    "Incident Response"
+   ],
+   "phrases": [
+    "handling security breaches",
+    "containment and remediation",
+    "responding to cyberattacks"
+   ]
+  },
+  {
+   "gap": "Firewall Administration",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring firewall rules",
+    "network traffic filtering",
+    "perimeter defense management"
+   ]
+  },
+  {
+   "gap": "CISSP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Network Security",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "securing network infrastructure",
+    "defending against intrusions"
+   ]
+  },
+  {
+   "gap": "CEH",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Security+",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "OSCP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Access Control",
+   "kind": "skill",
+   "concepts": [
+    "Information Security"
+   ],
+   "phrases": [
+    "managing user permissions",
+    "authentication and authorization",
+    "restricting system access"
+   ]
+  }
+ ]
+}

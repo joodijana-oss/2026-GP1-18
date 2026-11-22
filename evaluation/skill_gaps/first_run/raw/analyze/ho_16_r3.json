@@ -1,0 +1,68 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Builds and maintains backend systems serving significant production traffic (60,000 bookings/month)",
+   "Designed and documented versioned APIs with OpenAPI specifications used by multiple teams",
+   "Integrated third-party payment gateways and national e-invoicing with retry and reconciliation logic",
+   "Set up and maintains CI/CD pipelines with automated linting, testing, and container deployment",
+   "Wrote extensive test suite (around 600 cases) to prevent billing regressions after a production fault",
+   "Diagnosed and resolved major performance issue, reducing response time from 3.2s to 280ms",
+   "Proposed and led architectural refactor of a shared module into separate, well-bounded components",
+   "Reviews code and mentors junior developers through merge request reviews and pairing sessions",
+   "Handles on-call production support, tracing errors from monitoring tools back to root cause"
+  ],
+  "currentSkills": [
+   "Python",
+   "Django",
+   "Django REST Framework",
+   "PostgreSQL",
+   "Redis",
+   "Docker",
+   "Git",
+   "Java",
+   "MongoDB",
+   "AWS",
+   "Celery",
+   "GitHub Actions",
+   "CI/CD",
+   "REST API Design",
+   "OpenAPI",
+   "Token Authentication",
+   "SQL",
+   "pytest",
+   "Performance Optimization",
+   "Code Review",
+   "JavaScript",
+   "System Design"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "Imam Mohammad Ibn Saud Islamic University, Riyadh",
+    "year": "2024"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Stock-keeping web app for family perfume business",
+    "description": "Built a stock-keeping web application using Django templates and a little JavaScript for a family perfume business."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Backend Developer",
+    "organization": "a small Riyadh software house",
+    "duration": "Jul 2024 - present",
+    "description": "Builds and maintains the server side of three client products in Python (Django REST Framework) and PostgreSQL, with the largest handling 60,000 bookings a month. Designed the JSON interface used by mobile and web teams, with versioned routes, token authentication, and an OpenAPI description used to generate clients. Integrated two local payment gateways and the national e-invoicing format, including retry and reconciliation jobs run by Celery workers on a Redis queue. Set up CI/CD pipeline where every push runs linting and tests in GitHub Actions, and tagged commits build a container image and roll it out to the client's server. Wrote pytest suites for billing rules (about 600 cases) after an invoicing fault reached a customer, with no billing regression since. Identified that the timetable page fired 400 queries per request, rewrote it with joins and prefetching, reducing response time from 3.2s to 280ms. Proposed and led the split of a shared 'core' app into separate billing and scheduling modules with clear boundaries, documented in a design note. Reviews merge requests from two junior developers and pairs with them weekly. On call one week in four, tracing production errors from Sentry traces and server logs back to the root cause."
+   },
+   {
+    "title": "Freelance Developer",
+    "organization": "",
+    "duration": "2023 - 2024",
+    "description": "Built a stock-keeping web app for a family perfume business using Django templates and a little JavaScript."
+   }
+  ]
+ }
+}

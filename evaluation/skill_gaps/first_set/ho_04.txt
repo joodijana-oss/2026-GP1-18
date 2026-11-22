@@ -1,0 +1,23 @@
+Abdulrahman Al-Shehri
+Abha | a.alshehri@example.com | +966 50 000 0000
+
+Third-year Information Systems student at King Khalid University (expected graduation 2028, GPA 3.9/5). I am interested in data analysis and am looking for summer training where I can work with real company data.
+
+Education
+King Khalid University, B.Sc. Information Systems, 2024 - present
+Completed courses: Introduction to Programming (Python), Database Fundamentals, Probability and Statistics, Business Process Management, Discrete Mathematics
+In the database course lab I wrote SELECT statements with GROUP BY and subqueries against a sample bookstore database every week.
+
+Project
+Used-car prices in the Southern Region (Probability and Statistics course project, 2026, with one classmate)
+- Copied 640 listings from a classifieds site into an Excel sheet by hand and standardised the mileage and model-year columns.
+- Loaded the sheet in a Jupyter notebook and worked out averages, medians and spread by city and brand using groupby.
+- Drew bar charts and a scatter plot of price against mileage with Matplotlib to show that prices in Abha ran about 6% above Khamis Mushait for the same model.
+- Fitted a straight line of price on mileage and age and explained what the slope meant in our written report (grade: A).
+
+Other
+- Finished the first two courses of the Google Data Analytics certificate on Coursera (in progress).
+- Treasurer of the college's student club: keep the budget sheet and report spending to the club supervisor every month.
+- Went to the workshops of the university's two-day data hackathon in 2026 as a visitor; I plan to enter with a team next year.
+- Languages: Arabic (native), English (intermediate).
+- Tools I use: Excel, Python

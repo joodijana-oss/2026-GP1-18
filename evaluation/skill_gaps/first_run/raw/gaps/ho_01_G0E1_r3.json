@@ -1,0 +1,20 @@
+{
+ "case": "ho_01",
+ "arm": "G0E1",
+ "run": 3,
+ "gaps": [
+  "SIEM",
+  "Incident Response",
+  "Firewall Administration",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Security+",
+  "Metasploit"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

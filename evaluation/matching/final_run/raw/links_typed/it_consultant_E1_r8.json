@@ -1,0 +1,167 @@
+{
+ "goal": "it_consultant",
+ "list": "E1",
+ "run": 8,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [],
+   "same": [
+    "Databases and SQL"
+   ],
+   "terms": [
+    "SQL",
+    "queries",
+    "relational database"
+   ]
+  },
+  {
+   "gap": "PL/SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [],
+   "terms": [
+    "PL/SQL",
+    "Oracle database",
+    "stored procedures"
+   ]
+  },
+  {
+   "gap": "Digital Transformation",
+   "kind": "skill",
+   "concepts": [
+    "Digital Transformation"
+   ],
+   "phrases": [],
+   "same": [
+    "Digital Transformation"
+   ],
+   "terms": [
+    "digital transformation",
+    "digitalization"
+   ]
+  },
+  {
+   "gap": "Oracle E-Business Suite",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Oracle EBS",
+    "E-Business Suite",
+    "Oracle applications"
+   ]
+  },
+  {
+   "gap": "Java",
+   "kind": "tool",
+   "concepts": [
+    "Java"
+   ],
+   "phrases": [],
+   "same": [
+    "Java"
+   ],
+   "terms": [
+    "Java",
+    "Java programming",
+    "JVM"
+   ]
+  },
+  {
+   "gap": "REST",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [],
+   "terms": [
+    "REST API",
+    "RESTful",
+    "HTTP methods"
+   ]
+  },
+  {
+   "gap": "SOAP Web Services",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [],
+   "terms": [
+    "SOAP",
+    "web services",
+    "XML messaging"
+   ]
+  },
+  {
+   "gap": "BI Publisher",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "BI Publisher",
+    "Oracle reporting",
+    "report templates"
+   ]
+  },
+  {
+   "gap": "Business Process Automation",
+   "kind": "skill",
+   "concepts": [
+    "Business Processes"
+   ],
+   "phrases": [],
+   "terms": [
+    "process automation",
+    "workflow automation",
+    "BPA"
+   ]
+  },
+  {
+   "gap": "Oracle BPM Suite",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Oracle BPM",
+    "business process management suite",
+    "workflow engine"
+   ]
+  },
+  {
+   "gap": "Technical Documentation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "technical writing",
+    "documentation",
+    "specifications"
+   ]
+  },
+  {
+   "gap": "Cybersecurity",
+   "kind": "skill",
+   "concepts": [
+    "Information Security"
+   ],
+   "phrases": [],
+   "same": [
+    "Information Security"
+   ],
+   "terms": [
+    "cybersecurity",
+    "information security",
+    "cyber threats"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "label": "ho_b_06",
+ "cv": "ho_b",
+ "version": "new",
+ "run": 2,
+ "failedRuns": 4,
+ "history": [
+  {
+   "at": "2026-11-22T02:05:35.288747",
+   "attempts": [
+    {
+     "status": null,
+     "kind": "cut_off"
+    },
+    {
+     "status": null,
+     "kind": "cut_off"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-22T02:17:46.662820",
+   "attempts": [
+    {
+     "status": null,
+     "kind": "cut_off"
+    },
+    {
+     "status": null,
+     "kind": "cut_off"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-22T02:21:14.817802",
+   "attempts": [
+    {
+     "status": null,
+     "kind": "cut_off"
+    },
+    {
+     "status": null,
+     "kind": "cut_off"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-22T02:24:49.390302",
+   "attempts": [
+    {
+     "status": null,
+     "kind": "cut_off"
+    },
+    {
+     "status": null,
+     "kind": "cut_off"
+    }
+   ]
+  }
+ ]
+}

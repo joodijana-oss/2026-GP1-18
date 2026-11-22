@@ -1,0 +1,62 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Strong competitive programming skills with high Codeforces rating and 700+ problems solved",
+   "Performed well in a large collegiate programming contest, handling advanced problem types",
+   "Experience mentoring and teaching others through coaching and writing editorials",
+   "Able to design and build complete personal projects from scratch, including backend logic, data storage, and deployment",
+   "Experience with debugging and fixing real issues in code (off-by-one error in Maze Runner)",
+   "Applies structured, modular design in software projects (entity/map/renderer separation with shared interface)",
+   "Maintains good software engineering habits such as version control with feature branches and changelogs",
+   "Operates and maintains a live production service used by many daily users"
+  ],
+  "currentSkills": [
+   "C++",
+   "Java",
+   "Python",
+   "Data Structures",
+   "Algorithms",
+   "Graph Algorithms",
+   "Dynamic Programming",
+   "Greedy Algorithms",
+   "A* Search",
+   "SQLite",
+   "API Integration",
+   "Systemd",
+   "Linux",
+   "Git",
+   "GitHub",
+   "Object-Oriented Programming",
+   "Debugging",
+   "Software Design",
+   "Java Swing"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "King Saud University",
+    "year": "2024 - 2028 (expected)"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Salati (prayer-time bot for Telegram)",
+    "description": "Built in Python; calls a public prayer-times web API and caches each city's response for a day to reduce load. Stores user city and reminder preferences in SQLite. Deployed on a rented VPS under systemd, with manual monitoring via journal logs and restarts. Used daily by 340 people. Maintained on GitHub with a branch-per-feature workflow and changelog."
+   },
+   {
+    "name": "Maze Runner (2D game, Java)",
+    "description": "Built using plain Java and Swing, featuring enemies that chase the player using A* search. Designed with separate entity, map, and renderer classes behind a shared interface to simplify adding new enemy types. Debugged a save/load issue by tracing an off-by-one error in the map reader and added checks for broken files."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Coach / Mentor",
+    "organization": "College programming club",
+    "duration": "",
+    "description": "Coaches two weekly practice sessions for first-year students and writes editorials for each problem set."
+   }
+  ]
+ }
+}

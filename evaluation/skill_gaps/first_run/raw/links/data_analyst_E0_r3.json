@@ -1,0 +1,126 @@
+{
+ "goal": "data_analyst",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "writing SQL queries",
+    "querying relational data"
+   ]
+  },
+  {
+   "gap": "Power BI",
+   "kind": "tool",
+   "concepts": [
+    "Power BI"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Data Visualization",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": [
+    "creating charts and graphs",
+    "visual data storytelling"
+   ]
+  },
+  {
+   "gap": "Dashboard Development",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": [
+    "building interactive dashboards",
+    "designing reporting dashboards"
+   ]
+  },
+  {
+   "gap": "Data Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Data Analysis"
+   ],
+   "phrases": [
+    "analyzing datasets",
+    "extracting insights from data"
+   ]
+  },
+  {
+   "gap": "Tableau",
+   "kind": "tool",
+   "concepts": [
+    "Tableau"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "managing stakeholder expectations",
+    "engaging business stakeholders"
+   ]
+  },
+  {
+   "gap": "Machine Learning",
+   "kind": "skill",
+   "concepts": [
+    "Machine Learning"
+   ],
+   "phrases": [
+    "building predictive models",
+    "training ML algorithms"
+   ]
+  },
+  {
+   "gap": "Relational Databases",
+   "kind": "skill",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "designing relational data models",
+    "working with relational data"
+   ]
+  },
+  {
+   "gap": "R",
+   "kind": "tool",
+   "concepts": [
+    "R"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Data Governance",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "ensuring data quality standards",
+    "managing data policies",
+    "data stewardship practices"
+   ]
+  }
+ ]
+}

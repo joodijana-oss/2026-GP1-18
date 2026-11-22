@@ -1,0 +1,27 @@
+{
+ "case": "ho_07",
+ "arm": "G2E1",
+ "run": 3,
+ "gaps": [
+  "Ansible",
+  "Azure"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Ansible",
+   "status": "missing"
+  },
+  {
+   "skill": "Linux Administration",
+   "status": "shown"
+  },
+  {
+   "skill": "Azure",
+   "status": "missing"
+  }
+ ]
+}

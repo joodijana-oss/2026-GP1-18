@@ -1,0 +1,132 @@
+{
+ "goal": "cloud_devops_engineer",
+ "extractor": "E0",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "CI/CD Pipeline Design",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": [
+    "building deployment pipelines",
+    "automating software delivery",
+    "continuous integration workflows"
+   ]
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": [
+    "containerizing applications",
+    "building container images"
+   ]
+  },
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "managing linux systems",
+    "server administration tasks"
+   ]
+  },
+  {
+   "gap": "Ansible",
+   "kind": "tool",
+   "concepts": [
+    "Infrastructure as Code"
+   ],
+   "phrases": [
+    "automating configuration management",
+    "infrastructure automation tool"
+   ]
+  },
+  {
+   "gap": "Cloud Platforms (AWS/Azure/GCP)",
+   "kind": "tool",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "working with cloud providers",
+    "deploying to the cloud"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Monitoring & Observability (Prometheus/Grafana)",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "tracking system metrics",
+    "setting up dashboards and alerts",
+    "observability tools for infrastructure"
+   ]
+  },
+  {
+   "gap": "Bash Scripting",
+   "kind": "tool",
+   "concepts": [
+    "Scripting"
+   ],
+   "phrases": [
+    "writing shell scripts",
+    "automating command line tasks"
+   ]
+  },
+  {
+   "gap": "GitOps (Argo CD)",
+   "kind": "skill",
+   "concepts": [
+    "CI/CD"
+   ],
+   "phrases": [
+    "declarative deployment workflows",
+    "git-based continuous delivery",
+    "automated cluster synchronization"
+   ]
+  },
+  {
+   "gap": "Site Reliability Engineering (SLIs/SLOs/Incident Management)",
+   "kind": "skill",
+   "concepts": [
+    "Incident Response"
+   ],
+   "phrases": [
+    "defining service level objectives",
+    "reliability engineering practices",
+    "managing production incidents"
+   ]
+  }
+ ]
+}

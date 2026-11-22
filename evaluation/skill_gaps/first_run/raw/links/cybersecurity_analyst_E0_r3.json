@@ -1,0 +1,141 @@
+{
+ "goal": "cybersecurity_analyst",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "SIEM",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "log monitoring and alerting",
+    "security event correlation",
+    "threat detection platform"
+   ]
+  },
+  {
+   "gap": "Vulnerability Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Risk Assessment"
+   ],
+   "phrases": [
+    "identifying system weaknesses",
+    "vulnerability scanning techniques",
+    "security gap analysis"
+   ]
+  },
+  {
+   "gap": "Penetration Testing",
+   "kind": "skill",
+   "concepts": [
+    "Penetration Testing"
+   ],
+   "phrases": [
+    "simulated cyberattacks",
+    "ethical hacking techniques",
+    "exploiting system vulnerabilities"
+   ]
+  },
+  {
+   "gap": "Incident Response",
+   "kind": "skill",
+   "concepts": [
+    "Incident Response"
+   ],
+   "phrases": [
+    "handling security breaches",
+    "containment and recovery procedures",
+    "responding to cyber incidents"
+   ]
+  },
+  {
+   "gap": "Firewalls",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "configuring network firewalls",
+    "traffic filtering rules",
+    "perimeter defense setup"
+   ]
+  },
+  {
+   "gap": "Network Security",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "protecting network infrastructure",
+    "securing data transmission",
+    "network defense strategies"
+   ]
+  },
+  {
+   "gap": "SOC Operations",
+   "kind": "skill",
+   "concepts": [
+    "Security Operations"
+   ],
+   "phrases": [
+    "security operations center workflows",
+    "monitoring and triage",
+    "continuous threat monitoring"
+   ]
+  },
+  {
+   "gap": "IAM",
+   "kind": "skill",
+   "concepts": [
+    "Information Security"
+   ],
+   "phrases": [
+    "identity and access management",
+    "user authentication and authorization",
+    "access control policies"
+   ]
+  },
+  {
+   "gap": "EDR",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "endpoint threat detection",
+    "endpoint monitoring tools",
+    "malware response on endpoints"
+   ]
+  },
+  {
+   "gap": "Security Risk Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Risk Assessment"
+   ],
+   "phrases": [
+    "evaluating security risks",
+    "risk identification and analysis",
+    "threat and impact analysis"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Cloud Security",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Security"
+   ],
+   "phrases": [
+    "securing cloud environments",
+    "cloud data protection",
+    "cloud access controls"
+   ]
+  }
+ ]
+}

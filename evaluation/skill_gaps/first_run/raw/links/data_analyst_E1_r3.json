@@ -1,0 +1,111 @@
+{
+ "goal": "data_analyst",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Power BI",
+   "kind": "tool",
+   "concepts": [
+    "Power BI"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Data Visualization",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Dashboard Development",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": [
+    "building interactive dashboards",
+    "visual reporting tools",
+    "dashboard design techniques"
+   ]
+  },
+  {
+   "gap": "Data Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Data Analysis"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Tableau",
+   "kind": "tool",
+   "concepts": [
+    "Tableau"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "R",
+   "kind": "tool",
+   "concepts": [
+    "R"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Machine Learning",
+   "kind": "skill",
+   "concepts": [
+    "Machine Learning"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Pandas",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "data manipulation with python",
+    "working with dataframes",
+    "python data analysis library"
+   ]
+  },
+  {
+   "gap": "NumPy",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "numerical computing in python",
+    "array-based computation",
+    "python scientific computing"
+   ]
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": []
+  }
+ ]
+}

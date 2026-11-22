@@ -1,0 +1,39 @@
+{
+ "case": "ho_11",
+ "arm": "G2E1",
+ "run": 3,
+ "gaps": [
+  "DNS",
+  "DHCP"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Active Directory",
+   "status": "partly"
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "partly"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "partly"
+  },
+  {
+   "skill": "IT Asset Management",
+   "status": "partly"
+  },
+  {
+   "skill": "DNS",
+   "status": "missing"
+  },
+  {
+   "skill": "DHCP",
+   "status": "missing"
+  }
+ ]
+}

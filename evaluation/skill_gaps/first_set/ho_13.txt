@@ -1,0 +1,27 @@
+Khalid Al-Qarni
+Jeddah | khalid.alqarni@example.com | +966 50 000 0000
+
+Computer Science student (University of Jeddah, graduating 2027) who runs more servers at home than is sensible. I want a summer placement in an infrastructure or platform team.
+
+Education
+University of Jeddah, B.Sc. Computer Science, 2023 - 2027 (expected), GPA 4.3/5
+Relevant courses: Operating Systems, Computer Networks, Cloud Computing Fundamentals (elective, in progress)
+
+Things I have built
+Home server (2024 - now)
+- An old office PC running Debian that hosts my family's photo library, a media server and an ad-blocking DNS resolver, each isolated in its own image and started from one compose file.
+- Put everything behind Caddy with automatic TLS certificates so that each service is reachable by name.
+- A nightly cron job written as a shell script copies the photo volume to an external disk and to object storage, and messages me on Telegram if it fails.
+- Graphs of CPU, memory, disk and temperature in Grafana, fed by node exporters; my phone buzzes when the disk passes 85%.
+
+Club website (university computing club, 2025 - now)
+- Infrastructure lead for the club. Moved the club site from uploading files over FTP to a setup where every push to the main branch runs the checks and publishes the site automatically with GitHub Actions.
+- The site runs on a free-tier virtual machine on Oracle Cloud that I configure from a playbook, so it can be rebuilt from nothing in ten minutes.
+- Taught a three-evening "Linux for beginners" workshop to 45 members.
+
+Kubernetes at home (2026)
+- Three Raspberry Pi boards running k3s; redeployed the photo library there to learn deployments, services and ingress. It still breaks more often than the compose version.
+
+Other
+- Private tutor for high-school mathematics at weekends.
+- Arabic (native) and English (fluent).

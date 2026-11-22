@@ -1,0 +1,34 @@
+{
+ "goal": "erp_consultant",
+ "extractor": "E0",
+ "run": 2,
+ "postings": 20,
+ "rawNames": [
+  "SAP S/4HANA",
+  "SAP MM/SD/FI Modules",
+  "Oracle Cloud ERP",
+  "ABAP",
+  "PL/SQL",
+  "SAP Implementation (Full Lifecycle)",
+  "Oracle Integration Cloud (OIC)",
+  "Microsoft Dynamics 365",
+  "SAP Fiori",
+  "Functional/Technical Specification Documentation",
+  "Data Migration",
+  "Stakeholder Management"
+ ],
+ "names": [
+  "SAP S/4HANA",
+  "SAP MM/SD/FI Modules",
+  "Oracle Cloud ERP",
+  "ABAP",
+  "PL/SQL",
+  "SAP Implementation (Full Lifecycle)",
+  "Oracle Integration Cloud (OIC)",
+  "Microsoft Dynamics 365",
+  "SAP Fiori",
+  "Functional/Technical Specification Documentation",
+  "Data Migration",
+  "Stakeholder Management"
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "goal": "data_analyst",
+ "extractor": "E0",
+ "run": 2,
+ "links": [
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "writing SQL queries",
+    "querying relational data"
+   ]
+  },
+  {
+   "gap": "Power BI",
+   "kind": "tool",
+   "concepts": [
+    "Power BI"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Data Visualization",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": [
+    "creating charts and graphs",
+    "visualizing data insights"
+   ]
+  },
+  {
+   "gap": "Dashboard Development",
+   "kind": "skill",
+   "concepts": [
+    "Data Visualization"
+   ],
+   "phrases": [
+    "building interactive dashboards",
+    "designing data dashboards"
+   ]
+  },
+  {
+   "gap": "Data Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Data Analysis"
+   ],
+   "phrases": [
+    "analyzing datasets",
+    "extracting insights from data"
+   ]
+  },
+  {
+   "gap": "Tableau",
+   "kind": "tool",
+   "concepts": [
+    "Tableau"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "managing stakeholder expectations",
+    "engaging with stakeholders"
+   ]
+  },
+  {
+   "gap": "Machine Learning",
+   "kind": "skill",
+   "concepts": [
+    "Machine Learning"
+   ],
+   "phrases": [
+    "building predictive models",
+    "training ML algorithms"
+   ]
+  },
+  {
+   "gap": "Data Governance",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "managing data quality",
+    "establishing data policies",
+    "ensuring data compliance"
+   ]
+  },
+  {
+   "gap": "R",
+   "kind": "tool",
+   "concepts": [
+    "R"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Relational Databases",
+   "kind": "skill",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "designing relational schemas",
+    "understanding table relationships"
+   ]
+  }
+ ]
+}

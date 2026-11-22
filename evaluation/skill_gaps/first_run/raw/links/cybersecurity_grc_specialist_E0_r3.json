@@ -1,0 +1,123 @@
+{
+ "goal": "cybersecurity_grc_specialist",
+ "extractor": "E0",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Cybersecurity Risk Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Risk Assessment"
+   ],
+   "phrases": [
+    "evaluating security risks",
+    "identifying cyber threats and impact",
+    "assessing information security risk"
+   ]
+  },
+  {
+   "gap": "NCA Essential Cybersecurity Controls (ECC)",
+   "kind": "certification",
+   "concepts": [
+    "NCA ECC"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "SAMA Cybersecurity Framework (CSF)",
+   "kind": "certification",
+   "concepts": [
+    "SAMA Regulations"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "ISO 27001",
+   "kind": "certification",
+   "concepts": [
+    "ISO 27001"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Cybersecurity Governance Frameworks & Policy Development",
+   "kind": "skill",
+   "concepts": [
+    "Policies and Procedures"
+   ],
+   "phrases": [
+    "developing security policies",
+    "building governance frameworks",
+    "writing information security policy"
+   ]
+  },
+  {
+   "gap": "Risk Register Management",
+   "kind": "skill",
+   "concepts": [
+    "Risk Management"
+   ],
+   "phrases": [
+    "maintaining a risk register",
+    "tracking identified risks",
+    "documenting organizational risks"
+   ]
+  },
+  {
+   "gap": "Compliance Audits & Regulatory Assessments",
+   "kind": "skill",
+   "concepts": [
+    "Audit"
+   ],
+   "phrases": [
+    "conducting compliance audits",
+    "regulatory assessment techniques",
+    "evaluating regulatory adherence"
+   ]
+  },
+  {
+   "gap": "Third-Party / Vendor Risk Management",
+   "kind": "skill",
+   "concepts": [
+    "Risk Management"
+   ],
+   "phrases": [
+    "assessing vendor security risk",
+    "managing third-party risk",
+    "supplier risk evaluation"
+   ]
+  },
+  {
+   "gap": "KPI/KRI Development & Reporting",
+   "kind": "skill",
+   "concepts": [
+    "KPIs"
+   ],
+   "phrases": [
+    "defining key risk indicators",
+    "building performance metrics",
+    "reporting on security metrics"
+   ]
+  },
+  {
+   "gap": "GRC Platforms (Archer, ServiceNow GRC, OneTrust, CyberArrow)",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "NIST Framework",
+   "kind": "tool",
+   "concepts": [
+    "NIST CSF"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "PCI DSS",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  }
+ ]
+}

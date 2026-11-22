@@ -1,0 +1,19 @@
+{
+ "case": "ho_08",
+ "arm": "G0E1",
+ "run": 2,
+ "gaps": [
+  "LAN/WAN",
+  "CCNA",
+  "Firewall Management",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto",
+  "BGP"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

@@ -1,0 +1,47 @@
+{
+ "label": "ho_c_03",
+ "cv": "ho_c",
+ "version": "old",
+ "run": 1,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:13:59.779238",
+ "finishedAt": "2026-11-22T02:14:14.975602",
+ "seconds": 15.196,
+ "inputTokens": 2037,
+ "outputTokens": 1459,
+ "decoded": {
+  "cvStructure": [],
+  "sectionOrganization": [
+   {
+    "issue": "The Projects section lists 'Riyadh Housing Prices Analysis (2024)' before 'Student Attendance Dashboard (graduation project, 2025)', which is not in reverse chronological order.",
+    "suggestion": "Move the Student Attendance Dashboard (2025) above the Riyadh Housing Prices Analysis (2024) so the most recent project appears first."
+   }
+  ],
+  "keywordUsage": [],
+  "readability": [
+   {
+    "issue": "The bullet 'Worked on data cleaning tasks for the team' under the Junior Data Analyst role uses a weak verb and gives no measurable outcome, unlike the other bullets in the CV.",
+    "suggestion": "Rewrite it with a strong action verb and a specific result, for example 'Cleaned and standardized sales records across 38 stores to improve dashboard accuracy.'"
+   }
+  ],
+  "contentFormatting": []
+ },
+ "areas": {
+  "cvStructure": [],
+  "sectionOrganization": [
+   {
+    "issue": "The Projects section lists 'Riyadh Housing Prices Analysis (2024)' before 'Student Attendance Dashboard (graduation project, 2025)', which is not in reverse chronological order.",
+    "suggestion": "Move the Student Attendance Dashboard (2025) above the Riyadh Housing Prices Analysis (2024) so the most recent project appears first."
+   }
+  ],
+  "keywordUsage": [],
+  "readability": [
+   {
+    "issue": "The bullet 'Worked on data cleaning tasks for the team' under the Junior Data Analyst role uses a weak verb and gives no measurable outcome, unlike the other bullets in the CV.",
+    "suggestion": "Rewrite it with a strong action verb and a specific result, for example 'Cleaned and standardized sales records across 38 stores to improve dashboard accuracy.'"
+   }
+  ],
+  "contentFormatting": []
+ }
+}

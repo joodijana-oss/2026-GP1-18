@@ -1,0 +1,15 @@
+The freeze matches (tools/gap_eval/freeze_r2.json).
+Amendment 1 of rule 7.2 (d) matches (tools/gap_eval/freeze_r2_amendment_timing.json, sha256 8cbd0e11ce14a2b8d8bea843ebeb35ea28ceadfb2e57c103412c60682ccb24eb).
+run 1 of 5 finished, exit 0
+run 2 of 5 finished, exit 0
+run 3 of 5 finished, exit 0
+run 4 of 5 finished, exit 0
+run 5 of 5 finished, exit 0
+TIMING (rule 7.2 d, amendment 1) of test/fixtures/opportunity_eval_personas_heldout.json
+  first-call ratios: 0.9976, 0.9972, 1.0017, 1.0290, 1.0952
+  ratios with the index built: 1.0358, 1.0847, 1.2264, 1.1227, 1.0554
+  median, first call: 1.0017 (full precision 1.001699259011644), limit at most 1.10
+  median, index built: 1.0847 (full precision 1.08471871259476), limit at most 2.00
+  status: pass
+  persona part the same as the guard file: yes
+Timing file: build/gap_eval/final_r3/guards/timing_heldout.json (sha256 365d52c0376c93b0002ef8cfb3dacf40ea009c6d9054b8a1b8cb3d8d107755b7). It is measured once: nothing is run again.

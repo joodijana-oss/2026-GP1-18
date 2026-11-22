@@ -1,0 +1,65 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Built a complete end-to-end image classification pipeline from data collection to deployment",
+   "Applied rigorous evaluation methodology, including per-class precision/recall, confusion matrix, and holdout testing on an unseen farm",
+   "Addressed class imbalance using data augmentation techniques",
+   "Experience with transfer learning and model optimization for resource-constrained deployment (offline, under a second inference on mid-range Android phone)",
+   "Conducted systematic hyperparameter tuning across multiple configurations",
+   "Compared multiple machine learning algorithms (linear regression, random forest, gradient boosting) on a real-world dataset",
+   "Real-world deployment and field testing of a model with actual users (eleven farmers)",
+   "Recognized academically with First Class Honours and 2nd prize at undergraduate research day",
+   "Community engagement through teaching coding to young girls",
+   "Bilingual with strong English proficiency (IELTS 7.0)"
+  ],
+  "currentSkills": [
+   "Python",
+   "PyTorch",
+   "scikit-learn",
+   "NumPy",
+   "Git",
+   "Machine Learning",
+   "Deep Learning",
+   "Transfer Learning",
+   "Image Processing",
+   "Data Augmentation",
+   "Model Evaluation",
+   "Hyperparameter Tuning",
+   "Model Deployment",
+   "Data Collection",
+   "Data Labeling",
+   "Data Analysis",
+   "Regression Analysis",
+   "Random Forest",
+   "Gradient Boosting",
+   "Statistics"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "King Khalid University, Abha",
+    "year": "Sep 2022 - 06/2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Asir Leaf: telling coffee-plant diseases apart from phone photos",
+    "description": "Collected and labelled 6,400 leaf photos with farmers' cooperatives and an agronomist, cleaned the dataset by removing blurred images, and balanced classes using augmentation (rotating, flipping, cropping). Used transfer learning in PyTorch by retraining the last layers of a pretrained network. Evaluated the model with precision and recall per disease and a confusion matrix, using a held-out farm's photos never seen during training. Tuned hyperparameters across 24 combinations of learning rate, batch size, and frozen layers based on validation performance. Compressed the final model for fast (<1 second) offline inference on a mid-range Android phone and deployed it in an app used by eleven farmers for a month. Achieved 93% correct classification across five disease classes; received an A+ and a 2nd prize at the university's 2026 undergraduate research day."
+   },
+   {
+    "name": "Used-car prices (Artificial Intelligence course)",
+    "description": "Predicted asking prices from 18,000 Saudi classified adverts by comparing linear regression, random forest, and gradient boosting models; the boosted model achieved an average error of 9%."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Volunteer Coding Instructor",
+    "organization": "Neighbourhood centre, Abha",
+    "duration": "Summer 2024",
+    "description": "Taught a four-week 'first steps in coding' class for girls aged 12 to 14."
+   }
+  ]
+ }
+}

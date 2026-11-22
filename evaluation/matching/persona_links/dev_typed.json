@@ -1,0 +1,2540 @@
+{
+ "personas": "test/fixtures/opportunity_eval_personas.json",
+ "request": "typed",
+ "runs": 3,
+ "generatedOn": "2026-11-21",
+ "links": [
+  {
+   "persona_data_analyst": [
+    {
+     "gap": "SQL",
+     "kind": "tool",
+     "concepts": [
+      "Databases and SQL"
+     ],
+     "phrases": [],
+     "same": [
+      "Databases and SQL"
+     ],
+     "terms": [
+      "SQL",
+      "structured query language",
+      "queries"
+     ]
+    },
+    {
+     "gap": "Power BI",
+     "kind": "tool",
+     "concepts": [
+      "Power BI"
+     ],
+     "phrases": [],
+     "same": [
+      "Power BI"
+     ],
+     "terms": [
+      "Power BI",
+      "DAX",
+      "Power Query"
+     ]
+    },
+    {
+     "gap": "Python",
+     "kind": "tool",
+     "concepts": [
+      "Python"
+     ],
+     "phrases": [],
+     "same": [
+      "Python"
+     ],
+     "terms": [
+      "Python",
+      "pandas",
+      "numpy"
+     ]
+    },
+    {
+     "gap": "Data Visualization",
+     "kind": "skill",
+     "concepts": [
+      "Data Visualization"
+     ],
+     "phrases": [],
+     "same": [
+      "Data Visualization"
+     ],
+     "terms": [
+      "data visualization",
+      "charts",
+      "dashboards"
+     ]
+    },
+    {
+     "gap": "Tableau",
+     "kind": "tool",
+     "concepts": [
+      "Tableau"
+     ],
+     "phrases": [],
+     "same": [
+      "Tableau"
+     ],
+     "terms": [
+      "Tableau",
+      "dashboards",
+      "data viz"
+     ]
+    },
+    {
+     "gap": "Excel",
+     "kind": "tool",
+     "concepts": [
+      "Excel"
+     ],
+     "phrases": [],
+     "same": [
+      "Excel"
+     ],
+     "terms": [
+      "Excel",
+      "spreadsheets",
+      "pivot tables"
+     ]
+    },
+    {
+     "gap": "ETL",
+     "kind": "skill",
+     "concepts": [
+      "ETL"
+     ],
+     "phrases": [],
+     "same": [
+      "ETL"
+     ],
+     "terms": [
+      "ETL",
+      "extract transform load",
+      "data pipelines"
+     ]
+    }
+   ],
+   "persona_cloud_devops_engineer": [
+    {
+     "gap": "Kubernetes",
+     "kind": "tool",
+     "concepts": [
+      "Kubernetes"
+     ],
+     "phrases": [],
+     "same": [
+      "Kubernetes"
+     ],
+     "terms": [
+      "Kubernetes",
+      "K8s",
+      "container orchestration"
+     ]
+    },
+    {
+     "gap": "Terraform",
+     "kind": "tool",
+     "concepts": [
+      "Terraform"
+     ],
+     "phrases": [],
+     "same": [
+      "Terraform"
+     ],
+     "terms": [
+      "Terraform",
+      "infrastructure as code",
+      "HCL"
+     ]
+    },
+    {
+     "gap": "Docker",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Docker",
+      "containerization",
+      "Dockerfile",
+      "images"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "CI/CD",
+      "continuous integration",
+      "continuous deployment",
+      "pipelines"
+     ]
+    },
+    {
+     "gap": "Azure",
+     "kind": "tool",
+     "concepts": [
+      "Azure"
+     ],
+     "phrases": [],
+     "same": [
+      "Azure"
+     ],
+     "terms": [
+      "Azure",
+      "Microsoft Azure",
+      "Azure cloud"
+     ]
+    },
+    {
+     "gap": "Ansible",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Ansible",
+      "configuration management",
+      "playbooks"
+     ]
+    },
+    {
+     "gap": "Monitoring",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "monitoring",
+      "observability",
+      "alerting",
+      "metrics"
+     ]
+    }
+   ],
+   "persona_cybersecurity_analyst": [
+    {
+     "gap": "Incident Response",
+     "kind": "skill",
+     "concepts": [
+      "Incident Response"
+     ],
+     "phrases": [],
+     "same": [
+      "Incident Response"
+     ],
+     "terms": [
+      "incident response",
+      "IR plan",
+      "security incident handling",
+      "breach response"
+     ]
+    },
+    {
+     "gap": "SIEM",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "SIEM",
+      "log correlation",
+      "Splunk"
+     ]
+    },
+    {
+     "gap": "Vulnerability Management",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "vulnerability management",
+      "vulnerability scanning",
+      "patch management",
+      "CVE"
+     ]
+    },
+    {
+     "gap": "Network Security",
+     "kind": "skill",
+     "concepts": [
+      "Network Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Network Security"
+     ],
+     "terms": [
+      "network security",
+      "firewalls",
+      "intrusion detection",
+      "IDS/IPS"
+     ]
+    },
+    {
+     "gap": "Threat Hunting",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "threat hunting",
+      "threat detection",
+      "proactive defense",
+      "indicators of compromise"
+     ]
+    },
+    {
+     "gap": "Splunk",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Splunk",
+      "log analysis",
+      "SIEM"
+     ]
+    },
+    {
+     "gap": "Penetration Testing",
+     "kind": "skill",
+     "concepts": [
+      "Penetration Testing"
+     ],
+     "phrases": [],
+     "same": [
+      "Penetration Testing"
+     ],
+     "terms": [
+      "penetration testing",
+      "pen testing",
+      "ethical hacking",
+      "exploitation"
+     ]
+    }
+   ],
+   "persona_software_engineer": [
+    {
+     "gap": "REST API",
+     "kind": "skill",
+     "concepts": [
+      "APIs"
+     ],
+     "phrases": [],
+     "same": [
+      "APIs"
+     ],
+     "terms": [
+      "REST API",
+      "RESTful services",
+      "API design"
+     ]
+    },
+    {
+     "gap": "Software Testing",
+     "kind": "skill",
+     "concepts": [
+      "Software Testing"
+     ],
+     "phrases": [],
+     "same": [
+      "Software Testing"
+     ],
+     "terms": [
+      "software testing",
+      "test cases",
+      "QA"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "continuous integration",
+      "continuous deployment",
+      "pipelines"
+     ]
+    },
+    {
+     "gap": "Git",
+     "kind": "tool",
+     "concepts": [
+      "Git"
+     ],
+     "phrases": [],
+     "same": [
+      "Git"
+     ],
+     "terms": [
+      "git",
+      "version control",
+      "source control"
+     ]
+    },
+    {
+     "gap": "Agile",
+     "kind": "skill",
+     "concepts": [
+      "Agile"
+     ],
+     "phrases": [],
+     "same": [
+      "Agile"
+     ],
+     "terms": [
+      "agile",
+      "scrum",
+      "sprint"
+     ]
+    },
+    {
+     "gap": "Docker",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "docker",
+      "containerization",
+      "container images"
+     ]
+    },
+    {
+     "gap": "Microservices",
+     "kind": "skill",
+     "concepts": [
+      "System Design"
+     ],
+     "phrases": [],
+     "terms": [
+      "microservices",
+      "service-oriented architecture",
+      "distributed systems"
+     ]
+    },
+    {
+     "gap": "Design Patterns",
+     "kind": "skill",
+     "concepts": [
+      "Software Design Patterns"
+     ],
+     "phrases": [],
+     "same": [
+      "Software Design Patterns"
+     ],
+     "terms": [
+      "design patterns",
+      "software architecture patterns",
+      "SOLID"
+     ]
+    }
+   ],
+   "persona_ai_ml_engineer": [
+    {
+     "gap": "LLM",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "terms": [
+      "large language model",
+      "LLM",
+      "transformer models"
+     ]
+    },
+    {
+     "gap": "Generative AI",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "same": [
+      "Generative AI"
+     ],
+     "terms": [
+      "generative AI",
+      "GenAI",
+      "diffusion models"
+     ]
+    },
+    {
+     "gap": "PyTorch",
+     "kind": "tool",
+     "concepts": [
+      "PyTorch"
+     ],
+     "phrases": [],
+     "same": [
+      "PyTorch"
+     ],
+     "terms": [
+      "PyTorch"
+     ]
+    },
+    {
+     "gap": "MLOps",
+     "kind": "skill",
+     "concepts": [
+      "MLOps"
+     ],
+     "phrases": [],
+     "same": [
+      "MLOps"
+     ],
+     "terms": [
+      "MLOps",
+      "model deployment",
+      "ML pipelines"
+     ]
+    },
+    {
+     "gap": "Deep Learning",
+     "kind": "skill",
+     "concepts": [
+      "Deep Learning"
+     ],
+     "phrases": [],
+     "same": [
+      "Deep Learning"
+     ],
+     "terms": [
+      "deep learning",
+      "neural networks",
+      "CNN",
+      "RNN"
+     ]
+    },
+    {
+     "gap": "NLP",
+     "kind": "skill",
+     "concepts": [
+      "Natural Language Processing"
+     ],
+     "phrases": [],
+     "same": [
+      "Natural Language Processing"
+     ],
+     "terms": [
+      "NLP",
+      "natural language processing",
+      "text processing"
+     ]
+    },
+    {
+     "gap": "Computer Vision",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "computer vision",
+      "image recognition",
+      "object detection"
+     ]
+    }
+   ],
+   "persona_ui_ux_designer": [
+    {
+     "gap": "Figma",
+     "kind": "tool",
+     "concepts": [
+      "Figma"
+     ],
+     "phrases": [],
+     "same": [
+      "Figma"
+     ],
+     "terms": [
+      "Figma",
+      "wireframing tool",
+      "prototyping tool"
+     ]
+    },
+    {
+     "gap": "Prototyping",
+     "kind": "skill",
+     "concepts": [
+      "Prototyping"
+     ],
+     "phrases": [],
+     "same": [
+      "Prototyping"
+     ],
+     "terms": [
+      "prototyping",
+      "mockups",
+      "wireframe prototype"
+     ]
+    },
+    {
+     "gap": "User Research",
+     "kind": "skill",
+     "concepts": [
+      "UX Research"
+     ],
+     "phrases": [],
+     "same": [
+      "UX Research"
+     ],
+     "terms": [
+      "user research",
+      "user interviews",
+      "usability study"
+     ]
+    },
+    {
+     "gap": "Usability Testing",
+     "kind": "skill",
+     "concepts": [
+      "UX Research"
+     ],
+     "phrases": [],
+     "terms": [
+      "usability testing",
+      "user testing",
+      "usability study"
+     ]
+    },
+    {
+     "gap": "Wireframing",
+     "kind": "skill",
+     "concepts": [
+      "UI Design"
+     ],
+     "phrases": [],
+     "terms": [
+      "wireframing",
+      "wireframes",
+      "low-fidelity design"
+     ]
+    },
+    {
+     "gap": "Design Systems",
+     "kind": "skill",
+     "concepts": [
+      "UI Design"
+     ],
+     "phrases": [],
+     "terms": [
+      "design systems",
+      "component library",
+      "style guide"
+     ]
+    },
+    {
+     "gap": "Accessibility",
+     "kind": "skill",
+     "concepts": [
+      "Accessibility"
+     ],
+     "phrases": [],
+     "same": [
+      "Accessibility"
+     ],
+     "terms": [
+      "accessibility",
+      "WCAG",
+      "inclusive design"
+     ]
+    }
+   ],
+   "persona_network_engineer": [
+    {
+     "gap": "Troubleshooting",
+     "kind": "skill",
+     "concepts": [
+      "Troubleshooting"
+     ],
+     "phrases": [],
+     "same": [
+      "Troubleshooting"
+     ],
+     "terms": [
+      "troubleshooting",
+      "problem diagnosis",
+      "issue resolution"
+     ]
+    },
+    {
+     "gap": "Firewall",
+     "kind": "tool",
+     "concepts": [
+      "Network Security"
+     ],
+     "phrases": [],
+     "terms": [
+      "firewall",
+      "firewall configuration",
+      "firewall rules"
+     ]
+    },
+    {
+     "gap": "Routing",
+     "kind": "skill",
+     "concepts": [
+      "Routing and Switching"
+     ],
+     "phrases": [],
+     "same": [
+      "Routing and Switching"
+     ],
+     "terms": [
+      "routing",
+      "routing protocols",
+      "BGP",
+      "OSPF"
+     ]
+    },
+    {
+     "gap": "Network Security",
+     "kind": "skill",
+     "concepts": [
+      "Network Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Network Security"
+     ],
+     "terms": [
+      "network security",
+      "firewalls",
+      "intrusion detection"
+     ]
+    },
+    {
+     "gap": "VPN",
+     "kind": "tool",
+     "concepts": [
+      "Network Security"
+     ],
+     "phrases": [],
+     "terms": [
+      "VPN",
+      "virtual private network",
+      "IPsec",
+      "tunneling"
+     ]
+    },
+    {
+     "gap": "Wireless",
+     "kind": "skill",
+     "concepts": [
+      "Wireless Networks"
+     ],
+     "phrases": [],
+     "same": [
+      "Wireless Networks"
+     ],
+     "terms": [
+      "wireless",
+      "Wi-Fi",
+      "WLAN"
+     ]
+    },
+    {
+     "gap": "Network Automation",
+     "kind": "skill",
+     "concepts": [
+      "Network Automation"
+     ],
+     "phrases": [],
+     "same": [
+      "Network Automation"
+     ],
+     "terms": [
+      "network automation",
+      "scripting network",
+      "Ansible network"
+     ]
+    }
+   ],
+   "persona_database_administrator": [
+    {
+     "gap": "Oracle",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Oracle Database",
+      "Oracle RDBMS",
+      "PL/SQL"
+     ]
+    },
+    {
+     "gap": "SQL Server",
+     "kind": "tool",
+     "concepts": [
+      "SQL Server"
+     ],
+     "phrases": [],
+     "same": [
+      "SQL Server"
+     ]
+    },
+    {
+     "gap": "Performance Tuning",
+     "kind": "skill",
+     "concepts": [
+      "Performance Tuning"
+     ],
+     "phrases": [],
+     "same": [
+      "Performance Tuning"
+     ]
+    },
+    {
+     "gap": "Backup and Recovery",
+     "kind": "skill",
+     "concepts": [
+      "Backup and Recovery"
+     ],
+     "phrases": [],
+     "same": [
+      "Backup and Recovery"
+     ]
+    },
+    {
+     "gap": "PostgreSQL",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "PostgreSQL",
+      "Postgres"
+     ]
+    },
+    {
+     "gap": "High Availability",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "high availability",
+      "failover",
+      "clustering",
+      "uptime"
+     ]
+    },
+    {
+     "gap": "Database Security",
+     "kind": "skill",
+     "concepts": [
+      "Database Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Database Security"
+     ]
+    },
+    {
+     "gap": "NoSQL",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "NoSQL",
+      "MongoDB",
+      "document database",
+      "key-value store"
+     ]
+    }
+   ]
+  },
+  {
+   "persona_data_analyst": [
+    {
+     "gap": "SQL",
+     "kind": "tool",
+     "concepts": [
+      "Databases and SQL"
+     ],
+     "phrases": [],
+     "same": [
+      "Databases and SQL"
+     ],
+     "terms": [
+      "SQL",
+      "queries",
+      "relational database"
+     ]
+    },
+    {
+     "gap": "Power BI",
+     "kind": "tool",
+     "concepts": [
+      "Power BI"
+     ],
+     "phrases": [],
+     "same": [
+      "Power BI"
+     ],
+     "terms": [
+      "Power BI",
+      "DAX",
+      "Power Query"
+     ]
+    },
+    {
+     "gap": "Python",
+     "kind": "tool",
+     "concepts": [
+      "Python"
+     ],
+     "phrases": [],
+     "same": [
+      "Python"
+     ],
+     "terms": [
+      "Python",
+      "python programming"
+     ]
+    },
+    {
+     "gap": "Data Visualization",
+     "kind": "skill",
+     "concepts": [
+      "Data Visualization"
+     ],
+     "phrases": [],
+     "same": [
+      "Data Visualization"
+     ],
+     "terms": [
+      "data visualization",
+      "charts",
+      "dashboards"
+     ]
+    },
+    {
+     "gap": "Tableau",
+     "kind": "tool",
+     "concepts": [
+      "Tableau"
+     ],
+     "phrases": [],
+     "same": [
+      "Tableau"
+     ],
+     "terms": [
+      "Tableau",
+      "Tableau Desktop"
+     ]
+    },
+    {
+     "gap": "Excel",
+     "kind": "tool",
+     "concepts": [
+      "Excel"
+     ],
+     "phrases": [],
+     "same": [
+      "Excel"
+     ],
+     "terms": [
+      "Excel",
+      "spreadsheets",
+      "pivot tables"
+     ]
+    },
+    {
+     "gap": "ETL",
+     "kind": "skill",
+     "concepts": [
+      "ETL"
+     ],
+     "phrases": [],
+     "same": [
+      "ETL"
+     ],
+     "terms": [
+      "ETL",
+      "extract transform load",
+      "data integration"
+     ]
+    }
+   ],
+   "persona_cybersecurity_analyst": [
+    {
+     "gap": "Incident Response",
+     "kind": "skill",
+     "concepts": [
+      "Incident Response"
+     ],
+     "phrases": [],
+     "same": [
+      "Incident Response"
+     ],
+     "terms": [
+      "incident response",
+      "IR",
+      "security incident",
+      "breach response"
+     ]
+    },
+    {
+     "gap": "SIEM",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "SIEM",
+      "log correlation",
+      "Splunk"
+     ]
+    },
+    {
+     "gap": "Vulnerability Management",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "vulnerability management",
+      "vulnerability scanning",
+      "patch management",
+      "vulnerability assessment"
+     ]
+    },
+    {
+     "gap": "Network Security",
+     "kind": "skill",
+     "concepts": [
+      "Network Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Network Security"
+     ],
+     "terms": [
+      "network security",
+      "firewalls",
+      "intrusion detection",
+      "VPN"
+     ]
+    },
+    {
+     "gap": "Threat Hunting",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "threat hunting",
+      "threat detection",
+      "proactive detection",
+      "indicators of compromise"
+     ]
+    },
+    {
+     "gap": "Splunk",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Splunk",
+      "SPL",
+      "log analysis",
+      "SIEM"
+     ]
+    },
+    {
+     "gap": "Penetration Testing",
+     "kind": "skill",
+     "concepts": [
+      "Penetration Testing"
+     ],
+     "phrases": [],
+     "same": [
+      "Penetration Testing"
+     ],
+     "terms": [
+      "penetration testing",
+      "pen test",
+      "ethical hacking",
+      "vulnerability exploitation"
+     ]
+    }
+   ],
+   "persona_cloud_devops_engineer": [
+    {
+     "gap": "Kubernetes",
+     "kind": "tool",
+     "concepts": [
+      "Kubernetes"
+     ],
+     "phrases": [],
+     "same": [
+      "Kubernetes"
+     ],
+     "terms": [
+      "Kubernetes",
+      "K8s",
+      "container orchestration"
+     ]
+    },
+    {
+     "gap": "Terraform",
+     "kind": "tool",
+     "concepts": [
+      "Terraform"
+     ],
+     "phrases": [],
+     "same": [
+      "Terraform"
+     ],
+     "terms": [
+      "Terraform",
+      "infrastructure as code",
+      "HCL"
+     ]
+    },
+    {
+     "gap": "Docker",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Docker",
+      "containerization",
+      "Dockerfile",
+      "containers"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "CI/CD",
+      "continuous integration",
+      "continuous deployment",
+      "pipeline"
+     ]
+    },
+    {
+     "gap": "Azure",
+     "kind": "tool",
+     "concepts": [
+      "Azure"
+     ],
+     "phrases": [],
+     "same": [
+      "Azure"
+     ],
+     "terms": [
+      "Azure",
+      "Microsoft Azure",
+      "Azure cloud"
+     ]
+    },
+    {
+     "gap": "Ansible",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Ansible",
+      "configuration management",
+      "playbooks"
+     ]
+    },
+    {
+     "gap": "Monitoring",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "monitoring",
+      "observability",
+      "alerting",
+      "metrics"
+     ]
+    }
+   ],
+   "persona_software_engineer": [
+    {
+     "gap": "REST API",
+     "kind": "tool",
+     "concepts": [
+      "APIs"
+     ],
+     "phrases": [],
+     "same": [
+      "APIs"
+     ],
+     "terms": [
+      "REST API",
+      "RESTful services",
+      "API design"
+     ]
+    },
+    {
+     "gap": "Software Testing",
+     "kind": "skill",
+     "concepts": [
+      "Software Testing"
+     ],
+     "phrases": [],
+     "same": [
+      "Software Testing"
+     ],
+     "terms": [
+      "software testing",
+      "QA",
+      "test methodology"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "continuous integration",
+      "continuous delivery",
+      "CI/CD pipeline"
+     ]
+    },
+    {
+     "gap": "Git",
+     "kind": "tool",
+     "concepts": [
+      "Git"
+     ],
+     "phrases": [],
+     "same": [
+      "Git"
+     ],
+     "terms": [
+      "Git",
+      "version control",
+      "source control"
+     ]
+    },
+    {
+     "gap": "Agile",
+     "kind": "skill",
+     "concepts": [
+      "Agile"
+     ],
+     "phrases": [],
+     "same": [
+      "Agile"
+     ],
+     "terms": [
+      "Agile",
+      "Scrum",
+      "sprint"
+     ]
+    },
+    {
+     "gap": "Docker",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Docker",
+      "containerization",
+      "Dockerfile"
+     ]
+    },
+    {
+     "gap": "Microservices",
+     "kind": "skill",
+     "concepts": [
+      "System Design"
+     ],
+     "phrases": [],
+     "terms": [
+      "microservices",
+      "service-oriented architecture",
+      "distributed systems"
+     ]
+    },
+    {
+     "gap": "Design Patterns",
+     "kind": "skill",
+     "concepts": [
+      "Software Design Patterns"
+     ],
+     "phrases": [],
+     "same": [
+      "Software Design Patterns"
+     ],
+     "terms": [
+      "design patterns",
+      "software architecture patterns",
+      "singleton factory"
+     ]
+    }
+   ],
+   "persona_ui_ux_designer": [
+    {
+     "gap": "Figma",
+     "kind": "tool",
+     "concepts": [
+      "Figma"
+     ],
+     "phrases": [],
+     "same": [
+      "Figma"
+     ],
+     "terms": [
+      "Figma"
+     ]
+    },
+    {
+     "gap": "Prototyping",
+     "kind": "skill",
+     "concepts": [
+      "Prototyping"
+     ],
+     "phrases": [],
+     "same": [
+      "Prototyping"
+     ],
+     "terms": [
+      "prototype",
+      "prototyping",
+      "mockup"
+     ]
+    },
+    {
+     "gap": "User Research",
+     "kind": "skill",
+     "concepts": [
+      "UX Research"
+     ],
+     "phrases": [],
+     "same": [
+      "UX Research"
+     ],
+     "terms": [
+      "user research",
+      "user interviews",
+      "usability research"
+     ]
+    },
+    {
+     "gap": "Usability Testing",
+     "kind": "skill",
+     "concepts": [
+      "UX Research"
+     ],
+     "phrases": [],
+     "terms": [
+      "usability testing",
+      "user testing",
+      "usability study"
+     ]
+    },
+    {
+     "gap": "Wireframing",
+     "kind": "skill",
+     "concepts": [
+      "UI Design"
+     ],
+     "phrases": [],
+     "terms": [
+      "wireframe",
+      "wireframing",
+      "low-fidelity design"
+     ]
+    },
+    {
+     "gap": "Design Systems",
+     "kind": "skill",
+     "concepts": [
+      "UI Design"
+     ],
+     "phrases": [],
+     "terms": [
+      "design system",
+      "component library",
+      "style guide"
+     ]
+    },
+    {
+     "gap": "Accessibility",
+     "kind": "skill",
+     "concepts": [
+      "Accessibility"
+     ],
+     "phrases": [],
+     "same": [
+      "Accessibility"
+     ],
+     "terms": [
+      "accessibility",
+      "WCAG",
+      "inclusive design"
+     ]
+    }
+   ],
+   "persona_ai_ml_engineer": [
+    {
+     "gap": "LLM",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "terms": [
+      "large language model",
+      "LLM",
+      "transformer models",
+      "foundation models"
+     ]
+    },
+    {
+     "gap": "Generative AI",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "same": [
+      "Generative AI"
+     ]
+    },
+    {
+     "gap": "PyTorch",
+     "kind": "tool",
+     "concepts": [
+      "PyTorch"
+     ],
+     "phrases": [],
+     "same": [
+      "PyTorch"
+     ]
+    },
+    {
+     "gap": "MLOps",
+     "kind": "skill",
+     "concepts": [
+      "MLOps"
+     ],
+     "phrases": [],
+     "same": [
+      "MLOps"
+     ]
+    },
+    {
+     "gap": "Deep Learning",
+     "kind": "skill",
+     "concepts": [
+      "Deep Learning"
+     ],
+     "phrases": [],
+     "same": [
+      "Deep Learning"
+     ]
+    },
+    {
+     "gap": "NLP",
+     "kind": "skill",
+     "concepts": [
+      "Natural Language Processing"
+     ],
+     "phrases": [],
+     "same": [
+      "Natural Language Processing"
+     ]
+    },
+    {
+     "gap": "Computer Vision",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "computer vision",
+      "image recognition",
+      "object detection",
+      "CNN"
+     ]
+    }
+   ],
+   "persona_network_engineer": [
+    {
+     "gap": "Troubleshooting",
+     "kind": "skill",
+     "concepts": [
+      "Troubleshooting"
+     ],
+     "phrases": [],
+     "same": [
+      "Troubleshooting"
+     ],
+     "terms": [
+      "troubleshooting",
+      "problem diagnosis",
+      "issue resolution"
+     ]
+    },
+    {
+     "gap": "Firewall",
+     "kind": "tool",
+     "concepts": [
+      "Network Security"
+     ],
+     "phrases": [],
+     "terms": [
+      "firewall",
+      "firewall configuration",
+      "packet filtering"
+     ]
+    },
+    {
+     "gap": "Routing",
+     "kind": "skill",
+     "concepts": [
+      "Routing and Switching"
+     ],
+     "phrases": [],
+     "same": [
+      "Routing and Switching"
+     ],
+     "terms": [
+      "routing",
+      "routing protocols",
+      "BGP",
+      "OSPF"
+     ]
+    },
+    {
+     "gap": "Network Security",
+     "kind": "skill",
+     "concepts": [
+      "Network Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Network Security"
+     ],
+     "terms": [
+      "network security",
+      "firewall",
+      "VPN",
+      "intrusion detection"
+     ]
+    },
+    {
+     "gap": "VPN",
+     "kind": "tool",
+     "concepts": [
+      "Network Security"
+     ],
+     "phrases": [],
+     "terms": [
+      "VPN",
+      "virtual private network",
+      "IPSec",
+      "tunneling"
+     ]
+    },
+    {
+     "gap": "Wireless",
+     "kind": "skill",
+     "concepts": [
+      "Wireless Networks"
+     ],
+     "phrases": [],
+     "same": [
+      "Wireless Networks"
+     ],
+     "terms": [
+      "wireless",
+      "Wi-Fi",
+      "wireless networking"
+     ]
+    },
+    {
+     "gap": "Network Automation",
+     "kind": "skill",
+     "concepts": [
+      "Network Automation"
+     ],
+     "phrases": [],
+     "same": [
+      "Network Automation"
+     ],
+     "terms": [
+      "network automation",
+      "automated provisioning",
+      "scripting networks"
+     ]
+    }
+   ],
+   "persona_database_administrator": [
+    {
+     "gap": "Oracle",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Oracle Database",
+      "Oracle RDBMS",
+      "PL/SQL"
+     ]
+    },
+    {
+     "gap": "SQL Server",
+     "kind": "tool",
+     "concepts": [
+      "SQL Server"
+     ],
+     "phrases": [],
+     "same": [
+      "SQL Server"
+     ],
+     "terms": [
+      "SQL Server",
+      "T-SQL",
+      "Microsoft SQL Server"
+     ]
+    },
+    {
+     "gap": "Performance Tuning",
+     "kind": "skill",
+     "concepts": [
+      "Performance Tuning"
+     ],
+     "phrases": [],
+     "same": [
+      "Performance Tuning"
+     ],
+     "terms": [
+      "query optimization",
+      "performance tuning",
+      "indexing"
+     ]
+    },
+    {
+     "gap": "Backup and Recovery",
+     "kind": "skill",
+     "concepts": [
+      "Backup and Recovery"
+     ],
+     "phrases": [],
+     "same": [
+      "Backup and Recovery"
+     ],
+     "terms": [
+      "backup",
+      "recovery",
+      "restore"
+     ]
+    },
+    {
+     "gap": "PostgreSQL",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "PostgreSQL",
+      "Postgres"
+     ]
+    },
+    {
+     "gap": "High Availability",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "high availability",
+      "failover",
+      "clustering"
+     ]
+    },
+    {
+     "gap": "Database Security",
+     "kind": "skill",
+     "concepts": [
+      "Database Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Database Security"
+     ],
+     "terms": [
+      "database security",
+      "access control",
+      "encryption"
+     ]
+    },
+    {
+     "gap": "NoSQL",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "NoSQL",
+      "document database",
+      "MongoDB"
+     ]
+    }
+   ]
+  },
+  {
+   "persona_data_analyst": [
+    {
+     "gap": "SQL",
+     "kind": "tool",
+     "concepts": [
+      "Databases and SQL"
+     ],
+     "phrases": [],
+     "same": [
+      "Databases and SQL"
+     ],
+     "terms": [
+      "SQL",
+      "structured query language",
+      "queries"
+     ]
+    },
+    {
+     "gap": "Power BI",
+     "kind": "tool",
+     "concepts": [
+      "Power BI"
+     ],
+     "phrases": [],
+     "same": [
+      "Power BI"
+     ],
+     "terms": [
+      "Power BI",
+      "DAX",
+      "Power Query"
+     ]
+    },
+    {
+     "gap": "Python",
+     "kind": "tool",
+     "concepts": [
+      "Python"
+     ],
+     "phrases": [],
+     "same": [
+      "Python"
+     ],
+     "terms": [
+      "Python",
+      "python programming"
+     ]
+    },
+    {
+     "gap": "Data Visualization",
+     "kind": "skill",
+     "concepts": [
+      "Data Visualization"
+     ],
+     "phrases": [],
+     "same": [
+      "Data Visualization"
+     ],
+     "terms": [
+      "data visualization",
+      "charts",
+      "dashboards"
+     ]
+    },
+    {
+     "gap": "Tableau",
+     "kind": "tool",
+     "concepts": [
+      "Tableau"
+     ],
+     "phrases": [],
+     "same": [
+      "Tableau"
+     ],
+     "terms": [
+      "Tableau",
+      "Tableau Desktop"
+     ]
+    },
+    {
+     "gap": "Excel",
+     "kind": "tool",
+     "concepts": [
+      "Excel"
+     ],
+     "phrases": [],
+     "same": [
+      "Excel"
+     ],
+     "terms": [
+      "Excel",
+      "spreadsheets",
+      "pivot tables"
+     ]
+    },
+    {
+     "gap": "ETL",
+     "kind": "skill",
+     "concepts": [
+      "ETL"
+     ],
+     "phrases": [],
+     "same": [
+      "ETL"
+     ],
+     "terms": [
+      "ETL",
+      "extract transform load",
+      "data pipelines"
+     ]
+    }
+   ],
+   "persona_cybersecurity_analyst": [
+    {
+     "gap": "Incident Response",
+     "kind": "skill",
+     "concepts": [
+      "Incident Response"
+     ],
+     "phrases": [],
+     "same": [
+      "Incident Response"
+     ],
+     "terms": [
+      "incident response",
+      "IR",
+      "security incidents",
+      "breach response"
+     ]
+    },
+    {
+     "gap": "SIEM",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "SIEM",
+      "log correlation",
+      "Splunk"
+     ]
+    },
+    {
+     "gap": "Vulnerability Management",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "vulnerability management",
+      "vulnerability scanning",
+      "patch management",
+      "CVE"
+     ]
+    },
+    {
+     "gap": "Network Security",
+     "kind": "skill",
+     "concepts": [
+      "Network Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Network Security"
+     ],
+     "terms": [
+      "network security",
+      "firewalls",
+      "IDS/IPS",
+      "VPN"
+     ]
+    },
+    {
+     "gap": "Threat Hunting",
+     "kind": "skill",
+     "concepts": [
+      "Threat Intelligence"
+     ],
+     "phrases": [],
+     "terms": [
+      "threat hunting",
+      "threat detection",
+      "proactive detection",
+      "IOC"
+     ]
+    },
+    {
+     "gap": "Splunk",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Splunk",
+      "log analysis",
+      "SPL",
+      "dashboards"
+     ]
+    },
+    {
+     "gap": "Penetration Testing",
+     "kind": "skill",
+     "concepts": [
+      "Penetration Testing"
+     ],
+     "phrases": [],
+     "same": [
+      "Penetration Testing"
+     ],
+     "terms": [
+      "penetration testing",
+      "pentest",
+      "ethical hacking",
+      "exploit"
+     ]
+    }
+   ],
+   "persona_software_engineer": [
+    {
+     "gap": "REST API",
+     "kind": "tool",
+     "concepts": [
+      "APIs"
+     ],
+     "phrases": [],
+     "same": [
+      "APIs"
+     ],
+     "terms": [
+      "REST API",
+      "RESTful",
+      "API design"
+     ]
+    },
+    {
+     "gap": "Software Testing",
+     "kind": "skill",
+     "concepts": [
+      "Software Testing"
+     ],
+     "phrases": [],
+     "same": [
+      "Software Testing"
+     ],
+     "terms": [
+      "software testing",
+      "QA",
+      "test cases"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "continuous integration",
+      "continuous deployment",
+      "CI/CD pipeline"
+     ]
+    },
+    {
+     "gap": "Git",
+     "kind": "tool",
+     "concepts": [
+      "Git"
+     ],
+     "phrases": [],
+     "same": [
+      "Git"
+     ],
+     "terms": [
+      "Git",
+      "version control",
+      "GitHub"
+     ]
+    },
+    {
+     "gap": "Agile",
+     "kind": "skill",
+     "concepts": [
+      "Agile"
+     ],
+     "phrases": [],
+     "same": [
+      "Agile"
+     ],
+     "terms": [
+      "Agile",
+      "Scrum",
+      "sprint"
+     ]
+    },
+    {
+     "gap": "Docker",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Docker",
+      "containerization",
+      "Dockerfile"
+     ]
+    },
+    {
+     "gap": "Microservices",
+     "kind": "skill",
+     "concepts": [
+      "System Design"
+     ],
+     "phrases": [],
+     "terms": [
+      "microservices",
+      "service-oriented architecture",
+      "distributed systems"
+     ]
+    },
+    {
+     "gap": "Design Patterns",
+     "kind": "skill",
+     "concepts": [
+      "Software Design Patterns"
+     ],
+     "phrases": [],
+     "same": [
+      "Software Design Patterns"
+     ],
+     "terms": [
+      "design patterns",
+      "software patterns",
+      "architectural patterns"
+     ]
+    }
+   ],
+   "persona_cloud_devops_engineer": [
+    {
+     "gap": "Kubernetes",
+     "kind": "tool",
+     "concepts": [
+      "Kubernetes"
+     ],
+     "phrases": [],
+     "same": [
+      "Kubernetes"
+     ],
+     "terms": [
+      "Kubernetes",
+      "K8s",
+      "container orchestration"
+     ]
+    },
+    {
+     "gap": "Terraform",
+     "kind": "tool",
+     "concepts": [
+      "Terraform"
+     ],
+     "phrases": [],
+     "same": [
+      "Terraform"
+     ],
+     "terms": [
+      "Terraform",
+      "infrastructure as code",
+      "HCL"
+     ]
+    },
+    {
+     "gap": "Docker",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Docker",
+      "containerization",
+      "Dockerfile"
+     ]
+    },
+    {
+     "gap": "CI/CD",
+     "kind": "skill",
+     "concepts": [
+      "CI/CD"
+     ],
+     "phrases": [],
+     "same": [
+      "CI/CD"
+     ],
+     "terms": [
+      "CI/CD",
+      "continuous integration",
+      "continuous deployment"
+     ]
+    },
+    {
+     "gap": "Azure",
+     "kind": "tool",
+     "concepts": [
+      "Azure"
+     ],
+     "phrases": [],
+     "same": [
+      "Azure"
+     ],
+     "terms": [
+      "Azure",
+      "Microsoft Azure"
+     ]
+    },
+    {
+     "gap": "Ansible",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Ansible",
+      "configuration management",
+      "playbooks"
+     ]
+    },
+    {
+     "gap": "Monitoring",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "monitoring",
+      "observability",
+      "alerting",
+      "logging"
+     ]
+    }
+   ],
+   "persona_ui_ux_designer": [
+    {
+     "gap": "Figma",
+     "kind": "tool",
+     "concepts": [
+      "Figma"
+     ],
+     "phrases": [],
+     "same": [
+      "Figma"
+     ],
+     "terms": [
+      "Figma",
+      "UI design tool",
+      "interface design"
+     ]
+    },
+    {
+     "gap": "Prototyping",
+     "kind": "skill",
+     "concepts": [
+      "Prototyping"
+     ],
+     "phrases": [],
+     "same": [
+      "Prototyping"
+     ],
+     "terms": [
+      "prototyping",
+      "mockups",
+      "interactive prototype"
+     ]
+    },
+    {
+     "gap": "User Research",
+     "kind": "skill",
+     "concepts": [
+      "UX Research"
+     ],
+     "phrases": [],
+     "same": [
+      "UX Research"
+     ],
+     "terms": [
+      "user research",
+      "user interviews",
+      "usability studies"
+     ]
+    },
+    {
+     "gap": "Usability Testing",
+     "kind": "skill",
+     "concepts": [
+      "UX Research"
+     ],
+     "phrases": [],
+     "terms": [
+      "usability testing",
+      "user testing",
+      "think aloud"
+     ]
+    },
+    {
+     "gap": "Wireframing",
+     "kind": "skill",
+     "concepts": [
+      "UI Design"
+     ],
+     "phrases": [],
+     "terms": [
+      "wireframes",
+      "wireframing",
+      "low fidelity design"
+     ]
+    },
+    {
+     "gap": "Design Systems",
+     "kind": "skill",
+     "concepts": [
+      "UI Design"
+     ],
+     "phrases": [],
+     "terms": [
+      "design systems",
+      "component library",
+      "style guide"
+     ]
+    },
+    {
+     "gap": "Accessibility",
+     "kind": "skill",
+     "concepts": [
+      "Accessibility"
+     ],
+     "phrases": [],
+     "same": [
+      "Accessibility"
+     ],
+     "terms": [
+      "accessibility",
+      "WCAG",
+      "inclusive design"
+     ]
+    }
+   ],
+   "persona_network_engineer": [
+    {
+     "gap": "Troubleshooting",
+     "kind": "skill",
+     "concepts": [
+      "Troubleshooting"
+     ],
+     "phrases": [],
+     "same": [
+      "Troubleshooting"
+     ],
+     "terms": [
+      "troubleshooting",
+      "problem diagnosis",
+      "issue resolution"
+     ]
+    },
+    {
+     "gap": "Firewall",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "firewall",
+      "firewall configuration",
+      "packet filtering"
+     ]
+    },
+    {
+     "gap": "Routing",
+     "kind": "skill",
+     "concepts": [
+      "Routing and Switching"
+     ],
+     "phrases": [],
+     "terms": [
+      "routing",
+      "routing protocols",
+      "BGP",
+      "OSPF"
+     ]
+    },
+    {
+     "gap": "Network Security",
+     "kind": "skill",
+     "concepts": [
+      "Network Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Network Security"
+     ],
+     "terms": [
+      "network security",
+      "firewalls",
+      "intrusion prevention"
+     ]
+    },
+    {
+     "gap": "VPN",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "VPN",
+      "virtual private network",
+      "IPSec",
+      "SSL VPN"
+     ]
+    },
+    {
+     "gap": "Wireless",
+     "kind": "skill",
+     "concepts": [
+      "Wireless Networks"
+     ],
+     "phrases": [],
+     "same": [
+      "Wireless Networks"
+     ],
+     "terms": [
+      "wireless",
+      "Wi-Fi",
+      "WLAN"
+     ]
+    },
+    {
+     "gap": "Network Automation",
+     "kind": "skill",
+     "concepts": [
+      "Network Automation"
+     ],
+     "phrases": [],
+     "same": [
+      "Network Automation"
+     ],
+     "terms": [
+      "network automation",
+      "scripted network config",
+      "automation tools"
+     ]
+    }
+   ],
+   "persona_ai_ml_engineer": [
+    {
+     "gap": "LLM",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "terms": [
+      "large language model",
+      "LLM",
+      "transformer models"
+     ]
+    },
+    {
+     "gap": "Generative AI",
+     "kind": "skill",
+     "concepts": [
+      "Generative AI"
+     ],
+     "phrases": [],
+     "same": [
+      "Generative AI"
+     ],
+     "terms": [
+      "generative AI",
+      "GenAI",
+      "diffusion models"
+     ]
+    },
+    {
+     "gap": "PyTorch",
+     "kind": "tool",
+     "concepts": [
+      "PyTorch"
+     ],
+     "phrases": [],
+     "same": [
+      "PyTorch"
+     ],
+     "terms": [
+      "PyTorch"
+     ]
+    },
+    {
+     "gap": "MLOps",
+     "kind": "skill",
+     "concepts": [
+      "MLOps"
+     ],
+     "phrases": [],
+     "same": [
+      "MLOps"
+     ],
+     "terms": [
+      "MLOps",
+      "model deployment",
+      "ML pipelines"
+     ]
+    },
+    {
+     "gap": "Deep Learning",
+     "kind": "skill",
+     "concepts": [
+      "Deep Learning"
+     ],
+     "phrases": [],
+     "same": [
+      "Deep Learning"
+     ],
+     "terms": [
+      "deep learning",
+      "neural networks"
+     ]
+    },
+    {
+     "gap": "NLP",
+     "kind": "skill",
+     "concepts": [
+      "Natural Language Processing"
+     ],
+     "phrases": [],
+     "same": [
+      "Natural Language Processing"
+     ],
+     "terms": [
+      "NLP",
+      "natural language processing",
+      "text processing"
+     ]
+    },
+    {
+     "gap": "Computer Vision",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "computer vision",
+      "image recognition",
+      "CNN"
+     ]
+    }
+   ],
+   "persona_database_administrator": [
+    {
+     "gap": "Oracle",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "Oracle Database",
+      "Oracle RDBMS",
+      "PL/SQL"
+     ]
+    },
+    {
+     "gap": "SQL Server",
+     "kind": "tool",
+     "concepts": [
+      "SQL Server"
+     ],
+     "phrases": [],
+     "same": [
+      "SQL Server"
+     ]
+    },
+    {
+     "gap": "Performance Tuning",
+     "kind": "skill",
+     "concepts": [
+      "Performance Tuning"
+     ],
+     "phrases": [],
+     "same": [
+      "Performance Tuning"
+     ]
+    },
+    {
+     "gap": "Backup and Recovery",
+     "kind": "skill",
+     "concepts": [
+      "Backup and Recovery"
+     ],
+     "phrases": [],
+     "same": [
+      "Backup and Recovery"
+     ]
+    },
+    {
+     "gap": "PostgreSQL",
+     "kind": "tool",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "PostgreSQL",
+      "Postgres"
+     ]
+    },
+    {
+     "gap": "High Availability",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "high availability",
+      "HA",
+      "failover",
+      "clustering"
+     ]
+    },
+    {
+     "gap": "Database Security",
+     "kind": "skill",
+     "concepts": [
+      "Database Security"
+     ],
+     "phrases": [],
+     "same": [
+      "Database Security"
+     ]
+    },
+    {
+     "gap": "NoSQL",
+     "kind": "skill",
+     "concepts": [],
+     "phrases": [],
+     "terms": [
+      "NoSQL",
+      "MongoDB",
+      "document database"
+     ]
+    }
+   ]
+  }
+ ]
+}

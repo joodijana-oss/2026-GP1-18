@@ -1,0 +1,34 @@
+{
+ "goal": "pre_sales_engineer",
+ "extractor": "E1",
+ "run": 1,
+ "postings": 20,
+ "rawNames": [
+  "Technical Proposal Writing",
+  "RFP Response",
+  "Bill of Quantities Preparation",
+  "Solution Architecture Design",
+  "Proof of Concept Delivery",
+  "Product Demonstration",
+  "Vendor Coordination",
+  "Customer Presentation",
+  "Cloud Security",
+  "AWS",
+  "VMware",
+  "SAP S/4HANA"
+ ],
+ "names": [
+  "Technical Proposal Writing",
+  "RFP Response",
+  "Bill of Quantities Preparation",
+  "Solution Architecture Design",
+  "Proof of Concept Delivery",
+  "Product Demonstration",
+  "Vendor Coordination",
+  "Customer Presentation",
+  "Cloud Security",
+  "AWS",
+  "VMware",
+  "SAP S/4HANA"
+ ]
+}

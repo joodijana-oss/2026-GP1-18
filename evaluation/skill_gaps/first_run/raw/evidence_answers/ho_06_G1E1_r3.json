@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Git",
+  "REST API Design",
+  "SQL",
+  "React",
+  "Node.js",
+  "Java",
+  "Docker",
+  "Spring Boot",
+  "Python",
+  "Linux",
+  "Kubernetes",
+  "C++"
+ ],
+ "answer": [
+  {
+   "skill": "Git",
+   "status": "shown",
+   "quote": "Kept the code on GitHub from the first day, with a branch per feature"
+  },
+  {
+   "skill": "REST API Design",
+   "status": "partly",
+   "quote": "it calls a public prayer-times web API"
+  },
+  {
+   "skill": "SQL",
+   "status": "partly",
+   "quote": "Database Systems (this term)"
+  },
+  {
+   "skill": "React",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Java",
+   "status": "shown",
+   "quote": "Built with plain Java and Swing; enemies chase the player with A* search"
+  },
+  {
+   "skill": "Docker",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Wrote it in Python; it calls a public prayer-times web API"
+  },
+  {
+   "skill": "Linux",
+   "status": "shown",
+   "quote": "Runs on a small rented VPS under systemd, where I read the journal"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "C++",
+   "status": "shown",
+   "quote": "solved 700+ problems in C++, mostly graphs, dynamic programming and greedy"
+  }
+ ]
+}

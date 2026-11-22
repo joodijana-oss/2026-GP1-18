@@ -1,0 +1,46 @@
+{
+ "case": "ho_06",
+ "arm": "G2E1",
+ "run": 3,
+ "gaps": [
+  "React",
+  "Node.js",
+  "Docker",
+  "Spring Boot",
+  "Kubernetes"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "REST API Design",
+   "status": "partly"
+  },
+  {
+   "skill": "SQL",
+   "status": "partly"
+  },
+  {
+   "skill": "React",
+   "status": "missing"
+  },
+  {
+   "skill": "Node.js",
+   "status": "missing"
+  },
+  {
+   "skill": "Docker",
+   "status": "missing"
+  },
+  {
+   "skill": "Spring Boot",
+   "status": "missing"
+  },
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "LAN/WAN",
+  "Cisco Routers and Switches",
+  "VPN",
+  "VLAN",
+  "CCNA",
+  "Firewall Management",
+  "BGP",
+  "OSPF",
+  "MPLS",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto"
+ ],
+ "answer": [
+  {
+   "skill": "LAN/WAN",
+   "status": "shown",
+   "quote": "Built a three-building campus network on six real Cisco 2960"
+  },
+  {
+   "skill": "Cisco Routers and Switches",
+   "status": "shown",
+   "quote": "six real Cisco 2960 and 3560 switches and three ISR routers"
+  },
+  {
+   "skill": "VPN",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "VLAN",
+   "status": "shown",
+   "quote": "Kept students, staff and security cameras in separate broadcast domains"
+  },
+  {
+   "skill": "CCNA",
+   "status": "shown",
+   "quote": "Cisco Certified Network Associate (CCNA), February 2026"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "partly",
+   "quote": "Fortinet firewalls (basic)"
+  },
+  {
+   "skill": "BGP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSPF",
+   "status": "partly",
+   "quote": "Ran a link-state routing protocol in a single backbone area"
+  },
+  {
+   "skill": "MPLS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CCNP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Fortinet",
+   "status": "shown",
+   "quote": "Fortinet firewalls (basic)"
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

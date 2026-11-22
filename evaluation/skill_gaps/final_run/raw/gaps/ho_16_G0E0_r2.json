@@ -1,0 +1,18 @@
+{
+ "case": "ho_16",
+ "arm": "G0E0",
+ "run": 2,
+ "gaps": [
+  "Java",
+  "Node.js",
+  "React",
+  "Spring Boot",
+  "Microservices Architecture",
+  "Linux"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

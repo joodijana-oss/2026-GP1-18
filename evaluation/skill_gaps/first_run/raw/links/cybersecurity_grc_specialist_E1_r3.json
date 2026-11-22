@@ -1,0 +1,111 @@
+{
+ "goal": "cybersecurity_grc_specialist",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Cybersecurity Risk Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Risk Assessment"
+   ],
+   "phrases": [
+    "identifying security risks",
+    "evaluating threats and vulnerabilities",
+    "assessing cyber risk exposure"
+   ]
+  },
+  {
+   "gap": "ISO 27001",
+   "kind": "certification",
+   "concepts": [
+    "ISO 27001"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "NCA Essential Cybersecurity Controls",
+   "kind": "skill",
+   "concepts": [
+    "NCA ECC"
+   ],
+   "phrases": [
+    "essential cybersecurity controls",
+    "Saudi national cybersecurity requirements"
+   ]
+  },
+  {
+   "gap": "SAMA Cybersecurity Framework",
+   "kind": "skill",
+   "concepts": [
+    "SAMA Regulations"
+   ],
+   "phrases": [
+    "financial sector cybersecurity framework",
+    "regulatory compliance for banks"
+   ]
+  },
+  {
+   "gap": "Risk Register Management",
+   "kind": "skill",
+   "concepts": [
+    "Risk Management"
+   ],
+   "phrases": [
+    "tracking organizational risks",
+    "maintaining a risk log",
+    "documenting identified risks"
+   ]
+  },
+  {
+   "gap": "CISSP",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "CISA",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "CISM",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "NIST Framework",
+   "kind": "tool",
+   "concepts": [
+    "NIST CSF"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "PCI DSS",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "CRISC",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Audit Coordination",
+   "kind": "skill",
+   "concepts": [
+    "Audit"
+   ],
+   "phrases": [
+    "coordinating audit activities",
+    "managing audit engagements",
+    "liaising with auditors"
+   ]
+  }
+ ]
+}

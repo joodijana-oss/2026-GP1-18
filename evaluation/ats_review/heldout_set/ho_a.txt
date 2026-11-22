@@ -1,0 +1,68 @@
+Faisal Al-Dossari
+Dammam, Saudi Arabia
+faisal.aldossari@example.com
+github.com/faisal-aldossari-dev
+
+About Me
+Hard-working team player with excellent skills and a great passion for
+technology. I am a fast learner who always gives 100% and I am looking
+for a good opportunity in a good company where I can grow.
+
+Education
+Bachelor of Science in Software Engineering
+Eastern Gulf University, Dammam
+Sep 2021 - Jun 2025
+GPA: 4.52 / 5.00
+Relevant coursework: Data Structures, Software Architecture, Databases,
+Web Engineering
+
+My Journey So Far
+Campus IT Help Desk, Eastern Gulf University
+Student Assistant
+Sep 2023 - May 2024
+Responsible for bugs
+Meetings with team
+Tickets and emails from students
+
+Najm Logistics Solutions, Dammam
+Software Engineering Intern
+Jun 2025 - Aug 2024
+During my internship I was placed in the shipment tracking team where I
+was working on many different things, at first I was learning the code
+base and then I was asked to work on the screen that shows the shipments
+to the customer and I changed it so that it loads faster and after that
+I also worked with the backend developers on some endpoints that the
+mobile app uses and I attended the daily meetings and I also helped the
+testers when they found problems and in the last weeks I made the app
+check itself automatically every time someone saved new code so that
+mistakes are found early before the code reaches the customers.
+
+Rimal Tech, Khobar
+Junior Software Developer
+Oct 2025 - Present
+Built 6 REST endpoints in Node.js for the order service, covered by 48
+unit tests
+Reduced the average response time of the product search page from 1.9 s
+to 0.7 s by adding database indexes and caching
+Reviewed pull requests from 3 teammates every sprint
+
+Projects
+Maktabati - library booking web app (graduation project, 2025)
+Led a team of 4 to build a room and book reservation system used by 320
+students in its pilot semester
+Stack: Reactjs, java script, Postgress, Docker
+Wrote the booking conflict logic and its 35 automated tests
+
+Souq Tracker - price comparison browser extension (2024)
+Built with Javascript and React.JS; stores price history in PostgreSQL
+Published on the Chrome Web Store with 150 weekly users
+
+Skills
+Languages: Java, Python, JS, TypeScript, SQL
+Frameworks: React, Node.js, Spring Boot
+Tools: Git, Docker, Postman, Jira
+AWS Certified Cloud Practitioner (Amazon Web Services, 2025)
+Scrum Fundamentals Certified (SCRUMstudy, 2024)
+
+Languages
+Arabic (native), English (IELTS 7.0)

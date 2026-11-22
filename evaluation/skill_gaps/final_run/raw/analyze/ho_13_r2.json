@@ -1,0 +1,67 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Experience running and maintaining self-hosted home server infrastructure",
+   "Practical experience with containerization using Docker Compose",
+   "Experience automating system setup and configuration using playbooks (Ansible-style automation)",
+   "Implemented monitoring and alerting for services",
+   "Implemented backup strategy with off-site replication",
+   "Experience deploying static websites using cloud storage and CDN",
+   "Experience setting up CI/CD pipelines for automated builds and deployment",
+   "Public speaking and teaching experience through workshops",
+   "Leadership experience managing shared infrastructure accounts for a student club",
+   "Bilingual in Arabic and English with strong technical reading ability"
+  ],
+  "currentSkills": [
+   "Linux",
+   "Debian",
+   "Docker",
+   "Docker Compose",
+   "Containerization",
+   "Automation",
+   "Shell Scripting",
+   "Monitoring",
+   "Backup Management",
+   "AWS",
+   "Cloud Storage",
+   "Content Delivery Networks",
+   "CI/CD",
+   "Git",
+   "Technical Documentation",
+   "Public Speaking"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science and Software Engineering",
+    "institution": "University of Hail",
+    "year": "2023 - expected 2027"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "The majlis server",
+    "description": "Set up and maintained a home server on an old office PC running Debian, hosting a family photo library, a recipe site, and a network-wide ad blocker, each in its own container using a single Docker Compose file. Automated full machine rebuilds using playbooks, verified by wiping the disk twice. Created a shell script to monitor service health every five minutes with Telegram alerts on failure. Implemented nightly backups to a second disk and weekly off-site backups to a relative's house."
+   },
+   {
+    "name": "Publishing the club website without FTP",
+    "description": "Migrated the Hail Tech Club website to AWS free tier, using a storage bucket behind a content delivery network. Set up automatic build and publish on every merge to the main branch, preventing broken builds from being published. Wrote a two-page guide for future committee members to maintain the site."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Infrastructure lead",
+    "organization": "Hail Tech Club",
+    "duration": "2025 - now",
+    "description": "Gave a hands-on workshop, 'Your first virtual machine in the cloud,' to 35 students. Managed the club's shared accounts and handled yearly handover."
+   },
+   {
+    "title": "Weekend worker",
+    "organization": "Uncle's date farm",
+    "duration": "",
+    "description": "Worked weekends during the harvest season."
+   }
+  ]
+ }
+}

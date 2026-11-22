@@ -1,0 +1,109 @@
+{
+ "label": "ho_d_03",
+ "cv": "ho_d",
+ "version": "old",
+ "run": 3,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:06:55.303436",
+ "finishedAt": "2026-11-22T02:07:30.964556",
+ "seconds": 35.661,
+ "inputTokens": 1916,
+ "outputTokens": 3786,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "The CV has no dedicated Skills or Technical Skills section, even though tools like AWS, Kubernetes, Terraform, GitHub Actions, Prometheus and Grafana are mentioned only inside bullet points.",
+    "suggestion": "Add a 'Technical Skills' section listing these tools explicitly (e.g., AWS, Kubernetes, Terraform, Ansible, CI/CD, Prometheus, Grafana) so ATS systems can match them more reliably."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "In the Projects section, the graduation project has no date while the self-hosted Git server project shows '(2025)', making the chronological order unclear.",
+    "suggestion": "Add a month/year or semester date to the graduation project entry so both projects follow the same date format and order."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "Several key tool names are misspelled ('Kubernets', 'Git Hub Actions', 'Terrafrom'), which may prevent ATS systems from matching them to standard keywords.",
+    "suggestion": "Correct the spellings to 'Kubernetes', 'GitHub Actions', and 'Terraform' throughout the Experience section."
+   },
+   {
+    "issue": "The graduation project description does not mention any specific technology, language, or tool used.",
+    "suggestion": "Add the actual technologies used on the servers part of the graduation project (e.g., the OS, cloud platform, or scripting language) to strengthen keyword relevance for Cloud/DevOps roles."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The summary claims 'over 3 years of professional experience', but the Experience section only shows about 8 months in the current role plus a 3-month internship, totaling less than one year.",
+    "suggestion": "Update the summary to accurately reflect the actual duration of professional experience shown in the Experience section."
+   },
+   {
+    "issue": "The Cloud Operations Intern bullets ('Monitoring', 'Server stuff and deployments', 'Helping with tickets') are short fragments without action verbs or measurable outcomes.",
+    "suggestion": "Rewrite these as full bullet points starting with action verbs and, where possible, add a specific result, similar to the log rotation bullet already in that role."
+   },
+   {
+    "issue": "The graduation project description is vague ('I worked on the servers part with my team and it was successful') and does not explain what was built or achieved.",
+    "suggestion": "Describe the specific task performed on the servers (e.g., deployment, configuration, scaling) and mention any measurable outcome or technology used."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are formatted inconsistently: most entries use 'Mon YYYY - Mon YYYY' while the self-hosted Git server project only shows '(2025)'.",
+    "suggestion": "Use the same 'Mon YYYY' or 'Mon YYYY - Mon YYYY' format for the self-hosted project date to match the rest of the CV."
+   },
+   {
+    "issue": "The Cloud Operations Intern entry mixes short phrase fragments with a full sentence bullet, breaking the consistent bullet style used elsewhere in the CV.",
+    "suggestion": "Reformat all bullets under this role as complete sentences, matching the style used in the Junior DevOps Engineer section."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "The CV has no dedicated Skills or Technical Skills section, even though tools like AWS, Kubernetes, Terraform, GitHub Actions, Prometheus and Grafana are mentioned only inside bullet points.",
+    "suggestion": "Add a 'Technical Skills' section listing these tools explicitly (e.g., AWS, Kubernetes, Terraform, Ansible, CI/CD, Prometheus, Grafana) so ATS systems can match them more reliably."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "In the Projects section, the graduation project has no date while the self-hosted Git server project shows '(2025)', making the chronological order unclear.",
+    "suggestion": "Add a month/year or semester date to the graduation project entry so both projects follow the same date format and order."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "Several key tool names are misspelled ('Kubernets', 'Git Hub Actions', 'Terrafrom'), which may prevent ATS systems from matching them to standard keywords.",
+    "suggestion": "Correct the spellings to 'Kubernetes', 'GitHub Actions', and 'Terraform' throughout the Experience section."
+   },
+   {
+    "issue": "The graduation project description does not mention any specific technology, language, or tool used.",
+    "suggestion": "Add the actual technologies used on the servers part of the graduation project (e.g., the OS, cloud platform, or scripting language) to strengthen keyword relevance for Cloud/DevOps roles."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The summary claims 'over 3 years of professional experience', but the Experience section only shows about 8 months in the current role plus a 3-month internship, totaling less than one year.",
+    "suggestion": "Update the summary to accurately reflect the actual duration of professional experience shown in the Experience section."
+   },
+   {
+    "issue": "The Cloud Operations Intern bullets ('Monitoring', 'Server stuff and deployments', 'Helping with tickets') are short fragments without action verbs or measurable outcomes.",
+    "suggestion": "Rewrite these as full bullet points starting with action verbs and, where possible, add a specific result, similar to the log rotation bullet already in that role."
+   },
+   {
+    "issue": "The graduation project description is vague ('I worked on the servers part with my team and it was successful') and does not explain what was built or achieved.",
+    "suggestion": "Describe the specific task performed on the servers (e.g., deployment, configuration, scaling) and mention any measurable outcome or technology used."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are formatted inconsistently: most entries use 'Mon YYYY - Mon YYYY' while the self-hosted Git server project only shows '(2025)'.",
+    "suggestion": "Use the same 'Mon YYYY' or 'Mon YYYY - Mon YYYY' format for the self-hosted project date to match the rest of the CV."
+   },
+   {
+    "issue": "The Cloud Operations Intern entry mixes short phrase fragments with a full sentence bullet, breaking the consistent bullet style used elsewhere in the CV.",
+    "suggestion": "Reformat all bullets under this role as complete sentences, matching the style used in the Junior DevOps Engineer section."
+   }
+  ]
+ }
+}

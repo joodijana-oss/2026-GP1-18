@@ -1,0 +1,34 @@
+Layan Al-Juhani
+Jeddah – layan.aljuhani@example.com – +966 50 000 0000
+
+EDUCATION
+King Abdulaziz University, Faculty of Computing and IT
+B.Sc. Artificial Intelligence, expected 06/2027 – GPA 4.8 / 5
+Selected courses: Probability & Statistics, Machine Learning I, Algorithms, Databases
+Course project (Machine Learning I): implemented k-nearest neighbours and a decision tree from scratch with NumPy and compared them with the library versions on a public heart-disease dataset.
+
+RESEARCH
+Summer Research Assistant, visiting student programme at a research university on the Red Sea coast
+June–August 2026
+– Supported a PhD student studying coral bleaching from underwater photos
+– Fine-tuned a pretrained convolutional network to sort 18,000 reef photos into healthy, pale and bleached, reaching 91% balanced accuracy
+– Evened out the three classes by oversampling and a weighted loss after the first attempt ignored the rare "pale" class
+– Checked every experiment with 5-fold splits grouped by dive site so photos from one site never sat in both training and test
+– Submitted training jobs to the shared GPU cluster with Slurm scripts and kept each run's configuration in the lab's Git repository
+
+ONLINE COMPETITIONS
+Kaggle – 3 competitions entered
+– Tabular sales forecasting (2026): top 12% of 2,300 teams. Built lag and rolling-window columns from the raw sales history, then blended LightGBM and CatBoost
+– House-price regression (2025): my first complete entry; learned to fill missing values and encode categories properly instead of dropping rows
+Zindi – Arabic dialect identification challenge (2026): 31st of 280, fine-tuning a multilingual transformer encoder on tweets from five dialects
+
+ACTIVITIES
+AI club, KAU – ran four Saturday study sessions on the maths behind gradient
+descent
+Tutor for first-year programming labs (Python)
+
+SKILLS
+Python • PyTorch • pandas • LightGBM
+
+LANGUAGES
+Arabic, English, beginner Korean

@@ -1,0 +1,60 @@
+{
+ "cvStructure": [
+  {
+   "issue": "The Personal Details section includes Date of Birth, Marital Status, and Gender, which are not standard for ATS screening and can introduce bias.",
+   "suggestion": "Remove Date of Birth, Marital Status, and Gender, keeping only professionally relevant contact information."
+  },
+  {
+   "issue": "The High School section includes extracurricular details like the science club and a grade 10 reading competition, which add little value for a cybersecurity graduate with a bachelor's degree and internships.",
+   "suggestion": "Shorten the High School entry to just the school name and track, or remove the extracurricular details entirely."
+  },
+  {
+   "issue": "The Courses Studied list includes many general education courses (e.g., Calculus 1, Islamic Culture 1, Arabic Writing Skills) that are unrelated to cybersecurity and dilute the technical focus.",
+   "suggestion": "Limit the Courses Studied list to security-relevant courses such as Network Security, Cryptography, Ethical Hacking, and Digital Forensics."
+  }
+ ],
+ "sectionOrganization": [
+  {
+   "issue": "The Projects section lists the Home Network Vulnerability Assessment (2024) before the Phishing Awareness Campaign (2025), which is not in most-recent-first order.",
+   "suggestion": "Reorder the Projects section so the Phishing Awareness Campaign (2025) appears before the Home Network Vulnerability Assessment (2024)."
+  },
+  {
+   "issue": "The Certifications section mixes a fully detailed entry (CompTIA Security+ with issuer and date) with vague entries like 'Security course certificate' and 'Networking certificate - completed' that have no issuer or date, making it unclear how they relate in time or credibility.",
+   "suggestion": "Add the issuing organization and completion date for the two unnamed certificates, or remove them if they cannot be verified."
+  }
+ ],
+ "keywordUsage": [
+  {
+   "issue": "Two certification entries ('Security course certificate', 'Networking certificate - completed') do not name the actual certification, weakening keyword matches for recruiters and ATS systems.",
+   "suggestion": "Replace these with the exact certification titles and issuing bodies, similar to how CompTIA Security+ is listed."
+  },
+  {
+   "issue": "The Other Skills section lists outdated or generic items such as 'Windows XP', 'Internet browsing', 'Email', and 'Printing and scanning', which are not relevant cybersecurity keywords.",
+   "suggestion": "Remove these generic entries and replace them with relevant technical keywords such as SIEM, IDS/IPS, or firewall configuration if applicable."
+  }
+ ],
+ "readability": [
+  {
+   "issue": "Several Work Experience bullets are written in first-person narrative without strong action verbs, such as 'I was helping my supervisor to look at the phishing emails' and 'I learned how the team writes the weekly report'.",
+   "suggestion": "Rewrite these bullets to start with action verbs and include measurable outcomes, for example 'Reviewed and triaged employee-reported phishing emails alongside the SOC team.'"
+  },
+  {
+   "issue": "The Security Lab Assistant bullet 'I was answering the students questions during the lab' is vague and does not start with an action verb or show measurable impact.",
+   "suggestion": "Rewrite it to something like 'Supported students by troubleshooting VM configuration issues during Ethical Hacking lab sessions.'"
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "Dates across the Work Experience section are formatted inconsistently, such as '03/2025 – 06/2025', '2023-09 to Dec 23', and 'Summer 2022'.",
+   "suggestion": "Standardize all experience dates to a single format, such as MM/YYYY – MM/YYYY, throughout the CV."
+  },
+  {
+   "issue": "The email address 'h4ck3r_queen99@example.com' is unprofessional for a job application.",
+   "suggestion": "Replace it with a professional email address based on the applicant's name, such as hanan.alqahtani@example.com."
+  },
+  {
+   "issue": "The 'Work Experiance' heading contains a spelling error.",
+   "suggestion": "Correct the heading to 'Work Experience'."
+  }
+ ]
+}

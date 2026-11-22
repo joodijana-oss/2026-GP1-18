@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SIEM",
+  "Vulnerability Assessment",
+  "Penetration Testing",
+  "Incident Response",
+  "Firewall Administration",
+  "CISSP",
+  "OSCP",
+  "Nmap",
+  "Metasploit",
+  "Python",
+  "CompTIA Security+",
+  "Network Security"
+ ],
+ "answer": [
+  {
+   "skill": "SIEM",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "shown",
+   "quote": "Ran Nmap and Nessus against the lab subnet and ranked the 23 findings by CVSS score"
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "shown",
+   "quote": "Found and exploited SQL injection and stored XSS in a deliberately vulnerable shop application"
+  },
+  {
+   "skill": "Incident Response",
+   "status": "partly",
+   "quote": "Mapped the intruders' post-login behaviour to ATT&CK techniques"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "partly",
+   "quote": "locked the real management port down to our own addresses with iptables"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Nmap",
+   "status": "shown",
+   "quote": "Ran Nmap and Nessus against the lab subnet"
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Parsed 48,000 recorded login attempts from the JSON logs with a Python script"
+  },
+  {
+   "skill": "CompTIA Security+",
+   "status": "shown",
+   "quote": "CompTIA Security+ (SY0-701), March 2026"
+  },
+  {
+   "skill": "Network Security",
+   "status": "shown",
+   "quote": "Relevant courses: Network Security, Operating Systems, Digital Forensics"
+  }
+ ]
+}

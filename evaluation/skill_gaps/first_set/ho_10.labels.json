@@ -1,0 +1,268 @@
+{
+  "id": "ho_10",
+  "careerGoalId": "qa_test_engineer",
+  "shown": [
+    {
+      "skill": "Manual Testing",
+      "alsoCalled": [
+        "Functional Testing",
+        "Manual QA"
+      ],
+      "evidence": "Check the app by hand on 9 Android and iOS devices",
+      "source": "experience"
+    },
+    {
+      "skill": "Test Case Design",
+      "alsoCalled": [
+        "Test Cases",
+        "Test Scenarios",
+        "Writing Test Cases"
+      ],
+      "evidence": "Write step-by-step scenarios with expected results from user stories and acceptance criteria",
+      "source": "experience"
+    },
+    {
+      "skill": "Regression Testing",
+      "alsoCalled": [
+        "Regression Suites"
+      ],
+      "evidence": "re-run the 180 scenarios that cover existing features to make sure nothing that worked has broken",
+      "source": "experience"
+    },
+    {
+      "skill": "Bug Reporting",
+      "alsoCalled": [
+        "Defect Reporting",
+        "Defect Tracking",
+        "Bug Tracking"
+      ],
+      "evidence": "Log every defect in Jira with steps, screenshots, device details and severity",
+      "source": "experience"
+    },
+    {
+      "skill": "Jira",
+      "alsoCalled": [
+        "Atlassian Jira"
+      ],
+      "evidence": "Log every defect in Jira",
+      "source": "experience"
+    },
+    {
+      "skill": "Mobile Testing",
+      "alsoCalled": [
+        "Mobile App Testing",
+        "Device Testing"
+      ],
+      "evidence": "on 9 Android and iOS devices, including Arabic right-to-left layout and behaviour on a weak connection",
+      "source": "experience"
+    },
+    {
+      "skill": "API Testing",
+      "alsoCalled": [
+        "REST API Testing",
+        "Web Service Testing"
+      ],
+      "evidence": "Send requests to the backend with Postman to confirm status codes and response bodies",
+      "source": "experience"
+    },
+    {
+      "skill": "Postman",
+      "alsoCalled": [
+        "Postman Collections"
+      ],
+      "evidence": "Send requests to the backend with Postman",
+      "source": "experience"
+    },
+    {
+      "skill": "SQL",
+      "alsoCalled": [
+        "Structured Query Language",
+        "SQL Queries"
+      ],
+      "evidence": "Query the test database to verify that submitted applications are saved with the right status",
+      "source": "experience"
+    },
+    {
+      "skill": "Agile",
+      "alsoCalled": [
+        "Scrum",
+        "Agile Methodology"
+      ],
+      "evidence": "Take part in sprint planning, daily stand-ups and retrospectives with a team of 11",
+      "source": "experience"
+    },
+    {
+      "skill": "User Acceptance Testing",
+      "alsoCalled": [
+        "UAT",
+        "Acceptance Testing"
+      ],
+      "evidence": "Organised two rounds in which 15 employees of the client tried the licence-renewal journey before go-live and signed it off",
+      "source": "experience"
+    },
+    {
+      "skill": "Test Planning",
+      "alsoCalled": [
+        "Test Plans",
+        "Test Strategy"
+      ],
+      "evidence": "wrote the test plan (scope, risks, entry and exit criteria) for a food-delivery app",
+      "source": "education"
+    },
+    {
+      "skill": "Selenium",
+      "alsoCalled": [
+        "Selenium WebDriver"
+      ],
+      "evidence": "Started scripting the login and renewal smoke checks in Selenium with Java (23 scripts so far, run from my laptop)",
+      "source": "experience"
+    },
+    {
+      "skill": "TestRail",
+      "alsoCalled": [
+        "Test Management Tool"
+      ],
+      "evidence": "maintain about 900 of them in TestRail",
+      "source": "experience"
+    },
+    {
+      "skill": "Localization Testing",
+      "alsoCalled": [
+        "RTL Testing",
+        "Arabic Layout Testing"
+      ],
+      "evidence": "including Arabic right-to-left layout",
+      "source": "experience"
+    },
+    {
+      "skill": "ISTQB Certified Tester Foundation Level",
+      "alsoCalled": [
+        "ISTQB CTFL",
+        "ISTQB Foundation"
+      ],
+      "evidence": "ISTQB Certified Tester Foundation Level (CTFL), 2025",
+      "source": "certification"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Test Automation",
+      "alsoCalled": [
+        "Automated Testing",
+        "Automation Testing"
+      ],
+      "evidence": "Started scripting the login and renewal smoke checks",
+      "why": "Just started: a handful of scripts run by hand from her laptop."
+    },
+    {
+      "skill": "Java",
+      "alsoCalled": [
+        "Java Programming",
+        "Core Java"
+      ],
+      "evidence": "in Selenium with Java",
+      "why": "Named once as the language of her first scripts."
+    },
+    {
+      "skill": "Smoke Testing",
+      "alsoCalled": [
+        "Sanity Testing"
+      ],
+      "evidence": "the login and renewal smoke checks",
+      "why": "Mentioned in passing."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "CI/CD",
+      "alsoCalled": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build Pipelines"
+      ],
+      "why": "Her scripts run from her laptop, not in a build pipeline.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Appium",
+      "alsoCalled": [
+        "Mobile Test Automation"
+      ],
+      "why": "Tests the mobile app by hand only; no mobile automation.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Performance Testing",
+      "alsoCalled": [
+        "Load Testing",
+        "Stress Testing"
+      ],
+      "why": "Checks behaviour on a weak connection by hand; no load or stress tests.",
+      "nearMiss": true
+    },
+    {
+      "skill": "ISTQB Certified Tester Advanced Level Test Analyst",
+      "alsoCalled": [
+        "ISTQB CTAL-TA",
+        "ISTQB Advanced"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Cypress",
+      "alsoCalled": [
+        "Cypress.io"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Security Testing",
+      "alsoCalled": [
+        "Application Security Testing"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Behaviour-Driven Development",
+      "alsoCalled": [
+        "BDD",
+        "Cucumber",
+        "Gherkin"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "JMeter",
+      "alsoCalled": [
+        "Apache JMeter"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Git",
+      "alsoCalled": [
+        "Version Control",
+        "Source Control"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "ISTQB Certified Tester Foundation Level (CTFL)"
+  ]
+}

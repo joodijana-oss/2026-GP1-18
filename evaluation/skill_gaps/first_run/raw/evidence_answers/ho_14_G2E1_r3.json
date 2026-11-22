@@ -1,0 +1,60 @@
+{
+ "targets": [
+  "LAN/WAN",
+  "VPN",
+  "Firewall Management",
+  "CCNA",
+  "BGP",
+  "QoS",
+  "MPLS",
+  "FortiGate",
+  "Palo Alto"
+ ],
+ "answer": [
+  {
+   "skill": "LAN/WAN",
+   "status": "shown",
+   "quote": "work through it from the cable to the gateway to name resolution"
+  },
+  {
+   "skill": "VPN",
+   "status": "shown",
+   "quote": "Enrol staff laptops in the remote-access client (FortiClient)"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "partly",
+   "quote": "Enrol staff laptops in the remote-access client (FortiClient)"
+  },
+  {
+   "skill": "CCNA",
+   "status": "shown",
+   "quote": "CCNA (Cisco Certified Network Associate), May 2026"
+  },
+  {
+   "skill": "BGP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "QoS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "MPLS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "FortiGate",
+   "status": "partly",
+   "quote": "remote-access client (FortiClient)"
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

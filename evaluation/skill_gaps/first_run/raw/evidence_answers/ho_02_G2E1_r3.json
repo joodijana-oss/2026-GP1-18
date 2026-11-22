@@ -1,0 +1,60 @@
+{
+ "targets": [
+  "SIEM",
+  "Penetration Testing",
+  "Vulnerability Assessment",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Security+",
+  "Nmap",
+  "Metasploit"
+ ],
+ "answer": [
+  {
+   "skill": "SIEM",
+   "status": "partly",
+   "quote": "searching Splunk for signs of lateral movement"
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "partly",
+   "quote": "removed 40 unused any-any rules after last year's PCI assessment"
+  },
+  {
+   "skill": "CEH",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Security+",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Nmap",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

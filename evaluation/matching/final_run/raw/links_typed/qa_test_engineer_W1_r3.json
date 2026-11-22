@@ -1,0 +1,31 @@
+{
+ "goal": "qa_test_engineer",
+ "list": "W1",
+ "run": 3,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "ISTQB Advanced Level Test Analyst",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "ISTQB",
+    "test analyst",
+    "software testing certification",
+    "test analysis"
+   ]
+  },
+  {
+   "gap": "TestNG",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "TestNG",
+    "test automation framework",
+    "Java testing"
+   ]
+  }
+ ]
+}

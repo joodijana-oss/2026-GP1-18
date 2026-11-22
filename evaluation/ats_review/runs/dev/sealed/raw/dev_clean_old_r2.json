@@ -1,0 +1,85 @@
+{
+ "label": "dev_clean_01",
+ "cv": "dev_clean",
+ "version": "old",
+ "run": 2,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:25:35.782577",
+ "finishedAt": "2026-11-22T02:26:16.303564",
+ "seconds": 40.52,
+ "inputTokens": 2115,
+ "outputTokens": 3691,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "The CV does not include a link to a GitHub profile, portfolio, or LinkedIn, even though the Projects section (ResNet-50 classifier, FastAPI/Docker service) would benefit from demonstrable, linkable work for an ML engineering role.",
+    "suggestion": "Add a GitHub and/or LinkedIn link in the contact header so recruiters and ATS parsers can access the code for the Date-Palm Leaf Disease Classifier and Demand Forecast Service projects."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The Skills section appears after Certifications near the bottom of the CV, which buries key ML-relevant keywords (PyTorch, scikit-learn, FastAPI) that are most important for an AI/ML Engineer target role.",
+    "suggestion": "Move the Skills section up to directly follow the Summary or Education section so the relevant tools and libraries are quickly visible to both recruiters and ATS scanners."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "The Summary mentions 'machine learning and computer vision' but never uses the term 'deep learning' or 'neural networks', even though the ResNet-50/PyTorch project demonstrates this exact experience.",
+    "suggestion": "Add 'deep learning' and 'convolutional neural networks' explicitly to the Summary or the Date-Palm project description to match common ATS search terms for ML Engineer roles."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Summary is written in first person ('I enjoy turning messy data...'), which is inconsistent with the action-verb, achievement-focused style used in the rest of the CV.",
+    "suggestion": "Rewrite the Summary without first-person pronouns, for example: 'Computer Science graduate focused on machine learning and computer vision, experienced in turning messy data into working models.'"
+   },
+   {
+    "issue": "The College WhatsApp Help Menu and Physics II Lab Project bullets describe what was built but do not include any measurable outcome or result.",
+    "suggestion": "Add a brief result or scope detail to these bullets, such as how many students used the WhatsApp menu or the measured efficiency percentage of the transformer circuit."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are formatted inconsistently across sections, for example 'Jun 2025 - Aug 2025' in Experience versus single years like '2026' in Projects and '2024 - 2025' in Activities.",
+    "suggestion": "Use one consistent date format throughout, such as 'Month YYYY - Month YYYY' or at least 'YYYY' consistently, so ATS systems can parse timelines reliably."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "The CV does not include a link to a GitHub profile, portfolio, or LinkedIn, even though the Projects section (ResNet-50 classifier, FastAPI/Docker service) would benefit from demonstrable, linkable work for an ML engineering role.",
+    "suggestion": "Add a GitHub and/or LinkedIn link in the contact header so recruiters and ATS parsers can access the code for the Date-Palm Leaf Disease Classifier and Demand Forecast Service projects."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The Skills section appears after Certifications near the bottom of the CV, which buries key ML-relevant keywords (PyTorch, scikit-learn, FastAPI) that are most important for an AI/ML Engineer target role.",
+    "suggestion": "Move the Skills section up to directly follow the Summary or Education section so the relevant tools and libraries are quickly visible to both recruiters and ATS scanners."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "The Summary mentions 'machine learning and computer vision' but never uses the term 'deep learning' or 'neural networks', even though the ResNet-50/PyTorch project demonstrates this exact experience.",
+    "suggestion": "Add 'deep learning' and 'convolutional neural networks' explicitly to the Summary or the Date-Palm project description to match common ATS search terms for ML Engineer roles."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Summary is written in first person ('I enjoy turning messy data...'), which is inconsistent with the action-verb, achievement-focused style used in the rest of the CV.",
+    "suggestion": "Rewrite the Summary without first-person pronouns, for example: 'Computer Science graduate focused on machine learning and computer vision, experienced in turning messy data into working models.'"
+   },
+   {
+    "issue": "The College WhatsApp Help Menu and Physics II Lab Project bullets describe what was built but do not include any measurable outcome or result.",
+    "suggestion": "Add a brief result or scope detail to these bullets, such as how many students used the WhatsApp menu or the measured efficiency percentage of the transformer circuit."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are formatted inconsistently across sections, for example 'Jun 2025 - Aug 2025' in Experience versus single years like '2026' in Projects and '2024 - 2025' in Activities.",
+    "suggestion": "Use one consistent date format throughout, such as 'Month YYYY - Month YYYY' or at least 'YYYY' consistently, so ATS systems can parse timelines reliably."
+   }
+  ]
+ }
+}

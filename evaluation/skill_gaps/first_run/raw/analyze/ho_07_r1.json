@@ -1,0 +1,65 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Automated deployment pipelines, reducing release frequency from weekly to several times a day",
+   "Implemented infrastructure as code with Terraform using a peer-reviewed merge request process",
+   "Operates a production Kubernetes cluster at scale (3 node groups, about 120 pods) and authored Helm charts",
+   "Established monitoring and alerting, cutting weekly pages from 30 to 8 through threshold tuning",
+   "Improved network security by segmenting infrastructure into public and private subnets across two availability zones",
+   "Reduced cloud costs by 23% through instance right-sizing, savings plans and storage optimization",
+   "Performs regular disaster recovery drills for database restoration across regions",
+   "Automated operational tasks using Python and shell scripting",
+   "Prior hands-on experience managing a large number of Linux servers (200 customer servers)"
+  ],
+  "currentSkills": [
+   "AWS",
+   "Terraform",
+   "Kubernetes",
+   "Docker",
+   "Linux",
+   "Git",
+   "Python",
+   "Bash",
+   "CI/CD",
+   "GitLab CI",
+   "Helm",
+   "Grafana",
+   "Prometheus",
+   "Networking",
+   "CentOS",
+   "Ubuntu",
+   "Apache",
+   "Nginx"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Engineering",
+    "institution": "King Fahd University of Petroleum and Minerals, Dhahran",
+    "year": "2024"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "AWS Certified Solutions Architect - Associate",
+    "issuer": "AWS",
+    "year": "2025"
+   }
+  ],
+  "projects": [],
+  "experience": [
+   {
+    "title": "DevOps Engineer",
+    "organization": "a Riyadh-based online grocery company",
+    "duration": "May 2025 - present",
+    "description": "Moved 14 services from manual SSH deployments to GitLab CI/CD pipelines, increasing release frequency from weekly to several times a day. Wrote Terraform modules for networking, databases and compute, reviewed via merge requests. Ran production EKS cluster (3 node groups, about 120 pods) and wrote Helm charts for each service. Set up Grafana and Prometheus dashboards and on-call paging, reducing pages from 30 to 8 per week. Split flat network into public and private subnets across two availability zones with NAT gateways and tiered security groups. Reduced monthly cloud bill by 23% through right-sizing, savings plans and cheaper storage. Practised quarterly database restore drills to a second region, with the last drill taking 38 minutes. Wrote Python and shell tools, including an access key rotation tool."
+   },
+   {
+    "title": "Junior System Engineer",
+    "organization": "a managed hosting provider, Riyadh",
+    "duration": "Aug 2024 - Apr 2025",
+    "description": "Looked after 200 customer CentOS and Ubuntu servers, managing disks, users, updates, and Apache/Nginx virtual hosts. Answered second-line support tickets and wrote runbooks for common faults."
+   }
+  ]
+ }
+}

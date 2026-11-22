@@ -1,0 +1,136 @@
+{
+ "goal": "it_support_specialist",
+ "extractor": "E0",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Hardware Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "diagnosing hardware issues",
+    "repairing computer components",
+    "fixing device malfunctions"
+   ]
+  },
+  {
+   "gap": "Windows OS Support",
+   "kind": "skill",
+   "concepts": [
+    "Windows"
+   ],
+   "phrases": [
+    "supporting windows operating system",
+    "windows desktop administration",
+    "resolving os issues"
+   ]
+  },
+  {
+   "gap": "Networking (LAN/WAN/Wi-Fi/TCP-IP)",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals",
+    "TCP/IP"
+   ],
+   "phrases": [
+    "wireless network setup",
+    "network protocols basics"
+   ]
+  },
+  {
+   "gap": "Active Directory",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "managing directory services",
+    "user and group administration"
+   ]
+  },
+  {
+   "gap": "Ticketing Systems (ServiceNow/Remedy)",
+   "kind": "tool",
+   "concepts": [
+    "Ticketing Systems"
+   ],
+   "phrases": [
+    "managing support tickets",
+    "incident tracking tools",
+    "helpdesk ticketing workflows"
+   ]
+  },
+  {
+   "gap": "Microsoft 365",
+   "kind": "tool",
+   "concepts": [
+    "Microsoft 365"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "IT Asset Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "tracking hardware and software assets",
+    "lifecycle management of it equipment",
+    "inventory control for it resources"
+   ]
+  },
+  {
+   "gap": "Printer/Peripheral Setup and Support",
+   "kind": "skill",
+   "concepts": [
+    "Hardware and Software Support"
+   ],
+   "phrases": [
+    "configuring printers and peripherals",
+    "device installation and support"
+   ]
+  },
+  {
+   "gap": "User Account Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "creating and managing user accounts",
+    "access provisioning",
+    "account administration tasks"
+   ]
+  },
+  {
+   "gap": "Technical Documentation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "writing technical guides",
+    "creating support documentation",
+    "documenting procedures and processes"
+   ]
+  },
+  {
+   "gap": "Routers/Switches/Firewalls Configuration",
+   "kind": "skill",
+   "concepts": [
+    "Routing and Switching",
+    "Network Security"
+   ],
+   "phrases": [
+    "configuring network devices",
+    "firewall setup and management",
+    "router and switch administration"
+   ]
+  },
+  {
+   "gap": "Customer Service and Communication",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "communicating with customers",
+    "handling client inquiries",
+    "providing excellent customer support"
+   ]
+  }
+ ]
+}

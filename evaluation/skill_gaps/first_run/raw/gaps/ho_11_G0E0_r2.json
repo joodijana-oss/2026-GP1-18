@@ -1,0 +1,17 @@
+{
+ "case": "ho_11",
+ "arm": "G0E0",
+ "run": 2,
+ "gaps": [
+  "Active Directory",
+  "Ticketing Systems (ServiceNow/Remedy)",
+  "IT Asset Management",
+  "Technical Documentation",
+  "Routers/Switches/Firewalls Configuration"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

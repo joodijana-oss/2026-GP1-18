@@ -1,0 +1,34 @@
+{
+ "goal": "network_engineer",
+ "extractor": "E1",
+ "run": 2,
+ "postings": 12,
+ "rawNames": [
+  "Routing and Switching",
+  "VPN",
+  "LAN/WAN",
+  "VLAN",
+  "CCNA",
+  "Firewall Management",
+  "Cisco Networking",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto",
+  "BGP",
+  "Network Monitoring and Troubleshooting"
+ ],
+ "names": [
+  "Routing and Switching",
+  "VPN",
+  "LAN/WAN",
+  "VLAN",
+  "CCNA",
+  "Firewall Management",
+  "Cisco Networking",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto",
+  "BGP",
+  "Network Monitoring and Troubleshooting"
+ ]
+}

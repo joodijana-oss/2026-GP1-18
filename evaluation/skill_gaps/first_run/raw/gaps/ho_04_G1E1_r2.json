@@ -1,0 +1,66 @@
+{
+ "case": "ho_04",
+ "arm": "G1E1",
+ "run": 2,
+ "gaps": [
+  "Power BI",
+  "Dashboard Development",
+  "Tableau",
+  "R",
+  "Data Governance"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "SQL",
+   "status": "shown"
+  },
+  {
+   "skill": "Power BI",
+   "status": "missing"
+  },
+  {
+   "skill": "Python",
+   "status": "shown"
+  },
+  {
+   "skill": "Data Visualization",
+   "status": "shown"
+  },
+  {
+   "skill": "Dashboard Development",
+   "status": "missing"
+  },
+  {
+   "skill": "Data Analysis",
+   "status": "shown"
+  },
+  {
+   "skill": "Tableau",
+   "status": "missing"
+  },
+  {
+   "skill": "R",
+   "status": "missing"
+  },
+  {
+   "skill": "Machine Learning",
+   "status": "partly"
+  },
+  {
+   "skill": "Stakeholder Management",
+   "status": "partly"
+  },
+  {
+   "skill": "Pandas",
+   "status": "partly"
+  },
+  {
+   "skill": "Data Governance",
+   "status": "missing"
+  }
+ ]
+}

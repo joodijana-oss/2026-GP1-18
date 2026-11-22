@@ -1,0 +1,60 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Demonstrated ability to clean and prepare messy operational data for reporting",
+   "Experience building recurring dashboards and reports for management decision-making",
+   "Used statistical testing (chi-square) to support conclusions in academic project",
+   "Communicated analytical findings to non-technical stakeholders through presentations, leading to real business action (carrier contract renegotiation)",
+   "Collaborated with operational staff to define metrics before analysis",
+   "Strong academic performance (GPA 4.41/5.00)",
+   "Practical database design experience through coursework"
+  ],
+  "currentSkills": [
+   "Excel",
+   "SQL",
+   "Power BI",
+   "Tableau",
+   "R",
+   "Data Analysis",
+   "Data Cleaning",
+   "Statistics",
+   "Database Design",
+   "MySQL",
+   "VLOOKUP",
+   "Pivot Tables"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Management Information Systems",
+    "institution": "Imam Abdulrahman Bin Faisal University",
+    "year": "09/2021 – 06/2026"
+   }
+  ],
+  "certifications": [],
+  "projects": [
+   {
+    "name": "Why do students drop elective courses?",
+    "description": "Surveyed 312 students and used a chi-square test to examine whether elective course drop rates differed between colleges; presented results to the college council."
+   },
+   {
+    "name": "Database Systems course project",
+    "description": "Designed a 9-table schema for a clinic booking system and wrote reports using MySQL."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Operations Intern",
+    "organization": "a Dammam-based freight and warehousing company",
+    "duration": "Jun 2025 - Aug 2025",
+    "description": "Pulled daily shipment records using queries joining orders, carriers and delivery tables; cleaned data by removing duplicate waybills, fixing inconsistent city names, and filling missing delivery dates; built a weekly Power BI view showing late deliveries by carrier and route; used pivot tables and VLOOKUP to analyze 14 months of delivery data and identify three routes causing 46% of delays; worked with dispatch supervisors to define the on-time delivery measure; presented findings to management, resulting in a renegotiated carrier contract."
+   },
+   {
+    "title": "Data volunteer",
+    "organization": "charity food-bank campaign",
+    "duration": "Ramadan 1446",
+    "description": "Maintained the donor list in Google Sheets and sent a weekly count of parcels to organisers."
+   }
+  ]
+ }
+}

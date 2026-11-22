@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SIEM",
+  "Penetration Testing",
+  "Vulnerability Assessment",
+  "Incident Response",
+  "Firewall Administration",
+  "CEH",
+  "OSCP",
+  "CISSP",
+  "Security+",
+  "Nmap",
+  "Metasploit",
+  "Python"
+ ],
+ "answer": [
+  {
+   "skill": "SIEM",
+   "status": "shown",
+   "quote": "forwarded their Windows event logs and Linux auth logs to one central console"
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "partly",
+   "quote": "Replayed a brute-force attack and a suspicious PowerShell download"
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "shown",
+   "quote": "ran Nessus Essentials against the club's two servers, ranked the 23 findings"
+  },
+  {
+   "skill": "Incident Response",
+   "status": "partly",
+   "quote": "practise reading logs from a staged incident"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CEH",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Security+",
+   "status": "shown",
+   "quote": "CompTIA Security+ (SY0-701), March 2026"
+  },
+  {
+   "skill": "Nmap",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "wrote a short Python script that reads the capture files"
+  }
+ ]
+}

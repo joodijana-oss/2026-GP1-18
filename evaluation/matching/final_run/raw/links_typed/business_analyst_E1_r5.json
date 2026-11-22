@@ -1,0 +1,171 @@
+{
+ "goal": "business_analyst",
+ "list": "E1",
+ "run": 5,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Business Requirements Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Requirements Gathering"
+   ],
+   "phrases": [],
+   "same": [
+    "Requirements Gathering"
+   ],
+   "terms": [
+    "business requirements",
+    "requirements analysis",
+    "requirements elicitation"
+   ]
+  },
+  {
+   "gap": "ERP Systems",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "ERP",
+    "enterprise resource planning",
+    "ERP system"
+   ]
+  },
+  {
+   "gap": "System Integration",
+   "kind": "skill",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [],
+   "same": [
+    "Integration"
+   ],
+   "terms": [
+    "system integration",
+    "integration"
+   ]
+  },
+  {
+   "gap": "SAP SuccessFactors Learning",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "SAP SuccessFactors",
+    "SuccessFactors Learning",
+    "LMS module"
+   ]
+  },
+  {
+   "gap": "Power BI",
+   "kind": "tool",
+   "concepts": [
+    "Power BI"
+   ],
+   "phrases": [],
+   "same": [
+    "Power BI"
+   ],
+   "terms": [
+    "Power BI",
+    "Microsoft Power BI"
+   ]
+  },
+  {
+   "gap": "Risk Assessment",
+   "kind": "skill",
+   "concepts": [
+    "Risk Assessment"
+   ],
+   "phrases": [],
+   "same": [
+    "Risk Assessment"
+   ],
+   "terms": [
+    "risk assessment",
+    "risk analysis"
+   ]
+  },
+  {
+   "gap": "Access Control Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "access control",
+    "identity and access management",
+    "IAM"
+   ]
+  },
+  {
+   "gap": "Oracle NetSuite",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "NetSuite",
+    "Oracle NetSuite"
+   ]
+  },
+  {
+   "gap": "APIs",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [],
+   "same": [
+    "APIs"
+   ],
+   "terms": [
+    "API",
+    "REST API",
+    "web services"
+   ]
+  },
+  {
+   "gap": "Agile Development",
+   "kind": "skill",
+   "concepts": [
+    "Agile"
+   ],
+   "phrases": [],
+   "same": [
+    "Agile"
+   ],
+   "terms": [
+    "agile",
+    "scrum",
+    "sprint"
+   ]
+  },
+  {
+   "gap": "DevOps",
+   "kind": "skill",
+   "concepts": [
+    "DevOps"
+   ],
+   "phrases": [],
+   "same": [
+    "DevOps"
+   ],
+   "terms": [
+    "DevOps",
+    "CI/CD pipeline",
+    "automation"
+   ]
+  },
+  {
+   "gap": "ISO27001 Lead Implementer",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "ISO 27001 Lead Implementer",
+    "ISO27001 implementer",
+    "ISMS implementation"
+   ]
+  }
+ ]
+}

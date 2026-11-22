@@ -1,0 +1,123 @@
+{
+ "goal": "cloud_devops_engineer",
+ "list": "W1",
+ "run": 3,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "Cloud Cost Optimization",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "cost optimization",
+    "cloud cost",
+    "FinOps"
+   ]
+  },
+  {
+   "gap": "Amazon EKS",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "EKS",
+    "Elastic Kubernetes Service",
+    "Amazon EKS"
+   ]
+  },
+  {
+   "gap": "Server Hardware Installation",
+   "kind": "skill",
+   "concepts": [
+    "Data Center Operations"
+   ],
+   "phrases": [],
+   "terms": [
+    "server installation",
+    "hardware setup",
+    "rack mounting"
+   ]
+  },
+  {
+   "gap": "Public Speaking",
+   "kind": "soft",
+   "concepts": [
+    "Presentations"
+   ],
+   "phrases": [],
+   "terms": [
+    "public speaking",
+    "presentation skills"
+   ]
+  },
+  {
+   "gap": "HashiCorp Certified: Terraform Associate",
+   "kind": "certification",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Terraform Associate",
+    "HashiCorp certification",
+    "Terraform certification"
+   ]
+  },
+  {
+   "gap": "Technical Training",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "training delivery",
+    "technical instruction",
+    "teaching"
+   ]
+  },
+  {
+   "gap": "Static Website Hosting",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "static site hosting",
+    "static website",
+    "S3 hosting"
+   ]
+  },
+  {
+   "gap": "Amazon S3",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "S3",
+    "Amazon S3",
+    "object storage"
+   ]
+  },
+  {
+   "gap": "Content Delivery Network",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "CDN",
+    "content delivery",
+    "edge caching"
+   ]
+  },
+  {
+   "gap": "Distributed Systems",
+   "kind": "skill",
+   "concepts": [
+    "System Design"
+   ],
+   "phrases": [],
+   "terms": [
+    "distributed systems",
+    "distributed computing",
+    "consensus algorithms"
+   ]
+  }
+ ]
+}

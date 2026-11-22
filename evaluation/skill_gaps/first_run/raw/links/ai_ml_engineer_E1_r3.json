@@ -1,0 +1,112 @@
+{
+ "goal": "ai_ml_engineer",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "PyTorch",
+   "kind": "tool",
+   "concepts": [
+    "PyTorch"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Deep Learning",
+   "kind": "skill",
+   "concepts": [
+    "Deep Learning"
+   ],
+   "phrases": [
+    "neural network training",
+    "building deep neural nets"
+   ]
+  },
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "TensorFlow",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "building neural networks",
+    "model training framework"
+   ]
+  },
+  {
+   "gap": "C++",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "systems programming language",
+    "writing C++ code"
+   ]
+  },
+  {
+   "gap": "Computer Vision",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "image recognition techniques",
+    "processing visual data",
+    "object detection"
+   ]
+  },
+  {
+   "gap": "Linux",
+   "kind": "tool",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "MLOps",
+   "kind": "skill",
+   "concepts": [
+    "MLOps"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "LangChain",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "building LLM applications",
+    "chaining language model calls",
+    "generative AI framework"
+   ]
+  },
+  {
+   "gap": "Docker",
+   "kind": "tool",
+   "concepts": [
+    "Containers"
+   ],
+   "phrases": []
+  }
+ ]
+}

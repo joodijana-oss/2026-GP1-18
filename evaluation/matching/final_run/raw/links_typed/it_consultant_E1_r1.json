@@ -1,0 +1,169 @@
+{
+ "goal": "it_consultant",
+ "list": "E1",
+ "run": 1,
+ "request": "typed",
+ "links": [
+  {
+   "gap": "SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [],
+   "same": [
+    "Databases and SQL"
+   ],
+   "terms": [
+    "SQL",
+    "queries",
+    "structured query language"
+   ]
+  },
+  {
+   "gap": "PL/SQL",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "PL/SQL",
+    "Oracle PL/SQL",
+    "stored procedures"
+   ]
+  },
+  {
+   "gap": "Digital Transformation",
+   "kind": "skill",
+   "concepts": [
+    "Digital Transformation"
+   ],
+   "phrases": [],
+   "same": [
+    "Digital Transformation"
+   ],
+   "terms": [
+    "digital transformation",
+    "digitalization"
+   ]
+  },
+  {
+   "gap": "Oracle E-Business Suite",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "Oracle EBS",
+    "E-Business Suite",
+    "Oracle applications"
+   ]
+  },
+  {
+   "gap": "Java",
+   "kind": "tool",
+   "concepts": [
+    "Java"
+   ],
+   "phrases": [],
+   "same": [
+    "Java"
+   ],
+   "terms": [
+    "Java",
+    "Java programming"
+   ]
+  },
+  {
+   "gap": "REST",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [],
+   "terms": [
+    "REST API",
+    "RESTful",
+    "HTTP methods"
+   ]
+  },
+  {
+   "gap": "SOAP",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [],
+   "terms": [
+    "SOAP API",
+    "XML web services",
+    "WSDL"
+   ]
+  },
+  {
+   "gap": "BPMN",
+   "kind": "tool",
+   "concepts": [
+    "Process Modeling"
+   ],
+   "phrases": [],
+   "terms": [
+    "BPMN",
+    "business process modeling notation",
+    "process diagrams"
+   ]
+  },
+  {
+   "gap": "Business Process Automation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "process automation",
+    "workflow automation",
+    "automation"
+   ]
+  },
+  {
+   "gap": "Technical Documentation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [],
+   "terms": [
+    "technical documentation",
+    "documentation",
+    "technical writing"
+   ]
+  },
+  {
+   "gap": "Cloud Computing",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [],
+   "same": [
+    "Cloud Computing"
+   ],
+   "terms": [
+    "cloud computing",
+    "cloud services",
+    "cloud platforms"
+   ]
+  },
+  {
+   "gap": "Troubleshooting",
+   "kind": "skill",
+   "concepts": [
+    "Troubleshooting"
+   ],
+   "phrases": [],
+   "same": [
+    "Troubleshooting"
+   ],
+   "terms": [
+    "troubleshooting",
+    "problem diagnosis",
+    "issue resolution"
+   ]
+  }
+ ]
+}

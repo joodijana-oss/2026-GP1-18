@@ -1,0 +1,21 @@
+{
+ "case": "ho_08",
+ "arm": "G0E1",
+ "run": 1,
+ "gaps": [
+  "LAN/WAN",
+  "Cisco Routers and Switches",
+  "CCNA",
+  "Firewall Management",
+  "BGP",
+  "MPLS",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

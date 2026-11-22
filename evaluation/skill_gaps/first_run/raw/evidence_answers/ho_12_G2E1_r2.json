@@ -1,0 +1,54 @@
+{
+ "targets": [
+  "Cybersecurity Risk Register Management",
+  "CISA",
+  "CISM",
+  "CRISC",
+  "NIST",
+  "PCI DSS",
+  "Third-Party Risk Management",
+  "CISSP"
+ ],
+ "answer": [
+  {
+   "skill": "Cybersecurity Risk Register Management",
+   "status": "partly",
+   "quote": "scored a fictional clinic's assets and threats for likelihood and impact on a 5x5 matrix"
+  },
+  {
+   "skill": "CISA",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CISM",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "CRISC",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "NIST",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "PCI DSS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Third-Party Risk Management",
+   "status": "shown",
+   "quote": "Sent security questionnaires to 9 outsourcing suppliers and scored their answers"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

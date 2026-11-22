@@ -1,0 +1,125 @@
+{
+ "label": "ho_a_04",
+ "cv": "ho_a",
+ "version": "new",
+ "run": 1,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:09:24.889752",
+ "finishedAt": "2026-11-22T02:10:29.251351",
+ "seconds": 64.361,
+ "inputTokens": 4210,
+ "outputTokens": 6604,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "Your contact details are missing a phone number, even though your name, email, location and GitHub link are present.",
+    "suggestion": "Add a phone number near the top of your CV, next to your email and location."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The headings \"About Me\" and \"My Journey So Far\" are personal, creative names instead of standard section titles.",
+    "suggestion": "Rename \"About Me\" to \"Summary\" and \"My Journey So Far\" to \"Experience\" so ATS systems recognize them."
+   },
+   {
+    "issue": "Your AWS Certified Cloud Practitioner and Scrum Fundamentals Certified credentials are listed inside the Skills section instead of their own section.",
+    "suggestion": "Create a separate \"Certifications\" section for these two credentials, below Skills or Education."
+   },
+   {
+    "issue": "Your Experience entries are not ordered from most recent to oldest: Campus IT Help Desk appears first, before Najm Logistics Solutions and Rimal Tech.",
+    "suggestion": "List your experience as Rimal Tech (Oct 2025 - Present), then Najm Logistics Solutions, then Campus IT Help Desk."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "In the Maktabati project stack, \"Reactjs\", \"java script\" and \"Postgress\" are not written in their official forms.",
+    "suggestion": "Write these as \"React\", \"JavaScript\" and \"PostgreSQL\" to match their official names."
+   },
+   {
+    "issue": "JavaScript and React are named differently across your CV: \"JS\" in Skills, \"Javascript\" and \"React.JS\" in Souq Tracker, versus \"React\" in Skills.",
+    "suggestion": "Use \"JavaScript\" and \"React\" consistently everywhere these appear."
+   },
+   {
+    "issue": "In the Najm Logistics Solutions entry, you describe making the app check itself automatically every time someone saved new code, which is a continuous integration practice but isn't named as such.",
+    "suggestion": "Add the term \"continuous integration (CI)\" to describe this part of your work, if that's the tool or process you used."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Najm Logistics Solutions internship is written as one long continuous story covering many tasks instead of separate points.",
+    "suggestion": "Split it into short bullet points, for example one for learning the codebase, one for the shipment tracking screen improvement, one for backend endpoint work, and one for the automated code checks."
+   },
+   {
+    "issue": "Your \"About Me\" section is written in first person with vague phrases like \"Hard-working team player with excellent skills and a great passion for technology\" and \"a fast learner who always gives 100%\".",
+    "suggestion": "Rewrite it as a short third-person-style summary that names your actual skills, such as your software engineering background and the technologies you work with."
+   },
+   {
+    "issue": "The Campus IT Help Desk bullets (\"Responsible for bugs\", \"Meetings with team\", \"Tickets and emails from students\") are vague duty listings without action verbs.",
+    "suggestion": "Rewrite each point to start with an action verb and state what you actually did, for example \"Resolved [number] student support tickets\" or \"Tracked and reported software bugs to the development team\"."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Najm Logistics Solutions dates read \"Jun 2025 - Aug 2024\", where the end date comes before the start date.",
+    "suggestion": "Correct these dates to the actual months you worked there, for example \"Jun 2024 - Aug 2024\" if that was the real period."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "Your contact details are missing a phone number, even though your name, email, location and GitHub link are present.",
+    "suggestion": "Add a phone number near the top of your CV, next to your email and location."
+   }
+  ],
+  "sectionOrganization": [
+   {
+    "issue": "The headings \"About Me\" and \"My Journey So Far\" are personal, creative names instead of standard section titles.",
+    "suggestion": "Rename \"About Me\" to \"Summary\" and \"My Journey So Far\" to \"Experience\" so ATS systems recognize them."
+   },
+   {
+    "issue": "Your AWS Certified Cloud Practitioner and Scrum Fundamentals Certified credentials are listed inside the Skills section instead of their own section.",
+    "suggestion": "Create a separate \"Certifications\" section for these two credentials, below Skills or Education."
+   },
+   {
+    "issue": "Your Experience entries are not ordered from most recent to oldest: Campus IT Help Desk appears first, before Najm Logistics Solutions and Rimal Tech.",
+    "suggestion": "List your experience as Rimal Tech (Oct 2025 - Present), then Najm Logistics Solutions, then Campus IT Help Desk."
+   }
+  ],
+  "keywordUsage": [
+   {
+    "issue": "In the Maktabati project stack, \"Reactjs\", \"java script\" and \"Postgress\" are not written in their official forms.",
+    "suggestion": "Write these as \"React\", \"JavaScript\" and \"PostgreSQL\" to match their official names."
+   },
+   {
+    "issue": "JavaScript and React are named differently across your CV: \"JS\" in Skills, \"Javascript\" and \"React.JS\" in Souq Tracker, versus \"React\" in Skills.",
+    "suggestion": "Use \"JavaScript\" and \"React\" consistently everywhere these appear."
+   },
+   {
+    "issue": "In the Najm Logistics Solutions entry, you describe making the app check itself automatically every time someone saved new code, which is a continuous integration practice but isn't named as such.",
+    "suggestion": "Add the term \"continuous integration (CI)\" to describe this part of your work, if that's the tool or process you used."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "The Najm Logistics Solutions internship is written as one long continuous story covering many tasks instead of separate points.",
+    "suggestion": "Split it into short bullet points, for example one for learning the codebase, one for the shipment tracking screen improvement, one for backend endpoint work, and one for the automated code checks."
+   },
+   {
+    "issue": "Your \"About Me\" section is written in first person with vague phrases like \"Hard-working team player with excellent skills and a great passion for technology\" and \"a fast learner who always gives 100%\".",
+    "suggestion": "Rewrite it as a short third-person-style summary that names your actual skills, such as your software engineering background and the technologies you work with."
+   },
+   {
+    "issue": "The Campus IT Help Desk bullets (\"Responsible for bugs\", \"Meetings with team\", \"Tickets and emails from students\") are vague duty listings without action verbs.",
+    "suggestion": "Rewrite each point to start with an action verb and state what you actually did, for example \"Resolved [number] student support tickets\" or \"Tracked and reported software bugs to the development team\"."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "The Najm Logistics Solutions dates read \"Jun 2025 - Aug 2024\", where the end date comes before the start date.",
+    "suggestion": "Correct these dates to the actual months you worked there, for example \"Jun 2024 - Aug 2024\" if that was the real period."
+   }
+  ]
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "case": "ho_10",
+ "arm": "G0E0",
+ "run": 3,
+ "gaps": [
+  "Regression Testing",
+  "Functional Testing",
+  "API Testing",
+  "Test Automation",
+  "Appium"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

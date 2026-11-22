@@ -1,0 +1,34 @@
+{
+ "goal": "qa_test_engineer",
+ "extractor": "E0",
+ "run": 2,
+ "postings": 20,
+ "rawNames": [
+  "Manual Testing",
+  "Jira",
+  "Test Case Design",
+  "Regression Testing",
+  "Functional Testing",
+  "Defect Tracking",
+  "API Testing",
+  "SQL",
+  "Selenium",
+  "Appium",
+  "Agile/Scrum",
+  "CI/CD"
+ ],
+ "names": [
+  "Manual Testing",
+  "Jira",
+  "Test Case Design",
+  "Regression Testing",
+  "Functional Testing",
+  "Defect Tracking",
+  "API Testing",
+  "SQL",
+  "Selenium",
+  "Appium",
+  "Agile/Scrum",
+  "CI/CD"
+ ]
+}

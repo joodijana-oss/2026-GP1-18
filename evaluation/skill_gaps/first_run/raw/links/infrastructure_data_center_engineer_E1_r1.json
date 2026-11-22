@@ -1,0 +1,105 @@
+{
+ "goal": "infrastructure_data_center_engineer",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "managing Linux systems",
+    "Linux system administration",
+    "command line administration"
+   ]
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Networking",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "network fundamentals",
+    "how networks work",
+    "data communication basics"
+   ]
+  },
+  {
+   "gap": "Structured Cabling",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "cable installation",
+    "physical network wiring",
+    "cabling standards"
+   ]
+  },
+  {
+   "gap": "VMware",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Windows Server",
+   "kind": "tool",
+   "concepts": [
+    "Windows Server"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Prometheus",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Grafana",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Ansible",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Disaster Recovery",
+   "kind": "skill",
+   "concepts": [
+    "Disaster Recovery"
+   ],
+   "phrases": []
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "cvStructure": [
+  {
+   "issue": "Your CV does not include a phone number, only an email, location and GitHub link.",
+   "suggestion": "Add a phone number near your email and location so employers can reach you directly."
+  }
+ ],
+ "sectionOrganization": [
+  {
+   "issue": "\"About Me\" and \"My Journey So Far\" are personal, creative headings instead of standard ones an ATS looks for.",
+   "suggestion": "Rename \"About Me\" to \"Summary\" and \"My Journey So Far\" to \"Experience\"."
+  },
+  {
+   "issue": "Your AWS Certified Cloud Practitioner and Scrum Fundamentals Certified certifications are listed inside the Skills section instead of their own section.",
+   "suggestion": "Move both certifications into a separate \"Certifications\" section placed after Skills."
+  },
+  {
+   "issue": "Your experience entries are listed oldest first: Campus IT Help Desk, then Najm Logistics Solutions, then Rimal Tech.",
+   "suggestion": "List them most recent first: Rimal Tech, then Najm Logistics Solutions, then Campus IT Help Desk."
+  }
+ ],
+ "keywordUsage": [
+  {
+   "issue": "Technology names are written inconsistently across your CV: \"Reactjs\" and \"Postgress\" in Maktabati, \"React.JS\" and \"Javascript\" in Souq Tracker, and \"JS\" in Skills.",
+   "suggestion": "Use the official forms consistently everywhere: \"React\", \"JavaScript\" and \"PostgreSQL\"."
+  },
+  {
+   "issue": "In the Najm Logistics Solutions entry, making the app check itself automatically every time code is saved describes continuous integration, but that term is never named.",
+   "suggestion": "Add the standard term, for example \"set up continuous integration (CI) to run automated tests on every code change.\""
+  },
+  {
+   "issue": "You built REST endpoints in both the Najm Logistics Solutions and Rimal Tech roles, but \"REST APIs\" is not listed in your Skills section.",
+   "suggestion": "Add \"REST APIs\" to your Skills section since you have demonstrated this in two roles."
+  }
+ ],
+ "readability": [
+  {
+   "issue": "The Najm Logistics Solutions entry is written as one long continuous first-person story instead of separate points.",
+   "suggestion": "Split it into short bullet points, each starting with an action verb such as \"Learned\", \"Optimized\", \"Collaborated\" or \"Set up\"."
+  },
+  {
+   "issue": "Your Summary and the Campus IT Help Desk bullets, like \"Responsible for bugs\" and \"Meetings with team\", list duties in vague words instead of action-driven statements.",
+   "suggestion": "Rewrite the summary with concrete skills and a clear goal, and turn the Campus IT Help Desk bullets into statements like \"Resolved student support tickets\" or \"Tracked and fixed reported bugs\"."
+  },
+  {
+   "issue": "The Najm Logistics Solutions entry says the page \"it loads faster\" without giving a specific result.",
+   "suggestion": "Add a number, for example \"reduced load time by [percentage]\"."
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "The Najm Logistics Solutions dates read \"Jun 2025 - Aug 2024\", which shows an end date before the start date.",
+   "suggestion": "Correct the dates to the actual months you worked at Najm Logistics Solutions."
+  }
+ ]
+}

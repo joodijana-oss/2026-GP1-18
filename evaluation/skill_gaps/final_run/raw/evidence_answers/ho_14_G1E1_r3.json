@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "LAN/WAN",
+  "Cisco Routers and Switches",
+  "VPN",
+  "VLAN",
+  "Firewall Management",
+  "CCNA",
+  "BGP",
+  "OSPF",
+  "QoS",
+  "MPLS",
+  "FortiGate",
+  "Palo Alto"
+ ],
+ "answer": [
+  {
+   "skill": "LAN/WAN",
+   "status": "shown",
+   "quote": "trace it from the wall socket to the patch panel to the switch port"
+  },
+  {
+   "skill": "Cisco Routers and Switches",
+   "status": "shown",
+   "quote": "Two used Cisco routers and a managed switch bought second-hand"
+  },
+  {
+   "skill": "VPN",
+   "status": "shown",
+   "quote": "Built an encrypted tunnel between my flat and my parents' house"
+  },
+  {
+   "skill": "VLAN",
+   "status": "shown",
+   "quote": "Split my flat into four networks (family, guests, cameras, lab) on the one switch"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "partly",
+   "quote": "wrote access lists so that the cameras cannot reach anything else"
+  },
+  {
+   "skill": "CCNA",
+   "status": "partly",
+   "quote": "Studying for the CCNA; exam booked for January 2027"
+  },
+  {
+   "skill": "BGP",
+   "status": "shown",
+   "quote": "exchange prefixes with a pretend provider, each side under its own AS number"
+  },
+  {
+   "skill": "OSPF",
+   "status": "shown",
+   "quote": "run OSPF inside each of two pretend companies"
+  },
+  {
+   "skill": "QoS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "MPLS",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "FortiGate",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing",
+   "quote": ""
+  }
+ ]
+}

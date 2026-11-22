@@ -1,0 +1,36 @@
+SARAH AL-DOSSARI
+Al Khobar, Saudi Arabia
+sarah.aldossari@example.com | +966 50 000 0000
+
+SUMMARY
+Software Engineering graduate with a seven-month co-op on the payments team of a fintech company. Comfortable picking up an unfamiliar codebase and shipping small, well-tested changes.
+
+EDUCATION
+Prince Mohammad Bin Fahd University, Al Khobar
+BSc Software Engineering, Sept 2021 – May 2026, GPA 3.6/4.0
+
+CO-OP EXPERIENCE
+Software Engineer (Co-op), a Khobar-based fintech start-up
+01/2025 – 07/2025
+● Added three endpoints to the refunds service (Java, Spring Boot) so merchants can request partial refunds; they now serve about 2,000 calls a day
+● Wrote JUnit and Mockito tests for every change and raised coverage of the refunds module from 54% to 81%
+● Opened 46 pull requests; read and commented on teammates' changes twice a week and had my own checked before merging
+● Traced a double-refund fault to a race between two threads using logs and breakpoints, then fixed it with a database-level lock
+● Packaged the service into an image and ran it together with PostgreSQL through a compose file so new joiners can start the stack with one command
+● Worked in two-week sprints with daily stand-ups, estimating my own tickets in Jira
+● Rewrote a slow settlement report query, adding an index that cut it from 9 s to
+0.4 s
+
+PROJECTS
+Graduation project – "Maw'idi" clinic appointment system (team of 5)
+● Designed the class model (patients, doctors, slots, bookings) with inheritance and interfaces, and used the strategy pattern for the different reminder channels
+● Built the booking screens in React and connected them to our own backend
+Library kiosk (Data Structures course) – implemented a hash table and a trie in Java for instant title search
+
+TECHNICAL SKILLS
+Languages: Java, JavaScript, C++
+Other: Git, Linux
+
+AWARDS
+Dean's list, 4 semesters
+Page 1 of 1

@@ -1,0 +1,119 @@
+{
+ "goal": "erp_consultant",
+ "extractor": "E0",
+ "run": 1,
+ "links": [
+  {
+   "gap": "SAP S/4HANA",
+   "kind": "tool",
+   "concepts": [
+    "SAP S/4HANA"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "SAP FI/CO",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "financial accounting configuration",
+    "controlling module setup"
+   ]
+  },
+  {
+   "gap": "SAP MM",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "materials management module",
+    "procurement process configuration"
+   ]
+  },
+  {
+   "gap": "PL/SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "stored procedures and triggers",
+    "database programming language"
+   ]
+  },
+  {
+   "gap": "SAP SD",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "sales and distribution module",
+    "order to cash process"
+   ]
+  },
+  {
+   "gap": "SAP PP",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "production planning module",
+    "manufacturing process configuration"
+   ]
+  },
+  {
+   "gap": "ABAP",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "SAP programming language",
+    "custom report development"
+   ]
+  },
+  {
+   "gap": "SAP QM",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "quality management module",
+    "inspection lot processing"
+   ]
+  },
+  {
+   "gap": "Oracle Cloud ERP",
+   "kind": "tool",
+   "concepts": [
+    "Oracle ERP"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Oracle Integration Cloud (OIC)",
+   "kind": "tool",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [
+    "cloud integration platform",
+    "connecting enterprise applications"
+   ]
+  },
+  {
+   "gap": "Microsoft Dynamics 365",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "business applications platform",
+    "CRM and ERP suite"
+   ]
+  },
+  {
+   "gap": "Power Platform (Power Apps/Power Automate/Power BI)",
+   "kind": "tool",
+   "concepts": [
+    "Power BI"
+   ],
+   "phrases": [
+    "low-code app development",
+    "workflow automation tools"
+   ]
+  }
+ ]
+}

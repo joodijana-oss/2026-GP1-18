@@ -1,0 +1,55 @@
+{
+ "case": "ho_15",
+ "arm": "G2E1",
+ "run": 3,
+ "gaps": [
+  "Kubernetes",
+  "TensorFlow",
+  "C++",
+  "Terraform",
+  "LangChain",
+  "Docker"
+ ],
+ "method": "names-verified",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Kubernetes",
+   "status": "missing"
+  },
+  {
+   "skill": "TensorFlow",
+   "status": "missing"
+  },
+  {
+   "skill": "C++",
+   "status": "missing"
+  },
+  {
+   "skill": "Computer Vision",
+   "status": "shown"
+  },
+  {
+   "skill": "Linux",
+   "status": "partly"
+  },
+  {
+   "skill": "MLOps",
+   "status": "partly"
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing"
+  },
+  {
+   "skill": "LangChain",
+   "status": "missing"
+  },
+  {
+   "skill": "Docker",
+   "status": "missing"
+  }
+ ]
+}

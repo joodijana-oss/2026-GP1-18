@@ -1,0 +1,34 @@
+{
+ "goal": "infrastructure_data_center_engineer",
+ "extractor": "E0",
+ "run": 3,
+ "postings": 20,
+ "rawNames": [
+  "Linux Administration",
+  "Networking (TCP/IP, LAN/WAN, VLAN, DNS, VPN, Firewalls)",
+  "Data Center Operations (Servers, Storage, Power, Cooling)",
+  "Python",
+  "Terraform",
+  "Structured Cabling (Fiber Optic & Copper)",
+  "Virtualization (VMware/Hyper-V)",
+  "CI/CD Pipelines",
+  "Monitoring & Observability Tools (Prometheus, Grafana)",
+  "Windows Server Administration",
+  "Cloud Platforms (AWS/Azure/GCP)",
+  "Ansible"
+ ],
+ "names": [
+  "Linux Administration",
+  "Networking (TCP/IP, LAN/WAN, VLAN, DNS, VPN, Firewalls)",
+  "Data Center Operations (Servers, Storage, Power, Cooling)",
+  "Python",
+  "Terraform",
+  "Structured Cabling (Fiber Optic & Copper)",
+  "Virtualization (VMware/Hyper-V)",
+  "CI/CD Pipelines",
+  "Monitoring & Observability Tools (Prometheus, Grafana)",
+  "Windows Server Administration",
+  "Cloud Platforms (AWS/Azure/GCP)",
+  "Ansible"
+ ]
+}

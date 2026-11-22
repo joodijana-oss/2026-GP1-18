@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "SIEM",
+  "Penetration Testing",
+  "Vulnerability Assessment",
+  "Incident Response",
+  "Firewall Administration",
+  "CISSP",
+  "Network Security",
+  "CEH",
+  "Security+",
+  "OSCP",
+  "Python",
+  "Access Control"
+ ],
+ "answer": [
+  {
+   "skill": "SIEM",
+   "status": "partly",
+   "quote": "searching Splunk for signs of lateral movement"
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "partly",
+   "quote": "removed 40 unused any-any rules after last year's PCI assessment"
+  },
+  {
+   "skill": "Incident Response",
+   "status": "shown",
+   "quote": "Handle P1 outages under the group's ITIL major-incident process"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "shown",
+   "quote": "Add, review and retire rules on the FortiGate firewalls"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Network Security",
+   "status": "shown",
+   "quote": "Separated the card-payment terminals into their own VLAN with access lists"
+  },
+  {
+   "skill": "CEH",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Security+",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Python",
+   "status": "shown",
+   "quote": "Wrote Python scripts that back up every switch configuration nightly"
+  },
+  {
+   "skill": "Access Control",
+   "status": "shown",
+   "quote": "own VLAN with access lists so that guest Wi-Fi can no longer reach them"
+  }
+ ]
+}

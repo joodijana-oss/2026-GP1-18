@@ -1,0 +1,121 @@
+{
+ "goal": "infrastructure_data_center_engineer",
+ "extractor": "E1",
+ "run": 3,
+ "links": [
+  {
+   "gap": "Linux Administration",
+   "kind": "skill",
+   "concepts": [
+    "Linux"
+   ],
+   "phrases": [
+    "managing linux systems",
+    "linux system administration",
+    "command line administration"
+   ]
+  },
+  {
+   "gap": "Terraform",
+   "kind": "tool",
+   "concepts": [
+    "Terraform"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Networking",
+   "kind": "skill",
+   "concepts": [
+    "Networking Fundamentals"
+   ],
+   "phrases": [
+    "network concepts",
+    "computer networking basics",
+    "how networks work"
+   ]
+  },
+  {
+   "gap": "Python",
+   "kind": "tool",
+   "concepts": [
+    "Python"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Structured Cabling",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "cabling standards",
+    "physical network wiring",
+    "cable installation practices"
+   ]
+  },
+  {
+   "gap": "VMware",
+   "kind": "tool",
+   "concepts": [
+    "Virtualization"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Kubernetes",
+   "kind": "tool",
+   "concepts": [
+    "Kubernetes"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Windows Server",
+   "kind": "tool",
+   "concepts": [
+    "Windows Server"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Prometheus",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "monitoring metrics collection",
+    "system performance monitoring",
+    "alerting and observability"
+   ]
+  },
+  {
+   "gap": "Grafana",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "dashboard visualization tool",
+    "metrics visualization",
+    "monitoring dashboards"
+   ]
+  },
+  {
+   "gap": "Ansible",
+   "kind": "tool",
+   "concepts": [
+    "Infrastructure as Code"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Firewall Administration",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": [
+    "configuring firewalls",
+    "firewall rule management",
+    "network traffic filtering"
+   ]
+  }
+ ]
+}

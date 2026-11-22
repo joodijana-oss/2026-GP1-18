@@ -1,0 +1,20 @@
+{
+ "case": "ho_12",
+ "arm": "G0E1",
+ "run": 3,
+ "gaps": [
+  "Risk Register Management",
+  "CISSP",
+  "CISA",
+  "CISM",
+  "NIST Framework",
+  "PCI DSS",
+  "CRISC",
+  "Audit Coordination"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

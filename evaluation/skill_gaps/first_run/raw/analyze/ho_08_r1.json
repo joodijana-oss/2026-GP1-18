@@ -1,0 +1,60 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Designed IP addressing scheme for large-scale network with 1,200 hosts across 14 departments",
+   "Hands-on experience configuring real Cisco networking hardware (2960 switches and ISR routers)",
+   "Practical troubleshooting ability using show and debug commands, ping and traceroute",
+   "Experience with dynamic routing protocols (OSPF) and verifying failover",
+   "Implemented secure site-to-site connectivity using IPsec VPN",
+   "Field experience deploying and testing wireless access points and cabling infrastructure",
+   "Holds CCNA certification demonstrating validated networking knowledge",
+   "Documented network designs using Visio with topology diagrams and change logs"
+  ],
+  "currentSkills": [
+   "Cisco IOS",
+   "OSPF",
+   "VLANs",
+   "Wireshark",
+   "Python",
+   "IP Addressing and Subnetting",
+   "IPsec VPN",
+   "DHCP",
+   "Network Troubleshooting",
+   "Packet Tracer",
+   "Visio",
+   "Layer 2 Switching",
+   "Layer 3 Routing",
+   "Structured Cabling"
+  ],
+  "education": [
+   {
+    "degree": "Bachelor",
+    "major": "Computer Engineering",
+    "institution": "Umm Al-Qura University",
+    "year": "2021-2026"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "Cisco Certified Network Associate (CCNA 200-301)",
+    "issuer": "Cisco",
+    "year": "14/02/2026"
+   }
+  ],
+  "projects": [
+   {
+    "name": "Two-branch campus network (graduation project)",
+    "description": "Planned IP addressing for 1,200 hosts across 14 departments by subnetting a /20 block, separated departments at layer 2 with trunked links between access and distribution layers, routed between them on a layer-3 switch, ran OSPF in two areas with failover testing, connected branches via an encrypted IPsec tunnel over a simulated ISP, implemented centralized DHCP with relays, and documented the topology and address plan in Visio with a change log. Built first in Packet Tracer then implemented on six real Cisco 2960 and ISR devices."
+   },
+   {
+    "name": "Hajj season volunteer network",
+    "description": "Helped install and aim 22 access points in two pilgrim guidance tents, tested coverage using a phone survey app, and crimped and tested around 80 Cat6 cable runs to a temporary rack."
+   },
+   {
+    "name": "Faulty lab exercise series (Networks 2 course)",
+    "description": "Diagnosed weekly intentionally broken network topologies, identifying issues such as mismatched native VLAN, wrong subnet mask, and missing default route using show and debug commands, ping and traceroute."
+   }
+  ],
+  "experience": []
+ }
+}

@@ -1,0 +1,130 @@
+{
+ "goal": "erp_consultant",
+ "extractor": "E1",
+ "run": 2,
+ "links": [
+  {
+   "gap": "SAP S/4HANA",
+   "kind": "tool",
+   "concepts": [
+    "SAP S/4HANA"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "SAP MM",
+   "kind": "tool",
+   "concepts": [
+    "SAP"
+   ],
+   "phrases": [
+    "materials management configuration",
+    "procurement module setup"
+   ]
+  },
+  {
+   "gap": "SAP FI",
+   "kind": "tool",
+   "concepts": [
+    "SAP"
+   ],
+   "phrases": [
+    "financial accounting module",
+    "SAP finance configuration"
+   ]
+  },
+  {
+   "gap": "SAP SD",
+   "kind": "tool",
+   "concepts": [
+    "SAP"
+   ],
+   "phrases": [
+    "sales and distribution module",
+    "order to cash process"
+   ]
+  },
+  {
+   "gap": "PL/SQL",
+   "kind": "tool",
+   "concepts": [
+    "Databases and SQL"
+   ],
+   "phrases": [
+    "stored procedures and triggers",
+    "Oracle database programming"
+   ]
+  },
+  {
+   "gap": "SAP ABAP",
+   "kind": "tool",
+   "concepts": [
+    "SAP"
+   ],
+   "phrases": [
+    "SAP programming language",
+    "custom report development"
+   ]
+  },
+  {
+   "gap": "Oracle Integration Cloud",
+   "kind": "tool",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [
+    "cloud integration platform",
+    "application integration workflows"
+   ]
+  },
+  {
+   "gap": "SAP QM",
+   "kind": "tool",
+   "concepts": [
+    "SAP"
+   ],
+   "phrases": [
+    "quality management module",
+    "inspection and quality processes"
+   ]
+  },
+  {
+   "gap": "SAP PP",
+   "kind": "tool",
+   "concepts": [
+    "SAP"
+   ],
+   "phrases": [
+    "production planning module",
+    "manufacturing process configuration"
+   ]
+  },
+  {
+   "gap": "Microsoft Dynamics 365",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "enterprise resource planning platform",
+    "business applications suite"
+   ]
+  },
+  {
+   "gap": "Power Automate",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "workflow automation tool",
+    "automating business processes"
+   ]
+  },
+  {
+   "gap": "BI Publisher",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": [
+    "report generation tool",
+    "enterprise reporting platform"
+   ]
+  }
+ ]
+}

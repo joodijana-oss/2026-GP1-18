@@ -1,0 +1,21 @@
+{
+ "case": "ho_13",
+ "arm": "G0E0",
+ "run": 2,
+ "gaps": [
+  "Kubernetes",
+  "CI/CD Pipeline Design",
+  "Terraform",
+  "Ansible",
+  "Cloud Platforms (AWS/Azure/GCP)",
+  "Python",
+  "Monitoring & Observability (Prometheus/Grafana)",
+  "GitOps (Argo CD)",
+  "Site Reliability Engineering (SLIs/SLOs/Incident Management)"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

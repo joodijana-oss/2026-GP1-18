@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Kubernetes",
+  "Terraform",
+  "Docker",
+  "CI/CD Pipeline Design",
+  "Linux Administration",
+  "Ansible",
+  "Python",
+  "AWS",
+  "Azure",
+  "Prometheus",
+  "Grafana",
+  "Bash Scripting"
+ ],
+ "answer": [
+  {
+   "skill": "Kubernetes",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Terraform",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Docker",
+   "status": "shown",
+   "quote": "each one in its own container and all of them started from a single compose file"
+  },
+  {
+   "skill": "CI/CD Pipeline Design",
+   "status": "shown",
+   "quote": "Every merge into the main branch now builds the site and publishes it by itself"
+  },
+  {
+   "skill": "Linux Administration",
+   "status": "shown",
+   "quote": "Runs Debian and hosts the family photo library"
+  },
+  {
+   "skill": "Ansible",
+   "status": "shown",
+   "quote": "a set of playbooks installs the packages, creates the users and brings every service back"
+  },
+  {
+   "skill": "Python",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "AWS",
+   "status": "shown",
+   "quote": "Moved the Hail Tech Club website to the AWS free tier"
+  },
+  {
+   "skill": "Azure",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Prometheus",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Grafana",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Bash Scripting",
+   "status": "shown",
+   "quote": "A small shell script checks every five minutes that each service answers"
+  }
+ ]
+}

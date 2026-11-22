@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Hardware Troubleshooting",
+  "Windows Operating System",
+  "Networking",
+  "Active Directory",
+  "Ticketing Systems",
+  "Microsoft 365",
+  "LAN Administration",
+  "Wi-Fi Troubleshooting",
+  "TCP/IP",
+  "Printer Support",
+  "IT Asset Management",
+  "Customer Service"
+ ],
+ "answer": [
+  {
+   "skill": "Hardware Troubleshooting",
+   "status": "shown",
+   "quote": "laptops and desktops will not start, overheat or crash"
+  },
+  {
+   "skill": "Windows Operating System",
+   "status": "shown",
+   "quote": "Windows 10 and 11 installation"
+  },
+  {
+   "skill": "Networking",
+   "status": "shown",
+   "quote": "Sort out the home routers people bring in"
+  },
+  {
+   "skill": "Active Directory",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Ticketing Systems",
+   "status": "partly",
+   "quote": "entered dead PCs and projectors in the college's request system"
+  },
+  {
+   "skill": "Microsoft 365",
+   "status": "partly",
+   "quote": "Microsoft Office"
+  },
+  {
+   "skill": "LAN Administration",
+   "status": "partly",
+   "quote": "Sort out the home routers people bring in: reset, update the firmware"
+  },
+  {
+   "skill": "Wi-Fi Troubleshooting",
+   "status": "shown",
+   "quote": "set a new wireless name and password, and fix \"connected but no internet\" cases"
+  },
+  {
+   "skill": "TCP/IP",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Printer Support",
+   "status": "shown",
+   "quote": "Cleared paper jams and replaced toner in the lab printers"
+  },
+  {
+   "skill": "IT Asset Management",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "Customer Service",
+   "status": "shown",
+   "quote": "Explain to walk-in customers, many of them elderly, what went wrong"
+  }
+ ]
+}

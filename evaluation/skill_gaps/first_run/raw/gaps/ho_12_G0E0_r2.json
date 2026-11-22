@@ -1,0 +1,20 @@
+{
+ "case": "ho_12",
+ "arm": "G0E0",
+ "run": 2,
+ "gaps": [
+  "Cybersecurity Risk Assessment",
+  "Cybersecurity Governance Frameworks",
+  "Risk Register Management",
+  "Compliance Audits",
+  "NIST",
+  "Third-Party/Vendor Risk Management",
+  "KPI/KRI Reporting",
+  "GRC Platforms"
+ ],
+ "method": "names-only",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": null
+}

@@ -1,0 +1,107 @@
+{
+ "label": "dev_clean_06",
+ "cv": "dev_clean",
+ "version": "new",
+ "run": 2,
+ "attempts": 1,
+ "failedAttempts": [],
+ "startedAt": "2026-11-22T02:26:16.305969",
+ "finishedAt": "2026-11-22T02:27:36.257975",
+ "seconds": 79.952,
+ "inputTokens": 4193,
+ "outputTokens": 8160,
+ "decoded": {
+  "cvStructure": [
+   {
+    "issue": "Your contact details don't include a LinkedIn, GitHub, or portfolio link, which is expected for an AI/Machine Learning Engineer application.",
+    "suggestion": "Add a LinkedIn profile and a GitHub link (showing your Date-Palm classifier and Demand Forecast Service code) near your contact details, writing out the full web address as visible text."
+   },
+   {
+    "issue": "Your Skills section sits after Certifications and Projects, so it is one of the last things an ATS or recruiter reads even though it's key for screening.",
+    "suggestion": "Reorder your sections as Summary, Education, Skills, Projects, Experience, Certifications, Activities, Languages so your technical skills are visible right after Education."
+   }
+  ],
+  "sectionOrganization": [],
+  "keywordUsage": [
+   {
+    "issue": "Your Skills section lists libraries like scikit-learn and PyTorch but doesn't name the fields they support, such as Machine Learning and Deep Learning, which recruiters search for directly.",
+    "suggestion": "Add 'Machine Learning' and 'Deep Learning' as keywords in your Skills section, since your gradient-boosted model and ResNet-50 work already demonstrate both."
+   },
+   {
+    "issue": "Your Date-Palm Leaf Disease Classifier project shows computer vision work, but 'Computer Vision' isn't listed anywhere in your Skills section.",
+    "suggestion": "Add 'Computer Vision' to your Skills section to match this project and the AI/ML Engineer role you're targeting."
+   },
+   {
+    "issue": "The Demand Forecast Service project describes wrapping a model in FastAPI and Docker but doesn't use the standard term for this work.",
+    "suggestion": "Describe this project using the term 'model deployment' (for example, 'deployed the model as a REST API with FastAPI and Docker') so ATS systems can match it to deployment-related job keywords."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "Your Summary is written as a first-person story ('I enjoy turning messy data into working models...') instead of short, direct statements.",
+    "suggestion": "Rewrite the Summary without 'I', for example: 'Computer Science graduate focused on machine learning and computer vision, with hands-on experience building and deploying models.'"
+   },
+   {
+    "issue": "The dashboard-building point in your Data Analyst Intern role has no measurable result.",
+    "suggestion": "Add a number to this point, such as how many reports you produced or [percentage] improvement in how fast the operations manager could act on the data."
+   },
+   {
+    "issue": "The Demand Forecast Service project describes what you built but doesn't state a result.",
+    "suggestion": "Add a result such as [response time] of the API or [number] of times the team used it from the dashboard."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are written in different styles across your CV: 'Jun 2025 - Aug 2025' in Experience, plain years like '2026' in Projects and Certifications, and years in parentheses like '(2024 - 2025)' in Activities.",
+    "suggestion": "Pick one consistent date style, such as 'Mon YYYY - Mon YYYY' or just 'YYYY', and use it the same way in every section."
+   }
+  ]
+ },
+ "areas": {
+  "cvStructure": [
+   {
+    "issue": "Your contact details don't include a LinkedIn, GitHub, or portfolio link, which is expected for an AI/Machine Learning Engineer application.",
+    "suggestion": "Add a LinkedIn profile and a GitHub link (showing your Date-Palm classifier and Demand Forecast Service code) near your contact details, writing out the full web address as visible text."
+   },
+   {
+    "issue": "Your Skills section sits after Certifications and Projects, so it is one of the last things an ATS or recruiter reads even though it's key for screening.",
+    "suggestion": "Reorder your sections as Summary, Education, Skills, Projects, Experience, Certifications, Activities, Languages so your technical skills are visible right after Education."
+   }
+  ],
+  "sectionOrganization": [],
+  "keywordUsage": [
+   {
+    "issue": "Your Skills section lists libraries like scikit-learn and PyTorch but doesn't name the fields they support, such as Machine Learning and Deep Learning, which recruiters search for directly.",
+    "suggestion": "Add 'Machine Learning' and 'Deep Learning' as keywords in your Skills section, since your gradient-boosted model and ResNet-50 work already demonstrate both."
+   },
+   {
+    "issue": "Your Date-Palm Leaf Disease Classifier project shows computer vision work, but 'Computer Vision' isn't listed anywhere in your Skills section.",
+    "suggestion": "Add 'Computer Vision' to your Skills section to match this project and the AI/ML Engineer role you're targeting."
+   },
+   {
+    "issue": "The Demand Forecast Service project describes wrapping a model in FastAPI and Docker but doesn't use the standard term for this work.",
+    "suggestion": "Describe this project using the term 'model deployment' (for example, 'deployed the model as a REST API with FastAPI and Docker') so ATS systems can match it to deployment-related job keywords."
+   }
+  ],
+  "readability": [
+   {
+    "issue": "Your Summary is written as a first-person story ('I enjoy turning messy data into working models...') instead of short, direct statements.",
+    "suggestion": "Rewrite the Summary without 'I', for example: 'Computer Science graduate focused on machine learning and computer vision, with hands-on experience building and deploying models.'"
+   },
+   {
+    "issue": "The dashboard-building point in your Data Analyst Intern role has no measurable result.",
+    "suggestion": "Add a number to this point, such as how many reports you produced or [percentage] improvement in how fast the operations manager could act on the data."
+   },
+   {
+    "issue": "The Demand Forecast Service project describes what you built but doesn't state a result.",
+    "suggestion": "Add a result such as [response time] of the API or [number] of times the team used it from the dashboard."
+   }
+  ],
+  "contentFormatting": [
+   {
+    "issue": "Dates are written in different styles across your CV: 'Jun 2025 - Aug 2025' in Experience, plain years like '2026' in Projects and Certifications, and years in parentheses like '(2024 - 2025)' in Activities.",
+    "suggestion": "Pick one consistent date style, such as 'Mon YYYY - Mon YYYY' or just 'YYYY', and use it the same way in every section."
+   }
+  ]
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "case": "ho_14",
+ "arm": "G1E1",
+ "run": 2,
+ "gaps": [
+  "Firewall Management",
+  "CCNP",
+  "Fortinet",
+  "Palo Alto"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "Routing and Switching",
+   "status": "shown"
+  },
+  {
+   "skill": "VPN",
+   "status": "shown"
+  },
+  {
+   "skill": "LAN/WAN",
+   "status": "shown"
+  },
+  {
+   "skill": "VLAN",
+   "status": "shown"
+  },
+  {
+   "skill": "CCNA",
+   "status": "partly"
+  },
+  {
+   "skill": "Firewall Management",
+   "status": "missing"
+  },
+  {
+   "skill": "Cisco Networking",
+   "status": "shown"
+  },
+  {
+   "skill": "CCNP",
+   "status": "missing"
+  },
+  {
+   "skill": "Fortinet",
+   "status": "missing"
+  },
+  {
+   "skill": "Palo Alto",
+   "status": "missing"
+  },
+  {
+   "skill": "BGP",
+   "status": "shown"
+  },
+  {
+   "skill": "Network Monitoring and Troubleshooting",
+   "status": "shown"
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "goal": "pre_sales_engineer",
+ "extractor": "E0",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Technical Proposal Writing",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "writing technical proposals",
+    "structuring solution documents",
+    "proposal drafting techniques"
+   ]
+  },
+  {
+   "gap": "RFP/RFQ/RFI Response Management",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "responding to tenders",
+    "managing bid responses",
+    "proposal response process"
+   ]
+  },
+  {
+   "gap": "Solution Architecture & Design",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing technical solutions",
+    "architecting IT systems"
+   ]
+  },
+  {
+   "gap": "BOQ/BOM Preparation",
+   "kind": "skill",
+   "concepts": [],
+   "phrases": [
+    "preparing bill of quantities",
+    "bill of materials creation",
+    "costing technical components"
+   ]
+  },
+  {
+   "gap": "Product Demonstrations & Proof of Concept (POC)",
+   "kind": "skill",
+   "concepts": [
+    "Product Demonstrations"
+   ],
+   "phrases": [
+    "running proof of concepts",
+    "demonstrating product capabilities",
+    "showcasing solutions to clients"
+   ]
+  },
+  {
+   "gap": "Customer Requirements Analysis",
+   "kind": "skill",
+   "concepts": [
+    "Requirements Gathering"
+   ],
+   "phrases": [
+    "analyzing customer needs",
+    "gathering client requirements"
+   ]
+  },
+  {
+   "gap": "Presentation Skills",
+   "kind": "soft",
+   "concepts": [
+    "Presentations"
+   ],
+   "phrases": [
+    "delivering effective presentations",
+    "public speaking techniques"
+   ]
+  },
+  {
+   "gap": "Vendor Coordination",
+   "kind": "soft",
+   "concepts": [],
+   "phrases": [
+    "coordinating with vendors",
+    "managing supplier relationships"
+   ]
+  },
+  {
+   "gap": "Cloud Platforms (AWS/Azure/GCP)",
+   "kind": "tool",
+   "concepts": [],
+   "phrases": []
+  },
+  {
+   "gap": "Cybersecurity Solutions Knowledge",
+   "kind": "skill",
+   "concepts": [
+    "Information Security"
+   ],
+   "phrases": [
+    "understanding security solutions",
+    "cybersecurity product knowledge"
+   ]
+  },
+  {
+   "gap": "Network Security",
+   "kind": "skill",
+   "concepts": [
+    "Network Security"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Stakeholder & Executive Engagement",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "engaging senior stakeholders",
+    "executive communication skills",
+    "managing stakeholder relationships"
+   ]
+  }
+ ]
+}

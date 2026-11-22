@@ -1,0 +1,31 @@
+{
+ "cvStructure": [
+  {
+   "issue": "Your contact details don't include a LinkedIn, GitHub, or portfolio link, which recruiters and ATS typically expect for Computing and IT roles.",
+   "suggestion": "Add a LinkedIn profile or a GitHub/portfolio link next to your email and phone number, and also write the full web address as visible text so every system can read it."
+  }
+ ],
+ "sectionOrganization": [],
+ "keywordUsage": [
+  {
+   "issue": "Your Skills section lists tools and libraries but doesn't name the broader skill areas your Summary and projects already show, such as Machine Learning, Deep Learning, and Computer Vision.",
+   "suggestion": "Add Machine Learning, Deep Learning, and Computer Vision to your Skills section so ATS systems scanning for these terms can match your profile."
+  }
+ ],
+ "readability": [
+  {
+   "issue": "Your Summary is written as a first-person story (\"I enjoy turning messy data into working models and want to start my career...\") instead of a professional summary.",
+   "suggestion": "Rewrite the Summary without \"I\", for example starting with \"Computer Science graduate with experience in machine learning and computer vision\" and stating your goal in the same style."
+  },
+  {
+   "issue": "The dashboard bullet under Data Analyst Intern (\"Built weekly sales dashboards for the operations manager and explained the trends in short written reports\") has no specific result.",
+   "suggestion": "Add a measurable detail if you have one, such as [number] of weekly dashboards delivered or [percentage/hours] saved in reporting time."
+  }
+ ],
+ "contentFormatting": [
+  {
+   "issue": "Dates are written in different styles across your CV: Experience uses Month Year (Jun 2025 - Aug 2025), Education, Projects, and Certifications use only the year, and Activities places years in parentheses.",
+   "suggestion": "Use one consistent date format everywhere, such as Month Year, for example writing your Education dates as Aug 2022 - Jun 2026."
+  }
+ ]
+}

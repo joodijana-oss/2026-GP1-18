@@ -1,0 +1,138 @@
+{
+ "goal": "solutions_architect",
+ "extractor": "E0",
+ "run": 2,
+ "links": [
+  {
+   "gap": "Cloud Architecture (AWS/Azure/GCP)",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing"
+   ],
+   "phrases": [
+    "designing cloud solutions",
+    "multi-cloud architecture design",
+    "cloud infrastructure planning"
+   ]
+  },
+  {
+   "gap": "Enterprise Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "enterprise-wide technology planning",
+    "architecture frameworks and models"
+   ]
+  },
+  {
+   "gap": "Solution Design",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing technical solutions",
+    "end-to-end solution planning"
+   ]
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "managing stakeholder expectations",
+    "building stakeholder relationships"
+   ]
+  },
+  {
+   "gap": "System Integration",
+   "kind": "skill",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [
+    "connecting systems and applications",
+    "integrating software components"
+   ]
+  },
+  {
+   "gap": "TOGAF",
+   "kind": "certification",
+   "concepts": [
+    "TOGAF"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "API Design",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [
+    "designing application interfaces",
+    "building RESTful endpoints"
+   ]
+  },
+  {
+   "gap": "Architecture Governance",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "governance frameworks for architecture",
+    "architecture review processes"
+   ]
+  },
+  {
+   "gap": "Presales / Technical Consulting",
+   "kind": "soft",
+   "concepts": [
+    "Product Demonstrations"
+   ],
+   "phrases": [
+    "technical sales support",
+    "client solution consulting",
+    "presenting technical proposals"
+   ]
+  },
+  {
+   "gap": "Data Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Data Architecture"
+   ],
+   "phrases": [
+    "designing data systems",
+    "data modeling and structure"
+   ]
+  },
+  {
+   "gap": "DevOps/DevSecOps",
+   "kind": "skill",
+   "concepts": [
+    "DevOps"
+   ],
+   "phrases": [
+    "integrating security into pipelines",
+    "continuous delivery practices"
+   ]
+  },
+  {
+   "gap": "AI/ML Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Machine Learning"
+   ],
+   "phrases": [
+    "designing ML systems",
+    "architecting AI solutions"
+   ]
+  }
+ ]
+}

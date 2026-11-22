@@ -1,0 +1,312 @@
+{
+  "id": "ho_01",
+  "careerGoalId": "cybersecurity_analyst",
+  "shown": [
+    {
+      "skill": "Log Analysis",
+      "alsoCalled": [
+        "Log Review",
+        "Event Log Analysis"
+      ],
+      "evidence": "Parsed 48,000 recorded login attempts from the JSON logs with a Python script",
+      "source": "project"
+    },
+    {
+      "skill": "Python",
+      "alsoCalled": [
+        "Python Programming",
+        "Python Scripting"
+      ],
+      "evidence": "with a Python script to find the most tried usernames and passwords",
+      "source": "project"
+    },
+    {
+      "skill": "Linux",
+      "alsoCalled": [
+        "Linux Administration",
+        "Linux Command Line"
+      ],
+      "evidence": "Deployed a Cowrie honeypot on an Ubuntu virtual machine in the cloud",
+      "source": "project"
+    },
+    {
+      "skill": "MITRE ATT&CK",
+      "alsoCalled": [
+        "ATT&CK Framework"
+      ],
+      "evidence": "Mapped the intruders' post-login behaviour to ATT&CK techniques",
+      "source": "project"
+    },
+    {
+      "skill": "Penetration Testing",
+      "alsoCalled": [
+        "Ethical Hacking",
+        "Pentesting"
+      ],
+      "evidence": "Found and exploited SQL injection and stored XSS in a deliberately vulnerable shop application using Burp Suite",
+      "source": "project"
+    },
+    {
+      "skill": "Vulnerability Assessment",
+      "alsoCalled": [
+        "Vulnerability Scanning",
+        "Vulnerability Management"
+      ],
+      "evidence": "Ran Nmap and Nessus against the lab subnet and ranked the 23 findings by CVSS score",
+      "source": "project"
+    },
+    {
+      "skill": "Malware Analysis",
+      "alsoCalled": [
+        "Malware Investigation",
+        "Reverse Engineering Malware"
+      ],
+      "evidence": "pulled out the hidden PowerShell downloader and listed the domains it called",
+      "source": "project"
+    },
+    {
+      "skill": "Digital Forensics",
+      "alsoCalled": [
+        "Computer Forensics",
+        "DFIR",
+        "Forensic Analysis"
+      ],
+      "evidence": "Recovered deleted files from a disk image with Autopsy and read a memory dump with Volatility",
+      "source": "other"
+    },
+    {
+      "skill": "Packet Analysis",
+      "alsoCalled": [
+        "Wireshark",
+        "Packet Capture"
+      ],
+      "evidence": "solved the packet-capture challenges by following TCP streams in Wireshark",
+      "source": "other"
+    },
+    {
+      "skill": "Honeypots",
+      "alsoCalled": [
+        "Honeypot Deployment"
+      ],
+      "evidence": "Deployed a Cowrie honeypot",
+      "source": "project"
+    },
+    {
+      "skill": "Burp Suite",
+      "alsoCalled": [
+        "Burp"
+      ],
+      "evidence": "using Burp Suite, then wrote the fix for each finding",
+      "source": "project"
+    },
+    {
+      "skill": "Nmap",
+      "alsoCalled": [
+        "Network Scanning"
+      ],
+      "evidence": "Ran Nmap and Nessus against the lab subnet",
+      "source": "project"
+    },
+    {
+      "skill": "Nessus",
+      "alsoCalled": [
+        "Tenable Nessus"
+      ],
+      "evidence": "Nmap and Nessus against the lab subnet",
+      "source": "project"
+    },
+    {
+      "skill": "Web Application Security",
+      "alsoCalled": [
+        "OWASP Top 10",
+        "Secure Coding"
+      ],
+      "evidence": "then wrote the fix for each finding",
+      "source": "project"
+    },
+    {
+      "skill": "Bash Scripting",
+      "alsoCalled": [
+        "Shell Scripting",
+        "Bash"
+      ],
+      "evidence": "Python, Linux, Wireshark, Burp Suite, Bash",
+      "source": "skills_section"
+    },
+    {
+      "skill": "Security Awareness",
+      "alsoCalled": [
+        "Awareness Training",
+        "Security Awareness Programs"
+      ],
+      "evidence": "gave an awareness talk on phishing to 90 first-year students",
+      "source": "other"
+    },
+    {
+      "skill": "CompTIA Security+",
+      "alsoCalled": [
+        "Security+",
+        "SY0-701"
+      ],
+      "evidence": "CompTIA Security+ (SY0-701), March 2026",
+      "source": "certification"
+    }
+  ],
+  "partly": [
+    {
+      "skill": "Threat Intelligence",
+      "alsoCalled": [
+        "Cyber Threat Intelligence",
+        "CTI"
+      ],
+      "evidence": "Looked up the 500 busiest source addresses in public reputation feeds",
+      "why": "Simple reputation look-ups only; no threat intelligence reporting or feed management."
+    },
+    {
+      "skill": "Firewall Management",
+      "alsoCalled": [
+        "Firewall Administration",
+        "Firewall Configuration",
+        "Firewall Rules"
+      ],
+      "evidence": "locked the real management port down to our own addresses with iptables",
+      "why": "One host firewall rule on a project machine."
+    },
+    {
+      "skill": "Network Security",
+      "alsoCalled": [
+        "Network Defense",
+        "Network Segmentation",
+        "Access Control Lists"
+      ],
+      "evidence": "Relevant courses: Network Security, Operating Systems, Digital Forensics, Secure Software Development",
+      "why": "Course title only."
+    },
+    {
+      "skill": "Security Reporting",
+      "alsoCalled": [
+        "Incident Reporting",
+        "Security Documentation"
+      ],
+      "evidence": "wrote a 40-page report presented to the department committee",
+      "why": "An academic project report, not incident or operations reporting."
+    },
+    {
+      "skill": "TCP/IP Networking",
+      "alsoCalled": [
+        "Networking Fundamentals",
+        "Network Protocols",
+        "TCP/IP"
+      ],
+      "evidence": "following TCP streams in Wireshark",
+      "why": "Reads captures in a competition; no network set-up or configuration shown."
+    }
+  ],
+  "notShown": [
+    {
+      "skill": "SIEM Monitoring",
+      "alsoCalled": [
+        "SIEM",
+        "Security Information and Event Management",
+        "Security Monitoring"
+      ],
+      "why": "Went through honeypot logs with her own script; never used a SIEM or watched an alert queue.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Intrusion Detection",
+      "alsoCalled": [
+        "IDS",
+        "IPS",
+        "Intrusion Detection and Prevention"
+      ],
+      "why": "A honeypot records intruders, but no IDS or IPS was configured or tuned.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Phishing Analysis",
+      "alsoCalled": [
+        "Phishing Investigation",
+        "Email Security Analysis"
+      ],
+      "why": "Gave an awareness talk about phishing; did not investigate phishing emails.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Cloud Security",
+      "alsoCalled": [
+        "Cloud Security Fundamentals",
+        "Securing Cloud Workloads"
+      ],
+      "why": "Ran one virtual machine in the cloud; no cloud security work.",
+      "nearMiss": true
+    },
+    {
+      "skill": "Incident Response",
+      "alsoCalled": [
+        "Security Incident Handling",
+        "Incident Handling",
+        "IR"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Endpoint Security",
+      "alsoCalled": [
+        "Endpoint Protection",
+        "EDR",
+        "Endpoint Detection and Response",
+        "Antivirus Management"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "NCA Essential Cybersecurity Controls",
+      "alsoCalled": [
+        "NCA ECC",
+        "ECC"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "CompTIA CySA+",
+      "alsoCalled": [
+        "CySA+",
+        "Cybersecurity Analyst+"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Splunk",
+      "alsoCalled": [
+        "Splunk Enterprise"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Threat Hunting",
+      "alsoCalled": [
+        "Proactive Threat Hunting"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    },
+    {
+      "skill": "Active Directory",
+      "alsoCalled": [
+        "AD",
+        "User Account Management"
+      ],
+      "why": "Common in job ads for this role; nothing in the CV.",
+      "nearMiss": false
+    }
+  ],
+  "certificationsHeld": [
+    "CompTIA Security+ (SY0-701)"
+  ]
+}

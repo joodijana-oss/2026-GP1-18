@@ -1,0 +1,129 @@
+{
+ "goal": "solutions_architect",
+ "extractor": "E1",
+ "run": 1,
+ "links": [
+  {
+   "gap": "Enterprise Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "designing enterprise architecture",
+    "business and IT alignment",
+    "architecture frameworks"
+   ]
+  },
+  {
+   "gap": "AWS",
+   "kind": "tool",
+   "concepts": [
+    "AWS"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Azure",
+   "kind": "tool",
+   "concepts": [
+    "Azure"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Google Cloud Platform",
+   "kind": "tool",
+   "concepts": [
+    "Google Cloud"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "TOGAF",
+   "kind": "certification",
+   "concepts": [
+    "TOGAF"
+   ],
+   "phrases": []
+  },
+  {
+   "gap": "Stakeholder Management",
+   "kind": "soft",
+   "concepts": [
+    "Stakeholder Management"
+   ],
+   "phrases": [
+    "managing stakeholder expectations",
+    "engaging key stakeholders"
+   ]
+  },
+  {
+   "gap": "Solution Design",
+   "kind": "skill",
+   "concepts": [
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing technical solutions",
+    "solution blueprint creation"
+   ]
+  },
+  {
+   "gap": "Architecture Roadmaps",
+   "kind": "skill",
+   "concepts": [
+    "Enterprise Architecture"
+   ],
+   "phrases": [
+    "planning architecture evolution",
+    "technology roadmap development"
+   ]
+  },
+  {
+   "gap": "API Design",
+   "kind": "skill",
+   "concepts": [
+    "APIs"
+   ],
+   "phrases": [
+    "designing RESTful interfaces",
+    "API contract design"
+   ]
+  },
+  {
+   "gap": "System Integration",
+   "kind": "skill",
+   "concepts": [
+    "Integration"
+   ],
+   "phrases": [
+    "connecting multiple systems",
+    "integrating software components"
+   ]
+  },
+  {
+   "gap": "Cloud Architecture",
+   "kind": "skill",
+   "concepts": [
+    "Cloud Computing",
+    "Solution Architecture"
+   ],
+   "phrases": [
+    "designing cloud solutions",
+    "cloud infrastructure design"
+   ]
+  },
+  {
+   "gap": "DevSecOps",
+   "kind": "skill",
+   "concepts": [
+    "DevOps"
+   ],
+   "phrases": [
+    "integrating security into pipelines",
+    "secure CI/CD practices"
+   ]
+  }
+ ]
+}

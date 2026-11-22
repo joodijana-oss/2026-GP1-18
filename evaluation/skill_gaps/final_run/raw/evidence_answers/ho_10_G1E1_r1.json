@@ -1,0 +1,78 @@
+{
+ "targets": [
+  "Manual Testing",
+  "Test Case Design",
+  "Jira",
+  "Regression Testing",
+  "Functional Testing",
+  "Selenium",
+  "API Testing",
+  "Appium",
+  "SQL",
+  "Postman",
+  "Agile",
+  "Scrum"
+ ],
+ "answer": [
+  {
+   "skill": "Manual Testing",
+   "status": "shown",
+   "quote": "Go through every new build of the Android and iPhone apps by hand"
+  },
+  {
+   "skill": "Test Case Design",
+   "status": "shown",
+   "quote": "340 step-by-step scenarios, 120 of which I wrote myself"
+  },
+  {
+   "skill": "Jira",
+   "status": "shown",
+   "quote": "Write up every fault I find in Jira"
+  },
+  {
+   "skill": "Regression Testing",
+   "status": "shown",
+   "quote": "run the whole money-transfer and bill-payment suite again"
+  },
+  {
+   "skill": "Functional Testing",
+   "status": "shown",
+   "quote": "following a suite of about 340 step-by-step scenarios"
+  },
+  {
+   "skill": "Selenium",
+   "status": "partly",
+   "quote": "recording browser scripts for the admin portal's login and user-search pages with Selenium IDE"
+  },
+  {
+   "skill": "API Testing",
+   "status": "shown",
+   "quote": "Send requests straight to the wallet's backend with Postman"
+  },
+  {
+   "skill": "Appium",
+   "status": "missing",
+   "quote": ""
+  },
+  {
+   "skill": "SQL",
+   "status": "shown",
+   "quote": "Look up transfers in the test database with my own queries"
+  },
+  {
+   "skill": "Postman",
+   "status": "shown",
+   "quote": "Send requests straight to the wallet's backend with Postman"
+  },
+  {
+   "skill": "Agile",
+   "status": "shown",
+   "quote": "The team works in two-week sprints; I take part in planning"
+  },
+  {
+   "skill": "Scrum",
+   "status": "partly",
+   "quote": "The team works in two-week sprints; I take part in planning"
+  }
+ ]
+}

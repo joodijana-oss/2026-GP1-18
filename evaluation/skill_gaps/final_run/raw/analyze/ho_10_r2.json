@@ -1,0 +1,63 @@
+{
+ "cvAnalysis": {
+  "strengths": [
+   "Experienced in manual testing of mobile applications across Android and iOS platforms",
+   "Authored a significant portion of test scenarios used in the release process",
+   "Thorough defect documentation practices, logging 410 bugs in Jira in one year with detailed reproduction steps",
+   "Skilled in regression testing to ensure previously working features remain functional",
+   "Able to test backend APIs directly using Postman, independent of the UI",
+   "Capable of validating data integrity by querying the test database directly",
+   "Experience coordinating real-user validation sessions with external stakeholders (agent-shop cashiers)",
+   "Active participant in Agile ceremonies, including sprint planning and test estimation",
+   "Self-motivated to learn test automation tools beyond current job requirements",
+   "Attention to detail in UI and localization testing (Arabic translation and RTL layout)"
+  ],
+  "currentSkills": [
+   "Manual Testing",
+   "Mobile Testing",
+   "Test Case Design",
+   "Regression Testing",
+   "Jira",
+   "Postman",
+   "API Testing",
+   "SQL",
+   "Java",
+   "Selenium IDE",
+   "Test Automation (Basic)",
+   "Agile/Scrum",
+   "Test Estimation",
+   "Localization Testing",
+   "ISTQB Testing Fundamentals"
+  ],
+  "education": [
+   {
+    "degree": "B.Sc.",
+    "major": "Computer Science",
+    "institution": "Effat University, Jeddah",
+    "year": "2025"
+   }
+  ],
+  "certifications": [
+   {
+    "name": "ISTQB Certified Tester Foundation Level (CTFL)",
+    "issuer": "ISTQB",
+    "year": "2025"
+   }
+  ],
+  "projects": [],
+  "experience": [
+   {
+    "title": "Software Tester",
+    "organization": "A company that builds a digital wallet app, Jeddah",
+    "duration": "October 2025 - present",
+    "description": "Manually tests new Android and iPhone builds before release using a suite of about 340 scenarios, 120 of which were self-written. Performs regression testing on money-transfer and bill-payment features after fixes. Logs defects in Jira with detailed steps, screenshots, and device/build info, tracking 410 bugs in the first year. Uses Postman to test backend APIs for balances, limits, and error codes. Writes SQL queries to validate ledger data against the app's displayed transactions. Conducted a two-day live validation session with five agent-shop cashiers for a new cash-in flow and collected sign-off. Participates in two-week sprint planning and estimates testing effort. Since June 2026, has been recording browser automation scripts for the admin portal using Selenium IDE (14 flows recorded, not yet integrated into release process)."
+   },
+   {
+    "title": "Quality Intern",
+    "organization": "A company that makes point-of-sale software for restaurants, Jeddah",
+    "duration": "June 2024 - August 2024",
+    "description": "Checked Arabic translations and right-to-left layout across 60 screens and documented issues for developers."
+   }
+  ]
+ }
+}

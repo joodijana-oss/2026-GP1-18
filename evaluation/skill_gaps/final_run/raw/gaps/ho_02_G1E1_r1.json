@@ -1,0 +1,70 @@
+{
+ "case": "ho_02",
+ "arm": "G1E1",
+ "run": 1,
+ "gaps": [
+  "SIEM",
+  "Vulnerability Assessment",
+  "Penetration Testing",
+  "CISSP",
+  "OSCP",
+  "Nmap",
+  "Metasploit",
+  "Python",
+  "CompTIA Security+"
+ ],
+ "method": "cv-evidence",
+ "usedFallback": false,
+ "failure": null,
+ "unverifiedQuotes": 0,
+ "statuses": [
+  {
+   "skill": "SIEM",
+   "status": "missing"
+  },
+  {
+   "skill": "Vulnerability Assessment",
+   "status": "missing"
+  },
+  {
+   "skill": "Penetration Testing",
+   "status": "missing"
+  },
+  {
+   "skill": "Incident Response",
+   "status": "shown"
+  },
+  {
+   "skill": "Firewall Administration",
+   "status": "shown"
+  },
+  {
+   "skill": "CISSP",
+   "status": "missing"
+  },
+  {
+   "skill": "OSCP",
+   "status": "missing"
+  },
+  {
+   "skill": "Nmap",
+   "status": "missing"
+  },
+  {
+   "skill": "Metasploit",
+   "status": "missing"
+  },
+  {
+   "skill": "Python",
+   "status": "missing"
+  },
+  {
+   "skill": "CompTIA Security+",
+   "status": "missing"
+  },
+  {
+   "skill": "Network Security",
+   "status": "shown"
+  }
+ ]
+}
