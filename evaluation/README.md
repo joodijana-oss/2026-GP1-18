@@ -7,7 +7,24 @@ read, under a decision rule that was written and fixed (with its SHA-256
 hash) before the held-out measurement. All test CVs and test users are
 fictional and contain no personal data.
 
-## Check the results again
+## Read the tests and results
+
+`Masra_Evaluation.ipynb` is a Jupyter notebook, saved with its outputs, so
+GitHub shows it with every table and chart. It runs the app's automated tests
+(`flutter test`), recomputes every number of Section 5.1 in Python from the
+saved records, independently of the Dart tools, and ends with a table that
+marks each check PASS, FAIL or SKIPPED. It sends no request to the AI service.
+To run it again from the repository root:
+
+```bash
+python -m nbconvert --to notebook --execute --inplace evaluation/Masra_Evaluation.ipynb
+```
+
+It needs Python 3 with pandas, numpy, matplotlib, nbconvert and ipykernel.
+Without Dart and Flutter (for example in Colab), the checks that need them
+are marked SKIPPED, never PASS.
+
+## Check the results again with the project's tools
 
 ```bash
 dart run tools/rerun_evaluations.dart
@@ -36,18 +53,25 @@ is `logs/rerun_2026-11-22.txt`: 9 checks the same, 0 different, 1 skipped
   with G1E1 (single-skill market names, each checked against a quote from
   the CV). G1E1 is what the app runs (`AnalysisSettings.app` in
   `lib/services/career_analysis_pipeline.dart`).
-- **Rule:** `tools/gap_eval/decision_rules.dart`, pinned by
-  `tools/gap_eval/freeze.json`. The six rules are printed at the end of each
-  `scores.txt`.
+- **Rule:** the six rules are coded in `tools/gap_eval/evaluate_gaps.dart`
+  and printed at the end of each `scores.txt`; the hashes of the code, the
+  data and the test set are pinned in `tools/gap_eval/freeze.json`.
 - **Final measurement:** `skill_gaps/final_run/` (16 CVs in
   `test/fixtures/cv_eval_final/`, 3 runs per CV, versions G0E0 and G1E1).
   - `raw/`: the answers of the AI service;
-  - `review/names_review.csv` and `review/names_second.csv`: the review of
-    gap names that are not in the answer keys;
-  - `scores.txt`: the scores and the decision ("G1E1").
+  - gap names that are not in the answer keys were judged in the set's
+    `judgements/names.csv` (194 names for the final set). The run's
+    `review/names_review.csv` is empty because no name was left to judge,
+    and `review/names_second.csv` is a second-rater sheet that was never
+    filled in, so this experiment has no agreement measure between graders;
+  - `scores.txt`: the scores and the decision ("G1E1"). Its line "This is
+    not the held-out set" appears because the tool prints it for any set
+    whose manifest is not named "heldout"; this set is named "final" and was
+    kept away from the builders like a held-out set.
 - **First held-out round:** `skill_gaps/first_run/`, on the 16 CVs in
   `skill_gaps/first_set/`, with four versions (G0E0, G0E1, G1E1, G2E1).
-  G1E1 was the only version that passed every rule there too. That set was
+  Its gap names were judged in `skill_gaps/first_set/judgements/names.csv`
+  (182 names). G1E1 was the only version that passed every rule there too. That set was
   used during the quality checks, so a new set was written for the final
   decision.
 - **Cost of the final run:** 144 requests and 1.23 USD in all: a 3-request
