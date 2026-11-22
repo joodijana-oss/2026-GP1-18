@@ -6,6 +6,7 @@ import 'home_screen.dart';
 import 'profile_screen.dart';
 import '../features/community/community_screen.dart';
 import '../theme/app_colors.dart';
+import '../widgets/soon_badge.dart';
 
 // Feature screens
 import '../features/career_analysis/career_analysis_screen.dart';
@@ -404,6 +405,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
   // ------------------------------------------------------------
 
   Widget _buildFeatureCard(ExploreFeature feature) {
+    // Features that are not built yet show a "Soon" badge under the text.
+    // The tap still opens their "Coming soon" page.
+    final soon = isComingSoon(feature.page);
+
     return Material(
       color: AppColors.white,
       borderRadius: BorderRadius.circular(24),
@@ -483,6 +488,11 @@ class _ExploreScreenState extends State<ExploreScreen> {
                         height: 1.25,
                       ),
                     ),
+
+                    if (soon) ...[
+                      const SizedBox(height: 8),
+                      const SoonBadge(),
+                    ],
                   ],
                 ),
               ),

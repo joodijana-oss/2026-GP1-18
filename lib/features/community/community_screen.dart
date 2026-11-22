@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../screens/home_screen.dart';
 import '../../theme/app_colors.dart';
+import '../../widgets/feature_placeholder.dart';
 
 /// The Community screen.
 ///
@@ -41,17 +42,14 @@ class CommunityScreen extends StatelessWidget {
               child: _buildHeader(context),
             ),
 
-            // Placeholder until the Community feature is built
-            Expanded(
-              child: Center(
-                child: Text(
-                  'Community',
-                  style: TextStyle(
-                    color: AppColors.navyText,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+            // Community is not built yet, so it shows the same "Coming soon"
+            // page as the other features that are not built yet.
+            const Expanded(
+              child: ComingSoonMessage(
+                icon: Icons.groups_2_outlined,
+                title: 'Community',
+                description:
+                    'Connect with other Computing students and graduates, ask questions and share your progress.',
               ),
             ),
           ],

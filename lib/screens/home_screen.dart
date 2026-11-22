@@ -17,6 +17,7 @@ import '../features/job_match/job_match_screen.dart';
 import '../features/certifications/certifications_screen.dart';
 import '../features/certifications/certification_details_screen.dart';
 import '../features/heatmap/heatmap_screen.dart';
+import '../widgets/soon_badge.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -508,6 +509,9 @@ class _HomeScreenState extends State<HomeScreen>
         final value = _backgroundController.value;
         final step = _currentNextStep;
 
+        // True when the button opens a feature that is not built yet
+        final soon = opensComingSoon(context, step.destination);
+
         return Container(
           width: double.infinity,
           clipBehavior: Clip.antiAlias,
@@ -664,6 +668,15 @@ class _HomeScreenState extends State<HomeScreen>
                       ),
                     ),
 
+                    // A "Soon" badge when the button opens a feature that
+                    // is not built yet (light text for the navy card). The
+                    // card isn't tapped as a whole, so screen readers hear
+                    // "Coming soon" on the button instead of on the badge.
+                    if (soon) ...[
+                      const SizedBox(height: 8),
+                      const ExcludeSemantics(child: SoonBadge(onBrand: true)),
+                    ],
+
                     const SizedBox(height: 21),
 
                     Align(
@@ -695,6 +708,9 @@ class _HomeScreenState extends State<HomeScreen>
                             children: [
                               Text(
                                 step.buttonLabel,
+                                semanticsLabel: soon
+                                    ? '${step.buttonLabel}, Coming soon'
+                                    : null,
                                 style: const TextStyle(
                                   color: AppColors.onBrand,
                                   fontSize: 12.5,
@@ -1006,6 +1022,11 @@ class _HomeScreenState extends State<HomeScreen>
     final destination =
         item.destination ?? _recommendationDestination(item.type);
 
+    // A "Soon" badge when the card opens a feature that is not built yet.
+    // The card has a fixed height, so the badge sits in the top row, where
+    // there is free space, instead of on a new line under the text.
+    final soon = opensComingSoon(context, destination);
+
     // Material + Ink so the ripple shows on top of the card color
     return Material(
       type: MaterialType.transparency,
@@ -1060,7 +1081,17 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                 ),
 
-                const Spacer(),
+                if (soon) ...[
+                  const SizedBox(width: 10),
+                  const Expanded(
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: SoonBadge(),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                ] else
+                  const Spacer(),
 
                 Text(
                   item.type.toUpperCase(),
@@ -1226,6 +1257,10 @@ class _HomeScreenState extends State<HomeScreen>
   ) {
     final radius = BorderRadius.circular(20);
 
+    // A "Soon" badge under the label when the tile opens a feature that is
+    // not built yet
+    final soon = opensComingSoon(context, action.destination);
+
     return Column(
       children: [
         // Shadow outside, Material + Ink inside so the ripple shows
@@ -1285,19 +1320,37 @@ class _HomeScreenState extends State<HomeScreen>
 
         const SizedBox(height: 9),
 
-        // The label is tappable too, like before
+        // The label (and its badge) is tappable too, like before. Every
+        // label is at least two lines tall, so the badges line up whether
+        // the label takes one line ("Match a Job") or two ("Practice
+        // Interview"). It still grows with large system text.
         GestureDetector(
           behavior: HitTestBehavior.opaque,
           onTap: () => _openQuickAction(action),
-          child: Text(
-            action.title,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: AppColors.navyText,
-              fontSize: 12,
-              fontWeight: FontWeight.w600,
-              height: 1.25,
-            ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight:
+                      MediaQuery.textScalerOf(context).scale(12) * 1.25 * 2,
+                ),
+                child: Text(
+                  action.title,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: AppColors.navyText,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    height: 1.25,
+                  ),
+                ),
+              ),
+              if (soon) ...[
+                const SizedBox(height: 5),
+                const SoonBadge(small: true),
+              ],
+            ],
           ),
         ),
       ],
@@ -1309,6 +1362,10 @@ class _HomeScreenState extends State<HomeScreen>
   // ============================================================
 
   Widget _buildSaudiMarketInsight() {
+    // The screen the "Explore Market" link opens, and whether it is built yet
+    const marketScreen = HeatmapScreen();
+    final marketSoon = isComingSoon(marketScreen);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1440,7 +1497,7 @@ class _HomeScreenState extends State<HomeScreen>
               Material(
                 type: MaterialType.transparency,
                 child: InkWell(
-                onTap: () => _openScreen((_) => const HeatmapScreen()),
+                onTap: () => _openScreen((_) => marketScreen),
                 borderRadius: BorderRadius.circular(12),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
@@ -1451,6 +1508,9 @@ class _HomeScreenState extends State<HomeScreen>
                     children: [
                       Text(
                         'Explore Market',
+                        semanticsLabel: marketSoon
+                            ? 'Explore Market, Coming soon'
+                            : null,
                         style: TextStyle(
                           color: AppColors.tealText,
                           fontSize: 12.5,
@@ -1468,6 +1528,14 @@ class _HomeScreenState extends State<HomeScreen>
                 ),
               ),
               ),
+
+              // A "Soon" badge on its own line under the link while the
+              // market feature is not built yet. Screen readers hear
+              // "Coming soon" on the link instead of on the badge.
+              if (marketSoon) ...[
+                const SizedBox(height: 8),
+                const ExcludeSemantics(child: SoonBadge()),
+              ],
             ],
           ),
         ),
