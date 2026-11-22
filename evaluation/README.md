@@ -1,7 +1,7 @@
-# Evaluation records (Section 5.1 of the report)
+# Evaluation records
 
-This folder keeps the saved runs behind every number in Section 5.1,
-Experimental Results. Each experiment compares a candidate with the version
+This folder keeps the saved runs behind every number of the experimental
+results. Each experiment compares a candidate with the version
 that was in the app before it, on a held-out set that the builders did not
 read, under a decision rule that was written and fixed (with its SHA-256
 hash) before the held-out measurement. All test CVs and test users are
@@ -11,18 +11,28 @@ fictional and contain no personal data.
 
 `Masra_Evaluation.ipynb` is a Jupyter notebook, saved with its outputs, so
 GitHub shows it with every table and chart. It runs the app's automated tests
-(`flutter test`), recomputes every number of Section 5.1 in Python from the
-saved records, independently of the Dart tools, and ends with a table that
-marks each check PASS, FAIL or SKIPPED. It sends no request to the AI service.
-To run it again from the repository root:
+(`flutter test`), recomputes every number of the experimental results in
+Python from the saved records, independently of the Dart tools, and ends with
+a table that marks each check PASS, FAIL or SKIPPED. It sends no request to
+the AI service.
+
+Open it in Jupyter or Colab and run it there:
+
+- [Open in Jupyter](https://mybinder.org/v2/gh/joodijana-oss/2026-GP1-18/evaluation-records?labpath=evaluation%2FMasra_Evaluation.ipynb)
+  (a free Jupyter session on mybinder.org; the first start can take a few
+  minutes; its packages are listed in `binder/requirements.txt`)
+- [Open in Google Colab](https://colab.research.google.com/github/joodijana-oss/2026-GP1-18/blob/evaluation-records/evaluation/Masra_Evaluation.ipynb)
+  (the first cell downloads the repository for the session)
+
+To run it on your own computer, from the repository root:
 
 ```bash
 python -m nbconvert --to notebook --execute --inplace evaluation/Masra_Evaluation.ipynb
 ```
 
 It needs Python 3 with pandas, numpy, matplotlib, nbconvert and ipykernel.
-Without Dart and Flutter (for example in Colab), the checks that need them
-are marked SKIPPED, never PASS.
+Without Dart and Flutter (in Jupyter on mybinder.org or in Colab), the checks
+that need them are marked SKIPPED, never PASS.
 
 ## Check the results again with the project's tools
 
@@ -39,15 +49,15 @@ is `logs/rerun_2026-11-22.txt`: 9 checks the same, 0 different, 1 skipped
 
 ## Folders
 
-| Folder | Experiment | Section |
-|---|---|---|
-| `skill_gaps/` | Skill gaps of the AI Career Analysis | 5.1.1 |
-| `recommender/` | Ranking of the Opportunity Recommender | 5.1.2 |
-| `matching/` | Matching skill gaps to certifications and opportunities by meaning | 5.1.3 |
-| `ats_review/` | Review instructions of the CV Improvement Assistant | 5.1.4 |
-| `logs/` | Output of `tools/rerun_evaluations.dart` | |
+| Folder | Experiment |
+|---|---|
+| `skill_gaps/` | Skill gaps of the AI Career Analysis |
+| `recommender/` | Ranking of the Opportunity Recommender |
+| `matching/` | Matching skill gaps to certifications and opportunities by meaning |
+| `ats_review/` | Review instructions of the CV Improvement Assistant |
+| `logs/` | Output of `tools/rerun_evaluations.dart` |
 
-## 1. Skill gaps (5.1.1): adopted
+## 1. Skill gaps: adopted
 
 - **Compared:** G0E0, the original gap step (two lists of skill names),
   with G1E1 (single-skill market names, each checked against a quote from
@@ -79,7 +89,7 @@ is `logs/rerun_2026-11-22.txt`: 9 checks the same, 0 different, 1 skipped
   (about 1.21 USD).
 - **Rerun:** both runs score the same as saved.
 
-## 2. Opportunity recommender (5.1.2): adopted
+## 2. Opportunity recommender: adopted
 
 - **Compared:** the first recommender (frozen in
   `tools/recommender_eval/baseline_recommender.dart`) with the recommender
@@ -95,7 +105,7 @@ is `logs/rerun_2026-11-22.txt`: 9 checks the same, 0 different, 1 skipped
   block changes between runs.
 - **Rerun:** both outputs are the same apart from the timing.
 
-## 3. Matching by meaning (5.1.3): not adopted
+## 3. Matching by meaning: not adopted
 
 - **Compared:** A0 (word matching) with B and B-opp (typed skill links from
   the AI service, with a support check), and the word control L1g.
@@ -128,7 +138,7 @@ is `logs/rerun_2026-11-22.txt`: 9 checks the same, 0 different, 1 skipped
   grades and the saved score output still have the SHA-256 recorded when
   they were saved.
 
-## 4. ATS review instructions (5.1.4): not adopted
+## 4. ATS review instructions: not adopted
 
 - **Compared:** OLD, the review instructions the app sends
   (`tools/ats_eval/old_improve_cv_prompt.txt`), with NEW, the rewritten
