@@ -50,11 +50,13 @@ Masra analyzes a user's CV against real Saudi job market data, identifies skill 
 │       └── images/               # App images
 ├── test/                         # Unit tests and evaluation test users (fixtures/)
 ├── tools/
+│   ├── ats_eval/                 # Evaluation of the CV Improvement (ATS) review
+│   ├── gap_eval/                 # Evaluation of the skill gaps and skill matching
 │   ├── recommender_eval/         # Offline evaluation of the opportunity recommender
 │   ├── upload_certifications/    # Uploads the certifications CSV to Firestore
 │   ├── upload_opportunities/     # Uploads the opportunities JSON to Firestore
 │   └── welcome_email/            # Email service (Google Apps Script)
-├── functions/                    # Firebase Cloud Functions (empty for now)
+├── functions/                    # Firebase Cloud Functions (starter template, no functions yet)
 ├── hosting/                      # Firebase Hosting (Android App Links file)
 ├── android/ ios/ web/            # Platform files
 ├── windows/ macos/ linux/        # Platform files
@@ -80,7 +82,7 @@ Masra analyzes a user's CV against real Saudi job market data, identifies skill 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Shatha-1/2026-GP1-18.git
+git clone https://github.com/joodijana-oss/2026-GP1-18.git
 cd 2026-GP1-18
 ```
 
@@ -145,12 +147,12 @@ The held-out file has 8 career paths that were not used while the ranking was de
 The skill gaps of the career analysis have their own evaluation. It runs the analysis steps of the app on test CVs with real AI requests (they use API credit), so start with `--dry-run`, which prints how many requests a run would send. The tool reads the API key from `.env` itself and never prints it:
 
 ```bash
-dart run tools/gap_eval/evaluate_gaps.dart --set test/fixtures/cv_eval_dev --runs 3 --dry-run
-dart run tools/gap_eval/evaluate_gaps.dart --set test/fixtures/cv_eval_dev --runs 3
+dart run tools/gap_eval/evaluate_gaps.dart --set test/fixtures/cv_eval_dev --arms G0E0,G1E1 --runs 3 --dry-run
+dart run tools/gap_eval/evaluate_gaps.dart --set test/fixtures/cv_eval_dev --arms G0E0,G1E1 --runs 3
 dart run tools/gap_eval/evaluate_gaps.dart --score build/gap_eval/<run folder>
 ```
 
-It compares the original analysis (`G0E0`: gaps from two lists of skill names) with the one the app runs (`G1E1`: single-skill market names, and every market skill checked against a quote from the CV). The development CVs in `test/fixtures/cv_eval_dev` may be used while building; decisions are taken on a held-out set that nobody reads while building.
+It compares the original analysis (`G0E0`: gaps from two lists of skill names) with the one the app runs (`G1E1`: single-skill market names, and every market skill checked against a quote from the CV). Without `--arms`, it also runs `G0E1` (single-skill names only) and `G2E1` (an extra request checks each gap, an approach that lost), which raises the requests on the development set from about 90 to about 144. The development CVs in `test/fixtures/cv_eval_dev` may be used while building; decisions are taken on a held-out set that nobody reads while building.
 
 ---
 
