@@ -1,4 +1,4 @@
-// Checks the saved results of Section 5.1 (Experimental Results) again,
+// Checks the saved evaluation results again,
 // without any request to the AI service, and writes what it found to
 // evaluation/logs/rerun_<date>.txt.
 //
@@ -37,7 +37,7 @@ Future<void> main() async {
   if (work.existsSync()) work.deleteSync(recursive: true);
   work.createSync(recursive: true);
 
-  _line('RERUN OF THE SECTION 5.1 EVALUATIONS ($date)');
+  _line('RERUN OF THE SAVED EVALUATIONS ($date)');
   _line('No request is sent to the AI service. Saved files are copied to '
       'build/rerun before use.');
 
@@ -58,7 +58,7 @@ Future<void> main() async {
 // ---- 1. skill gaps -----------------------------------------------------------
 
 Future<void> _skillGaps() async {
-  _section('1. SKILL GAPS OF THE AI CAREER ANALYSIS (Section 5.1.1)');
+  _section('1. SKILL GAPS OF THE AI CAREER ANALYSIS');
   for (final name in ['final_run', 'first_run']) {
     final saved = 'evaluation/skill_gaps/$name';
     final copy = 'build/rerun/skill_gaps_$name';
@@ -82,7 +82,7 @@ Future<void> _skillGaps() async {
 // ---- 2. opportunity recommender ---------------------------------------------
 
 Future<void> _recommender() async {
-  _section('2. RANKING OF THE OPPORTUNITY RECOMMENDER (Section 5.1.2)');
+  _section('2. RANKING OF THE OPPORTUNITY RECOMMENDER');
   final runs = {
     'development test users': (
       const <String>[],
@@ -114,7 +114,7 @@ Future<void> _recommender() async {
 // ---- 3. ATS review ------------------------------------------------------------
 
 Future<void> _atsReview() async {
-  _section('3. REVIEW INSTRUCTIONS OF THE CV IMPROVEMENT ASSISTANT (Section 5.1.4)');
+  _section('3. REVIEW INSTRUCTIONS OF THE CV IMPROVEMENT ASSISTANT');
   final python = await _findPython();
   if (python == null) {
     _skip('ATS scorers', 'Python was not found. Run by hand: python '
@@ -158,7 +158,7 @@ Future<String?> _findPython() async {
 // ---- 4. matching by meaning ---------------------------------------------------
 
 void _matching() {
-  _section('4. MATCHING SKILL GAPS BY MEANING (Section 5.1.3)');
+  _section('4. MATCHING SKILL GAPS BY MEANING');
   // Recorded when the grades were saved (after the catalogue texts that named
   // an AI product were redacted; the scorer does not read that column).
   const recorded = {

@@ -49,7 +49,7 @@ Masra analyzes a user's CV against real Saudi job market data, identifies skill 
 │       ├── data/                 # Career paths, job postings, certifications, opportunities
 │       └── images/               # App images
 ├── test/                         # Unit tests and evaluation test users (fixtures/)
-├── evaluation/                   # Saved runs behind the report's experimental results
+├── evaluation/                   # Saved runs behind the experimental results
 ├── tools/
 │   ├── ats_eval/                 # Evaluation of the CV Improvement (ATS) review
 │   ├── gap_eval/                 # Evaluation of the skill gaps and skill matching
@@ -143,7 +143,7 @@ The opportunity recommender has an offline evaluation. It ranks the bundled oppo
 dart run tools/recommender_eval/evaluate_recommender.dart --personas test/fixtures/opportunity_eval_personas_heldout.json
 ```
 
-The held-out file has 8 career paths that were not used while the ranking was designed, so report its numbers. Without `--personas`, the script uses the development set. Add `--ablation` to see the effect of each technique, and `--top` to print the first 10 results for each test user.
+The held-out file has 8 career paths that were not used while the ranking was designed, so use its numbers. Without `--personas`, the script uses the development set. Add `--ablation` to see the effect of each technique, and `--top` to print the first 10 results for each test user.
 
 The skill gaps of the career analysis have their own evaluation. It runs the analysis steps of the app on test CVs with real AI requests (they use API credit), so start with `--dry-run`, which prints how many requests a run would send. The tool reads the API key from `.env` itself and never prints it:
 
@@ -155,7 +155,7 @@ dart run tools/gap_eval/evaluate_gaps.dart --score build/gap_eval/<run folder>
 
 It compares the original analysis (`G0E0`: gaps from two lists of skill names) with the one the app runs (`G1E1`: single-skill market names, and every market skill checked against a quote from the CV). Without `--arms`, it also runs `G0E1` (single-skill names only) and `G2E1` (an extra request checks each gap, an approach that lost), which raises the requests on the development set from about 90 to about 144. The development CVs in `test/fixtures/cv_eval_dev` may be used while building; decisions are taken on a held-out set that nobody reads while building.
 
-The saved runs behind the report's experimental results are in `evaluation/` (see `evaluation/README.md`). To check them all again, with no AI requests and no cost:
+The saved runs behind the experimental results are in `evaluation/` (see `evaluation/README.md`). To check them all again, with no AI requests and no cost:
 
 ```bash
 dart run tools/rerun_evaluations.dart
