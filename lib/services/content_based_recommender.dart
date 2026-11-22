@@ -85,7 +85,9 @@ class CertificationRecommendations {
 ///  2. Hide certifications the user already holds.
 ///  3. Count the target skills each certification works on. A skill gap
 ///     that names a certification itself ("CFOT", "CCNP") counts for that
-///     certification ([gapNamesCertification]).
+///     certification ([gapNamesCertification]). A skill gap whose whole
+///     name is in the certification's own name or short name counts for it
+///     too ([nameContainsGap]); a broad skill word keeps its own matching.
 ///  4. Rank: more skills first, then the level that suits the user, then
 ///     verified certifications, then name.
 ///
@@ -169,7 +171,8 @@ class ContentBasedRecommender {
         phrases: wordings,
       );
       // Both lists keep the order of the targets, so a ranking where no
-      // gap names a certification is exactly what words alone give.
+      // gap names a certification or is in its name is exactly what words
+      // alone give.
       final List<String> skills;
       if (listNames == null) {
         skills = byWords;
@@ -178,7 +181,8 @@ class ContentBasedRecommender {
         skills = [
           for (var g = 0; g < targets.length; g++)
             if (byWords.contains(targets[g]) ||
-                gapNames[g].names(certNames))
+                gapNames[g].names(certNames) ||
+                gapNames[g].inNameOf(certNames))
               targets[g],
         ];
       }
@@ -313,6 +317,26 @@ class ContentBasedRecommender {
   static bool gapNamesCertification(String gap, Certification cert) =>
       _GapName.of(gap).names(_CertNames.of(cert));
 
+  /// True when the certification's own name or short name contains the
+  /// whole name of the skill gap [gap]: the gap's words next to each other,
+  /// as whole words ("Java" is not in "JavaScript"), and not followed by
+  /// "+" or "#" (a name with a sign is another name). A product the synonym
+  /// table does not know is often named only in the certification's name,
+  /// so its skills alone would never match the gap. Only the name counts,
+  /// never the description, which lists many side technologies.
+  ///
+  /// A broad gap keeps its own matching through the certification's
+  /// skills: a name the synonym table knows, or one word of a longer skill
+  /// name of the table ("Data" of "Data Analysis"). A specific product the
+  /// table knows is never broad. The names are compared with
+  /// [SkillMatcher.identityKey], and a name of one or two letters never
+  /// counts.
+  ///
+  /// The ranking runs the same rule with the gap and the certification
+  /// names prepared once ([_GapName], [_CertificationNames]).
+  static bool nameContainsGap(String gap, Certification cert) =>
+      _GapName.of(gap).inNameOf(_CertNames.of(cert));
+
   /// The certification level that suits an experience level from the
   /// profile ("No Experience", "Beginner", "Intermediate", "Advanced").
   /// To strengthen skills the user already has, the next level up suits
@@ -425,8 +449,11 @@ class ContentBasedRecommender {
   }
 }
 
-/// A skill gap as the certification-name rule needs it
-/// ([ContentBasedRecommender.gapNamesCertification]), worked out once.
+/// A skill gap as the two certification-name rules need it, worked out
+/// once: the gap names the certification
+/// ([ContentBasedRecommender.gapNamesCertification]), or the
+/// certification's name contains the gap
+/// ([ContentBasedRecommender.nameContainsGap]).
 class _GapName {
   /// [SkillMatcher.identityKey] of the gap, or empty when the name is too
   /// short to name a certification (one or two letters).
@@ -436,22 +463,68 @@ class _GapName {
   /// capitals and is not a name the synonym table knows.
   final bool family;
 
-  const _GapName(this.key, this.family);
+  /// Whether the gap counts where a certification's name contains it: it
+  /// is not a broad skill word, or it is a specific product.
+  final bool inName;
+
+  const _GapName(this.key, this.family, this.inName);
 
   factory _GapName.of(String gap) {
     final key = SkillMatcher.identityKey(gap);
-    if (key.length < 3) return const _GapName('', false);
+    if (key.length < 3) return const _GapName('', false, false);
+    final known = SkillMatcher.isKnownName(gap);
+    // Broad: a name the synonym table knows, or one word of a longer skill
+    // name of the table.
+    final broad = known || (!key.contains(' ') && _broadWords.contains(key));
     return _GapName(
       key,
-      gap.toUpperCase() == gap && !SkillMatcher.isKnownName(gap),
+      gap.toUpperCase() == gap && !known,
+      !broad || SkillMatcher.isSpecific(gap),
     );
   }
+
+  /// The words of the longer skill names of the synonym table ("data" and
+  /// "analysis" of "Data Analysis"), read from the table at run time.
+  static final Set<String> _broadWords = {
+    for (final name in SkillMatcher.conceptNames)
+      if (SkillMatcher.identityKey(name).contains(' '))
+        ...SkillMatcher.identityKey(name).split(' '),
+  };
+
+  /// How [SkillMatcher.identityKey] writes the signs "+" and "#".
+  static final Set<String> _signs = {
+    SkillMatcher.identityKey('+'),
+    SkillMatcher.identityKey('#'),
+  };
 
   /// True when this gap names the certification whose names are [cert].
   bool names(_CertNames cert) {
     if (key.isEmpty) return false;
     if (key == cert.short || key == cert.name) return true;
     return family && cert.short.isNotEmpty && cert.short.startsWith('$key ');
+  }
+
+  /// True when the name or the short name of the certification [cert]
+  /// contains this gap's whole name.
+  bool inNameOf(_CertNames cert) =>
+      inName && (_hasWords(cert.name, key) || _hasWords(cert.short, key));
+
+  /// True when [name] contains the words of [key] next to each other, as
+  /// whole words, at a place where no sign follows them. Both are
+  /// [SkillMatcher.identityKey]s.
+  static bool _hasWords(String name, String key) {
+    if (name.isEmpty) return false;
+    final padded = ' $name ';
+    final needle = ' $key ';
+    for (var at = padded.indexOf(needle);
+        at >= 0;
+        at = padded.indexOf(needle, at + 1)) {
+      final rest = padded.substring(at + needle.length);
+      final space = rest.indexOf(' ');
+      final next = space < 0 ? rest : rest.substring(0, space);
+      if (!_signs.contains(next)) return true;
+    }
+    return false;
   }
 }
 

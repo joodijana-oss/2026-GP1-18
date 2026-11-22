@@ -407,4 +407,201 @@ void main() {
       expect(checked, greaterThan(800));
     });
   });
+
+  group('a gap in the certification name', () {
+    // Made-up certifications and products, not from the bundled CSV.
+    // Pulumi is the one real name: a specific product the synonym table
+    // already knows.
+    final catalog = [
+      cert('quill_dev',
+          name: 'Quillstore Associate Developer',
+          shortName: 'Quillstore Developer',
+          paths: ['web_developer'],
+          skills: ['Databases and SQL', 'Backend Development', 'APIs'],
+          description: 'Build services on a document store with REST APIs.'),
+      cert('backend_pc',
+          name: 'Northwind Back-End Developer Certificate',
+          paths: ['web_developer'],
+          skills: ['Backend Development', 'Databases and SQL'],
+          description:
+              'Server-side apps with Python and SQL, with a short look at '
+              'Quillstore.'),
+      cert('kestrel_apps',
+          name: 'Fennix Web Apps Professional Certificate',
+          shortName: 'Kestrel Apps',
+          paths: ['web_developer'],
+          skills: ['JavaScript']),
+      cert('torvic_plus',
+          name: 'Torvic+ Web Defender Associate',
+          shortName: 'TWDA',
+          paths: ['web_developer'],
+          skills: ['Web Security']),
+      cert('torvic_sharp',
+          name: 'Torvic# Service Builder',
+          paths: ['web_developer'],
+          skills: ['APIs']),
+      cert('cpp_robotics',
+          name: 'C++ Robotics Developer Associate',
+          paths: ['web_developer'],
+          skills: ['Programming Fundamentals'],
+          description: 'Robot control in modern C++.'),
+      cert('orvana_cloud',
+          name: 'Orvana Cloud Ledger Consultant',
+          paths: ['web_developer'],
+          skills: ['Big Data']),
+      cert('hexwall_pentest',
+          name: 'Hexwall Penetration Testing Professional',
+          paths: ['web_developer'],
+          skills: ['Penetration Testing']),
+      cert('fennix_cloud',
+          name: 'Fennix Cloud Basics',
+          paths: ['web_developer'],
+          skills: ['Cloud Computing']),
+      cert('skyforge',
+          name: 'Skyforge Infrastructure Engineer Associate',
+          shortName: 'Pulumi Stack Engineer',
+          paths: ['web_developer'],
+          skills: ['Infrastructure as Code'],
+          description: 'Infrastructure as code on several clouds.'),
+      cert('qx',
+          name: 'Qx Platform Associate',
+          paths: ['web_developer'],
+          skills: ['Git']),
+      cert('quill_model',
+          name: 'Quillstore Data Modeling Specialist',
+          paths: ['data_engineer'],
+          skills: ['Database Design']),
+      cert('orvana_data',
+          name: 'Orvana Data Ledger Associate',
+          paths: ['web_developer'],
+          skills: ['Big Data']),
+      cert('velmora',
+          name: 'Velmora+ Tools with Velmora',
+          paths: ['web_developer'],
+          skills: ['APIs']),
+    ];
+    final byId = {for (final c in catalog) c.id: c};
+
+    CertificationRecommendations close(List<String> gaps) =>
+        recommender.recommendCertifications(
+          analysis: analysis(goal: 'web_developer', gaps: gaps),
+          certifications: catalog,
+        );
+
+    Map<String, List<String>> covered(List<String> gaps) => {
+          for (final m in close(gaps).matched)
+            m.certification.id: m.matchedSkills,
+        };
+
+    bool inName(String gap, String id) =>
+        ContentBasedRecommender.nameContainsGap(gap, byId[id]!);
+
+    test('a product the table does not know counts through the name', () {
+      final recs = close(['SQL', 'Quillstore']);
+      expect(ids(recs.matched), ['quill_dev', 'backend_pc']);
+      expect(recs.matched.first.matchedSkills, ['SQL', 'Quillstore']);
+      // The other certification names the product only in its description.
+      expect(recs.matched.last.matchedSkills, ['SQL']);
+      // Another career goal stays out, whatever its name says.
+      expect(ids(recs.ranked), isNot(contains('quill_model')));
+    });
+
+    test('capitals do not matter, and the short name counts too', () {
+      expect(covered(['quillstore']), {
+        'quill_dev': ['quillstore'],
+      });
+      expect(covered(['QUILLSTORE']), {
+        'quill_dev': ['QUILLSTORE'],
+      });
+      expect(covered(['Kestrel']), {
+        'kestrel_apps': ['Kestrel'],
+      });
+      expect(inName('quillstore', 'quill_dev'), isTrue);
+      expect(inName('Kestrel', 'kestrel_apps'), isTrue);
+    });
+
+    test('only whole words count, and only the name', () {
+      expect(covered(['Quill']), isEmpty);
+      expect(inName('Quill', 'quill_dev'), isFalse);
+      expect(inName('Quillstore', 'backend_pc'), isFalse);
+    });
+
+    test('a name with a sign is another name', () {
+      expect(covered(['Torvic', 'Torvic+', 'Torvic#']), {
+        'torvic_plus': ['Torvic+'],
+        'torvic_sharp': ['Torvic#'],
+      });
+      expect(inName('Torvic+', 'torvic_plus'), isTrue);
+      expect(inName('Torvic#', 'torvic_sharp'), isTrue);
+      expect(inName('Torvic', 'torvic_plus'), isFalse);
+      expect(inName('Torvic', 'torvic_sharp'), isFalse);
+      expect(inName('Torvic+', 'torvic_sharp'), isFalse);
+
+      expect(covered(['C#', 'C++', 'C']), {
+        'cpp_robotics': ['C++'],
+      });
+    });
+
+    test('a later place in the name counts when the first has a sign', () {
+      expect(covered(['Velmora', 'Velmora+']), {
+        'velmora': ['Velmora', 'Velmora+'],
+      });
+      expect(inName('Velmora', 'velmora'), isTrue);
+    });
+
+    test('a gap of several words needs them side by side and in order', () {
+      // Name: "Fennix Web Apps Professional Certificate", short name
+      // "Kestrel Apps".
+      expect(covered(['Fennix Web', 'Apps Web', 'Fennix Apps']), {
+        'kestrel_apps': ['Fennix Web'],
+      });
+      expect(inName('Web Apps', 'kestrel_apps'), isTrue);
+      expect(inName('Fennix Web Apps', 'kestrel_apps'), isTrue);
+      // The last words of the name.
+      expect(inName('Apps Professional Certificate', 'kestrel_apps'), isTrue);
+      // Wrong order, or another word between them.
+      expect(inName('Apps Web', 'kestrel_apps'), isFalse);
+      expect(inName('Apps Kestrel', 'kestrel_apps'), isFalse);
+      expect(inName('Fennix Apps', 'kestrel_apps'), isFalse);
+      // A hyphen reads as a space; one joined word is another word.
+      expect(inName('Kestrel-Apps', 'kestrel_apps'), isTrue);
+      expect(inName('KestrelApps', 'kestrel_apps'), isFalse);
+    });
+
+    test('a specific product the table knows counts in the short name', () {
+      expect(covered(['Pulumi']), {
+        'skyforge': ['Pulumi'],
+      });
+      expect(inName('Pulumi', 'skyforge'), isTrue);
+    });
+
+    test('a broad skill name keeps its own matching', () {
+      // A name the synonym table knows still counts through the skills.
+      expect(covered(['Cloud']), {
+        'fennix_cloud': ['Cloud'],
+      });
+      final both = covered(['Cloud', 'Testing']);
+      expect(both.containsKey('orvana_cloud'), isFalse);
+      expect(both.containsKey('hexwall_pentest'), isFalse);
+      expect(inName('Cloud', 'orvana_cloud'), isFalse);
+      expect(inName('Testing', 'hexwall_pentest'), isFalse);
+      // One word of a longer skill name of the table ("Data Analysis").
+      expect(covered(['Data']), isEmpty);
+      expect(inName('Data', 'orvana_data'), isFalse);
+    });
+
+    test('one or two letters never count', () {
+      expect(covered(['Qx']), isEmpty);
+      expect(inName('Qx', 'qx'), isFalse);
+    });
+
+    test('is for skill gaps only, not for strengthening current skills', () {
+      final recs = recommender.recommendCertifications(
+        analysis: analysis(goal: 'web_developer', current: ['Quillstore']),
+        certifications: catalog,
+        goal: CertificationGoal.strengthenSkills,
+      );
+      expect(recs.matched, isEmpty);
+    });
+  });
 }
