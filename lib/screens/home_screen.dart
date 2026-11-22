@@ -3,6 +3,7 @@ import '../theme/app_colors.dart';
 import '../services/user_service.dart';
 import '../services/certification_service.dart';
 import '../services/content_based_recommender.dart';
+import '../widgets/home_avatar.dart';
 
 import 'profile_screen.dart';
 import 'explore_screen.dart';
@@ -213,6 +214,21 @@ class _HomeScreenState extends State<HomeScreen>
       MaterialPageRoute(builder: builder),
     );
 
+    _loadJourneyStage();
+    _loadRecommendations();
+  }
+
+  // Opens Profile on top of Home. When the user comes back, the name, the
+  // journey and the recommendations are loaded again in case they changed
+  // there. The avatar reads the photo again by itself when Home is back on
+  // top.
+  Future<void> _openProfile() async {
+    await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const ProfileScreen()),
+    );
+
+    _loadUserName();
     _loadJourneyStage();
     _loadRecommendations();
   }
@@ -437,54 +453,10 @@ class _HomeScreenState extends State<HomeScreen>
 
               const Spacer(),
 
-             
-              GestureDetector(
-                onTap: () async {
-                  await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ProfileScreen(),
-                    ),
-                  );
-
-                  // لو اليوزر غيّر اسمه من البروفايل
-                  _loadUserName();
-                  _loadJourneyStage();
-                  _loadRecommendations();
-                },
-                child: Container(
-                  width: 46,
-                  height: 46,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        AppColors.secondaryNavy,
-                        AppColors.teal,
-                      ],
-                    ),
-                    borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
-                      BoxShadow(
-                        color: AppColors.teal.withValues(alpha: 0.15),
-                        blurRadius: 12,
-                        offset: const Offset(0, 5),
-                      ),
-                    ],
-                  ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    userName.isNotEmpty
-                        ? userName[0].toUpperCase()
-                        : 'U',
-                    style: const TextStyle(
-                      color: AppColors.onBrand,
-                      fontSize: 17,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                ),
+              // The user's photo, or the first letter of the name. Opens Profile.
+              HomeAvatar(
+                initial: userName.isNotEmpty ? userName[0].toUpperCase() : 'U',
+                onOpenProfile: _openProfile,
               ),
             ],
           ),
